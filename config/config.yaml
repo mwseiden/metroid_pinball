@@ -1,0 +1,81 @@
+#config_version=4
+
+hardware:
+  platform: fast
+  driverboards: fast
+
+fast:
+  ports: /dev/ttyUSB1, /dev/ttyUSB2
+
+switches:
+  s_right_flipper:
+    number: 00
+  s_left_flipper:
+    number: 01
+  s_start:
+    number: 02
+  s_right_flipper_eos:
+    number: 18
+  s_left_flipper_eos:
+    number: 19
+  s_left_sling:
+    number: 1A
+  s_right_sling:
+    number: 1B
+  
+
+coils:
+  c_flipper_right_main:
+    number: 10
+    allow_enable: true
+    hold_power: 7
+    pulse_ms: 25
+  c_flipper_left_main:
+    number: 12
+    allow_enable: true
+    hold_power: 7
+    pulse_ms: 25
+  c_left_slingshot:
+    number: 14
+    allow_enable: true
+  c_right_slingshot:
+    number: 15
+    allow_enable: true
+
+autofire_coils:
+  left_slingshot:
+    coil: c_left_slingshot
+    switch: s_left_sling
+    enable_events: machine_reset_phase_3
+  right_slingshot:
+    coil: c_right_slingshot
+    switch: s_right_sling
+    enable_events: machine_reset_phase_3
+
+flippers:
+  right_flipper:
+    main_coil: c_flipper_right_main
+    activation_switch: s_right_flipper
+    enable_events: machine_reset_phase_3
+    eos_switch: s_right_flipper_eos
+    debug: true
+  left_flipper:
+    main_coil: c_flipper_left_main
+    activation_switch: s_left_flipper
+    enable_events: machine_reset_phase_3
+    eos_switch: s_left_flipper_eos
+    debug: true
+
+window:
+  width: 720
+  height: 1280
+  title: Metroid
+  resizable: false
+  fullscreen: auto
+  borderless: false
+  exit_on_escape: true
+
+kivy_config:
+  graphics:
+    fbo: force-hardware
+
