@@ -179,16 +179,40 @@ flippers:
     eos_switch: s_upper_right_flipper_eos
     debug: true
 
-window:
-  width: 720
-  height: 1280
-  title: Metroid
-  resizable: false
-  fullscreen: auto
-  borderless: false
-  exit_on_escape: true
+displays:
+  window:
+    width: 720
+    height: 1280
+    title: Metroid
+    resizable: false
+    fullscreen: auto
+    borderless: false
+    exit_on_escape: true
+  dmd:
+    width: 120
+    height: 32
+
+slides:
+  attract_slide:
+    widgets:
+      - type: color_dmd
+      x: 0
+      y: 1088
+      anchor_x: left
+      anchor_y: top
+      - type: image
+      image:  backglass_main_720.png
+      x: 0
+      y: 0
+      anchor_x: left
+      anchor_y: top
+
+slide_player:
+  init_done: attract_slide
 
 kivy_config:
   graphics:
     fbo: force-hardware
+    fullscreen: true
+
 
