@@ -198,11 +198,6 @@ displays:
   window:
     width: 720
     height: 1280
-    title: Metroid
-    resizable: false
-    fullscreen: auto
-    borderless: false
-    exit_on_escape: true
   dmd:
     width: 120
     height: 32
@@ -215,6 +210,8 @@ slides:
         y: 1088
         anchor_x: left
         anchor_y: top
+        width: 720
+        height: 192
       - type: image
         image:  backglass_main_720.png
         x: 0
