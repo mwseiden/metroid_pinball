@@ -28,12 +28,28 @@ switches:
     number: 08
   s_captive_ball:
     number: 09
+  s_spinner:
+    number: 0A
+  s_left_target_1:
+    number: 0B
+  s_left_target_2:
+    number: 0C
   s_lower_right_bank_1:
     number: 10
   s_lower_right_bank_2:
     number: 11
   s_lower_right_bank_3:
     number: 12
+  s_shooter_lane:
+    number: 13
+  s_right_outlane:
+    number: 14
+  s_right_inlane:
+    number: 15
+  s_rollover_button:
+    number: 16
+  s_upper_flipper_rubber:
+    number: 17
   s_right_flipper_eos:
     number: 18
   s_left_flipper_eos:
@@ -119,7 +135,6 @@ coils:
   c_trough_eject:
     number: 17
     allow_enable: true
-    pulse_ms: 20
 
 autofire_coils:
   pop_1:
