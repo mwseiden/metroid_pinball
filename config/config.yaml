@@ -211,16 +211,16 @@ slides:
   attract_slide:
     widgets:
       - type: color_dmd
-      x: 0
-      y: 1088
-      anchor_x: left
-      anchor_y: top
+        x: 0
+        y: 1088
+        anchor_x: left
+        anchor_y: top
       - type: image
-      image:  backglass_main_720.png
-      x: 0
-      y: 0
-      anchor_x: left
-      anchor_y: top
+        image:  backglass_main_720.png
+        x: 0
+        y: 0
+        anchor_x: left
+        anchor_y: top
 
 slide_player:
   init_done: attract_slide
