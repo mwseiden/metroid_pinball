@@ -196,11 +196,15 @@ flippers:
 
 displays:
   window:
-    width: 720
-    height: 1280
+    width: 1280
+    height: 720
   dmd:
     width: 120
     height: 32
+
+images:
+  backglass_main:
+    file: backglass_main_720.png
 
 slides:
   attract_slide:
@@ -213,7 +217,7 @@ slides:
         width: 720
         height: 192
       - type: image
-        image:  backglass_main_720.png
+        image:  backglass_main
         x: 0
         y: 0
         anchor_x: left
@@ -225,6 +229,7 @@ slide_player:
 kivy_config:
   graphics:
     fbo: force-hardware
-    fullscreen: true
+    fullscreen: 1
+    rotation: 270
 
 
