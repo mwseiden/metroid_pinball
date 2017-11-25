@@ -229,7 +229,7 @@ slide_player:
 kivy_config:
   graphics:
     fbo: force-hardware
-    fullscreen: 1
+    fullscreen: auto
     rotation: 270
 
 
