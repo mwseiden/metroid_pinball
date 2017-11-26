@@ -194,42 +194,65 @@ flippers:
     eos_switch: s_upper_right_flipper_eos
     debug: true
 
-displays:
-  window:
-    width: 1280
-    height: 720
-  dmd:
-    width: 120
-    height: 32
-
 images:
   backglass_main:
+    load: preload
     file: backglass_main_720.png
 
+displays:
+  window:
+    width: 720
+    height: 1280
+  dmd:
+    width: 180
+    height: 64
+    default: yes
+
+window:
+  source_display: window
+  borderless: true
+  exit_on_escape: true
+  fullscreen: true
+  no_window: false
+  resizable: false
+  show_cursor: false
+  
 slides:
-  attract_slide:
-    widgets:
-      - type: color_dmd
-        x: 0
-        y: 1088
-        anchor_x: left
-        anchor_y: top
-        width: 720
-        height: 192
-      - type: image
-        image:  backglass_main
-        x: 0
-        y: 0
-        anchor_x: left
-        anchor_y: top
+  window_slide:
+    - type: color_dmd
+      width: 720
+      height: 600
+      pixel_size: .5
+    - type: image
+      image: backglass_main
+      x: left
+      y: top
+
+  dmd_slide:
+    - type: text
+      text: Press Start
+    - type: rectangle
+      width: 180
+      height: 60
+      color: orange
+      y: 0
+      anchor_y: bottom
+    - type: rectangle
+      width: 180
+      height: 60
+      color: red
+      y: top
+      anchor_y: top
 
 slide_player:
-  init_done: attract_slide
+  init_done:
+    window_slide:
+      target: window
+    dmd_slide:
+      target: dmd
 
 kivy_config:
   graphics:
-    fbo: force-hardware
-    fullscreen: auto
-    rotation: 270
+    fbo: hardware
 
 
