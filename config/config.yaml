@@ -9,31 +9,31 @@ fast:
 
 switches:
   s_right_flipper:
-    number: 00
+    number: 0
   s_left_flipper:
-    number: 01
+    number: 1
   s_start:
-    number: 02
+    number: 2
   s_pop_1:
-    number: 03
+    number: 3
   s_pop_2:
-    number: 04
+    number: 4
   s_pop_3:
-    number: 05
+    number: 5
   s_drop_down:
-    number: 06
+    number: 6
   s_thin_green:
-    number: 07
+    number: 7
   s_upper_right_flipper_eos:
-    number: 08
+    number: 8
   s_captive_ball:
-    number: 09
+    number: 9
   s_spinner:
-    number: 0A
+    number: A
   s_left_target_1:
-    number: 0B
+    number: B
   s_left_target_2:
-    number: 0C
+    number: C
   s_lower_right_bank_1:
     number: 10
   s_lower_right_bank_2:
@@ -91,21 +91,21 @@ switches:
 
 coils:
   c_pop_1:
-    number: 00
+    number: 0
     allow_enable: true
   c_pop_2:
-    number: 01
+    number: 1
     allow_enable: true
   c_pop_3:
-    number: 02
+    number: 2
     allow_enable: true
   c_drop_reset:
-    number: 03
+    number: 3
     hold_power: 1
     pulse_ms: 17
     allow_enable: true
   c_flipper_upper_right_main:
-    number: 04
+    number: 4
     allow_enable: true
     hold_power: 1
     pulse_ms: 20
@@ -269,5 +269,4 @@ kivy_config:
     resizable: false
     rotation: 270
     width: 1280
-
 
