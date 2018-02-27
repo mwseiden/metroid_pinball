@@ -1,4 +1,3 @@
-
 class Strip:
     def __init__(self, machine, offset, size, forward):
         self.machine = machine
