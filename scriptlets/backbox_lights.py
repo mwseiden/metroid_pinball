@@ -1,7 +1,5 @@
-
-
 from mpf.core.scriptlet import Scriptlet
-from lights.backbox.rain import Rain
+from .lights.backbox.rain import Rain
 
 class BackBoxLights(Scriptlet):
 

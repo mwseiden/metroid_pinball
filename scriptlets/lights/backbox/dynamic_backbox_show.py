@@ -1,3 +1,4 @@
+from strip import Strip
 
 class DynamicBackBoxShow:
 
