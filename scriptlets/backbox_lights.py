@@ -33,7 +33,7 @@ class BackBoxLights(Scriptlet):
                 self.base_effect.restore_state()
             else:
                 self.overlay_effect.animate()
-        elif self.base_effect is not None:
+        elif self.base_effect != None:
             self.base_effect.animate()
 
         _schedule_update()
