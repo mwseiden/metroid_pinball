@@ -7,6 +7,9 @@ hardware:
 fast:
   ports: /dev/ttyUSB1, /dev/ttyUSB2
 
+scriptlets:
+  backbox_lights.BackBoxLights
+
 switches:
   s_right_flipper:
     number: 0

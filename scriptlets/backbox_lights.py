@@ -16,8 +16,8 @@ class BackBoxLights(Scriptlet):
     def set_base_effect(self, effect):
         self.base_effect = effect
 
-    def set_overlay_effect(self, effect)
-        if self.overlay_effect == None
+    def set_overlay_effect(self, effect):
+        if self.overlay_effect == None:
             self.base_effect.save_state()
 
         self.overlay_effect = effect
@@ -31,7 +31,7 @@ class BackBoxLights(Scriptlet):
                 self.base_effect.restore_state()
             else:
                 self.overlay_effect.animate()
-        elif self.base_effect != None:
+        elif self.base_effect is not None:
             self.base_effect.animate()
 
         _schedule_update()
