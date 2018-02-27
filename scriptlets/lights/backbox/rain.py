@@ -1,7 +1,7 @@
 from random import randint
 
 from mpf.core.rgb_color import RGBColor
-from mpf.core.scriptlet.lights.backbox import DynamicBackBoxShow
+from lights.backbox import DynamicBackBoxShow
 
 class Rain(DynamicBackBoxShow):
 
