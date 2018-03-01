@@ -22,7 +22,7 @@ class Rain(DynamicBackBoxShow):
 
         # one drop per strip
         for strip_number in range(0, self.strip_count):
-            _new_drop(strip_number)
+            self._new_drop(strip_number)
             self.strips[strip_number].set_all_colors(SKY_COLOR)
 
     def animate(self):
