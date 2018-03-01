@@ -11,38 +11,38 @@ scriptlets:
   backbox_lights.BackBoxLights
 
 leds:
-  lbb00:
-    number: 128
-  lbb01:
-    number: 129
-  lbb02:
-    number: 130
-  lbb03:
-    number: 131
-  lbb04:
-    number: 132
-  lbb05:
-    number: 133
-  lbb06:
-    number: 134
-  lbb07:
-    number: 135
-  lbb08:
-    number: 136
-  lbb09:
-    number: 137
-  lbb10:
-    number: 138
-  lbb11:
-    number: 139
-  lbb12:
-    number: 140
-  lbb13:
-    number: 141
-  lbb14:
-    number: 142
-  lbb15:
-    number: 143
+  lbb80:
+    number: 80
+  lbb81:
+    number: 81
+  lbb82:
+    number: 82
+  lbb83:
+    number: 83
+  lbb84:
+    number: 84
+  lbb85:
+    number: 85
+  lbb86:
+    number: 86
+  lbb87:
+    number: 87
+  lbb88:
+    number: 88
+  lbb89:
+    number: 89
+  lbb8A:
+    number: 8A
+  lbb8B:
+    number: 8B
+  lbb8C:
+    number: 8C
+  lbb8D:
+    number: 8D
+  lbb8E:
+    number: 8E
+  lbb8F:
+    number: 8F
 
 switches:
   s_right_flipper:
