@@ -4,9 +4,9 @@ from .strip import Strip
 
 class DynamicBackBoxShow:
 
-    self.BASE_LEFT = 128
-    self.BASE_RIGHT = 192
-    self.STRIP_LENGTH = 10
+    BASE_LEFT = 128
+    BASE_RIGHT = 192
+    STRIP_LENGTH = 10
 
     def __init__(self, machine):
         self.machine = machine
