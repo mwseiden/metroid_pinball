@@ -10,7 +10,8 @@ class Strip:
         return None if _index_out_of_range(index) else _get_led(index)
 
     def set_color(self, index, color):
-        if _index_out_of_range(index) return
+        if _index_out_of_range(index):
+            return None
 
         _set_color(index, color)
 

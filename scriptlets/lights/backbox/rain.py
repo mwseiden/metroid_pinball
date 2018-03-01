@@ -1,7 +1,7 @@
 from random import randint
 
 from mpf.core.rgb_color import RGBColor
-from dynamic_backbox_show import DynamicBackBoxShow
+from .dynamic_backbox_show import DynamicBackBoxShow
 
 class Rain(DynamicBackBoxShow):
 
@@ -34,7 +34,8 @@ class Rain(DynamicBackBoxShow):
                 strip.set_color(self.positions[strip_number] + 1, DROP_COLOR)
                 self.positions[strip_number] += 1
 
-                if self.positions[strip_number] >= len(self.strips) _new_drop(strip_number)
+                if self.positions[strip_number] >= len(self.strips):
+                    _new_drop(strip_number)
 
     # private ----------------------------------------------------------------
 

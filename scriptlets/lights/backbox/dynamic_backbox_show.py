@@ -1,4 +1,6 @@
-from strip import Strip
+
+
+from .strip import Strip
 
 class DynamicBackBoxShow:
 
@@ -45,9 +47,9 @@ class DynamicBackBoxShow:
         return false
 
     def save_state(self):
-        for strip in self.strips
+        for strip in self.strips:
             strip.save_state()
 
     def restore_state(self):
-        for strip in self.strips
+        for strip in self.strips:
             strip.restore_state()
