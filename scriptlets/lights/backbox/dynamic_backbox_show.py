@@ -12,19 +12,19 @@ class DynamicBackBoxShow:
         self.machine = machine
         self.frame = 0
 
-        self.left_z_front = Strip(machine, self.BASE_LEFT, self.STRIP_LENGTH, true)
-        self.left_z_middle = Strip(machine, self.BASE_LEFT + self.STRIP_LENGTH, self.STRIP_LENGTH, false)
-        self.left_z_rear = Strip(machine, self.BASE_LEFT + (self.STRIP_LENGTH * 2), self.STRIP_LENGTH, true)
+        self.left_z_front = Strip(machine, self.BASE_LEFT, self.STRIP_LENGTH, True)
+        self.left_z_middle = Strip(machine, self.BASE_LEFT + self.STRIP_LENGTH, self.STRIP_LENGTH, False)
+        self.left_z_rear = Strip(machine, self.BASE_LEFT + (self.STRIP_LENGTH * 2), self.STRIP_LENGTH, True)
         self.left_x_left = self.left_z_middle
-        self.left_x_middle = Strip(machine, self.BASE_LEFT + (self.STRIP_LENGTH * 3), self.STRIP_LENGTH, false)
-        self.left_x_right = Strip(machine, self.BASE_LEFT + (self.STRIP_LENGTH * 4), self.STRIP_LENGTH, true)
+        self.left_x_middle = Strip(machine, self.BASE_LEFT + (self.STRIP_LENGTH * 3), self.STRIP_LENGTH, False)
+        self.left_x_right = Strip(machine, self.BASE_LEFT + (self.STRIP_LENGTH * 4), self.STRIP_LENGTH, True)
 
-        self.right_z_front = Strip(machine, self.BASE_RIGHT, self.STRIP_LENGTH, true)
-        self.right_z_middle = Strip(machine, self.BASE_RIGHT + self.STRIP_LENGTH, self.STRIP_LENGTH, false)
-        self.right_z_rear = Strip(machine, self.BASE_RIGHT + (self.STRIP_LENGTH * 2), self.STRIP_LENGTH, true)
+        self.right_z_front = Strip(machine, self.BASE_RIGHT, self.STRIP_LENGTH, True)
+        self.right_z_middle = Strip(machine, self.BASE_RIGHT + self.STRIP_LENGTH, self.STRIP_LENGTH, False)
+        self.right_z_rear = Strip(machine, self.BASE_RIGHT + (self.STRIP_LENGTH * 2), self.STRIP_LENGTH, True)
         self.right_x_right = self.right_z_middle
-        self.right_x_middle = Strip(machine, self.BASE_RIGHT + (self.STRIP_LENGTH * 3), self.STRIP_LENGTH, false)
-        self.right_x_left = Strip(machine, self.BASE_RIGHT + (self.STRIP_LENGTH * 4), self.STRIP_LENGTH, true)
+        self.right_x_middle = Strip(machine, self.BASE_RIGHT + (self.STRIP_LENGTH * 3), self.STRIP_LENGTH, False)
+        self.right_x_left = Strip(machine, self.BASE_RIGHT + (self.STRIP_LENGTH * 4), self.STRIP_LENGTH, True)
 
         self.strips = [
             self.left_z_front,
@@ -44,7 +44,7 @@ class DynamicBackBoxShow:
         self.frame += 1
 
     def is_finished(self):
-        return false
+        return False
 
     def save_state(self):
         for strip in self.strips:
