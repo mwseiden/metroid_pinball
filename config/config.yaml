@@ -10,6 +10,40 @@ fast:
 scriptlets:
   backbox_lights.BackBoxLights
 
+leds:
+  lbb00:
+    number: 128
+  lbb01:
+    number: 129
+  lbb02:
+    number: 130
+  lbb03:
+    number: 131
+  lbb04:
+    number: 132
+  lbb05:
+    number: 133
+  lbb06:
+    number: 134
+  lbb07:
+    number: 135
+  lbb08:
+    number: 136
+  lbb09:
+    number: 137
+  lbb10:
+    number: 138
+  lbb11:
+    number: 139
+  lbb12:
+    number: 140
+  lbb13:
+    number: 141
+  lbb14:
+    number: 142
+  lbb15:
+    number: 143
+
 switches:
   s_right_flipper:
     number: 0
