@@ -39,6 +39,6 @@ class Rain(DynamicBackBoxShow):
 
     # private ----------------------------------------------------------------
 
-    def _new_drop(strip_number):
+    def _new_drop(self, strip_number):
         self.velocities[strip_number] = MINIMUM_DELAY + randint(0, MAXIMUM_DELAY - MINIMUM_DELAY + 1)
         self.positions[strip_number] = START_POSITION
