@@ -5,8 +5,6 @@ class Strip:
         self.size = size
         self.forward = forward
         self._lights = list(range(offset, offset + size) if forward else range(offset + size - 1, offset - 1, -1))
-        for key, value in self.machine.leds.items() :
-            print (key, value)
 
     def get_led(self, index):
         return None if _index_out_of_range(index) else _get_led(index)

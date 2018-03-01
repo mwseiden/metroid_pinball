@@ -8,6 +8,8 @@ class BackBoxLights(Scriptlet):
     def on_load(self):
         self.set_effects_to_default()
         self._schedule_update()
+        for key, value in self.machine.leds.items() :
+            self.log("%s : %s", key, value)
 
     def set_effects_to_default(self):
         self.base_effect = Rain(self.machine)
