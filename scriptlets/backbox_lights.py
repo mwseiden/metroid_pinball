@@ -5,8 +5,8 @@ class BackBoxLights(Scriptlet):
 
     REFRESH_RATE = 35
 
-    def on_load(self, **kwargs):
-        set_effects_to_default()
+    def on_load(self):
+        self.set_effects_to_default()
         _schedule_update()
 
     def set_effects_to_default(self):
