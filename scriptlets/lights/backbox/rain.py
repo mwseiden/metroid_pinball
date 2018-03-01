@@ -23,7 +23,7 @@ class Rain(DynamicBackBoxShow):
         # one drop per strip
         for strip_number in range(0, self.strip_count):
             self._new_drop(strip_number)
-            self.strips[strip_number].set_all_colors(SKY_COLOR)
+            self.strips[strip_number].set_all_colors(self.SKY_COLOR)
 
     def animate(self):
         super().animate()
@@ -40,5 +40,5 @@ class Rain(DynamicBackBoxShow):
     # private ----------------------------------------------------------------
 
     def _new_drop(self, strip_number):
-        self.velocities[strip_number] = MINIMUM_DELAY + randint(0, MAXIMUM_DELAY - MINIMUM_DELAY + 1)
-        self.positions[strip_number] = START_POSITION
+        self.velocities[strip_number] = self.MINIMUM_DELAY + randint(0, self.MAXIMUM_DELAY - self.MINIMUM_DELAY + 1)
+        self.positions[strip_number] = self.START_POSITION
