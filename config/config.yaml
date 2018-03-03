@@ -10,39 +10,8 @@ fast:
 scriptlets:
   backbox_lights.BackBoxLights
 
-leds:
-  lbb80:
-    number: 80
-  lbb81:
-    number: 81
-  lbb82:
-    number: 82
-  lbb83:
-    number: 83
-  lbb84:
-    number: 84
-  lbb85:
-    number: 85
-  lbb86:
-    number: 86
-  lbb87:
-    number: 87
-  lbb88:
-    number: 88
-  lbb89:
-    number: 89
-  lbb8A:
-    number: 8A
-  lbb8B:
-    number: 8B
-  lbb8C:
-    number: 8C
-  lbb8D:
-    number: 8D
-  lbb8E:
-    number: 8E
-  lbb8F:
-    number: 8F
+config:
+-leds.yaml
 
 switches:
   s_right_flipper:

@@ -34,10 +34,13 @@ class Strip:
         return index < 0 or index >= self.size
 
     def _get_led(self, index):
-        return self.machine.leds[self._lights[index]]
+        return self.machine.leds[_get_light_key(self._lights[index])]
 
     def _set_color(self, index, color):
         self._get_led(index).color(color, None, 0, 'bb')
 
     def _get_color(self, index):
         return _get_led(index).get_color()
+
+    def _get_light_key(self, index):
+        return 'led{:02X}'.format(integer)
