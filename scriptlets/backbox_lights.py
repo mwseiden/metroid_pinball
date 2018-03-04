@@ -8,8 +8,6 @@ class BackBoxLights(Scriptlet):
     def on_load(self):
         self.set_effects_to_default()
         self._schedule_update()
-        for key, value in self.machine.leds.items() :
-            self.log("%s : %s", key, value)
 
     def set_effects_to_default(self):
         self.base_effect = Rain(self.machine)
@@ -36,7 +34,7 @@ class BackBoxLights(Scriptlet):
         elif self.base_effect != None:
             self.base_effect.animate()
 
-        _schedule_update()
+        self._schedule_update()
 
     def _schedule_update(self):
-        self.delay_manager.add_if_doesnt_exist(REFRESH_RATE, self._update_backbox, 'bbup')
+        self.delay.add_if_doesnt_exist(self.REFRESH_RATE, self._update_backbox, 'bbup')

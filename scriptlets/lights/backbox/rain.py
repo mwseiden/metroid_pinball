@@ -30,12 +30,12 @@ class Rain(DynamicBackBoxShow):
 
         for strip_number in range(0, self.strip_count):
             if self.frame % self.velocities[strip_number] == 0:
-                strip.set_color(self.positions[strip_number], SKY_COLOR)
-                strip.set_color(self.positions[strip_number] + 1, DROP_COLOR)
+                self.strips[strip_number].set_color(self.positions[strip_number], self.SKY_COLOR)
+                self.strips[strip_number].set_color(self.positions[strip_number] + 1, self.DROP_COLOR)
                 self.positions[strip_number] += 1
 
                 if self.positions[strip_number] >= len(self.strips):
-                    _new_drop(strip_number)
+                    self._new_drop(strip_number)
 
     # private ----------------------------------------------------------------
 

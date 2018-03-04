@@ -11,7 +11,7 @@ scriptlets:
   backbox_lights.BackBoxLights
 
 config:
--leds.yaml
+  - leds.yaml
 
 switches:
   s_right_flipper:

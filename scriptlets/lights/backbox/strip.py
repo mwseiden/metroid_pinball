@@ -7,13 +7,13 @@ class Strip:
         self._lights = list(range(offset, offset + size) if forward else range(offset + size - 1, offset - 1, -1))
 
     def get_led(self, index):
-        return None if _index_out_of_range(index) else _get_led(index)
+        return None if self._index_out_of_range(index) else _get_led(index)
 
     def set_color(self, index, color):
-        if _index_out_of_range(index):
+        if self._index_out_of_range(index):
             return None
 
-        _set_color(index, color)
+        self._set_color(index, color)
 
     def set_all_colors(self, color):
         for index in range(0, self.size):
@@ -26,7 +26,7 @@ class Strip:
 
     def restore_state(self):
         for index in range(0, self.size):
-             _set_color(index, self._state[index])
+             self._set_color(index, self._state[index])
 
     # private ----------------------------------------------------------------
 
@@ -34,7 +34,7 @@ class Strip:
         return index < 0 or index >= self.size
 
     def _get_led(self, index):
-        return self.machine.leds[_get_light_key(self._lights[index])]
+        return self.machine.leds[self._get_light_key(self._lights[index])]
 
     def _set_color(self, index, color):
         self._get_led(index).color(color, None, 0, 'bb')
@@ -43,4 +43,4 @@ class Strip:
         return _get_led(index).get_color()
 
     def _get_light_key(self, index):
-        return 'led{:02X}'.format(integer)
+        return 'led{:02X}'.format(index)
