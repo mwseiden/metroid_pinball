@@ -5,13 +5,13 @@ from .dynamic_backbox_show import DynamicBackBoxShow
 
 class Rain(DynamicBackBoxShow):
 
-    SKY_COLOR = RGBColor([0, 0, 8])
-    DROP_COLOR = RGBColor([8, 8, 32])
+    SKY_COLOR = RGBColor([0, 0, 4])
+    DROP_COLOR = RGBColor([16, 16, 32])
 
-    START_POSITION = -4
+    START_POSITION = -2
 
-    MINIMUM_DELAY = 4
-    MAXIMUM_DELAY = 8
+    MINIMUM_DELAY = 1
+    MAXIMUM_DELAY = 2
 
     def __init__(self, machine):
         super().__init__(machine)
