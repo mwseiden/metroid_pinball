@@ -210,8 +210,8 @@ displays:
     width: 720
     height: 1280
   dmd:
-    width: 180
-    height: 64
+    width: 128
+    height: 32
     default: yes
 
 window:
@@ -226,10 +226,15 @@ window:
 slides:
   window_slide:
     - type: color_dmd
-      width: 720
-      height: 180
-      pixel_size: .75
+      width: 640
+      height: 160
+      pixel_size: .9
       y: 120
+    - type: rectangle
+      width: 648
+      height: 168
+      color: black
+      y: 116
     - type: image
       image: backglass_main
 
@@ -237,16 +242,15 @@ slides:
     - type: text
       text: Press Start
       color: black
+    - type: line
+       points: 0, 0, 127, 0, 127 31, 0, 31
+       color: red
+       thickness: 1
+       cap: square
     - type: rectangle
-      width: 180
-      height: 60
-      color: orange
-      anchor_y: top
-    - type: rectangle
-      width: 180
-      height: 60
-      color: red
-      anchor_y: top
+      width: 128
+      height: 32
+      color: 803000
 
 slide_player:
   init_done:
