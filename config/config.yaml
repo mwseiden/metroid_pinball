@@ -228,13 +228,15 @@ slides:
     - type: color_dmd
       width: 640
       height: 160
-      pixel_size: .9
+      pixel_size: .75
       y: 120
+      x: 370
     - type: rectangle
       width: 648
       height: 168
       color: black
-      y: 116
+      y: 120
+      x: 370
     - type: image
       image: backglass_main
 
@@ -243,14 +245,14 @@ slides:
       text: Press Start
       color: black
     - type: line
-       points: 0, 0, 127, 0, 127 31, 0, 31
-       color: red
-       thickness: 1
-       cap: square
+      points: 0, 0, 127, 0, 127 31, 0, 31, 0, 0
+      color: red
+      thickness: 1
+      cap: square
     - type: rectangle
       width: 128
       height: 32
-      color: 803000
+      color: FF4000
 
 slide_player:
   init_done:
