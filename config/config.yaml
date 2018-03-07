@@ -227,8 +227,10 @@ slides:
   window_slide:
     - type: color_dmd
       width: 720
-      height: 600
+      height: 300
       pixel_size: .5
+      x: left
+      y: bottom
     - type: image
       image: backglass_main
       x: left
@@ -266,13 +268,13 @@ kivy_config:
     borderless: true
     window_state: visible  # visible, hidden, maximized, minimized
     fbo: hardware  # hardware, software, force-hardware
-    fullscreen: true
+    fullscreen: auto
     height: 720
     maxfps: 30
     multisamples: 2
     position: auto  # auto, custom
     show_cursor: false
     resizable: false
-    rotation: 270
+    rotation: 0
     width: 1280
 
