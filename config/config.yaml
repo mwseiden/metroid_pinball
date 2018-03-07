@@ -227,29 +227,25 @@ slides:
   window_slide:
     - type: color_dmd
       width: 720
-      height: 300
-      pixel_size: .5
-      x: left
-      y: bottom
+      height: 180
+      pixel_size: .75
+      y: 120
     - type: image
       image: backglass_main
-      x: left
-      y: top
 
   dmd_slide:
     - type: text
       text: Press Start
+      color: black
     - type: rectangle
       width: 180
       height: 60
       color: orange
-      y: 0
-      anchor_y: bottom
+      anchor_y: top
     - type: rectangle
       width: 180
       height: 60
       color: red
-      y: top
       anchor_y: top
 
 slide_player:
