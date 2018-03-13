@@ -37,7 +37,7 @@ class Strip:
         return self.machine.leds[self._get_light_key(self._lights[index])]
 
     def _set_color(self, index, color):
-        self._get_led(index).color(color, None, 0, 'bb')
+        self._get_led(index).color(color, None, 50000, 'bb')
 
     def _get_color(self, index):
         return _get_led(index).get_color()

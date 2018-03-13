@@ -13,6 +13,9 @@ scriptlets:
 config:
   - leds.yaml
 
+modes:
+  - base
+  
 switches:
   s_right_flipper:
     number: 0
