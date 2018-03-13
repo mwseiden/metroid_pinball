@@ -6,7 +6,7 @@
       widgets:
       - type: text
         text: YOU ARE AWESOME
-        font_size: 50
+        style: dmd_big
       transition:
          type: push
          duration: 1s
@@ -18,6 +18,7 @@
       widgets:
       - type: Text
         text: PRESS START
+        style: dmd_big
         animations:
           pre_show_slide:
             - property: opacity
@@ -30,6 +31,7 @@
       - type: Text
         text: FREE PLAY
         color: green
+        style: dmd_big
         y: 10
         anchor_y: bottom
       transition:
@@ -43,6 +45,7 @@
       widgets:
       - type: Text
         text: MISSION PINBALL
+        style: dmd_big
         color: red
       transition:
          type: move_in
