@@ -5,7 +5,7 @@
     awesome_slide:
       widgets:
       - type: text
-        text: YOU ARE AWESOME
+        text: twitch.tv/thearrrrrcade
         style: dmd_big
       transition:
          type: push
@@ -19,6 +19,7 @@
       - type: Text
         text: PRESS START
         style: dmd_big
+        y: 20
         animations:
           pre_show_slide:
             - property: opacity
@@ -32,7 +33,7 @@
         text: FREE PLAY
         color: green
         style: dmd_big
-        y: 10
+        y: 8
         anchor_y: bottom
       transition:
          type: move_in
@@ -51,3 +52,24 @@
          type: move_in
          duration: 1s
          direction: top
+
+- duration: 5s
+  slides:
+    arrrrrcade:
+      widgets:
+      - type: image
+        image: dmd_arrrrrcade
+      transition:
+         type: move_in
+         duration: 1s
+         direction: bottom
+
+- duration: 5s
+  slides:
+    metroid_logo:
+      widgets:
+      - type: image
+        image: dmd_metroid_logo
+      transition:
+         type: rise_in
+         duration: 1s
