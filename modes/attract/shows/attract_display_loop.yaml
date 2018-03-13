@@ -1,18 +1,6 @@
 #show_version=4
 
-- duration: 3s
-  slides:
-    awesome_slide:
-      widgets:
-      - type: text
-        text: twitch.tv/thearrrrrcade
-        style: dmd_med
-      transition:
-         type: push
-         duration: 1s
-         direction: left
-
-- duration: 3s
+- duration: 5s
   slides:
     press_start:
       widgets:
@@ -40,7 +28,7 @@
          duration: 1s
          direction: right
 
-- duration: 3
+- duration: 3s
   slides:
     mission_pinball:
       widgets:
@@ -73,3 +61,15 @@
       transition:
          type: rise_in
          duration: 1s
+
+- duration: 5s
+  slides:
+    awesome_slide:
+      widgets:
+      - type: text
+        text: TWITCH.TV/THEARRRRRCADE
+        style: dmd_small
+      transition:
+         type: push
+         duration: 1s
+         direction: left
