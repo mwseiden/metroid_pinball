@@ -243,7 +243,7 @@ slides:
   dmd_slide:
     - type: text
       text: Press Start
-      color: black
+      color: FF5000
     - type: line
       points: 0, 0, 127, 0, 127 31, 0, 31, 0, 0
       color: red
@@ -252,7 +252,7 @@ slides:
     - type: rectangle
       width: 128
       height: 32
-      color: FF4000
+      color: black
 
 slide_player:
   init_done:
