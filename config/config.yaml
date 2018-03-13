@@ -245,7 +245,7 @@ slides:
 
   dmd_slide:
     - type: text
-      text: Press Start
+      text: Booting...
       color: FF5000
     - type: line
       points: 0, 0, 127, 0, 127 31, 0, 31, 0, 0

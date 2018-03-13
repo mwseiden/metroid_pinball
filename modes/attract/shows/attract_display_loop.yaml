@@ -19,7 +19,7 @@
       - type: Text
         text: PRESS START
         style: dmd_big
-        y: 4
+        y: 8
         animations:
           pre_show_slide:
             - property: opacity
@@ -33,7 +33,7 @@
         text: FREE PLAY
         color: green
         style: dmd_big
-        y: 22
+        y: 20
         anchor_y: bottom
       transition:
          type: move_in
