@@ -6,7 +6,7 @@
       widgets:
       - type: text
         text: twitch.tv/thearrrrrcade
-        style: dmd_big
+        style: dmd_med
       transition:
          type: push
          duration: 1s
@@ -33,7 +33,7 @@
         text: FREE PLAY
         color: green
         style: dmd_big
-        y: 8
+        y: 4
         anchor_y: bottom
       transition:
          type: move_in
