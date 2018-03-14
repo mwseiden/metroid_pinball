@@ -82,19 +82,19 @@
         text: DOUBLE
         style: dmd_big
         color: E67300
-        y: 22
+        y: 24
       - type: Text
         text: DANGER
         style: dmd_big
         color: E67300
-        y: 8
+        y: 10
       - type: Text
         text: ddpinball.com
         style: dmd_small
         color: E67300
         y: 2
       transition:
-         type: rise_in
+         type: swap
          duration: 1s
 
 - duration: 3s
@@ -117,7 +117,7 @@
       transition:
          type: move_in
          duration: 1s
-         direction: bottom
+         direction: left
 
 - duration: 3s
   slides:
@@ -128,18 +128,18 @@
       transition:
          type: move_in
          duration: 1s
-         direction: bottom
+         direction: top
 
 - duration: 3s
   slides:
     rubber_ducks_slide:
       widgets:
       - type: image
-        image: dmd_rubber_ducks
+        image: dmd_devitroid
       transition:
          type: move_in
          duration: 1s
-         direction: bottom
+         direction: right
 
 - duration: 3s
   slides:
@@ -161,7 +161,7 @@
       transition:
          type: move_in
          duration: 1s
-         direction: bottom
+         direction: left
 
 - duration: 3s
   slides:
@@ -172,5 +172,5 @@
       transition:
          type: move_in
          duration: 1s
-         direction: bottom
+         direction: top
 
