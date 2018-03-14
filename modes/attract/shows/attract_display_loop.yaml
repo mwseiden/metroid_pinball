@@ -30,6 +30,16 @@
 
 - duration: 3s
   slides:
+    fast_logo:
+      widgets:
+      - type: image
+        image: dmd_fast_pinball
+      transition:
+         type: swap
+         duration: 1s
+
+- duration: 3s
+  slides:
     mission_pinball:
       widgets:
       - type: Text
@@ -82,17 +92,17 @@
         text: DOUBLE
         style: dmd_big
         color: E67300
-        y: 24
+        y: 25
       - type: Text
         text: DANGER
         style: dmd_big
         color: E67300
-        y: 12
+        y: 13
       - type: Text
         text: ddpinball.com
         style: dmd_small
         color: E67300
-        y: 2
+        y: 3
       transition:
          type: swap
          duration: 1s
@@ -180,6 +190,58 @@
       widgets:
       - type: image
         image: dmd_goren
+      transition:
+         type: push
+         duration: 1s
+         direction: right
+
+- duration: 3s
+  slides:
+    owl_slide:
+      widgets:
+      - type: image
+        image: dmd_owlnonymous
+      transition:
+         type: push
+         duration: 1s
+         direction: left
+
+- duration: 3s
+  slides:
+    pinball_live_slide:
+      widgets:
+      - type: image
+        image: dmd_pinball_live
+      transition:
+         type: push
+         duration: 1s
+         direction: top
+
+- duration: 3s
+  slides:
+    dead_flip_slide:
+      widgets:
+      - type: image
+        image: dmd_dead_flip
+      transition:
+         type: push
+         duration: 1s
+         direction: bottom
+
+- duration: 6s
+  slides:
+    thank_you_slide:
+      widgets:
+      - type: Text
+        text: ...and thanks to
+        style: dmd_med
+        color: E67300
+        y: 25
+      - type: Text
+        text: everyone watching!
+        style: dmd_med
+        color: E67300
+        y: 13
       transition:
          type: swap
          duration: 1s
