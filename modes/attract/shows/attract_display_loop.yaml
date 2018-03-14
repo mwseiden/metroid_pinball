@@ -73,3 +73,104 @@
          type: push
          duration: 1s
          direction: left
+
+- duration: 5s
+  slides:
+    double_danger_slide:
+      widgets:
+      - type: Text
+        text: DOUBLE
+        style: dmd_big
+        color: E67300
+        y: 18
+      - type: Text
+        text: DANGER
+        style: dmd_big
+        color: E67300
+        y: 10
+      - type: Text
+        text: ddpinball.com
+        style: dmd_small
+        color: E67300
+        y: 2
+      transition:
+         type: rise_in
+         duration: 1s
+
+- duration: 3s
+  slides:
+    pbu_slide:
+      widgets:
+      - type: image
+        image: dmd_pbu
+      transition:
+         type: move_in
+         duration: 1s
+         direction: bottom
+
+- duration: 3s
+  slides:
+    buffalo_slide:
+      widgets:
+      - type: image
+        image: dmd_buffalo
+      transition:
+         type: move_in
+         duration: 1s
+         direction: bottom
+
+- duration: 3s
+  slides:
+    rudy_slide:
+      widgets:
+      - type: image
+        image: dmd_rudy
+      transition:
+         type: move_in
+         duration: 1s
+         direction: bottom
+
+- duration: 3s
+  slides:
+    rubber_ducks_slide:
+      widgets:
+      - type: image
+        image: dmd_rubber_ducks
+      transition:
+         type: move_in
+         duration: 1s
+         direction: bottom
+
+- duration: 3s
+  slides:
+    blazer_slide:
+      widgets:
+      - type: image
+        image: dmd_blazer
+      transition:
+         type: move_in
+         duration: 1s
+         direction: bottom
+
+- duration: 3s
+  slides:
+    berz_slide:
+      widgets:
+      - type: image
+        image: dmd_berz
+      transition:
+         type: move_in
+         duration: 1s
+         direction: bottom
+
+- duration: 3s
+  slides:
+    norcal_slide:
+      widgets:
+      - type: image
+        image: dmd_norcal
+      transition:
+         type: move_in
+         duration: 1s
+         direction: bottom
+
