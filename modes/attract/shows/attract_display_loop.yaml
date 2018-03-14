@@ -174,3 +174,13 @@
          duration: 1s
          direction: top
 
+- duration: 3s
+  slides:
+    goren_slide:
+      widgets:
+      - type: image
+        image: dmd_goren
+      transition:
+         type: swap
+         duration: 1s
+
