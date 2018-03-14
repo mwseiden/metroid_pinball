@@ -216,6 +216,7 @@
          type: push
          duration: 1s
          direction: top
+         easing: in_elastic
 
 - duration: 3s
   slides:
