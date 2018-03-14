@@ -82,12 +82,12 @@
         text: DOUBLE
         style: dmd_big
         color: E67300
-        y: 18
+        y: 22
       - type: Text
         text: DANGER
         style: dmd_big
         color: E67300
-        y: 10
+        y: 8
       - type: Text
         text: ddpinball.com
         style: dmd_small
