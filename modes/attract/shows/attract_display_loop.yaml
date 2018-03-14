@@ -215,7 +215,7 @@
       transition:
          type: push
          duration: 1s
-         direction: top
+         direction: up
          easing: in_elastic
 
 - duration: 3s
@@ -227,7 +227,7 @@
       transition:
          type: push
          duration: 1s
-         direction: bottom
+         direction: down
 
 - duration: 6s
   slides:
