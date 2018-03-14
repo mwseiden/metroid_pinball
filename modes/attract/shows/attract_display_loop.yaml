@@ -87,7 +87,7 @@
         text: DANGER
         style: dmd_big
         color: E67300
-        y: 10
+        y: 12
       - type: Text
         text: ddpinball.com
         style: dmd_small
