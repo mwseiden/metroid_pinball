@@ -1,0 +1,249 @@
+#show_version=4
+
+- duration: 5s
+  slides:
+    press_start:
+      widgets:
+      - type: Text
+        text: PRESS START
+        style: dmd_big
+        y: 10
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0
+              duration: .5s
+            - property: opacity
+              value: 1
+              duration: .5s
+              repeat: -1
+      - type: Text
+        text: FREE PLAY
+        color: green
+        style: dmd_big
+        y: 18
+        anchor_y: bottom
+      transition:
+         type: move_in
+         duration: 1s
+         direction: right
+
+- duration: 3s
+  slides:
+    fast_logo:
+      widgets:
+      - type: image
+        image: dmd_fast_pinball
+      transition:
+         type: swap
+         duration: 1s
+
+- duration: 3s
+  slides:
+    mission_pinball:
+      widgets:
+      - type: Text
+        text: MISSION PINBALL
+        style: dmd_big
+        color: red
+      transition:
+         type: move_in
+         duration: 1s
+         direction: top
+
+- duration: 5s
+  slides:
+    arrrrrcade:
+      widgets:
+      - type: image
+        image: dmd_arrrrrcade
+      transition:
+         type: move_in
+         duration: 1s
+         direction: bottom
+
+- duration: 5s
+  slides:
+    metroid_logo:
+      widgets:
+      - type: image
+        image: dmd_metroid_logo
+      transition:
+         type: rise_in
+         duration: 1s
+
+- duration: 5s
+  slides:
+    awesome_slide:
+      widgets:
+      - type: text
+        text: TWITCH.TV/THEARRRRRCADE
+        style: dmd_small
+      transition:
+         type: push
+         duration: 1s
+         direction: left
+
+- duration: 5s
+  slides:
+    double_danger_slide:
+      widgets:
+      - type: Text
+        text: DOUBLE
+        style: dmd_big
+        color: E67300
+        y: 25
+      - type: Text
+        text: DANGER
+        style: dmd_big
+        color: E67300
+        y: 13
+      - type: Text
+        text: ddpinball.com
+        style: dmd_small
+        color: E67300
+        y: 3
+      transition:
+         type: swap
+         duration: 1s
+
+- duration: 3s
+  slides:
+    pbu_slide:
+      widgets:
+      - type: image
+        image: dmd_pbu
+      transition:
+         type: move_in
+         duration: 1s
+         direction: bottom
+
+- duration: 3s
+  slides:
+    buffalo_slide:
+      widgets:
+      - type: image
+        image: dmd_buffalo
+      transition:
+         type: move_in
+         duration: 1s
+         direction: left
+
+- duration: 3s
+  slides:
+    rudy_slide:
+      widgets:
+      - type: image
+        image: dmd_rudy
+      transition:
+         type: move_in
+         duration: 1s
+         direction: top
+
+- duration: 3s
+  slides:
+    rubber_ducks_slide:
+      widgets:
+      - type: image
+        image: dmd_devitroid
+      transition:
+         type: move_in
+         duration: 1s
+         direction: right
+
+- duration: 3s
+  slides:
+    blazer_slide:
+      widgets:
+      - type: image
+        image: dmd_blazer
+      transition:
+         type: move_in
+         duration: 1s
+         direction: bottom
+
+- duration: 3s
+  slides:
+    berz_slide:
+      widgets:
+      - type: image
+        image: dmd_berz
+      transition:
+         type: move_in
+         duration: 1s
+         direction: left
+
+- duration: 3s
+  slides:
+    norcal_slide:
+      widgets:
+      - type: image
+        image: dmd_norcal
+      transition:
+         type: move_in
+         duration: 1s
+         direction: top
+
+- duration: 3s
+  slides:
+    goren_slide:
+      widgets:
+      - type: image
+        image: dmd_goren
+      transition:
+         type: push
+         duration: 1s
+         direction: right
+
+- duration: 3s
+  slides:
+    owl_slide:
+      widgets:
+      - type: image
+        image: dmd_owlnonymous
+      transition:
+         type: push
+         duration: 1s
+         direction: left
+
+- duration: 3s
+  slides:
+    pinball_live_slide:
+      widgets:
+      - type: image
+        image: dmd_pinball_live
+      transition:
+         type: push
+         duration: 1s
+         direction: up
+         easing: in_elastic
+
+- duration: 3s
+  slides:
+    dead_flip_slide:
+      widgets:
+      - type: image
+        image: dmd_dead_flip
+      transition:
+         type: push
+         duration: 1s
+         direction: down
+
+- duration: 6s
+  slides:
+    thank_you_slide:
+      widgets:
+      - type: Text
+        text: ...and thanks to
+        style: dmd_med
+        color: E67300
+        y: 25
+      - type: Text
+        text: everyone watching!
+        style: dmd_med
+        color: E67300
+        y: 13
+      transition:
+         type: swap
+         duration: 1s
+
