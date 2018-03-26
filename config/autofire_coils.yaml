@@ -1,0 +1,31 @@
+#config_version=4
+
+autofire_coils:
+  pop_1:
+    coil: c_pop_1
+    switch: s_pop_1
+    enable_events: machine_reset_phase_3
+  pop_2:
+    coil: c_pop_2
+    switch: s_pop_2
+    enable_events: machine_reset_phase_3
+  pop_3:
+    coil: c_pop_3
+    switch: s_pop_3
+    enable_events: machine_reset_phase_3
+  drop_reset:
+    coil: c_drop_1_reset
+    switch: s_thin_green
+    enable_events: machine_reset_phase_3
+  left_slingshot:
+    coil: c_left_slingshot
+    switch: s_left_sling
+    enable_events: machine_reset_phase_3
+  right_slingshot:
+    coil: c_right_slingshot
+    switch: s_right_sling
+    enable_events: machine_reset_phase_3
+  upper_slingshot:
+    coil: c_upper_slingshot
+    switch: s_upper_sling
+    enable_events: machine_reset_phase_3

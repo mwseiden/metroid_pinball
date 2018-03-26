@@ -1,0 +1,113 @@
+#config_version=4
+
+switches:
+  s_right_flipper:
+    number: 0
+  s_left_flipper:
+    number: 1
+  s_start:
+    number: 2
+    tags: start
+  s_pop_1:
+    number: 3
+    tags: playfield_active
+  s_pop_2:
+    number: 4
+    tags: playfield_active
+  s_pop_3:
+    number: 5
+    tags: playfield_active
+  s_drop_down:
+    number: 6
+    tags: playfield_active
+  s_thin_green:
+    number: 7
+    tags: playfield_active
+  s_upper_right_flipper_eos:
+    number: 8
+  s_captive_ball:
+    number: 9
+    tags: playfield_active
+  s_spinner:
+    number: A
+    tags: playfield_active
+  s_left_target_1:
+    number: B
+    tags: playfield_active
+  s_left_target_2:
+    number: C
+    tags: playfield_active
+  s_lower_right_bank_1:
+    number: 10
+    tags: playfield_active
+  s_lower_right_bank_2:
+    number: 11
+    tags: playfield_active
+  s_lower_right_bank_3:
+    number: 12
+    tags: playfield_active
+  s_shooter_lane:
+    number: 13
+  s_right_outlane:
+    number: 14
+    tags: playfield_active
+  s_right_inlane:
+    number: 15
+    tags: playfield_active
+  s_rollover_button:
+    number: 16
+    tags: playfield_active
+  s_upper_flipper_rubber:
+    number: 17
+  s_right_flipper_eos:
+    number: 18
+  s_left_flipper_eos:
+    number: 19
+  s_left_sling:
+    number: 1A
+    tags: playfield_active
+  s_right_sling:
+    number: 1B
+    tags: playfield_active
+  s_left_inlane:
+    number: 1C
+    tags: playfield_active
+  s_left_outlane:
+    number: 1D
+    tags: playfield_active
+  s_skill_bank_1:
+    number: 20
+    tags: playfield_active
+  s_skill_bank_2:
+    number: 21
+    tags: playfield_active
+  s_skill_bank_3:
+    number: 22
+    tags: playfield_active
+  s_upper_sling:
+    number: 23
+    tags: playfield_active
+  s_shatz:
+    number: 24
+    tags: playfield_active
+  s_trough_jam:
+    number: 25
+    type: NC
+  s_trough_8:
+    number: 28
+  s_trough_7:
+    number: 29
+  s_trough_6:
+    number: 2A
+  s_trough_5:
+    number: 2B
+  s_trough_4:
+    number: 2C
+  s_trough_3:
+    number: 2D
+  s_trough_2:
+    number: 2E
+  s_trough_1:
+    number: 2F
+    type: NC
+
