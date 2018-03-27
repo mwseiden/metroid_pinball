@@ -75,6 +75,9 @@ switches:
   s_left_outlane:
     number: 1D
     tags: playfield_active
+  s_trough_jam:
+    number: 1E
+    type: NC
   s_skill_bank_1:
     number: 20
     tags: playfield_active
@@ -90,9 +93,6 @@ switches:
   s_shatz:
     number: 24
     tags: playfield_active
-  s_trough_jam:
-    number: 25
-    type: NC
   s_trough_8:
     number: 28
   s_trough_7:
