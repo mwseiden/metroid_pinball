@@ -8,6 +8,7 @@ fast:
   ports: /dev/ttyUSB1, /dev/ttyUSB2
 
 config:
+  - machine.yaml
   - graphics.yaml
   - scriptlets.yaml
   - modes.yaml
