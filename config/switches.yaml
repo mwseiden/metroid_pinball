@@ -108,19 +108,19 @@ switches:
     number: 26
   s_unknown_27:
     number: 27
-  s_trough_8:
-    number: 28
-  s_trough_7:
-    number: 29
-  s_trough_6:
-    number: 2A
-  s_trough_5:
-    number: 2B
-  s_trough_4:
-    number: 2C
-  s_trough_3:
-    number: 2D
   s_trough_2:
+    number: 28
+  s_trough_8:
+    number: 29
+  s_trough_7:
+    number: 2A
+  s_trough_6:
+    number: 2B
+  s_trough_5:
+    number: 2C
+  s_trough_4:
+    number: 2D
+  s_trough_3:
     number: 2E
   s_trough_1:
     number: 2F
