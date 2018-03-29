@@ -40,10 +40,11 @@ switches:
   s_scoop:
     number: D
     tags: playfield_active
-  s_swe:
+    type: NC
+  s_unknown_e:
     number: E
     tags: playfield_active
-  s_swf:
+  s_unknown_f:
     number: F
     tags: playfield_active
   s_lower_right_bank_1:
@@ -87,7 +88,7 @@ switches:
   s_trough_jam:
     number: 1E
     type: NC
-  s_sw1f:
+  s_unknown_1f:
     number: 1F
     tags: playfield_active
   s_skill_bank_1:
@@ -105,13 +106,13 @@ switches:
   s_shatz:
     number: 24
     tags: playfield_active
-  s_sw25:
+  s_unknown_25:
     number: 25
     tags: playfield_active
-  s_sw26:
+  s_unknown_26:
     number: 26
     tags: playfield_active
-  s_sw27:
+  s_unknown_27:
     number: 27
     tags: playfield_active
   s_trough_8:
