@@ -42,10 +42,8 @@ switches:
     type: NC
   s_unknown_e:
     number: E
-    tags: playfield_active
   s_unknown_f:
     number: F
-    tags: playfield_active
   s_lower_right_bank_1:
     number: 10
     tags: playfield_active
@@ -66,7 +64,7 @@ switches:
   s_rollover_button:
     number: 16
     tags: playfield_active
-  s_upper_flipper_rubber:
+  s_removed_upper_flipper_rubber:
     number: 17
   s_right_flipper_eos:
     number: 18
@@ -89,7 +87,6 @@ switches:
     type: NC
   s_unknown_1f:
     number: 1F
-    tags: playfield_active
   s_skill_bank_1:
     number: 20
     tags: playfield_active
@@ -107,13 +104,10 @@ switches:
     tags: playfield_active
   s_unknown_25:
     number: 25
-    tags: playfield_active
   s_unknown_26:
     number: 26
-    tags: playfield_active
   s_unknown_27:
     number: 27
-    tags: playfield_active
   s_trough_8:
     number: 28
   s_trough_7:
