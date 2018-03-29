@@ -8,6 +8,7 @@ ball_devices:
         jam_switch: s_trough_jam
         eject_coil_jam_pulse: 15ms
         eject_targets: bd_plunger
+        eject_timeouts: 3s
     bd_plunger:
         ball_switches: s_shooter_lane
         eject_coil: c_ball_launch
