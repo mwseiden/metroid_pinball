@@ -37,6 +37,9 @@ switches:
   s_left_target_2:
     number: C
     tags: playfield_active
+  s_scoop:
+    number: D
+    tags: playfield_active
   s_lower_right_bank_1:
     number: 10
     tags: playfield_active

@@ -29,3 +29,7 @@ autofire_coils:
     coil: c_upper_slingshot
     switch: s_upper_sling
     enable_events: machine_reset_phase_3
+  scoop:
+    coil: c_scoop
+    switch: s_scoop
+    enable_events: machine_reset_phase_3

@@ -20,6 +20,9 @@ coils:
     allow_enable: true
     hold_power: 1
     pulse_ms: 20
+  c_scoop:
+    number: 5
+    allow_enable: true
   c_flipper_right_main:
     number: 10
     allow_enable: true
