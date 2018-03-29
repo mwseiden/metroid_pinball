@@ -40,6 +40,12 @@ switches:
   s_scoop:
     number: D
     tags: playfield_active
+  s_swe:
+    number: E
+    tags: playfield_active
+  s_swf:
+    number: F
+    tags: playfield_active
   s_lower_right_bank_1:
     number: 10
     tags: playfield_active
@@ -81,6 +87,9 @@ switches:
   s_trough_jam:
     number: 1E
     type: NC
+  s_sw1f:
+    number: 1F
+    tags: playfield_active
   s_skill_bank_1:
     number: 20
     tags: playfield_active
@@ -95,6 +104,15 @@ switches:
     tags: playfield_active
   s_shatz:
     number: 24
+    tags: playfield_active
+  s_sw25:
+    number: 25
+    tags: playfield_active
+  s_sw26:
+    number: 26
+    tags: playfield_active
+  s_sw27:
+    number: 27
     tags: playfield_active
   s_trough_8:
     number: 28
