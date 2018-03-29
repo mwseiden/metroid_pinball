@@ -23,6 +23,7 @@ coils:
   c_scoop:
     number: 5
     allow_enable: true
+    pulse_ms: 20
   c_flipper_right_main:
     number: 10
     allow_enable: true

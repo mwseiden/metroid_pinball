@@ -12,3 +12,4 @@ ball_devices:
         ball_switches: s_shooter_lane
         eject_coil: c_ball_launch
         mechanical_eject: true
+        tags: ball_add_live
