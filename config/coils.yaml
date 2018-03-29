@@ -48,4 +48,5 @@ coils:
     allow_enable: true
   c_trough_eject:
     number: 17
+    pulse_ms: 20
     allow_enable: true

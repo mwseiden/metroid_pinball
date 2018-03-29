@@ -19,7 +19,6 @@ switches:
     tags: playfield_active
   s_drop_down:
     number: 6
-    tags: playfield_active
   s_thin_green:
     number: 7
     tags: playfield_active

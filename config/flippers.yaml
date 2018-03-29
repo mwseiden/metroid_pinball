@@ -4,18 +4,15 @@ flippers:
   right_flipper:
     main_coil: c_flipper_right_main
     activation_switch: s_right_flipper
-    enable_events: machine_reset_phase_3
     eos_switch: s_right_flipper_eos
     debug: true
   left_flipper:
     main_coil: c_flipper_left_main
     activation_switch: s_left_flipper
-    enable_events: machine_reset_phase_3
     eos_switch: s_left_flipper_eos
     debug: true
   upper_right_flipper:
     main_coil: c_flipper_upper_right_main
     activation_switch: s_right_flipper
-    enable_events: machine_reset_phase_3
     eos_switch: s_upper_right_flipper_eos
     debug: true
