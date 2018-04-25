@@ -37,6 +37,7 @@ coils:
   c_ball_launch:
     number: 13
     allow_enable: true
+    pulse_ms: 20
   c_left_slingshot:
     number: 14
     allow_enable: true

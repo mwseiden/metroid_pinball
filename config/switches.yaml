@@ -17,7 +17,7 @@ switches:
   s_pop_3:
     number: 5
     tags: playfield_active
-  s_drop_down:
+  s_drop_target_1:
     number: 6
   s_thin_green:
     number: 7
@@ -40,9 +40,9 @@ switches:
     number: D
     tags: playfield_active
     type: NC
-  s_unknown_e:
+  s_drop_target_2:
     number: E
-  s_unknown_f:
+  s_drop_target_3:
     number: F
   s_lower_right_bank_1:
     number: 10
