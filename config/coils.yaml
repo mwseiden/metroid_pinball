@@ -1,0 +1,53 @@
+#config_version=4
+
+coils:
+  c_pop_1:
+    number: 0
+    allow_enable: true
+  c_pop_2:
+    number: 1
+    allow_enable: true
+  c_pop_3:
+    number: 2
+    allow_enable: true
+  c_drop_1_reset:
+    number: 3
+    hold_power: 1
+    pulse_ms: 17
+    allow_enable: true
+  c_flipper_upper_right_main:
+    number: 4
+    allow_enable: true
+    hold_power: 1
+    pulse_ms: 20
+  c_scoop:
+    number: 5
+    allow_enable: true
+    pulse_ms: 20
+  c_flipper_right_main:
+    number: 10
+    allow_enable: true
+    hold_power: 1
+    pulse_ms: 20
+  c_flipper_left_main:
+    number: 12
+    allow_enable: true
+    hold_power: 1
+    pulse_ms: 20
+  c_ball_launch:
+    number: 13
+    allow_enable: true
+    pulse_ms: 20
+  c_left_slingshot:
+    number: 14
+    allow_enable: true
+  c_right_slingshot:
+    number: 15
+    allow_enable: true
+  c_upper_slingshot:
+    number: 16
+    allow_enable: true
+  c_trough_eject:
+    number: 17
+    pulse_ms: 20
+    allow_enable: true

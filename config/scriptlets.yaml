@@ -1,0 +1,4 @@
+#config_version=4
+
+scriptlets:
+  backbox_lights.BackBoxLights

@@ -1,0 +1,27 @@
+#config_version=4
+
+autofire_coils:
+  pop_1:
+    coil: c_pop_1
+    switch: s_pop_1
+  pop_2:
+    coil: c_pop_2
+    switch: s_pop_2
+  pop_3:
+    coil: c_pop_3
+    switch: s_pop_3
+  drop_reset:
+    coil: c_drop_1_reset
+    switch: s_thin_green
+  left_slingshot:
+    coil: c_left_slingshot
+    switch: s_left_sling
+  right_slingshot:
+    coil: c_right_slingshot
+    switch: s_right_sling
+  upper_slingshot:
+    coil: c_upper_slingshot
+    switch: s_upper_sling
+  scoop:
+    coil: c_scoop
+    switch: s_scoop

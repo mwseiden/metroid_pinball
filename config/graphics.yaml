@@ -1,0 +1,81 @@
+#config_version=4
+
+images:
+  backglass_main:
+    load: preload
+    file: backglass_main_720.png
+
+displays:
+  window:
+    width: 720
+    height: 1280
+  dmd:
+    width: 128
+    height: 32
+    default: yes
+
+window:
+  source_display: window
+  borderless: true
+  exit_on_escape: true
+  fullscreen: true
+  no_window: false
+  resizable: false
+  show_cursor: false
+  
+slides:
+  window_slide:
+    - type: color_dmd
+      width: 640
+      height: 160
+      pixel_size: .75
+      y: 120
+      x: 370
+    - type: rectangle
+      width: 648
+      height: 168
+      color: black
+      y: 120
+      x: 370
+    - type: image
+      image: backglass_main
+
+  dmd_slide:
+    - type: text
+      text: Booting...
+      color: FF5000
+    - type: line
+      points: 0, 0, 127, 0, 127 31, 0, 31, 0, 0
+      color: red
+      thickness: 1
+      cap: square
+    - type: rectangle
+      width: 128
+      height: 32
+      color: black
+
+slide_player:
+  init_done:
+    window_slide:
+      target: window
+    dmd_slide:
+      target: dmd
+
+kivy_config:
+  kivy:
+    desktop: 0
+    exit_on_escape: true
+    pause_on_minimize: 0
+  graphics:
+    borderless: true
+    window_state: visible  # visible, hidden, maximized, minimized
+    fbo: hardware  # hardware, software, force-hardware
+    fullscreen: auto
+    height: 720
+    maxfps: 30
+    multisamples: 2
+    position: auto  # auto, custom
+    show_cursor: false
+    resizable: false
+    rotation: 0
+    width: 1280
