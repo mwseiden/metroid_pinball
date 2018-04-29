@@ -8,3 +8,4 @@
         image: dmd_lord_squeak
         width: 128
         height: 32
+        allow_stretch: true
