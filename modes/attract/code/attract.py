@@ -53,4 +53,4 @@ class MyAttract(Attract):
 
     def check_flipper_code(self):
         if self.flip_pattern == 'BLRRLLL':
-            self.info_log('Flipper Code: LORD SQUEEK')
+            self.info_log('Flipper Code: LORD SQUEAK')
