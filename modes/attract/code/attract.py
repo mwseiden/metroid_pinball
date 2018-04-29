@@ -10,22 +10,22 @@ class MyAttract(Attract):
         self.flip_pattern = ''
         self.set_last_flipper_hit()
 
-        self.add_mode_event_handler('s_right_flipper_active', self.right_flipper_down)
-        self.add_mode_event_handler('s_right_flipper_inactive', self.right_flipper_up)
-        self.add_mode_event_handler('s_left_flipper_active', self.left_flipper_down)
-        self.add_mode_event_handler('s_left_flipper_inactive', self.left_flipper_up)
+        self.add_mode_event_handler('s_right_flipper_active', self.event_right_flipper_down)
+        self.add_mode_event_handler('s_right_flipper_inactive', self.event_right_flipper_up)
+        self.add_mode_event_handler('s_left_flipper_active', self.event_left_flipper_down)
+        self.add_mode_event_handler('s_left_flipper_inactive', self.event_left_flipper_up)
 
-    def right_flipper_down(self, **kwargs):
+    def event_right_flipper_down(self, **kwargs):
         self.right_flipper_down = True
 
-    def right_flipper_up(self, **kwargs):
+    def event_right_flipper_up(self, **kwargs):
         self.right_flipper_down = False
         self.handle_flipper_hit(self.left_flipper_down, 'R')
 
-    def left_flipper_down(self, **kwargs):
+    def event_left_flipper_down(self, **kwargs):
         self.left_flipper_down = True
 
-    def left_flipper_up(self, **kwargs):
+    def event_left_flipper_up(self, **kwargs):
         self.left_flipper_down = False
         self.handle_flipper_hit(self.right_flipper_down, 'L')
 
