@@ -5,7 +5,7 @@ class MyAttract(Attract):
     DOUBLE_FLIP_MILLIS = 250
 
     def mode_start(self, **kwargs):
-        super(MyAttract, self).mode_start(kwargs)
+        super().mode_start(kwargs)
 
         self.flip_pattern = ''
         self.set_last_flipper_hit()
