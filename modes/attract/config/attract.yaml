@@ -5,3 +5,4 @@ mode:
 
 show_player:
   mode_attract_started: attract_display_loop
+  flipper_code_squeak: flipper_code_squeak

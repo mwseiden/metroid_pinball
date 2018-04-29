@@ -1,0 +1,10 @@
+#show_version=4
+
+- duration: 10s
+  slides:
+    squeak:
+      widgets:
+      - type: image
+        image: dmd_lord_squeak
+        width: 128
+        height: 32
