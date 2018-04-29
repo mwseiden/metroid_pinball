@@ -1,6 +1,7 @@
+from mpf.modes.attract.code.attract import Attract
 import time
 
-class MyAttract(mpf.modes.attract.code.attract.Attract):
+class MyAttract(Attract):
     DOUBLE_FLIP_MILLIS = 250
 
     def mode_start(self, **kwargs):
