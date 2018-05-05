@@ -25,3 +25,7 @@ autofire_coils:
   scoop:
     coil: c_scoop
     switch: s_scoop
+  vuk:
+    coil: c_vuk
+    switch: s_vuk
+
