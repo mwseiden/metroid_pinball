@@ -1,4 +1,13 @@
 #config_version=4
 
+mode:
+  code: attract.MyAttract
+
 show_player:
-  mode_attract_started: attract_display_loop
+  mode_attract_started:
+    attract_display_loop:
+      priority: 100
+  flipper_code_squeak:
+    flipper_code_squeak:
+      priority: 200
+      loops: 0
