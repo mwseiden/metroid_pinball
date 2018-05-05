@@ -19,7 +19,7 @@ coils:
     number: 4
     allow_enable: true
     hold_power: 1
-    pulse_ms: 20
+    pulse_ms: 15
   c_scoop:
     number: 5
     allow_enable: true
@@ -51,3 +51,7 @@ coils:
     number: 17
     pulse_ms: 20
     allow_enable: true
+  c_vuk:
+    number: 18
+    allow_enable: true
+

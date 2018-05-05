@@ -125,4 +125,16 @@ switches:
   s_trough_1:
     number: 2F
     type: NC
+  s_vuk:
+    number: 30
+  s_rubber_1:
+    number: 31
+  s_big_red:
+    number: 32
+  s_purple_1:
+    number: 33
+  s_purple_2:
+    number: 34
+  s_purple_3:
+    number: 35
 
