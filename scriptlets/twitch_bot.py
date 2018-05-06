@@ -8,7 +8,7 @@ class TwitchBot(Scriptlet):
         # Need to switch this to use machine vars and configuration
         enabled = os.environ.get('TWITCH_ENABLE')
         if enabled != None and enabled.upper() == 'TRUE':
-            self.info_log('Successful connection to Twitch')
+            self.info_log('Attempting to connect to Twitch')
             self.client = TwitchClient(os.environ.get('TWITCH_USER'), os.environ.get('TWITCH_PASSWORD'), os.environ.get('TWITCH_CHANNEL'))
             thread = threading.Thread(target=self.client.start, args=())
             thread.daemon = True
