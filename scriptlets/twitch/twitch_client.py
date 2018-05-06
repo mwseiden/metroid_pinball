@@ -40,13 +40,13 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             cmd = e.arguments[0].split(' ')[0][1:]
             self.do_command(e, cmd)
         else:
-            self.log.info('Chat: [' + e.source + '] ' + e.arguments[0])
+            self.log.info('Chat: [' + e.source.split('!')[0] + '] ' + e.arguments[0])
 
     def on_privmsg(self, c, e):
-        self.log.info('Private chat: [' + e.source + '] ' + e.arguments[0])
+        self.log.info('Private chat: [' + e.source.split('!')[0] + '] ' + e.arguments[0])
 
     def do_command(self, e, cmd):
-        self.log.info('Received command: [' + e.source + '] ' + cmd)
+        self.log.info('Received command: [' + e.source.split('!')[0] + '] ' + cmd)
 
     def is_connected(self):
         return self.connection.is_connected()
