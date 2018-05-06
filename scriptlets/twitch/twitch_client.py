@@ -11,22 +11,22 @@ or in the "license" file accompanying this file. This file is distributed on an 
 import sys
 import irc.bot
 import requests
+import logging
 
 class TwitchClient(irc.bot.SingleServerIRCBot):
-    def __init__(self, machine, username, password, channel):
-        self.log = machine.logging.getLogger('TwitchClient') 
-        self.machine = machine
+    def __init__(self, username, password, channel):
+        self.log = logging.getLogger('TwitchClient') 
         self.password = password
         self.channel = '#' + channel
 
         # Create IRC bot connection
         server = 'irc.chat.twitch.tv'
         port = 6667
-        self.log.log_info('Connecting to ' + server + ' on port ' + str(port) + '...')
+        self.log.info('Connecting to ' + server + ' on port ' + str(port) + '...')
         irc.bot.SingleServerIRCBot.__init__(self, [(server, port, 'oauth:' + password)], username, username)
 
     def on_welcome(self, c, e):
-        self.log.log_info('Joining ' + self.channel)
+        self.log.info('Joining ' + self.channel)
 
         # You must request specific capabilities before you can use them
         c.cap('REQ', ':twitch.tv/membership')
@@ -40,13 +40,13 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             cmd = e.arguments[0].split(' ')[0][1:]
             self.do_command(e, cmd)
         else:
-            self.log.log_info('Chat: [' + e.source + '] ' + e.arguments[0])
+            self.log.info('Chat: [' + e.source + '] ' + e.arguments[0])
 
     def on_privmsg(self, c, e):
-        self.log.log_info('Private chat: [' + e.source + '] ' + e.arguments[0])
+        self.log.info('Private chat: [' + e.source + '] ' + e.arguments[0])
 
     def do_command(self, e, cmd):
-        self.log.log_info('Received command: [' + e.source + '] ' + cmd)
+        self.log.info('Received command: [' + e.source + '] ' + cmd)
 
     def is_connected(self):
         return self.connection.is_connected()

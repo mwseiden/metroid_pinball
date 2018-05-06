@@ -7,11 +7,12 @@ class TwitchBot(Scriptlet):
         # Need to switch this to use machine vars and configuration
         enabled = os.environ.get('TWITCH_ENABLE')
         if enabled != None and enabled.upper() == 'TRUE':
-            self.client = TwitchClient(self.machine, os.environ.get('TWITCH_USER'), os.environ.get('TWITCH_PASSWORD'), os.environ.get('TWITCH_CHANNEL'))
+            self.info_log('Successful connection to Twitch')
+            self.client = TwitchClient(os.environ.get('TWITCH_USER'), os.environ.get('TWITCH_PASSWORD'), os.environ.get('TWITCH_CHANNEL'))
             self.client.start()
 
             if self.client.is_connected():
-                self.log_info('Successful connection to Twitch')
+                self.info_log('Successful connection to Twitch')
             else:
-                self.log_info('Connection error')
+                self.info_log('Connection error')
 
