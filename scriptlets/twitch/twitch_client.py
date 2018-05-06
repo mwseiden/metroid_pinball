@@ -24,7 +24,6 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
         port = 6667
         self.log.log_info('Connecting to ' + server + ' on port ' + str(port) + '...')
         irc.bot.SingleServerIRCBot.__init__(self, [(server, port, 'oauth:' + password)], username, username)
-        
 
     def on_welcome(self, c, e):
         self.log.log_info('Joining ' + self.channel)
