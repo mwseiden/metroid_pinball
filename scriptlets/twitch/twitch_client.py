@@ -29,9 +29,9 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
         self.log.info('Joining ' + self.channel)
 
         # You must request specific capabilities before you can use them
-        c.cap('REQ', ':twitch.tv/membership')
-        c.cap('REQ', ':twitch.tv/tags')
-        c.cap('REQ', ':twitch.tv/commands')
+        # c.cap('REQ', ':twitch.tv/membership')
+        # c.cap('REQ', ':twitch.tv/tags')
+        # c.cap('REQ', ':twitch.tv/commands')
         c.join(self.channel)
 
     def on_pubmsg(self, c, e):
