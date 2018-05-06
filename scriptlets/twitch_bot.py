@@ -9,3 +9,9 @@ class TwitchBot(Scriptlet):
         if enabled != None and enabled.upper() == 'TRUE':
             self.client = TwitchClient(self.machine, os.environ.get('TWITCH_USER'), os.environ.get('TWITCH_PASSWORD'), os.environ.get('TWITCH_CHANNEL'))
             self.client.start()
+
+            if self.client.is_connected():
+                self.log_info('Successful connection to Twitch')
+            else:
+                self.log_info('Connection error')
+
