@@ -16,15 +16,8 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
     def __init__(self, machine, username, password, channel):
         self.log = machine.logging.getLogger('TwitchClient') 
         self.machine = machine
-        # self.client_id = client_id
         self.password = password
         self.channel = '#' + channel
-
-        # Get the channel id, we will need this for v5 API calls
-        # url = 'https://api.twitch.tv/kraken/users?login=' + channel
-        # headers = {'Client-ID': client_id, 'Accept': 'application/vnd.twitchtv.v5+json'}
-        # r = requests.get(url, headers=headers).json()
-        # self.channel_id = r['users'][0]['_id']
 
         # Create IRC bot connection
         server = 'irc.chat.twitch.tv'
@@ -48,29 +41,10 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             cmd = e.arguments[0].split(' ')[0][1:]
             self.do_command(e, cmd)
         else:
-            self.log.log_info('Chat: ' + e.arguments[0])
+            self.log.log_info('Chat: [' + e.source + '] ' + e.arguments[0])
 
     def on_privmsg(self, c, e):
-        self.log.log_info('Private Chat: ' + e.arguments[0])
+        self.log.log_info('Private Chat: [' + e.source + '] ' + e.arguments[0])
 
     def do_command(self, e, cmd):
-        self.log.log_info('Received command: ' + cmd)
-        # c = self.connection
-
-        # Poll the API to get current game.
-        # if cmd == 'game':
-        #    url = 'https://api.twitch.tv/kraken/channels/' + self.channel_id
-        #    headers = {'Client-ID': self.client_id, 'Accept': 'application/vnd.twitchtv.v5+json'}
-        #    r = requests.get(url, headers=headers).json()
-        #    c.privmsg(self.channel, r['display_name'] + ' is currently playing ' + r['game'])
-
-        # Poll the API the get the current status of the stream
-        # elif cmd == 'title':
-        #    url = 'https://api.twitch.tv/kraken/channels/' + self.channel_id
-        #    headers = {'Client-ID': self.client_id, 'Accept': 'application/vnd.twitchtv.v5+json'}
-        #    r = requests.get(url, headers=headers).json()
-        #    c.privmsg(self.channel, r['display_name'] + ' channel title is currently ' + r['status'])
-
-        # The command was not recognized
-        #else:
-        #    self.log.log_info('Did not understand command: ' + cmd)
+        self.log.log_info('Received command: [' + e.source + '] ' + cmd)
