@@ -14,8 +14,9 @@ import requests
 import logging
 
 class TwitchClient(irc.bot.SingleServerIRCBot):
-    def __init__(self, username, password, channel):
+    def __init__(self, machine, username, password, channel):
         self.log = logging.getLogger('TwitchClient') 
+        self.machine = machine
         self.password = password
         self.channel = '#' + channel
 
@@ -29,9 +30,9 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
         self.log.info('Joining ' + self.channel)
 
         # You must request specific capabilities before you can use them
-        # c.cap('REQ', ':twitch.tv/membership')
-        # c.cap('REQ', ':twitch.tv/tags')
-        # c.cap('REQ', ':twitch.tv/commands')
+        c.cap('REQ', ':twitch.tv/membership')
+        c.cap('REQ', ':twitch.tv/tags')
+        c.cap('REQ', ':twitch.tv/commands')
         c.join(self.channel)
 
     def on_pubmsg(self, c, e):
@@ -40,13 +41,17 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             cmd = e.arguments[0].split(' ')[0][1:]
             self.do_command(e, cmd)
         else:
-            self.log.info('Chat: [' + e.source.split('!')[0] + '] ' + e.arguments[0])
+            user = e.source.split('!')[0]
+            self.log.info('Chat: [' + user + '] ' + e.arguments[0])
+            self.machine.events.post('twitch_new_chat_message', user=user, message=e.arguments[0])
 
     def on_privmsg(self, c, e):
-        self.log.info('Private chat: [' + e.source.split('!')[0] + '] ' + e.arguments[0])
+        user = e.source.split('!')[0]
+        self.log.info('Private chat: [' + user + '] ' + e.arguments[0])
 
     def do_command(self, e, cmd):
-        self.log.info('Received command: [' + e.source.split('!')[0] + '] ' + cmd)
+        user = e.source.split('!')[0]
+        self.log.info('Received command: [' + user + '] ' + cmd)
 
     def is_connected(self):
         return self.connection.is_connected()
