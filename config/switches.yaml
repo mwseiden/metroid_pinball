@@ -137,4 +137,8 @@ switches:
     number: 34
   s_purple_3:
     number: 35
+  s_orbit_r:
+    number: 36
+  s_orbit_l:
+    number: 37
 
