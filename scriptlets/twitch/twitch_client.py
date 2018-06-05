@@ -41,10 +41,14 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
         self.log.info('Private chat: [' + user + '] ' + e.arguments[0])
 
     def on_all_events(self, c, e):
-        self.log.info('All Events: ' + e)
+        message = 'All Events: ' + e
+        self.log.info(message.replace(self.password, 'XXXXX')
+        super().on_all_events(c, e)
 
     def on_all_raw_messages(self, c, e):
-        self.log.info('Raw Messages: ' + e)
+        message = 'Raw Messages: ' + e
+        self.log.info(message.replace(self.password, 'XXXXX')
+        super().on_all_raw_messages(c, e)
     
     def do_command(self, e, cmd):
         user = e.source.split('!')[0]
