@@ -9,6 +9,8 @@ class MyAttract(Attract):
 
         self.flip_pattern = ''
         self.set_last_flipper_hit()
+        self.right_flipper_down = False
+        self.left_flipper_down = False
 
         self.add_mode_event_handler('s_right_flipper_active', self.event_right_flipper_down)
         self.add_mode_event_handler('s_right_flipper_inactive', self.event_right_flipper_up)
