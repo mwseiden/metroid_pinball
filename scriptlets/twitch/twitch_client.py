@@ -33,7 +33,8 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             self.do_command(e, cmd)
         else:
             user = e.source.split('!')[0]
-            self.log.info('Chat: [' + user + '] ' + e.arguments[0])
+            message = 'Chat: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
+            self.log.info(message.replace(self.password, 'XXXXX'))
             self.machine.events.post('twitch_new_chat_message', user=user, message=e.arguments[0])
 
     def on_privmsg(self, c, e):
@@ -42,14 +43,8 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
 
     def on_all_events(self, c, e):
         message = 'All Events: ' + e
-        self.log.info(message.replace(self.password, 'XXXXX')
-        super().on_all_events(c, e)
+        self.log.info(message.replace(self.password, 'XXXXX'))
 
-    def on_all_raw_messages(self, c, e):
-        message = 'Raw Messages: ' + e
-        self.log.info(message.replace(self.password, 'XXXXX')
-        super().on_all_raw_messages(c, e)
-    
     def do_command(self, e, cmd):
         user = e.source.split('!')[0]
         self.log.info('Received command: [' + user + '] ' + cmd)

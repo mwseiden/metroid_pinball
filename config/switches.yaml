@@ -141,4 +141,8 @@ switches:
     number: 36
   s_orbit_l:
     number: 37
+  s_ramp_enter:
+    number: 38
+  s_left_passage:
+    number: 39
 
