@@ -1,0 +1,9 @@
+#config_version=5
+
+sequence_shots:
+  left_orbit:
+    switch_sequence: s_orbit_l, s_orbit_r
+    sequence_timeout: 3s
+  right_orbit:
+    switch_sequence: s_orbit_r, s_orbit_l
+    sequence_timeout: 3s

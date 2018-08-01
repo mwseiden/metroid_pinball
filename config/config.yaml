@@ -11,11 +11,13 @@ config:
   - machine.yaml
   - graphics.yaml
   - scriptlets.yaml
+  - playfields.yaml
   - modes.yaml
-  - leds.yaml
+  - lights.yaml
   - switches.yaml
   - coils.yaml
   - autofire_coils.yaml
   - flippers.yaml
   - ball_devices.yaml
+  - sequence_shots.yaml
 

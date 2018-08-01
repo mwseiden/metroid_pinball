@@ -1,0 +1,16 @@
+#show_version=5
+
+- duration: 5s
+  slides:
+    mode_1b_gunship_left:
+      widgets:
+      - type: Text
+        text: Navigate Left
+        color: green
+        style: dmd_med
+        y: 14
+        anchor_y: bottom
+      transition:
+         type: move_in
+         duration: 1s
+         direction: left

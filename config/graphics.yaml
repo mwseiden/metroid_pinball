@@ -25,12 +25,18 @@ window:
   
 slides:
   window_slide:
-    - type: color_dmd
+    - type: display
+      source_display: dmd
       width: 640
       height: 160
-      pixel_size: .75
       y: 120
       x: 370
+      effects:
+        - type: color_dmd
+          dots_x: 128
+          dots_y: 32
+          dot_size: .75
+          background_color: 000000ff
     - type: rectangle
       width: 648
       height: 168
