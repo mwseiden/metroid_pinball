@@ -25,7 +25,7 @@ accruals:
     reset_on_complete: false
   mode_1b_land_ship:
     enable_events: mode_1b_ship_navigated
-    events: switch_s_scoop_active
+    events: scoop_shot_hit
     events_when_complete: mode_1b_achieved
     persist_state: true
     reset_on_complete: false

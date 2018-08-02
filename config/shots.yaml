@@ -1,0 +1,5 @@
+#config_version=5
+
+shots:
+  scoop_shot:
+    switch: s_scoop
