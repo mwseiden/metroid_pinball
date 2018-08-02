@@ -12,6 +12,7 @@ config:
   - graphics.yaml
   - scriptlets.yaml
   - playfields.yaml
+  - player_vars.yaml
   - modes.yaml
   - lights.yaml
   - switches.yaml

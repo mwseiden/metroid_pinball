@@ -27,3 +27,22 @@ slide_player:
         anchor_y: bottom
         style: dmd_med
 
+variable_player:
+  left_orbit_hit:
+    orbits: 1
+    score:
+      int: current_player.orbits * 500
+  right_orbit_hit:
+    orbits: 1
+    score:
+      int: current_player.orbits * 500
+  ramp_shot_hit:
+    ramps: 1
+    score:
+      int: current_player.ramps * 1250
+  side_ramp_shot_hit:
+    ramps: 1
+    score:
+      int: current_player.ramps * 2010
+  secret_passage_shot_hit:
+    score: 420

@@ -1,0 +1,7 @@
+#config_version=5
+
+player_vars:
+  ramps:
+    initial_value: 0
+  orbits:
+    initial_value: 0
