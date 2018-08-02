@@ -28,22 +28,22 @@ switches:
     number: 9
     tags: playfield_active
   s_spinner:
-    number: A
+    number: a
     tags: playfield_active
   s_left_target_1:
-    number: B
+    number: b
     tags: playfield_active
   s_left_target_2:
-    number: C
+    number: c
     tags: playfield_active
   s_scoop:
-    number: D
+    number: d
     tags: playfield_active
     type: NC
   s_drop_target_2:
-    number: E
+    number: e
   s_drop_target_3:
-    number: F
+    number: f
   s_lower_right_bank_1:
     number: 10
     tags: playfield_active
@@ -71,22 +71,22 @@ switches:
   s_left_flipper_eos:
     number: 19
   s_left_sling:
-    number: 1A
+    number: 1a
     tags: playfield_active
   s_right_sling:
-    number: 1B
+    number: 1b
     tags: playfield_active
   s_left_inlane:
-    number: 1C
+    number: 1c
     tags: playfield_active
   s_left_outlane:
-    number: 1D
+    number: 1d
     tags: playfield_active
   s_trough_jam:
-    number: 1E
+    number: 1e
     type: NC
   s_unknown_1f:
-    number: 1F
+    number: 1f
   s_skill_bank_1:
     number: 20
     tags: playfield_active
@@ -113,17 +113,17 @@ switches:
   s_trough_8:
     number: 29
   s_trough_7:
-    number: 2A
+    number: 2a
   s_trough_6:
-    number: 2B
+    number: 2b
   s_trough_5:
-    number: 2C
+    number: 2c
   s_trough_4:
-    number: 2D
+    number: 2d
   s_trough_3:
-    number: 2E
+    number: 2e
   s_trough_1:
-    number: 2F
+    number: 2f
     type: NC
   s_vuk:
     number: 30
@@ -146,15 +146,15 @@ switches:
   s_left_passage:
     number: 39
   s_behind_drop_1:
-    number: 3A
+    number: 3a
     type: NC
   s_behind_drop_2:
-    number: 3B
+    number: 3b
     type: NC
   s_behind_drop_3:
-    number: 3C
+    number: 3c
     type: NC
   s_side_ramp_made:
-    number: 3D
+    number: 3d
     type: NC
 
