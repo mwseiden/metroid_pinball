@@ -32,7 +32,7 @@ coils:
   c_flipper_left_main:
     number: 12
     allow_enable: true
-    hold_power: 1
+    default_hold_power: 0.125
     default_pulse_ms: 20
   c_ball_launch:
     number: 13
