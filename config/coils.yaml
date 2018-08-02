@@ -53,7 +53,7 @@ coils:
     allow_enable: true
   c_vuk:
     number: 18
-    pulse_ms: 19
+    default_pulse_ms: 19
     allow_enable: true
   c_pop_sling:
     number: 19
