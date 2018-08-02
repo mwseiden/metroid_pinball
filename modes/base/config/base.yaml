@@ -3,6 +3,16 @@ mode:
     start_events: ball_starting
     priority: 100
 
+shots:
+  scoop_shot:
+    switch: s_scoop
+  ramp_shot:
+    switch: s_ramp_enter
+  side_ramp_shot:
+    switch: s_side_ramp_made
+  secret_passage_shot:
+    switch: s_left_passage
+
 slide_player:
   mode_base_started:
     widgets:

@@ -20,6 +20,5 @@ config:
   - autofire_coils.yaml
   - flippers.yaml
   - ball_devices.yaml
-  - shots.yaml
   - sequence_shots.yaml
 
