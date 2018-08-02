@@ -12,13 +12,13 @@ coils:
     allow_enable: true
   c_drop_1_reset:
     number: 3
-    hold_power: 1
+    default_hold_power: 0.125
     default_pulse_ms: 17
     allow_enable: true
   c_flipper_upper_right_main:
     number: 4
     allow_enable: true
-    hold_power: 1
+    default_hold_power: 0.125
     default_pulse_ms: 15
   c_scoop:
     number: 5
@@ -27,7 +27,7 @@ coils:
   c_flipper_right_main:
     number: 10
     allow_enable: true
-    hold_power: 1
+    default_hold_power: 0.125
     default_pulse_ms: 20
   c_flipper_left_main:
     number: 12
