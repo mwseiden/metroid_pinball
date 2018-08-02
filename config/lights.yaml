@@ -3,205 +3,205 @@
 lights:
 #left backbox
   led80:
-    number: 80
+    number: 2-0
   led81:
-    number: 81
+    number: 2-1
   led82:
-    number: 82
+    number: 2-2
   led83:
-    number: 83
+    number: 2-3
   led84:
-    number: 84
+    number: 2-4
   led85:
-    number: 85
+    number: 2-5
   led86:
-    number: 86
+    number: 2-6
   led87:
-    number: 87
+    number: 2-7
   led88:
-    number: 88
+    number: 2-8
   led89:
-    number: 89
+    number: 2-9
   led8A:
-    number: 8A
+    number: 2-10
   led8B:
-    number: 8B
+    number: 2-11
   led8C:
-    number: 8C
+    number: 2-12
   led8D:
-    number: 8D
+    number: 2-13
   led8E:
-    number: 8E
+    number: 2-14
   led8F:
-    number: 8F
+    number: 2-15
   led90:
-    number: 90
+    number: 2-16
   led91:
-    number: 91
+    number: 2-17
   led92:
-    number: 92
+    number: 2-18
   led93:
-    number: 93
+    number: 2-19
   led94:
-    number: 94
+    number: 2-20
   led95:
-    number: 95
+    number: 2-21
   led96:
-    number: 96
+    number: 2-22
   led97:
-    number: 97
+    number: 2-23
   led98:
-    number: 98
+    number: 2-24
   led99:
-    number: 99
+    number: 2-25
   led9A:
-    number: 9A
+    number: 2-26
   led9B:
-    number: 9B
+    number: 2-27
   led9C:
-    number: 9C
+    number: 2-28
   led9D:
-    number: 9D
+    number: 2-29
   led9E:
-    number: 9E
+    number: 2-30
   led9F:
-    number: 9F
+    number: 2-31
   ledA0:
-    number: A0
+    number: 2-32
   ledA1:
-    number: A1
+    number: 2-33
   ledA2:
-    number: A2
+    number: 2-34
   ledA3:
-    number: A3
+    number: 2-35
   ledA4:
-    number: A4
+    number: 2-36
   ledA5:
-    number: A5
+    number: 2-37
   ledA6:
-    number: A6
+    number: 2-38
   ledA7:
-    number: A7
+    number: 2-39
   ledA8:
-    number: A8
+    number: 2-40
   ledA9:
-    number: A9
+    number: 2-41
   ledAA:
-    number: AA
+    number: 2-42
   ledAB:
-    number: AB
+    number: 2-43
   ledAC:
-    number: AC
+    number: 2-44
   ledAD:
-    number: AD
+    number: 2-45
   ledAE:
-    number: AE
+    number: 2-46
   ledAF:
-    number: AF
+    number: 2-47
   ledB0:
-    number: B0
+    number: 2-48
   ledB1:
-    number: B1
+    number: 2-49
 
 #right backbox
   ledC0:
-    number: C0
+    number: 3-0
   ledC1:
-    number: C1
+    number: 3-1
   ledC2:
-    number: C2
+    number: 3-2
   ledC3:
-    number: C3
+    number: 3-3
   ledC4:
-    number: C4
+    number: 3-4
   ledC5:
-    number: C5
+    number: 3-5
   ledC6:
-    number: C6
+    number: 3-6
   ledC7:
-    number: C7
+    number: 3-7
   ledC8:
-    number: C8
+    number: 3-8
   ledC9:
-    number: C9
+    number: 3-9
   ledCA:
-    number: CA
+    number: 3-10
   ledCB:
-    number: CB
+    number: 3-11
   ledCC:
-    number: CC
+    number: 3-12
   ledCD:
-    number: CD
+    number: 3-13
   ledCE:
-    number: CE
+    number: 3-14
   ledCF:
-    number: CF
+    number: 3-15
   ledD0:
-    number: D0
+    number: 3-16
   ledD1:
-    number: D1
+    number: 3-17
   ledD2:
-    number: D2
+    number: 3-18
   ledD3:
-    number: D3
+    number: 3-19
   ledD4:
-    number: D4
+    number: 3-20
   ledD5:
-    number: D5
+    number: 3-21
   ledD6:
-    number: D6
+    number: 3-22
   ledD7:
-    number: D7
+    number: 3-23
   ledD8:
-    number: D8
+    number: 3-24
   ledD9:
-    number: D9
+    number: 3-25
   ledDA:
-    number: DA
+    number: 3-26
   ledDB:
-    number: DB
+    number: 3-27
   ledDC:
-    number: DC
+    number: 3-28
   ledDD:
-    number: DD
+    number: 3-29
   ledDE:
-    number: DE
+    number: 3-30
   ledDF:
-    number: DF
+    number: 3-31
   ledE0:
-    number: E0
+    number: 3-32
   ledE1:
-    number: E1
+    number: 3-33
   ledE2:
-    number: E2
+    number: 3-34
   ledE3:
-    number: E3
+    number: 3-35
   ledE4:
-    number: E4
+    number: 3-36
   ledE5:
-    number: E5
+    number: 3-37
   ledE6:
-    number: E6
+    number: 3-38
   ledE7:
-    number: E7
+    number: 3-39
   ledE8:
-    number: E8
+    number: 3-40
   ledE9:
-    number: E9
+    number: 3-41
   ledEA:
-    number: EA
+    number: 3-42
   ledEB:
-    number: EB
+    number: 3-43
   ledEC:
-    number: EC
+    number: 3-44
   ledED:
-    number: ED
+    number: 3-45
   ledEE:
-    number: EE
+    number: 3-46
   ledEF:
-    number: EF
+    number: 3-47
   ledF0:
-    number: F0
+    number: 3-48
   ledF1:
-    number: F1
+    number: 3-49
     
