@@ -28,4 +28,7 @@ autofire_coils:
   vuk:
     coil: c_vuk
     switch: s_vuk
+  pop_sling:
+    coil: c_pop_sling
+    switch: s_pop_sling
 

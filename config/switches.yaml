@@ -127,7 +127,7 @@ switches:
     type: NC
   s_vuk:
     number: 30
-  s_rubber_1:
+  s_pop_sling:
     number: 31
   s_big_red:
     number: 32
@@ -145,4 +145,16 @@ switches:
     number: 38
   s_left_passage:
     number: 39
+  s_behind_drop_1:
+    number: 3A
+    type: NC
+  s_behind_drop_2:
+    number: 3B
+    type: NC
+  s_behind_drop_3:
+    number: 3C
+    type: NC
+  s_side_ramp_made:
+    number: 3D
+    type: NC
 
