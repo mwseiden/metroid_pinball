@@ -3,7 +3,7 @@ mode:
     start_events: ball_starting
     priority: 100
 
-accurals:
+accruals:
   mode_base_complete_missiles:
     events:
       - purple_1_shot_hit
