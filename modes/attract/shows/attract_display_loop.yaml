@@ -252,28 +252,28 @@
     last_game_high_scores:
       widgets:
       - type: text
-        text: (player1_score)
+        text: (machine.player1_score)
         y: 31
         x: 10
         style: dmd_med
         anchor_x: left
         anchor_y: top
       - type: text
-        text: (player2_score)
+        text: (machine.player2_score)
         y: 31
         x: right-10
         anchor_x: right
         anchor_y: top
         style: dmd_med
       - type: text
-        text: (player3_score)
+        text: (machine.player3_score)
         y: 0
         x: 10
         style: dmd_med
         anchor_x: left
         anchor_y: bottom
       - type: text
-        text: (player4_score)
+        text: (machine.player4_score)
         y: 0
         x: right-10
         anchor_x: right
