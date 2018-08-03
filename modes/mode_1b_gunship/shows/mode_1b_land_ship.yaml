@@ -13,5 +13,5 @@
         animations:
           show_slide:
             - property: y
-              value: -40
+              value: 40
               duration: 3s

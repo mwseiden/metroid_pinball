@@ -31,11 +31,16 @@ accruals:
     reset_on_complete: false
 
 show_player:
-  mode_1b_ship_left: mode_1b_go_left
-  mode_1b_ship_right: mode_1b_go_right
+  mode_1b_ship_left:
+    mode_1b_go_left:
+      loops: 0
+  mode_1b_ship_right:
+    mode_1b_go_right:
+      loops: 0
   mode_1b_achieved:
     mode_1b_land_ship:
       events_when_completed: mode_1b_gunship_landing_animated
+      loops: 0
 
 event_player:
   mode_1b_gunship_landing_animated:
