@@ -12,6 +12,31 @@ shots:
     switch: s_side_ramp_made
   secret_passage_shot:
     switch: s_left_passage
+  upper_right_sling_shot:
+    switch: s_pop_sling
+  upper_left_sling_shot:
+    switch: s_upper_sling
+  left_sling_shot:
+    switch: s_left_sling
+  right_sling_shot:
+    switch: s_right_sling
+  pop_1_shot:
+    switch: s_pop_1
+  pop_2_shot:
+    switch: s_pop_2
+  pop_3_shot:
+    switch: s_pop_3
+
+show_player:
+  pop_1_shot_hit:
+    base_pop_1:
+      loops: 0
+  pop_2_shot_hit:
+    base_pop_2:
+      loops: 0
+  pop_3_shot_hit:
+    base_pop_3:
+      loops: 0
 
 slide_player:
   mode_base_started:
@@ -56,3 +81,32 @@ variable_player:
       int: current_player.ramps * 2010
   secret_passage_shot_hit:
     score: 420
+  upper_right_sling_shot_hit:
+    slingshots: 1
+    score:
+      int: 100 + (10 * current_player.slingshots)
+  upper_left_sling_shot_hit:
+    slingshots: 1
+    score:
+      int: 100 + (10 * current_player.slingshots)
+  left_sling_shot_hit:
+    slingshots: 1
+    score:
+      int: 100 + (10 * current_player.slingshots)
+  right_sling_shot_hit:
+    slingshots: 1
+    score:
+      int: 100 + (10 * current_player.slingshots)
+  pop_1_shot_hit:
+    pops: 1
+    score:
+      int: 100 + (80 * current_player.pops)
+  pop_2_shot_hit:
+    pops: 1
+    score:
+      int: 100 + (80 * current_player.pops)
+  pop_3_shot_hit:
+    pops: 1
+    score:
+      int: 100 + (80 * current_player.pops)
+
