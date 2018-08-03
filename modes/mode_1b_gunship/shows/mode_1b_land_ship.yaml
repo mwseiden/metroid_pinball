@@ -14,4 +14,4 @@
           show_slide:
             - property: y
               value: 40
-              duration: 3s
+              duration: .5s
