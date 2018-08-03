@@ -5,4 +5,4 @@
     full_shatz_samus_left:
       widgets:
       - type: image
-        image: samus_looking_left.gif
+        image: samus_looking_left
