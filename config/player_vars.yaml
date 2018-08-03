@@ -9,3 +9,9 @@ player_vars:
     initial_value: 0
   slingshots:
     initial_value: 0
+  lanes:
+    initial_value: 0
+  spinners:
+    initial_value: 0
+  missiles:
+    initial_value: 0

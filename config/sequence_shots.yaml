@@ -7,3 +7,6 @@ sequence_shots:
   right_orbit:
     switch_sequence: s_orbit_r, s_orbit_l
     sequence_timeout: 3s
+  full_shatz:
+    switch_sequence: s_left_inlane, s_shatz
+    sequence_timeout: 2s

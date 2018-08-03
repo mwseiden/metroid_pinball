@@ -3,6 +3,17 @@ mode:
     start_events: ball_starting
     priority: 100
 
+accurals:
+  mode_base_complete_missiles:
+    events:
+      - purple_1_shot_hit
+      - purple_2_shot_hit
+      - purple_3_shot_hit
+    events_when_complete: mode_base_missile_collected
+    persist_state: true
+    reset_on_complete: true
+    disable_on_complete: false
+
 shots:
   scoop_shot:
     switch: s_scoop
@@ -26,6 +37,28 @@ shots:
     switch: s_pop_2
   pop_3_shot:
     switch: s_pop_3
+  left_outlane_shot:
+    switch: s_left_outlane
+  left_inlane_shot:
+    switch: s_left_inlane
+  right_outlane_shot:
+    switch: s_right_outlane
+  right_inlane_shot:
+    switch: s_right_inlane
+  spinner_shot:
+    switch: s_spinner
+  big_red_shot:
+    switch: s_big_red
+  rollover_shot:
+    switch: s_rollover_button
+  shatz_shot:
+    switch: s_shatz
+  purple_1_shot:
+    switch: s_purple_1
+  purple_2_shot:
+    switch: s_purple_2
+  purple_3_shot:
+    switch: s_purple_3
 
 show_player:
   pop_1_shot_hit:
@@ -36,6 +69,12 @@ show_player:
       loops: 0
   pop_3_shot_hit:
     base_pop_3:
+      loops: 0
+  shatz_shot_hit:
+    base_full_shatz:
+      loops: 0
+  mode_base_missile_collected:
+    base_missile_collected:
       loops: 0
 
 slide_player:
@@ -66,11 +105,11 @@ variable_player:
   left_orbit_hit:
     orbits: 1
     score:
-      int: current_player.orbits * 500
+      int: (current_player.orbits * 500) + (current_player.spinners * 10)
   right_orbit_hit:
     orbits: 1
     score:
-      int: current_player.orbits * 500
+      int: (current_player.orbits * 500) + (current_player.spinners * 10)
   ramp_shot_hit:
     ramps: 1
     score:
@@ -109,4 +148,42 @@ variable_player:
     pops: 1
     score:
       int: 100 + (80 * current_player.pops)
-
+  left_outlane_shot_hit:
+    lanes: 1
+    score:
+      int: 100 + (10 * current_player.lanes)
+  left_inlane_shot_hit:
+    lanes: 1
+    score:
+      int: 100 + (10 * current_player.lanes)
+  right_outlane_shot_hit:
+    lanes: 1
+    score:
+      int: 100 + (10 * current_player.lanes)
+  right_inlane_shot_hit:
+    lanes: 1
+    score:
+      int: 100 + (10 * current_player.lanes)
+  spinner_shot_hit:
+    spinners: 1
+    score:
+      int: 50 + (10 * current_player.spinners)
+  big_red_shot_hit:
+    score: 5000
+  rollover_shot_hit:
+    score: 1000
+  shatz_shot_hit:
+    score: 1500
+  full_shatz_hit:
+    score: 10000
+  purple_1_shot:
+    score:
+      int: 100 + (100 * current_player.missiles)
+  purple_2_shot:
+    score:
+      int: 100 + (100 * current_player.missiles)
+  purple_3_shot:
+    score:
+      int: 100 + (100 * current_player.missiles)
+  mode_base_missile_collected:
+    missiles: 1

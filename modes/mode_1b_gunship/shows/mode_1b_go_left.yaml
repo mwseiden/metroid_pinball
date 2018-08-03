@@ -13,4 +13,4 @@
       transition:
          type: move_in
          duration: 1s
-         direction: left
+         direction: right

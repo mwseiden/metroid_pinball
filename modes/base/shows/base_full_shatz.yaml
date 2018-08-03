@@ -1,0 +1,8 @@
+#show_version=5
+
+- duration: 3s
+  slides:
+    full_shatz_samus_left:
+      widgets:
+      - type: image
+        image: samus_looking_left.gif

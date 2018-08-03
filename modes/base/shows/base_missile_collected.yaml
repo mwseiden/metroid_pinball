@@ -1,0 +1,21 @@
+#show_version=5
+
+- duration: 0.5s
+  slides:
+    base_missiles_collected_slide:
+      widgets:
+      - type: text
+        text: Missile Collected!
+        color: red
+        style: dmd_med
+        y: 16
+        x: 80
+      - type: image
+        image: samus_shoot_right
+        width: 32
+        height: 32
+        x: 0
+        y: 31
+        anchor_x: left
+        anchor_y: top
+
