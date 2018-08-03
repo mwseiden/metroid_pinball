@@ -5,3 +5,7 @@ player_vars:
     initial_value: 0
   orbits:
     initial_value: 0
+  pops:
+    initial_value: 0
+  slingshots:
+    initial_value: 0
