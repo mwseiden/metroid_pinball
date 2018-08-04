@@ -1,0 +1,11 @@
+#show_version=5
+
+- duration: 1.5s
+  slides:
+    mode_base_white_target:
+      widgets:
+      - type: text
+        text: YOU DID IT!
+        color: white
+        style: dmd_big
+        y: 16

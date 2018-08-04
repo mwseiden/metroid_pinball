@@ -70,11 +70,15 @@ show_player:
   pop_3_shot_hit:
     base_pop_3:
       loops: 0
-  shatz_shot_hit:
+  full_shatz_hit:
     base_full_shatz:
       loops: 0
+      priority: 10
   mode_base_missile_collected:
     base_missile_collected:
+      loops: 0
+  shatz_shot_hit:
+    base_white_target:
       loops: 0
 
 slide_player:
