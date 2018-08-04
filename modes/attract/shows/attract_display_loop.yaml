@@ -1,5 +1,38 @@
 #show_version=5
 
+- duration: 8s
+  slides:
+    last_game_high_scores:
+      widgets:
+      - type: text
+        text: (machine|player1_score)
+        y: 31
+        x: 10
+        style: dmd_med
+        anchor_x: left
+        anchor_y: top
+      - type: text
+        text: (machine|player2_score)
+        y: 31
+        x: right-10
+        anchor_x: right
+        anchor_y: top
+        style: dmd_med
+      - type: text
+        text: (machine|player3_score)
+        y: 0
+        x: 10
+        style: dmd_med
+        anchor_x: left
+        anchor_y: bottom
+      - type: text
+        text: (machine|player4_score)
+        y: 0
+        x: right-10
+        anchor_x: right
+        anchor_y: bottom
+        style: dmd_med
+
 - duration: 5s
   slides:
     press_start:
@@ -247,36 +280,5 @@
          type: swap
          duration: 1s
 
-- duration: 8s
-  slides:
-    last_game_high_scores:
-      widgets:
-      - type: text
-        text: (machine|player1_score)
-        y: 31
-        x: 10
-        style: dmd_med
-        anchor_x: left
-        anchor_y: top
-      - type: text
-        text: (machine|player2_score)
-        y: 31
-        x: right-10
-        anchor_x: right
-        anchor_y: top
-        style: dmd_med
-      - type: text
-        text: (machine|player3_score)
-        y: 0
-        x: 10
-        style: dmd_med
-        anchor_x: left
-        anchor_y: bottom
-      - type: text
-        text: (machine|player4_score)
-        y: 0
-        x: right-10
-        anchor_x: right
-        anchor_y: bottom
-        style: dmd_med
+
 
