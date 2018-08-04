@@ -1,6 +1,6 @@
 #show_version=5
 
-- duration: 0.5s
+- duration: 2s
   slides:
     base_missiles_collected_slide:
       widgets:
