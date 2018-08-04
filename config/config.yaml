@@ -9,6 +9,7 @@ fast:
 
 config:
   - machine.yaml
+  - bcp.yaml
   - graphics.yaml
   - scriptlets.yaml
   - playfields.yaml
