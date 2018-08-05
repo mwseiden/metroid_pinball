@@ -1,0 +1,25 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    base_spinner_progress_slide:
+      widgets:
+      - type: text
+        text: Spin Jumps
+        color: yellow
+        style: dmd_med
+        y: 20
+        x: 81
+      - type: text
+        text: (player|spinners)
+        color: red
+        style: dmd_big
+        y: 10
+        x: 81
+      - type: image
+        image: samus_spin_jump
+        x: 0
+        y: 31
+        anchor_x: left
+        anchor_y: top
+

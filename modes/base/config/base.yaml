@@ -14,6 +14,18 @@ accruals:
     reset_on_complete: true
     disable_on_complete: false
 
+counters:
+  captive_ball_counter:
+    count_events: captive_shot_hit
+    events_when_hit: base_captive_ball_progress
+    starting_count: 10
+    count_complete_value: 0
+    direction: down
+    events_when_complete: base_captive_multiball_bashed
+    persist_state: true
+    reset_on_complete: true
+    disable_on_complete: false
+
 shots:
   scoop_shot:
     switch: s_scoop
@@ -59,6 +71,15 @@ shots:
     switch: s_purple_2
   purple_3_shot:
     switch: s_purple_3
+  captive_shot:
+    switch: s_captive_ball
+
+multiballs:
+  base_captive_multiball:
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 20s
+    start_or_add_a_ball_events: base_captive_multiball_bashed
 
 show_player:
   pop_1_shot_hit:
@@ -79,6 +100,15 @@ show_player:
       loops: 0
   shatz_shot_hit:
     base_white_target:
+      loops: 0
+  base_captive_ball_progress:
+    base_multiball_progress:
+      loops: 0
+  base_captive_multiball_bashed:
+    base_multiball_started:
+      loops: 0
+  spinner_shot_hit:
+    base_spinner_spins:
       loops: 0
 
 slide_player:
@@ -191,3 +221,7 @@ variable_player:
       int: 100 + (100 * current_player.missiles)
   mode_base_missile_collected:
     missiles: 1
+  captive_shot_hit:
+    captives: 1
+    score:
+      int: 500 + (500 * current_player.captives)

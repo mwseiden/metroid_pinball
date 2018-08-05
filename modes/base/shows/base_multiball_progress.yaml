@@ -1,0 +1,25 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    base_missiles_collected_slide:
+      widgets:
+      - type: text
+        text: CHARGING!
+        color: red
+        style: dmd_big
+        y: 20
+        x: 80
+      - type: text
+        text: (player|captive_ball_counter_state) More For Multiball
+        color: red
+        style: dmd_med
+        y: 10
+        x: 80
+      - type: image
+        image: samus_charge
+        x: 0
+        y: 31
+        anchor_x: left
+        anchor_y: top
+

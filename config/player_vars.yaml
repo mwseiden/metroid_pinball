@@ -15,3 +15,7 @@ player_vars:
     initial_value: 0
   missiles:
     initial_value: 0
+  captives:
+    initial_value: 0
+  multiballs:
+    initial_value: 0
