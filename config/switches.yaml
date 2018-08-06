@@ -24,8 +24,14 @@ switches:
     tags: playfield_active
   s_upper_right_flipper_eos:
     number: 0-8
+    platform_settings:
+      debounce_close: 10
+      debounce_open: 10
   s_captive_ball:
     number: 0-9
+    platform_settings:
+      debounce_close: 10
+      debounce_open: 10
     tags: playfield_active
   s_spinner:
     number: 0-10
@@ -101,12 +107,21 @@ switches:
     number: 1-15
   s_skill_bank_1:
     number: 1-16
+    platform_settings:
+      debounce_close: 10
+      debounce_open: 10
     tags: playfield_active
   s_skill_bank_2:
     number: 1-17
+    platform_settings:
+      debounce_close: 10
+      debounce_open: 10
     tags: playfield_active
   s_skill_bank_3:
     number: 1-18
+    platform_settings:
+      debounce_close: 10
+      debounce_open: 10
     tags: playfield_active
   s_upper_sling:
     number: 1-19
