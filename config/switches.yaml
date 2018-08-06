@@ -47,6 +47,9 @@ switches:
     tags: playfield_active
   s_scoop:
     number: 0-13
+    platform_settings:
+      debounce_close: 20
+      debounce_open: 20
     tags: playfield_active
     type: NC
   s_drop_target_2:
