@@ -34,9 +34,13 @@ show_player:
   mode_1b_ship_left:
     mode_1b_go_left:
       loops: 0
+    left_orbit_blink:
+      action: stop
   mode_1b_ship_right:
     mode_1b_go_right:
       loops: 0
+    left_orbit_blink:
+      action: stop
   mode_1b_achieved:
     mode_1b_land_ship:
       events_when_completed: mode_1b_gunship_landing_animated
@@ -47,27 +51,12 @@ show_player:
       show_tokens:
         led: led_enter_left_orbit
         color: 00ffff
-  mode_1b_ship_left:
-    left_orbit_blink:
-      action: stop
-  mode_mode_1b_started{not devices.accruals.mode_1b_complete_left_orbit.completed}:
-    blink_light:
-      key: left_orbit_blink
-      show_tokens:
-        led: led_enter_left_orbit
-        color: 00ffff
-  mode_1b_ship_left:
-    left_orbit_blink:
-      action: stop
   mode_mode_1b_started{not devices.accruals.mode_1b_complete_right_orbit.completed}:
     blink_light:
       key: right_orbit_blink
       show_tokens:
         led: led_enter_right_orbit
         color: 00ffff
-  mode_1b_ship_right:
-    right_orbit_blink:
-      action: stop
 
 event_player:
   mode_1b_gunship_landing_animated:
