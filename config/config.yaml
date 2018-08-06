@@ -6,6 +6,7 @@ hardware:
 
 fast:
   ports: /dev/ttyUSB1, /dev/ttyUSB2
+  net_buffer: 200
 
 config:
   - machine.yaml
