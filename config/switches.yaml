@@ -81,7 +81,7 @@ switches:
     platform_settings:
       debounce_close: 10
       debounce_open: 10
-   tags: playfield_active
+    tags: playfield_active
   s_right_sling:
     number: 1-11
     platform_settings:
