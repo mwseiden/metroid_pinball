@@ -30,8 +30,8 @@ switches:
   s_spinner:
     number: 0-10
     platform_settings:
-      debounce_close: 250
-      debounce_open: 250
+      debounce_close: 20
+      debounce_open: 20
     tags: playfield_active
   s_left_target_1:
     number: 0-11

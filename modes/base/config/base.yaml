@@ -18,7 +18,7 @@ counters:
   captive_ball_counter:
     count_events: captive_shot_hit
     events_when_hit: base_captive_ball_progress
-    starting_count: 10
+    starting_count: 5
     count_complete_value: 0
     direction: down
     events_when_complete: base_captive_multiball_bashed
