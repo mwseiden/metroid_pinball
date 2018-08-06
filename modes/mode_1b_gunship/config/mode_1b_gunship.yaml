@@ -39,21 +39,23 @@ show_player:
   mode_1b_ship_right:
     mode_1b_go_right:
       loops: 0
-    left_orbit_blink:
+    right_orbit_blink:
       action: stop
   mode_1b_achieved:
     mode_1b_land_ship:
       events_when_completed: mode_1b_gunship_landing_animated
       loops: 0
-  mode_mode_1b_started{not devices.accruals.mode_1b_complete_left_orbit.completed}:
+  mode_mode_1b_gunship_started{not devices.accruals.mode_1b_complete_left_orbit.completed}:
     blink_light:
       key: left_orbit_blink
+      loops: -1
       show_tokens:
         led: led_enter_left_orbit
         color: 00ffff
-  mode_mode_1b_started{not devices.accruals.mode_1b_complete_right_orbit.completed}:
+  mode_mode_1b_gunship_started{not devices.accruals.mode_1b_complete_right_orbit.completed}:
     blink_light:
       key: right_orbit_blink
+      loops: -1
       show_tokens:
         led: led_enter_right_orbit
         color: 00ffff
