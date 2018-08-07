@@ -80,8 +80,14 @@ switches:
     number: 1-7
   s_right_flipper_eos:
     number: 1-8
+    platform_settings:
+      debounce_close: 50
+      debounce_open: 50
   s_left_flipper_eos:
     number: 1-9
+    platform_settings:
+      debounce_close: 50
+      debounce_open: 50
   s_left_sling:
     number: 1-10
     platform_settings:
