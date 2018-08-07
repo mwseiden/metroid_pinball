@@ -25,13 +25,10 @@ switches:
   s_upper_right_flipper_eos:
     number: 0-8
     platform_settings:
-      debounce_close: 10
-      debounce_open: 10
+      debounce_close: 50
+      debounce_open: 50
   s_captive_ball:
     number: 0-9
-    platform_settings:
-      debounce_close: 10
-      debounce_open: 10
     tags: playfield_active
   s_spinner:
     number: 0-10
