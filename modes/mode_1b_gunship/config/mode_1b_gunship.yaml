@@ -71,3 +71,7 @@ variable_player:
     score: 50000
   mode_1b_achieved:
     score: 75000
+
+images:
+  gunship_landing:
+    load: preload

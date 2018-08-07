@@ -225,3 +225,21 @@ variable_player:
     captives: 1
     score:
       int: 500 + (500 * current_player.captives)
+
+images:
+  rudy_pop_1:
+    load: preload
+  rudy_pop_2:
+    load: preload
+  rudy_pop_3:
+    load: preload
+  samus_charge:
+    load: preload
+  samus_looking_left:
+    load: preload
+  samus_run_right:
+    load: preload
+  samus_running:
+    load: preload
+  samus_spin_jump:
+    load: preload
