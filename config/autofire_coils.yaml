@@ -19,9 +19,9 @@ autofire_coils:
   right_slingshot:
     coil: c_right_slingshot
     switch: s_right_sling
-  upper_slingshot:
-    coil: c_upper_slingshot
-    switch: s_upper_sling
+#  upper_slingshot:
+#    coil: c_upper_slingshot
+#    switch: s_upper_sling
   scoop:
     coil: c_scoop
     switch: s_scoop
