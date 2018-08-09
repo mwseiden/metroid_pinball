@@ -113,8 +113,6 @@ show_player:
   twitch_new_chat_message:
     who_said_that:
       loop: 0
-      show_tokens:
-        user: (user)
 
 slide_player:
   mode_base_started:
