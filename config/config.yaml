@@ -9,6 +9,7 @@ fast:
   net_buffer: 200
 
 config:
+  - logging.yaml
   - machine.yaml
   - bcp.yaml
   - graphics.yaml

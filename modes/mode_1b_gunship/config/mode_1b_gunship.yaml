@@ -2,7 +2,8 @@
 mode:
     start_events: ball_starting
     stop_events: game_ending, mode_1b_success
-    stop_on_ball_end: false
+    # stop_on_ball_end: false
+    restart_on_next_ball: true
     priority: 300
 
 accruals:
