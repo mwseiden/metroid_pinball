@@ -217,9 +217,9 @@ switches:
   s_side_ramp_made:
     number: 2-13
     type: NC
-   s_tilt:
+  s_tilt:
     number: 2-14
-   s_spinner:
+  s_spinner:
     number: 2-15
     platform_settings:
       debounce_close: 20
