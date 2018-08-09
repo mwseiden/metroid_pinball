@@ -110,6 +110,11 @@ show_player:
   spinner_shot_hit:
     base_spinner_spins:
       loops: 0
+  twitch_new_chat_message:
+    who_said_that:
+      loop: 0
+      show_tokens:
+        user: (user)
 
 slide_player:
   mode_base_started:
