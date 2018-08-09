@@ -1,0 +1,10 @@
+show_version=5
+
+- duration: 2s
+  slides:
+    base_missiles_collected_slide:
+      widgets:
+      - type: text
+        text: (user)
+        color: red
+        style: dmd_big
