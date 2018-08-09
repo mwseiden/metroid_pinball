@@ -30,18 +30,12 @@ switches:
   s_captive_ball:
     number: 0-9
     tags: playfield_active
-  s_spinner:
+  s_unknown_0_10:
     number: 0-10
-    platform_settings:
-      debounce_close: 20
-      debounce_open: 20
-    tags: playfield_active
-  s_left_target_1:
+  s_unknown_0_11:
     number: 0-11
-    tags: playfield_active
-  s_left_target_2:
+  s_unknown_0_12:
     number: 0-12
-    tags: playfield_active
   s_scoop:
     number: 0-13
     platform_settings:
@@ -223,4 +217,18 @@ switches:
   s_side_ramp_made:
     number: 2-13
     type: NC
+   s_tilt:
+    number: 2-14
+   s_spinner:
+    number: 2-15
+    platform_settings:
+      debounce_close: 20
+      debounce_open: 20
+    tags: playfield_active
+  s_left_target_1:
+    number: 2-16
+    tags: playfield_active
+  s_left_target_2:
+    number: 2-17
+    tags: playfield_active
 
