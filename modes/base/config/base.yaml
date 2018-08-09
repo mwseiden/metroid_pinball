@@ -112,7 +112,7 @@ show_player:
       loops: 0
   twitch_new_chat_message:
     who_said_that:
-      loop: 0
+      loops: 0
 
 slide_player:
   mode_base_started:
