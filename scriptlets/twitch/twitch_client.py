@@ -35,13 +35,12 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             user = e.source.split('!')[0]
             message = 'Chat: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
             self.log.info(message.replace(self.password, 'XXXXX'))
-            bits = None #e.tags['bits']
-            message_type = '' #e.tags['msg-id']
-            self.log.info('Extracted Tags: bits: ' + bits + ', msg-id: ' + message_type)
-            self.log.info('Tags class name = ' + e.tags.__class__.__name__)
+            tags = build_tag_dict(e.tags)
+            bits = tags['bits']
+            message_type = tags['msg-id']
             if message_type == 'sub' or message_type == 'resub':
-                months = e.tags['msg-param-months']
-                subscriber_message = e.tags['message']
+                months = tags['msg-param-months']
+                subscriber_message = tags['message']
                 self.machine.events.post('twitch_subscription', user=user, message=e.arguments[0], months=months, subscriber_message=subscriber_message)
             elif bits is not None:
                 self.machine.events.post('twitch_bit_donation', user=user, message=e.arguments[0], bits=bits)
@@ -64,3 +63,6 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
 
     def is_connected(self):
         return self.connection.is_connected()
+
+    def build_tag_dict(seq):
+        return dict((d['key'], d['value']) for (index, d) in enumerate(seq))
