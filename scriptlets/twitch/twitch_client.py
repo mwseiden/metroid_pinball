@@ -36,11 +36,11 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             message = 'Chat: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
             self.log.info(message.replace(self.password, 'XXXXX'))
             tags = self.build_tag_dict(e.tags)
-            bits = tags['bits']
-            message_type = tags['msg-id']
+            bits = tags.get('bits')
+            message_type = tags.get('msg-id')
             if message_type == 'sub' or message_type == 'resub':
-                months = tags['msg-param-months']
-                subscriber_message = tags['message']
+                months = tags.get('msg-param-months', 1)
+                subscriber_message = tags.get('message', '')
                 self.machine.events.post('twitch_subscription', user=user, message=e.arguments[0], months=months, subscriber_message=subscriber_message)
             elif bits is not None:
                 self.machine.events.post('twitch_bit_donation', user=user, message=e.arguments[0], bits=bits)
