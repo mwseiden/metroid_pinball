@@ -35,9 +35,10 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             user = e.source.split('!')[0]
             message = 'Chat: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
             self.log.info(message.replace(self.password, 'XXXXX'))
-            bits = e.tags['bits']
-            message_type = e.tags['msg-id']
+            bits = None #e.tags['bits']
+            message_type = '' #e.tags['msg-id']
             self.log.info('Extracted Tags: bits: ' + bits + ', msg-id: ' + message_type)
+            self.log.info('Tags class name = ' + e.tags.__class__.__name__)
             if message_type == 'sub' or message_type == 'resub':
                 months = e.tags['msg-param-months']
                 subscriber_message = e.tags['message']
