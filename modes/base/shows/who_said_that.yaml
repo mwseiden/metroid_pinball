@@ -5,6 +5,6 @@
     who_said_that_slide:
       widgets:
       - type: text
-        text: (user)
+        text: (machine|twitch_last_chat_user)
         color: red
         style: dmd_big

@@ -35,7 +35,19 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             user = e.source.split('!')[0]
             message = 'Chat: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
             self.log.info(message.replace(self.password, 'XXXXX'))
-            self.machine.events.post('twitch_new_chat_message', user=user, message=e.arguments[0])
+            bits = e.tags['bits']
+            message_type = e.tags['msg-id']
+            self.log.info('Extracted Tags: bits: ' + bits + ', msg-id: ' + message_type)
+            if message_type == 'sub' or message_type == 'resub':
+                months = e.tags['msg-param-months']
+                subscriber_message = e.tags['message']
+                self.machine.events.post('twitch_subscription', user=user, message=e.arguments[0], months=months, subscriber_message=subscriber_message)
+            elif bits is not None:
+                self.machine.events.post('twitch_bit_donation', user=user, message=e.arguments[0], bits=bits)
+            else:
+                self.machine.set_machine_var('twitch_last_chat_user', user)
+                self.machine.set_machine_var('twitch_last_chat_message', e.arguments[0])
+                self.machine.events.post('twitch_new_chat_message', user=user, message=e.arguments[0])
 
     def on_privmsg(self, c, e):
         user = e.source.split('!')[0]
