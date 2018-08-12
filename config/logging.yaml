@@ -51,7 +51,7 @@ logging:
       extra_balls: basic
       file_manager: basic
       light_controller: basic
-      logic_blocks: basic
+      logic_blocks: full
       machine_controller: basic
       mode_controller: basic
       placeholder_manager: basic
@@ -62,7 +62,7 @@ logging:
       score_reel_controller: basic
       service_controller: basic
       settings_controller: basic
-      show_controller: basic
+      show_controller: full
       switch_controller: basic
       text_ui: none
       timers: none

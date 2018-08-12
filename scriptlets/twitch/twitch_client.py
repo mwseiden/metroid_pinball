@@ -35,7 +35,7 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             user = e.source.split('!')[0]
             message = 'Chat: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
             self.log.info(message.replace(self.password, 'XXXXX'))
-            tags = build_tag_dict(e.tags)
+            tags = self.build_tag_dict(e.tags)
             bits = tags['bits']
             message_type = tags['msg-id']
             if message_type == 'sub' or message_type == 'resub':
@@ -64,5 +64,5 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
     def is_connected(self):
         return self.connection.is_connected()
 
-    def build_tag_dict(seq):
+    def build_tag_dict(self, seq):
         return dict((d['key'], d['value']) for (index, d) in enumerate(seq))
