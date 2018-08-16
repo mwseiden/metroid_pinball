@@ -81,6 +81,17 @@ multiballs:
     shoot_again: 20s
     start_or_add_a_ball_events: base_captive_multiball_bashed
 
+ball_saves:
+  default:
+    active_time: 10s
+    hurry_up_time: 2s
+    grace_period: 2s
+    enable_events: mode_base_started
+    timer_start_events: balldevice_bd_plunger_ball_eject_success
+    auto_launch: yes
+    balls_to_save: 1
+    debug: yes
+
 show_player:
   pop_1_shot_hit:
     base_pop_1:
