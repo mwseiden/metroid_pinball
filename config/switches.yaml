@@ -30,12 +30,16 @@ switches:
   s_captive_ball:
     number: 0-9
     tags: playfield_active
-  s_unknown_0_10:
+  s_upper_right_flipper:
     number: 0-10
   s_unknown_0_11:
     number: 0-11
-  s_unknown_0_12:
+  s_upper_sling:
     number: 0-12
+    tags: playfield_active
+    platform_settings:
+      debounce_close: 10
+      debounce_open: 10
   s_scoop:
     number: 0-13
     platform_settings:
@@ -123,7 +127,7 @@ switches:
       debounce_close: 10
       debounce_open: 10
     tags: playfield_active
-  s_upper_sling:
+  s_unknown_1_19:
     number: 1-19
     platform_settings:
       debounce_close: 10
@@ -219,6 +223,9 @@ switches:
     type: NC
   s_tilt:
     number: 2-14
+    platform_settings:
+      debounce_close: 10
+      debounce_open: 10
   s_spinner:
     number: 2-15
     platform_settings:

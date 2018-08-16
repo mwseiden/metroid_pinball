@@ -11,7 +11,7 @@
         y: 20
         x: 80
       - type: text
-        text: (captive_ball_counter_state) More For Multiball
+        text: (player|captive_ball_counter_state) More For Multiball
         color: red
         style: dmd_med
         y: 10
