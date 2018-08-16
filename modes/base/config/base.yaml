@@ -13,6 +13,15 @@ accruals:
     persist_state: true
     reset_on_complete: true
     disable_on_complete: false
+  mode_base_complete_power_bombs:
+    events:
+      - lower_right_bank_1_shot_hit
+      - lower_right_bank_2_shot_hit
+      - lower_right_bank_3_shot_hit
+    events_when_complete: mode_base_power_bomb_collected
+    persist_state: true
+    reset_on_complete: true
+    disable_on_complete: false
 
 counters:
   captive_ball_counter:
@@ -77,6 +86,12 @@ shots:
     switch: s_left_target_1
   side_2_shot:
     switch: s_left_target_2
+  lower_right_bank_1_shot:
+   switch: s_lower_right_bank_1
+  lower_right_bank_2_shot:
+   switch: s_lower_right_bank_2
+  lower_right_bank_3_shot:
+   switch: s_lower_right_bank_3
 
 multiballs:
   base_captive_multiball:
@@ -127,6 +142,9 @@ show_player:
       loops: 0
   twitch_new_chat_message:
     who_said_that:
+      loops: 0
+  mode_base_power_bomb_collected:
+    base_power_bomb_collected:
       loops: 0
 
 slide_player:
@@ -247,6 +265,17 @@ variable_player:
     score: 25000
   side_2_shot_hit:
     score: 25000
+  mode_base_power_bomb_collected:
+    power_bombs: 1
+  lower_right_bank_1_shot_hit:
+    score:
+      int: 500 + (500 * current_player.power_bombs)
+  lower_right_bank_2_shot_hit:
+    score:
+      int: 500 + (500 * current_player.power_bombs)
+  lower_right_bank_3_shot_hit:
+    score:
+      int: 500 + (500 * current_player.power_bombs)
 
 images:
   rudy_pop_1:
