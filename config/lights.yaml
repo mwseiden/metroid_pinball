@@ -1,0 +1,313 @@
+#config_version=5
+
+lights:
+#playfield
+  led_pit:
+    number: 0-0
+  led_pop_1:
+    number: 0-1
+  led_pop_2:
+    number: 0-2
+  led_pop_3:
+    number: 0-3
+  led_pop_center:
+    number: 0-4
+  led_side_1:
+    number: 0-5
+  led_side_2:
+    number: 0-6
+  led_side_3:
+    number: 0-7
+  led_missile_1:
+    number: 0-8
+  led_missile_2:
+    number: 0-9
+  led_missile_3:
+    number: 0-10
+  led_upgrade_bank_1:
+    number: 0-11
+  led_upgrade_bank_2:
+    number: 0-12
+  led_upgrade_bank_3:
+    number: 0-13
+  led_bomb_bank_1:
+    number: 0-14
+  led_bomb_bank_2:
+    number: 0-15
+  led_bomb_bank_3:
+    number: 0-16
+  led_enter_left_orbit:
+    number: 0-17
+  led_enter_scoop:
+    number: 0-18
+  led_enter_ramp:
+    number: 0-19
+  led_enter_pops:
+    number: 0-20
+  led_captive_ball:
+    number: 0-21
+  led_enter_right_orbit:
+    number: 0-22
+  led_enter_wall:
+    number: 0-23
+  led_drop_1:
+    number: 0-24
+  led_drop_2:
+    number: 0-25
+  led_drop_3:
+    number: 0-26
+  led_scoop:
+    number: 0-27
+  led_upper_playfield_1:
+    number: 0-28
+  led_upper_playfield_2:
+    number: 0-29
+  led_upper_playfield_3:
+    number: 0-30
+  led_rollover:
+    number: 0-31
+  led_scanner_nw:
+    number: 0-32
+  led_scanner_ne:
+    number: 0-33
+  led_scanner_e:
+    number: 0-34
+  led_scanner_se:
+    number: 0-35
+  led_scanner_sw:
+    number: 0-36
+  led_scanner_w:
+    number: 0-37
+  led_scanner_center:
+    number: 0-38
+  led_enter_secret_passage:
+    number: 0-39
+  led_boss_phantoon:
+    number: 0-40
+  led_boss_draygon:
+    number: 0-41
+  led_boss_ridley:
+    number: 0-42
+  led_boss_kraid:
+    number: 0-43
+  led_boss_motherbrain:
+    number: 0-44
+  led_left_kickback:
+    number: 0-45
+  led_left_outlane:
+    number: 0-46
+  led_left_inlane:
+    number: 0-47
+  led_ball_save:
+    number: 0-48
+  led_right_inlane:
+    number: 0-49
+  led_right_outlane:
+    number: 0-50
+  led_right_kickback:
+    number: 0-51
+
+    #left backbox
+  led80:
+    number: 2-0
+  led81:
+    number: 2-1
+  led82:
+    number: 2-2
+  led83:
+    number: 2-3
+  led84:
+    number: 2-4
+  led85:
+    number: 2-5
+  led86:
+    number: 2-6
+  led87:
+    number: 2-7
+  led88:
+    number: 2-8
+  led89:
+    number: 2-9
+  led8A:
+    number: 2-10
+  led8B:
+    number: 2-11
+  led8C:
+    number: 2-12
+  led8D:
+    number: 2-13
+  led8E:
+    number: 2-14
+  led8F:
+    number: 2-15
+  led90:
+    number: 2-16
+  led91:
+    number: 2-17
+  led92:
+    number: 2-18
+  led93:
+    number: 2-19
+  led94:
+    number: 2-20
+  led95:
+    number: 2-21
+  led96:
+    number: 2-22
+  led97:
+    number: 2-23
+  led98:
+    number: 2-24
+  led99:
+    number: 2-25
+  led9A:
+    number: 2-26
+  led9B:
+    number: 2-27
+  led9C:
+    number: 2-28
+  led9D:
+    number: 2-29
+  led9E:
+    number: 2-30
+  led9F:
+    number: 2-31
+  ledA0:
+    number: 2-32
+  ledA1:
+    number: 2-33
+  ledA2:
+    number: 2-34
+  ledA3:
+    number: 2-35
+  ledA4:
+    number: 2-36
+  ledA5:
+    number: 2-37
+  ledA6:
+    number: 2-38
+  ledA7:
+    number: 2-39
+  ledA8:
+    number: 2-40
+  ledA9:
+    number: 2-41
+  ledAA:
+    number: 2-42
+  ledAB:
+    number: 2-43
+  ledAC:
+    number: 2-44
+  ledAD:
+    number: 2-45
+  ledAE:
+    number: 2-46
+  ledAF:
+    number: 2-47
+  ledB0:
+    number: 2-48
+  ledB1:
+    number: 2-49
+
+#right backbox
+  ledC0:
+    number: 3-0
+  ledC1:
+    number: 3-1
+  ledC2:
+    number: 3-2
+  ledC3:
+    number: 3-3
+  ledC4:
+    number: 3-4
+  ledC5:
+    number: 3-5
+  ledC6:
+    number: 3-6
+  ledC7:
+    number: 3-7
+  ledC8:
+    number: 3-8
+  ledC9:
+    number: 3-9
+  ledCA:
+    number: 3-10
+  ledCB:
+    number: 3-11
+  ledCC:
+    number: 3-12
+  ledCD:
+    number: 3-13
+  ledCE:
+    number: 3-14
+  ledCF:
+    number: 3-15
+  ledD0:
+    number: 3-16
+  ledD1:
+    number: 3-17
+  ledD2:
+    number: 3-18
+  ledD3:
+    number: 3-19
+  ledD4:
+    number: 3-20
+  ledD5:
+    number: 3-21
+  ledD6:
+    number: 3-22
+  ledD7:
+    number: 3-23
+  ledD8:
+    number: 3-24
+  ledD9:
+    number: 3-25
+  ledDA:
+    number: 3-26
+  ledDB:
+    number: 3-27
+  ledDC:
+    number: 3-28
+  ledDD:
+    number: 3-29
+  ledDE:
+    number: 3-30
+  ledDF:
+    number: 3-31
+  ledE0:
+    number: 3-32
+  ledE1:
+    number: 3-33
+  ledE2:
+    number: 3-34
+  ledE3:
+    number: 3-35
+  ledE4:
+    number: 3-36
+  ledE5:
+    number: 3-37
+  ledE6:
+    number: 3-38
+  ledE7:
+    number: 3-39
+  ledE8:
+    number: 3-40
+  ledE9:
+    number: 3-41
+  ledEA:
+    number: 3-42
+  ledEB:
+    number: 3-43
+  ledEC:
+    number: 3-44
+  ledED:
+    number: 3-45
+  ledEE:
+    number: 3-46
+  ledEF:
+    number: 3-47
+  ledF0:
+    number: 3-48
+  ledF1:
+    number: 3-49
+    

@@ -1,0 +1,27 @@
+#config_version=5
+
+bcp:
+    connections:
+        local_display:
+            host: localhost
+            port: 5050
+            type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
+            required: True
+            exit_on_close: True
+
+    servers:
+        url_style:
+            ip: None
+            port: 5051
+            type: mpf.core.bcp.bcp_socket_client.BCPClientSocket
+
+    player_variables:
+      __all__
+
+    machine_variables:
+      __all__
+
+    shots:
+      __all__
+
+    debug: false

@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 hardware:
   platform: fast
@@ -6,16 +6,22 @@ hardware:
 
 fast:
   ports: /dev/ttyUSB1, /dev/ttyUSB2
+  net_buffer: 200
 
 config:
+  - logging.yaml
   - machine.yaml
+  - bcp.yaml
   - graphics.yaml
   - scriptlets.yaml
+  - playfields.yaml
+  - player_vars.yaml
   - modes.yaml
-  - leds.yaml
+  - lights.yaml
   - switches.yaml
   - coils.yaml
   - autofire_coils.yaml
   - flippers.yaml
   - ball_devices.yaml
+  - sequence_shots.yaml
 

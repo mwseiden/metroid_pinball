@@ -1,0 +1,27 @@
+#show_version=5
+
+- duration: 10s
+  slides:
+    full_shatz_samus_left:
+      widgets:
+      - type: image
+        image: samus_running
+        fps: 13
+
+- duration: 3s
+  slides:
+    multiball_text:
+      widgets:
+      - type: text
+        text: MULTIBALL!
+        style: dmd_big
+        color: red
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0
+              duration: .5s
+            - property: opacity
+              value: 1
+              duration: .5s
+              repeat: -1

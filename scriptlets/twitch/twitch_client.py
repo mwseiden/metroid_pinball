@@ -35,7 +35,19 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             user = e.source.split('!')[0]
             message = 'Chat: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
             self.log.info(message.replace(self.password, 'XXXXX'))
-            self.machine.events.post('twitch_new_chat_message', user=user, message=e.arguments[0])
+            tags = self.build_tag_dict(e.tags)
+            bits = tags.get('bits')
+            message_type = tags.get('msg-id')
+            if message_type == 'sub' or message_type == 'resub':
+                months = tags.get('msg-param-months', 1)
+                subscriber_message = tags.get('message', '')
+                self.machine.events.post('twitch_subscription', user=user, message=e.arguments[0], months=int(months), subscriber_message=subscriber_message)
+            elif bits is not None:
+                self.machine.events.post('twitch_bit_donation', user=user, message=e.arguments[0], bits=int(bits))
+            else:
+                self.machine.set_machine_var('twitch_last_chat_user', user)
+                self.machine.set_machine_var('twitch_last_chat_message', e.arguments[0])
+                self.machine.events.post('twitch_new_chat_message', user=user, message=e.arguments[0])
 
     def on_privmsg(self, c, e):
         user = e.source.split('!')[0]
@@ -51,3 +63,6 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
 
     def is_connected(self):
         return self.connection.is_connected()
+
+    def build_tag_dict(self, seq):
+        return dict((d['key'], d['value']) for (index, d) in enumerate(seq))

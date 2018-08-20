@@ -1,0 +1,8 @@
+#show_version=5
+
+- duration: 0.5s
+  slides:
+    base_pop_1:
+      widgets:
+      - type: image
+        image: rudy_pop_1

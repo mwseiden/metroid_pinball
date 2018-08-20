@@ -1,0 +1,18 @@
+#show_version=5
+
+- duration: 4s
+  slides:
+    mode_1b_gunship_lands:
+      widgets:
+      - type: image
+        image: gunship_landing
+        anchor_x: left
+        anchor_y: top
+        x: 0
+        y: 31
+        animations:
+          show_slide:
+            - property: y
+              value: 40
+              relative: true
+              duration: 2s

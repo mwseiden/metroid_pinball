@@ -1,0 +1,68 @@
+#config_version=5
+
+logging:
+    console:
+      asset_manager: none
+      ball_controller: none
+      ball_search: basic
+      bcp: basic
+      bcp_client: basic
+      bcp_interface: basic
+      bcp_server: basic
+      clock: none
+      config_players: none  # todo
+      data_manager: none  # todo subclasses
+      delay_manager: none
+      device_manager: none
+      event_manager: none
+      extra_balls: none
+      file_manager: none  # todo
+      light_controller: none
+      logic_blocks: none
+      machine_controller: basic
+      mode_controller: basic
+      placeholder_manager: none
+      platforms: none  # todo
+      platform_controller: none
+      players: basic  # todo
+      plugins: none  # todo
+      score_reel_controller: none
+      service_controller: basic
+      settings_controller: none
+      show_controller: none
+      switch_controller: basic
+      text_ui: none
+      timers: none
+
+    file:
+      asset_manager: basic
+      ball_controller: basic
+      ball_search: basic
+      bcp: basic
+      bcp_client: basic
+      bcp_interface: basic
+      bcp_server: basic
+      clock: none
+      config_players: basic
+      data_manager: basic
+      delay_manager: none
+      device_manager: basic
+      event_manager: basic
+      extra_balls: basic
+      file_manager: basic
+      light_controller: basic
+      logic_blocks: full
+      machine_controller: basic
+      mode_controller: basic
+      placeholder_manager: basic
+      platforms: basic
+      platform_controller: basic
+      players: full
+      plugins: basic
+      score_reel_controller: basic
+      service_controller: basic
+      settings_controller: basic
+      show_controller: full
+      switch_controller: basic
+      text_ui: none
+      timers: none

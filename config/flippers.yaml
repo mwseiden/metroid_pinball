@@ -1,15 +1,15 @@
-#config_version=4
+#config_version=5
 
 flippers:
   right_flipper:
     main_coil: c_flipper_right_main
     activation_switch: s_right_flipper
-    eos_switch: s_right_flipper_eos
+    #eos_switch: s_right_flipper_eos
   left_flipper:
     main_coil: c_flipper_left_main
     activation_switch: s_left_flipper
-    eos_switch: s_left_flipper_eos
+    #eos_switch: s_left_flipper_eos
   upper_right_flipper:
     main_coil: c_flipper_upper_right_main
-    activation_switch: s_right_flipper
-    eos_switch: s_upper_right_flipper_eos
+    activation_switch: s_upper_right_flipper
+    #eos_switch: s_upper_right_flipper_eos

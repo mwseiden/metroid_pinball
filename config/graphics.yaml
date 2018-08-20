@@ -1,4 +1,4 @@
-#config_version=4
+#config_version=5
 
 images:
   backglass_main:
@@ -12,6 +12,8 @@ displays:
   dmd:
     width: 128
     height: 32
+    round_anchor_x: left
+    round_anchor_y: bottom
     default: yes
 
 window:
@@ -25,12 +27,18 @@ window:
   
 slides:
   window_slide:
-    - type: color_dmd
+    - type: display
+      source_display: dmd
       width: 640
       height: 160
-      pixel_size: .75
       y: 120
       x: 370
+      effects:
+        - type: color_dmd
+          dots_x: 128
+          dots_y: 32
+          dot_size: .75
+          background_color: 000000ff
     - type: rectangle
       width: 648
       height: 168
@@ -59,6 +67,7 @@ slide_player:
     window_slide:
       target: window
     dmd_slide:
+      expire: 2s
       target: dmd
 
 kivy_config:
