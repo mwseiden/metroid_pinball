@@ -73,18 +73,18 @@ slide_player:
 kivy_config:
   kivy:
     desktop: 0
-    exit_on_escape: true
+    exit_on_escape: 1
     pause_on_minimize: 0
   graphics:
-    borderless: true
+    borderless: 0
     window_state: visible  # visible, hidden, maximized, minimized
     fbo: hardware  # hardware, software, force-hardware
-    fullscreen: auto
-    height: 720
+    fullscreen: 1
+    width: 720
     maxfps: 30
     multisamples: 2
     position: auto  # auto, custom
-    show_cursor: false
-    resizable: false
+    show_cursor: 0
+    resizable: 0
     rotation: 0
-    width: 1280
+    height: 1280
