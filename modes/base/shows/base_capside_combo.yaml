@@ -1,0 +1,19 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    base_capside_combo_slide:
+      widgets:
+      - type: text
+        text: wow
+        color: red
+        style: dmd_med
+        y: 15
+        x: 91
+      - type: image
+        image: samus_thumbs_up
+        x: 0
+        y: 31
+        anchor_x: left
+        anchor_y: top
+
