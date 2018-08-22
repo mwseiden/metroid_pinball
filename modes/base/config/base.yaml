@@ -146,6 +146,9 @@ show_player:
   mode_base_power_bomb_collected:
     base_power_bomb_collected:
       loops: 0
+  capside_combo_hit:
+    base_capside_combo:
+      loops: 0
 
 slide_player:
   mode_base_started:
@@ -276,6 +279,10 @@ variable_player:
   lower_right_bank_3_shot_hit:
     score:
       int: 500 + (500 * current_player.power_bombs)
+  capside_combo_hit:
+    capsides: 1
+    score:
+      int: 10000 + (1000 * current_player.capsides)
 
 images:
   rudy_pop_1:

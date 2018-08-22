@@ -10,3 +10,6 @@ sequence_shots:
   full_shatz:
     switch_sequence: s_left_inlane, s_shatz
     sequence_timeout: 2s
+  capside_combo:
+    switch_sequence: s_captive_ball, s_side_ramp_made
+    sequence_timeout: 3s
