@@ -36,11 +36,11 @@ class SweepHorizontal(DynamicBackBoxShow):
             if self.current_sweep < 0:
                 self.current_sweep = 5
                 self.repeat -= 1
-            elif self.current_sweep > 5
+            elif self.current_sweep > 5:
                 self.current_sweep = 0
                 self.repeat -= 1
 
-            self.done = self.repeat < 0:
+            self.done = self.repeat < 0
 
     def is_finished(self):
         return self.done
