@@ -32,11 +32,11 @@ class DynamicBackBoxShow:
             self.left_z_rear,
             self.left_x_middle,
             self.left_x_right,
+            self.right_x_left,
+            self.right_x_middle,
             self.right_z_front,
             self.right_z_middle,
-            self.right_z_rear,
-            self.right_x_middle,
-            self.right_x_left]
+            self.right_z_rear]
 
         self.strip_count = len(self.strips)
 
