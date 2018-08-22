@@ -31,7 +31,7 @@ class SweepHorizontal(DynamicBackBoxShow):
             self.strips[8].set_all_colors(self.color if self.current_sweep == 5 else self.OFF_COLOR)
             self.strips[9].set_all_colors(self.color if self.current_sweep == 5 else self.OFF_COLOR)
 
-            self.current_sweep += 1 if direction == 0 else -1
+            self.current_sweep += 1 if self.direction == 0 else -1
 
             if self.current_sweep < 0:
                 self.current_sweep = 5
