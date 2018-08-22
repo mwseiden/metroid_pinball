@@ -1,5 +1,6 @@
 from mpf.core.scriptlet import Scriptlet
 from .lights.backbox.rain import Rain
+from .lights.backbox.sweep_horizontal import SweepHorizontal
 
 class BackBoxLights(Scriptlet):
 
@@ -10,7 +11,7 @@ class BackBoxLights(Scriptlet):
         self._schedule_update()
 
     def set_effects_to_default(self):
-        self.base_effect = Rain(self.machine)
+        self.base_effect = self.show_rain()
         self.overlay_effect = None
 
     def set_base_effect(self, effect):
@@ -21,6 +22,14 @@ class BackBoxLights(Scriptlet):
             self.base_effect.save_state()
 
         self.overlay_effect = effect
+
+    # show factories ---------------------------------------------------------
+
+    def show_rain(self):
+        return Rain(self.machine)
+
+    def show_sweep_horizontal(self, color, speed, repeat, direction):
+        return SweepHorizontal(self.machine, color, speed, repeat, direction)
 
     # private ----------------------------------------------------------------
 

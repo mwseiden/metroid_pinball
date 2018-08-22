@@ -8,7 +8,8 @@ class Base(Mode):
         self.add_mode_event_handler('twitch_new_chat_message', self.chat_message)
 
     def chat_message(self, **kwargs):
-        self._backbox_scriptlet().set_overlay_effect(SweepHorizontal(self.machine, RGBColor([128, 64, 0]), 3, 3, 0))
+        backbox = self._backbox_scriptlet()
+        backbox.set_overlay_effect(backbox.show_sweep_horizontal(RGBColor([128, 64, 0]), 3, 3, 0))
 
     # private ----------------------------------------------------------------
 
