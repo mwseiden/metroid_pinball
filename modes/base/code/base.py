@@ -1,6 +1,5 @@
 from mpf.core.mode import Mode
 from mpf.core.rgb_color import RGBColor
-from ....scriptlets.lights.backbox.sweep_horizontal import SweepHorizontal
 
 class Base(Mode):
 
