@@ -2,7 +2,7 @@
 
 - duration: 2s
   slides:
-    base_missiles_collected_slide:
+    base_multiball_progress_slide:
       widgets:
       - type: text
         text: CHARGING!

@@ -2,7 +2,7 @@
 
 - duration: 10s
   slides:
-    full_shatz_samus_left:
+    base_multiball_started_samus_running_slide:
       widgets:
       - type: image
         image: samus_running
@@ -10,7 +10,7 @@
 
 - duration: 3s
   slides:
-    multiball_text:
+    base_multiball_text_slide:
       widgets:
       - type: text
         text: MULTIBALL!
