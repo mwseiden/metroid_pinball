@@ -22,7 +22,7 @@ class Strip:
     def save_state(self):
         self._state = [None] * self.size
         for index in range(0, self.size):
-            self._state[index] = _get_color(index)
+            self._state[index] = self._get_color(index)
 
     def restore_state(self):
         for index in range(0, self.size):
@@ -40,7 +40,7 @@ class Strip:
         self._get_led(index).color(color, None, 50000, 'bb')
 
     def _get_color(self, index):
-        return _get_led(index).get_color()
+        return self._get_led(index).get_color()
 
     def _get_light_key(self, index):
         return 'led{:02X}'.format(index)
