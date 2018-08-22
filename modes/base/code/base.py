@@ -8,7 +8,7 @@ class Base(Mode):
 
     def chat_message(self, **kwargs):
         backbox = self._backbox_scriptlet()
-        backbox.set_overlay_effect(backbox.show_sweep_horizontal(RGBColor([128, 64, 0]), 3, 3, 0))
+        backbox.set_overlay_effect(backbox.show_sweep_horizontal(RGBColor([128, 32, 0]), 3, 3, 0))
 
     # private ----------------------------------------------------------------
 

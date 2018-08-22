@@ -110,204 +110,303 @@ lights:
     #left backbox
   led80:
     number: 2-0
+    type: grb
   led81:
     number: 2-1
+    type: grb
   led82:
     number: 2-2
+    type: grb
   led83:
     number: 2-3
+    type: grb
   led84:
     number: 2-4
+    type: grb
   led85:
     number: 2-5
+    type: grb
   led86:
     number: 2-6
+    type: grb
   led87:
     number: 2-7
+    type: grb
   led88:
     number: 2-8
+    type: grb
   led89:
     number: 2-9
+    type: grb
   led8A:
     number: 2-10
+    type: grb
   led8B:
     number: 2-11
+    type: grb
   led8C:
     number: 2-12
+    type: grb
   led8D:
     number: 2-13
+    type: grb
   led8E:
     number: 2-14
+    type: grb
   led8F:
     number: 2-15
+    type: grb
   led90:
     number: 2-16
+    type: grb
   led91:
     number: 2-17
+    type: grb
   led92:
     number: 2-18
+    type: grb
   led93:
     number: 2-19
+    type: grb
   led94:
     number: 2-20
+    type: grb
   led95:
     number: 2-21
+    type: grb
   led96:
     number: 2-22
+    type: grb
   led97:
     number: 2-23
+    type: grb
   led98:
     number: 2-24
+    type: grb
   led99:
     number: 2-25
+    type: grb
   led9A:
     number: 2-26
+    type: grb
   led9B:
     number: 2-27
+    type: grb
   led9C:
     number: 2-28
+    type: grb
   led9D:
     number: 2-29
+    type: grb
   led9E:
     number: 2-30
+    type: grb
   led9F:
     number: 2-31
+    type: grb
   ledA0:
     number: 2-32
+    type: grb
   ledA1:
     number: 2-33
+    type: grb
   ledA2:
     number: 2-34
+    type: grb
   ledA3:
     number: 2-35
+    type: grb
   ledA4:
     number: 2-36
+    type: grb
   ledA5:
     number: 2-37
+    type: grb
   ledA6:
     number: 2-38
+    type: grb
   ledA7:
     number: 2-39
+    type: grb
   ledA8:
     number: 2-40
+    type: grb
   ledA9:
     number: 2-41
+    type: grb
   ledAA:
     number: 2-42
+    type: grb
   ledAB:
     number: 2-43
+    type: grb
   ledAC:
     number: 2-44
+    type: grb
   ledAD:
     number: 2-45
+    type: grb
   ledAE:
     number: 2-46
+    type: grb
   ledAF:
     number: 2-47
+    type: grb
   ledB0:
     number: 2-48
+    type: grb
   ledB1:
     number: 2-49
+    type: grb
 
 #right backbox
   ledC0:
     number: 3-0
+    type: grb
   ledC1:
     number: 3-1
+    type: grb
   ledC2:
     number: 3-2
+    type: grb
   ledC3:
     number: 3-3
+    type: grb
   ledC4:
     number: 3-4
+    type: grb
   ledC5:
     number: 3-5
+    type: grb
   ledC6:
     number: 3-6
+    type: grb
   ledC7:
     number: 3-7
+    type: grb
   ledC8:
     number: 3-8
+    type: grb
   ledC9:
     number: 3-9
+    type: grb
   ledCA:
     number: 3-10
+    type: grb
   ledCB:
     number: 3-11
+    type: grb
   ledCC:
     number: 3-12
+    type: grb
   ledCD:
     number: 3-13
+    type: grb
   ledCE:
     number: 3-14
+    type: grb
   ledCF:
     number: 3-15
+    type: grb
   ledD0:
     number: 3-16
+    type: grb
   ledD1:
     number: 3-17
+    type: grb
   ledD2:
     number: 3-18
+    type: grb
   ledD3:
     number: 3-19
+    type: grb
   ledD4:
     number: 3-20
+    type: grb
   ledD5:
     number: 3-21
+    type: grb
   ledD6:
     number: 3-22
+    type: grb
   ledD7:
     number: 3-23
+    type: grb
   ledD8:
     number: 3-24
+    type: grb
   ledD9:
     number: 3-25
+    type: grb
   ledDA:
     number: 3-26
+    type: grb
   ledDB:
     number: 3-27
+    type: grb
   ledDC:
     number: 3-28
+    type: grb
   ledDD:
     number: 3-29
+    type: grb
   ledDE:
     number: 3-30
+    type: grb
   ledDF:
     number: 3-31
+    type: grb
   ledE0:
     number: 3-32
+    type: grb
   ledE1:
     number: 3-33
+    type: grb
   ledE2:
     number: 3-34
+    type: grb
   ledE3:
     number: 3-35
+    type: grb
   ledE4:
     number: 3-36
+    type: grb
   ledE5:
     number: 3-37
+    type: grb
   ledE6:
     number: 3-38
+    type: grb
   ledE7:
     number: 3-39
+    type: grb
   ledE8:
     number: 3-40
+    type: grb
   ledE9:
     number: 3-41
+    type: grb
   ledEA:
     number: 3-42
+    type: grb
   ledEB:
     number: 3-43
+    type: grb
   ledEC:
     number: 3-44
+    type: grb
   ledED:
     number: 3-45
+    type: grb
   ledEE:
     number: 3-46
+    type: grb
   ledEF:
     number: 3-47
+    type: grb
   ledF0:
     number: 3-48
+    type: grb
   ledF1:
     number: 3-49
-    
+    type: grb
