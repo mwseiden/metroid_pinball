@@ -19,7 +19,7 @@ class Sweep(DynamicBackBoxShow):
         super().animate()
 
         if self.frame % self.speed == 0:
-            animate_sweep()
+            self.animate_sweep()
 
             self.current_sweep += 1 if self.direction == 0 else -1
 
