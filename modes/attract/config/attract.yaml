@@ -11,3 +11,6 @@ show_player:
     flipper_code_squeak:
       priority: 200
       loops: 0
+  twitch_new_chat_message:
+    who_said_that:
+      loops: 0
