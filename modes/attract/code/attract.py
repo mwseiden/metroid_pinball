@@ -1,4 +1,5 @@
 from mpf.modes.attract.code.attract import Attract
+from mpf.core.rgb_color import RGBColor
 import time
 
 class MyAttract(Attract):
