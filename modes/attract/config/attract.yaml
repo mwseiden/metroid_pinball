@@ -14,3 +14,4 @@ show_player:
   twitch_new_chat_message:
     who_said_that:
       loops: 0
+      priority: 200
