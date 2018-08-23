@@ -32,6 +32,7 @@ counters:
     count_complete_value: 0
     direction: down
     events_when_complete: base_captive_multiball_bashed
+    reset_events: game_start
     persist_state: true
     reset_on_complete: true
     disable_on_complete: false
