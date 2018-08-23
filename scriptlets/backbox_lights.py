@@ -1,6 +1,7 @@
 from mpf.core.scriptlet import Scriptlet
 from .lights.backbox.rain import Rain
 from .lights.backbox.sweep_horizontal import SweepHorizontal
+from .lights.backbox.sweep_vertical import SweepVertical
 
 class BackBoxLights(Scriptlet):
 
@@ -30,6 +31,9 @@ class BackBoxLights(Scriptlet):
 
     def show_sweep_horizontal(self, color, speed, repeat, direction):
         return SweepHorizontal(self.machine, color, speed, repeat, direction)
+
+    def show_sweep_vertical(self, color, speed, repeat, direction):
+        return SweepVertical(self.machine, color, speed, repeat, direction)
 
     # private ----------------------------------------------------------------
 

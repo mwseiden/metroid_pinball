@@ -16,16 +16,16 @@ class Strip:
         self._set_color(index, color)
 
     def set_all_colors(self, color):
-        for index in range(0, self.size):
+        for index in range(self.size):
             self._set_color(index, color)
 
     def save_state(self):
         self._state = [None] * self.size
-        for index in range(0, self.size):
+        for index in range(self.size):
             self._state[index] = self._get_color(index)
 
     def restore_state(self):
-        for index in range(0, self.size):
+        for index in range(self.size):
              self._set_color(index, self._state[index])
 
     # private ----------------------------------------------------------------
