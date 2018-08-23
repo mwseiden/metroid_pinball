@@ -30,9 +30,9 @@ switches:
   s_captive_ball:
     number: 0-9
     tags: playfield_active
-#    platform_settings:
-#      debounce_close: 10
-#      debounce_open: 10
+    platform_settings:
+      debounce_close: 8
+      debounce_open: 8
   s_upper_right_flipper:
     number: 0-10
   s_unknown_0_11:
