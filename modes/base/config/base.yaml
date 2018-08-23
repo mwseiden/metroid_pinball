@@ -284,6 +284,12 @@ variable_player:
     capsides: 1
     score:
       int: 10000 + (1000 * current_player.capsides)
+  base_captive_multiball_bashed:
+    captive_ball_counter_value:
+      int: 5
+      action: set
+  base_captive_ball_progress:
+    captive_ball_counter_value: -1
 
 images:
   rudy_pop_1:
