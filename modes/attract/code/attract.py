@@ -67,7 +67,7 @@ class MyAttract(Attract):
 
     def bit_donation(self, **kwargs):
         backbox = self._backbox_scriptlet()
-        backbox.set_overlay_effect(backbox.show_sweep_horizontal(RGBColor([128 64, 64]), 2, 9, 0))
+        backbox.set_overlay_effect(backbox.show_sweep_horizontal(RGBColor([128, 64, 64]), 2, 9, 0))
 
     # private ----------------------------------------------------------------
 
