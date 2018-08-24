@@ -43,7 +43,7 @@
       widgets:
       - type: text
         text: (machine|score1_label)
-        y: 31
+        y: 32
         style: dmd_big
         color: red
         anchor_y: top
@@ -170,20 +170,21 @@
       widgets:
       - type: text
         text: (machine|spinners1_label)
-        y: 26
+        y: 32
         style: dmd_big
         color: red
+        anchor_y: top
       - type: text
         text: (machine|spinners1_name)
-        y: 16
         style: dmd_big
         color: 009cff
       - type: text
         text: (machine|spinners1_value)
-        y: 6
+        y: 0
         style: dmd_big
         color: E67300
         number_grouping: true
+        anchor_y: bottom
 
 - duration: 2s
   slides:
@@ -191,20 +192,21 @@
       widgets:
       - type: text
         text: (machine|ramps1_label)
-        y: 26
+        y: 32
         style: dmd_big
         color: red
+        anchor_y: top
       - type: text
         text: (machine|ramps1_name)
-        y: 16
         style: dmd_big
         color: 009cff
       - type: text
         text: (machine|ramps1_value)
-        y: 6
+        y: 0
         style: dmd_big
         color: E67300
         number_grouping: true
+        anchor_y: bottom
 
 - duration: 2s
   slides:
@@ -212,20 +214,21 @@
       widgets:
       - type: text
         text: (machine|pops1_label)
-        y: 26
+        y: 32
         style: dmd_big
         color: red
+        anchor_y: top
       - type: text
         text: (machine|pops1_name)
-        y: 16
         style: dmd_big
         color: 009cff
       - type: text
         text: (machine|pops1_value)
-        y: 6
+        y: 0
         style: dmd_big
         color: E67300
         number_grouping: true
+        anchor_y: bottom
 
 - duration: 5s
   slides:

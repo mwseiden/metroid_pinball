@@ -7,6 +7,7 @@ show_player:
   mode_attract_started:
     attract_display_loop:
       priority: 100
+      manual_advance: false
   s_right_flipper_active:
     attract_display_loop:
       action: advance
@@ -31,6 +32,6 @@ show_player:
 animations:
   high_score_scroll_up:
     property: y
-    value: 132
+    value: 140
     relative: true
     duration: 8s
