@@ -10,9 +10,11 @@ show_player:
   s_right_flipper_active:
     attract_display_loop:
       action: advance
+      manual_advance: false
   s_left_flipper_active:
     attract_display_loop:
       action: step_back
+      manual_advance: false
   flipper_code_squeak:
     flipper_code_squeak:
       priority: 200
