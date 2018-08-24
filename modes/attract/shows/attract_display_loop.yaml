@@ -43,20 +43,21 @@
       widgets:
       - type: text
         text: (machine|score1_label)
-        y: 26
+        y: 31
         style: dmd_big
         color: red
+        anchor_y: top
       - type: text
         text: (machine|score1_name)
-        y: 16
         style: dmd_big
         color: 009cff
       - type: text
         text: (machine|score1_value)
-        y: 6
+        y: 0
         style: dmd_big
         color: E67300
         number_grouping: true
+        anchor_y: bottom
 
 - duration: 8s
   slides:
@@ -64,7 +65,7 @@
       widgets:
       - type: text
         text: (machine|score2_label)
-        y: 31
+        y: 0
         style: dmd_med
         color: red
         anchor_y: top
@@ -72,7 +73,7 @@
           show_slide: high_score_scroll_up
       - type: text
         text: (machine|score2_name)
-        y: 23
+        y: -8
         style: dmd_med
         color: 009cff
         anchor_y: top
@@ -80,7 +81,7 @@
           show_slide: high_score_scroll_up
       - type: text
         text: (machine|score2_value)
-        y: 15
+        y: -16
         style: dmd_med
         color: E67300
         number_grouping: true
@@ -89,7 +90,7 @@
           show_slide: high_score_scroll_up
       - type: text
         text: (machine|score3_label)
-        y: 3
+        y: -28
         style: dmd_med
         color: red
         anchor_y: top
@@ -97,7 +98,7 @@
           show_slide: high_score_scroll_up
       - type: text
         text: (machine|score3_name)
-        y: -5
+        y: -36
         style: dmd_med
         color: 009cff
         anchor_y: top
@@ -105,7 +106,7 @@
           show_slide: high_score_scroll_up
       - type: text
         text: (machine|score3_value)
-        y: -13
+        y: -44
         style: dmd_med
         color: E67300
         number_grouping: true
@@ -114,7 +115,7 @@
           show_slide: high_score_scroll_up
       - type: text
         text: (machine|score4_label)
-        y: -25
+        y: -56
         style: dmd_med
         color: red
         anchor_y: top
@@ -122,7 +123,7 @@
           show_slide: high_score_scroll_up
       - type: text
         text: (machine|score4_name)
-        y: -33
+        y: -64
         style: dmd_med
         color: 009cff
         anchor_y: top
@@ -130,7 +131,32 @@
           show_slide: high_score_scroll_up
       - type: text
         text: (machine|score4_value)
-        y: -41
+        y: -72
+        style: dmd_med
+        color: E67300
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score5_label)
+        y: -84
+        style: dmd_med
+        color: red
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score5_name)
+        y: -92
+        style: dmd_med
+        color: 009cff
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score5_value)
+        y: -100
         style: dmd_med
         color: E67300
         number_grouping: true

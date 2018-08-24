@@ -29,6 +29,6 @@ show_player:
 animations:
   high_score_scroll_up:
     property: y
-    value: 80
+    value: 132
     relative: true
     duration: 8s
