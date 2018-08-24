@@ -372,6 +372,27 @@
 
 - duration: 3s
   slides:
+    erin_slide:
+      widgets:
+      - type: image
+        image: dmd_monkey_drums
+        x: 0
+        y: 0
+        anchor_x: left
+        anchor_y: right
+      - type: image
+        image: dmd_pinball_monkey
+        x: 78
+      - type: image
+        image: dmd_purple_bubbles
+        x: 78
+      transition:
+         type: push
+         duration: 1s
+         direction: left
+
+- duration: 3s
+  slides:
     rubber_ducks_slide:
       widgets:
       - type: image

@@ -31,7 +31,12 @@ show_player:
 
 animations:
   high_score_scroll_up:
-    property: y
-    value: 140
-    relative: true
-    duration: 8s
+    - property: y
+      value: 140
+      relative: true
+      duration: 8s
+    - property: y
+      value: -140
+      relative: true
+      duration: 0s
+      repeat: true
