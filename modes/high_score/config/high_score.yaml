@@ -1,3 +1,5 @@
+#config_version=5
+
 mode:
   priority: 500
   start_events: game_ending, start_high_score

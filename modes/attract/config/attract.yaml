@@ -7,10 +7,10 @@ show_player:
   mode_attract_started:
     attract_display_loop:
       priority: 100
-  switch_s_right_flipper_active:
+  s_right_flipper_active:
     attract_display_loop:
       action: advance
-  switch_s_left_flipper_active:
+  s_left_flipper_active:
     attract_display_loop:
       action: step_back
   flipper_code_squeak:

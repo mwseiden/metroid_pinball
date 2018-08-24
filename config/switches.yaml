@@ -3,8 +3,10 @@
 switches:
   s_right_flipper:
     number: 0-0
+    tags: right_flipper
   s_left_flipper:
     number: 0-1
+    tags: left_flipper
   s_start:
     number: 0-2
     tags: start
