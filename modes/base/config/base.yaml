@@ -151,6 +151,9 @@ show_player:
   capside_combo_hit:
     base_capside_combo:
       loops: 0
+  base_bits_100:
+    bits_100:
+      loops: 0
 
 slide_player:
   mode_base_started:

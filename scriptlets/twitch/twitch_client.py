@@ -43,6 +43,8 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
                 subscriber_message = tags.get('message', '')
                 self.machine.events.post('twitch_subscription', user=user, message=e.arguments[0], months=int(months), subscriber_message=subscriber_message)
             elif bits is not None:
+                self.machine.set_machine_var('twitch_last_bits_user', user)
+                self.machine.set_machine_var('twitch_last_bits_amount', bits)
                 self.machine.events.post('twitch_bit_donation', user=user, message=e.arguments[0], bits=int(bits))
             else:
                 self.machine.set_machine_var('twitch_last_chat_user', user)

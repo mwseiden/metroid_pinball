@@ -7,6 +7,12 @@ show_player:
   mode_attract_started:
     attract_display_loop:
       priority: 100
+  switch_s_right_flipper_active:
+    attract_display_loop:
+      action: advance
+  switch_s_left_flipper_active:
+    attract_display_loop:
+      action: step_back
   flipper_code_squeak:
     flipper_code_squeak:
       priority: 200
@@ -15,3 +21,14 @@ show_player:
     who_said_that:
       loops: 0
       priority: 200
+  twitch_bit_donation:
+    bits_100:
+      loops: 0
+      priority: 300
+
+animations:
+  high_score_scroll_up:
+    property: y
+    value: 80
+    relative: true
+    duration: 8s

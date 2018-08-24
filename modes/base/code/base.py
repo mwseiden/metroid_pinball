@@ -12,8 +12,17 @@ class Base(Mode):
         backbox.set_overlay_effect(backbox.show_sweep_horizontal(RGBColor([128, 32, 0]), 1, 3, 0))
 
     def bit_donation(self, **kwargs):
+        bits = kwargs.get('bits', 0)
         backbox = self._backbox_scriptlet()
-        backbox.set_overlay_effect(backbox.show_sweep_horizontal(RGBColor([160, 0, 0]), 2, 9, 0))
+        if bits < 100:
+            backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([0, 0, 160]), 1, 4, 0))
+            self.machine.events.post('base_bits_100')
+        elif bits < 500:
+            backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([80, 0, 160]), 1, 9, 0))
+            self.machine.events.post('base_bits_500')
+        else:
+            backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([160, 0, 0]), 1, 20, 0))
+            self.machine.events.post('base_bits_1000')
 
     # private ----------------------------------------------------------------
 

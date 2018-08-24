@@ -11,6 +11,7 @@
         style: dmd_med
         anchor_x: left
         anchor_y: top
+        number_grouping: true
       - type: text
         text: (machine|player2_score)
         y: 31
@@ -18,6 +19,7 @@
         anchor_x: right
         anchor_y: top
         style: dmd_med
+        number_grouping: true
       - type: text
         text: (machine|player3_score)
         y: 0
@@ -25,6 +27,7 @@
         style: dmd_med
         anchor_x: left
         anchor_y: bottom
+        number_grouping: true
       - type: text
         text: (machine|player4_score)
         y: 0
@@ -32,6 +35,171 @@
         anchor_x: right
         anchor_y: bottom
         style: dmd_med
+        number_grouping: true
+
+- duration: 4s
+  slides:
+    grand_champ_score:
+      widgets:
+      - type: text
+        text: (machine|score1_label)
+        y: 26
+        style: dmd_big
+        color: red
+      - type: text
+        text: (machine|score1_name)
+        y: 16
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|score1_value)
+        y: 6
+        style: dmd_big
+        color: E67300
+        number_grouping: true
+
+- duration: 8s
+  slides:
+    attract_high_scores:
+      widgets:
+      - type: text
+        text: (machine|score2_label)
+        y: 31
+        style: dmd_med
+        color: red
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score2_name)
+        y: 23
+        style: dmd_med
+        color: 009cff
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score2_value)
+        y: 15
+        style: dmd_med
+        color: E67300
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score3_label)
+        y: 3
+        style: dmd_med
+        color: red
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score3_name)
+        y: -5
+        style: dmd_med
+        color: 009cff
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score3_value)
+        y: -13
+        style: dmd_med
+        color: E67300
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score4_label)
+        y: -25
+        style: dmd_med
+        color: red
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score4_name)
+        y: -33
+        style: dmd_med
+        color: 009cff
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score4_value)
+        y: -41
+        style: dmd_med
+        color: E67300
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+
+- duration: 2s
+  slides:
+    spin_champ_score:
+      widgets:
+      - type: text
+        text: (machine|spinners1_label)
+        y: 26
+        style: dmd_big
+        color: red
+      - type: text
+        text: (machine|spinners1_name)
+        y: 16
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|spinners1_value)
+        y: 6
+        style: dmd_big
+        color: E67300
+        number_grouping: true
+
+- duration: 2s
+  slides:
+    ramp_champ_score:
+      widgets:
+      - type: text
+        text: (machine|ramps1_label)
+        y: 26
+        style: dmd_big
+        color: red
+      - type: text
+        text: (machine|ramps1_name)
+        y: 16
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|ramps1_value)
+        y: 6
+        style: dmd_big
+        color: E67300
+        number_grouping: true
+
+- duration: 2s
+  slides:
+    pop_champ_score:
+      widgets:
+      - type: text
+        text: (machine|pops1_label)
+        y: 26
+        style: dmd_big
+        color: red
+      - type: text
+        text: (machine|pops1_name)
+        y: 16
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|pops1_value)
+        y: 6
+        style: dmd_big
+        color: E67300
+        number_grouping: true
 
 - duration: 5s
   slides:
