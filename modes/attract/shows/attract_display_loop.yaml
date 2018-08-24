@@ -370,7 +370,7 @@
          duration: 1s
          direction: top
 
-- duration: 3s
+- duration: 5s
   slides:
     erin_slide:
       widgets:
@@ -383,7 +383,7 @@
         fps: 25
       - type: image
         image: dmd_pinball_monkey
-        x: 78
+        x: 76
       - type: image
         image: dmd_purple_bubbles
         fps: 25
