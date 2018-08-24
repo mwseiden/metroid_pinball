@@ -377,14 +377,16 @@
       - type: image
         image: dmd_monkey_drums
         x: 0
-        y: 0
+        y: 31
         anchor_x: left
-        anchor_y: right
+        anchor_y: top
+        fps: 25
       - type: image
         image: dmd_pinball_monkey
         x: 78
       - type: image
         image: dmd_purple_bubbles
+        fps: 25
         x: 78
       transition:
          type: push

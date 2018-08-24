@@ -5,9 +5,9 @@
     base_capside_combo_slide:
       widgets:
       - type: text
-        text: wow
+        text: WOW!
         color: red
-        style: dmd_med
+        style: dmd_big
         y: 15
         x: 91
       - type: image
@@ -16,4 +16,5 @@
         y: 31
         anchor_x: left
         anchor_y: top
+        fps: 33
 
