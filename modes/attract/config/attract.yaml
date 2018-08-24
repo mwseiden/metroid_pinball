@@ -16,6 +16,10 @@ show_player:
     attract_display_loop:
       action: step_back
       manual_advance: false
+  flipper_cancel:
+    attract_display_loop:
+      priority: 100
+      manual_advance: false
   flipper_code_squeak:
     flipper_code_squeak:
       priority: 200
