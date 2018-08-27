@@ -15,10 +15,10 @@ class Base(Mode):
         bits = kwargs.get('bits', 0)
         backbox = self._backbox_scriptlet()
         if bits < 100:
-            backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([0, 0, 160]), 1, 4, 0))
+            backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([160, 0, 0]), 1, 4, 0))
             self.machine.events.post('base_bits_100')
         elif bits < 500:
-            backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([80, 0, 160]), 1, 9, 0))
+            backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([160, 0, 0]), 1, 9, 0))
             self.machine.events.post('base_bits_500')
         else:
             backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([160, 0, 0]), 1, 20, 0))

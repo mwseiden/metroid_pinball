@@ -13,3 +13,4 @@ ball_devices:
         ball_switches: s_shooter_lane
         eject_coil: c_ball_launch
         mechanical_eject: true
+        eject_timeouts: 3s

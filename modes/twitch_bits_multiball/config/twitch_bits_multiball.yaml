@@ -1,0 +1,58 @@
+#config_version=5
+mode:
+    start_events: base_bits_500, base_bits_1000
+    stop_events: multiball_twitch_bit_donation_multiball_ended
+    priority: 400
+
+multiballs:
+  twitch_bit_donation_multiball:
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 30s
+    start_or_add_a_ball_events: mode_twitch_bits_multiball_started, base_bits_500, base_bits_1000
+
+shot_groups:
+  twitch_bit_whole_playfield:
+    shots:
+      - scoop_shot
+      - ramp_shot
+      - side_ramp_shot
+      - secret_passage_shot
+      - upper_right_sling_shot
+      - upper_left_sling_shot
+      - left_sling_shot
+      - right_sling_shot
+      - pop_1_shot
+      - pop_2_shot
+      - pop_3_shot
+      - left_outlane_shot
+      - right_outlane_shot
+      - left_inlane_shot
+      - right_inlane_shot
+      - spinner_shot
+      - big_red_shot
+      - rollover_shot
+      - shatz_shot
+      - purple_1_shot
+      - purple_2_shot
+      - purple_3_shot
+      - captive_shot
+      - side_1_shot
+      - side_2_shot
+      - lower_right_bank_1_shot
+      - lower_right_bank_2_shot
+      - lower_right_bank_3_shot
+    enable_events: multiball_twitch_bit_donation_multiball_started
+    disable_events: multiball_twitch_bit_donation_multiball_ended
+
+show_player:
+  multiball_twitch_bit_donation_multiball_started:
+    twitch_bit_donation_start_up:
+      loops: 0
+  twitch_bit_whole_playfield_hit:
+    twitch_bit_donation_hit:
+      loops: 0
+
+variable_player:
+  twitch_bit_whole_playfield_hit:
+    score: 500
