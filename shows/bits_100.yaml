@@ -8,12 +8,12 @@
         text: (machine|twitch_last_bits_user)
         color: red
         style: dmd_big
-        y: 17
+        y: 20
       - type: text
         text: (machine|twitch_last_bits_amount) BITS!
         color: red
         style: dmd_big
-        y: 10
+        y: 7
         animations:
           pre_show_slide:
             - property: opacity
