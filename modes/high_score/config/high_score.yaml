@@ -26,6 +26,8 @@ high_score:
       - RAMP CHAMP
   - pops:
       - POP CHAMP
+  - slingshots:
+      - SLING CHAMP
 
   # set the defaults
   defaults:
@@ -41,4 +43,7 @@ high_score:
       - MB: 5
     pops:
       - RDY: 15
+    slingshots:
+      - WHT: 20
+
 
