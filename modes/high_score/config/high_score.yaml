@@ -38,7 +38,7 @@ high_score:
     spinners:
       - SA: 40
     ramps:
-      - MB: 10
+      - MB: 5
     pops:
-      - RDY: 25
+      - RDY: 15
 
