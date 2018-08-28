@@ -14,7 +14,7 @@ class Base(Mode):
     def bit_donation(self, **kwargs):
         bits = kwargs.get('bits', 0)
         backbox = self._backbox_scriptlet()
-        if bits < 3:
+        if bits < 100:
             backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([160, 0, 0]), 1, 4, 0))
             self.machine.events.post('base_bits_100')
         elif bits < 500:
