@@ -294,6 +294,10 @@ variable_player:
       action: set
   base_captive_ball_progress:
     captive_ball_counter_value: -1
+  scoop_shot_hit:
+    scoops: 1
+    score:
+      int: 1000 + (500 * current_player.scoops)
 
 images:
   rudy_pop_1:
