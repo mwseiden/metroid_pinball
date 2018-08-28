@@ -265,6 +265,8 @@ variable_player:
       int: 100 + (100 * current_player.missiles)
   mode_base_missile_collected:
     missiles: 1
+    score:
+      int: 500 + (200 * current_player.missiles)
   captive_shot_hit:
     captives: 1
     score:
@@ -275,6 +277,8 @@ variable_player:
     score: 25000
   mode_base_power_bomb_collected:
     power_bombs: 1
+    score:
+      int: 2000 + (1000 * current_player.power_bombs)
   lower_right_bank_1_shot_hit:
     score:
       int: 500 + (500 * current_player.power_bombs)
@@ -287,7 +291,7 @@ variable_player:
   capside_combo_hit:
     capsides: 1
     score:
-      int: 10000 + (1000 * current_player.capsides)
+      int: 10000 + (2000 * current_player.capsides)
   base_captive_multiball_bashed:
     captive_ball_counter_value:
       int: 5
