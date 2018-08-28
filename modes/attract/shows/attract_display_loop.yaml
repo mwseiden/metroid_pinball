@@ -230,6 +230,28 @@
         number_grouping: true
         anchor_y: bottom
 
+- duration: 2s
+  slides:
+    sling_champ_score:
+      widgets:
+      - type: text
+        text: (machine|slingshots1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|slingshots1_name)
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|slingshots1_value)
+        y: 0
+        style: dmd_big
+        color: E67300
+        number_grouping: true
+        anchor_y: bottom
+
 - duration: 5s
   slides:
     press_start:
