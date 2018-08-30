@@ -28,6 +28,10 @@ high_score:
       - POP CHAMP
   - slingshots:
       - SLING CHAMP
+  - orbits:
+      - ORBIT CHAMP
+  - lanes:
+      - INSANE LANES
 
   # set the defaults
   defaults:
@@ -45,5 +49,10 @@ high_score:
       - RDY: 15
     slingshots:
       - WHT: 20
+    orbits:
+      - BLZ: 5
+    lanes:
+      - GRN: 10
+
 
 
