@@ -72,6 +72,24 @@ variable_player:
   mode_1b_achieved:
     score: 75000
 
+slides:
+  mode_1b_backglass_slide:
+    widgets:
+      - type: image
+        image: gunship_flying
+        y: 800
+      - type: image
+        image: mode_1b_backglass_rain
+    transition:
+      type: fade
+      duration: 2s
+
+slide_player:
+  mode_mode_1b_gunship_started:
+    mode_1b_backglass_slide:
+      target: backglass
+
+
 images:
   gunship_landing:
     load: preload
