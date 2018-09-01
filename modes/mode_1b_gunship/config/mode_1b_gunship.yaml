@@ -75,21 +75,21 @@ variable_player:
 animations:
   mode_1b_backglass_scroll_up_slow:
     - property: y
-      value: -1280
-      relative: true
-      duration: 4s
-    - property: y
       value: 1280
+      relative: true
+      duration: 1s
+    - property: y
+      value: -1280
       relative: true
       duration: 0s
       repeat: true
   mode_1b_backglass_scroll_up_fast:
     - property: y
-      value: -1280
-      relative: true
-      duration: 2s
-    - property: y
       value: 1280
+      relative: true
+      duration: 0.5s
+    - property: y
+      value: -1280
       relative: true
       duration: 0s
       repeat: true
@@ -99,13 +99,13 @@ slides:
     widgets:
       - type: image
         image: mode_1b_backglass_rain
-        opacity: 0.25
+        opacity: 0.5
         y: -1
         animations:
           show_slide: mode_1b_backglass_scroll_up_fast
       - type: image
         image: mode_1b_backglass_rain
-        opacity: 0.25
+        opacity: 0.5
         y: 1279
         animations:
           show_slide: mode_1b_backglass_scroll_up_fast
