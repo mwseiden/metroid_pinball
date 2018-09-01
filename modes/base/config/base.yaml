@@ -114,6 +114,12 @@ slide_player:
         anchor_x: right
         anchor_y: bottom
         style: dmd_med
+  player_added:
+    expire: 2s
+    widgets:
+      - type: text
+        text: PLAYER (num) ADDED
+        style: dmd_med
 
 variable_player:
   left_orbit_hit:
