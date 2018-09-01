@@ -2,7 +2,7 @@
 
 - duration: 2s
   slides:
-    base_missiles_collected_slide:
+    base_multiball_progress_slide:
       widgets:
       - type: text
         text: CHARGING!
@@ -11,7 +11,7 @@
         y: 20
         x: 80
       - type: text
-        text: (player|captive_ball_counter_state) More For Multiball
+        text: (player|captive_ball_counter_value) More For Multiball
         color: red
         style: dmd_med
         y: 10

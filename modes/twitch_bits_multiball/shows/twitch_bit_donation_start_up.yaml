@@ -1,0 +1,33 @@
+#show_version=5
+
+- duration: 3s
+  slides:
+    twitch_bit_start_up_slide:
+      widgets:
+      - type: image
+        image: twitch_bits_baby_metroid
+        fps: 17
+
+- duration: 6s
+  slides:
+    twitch_bit_amount_slide:
+      widgets:
+      - type: text
+        text: (machine|twitch_last_bits_user)
+        color: red
+        style: dmd_big
+        y: 20
+      - type: text
+        text: (machine|twitch_last_bits_amount) BITS!
+        color: red
+        style: dmd_big
+        y: 7
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: .5
+              duration: .2s
+            - property: opacity
+              value: 1
+              duration: .2s
+              repeat: -1

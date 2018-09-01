@@ -11,6 +11,7 @@
         style: dmd_med
         anchor_x: left
         anchor_y: top
+        number_grouping: true
       - type: text
         text: (machine|player2_score)
         y: 31
@@ -18,6 +19,7 @@
         anchor_x: right
         anchor_y: top
         style: dmd_med
+        number_grouping: true
       - type: text
         text: (machine|player3_score)
         y: 0
@@ -25,6 +27,7 @@
         style: dmd_med
         anchor_x: left
         anchor_y: bottom
+        number_grouping: true
       - type: text
         text: (machine|player4_score)
         y: 0
@@ -32,6 +35,266 @@
         anchor_x: right
         anchor_y: bottom
         style: dmd_med
+        number_grouping: true
+
+- duration: 4s
+  slides:
+    grand_champ_score:
+      widgets:
+      - type: text
+        text: (machine|score1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|score1_name)
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|score1_value)
+        y: 0
+        style: dmd_big
+        color: E67300
+        number_grouping: true
+        anchor_y: bottom
+
+- duration: 8s
+  slides:
+    attract_high_scores:
+      widgets:
+      - type: text
+        text: (machine|score2_label)
+        y: 0
+        style: dmd_med
+        color: red
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score2_name)
+        y: -8
+        style: dmd_med
+        color: 009cff
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score2_value)
+        y: -16
+        style: dmd_med
+        color: E67300
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score3_label)
+        y: -28
+        style: dmd_med
+        color: red
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score3_name)
+        y: -36
+        style: dmd_med
+        color: 009cff
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score3_value)
+        y: -44
+        style: dmd_med
+        color: E67300
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score4_label)
+        y: -56
+        style: dmd_med
+        color: red
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score4_name)
+        y: -64
+        style: dmd_med
+        color: 009cff
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score4_value)
+        y: -72
+        style: dmd_med
+        color: E67300
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score5_label)
+        y: -84
+        style: dmd_med
+        color: red
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score5_name)
+        y: -92
+        style: dmd_med
+        color: 009cff
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+      - type: text
+        text: (machine|score5_value)
+        y: -100
+        style: dmd_med
+        color: E67300
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: high_score_scroll_up
+
+- duration: 2s
+  slides:
+    spin_champ_score:
+      widgets:
+      - type: text
+        text: (machine|spinners1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|spinners1_name)
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|spinners1_value)
+        y: 0
+        style: dmd_big
+        color: E67300
+        number_grouping: true
+        anchor_y: bottom
+
+- duration: 2s
+  slides:
+    ramp_champ_score:
+      widgets:
+      - type: text
+        text: (machine|ramps1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|ramps1_name)
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|ramps1_value)
+        y: 0
+        style: dmd_big
+        color: E67300
+        number_grouping: true
+        anchor_y: bottom
+
+- duration: 2s
+  slides:
+    pop_champ_score:
+      widgets:
+      - type: text
+        text: (machine|pops1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|pops1_name)
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|pops1_value)
+        y: 0
+        style: dmd_big
+        color: E67300
+        number_grouping: true
+        anchor_y: bottom
+
+- duration: 2s
+  slides:
+    sling_champ_score:
+      widgets:
+      - type: text
+        text: (machine|slingshots1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|slingshots1_name)
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|slingshots1_value)
+        y: 0
+        style: dmd_big
+        color: E67300
+        number_grouping: true
+        anchor_y: bottom
+
+- duration: 2s
+  slides:
+    orbit_champ_score:
+      widgets:
+      - type: text
+        text: (machine|orbits1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|orbits1_name)
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|orbits1_value)
+        y: 0
+        style: dmd_big
+        color: E67300
+        number_grouping: true
+        anchor_y: bottom
+
+- duration: 2s
+  slides:
+    lane_champ_score:
+      widgets:
+      - type: text
+        text: (machine|lanes1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|lanes1_name)
+        style: dmd_big
+        color: 009cff
+      - type: text
+        text: (machine|lanes1_value)
+        y: 0
+        style: dmd_big
+        color: E67300
+        number_grouping: true
+        anchor_y: bottom
 
 - duration: 5s
   slides:
@@ -172,6 +435,29 @@
          type: move_in
          duration: 1s
          direction: top
+
+- duration: 5s
+  slides:
+    erin_slide:
+      widgets:
+      - type: image
+        image: dmd_monkey_drums
+        x: 0
+        y: 31
+        anchor_x: left
+        anchor_y: top
+        fps: 25
+      - type: image
+        image: dmd_pinball_monkey
+        x: 76
+      - type: image
+        image: dmd_purple_bubbles
+        fps: 25
+        x: 78
+      transition:
+         type: push
+         duration: 1s
+         direction: left
 
 - duration: 3s
   slides:

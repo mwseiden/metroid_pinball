@@ -1,0 +1,58 @@
+#config_version=5
+
+mode:
+  code: mpf.modes.high_score.code.high_score.HighScore
+  priority: 500
+  start_events: game_ending, start_high_score
+  game_mode: False
+  use_wait_queue: true
+
+high_score:
+  _overwrite: True
+  enter_initials_timeout: 60
+  award_slide_display_time: 4s
+
+  # define your high score categories and the awards
+  categories: !!omap
+  - score:
+      - GRAND CHAMPION
+      - HIGH SCORE 1
+      - HIGH SCORE 2
+      - HIGH SCORE 3
+      - HIGH SCORE 4
+  - spinners:
+      - SPIN JUMP CHAMP
+  - ramps:
+      - RAMP CHAMP
+  - pops:
+      - POP CHAMP
+  - slingshots:
+      - SLING CHAMP
+  - orbits:
+      - ORBIT CHAMP
+  - lanes:
+      - INSANE LANES
+
+  # set the defaults
+  defaults:
+    score:
+      - ARR: 500000
+      - MWS: 400000
+      - EAS: 300000
+      - KRD: 200000
+      - RID: 100000
+    spinners:
+      - SA: 40
+    ramps:
+      - MB: 5
+    pops:
+      - RDY: 15
+    slingshots:
+      - WHT: 20
+    orbits:
+      - BLZ: 5
+    lanes:
+      - GRN: 10
+
+
+

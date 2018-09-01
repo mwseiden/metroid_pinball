@@ -3,8 +3,10 @@
 switches:
   s_right_flipper:
     number: 0-0
+    tags: right_flipper
   s_left_flipper:
     number: 0-1
+    tags: left_flipper
   s_start:
     number: 0-2
     tags: start
@@ -30,9 +32,9 @@ switches:
   s_captive_ball:
     number: 0-9
     tags: playfield_active
-#    platform_settings:
-#      debounce_close: 10
-#      debounce_open: 10
+    platform_settings:
+      debounce_close: 8
+      debounce_open: 8
   s_upper_right_flipper:
     number: 0-10
   s_unknown_0_11:
@@ -197,42 +199,56 @@ switches:
     type: NC
   s_vuk:
     number: 2-0
+    tags: playfield_active
     platform_settings:
       debounce_close: 10
       debounce_open: 10
   s_pop_sling:
     number: 2-1
+    tags: playfield_active
     platform_settings:
       debounce_close: 10
       debounce_open: 10
   s_big_red:
     number: 2-2
+    tags: playfield_active
   s_purple_1:
     number: 2-3
+    tags: playfield_active
   s_purple_2:
     number: 2-4
+    tags: playfield_active
   s_purple_3:
     number: 2-5
+    tags: playfield_active
   s_orbit_r:
     number: 2-6
+    tags: playfield_active
   s_orbit_l:
     number: 2-7
+    tags: playfield_active
   s_ramp_enter:
     number: 2-8
+    tags: playfield_active
   s_left_passage:
     number: 2-9
+    tags: playfield_active
   s_behind_drop_1:
     number: 2-10
     type: NC
+    tags: playfield_active
   s_behind_drop_2:
     number: 2-11
     type: NC
+    tags: playfield_active
   s_behind_drop_3:
     number: 2-12
     type: NC
+    tags: playfield_active
   s_side_ramp_made:
     number: 2-13
     type: NC
+    tags: playfield_active
   s_tilt:
     number: 2-14
     platform_settings:
@@ -240,9 +256,6 @@ switches:
       debounce_open: 10
   s_spinner:
     number: 2-15
-#    platform_settings:
-#      debounce_close: 20
-#      debounce_open: 20
     tags: playfield_active
   s_left_target_1:
     number: 2-16

@@ -21,14 +21,14 @@ class Rain(DynamicBackBoxShow):
         self.positions = [0] * self.strip_count
 
         # one drop per strip
-        for strip_number in range(0, self.strip_count):
+        for strip_number in range(self.strip_count):
             self._new_drop(strip_number)
             self.strips[strip_number].set_all_colors(self.SKY_COLOR)
 
     def animate(self):
         super().animate()
 
-        for strip_number in range(0, self.strip_count):
+        for strip_number in range(self.strip_count):
             if self.frame % self.velocities[strip_number] == 0:
                 self.strips[strip_number].set_color(self.positions[strip_number], self.SKY_COLOR)
                 self.strips[strip_number].set_color(self.positions[strip_number] + 1, self.DROP_COLOR)

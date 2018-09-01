@@ -19,3 +19,9 @@ player_vars:
     initial_value: 0
   multiballs:
     initial_value: 0
+  capsides:
+    initial_value: 0
+  captive_ball_counter_value:
+    initial_value: 5
+  scoops:
+    initial_value: 0

@@ -1,0 +1,17 @@
+#show_version=5
+
+- duration: 3s
+  slides:
+    twitch_bit_start_up_slide:
+      widgets:
+      - type: text
+        text: 500
+        color: white
+        style: dmd_small
+        y: 31
+        x: 0
+        anchor_x: left
+        anchor_y: top
+      - type: image
+        image: twitch_bits_super_metroid_title
+        fps: 20
