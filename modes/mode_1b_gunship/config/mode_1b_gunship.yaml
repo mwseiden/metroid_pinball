@@ -113,7 +113,7 @@ slides:
           show_slide: mode_1b_backglass_scroll_up_fast
       - type: image
         image: gunship_flying
-        y: 600
+        y: 700
         width: 530
         height: 190
       - type: image
