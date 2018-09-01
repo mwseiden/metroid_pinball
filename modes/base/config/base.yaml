@@ -81,9 +81,6 @@ show_player:
   shatz_shot_hit:
     base_white_target:
       loops: 0
-  spinner_shot_hit:
-    base_spinner_spins:
-      loops: 0
   capside_combo_hit:
     base_capside_combo:
       loops: 0
@@ -169,10 +166,6 @@ variable_player:
     lanes: 1
     score:
       int: 100 + (10 * current_player.lanes)
-  spinner_shot_hit:
-    spinners: 1
-    score:
-      int: 50 + (10 * current_player.spinners)
   big_red_shot_hit:
     score: 5000
   rollover_shot_hit:

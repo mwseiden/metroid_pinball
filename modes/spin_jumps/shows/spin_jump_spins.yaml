@@ -2,7 +2,7 @@
 
 - duration: 2s
   slides:
-    base_spinner_progress_slide:
+    spin_jump_progress_slide:
       widgets:
       - type: text
         text: Spin Jumps

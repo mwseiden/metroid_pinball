@@ -1,0 +1,15 @@
+#config_version=5
+mode:
+    start_events: mode_base_starting
+    priority: 100
+
+show_player:
+  spinner_shot_hit:
+    spin_jump_spins:
+      loops: 0
+
+variable_player:
+  spinner_shot_hit:
+    spinners: 1
+    score:
+      int: 50 + (10 * current_player.spinners)
