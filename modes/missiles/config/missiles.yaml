@@ -1,0 +1,35 @@
+#config_version=5
+mode:
+    start_events: mode_base_starting
+    priority: 100
+
+accruals:
+  missiles_complete:
+    events:
+      - purple_1_shot_hit
+      - purple_2_shot_hit
+      - purple_3_shot_hit
+    events_when_complete: missile_collected
+    persist_state: true
+    reset_on_complete: true
+    disable_on_complete: false
+
+show_player:
+  missile_collected:
+    missiles_collected:
+      loops: 0
+
+variable_player:
+  purple_1_shot:
+    score:
+      int: 100 + (100 * current_player.missiles)
+  purple_2_shot:
+    score:
+      int: 100 + (100 * current_player.missiles)
+  purple_3_shot:
+    score:
+      int: 100 + (100 * current_player.missiles)
+  missile_collected:
+    missiles: 1
+    score:
+      int: 500 + (200 * current_player.missiles)

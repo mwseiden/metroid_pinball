@@ -2,7 +2,13 @@
 
 modes:
   - base
+  - chozo_multiball
   - high_score
+  - lanes
+  - missiles
   - mode_1b_gunship
+  - pop_bumpers
+  - power_bombs
+  - spin_jumps
   - twitch_bits_multiball
 

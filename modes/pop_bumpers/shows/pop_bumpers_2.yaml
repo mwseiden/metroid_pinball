@@ -2,7 +2,7 @@
 
 - duration: 0.5s
   slides:
-    base_pop_3:
+    pop_bumper_2_slide:
       widgets:
       - type: image
-        image: rudy_pop_3
+        image: rudy_pop_2

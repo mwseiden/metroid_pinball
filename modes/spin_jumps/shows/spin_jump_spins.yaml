@@ -2,22 +2,22 @@
 
 - duration: 2s
   slides:
-    base_power_bomb_collected_slide:
+    spin_jump_progress_slide:
       widgets:
       - type: text
-        text: Power Bomb Collected!
-        color: red
+        text: Spin Jumps
+        color: yellow
         style: dmd_med
         y: 20
-        x: 80
+        x: 81
       - type: text
-        text: (player|power_bombs)
+        text: (player|spinners)
         color: red
         style: dmd_big
         y: 10
-        x: 80
+        x: 81
       - type: image
-        image: samus_run_right
+        image: samus_spin_jump
         x: 0
         y: 31
         anchor_x: left

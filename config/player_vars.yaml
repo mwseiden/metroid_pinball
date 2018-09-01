@@ -1,27 +1,27 @@
 #config_version=5
 
 player_vars:
-  ramps:
+  capsides:
+    initial_value: 0
+  captive_ball_counter_value:
+    initial_value: 6
+  captives:
+    initial_value: 0
+  chozo_multiballs:
+    initial_value: 0
+  lanes:
+    initial_value: 0
+  missiles:
     initial_value: 0
   orbits:
     initial_value: 0
   pops:
     initial_value: 0
+  ramps:
+    initial_value: 0
+  scoops:
+    initial_value: 0
   slingshots:
     initial_value: 0
-  lanes:
-    initial_value: 0
   spinners:
-    initial_value: 0
-  missiles:
-    initial_value: 0
-  captives:
-    initial_value: 0
-  multiballs:
-    initial_value: 0
-  capsides:
-    initial_value: 0
-  captive_ball_counter_value:
-    initial_value: 5
-  scoops:
     initial_value: 0

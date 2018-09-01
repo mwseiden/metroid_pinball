@@ -4,39 +4,6 @@ mode:
     priority: 100
     code: base.Base
 
-accruals:
-  mode_base_complete_missiles:
-    events:
-      - purple_1_shot_hit
-      - purple_2_shot_hit
-      - purple_3_shot_hit
-    events_when_complete: mode_base_missile_collected
-    persist_state: true
-    reset_on_complete: true
-    disable_on_complete: false
-  mode_base_complete_power_bombs:
-    events:
-      - lower_right_bank_1_shot_hit
-      - lower_right_bank_2_shot_hit
-      - lower_right_bank_3_shot_hit
-    events_when_complete: mode_base_power_bomb_collected
-    persist_state: true
-    reset_on_complete: true
-    disable_on_complete: false
-
-counters:
-  captive_ball_counter:
-    count_events: captive_shot_hit
-    events_when_hit: base_captive_ball_progress
-    starting_count: 5
-    count_complete_value: 0
-    direction: down
-    events_when_complete: base_captive_multiball_bashed
-    reset_events: game_start
-    persist_state: true
-    reset_on_complete: true
-    disable_on_complete: false
-
 shots:
   scoop_shot:
     switch: s_scoop
@@ -95,13 +62,6 @@ shots:
   lower_right_bank_3_shot:
    switch: s_lower_right_bank_3
 
-multiballs:
-  base_captive_multiball:
-    ball_count: 3
-    ball_count_type: total
-    shoot_again: 20s
-    start_or_add_a_ball_events: base_captive_multiball_bashed
-
 ball_saves:
   default:
     active_time: 10s
@@ -114,69 +74,55 @@ ball_saves:
     debug: yes
 
 show_player:
-  pop_1_shot_hit:
-    base_pop_1:
-      loops: 0
-  pop_2_shot_hit:
-    base_pop_2:
-      loops: 0
-  pop_3_shot_hit:
-    base_pop_3:
-      loops: 0
   full_shatz_hit:
     base_full_shatz:
       loops: 0
       priority: 10
-  mode_base_missile_collected:
-    base_missile_collected:
-      loops: 0
   shatz_shot_hit:
     base_white_target:
       loops: 0
-  base_captive_ball_progress:
-    base_multiball_progress:
-      loops: 0
-  base_captive_multiball_bashed:
-    base_multiball_started:
-      loops: 0
-  spinner_shot_hit:
-    base_spinner_spins:
+  capside_combo_hit:
+    base_capside_combo:
       loops: 0
   twitch_new_chat_message:
     who_said_that:
-      loops: 0
-  mode_base_power_bomb_collected:
-    base_power_bomb_collected:
-      loops: 0
-  capside_combo_hit:
-    base_capside_combo:
       loops: 0
   base_bits_small:
     bits_small:
       loops: 0
 
 slide_player:
-  mode_base_started:
+  mode_base_started: score_slide
+  player_added: new_player_slide
+
+slides:
+  score_slide:
+    widgets:
+    - type: text
+      text: (score)
+      number_grouping: true
+      min_digits: 2
+      style: dmd_big
+      y: 18
+    - type: text
+      text: PLAYER (number)
+      y: 0
+      x: 10
+      style: dmd_med
+      anchor_x: left
+      anchor_y: bottom
+    - type: text
+      text: BALL (ball)
+      y: 0
+      x: right-10
+      anchor_x: right
+      anchor_y: bottom
+      style: dmd_med
+  new_player_slide:
+    expire: 1s
     widgets:
       - type: text
-        text: (score)
-        number_grouping: true
-        min_digits: 2
-        style: dmd_big
-        y: 18
-      - type: text
-        text: PLAYER (number)
-        y: 0
-        x: 10
-        style: dmd_med
-        anchor_x: left
-        anchor_y: bottom
-      - type: text
-        text: BALL (ball)
-        y: 0
-        x: right-10
-        anchor_x: right
-        anchor_y: bottom
+        text: PLAYER (num) ADDED
         style: dmd_med
 
 variable_player:
@@ -214,38 +160,6 @@ variable_player:
     slingshots: 1
     score:
       int: 100 + (10 * current_player.slingshots)
-  pop_1_shot_hit:
-    pops: 1
-    score:
-      int: 100 + (80 * current_player.pops)
-  pop_2_shot_hit:
-    pops: 1
-    score:
-      int: 100 + (80 * current_player.pops)
-  pop_3_shot_hit:
-    pops: 1
-    score:
-      int: 100 + (80 * current_player.pops)
-  left_outlane_shot_hit:
-    lanes: 1
-    score:
-      int: 100 + (10 * current_player.lanes)
-  left_inlane_shot_hit:
-    lanes: 1
-    score:
-      int: 100 + (10 * current_player.lanes)
-  right_outlane_shot_hit:
-    lanes: 1
-    score:
-      int: 100 + (10 * current_player.lanes)
-  right_inlane_shot_hit:
-    lanes: 1
-    score:
-      int: 100 + (10 * current_player.lanes)
-  spinner_shot_hit:
-    spinners: 1
-    score:
-      int: 50 + (10 * current_player.spinners)
   big_red_shot_hit:
     score: 5000
   rollover_shot_hit:
@@ -254,19 +168,6 @@ variable_player:
     score: 1500
   full_shatz_hit:
     score: 10000
-  purple_1_shot:
-    score:
-      int: 100 + (100 * current_player.missiles)
-  purple_2_shot:
-    score:
-      int: 100 + (100 * current_player.missiles)
-  purple_3_shot:
-    score:
-      int: 100 + (100 * current_player.missiles)
-  mode_base_missile_collected:
-    missiles: 1
-    score:
-      int: 500 + (200 * current_player.missiles)
   captive_shot_hit:
     captives: 1
     score:
@@ -275,48 +176,11 @@ variable_player:
     score: 25000
   side_2_shot_hit:
     score: 25000
-  mode_base_power_bomb_collected:
-    power_bombs: 1
-    score:
-      int: 2000 + (1000 * current_player.power_bombs)
-  lower_right_bank_1_shot_hit:
-    score:
-      int: 500 + (500 * current_player.power_bombs)
-  lower_right_bank_2_shot_hit:
-    score:
-      int: 500 + (500 * current_player.power_bombs)
-  lower_right_bank_3_shot_hit:
-    score:
-      int: 500 + (500 * current_player.power_bombs)
   capside_combo_hit:
     capsides: 1
     score:
       int: 10000 + (2000 * current_player.capsides)
-  base_captive_multiball_bashed:
-    captive_ball_counter_value:
-      int: 5
-      action: set
-  base_captive_ball_progress:
-    captive_ball_counter_value: -1
   scoop_shot_hit:
     scoops: 1
     score:
       int: 1000 + (500 * current_player.scoops)
-
-images:
-  rudy_pop_1:
-    load: preload
-  rudy_pop_2:
-    load: preload
-  rudy_pop_3:
-    load: preload
-  samus_charge:
-    load: preload
-  samus_looking_left:
-    load: preload
-  samus_run_right:
-    load: preload
-  samus_running:
-    load: preload
-  samus_spin_jump:
-    load: preload

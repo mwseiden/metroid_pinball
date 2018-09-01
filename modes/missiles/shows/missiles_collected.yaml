@@ -2,22 +2,22 @@
 
 - duration: 2s
   slides:
-    base_spinner_progress_slide:
+    missiles_collected_slide:
       widgets:
       - type: text
-        text: Spin Jumps
-        color: yellow
+        text: Missile Collected!
+        color: red
         style: dmd_med
         y: 20
-        x: 81
+        x: 80
       - type: text
-        text: (player|spinners)
+        text: (player|missiles)
         color: red
         style: dmd_big
         y: 10
-        x: 81
+        x: 80
       - type: image
-        image: samus_spin_jump
+        image: samus_run_right
         x: 0
         y: 31
         anchor_x: left
