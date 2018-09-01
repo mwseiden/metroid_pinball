@@ -1,0 +1,22 @@
+#config_version=5
+mode:
+    start_events: mode_base_starting
+    priority: 100
+
+variable_player:
+  left_outlane_shot_hit:
+    lanes: 1
+    score:
+      int: 100 + (10 * current_player.lanes)
+  left_inlane_shot_hit:
+    lanes: 1
+    score:
+      int: 100 + (10 * current_player.lanes)
+  right_outlane_shot_hit:
+    lanes: 1
+    score:
+      int: 100 + (10 * current_player.lanes)
+  right_inlane_shot_hit:
+    lanes: 1
+    score:
+      int: 100 + (10 * current_player.lanes)

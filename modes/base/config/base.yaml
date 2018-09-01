@@ -119,7 +119,7 @@ slides:
       anchor_y: bottom
       style: dmd_med
   new_player_slide:
-    expire: 2s
+    expire: 1s
     widgets:
       - type: text
         text: PLAYER (num) ADDED
@@ -160,22 +160,6 @@ variable_player:
     slingshots: 1
     score:
       int: 100 + (10 * current_player.slingshots)
-  left_outlane_shot_hit:
-    lanes: 1
-    score:
-      int: 100 + (10 * current_player.lanes)
-  left_inlane_shot_hit:
-    lanes: 1
-    score:
-      int: 100 + (10 * current_player.lanes)
-  right_outlane_shot_hit:
-    lanes: 1
-    score:
-      int: 100 + (10 * current_player.lanes)
-  right_inlane_shot_hit:
-    lanes: 1
-    score:
-      int: 100 + (10 * current_player.lanes)
   big_red_shot_hit:
     score: 5000
   rollover_shot_hit:
