@@ -72,9 +72,43 @@ variable_player:
   mode_1b_achieved:
     score: 75000
 
+animations:
+  mode_1b_backglass_scroll_up_slow:
+    - property: y
+      value: -1280
+      relative: true
+      duration: 4s
+    - property: y
+      value: 1280
+      relative: true
+      duration: 0s
+      repeat: true
+  mode_1b_backglass_scroll_up_fast:
+    - property: y
+      value: -1280
+      relative: true
+      duration: 2s
+    - property: y
+      value: 1280
+      relative: true
+      duration: 0s
+      repeat: true
+
 slides:
   mode_1b_backglass_slide:
     widgets:
+      - type: image
+        image: mode_1b_backglass_rain
+        opacity: 0.25
+        y: -1
+        animations:
+          show_slide: mode_1b_backglass_scroll_up_fast
+      - type: image
+        image: mode_1b_backglass_rain
+        opacity: 0.25
+        y: 1279
+        animations:
+          show_slide: mode_1b_backglass_scroll_up_fast
       - type: image
         image: gunship_flying
         y: 600
@@ -82,6 +116,14 @@ slides:
         height: 190
       - type: image
         image: mode_1b_backglass_rain
+        y: -1
+        animations:
+          show_slide: mode_1b_backglass_scroll_up_slow
+      - type: image
+        image: mode_1b_backglass_rain
+        y: 1279
+        animations:
+          show_slide: mode_1b_backglass_scroll_up_slow
     transition: fade
     transition_out: fade
 
