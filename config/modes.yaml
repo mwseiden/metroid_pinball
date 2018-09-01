@@ -2,6 +2,7 @@
 
 modes:
   - base
+  - base_missiles
   - high_score
   - mode_1b_gunship
   - twitch_bits_multiball

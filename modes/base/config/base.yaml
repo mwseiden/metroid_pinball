@@ -5,15 +5,6 @@ mode:
     code: base.Base
 
 accruals:
-  mode_base_complete_missiles:
-    events:
-      - purple_1_shot_hit
-      - purple_2_shot_hit
-      - purple_3_shot_hit
-    events_when_complete: mode_base_missile_collected
-    persist_state: true
-    reset_on_complete: true
-    disable_on_complete: false
   mode_base_complete_power_bombs:
     events:
       - lower_right_bank_1_shot_hit
@@ -127,9 +118,6 @@ show_player:
     base_full_shatz:
       loops: 0
       priority: 10
-  mode_base_missile_collected:
-    base_missile_collected:
-      loops: 0
   shatz_shot_hit:
     base_white_target:
       loops: 0
@@ -263,10 +251,6 @@ variable_player:
   purple_3_shot:
     score:
       int: 100 + (100 * current_player.missiles)
-  mode_base_missile_collected:
-    missiles: 1
-    score:
-      int: 500 + (200 * current_player.missiles)
   captive_shot_hit:
     captives: 1
     score:
@@ -313,8 +297,6 @@ images:
   samus_charge:
     load: preload
   samus_looking_left:
-    load: preload
-  samus_run_right:
     load: preload
   samus_running:
     load: preload
