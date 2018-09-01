@@ -4,19 +4,6 @@ mode:
     priority: 100
     code: base.Base
 
-counters:
-  captive_ball_counter:
-    count_events: captive_shot_hit
-    events_when_hit: base_captive_ball_progress
-    starting_count: 5
-    count_complete_value: 0
-    direction: down
-    events_when_complete: base_captive_multiball_bashed
-    reset_events: game_start
-    persist_state: true
-    reset_on_complete: true
-    disable_on_complete: false
-
 shots:
   scoop_shot:
     switch: s_scoop
@@ -75,13 +62,6 @@ shots:
   lower_right_bank_3_shot:
    switch: s_lower_right_bank_3
 
-multiballs:
-  base_captive_multiball:
-    ball_count: 3
-    ball_count_type: total
-    shoot_again: 20s
-    start_or_add_a_ball_events: base_captive_multiball_bashed
-
 ball_saves:
   default:
     active_time: 10s
@@ -110,20 +90,14 @@ show_player:
   shatz_shot_hit:
     base_white_target:
       loops: 0
-  base_captive_ball_progress:
-    base_multiball_progress:
-      loops: 0
-  base_captive_multiball_bashed:
-    base_multiball_started:
-      loops: 0
   spinner_shot_hit:
     base_spinner_spins:
       loops: 0
-  twitch_new_chat_message:
-    who_said_that:
-      loops: 0
   capside_combo_hit:
     base_capside_combo:
+      loops: 0
+  twitch_new_chat_message:
+    who_said_that:
       loops: 0
   base_bits_small:
     bits_small:
@@ -258,29 +232,7 @@ variable_player:
     capsides: 1
     score:
       int: 10000 + (2000 * current_player.capsides)
-  base_captive_multiball_bashed:
-    captive_ball_counter_value:
-      int: 5
-      action: set
-  base_captive_ball_progress:
-    captive_ball_counter_value: -1
   scoop_shot_hit:
     scoops: 1
     score:
       int: 1000 + (500 * current_player.scoops)
-
-images:
-  rudy_pop_1:
-    load: preload
-  rudy_pop_2:
-    load: preload
-  rudy_pop_3:
-    load: preload
-  samus_charge:
-    load: preload
-  samus_looking_left:
-    load: preload
-  samus_running:
-    load: preload
-  samus_spin_jump:
-    load: preload

@@ -1,0 +1,40 @@
+#config_version=5
+mode:
+    start_events: mode_base_starting
+    priority: 100
+
+multiballs:
+  chozo:
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 20s
+    start_or_add_a_ball_events: chozo_multiball_bashed
+
+counters:
+  captive_ball_counter:
+    count_events: captive_shot_hit
+    events_when_hit: chozo_multiball_progress
+    starting_count: 6 + (2 * current_player.chozo_multiballs)
+    count_complete_value: 0
+    direction: down
+    events_when_complete: chozo_multiball_bashed
+    reset_events: game_start
+    persist_state: true
+    reset_on_complete: true
+    disable_on_complete: false
+
+show_player:
+  chozo_multiball_progress:
+    chozo_multiball_progress:
+      loops: 0
+  chozo_multiball_bashed:
+    chozo_multiball_started:
+      loops: 0
+
+variable_player:
+  logicblock_captive_ball_counter_updated:
+    captive_ball_counter_value:
+      int: value
+      action: set
+  chozo_multiball_bashed:
+    chozo_multiballs: 1
