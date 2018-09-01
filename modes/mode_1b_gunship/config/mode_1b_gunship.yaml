@@ -101,12 +101,14 @@ slides:
         image: mode_1b_backglass_rain
         opacity: 0.5
         y: -1
+        anchor_y: top
         animations:
           show_slide: mode_1b_backglass_scroll_up_fast
       - type: image
         image: mode_1b_backglass_rain
         opacity: 0.5
         y: 1279
+        anchor_y: top
         animations:
           show_slide: mode_1b_backglass_scroll_up_fast
       - type: image
@@ -117,11 +119,13 @@ slides:
       - type: image
         image: mode_1b_backglass_rain
         y: -1
+        anchor_y: top
         animations:
           show_slide: mode_1b_backglass_scroll_up_slow
       - type: image
         image: mode_1b_backglass_rain
         y: 1279
+        anchor_y: top
         animations:
           show_slide: mode_1b_backglass_scroll_up_slow
     transition: fade
