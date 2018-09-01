@@ -74,15 +74,6 @@ ball_saves:
     debug: yes
 
 show_player:
-  pop_1_shot_hit:
-    base_pop_1:
-      loops: 0
-  pop_2_shot_hit:
-    base_pop_2:
-      loops: 0
-  pop_3_shot_hit:
-    base_pop_3:
-      loops: 0
   full_shatz_hit:
     base_full_shatz:
       loops: 0
@@ -162,18 +153,6 @@ variable_player:
     slingshots: 1
     score:
       int: 100 + (10 * current_player.slingshots)
-  pop_1_shot_hit:
-    pops: 1
-    score:
-      int: 100 + (80 * current_player.pops)
-  pop_2_shot_hit:
-    pops: 1
-    score:
-      int: 100 + (80 * current_player.pops)
-  pop_3_shot_hit:
-    pops: 1
-    score:
-      int: 100 + (80 * current_player.pops)
   left_outlane_shot_hit:
     lanes: 1
     score:
@@ -202,15 +181,6 @@ variable_player:
     score: 1500
   full_shatz_hit:
     score: 10000
-  purple_1_shot:
-    score:
-      int: 100 + (100 * current_player.missiles)
-  purple_2_shot:
-    score:
-      int: 100 + (100 * current_player.missiles)
-  purple_3_shot:
-    score:
-      int: 100 + (100 * current_player.missiles)
   captive_shot_hit:
     captives: 1
     score:
@@ -219,15 +189,6 @@ variable_player:
     score: 25000
   side_2_shot_hit:
     score: 25000
-  lower_right_bank_1_shot_hit:
-    score:
-      int: 500 + (500 * current_player.power_bombs)
-  lower_right_bank_2_shot_hit:
-    score:
-      int: 500 + (500 * current_player.power_bombs)
-  lower_right_bank_3_shot_hit:
-    score:
-      int: 500 + (500 * current_player.power_bombs)
   capside_combo_hit:
     capsides: 1
     score:

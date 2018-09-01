@@ -1,0 +1,35 @@
+#config_version=5
+mode:
+    start_events: mode_base_starting
+    priority: 100
+
+accruals:
+  complete_power_bombs:
+    events:
+      - lower_right_bank_1_shot_hit
+      - lower_right_bank_2_shot_hit
+      - lower_right_bank_3_shot_hit
+    events_when_complete: power_bomb_collected
+    persist_state: true
+    reset_on_complete: true
+    disable_on_complete: false
+
+show_player:
+  power_bomb_collected:
+    power_bombs_collected:
+      loops: 0
+
+variable_player:
+  lower_right_bank_1_shot_hit:
+    score:
+      int: 500 + (500 * current_player.power_bombs)
+  lower_right_bank_2_shot_hit:
+    score:
+      int: 500 + (500 * current_player.power_bombs)
+  lower_right_bank_3_shot_hit:
+    score:
+      int: 500 + (500 * current_player.power_bombs)
+  power_bomb_collected:
+    power_bombs: 1
+    score:
+      int: 2000 + (1000 * current_player.power_bombs)

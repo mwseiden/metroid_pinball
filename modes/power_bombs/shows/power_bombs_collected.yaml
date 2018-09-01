@@ -1,0 +1,31 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    power_bombs_collected_slide:
+      widgets:
+      - type: text
+        text: Power Bomb
+        color: red
+        style: dmd_med
+        y: 27
+        x: 50
+      - type: text
+        text: Collected!
+        color: red
+        style: dmd_med
+        y: 20
+        x: 50
+      - type: text
+        text: (player|power_bombs)
+        color: red
+        style: dmd_big
+        y: 10
+        x: 50
+      - type: image
+        image: samus_run_left
+        x: 127
+        y: 31
+        anchor_x: right
+        anchor_y: top
+

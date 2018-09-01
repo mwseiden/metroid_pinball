@@ -2,24 +2,24 @@
 
 - duration: 2s
   slides:
-    base_power_bombs_collected_slide:
+    missiles_collected_slide:
       widgets:
       - type: text
-        text: Power Bomb Collected!
+        text: Missile Collected!
         color: red
         style: dmd_med
         y: 20
-        x: 50
+        x: 80
       - type: text
-        text: (player|power_bombs)
+        text: (player|missiles)
         color: red
         style: dmd_big
         y: 10
-        x: 50
+        x: 80
       - type: image
-        image: samus_run_left
-        x: 127
+        image: samus_run_right
+        x: 0
         y: 31
-        anchor_x: right
+        anchor_x: left
         anchor_y: top
 

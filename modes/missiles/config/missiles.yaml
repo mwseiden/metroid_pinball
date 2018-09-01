@@ -4,23 +4,32 @@ mode:
     priority: 100
 
 accruals:
-  mode_base_missiles_complete:
+  missiles_complete:
     events:
       - purple_1_shot_hit
       - purple_2_shot_hit
       - purple_3_shot_hit
-    events_when_complete: mode_base_missile_collected
+    events_when_complete: missile_collected
     persist_state: true
     reset_on_complete: true
     disable_on_complete: false
 
 show_player:
-  mode_base_missile_collected:
-    base_missiles_collected:
+  missile_collected:
+    missiles_collected:
       loops: 0
 
 variable_player:
-  mode_base_missile_collected:
+  purple_1_shot:
+    score:
+      int: 100 + (100 * current_player.missiles)
+  purple_2_shot:
+    score:
+      int: 100 + (100 * current_player.missiles)
+  purple_3_shot:
+    score:
+      int: 100 + (100 * current_player.missiles)
+  missile_collected:
     missiles: 1
     score:
       int: 500 + (200 * current_player.missiles)
