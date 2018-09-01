@@ -2,7 +2,7 @@
 
 - duration: 2s
   slides:
-    base_power_bomb_collected_slide:
+    base_power_bombs_collected_slide:
       widgets:
       - type: text
         text: Power Bomb Collected!
