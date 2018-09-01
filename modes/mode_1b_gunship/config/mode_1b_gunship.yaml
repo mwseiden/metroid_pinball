@@ -1,6 +1,6 @@
 #config_version=5
 mode:
-    start_events: ball_starting
+    start_events: game_started
     stop_events: game_ending, mode_1b_success
     restart_on_next_ball: true
     priority: 300
@@ -77,12 +77,13 @@ slides:
     widgets:
       - type: image
         image: gunship_flying
-        y: 800
+        y: 600
+        width: 530
+        height: 190
       - type: image
         image: mode_1b_backglass_rain
-    transition:
-      type: fade
-      duration: 2s
+    transition: fade
+    transition_out: fade
 
 slide_player:
   mode_mode_1b_gunship_started:

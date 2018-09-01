@@ -50,7 +50,7 @@ slides:
       x: 370
     - type: image
       image: backglass_main_logo
-      y: 1108
+      y: 1088
     - type: display
       source_display: backglass
       width: 720
@@ -61,13 +61,9 @@ slides:
     widgets:
       - type: image
         image: backglass_main_symbol
-        y: 800
+        y: 780
       - type: image
         image: backglass_main_nebula
-    transition:
-      type: fade
-      duration: 2s
-
 
   dmd_slide:
     - type: text
