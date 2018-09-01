@@ -1,6 +1,6 @@
 #config_version=5
 mode:
-    start_events: base_bits_500, base_bits_1000
+    start_events: base_bits_medium, base_bits_large
     stop_events: multiball_twitch_bit_donation_multiball_ended
     priority: 400
 
@@ -9,7 +9,7 @@ multiballs:
     ball_count: 2
     ball_count_type: total
     shoot_again: 30s
-    start_or_add_a_ball_events: mode_twitch_bits_multiball_started, base_bits_500, base_bits_1000
+    start_or_add_a_ball_events: mode_twitch_bits_multiball_started, base_bits_medium, base_bits_large
 
 shot_groups:
   twitch_bit_whole_playfield:

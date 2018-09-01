@@ -2,7 +2,7 @@
 
 - duration: 4s
   slides:
-    bits_100_slide:
+    bits_small_slide:
       widgets:
       - type: text
         text: (machine|twitch_last_bits_user)

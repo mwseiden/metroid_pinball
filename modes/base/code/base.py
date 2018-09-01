@@ -16,13 +16,13 @@ class Base(Mode):
         backbox = self._backbox_scriptlet()
         if bits < 25:
             backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([160, 0, 0]), 1, 4, 0))
-            self.machine.events.post('base_bits_100')
+            self.machine.events.post('base_bits_small')
         elif bits < 500:
             backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([160, 0, 0]), 1, 9, 0))
-            self.machine.events.post('base_bits_500')
+            self.machine.events.post('base_bits_medium')
         else:
             backbox.set_overlay_effect(backbox.show_sweep_vertical(RGBColor([160, 0, 0]), 1, 20, 0))
-            self.machine.events.post('base_bits_1000')
+            self.machine.events.post('base_bits_large')
 
     # private ----------------------------------------------------------------
 

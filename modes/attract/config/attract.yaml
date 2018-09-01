@@ -29,7 +29,7 @@ show_player:
       loops: 0
       priority: 200
   twitch_bit_donation:
-    bits_100:
+    bits_small:
       loops: 0
       priority: 300
 
