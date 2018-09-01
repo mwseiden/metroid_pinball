@@ -8,7 +8,7 @@
         text: Power Bomb
         color: red
         style: dmd_med
-        y: 27
+        y: 28
         x: 50
       - type: text
         text: Collected!
@@ -20,7 +20,7 @@
         text: (player|power_bombs)
         color: red
         style: dmd_big
-        y: 10
+        y: 9
         x: 50
       - type: image
         image: samus_run_left
