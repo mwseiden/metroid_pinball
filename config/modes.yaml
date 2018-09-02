@@ -2,6 +2,7 @@
 
 modes:
   - base
+  - bonus
   - chozo_multiball
   - high_score
   - lanes

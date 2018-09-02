@@ -1,0 +1,23 @@
+#config_version=5
+
+mode_settings:
+   display_delay_ms: 1s
+   hurry_up_delay_ms: 0
+   bonus_entries:
+    - event: bonus_ramps
+      score: 100 * current_player.ramps
+
+slide_player:
+   mode_bonus_started: bonus_start_slide
+   bonus_ramps: bonus_ramp_slide
+
+slides:
+  bonus_start_slide:
+    widgets:
+      - type: text
+        text: Bonus
+  bonus_ramp_slide:
+    - type: text
+      text: Ramps (player|ramps)
+    - type: text
+      text: (score)
