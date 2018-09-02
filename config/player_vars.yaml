@@ -13,6 +13,12 @@ player_vars:
     initial_value: 0
   missiles:
     initial_value: 0
+  mode_1b_step_1a:
+    initial_value: 0
+  mode_1b_step_1b:
+    initial_value: 0
+  mode_1b_step_2:
+    initial_value: 0
   orbits:
     initial_value: 0
   pops:

@@ -1,7 +1,7 @@
 #config_version=5
 mode:
     start_events: ball_starting
-    stop_events: game_ending, mode_1b_success
+    stop_events: game_ending, mode_1b_success, mode_1b_already_complete
     restart_on_next_ball: true
     priority: 300
 
@@ -45,14 +45,14 @@ show_player:
     mode_1b_land_ship:
       events_when_completed: mode_1b_gunship_landing_animated
       loops: 0
-  mode_mode_1b_gunship_started{not devices.accruals.mode_1b_complete_left_orbit.completed}:
+  mode_mode_1b_gunship_started{current_player.mode_1b_step_1a == 0}:
     blink_light:
       key: left_orbit_blink
       loops: -1
       show_tokens:
         led: led_enter_left_orbit
         color: 00ffff
-  mode_mode_1b_gunship_started{not devices.accruals.mode_1b_complete_right_orbit.completed}:
+  mode_mode_1b_gunship_started{current_player.mode_1b_step_1a == 0}:
     blink_light:
       key: right_orbit_blink
       loops: -1
@@ -63,14 +63,27 @@ show_player:
 event_player:
   mode_1b_gunship_landing_animated:
     - mode_1b_success
+  mode_mode_1b_gunship_started{current_player.mode_1b_step_2 == 0}:
+    - mode_1b_show_backglass
+  mode_mode_1b_gunship_started{current_player.mode_1b_step_2 != 0}:
+    - mode_1b_already_complete
 
 variable_player:
   mode_1b_ship_left:
     score: 50000
+    mode_1b_step_1a:
+      int: 1
+      action: set
   mode_1b_ship_right:
     score: 50000
+    mode_1b_step_1b:
+      int: 1
+      action: set
   mode_1b_achieved:
     score: 75000
+    mode_1b_step_2:
+      int: 1
+      action: set
 
 animations:
   mode_1b_backglass_scroll_up_slow:
@@ -132,7 +145,7 @@ slides:
     transition_out: fade
 
 slide_player:
-  mode_mode_1b_gunship_started:
+  mode_1b_show_backglass:
     mode_1b_backglass_slide:
       target: backglass
 
