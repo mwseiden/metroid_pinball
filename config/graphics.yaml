@@ -9,6 +9,9 @@ displays:
   window:
     width: 720
     height: 1280
+  backglass:
+    width: 720
+    height: 1280
   dmd:
     width: 128
     height: 32
@@ -46,7 +49,21 @@ slides:
       y: 120
       x: 370
     - type: image
-      image: backglass_main
+      image: backglass_main_logo
+      y: 1088
+    - type: display
+      source_display: backglass
+      width: 720
+      height: 1280
+
+
+  backglass_slide:
+    widgets:
+      - type: image
+        image: backglass_main_symbol
+        y: 780
+      - type: image
+        image: backglass_main_nebula
 
   dmd_slide:
     - type: text
@@ -66,6 +83,8 @@ slide_player:
   init_done:
     window_slide:
       target: window
+    backglass_slide:
+      target: backglass
     dmd_slide:
       expire: 2s
       target: dmd

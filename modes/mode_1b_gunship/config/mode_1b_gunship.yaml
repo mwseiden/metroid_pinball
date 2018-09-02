@@ -1,7 +1,7 @@
 #config_version=5
 mode:
     start_events: ball_starting
-    stop_events: game_ending, mode_1b_success
+    stop_events: game_ending, mode_1b_success, mode_1b_already_complete
     restart_on_next_ball: true
     priority: 300
 
@@ -34,43 +34,136 @@ show_player:
   mode_1b_ship_left:
     mode_1b_go_left:
       loops: 0
-    left_orbit_blink:
+    mode_1b_left_orbit_blink:
       action: stop
   mode_1b_ship_right:
     mode_1b_go_right:
       loops: 0
-    right_orbit_blink:
+    mode_1b_right_orbit_blink:
       action: stop
+  mode_1b_ship_navigated:
+    blink_light:
+      key: mode_1b_scoop_blink
+      loops: -1
+      show_tokens:
+        led: led_enter_scoop
+        color: ffff00
   mode_1b_achieved:
     mode_1b_land_ship:
       events_when_completed: mode_1b_gunship_landing_animated
       loops: 0
-  mode_mode_1b_gunship_started{not devices.accruals.mode_1b_complete_left_orbit.completed}:
+    mode_1b_scoop_blink:
+      action: stop
+  mode_mode_1b_gunship_started{current_player.mode_1b_step_1a == 0}:
     blink_light:
-      key: left_orbit_blink
+      key: mode_1b_left_orbit_blink
       loops: -1
       show_tokens:
         led: led_enter_left_orbit
         color: 00ffff
-  mode_mode_1b_gunship_started{not devices.accruals.mode_1b_complete_right_orbit.completed}:
+  mode_mode_1b_gunship_started{current_player.mode_1b_step_1b == 0}:
     blink_light:
-      key: right_orbit_blink
+      key: mode_1b_right_orbit_blink
       loops: -1
       show_tokens:
         led: led_enter_right_orbit
         color: 00ffff
+  mode_mode_1b_gunship_started{current_player.mode_1b_step_1a == 1 and current_player.mode_1b_step_1b == 1 and current_player.mode_1b_step_2 == 0}:
+    blink_light:
+      key: mode_1b_scoop_blink
+      loops: -1
+      show_tokens:
+        led: led_enter_scoop
+        color: ffff00
 
 event_player:
   mode_1b_gunship_landing_animated:
     - mode_1b_success
+  mode_mode_1b_gunship_started{current_player.mode_1b_step_2 == 0}:
+    - mode_1b_show_backglass
+  mode_mode_1b_gunship_started{current_player.mode_1b_step_2 != 0}:
+    - mode_1b_already_complete
 
 variable_player:
   mode_1b_ship_left:
     score: 50000
+    mode_1b_step_1a:
+      int: 1
+      action: set
   mode_1b_ship_right:
     score: 50000
+    mode_1b_step_1b:
+      int: 1
+      action: set
   mode_1b_achieved:
     score: 75000
+    mode_1b_step_2:
+      int: 1
+      action: set
+
+animations:
+  mode_1b_backglass_scroll_up_slow:
+    - property: y
+      value: 1280
+      relative: true
+      duration: 1s
+    - property: y
+      value: -1280
+      relative: true
+      duration: 0s
+      repeat: true
+  mode_1b_backglass_scroll_up_fast:
+    - property: y
+      value: 1280
+      relative: true
+      duration: 0.5s
+    - property: y
+      value: -1280
+      relative: true
+      duration: 0s
+      repeat: true
+
+slides:
+  mode_1b_backglass_slide:
+    widgets:
+      - type: image
+        image: mode_1b_backglass_rain
+        opacity: 0.5
+        y: -1
+        anchor_y: top
+        animations:
+          show_slide: mode_1b_backglass_scroll_up_fast
+      - type: image
+        image: mode_1b_backglass_rain
+        opacity: 0.5
+        y: 1279
+        anchor_y: top
+        animations:
+          show_slide: mode_1b_backglass_scroll_up_fast
+      - type: image
+        image: gunship_flying
+        y: 700
+        width: 530
+        height: 190
+      - type: image
+        image: mode_1b_backglass_rain
+        y: -1
+        anchor_y: top
+        animations:
+          show_slide: mode_1b_backglass_scroll_up_slow
+      - type: image
+        image: mode_1b_backglass_rain
+        y: 1279
+        anchor_y: top
+        animations:
+          show_slide: mode_1b_backglass_scroll_up_slow
+    transition: fade
+    transition_out: fade
+
+slide_player:
+  mode_1b_show_backglass:
+    mode_1b_backglass_slide:
+      target: backglass
 
 images:
   gunship_landing:
