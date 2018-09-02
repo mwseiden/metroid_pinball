@@ -143,8 +143,6 @@ slides:
       - type: image
         image: gunship_flying
         y: 700
-        width: 530
-        height: 190
       - type: image
         image: room_1b_backglass_rain
         y: -1

@@ -19,6 +19,10 @@ player_vars:
     initial_value: 0
   room_1b_step_2:
     initial_value: 0
+  room_1b_victory_counter_value:
+    initial_value: 0
+  room_1b_victory_step_1:
+    initial_value: 0
   switches:
     initial_value: 0
   orbits:
