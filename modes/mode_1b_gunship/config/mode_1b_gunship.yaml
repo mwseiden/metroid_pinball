@@ -52,7 +52,7 @@ show_player:
       show_tokens:
         led: led_enter_left_orbit
         color: 00ffff
-  mode_mode_1b_gunship_started{current_player.mode_1b_step_1a == 0}:
+  mode_mode_1b_gunship_started{current_player.mode_1b_step_1b == 0}:
     blink_light:
       key: right_orbit_blink
       loops: -1
