@@ -7,9 +7,9 @@ modes:
   - high_score
   - lanes
   - missiles
-  - mode_1b_gunship
   - pop_bumpers
   - power_bombs
+  - room_1b_gunship
   - spin_jumps
   - twitch_bits_multiball
 

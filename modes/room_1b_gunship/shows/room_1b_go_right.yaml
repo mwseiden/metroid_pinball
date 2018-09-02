@@ -2,10 +2,10 @@
 
 - duration: 5s
   slides:
-    mode_1b_gunship_left:
+    room_1b_gunship_right:
       widgets:
       - type: Text
-        text: Navigate Left
+        text: Navigate Right
         color: green
         style: dmd_med
         y: 14
@@ -13,4 +13,4 @@
       transition:
          type: move_in
          duration: 1s
-         direction: right
+         direction: left

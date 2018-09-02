@@ -2,7 +2,7 @@
 
 - duration: 4s
   slides:
-    mode_1b_gunship_lands:
+    room_1b_gunship_lands:
       widgets:
       - type: image
         image: gunship_landing
