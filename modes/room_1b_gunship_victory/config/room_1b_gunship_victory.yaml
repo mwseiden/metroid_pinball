@@ -49,7 +49,7 @@ slides:
     transition:
       type: push
       duration: 1s
-      direction: top
+      direction: down
     transition_out: fade
 
 
