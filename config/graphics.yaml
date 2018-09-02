@@ -1,10 +1,5 @@
 #config_version=5
 
-images:
-  backglass_main:
-    load: preload
-    file: backglass_main_720.png
-
 displays:
   window:
     width: 720
