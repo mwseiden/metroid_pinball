@@ -83,6 +83,13 @@ slide_player:
     dmd_slide:
       expire: 2s
       target: dmd
+  game_starting:
+    backglass_slide:
+      target: backglass
+      action: remove
+  game_ended:
+    backglass_slide:
+      target: backglass
 
 kivy_config:
   kivy:
