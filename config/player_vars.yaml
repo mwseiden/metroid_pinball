@@ -19,6 +19,8 @@ player_vars:
     initial_value: 0
   room_1b_step_2:
     initial_value: 0
+  switches:
+    initial_value: 0
   orbits:
     initial_value: 0
   pops:

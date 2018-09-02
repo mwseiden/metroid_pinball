@@ -6,10 +6,13 @@ mode_settings:
    bonus_entries:
     - event: bonus_ramps
       score: 100 * current_player.ramps
+    - event: bonus_switches
+      score: 100 * current_player.switches
 
 slide_player:
    mode_bonus_started: bonus_start_slide
    bonus_ramps: bonus_ramp_slide
+   bonus_switches: bonus_switches_slide
 
 slides:
   bonus_start_slide:
@@ -19,5 +22,10 @@ slides:
   bonus_ramp_slide:
     - type: text
       text: Ramps (player|ramps)
+    - type: text
+      text: (score)
+  bonus_switches_slide:
+    - type: text
+      text: Ramps (player|switches)
     - type: text
       text: (score)

@@ -216,3 +216,5 @@ variable_player:
     scoops: 1
     score:
       int: 1000 + (500 * current_player.scoops)
+  whole_playfield_shot_group_hit:
+    switches: 1
