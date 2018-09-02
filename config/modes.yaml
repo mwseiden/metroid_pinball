@@ -10,6 +10,7 @@ modes:
   - pop_bumpers
   - power_bombs
   - room_1b_gunship
+  - room_1b_gunship_victory
   - spin_jumps
   - twitch_bits_multiball
 
