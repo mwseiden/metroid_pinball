@@ -19,13 +19,22 @@ slides:
     widgets:
       - type: text
         text: Bonus
+        style: dmd_big
   bonus_ramp_slide:
     - type: text
       text: Ramps (player|ramps)
+      style: dmd_med
+      y: 20
     - type: text
       text: (score)
+      style: dmd_med
+      y: 12
   bonus_switches_slide:
     - type: text
-      text: Ramps (player|switches)
+      text: Switches (player|switches)
+      style: dmd_med
+      y: 20
     - type: text
       text: (score)
+      style: dmd_med
+      y: 12

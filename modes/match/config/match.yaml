@@ -1,0 +1,128 @@
+#config_version=5
+mode:
+  priority: 1000
+  start_events: game_ending
+  code: mpf.modes.match.code.match.Match
+  game_mode: False
+  use_wait_queue: true
+
+mode_settings:
+  non_match_number_step: 10
+
+queue_relay_player:
+  match_no_match:
+    post: no_match
+    wait_for: slide_no_match_slide_removed
+    pass_args: True
+  match_has_match:
+    post: has_match
+    wait_for: slide_match_slide_removed
+    pass_args: True
+
+slide_player:
+  no_match:
+    match_drama_slide:
+      expire: 3.5s
+    no_match_slide:
+      expire: 3s
+  has_match:
+    match_drama_slide:
+      expire: 3.5s
+    match_slide:
+      expire: 3s
+
+slides:
+  match_drama_slide:
+    widgets:
+      - type: image
+        image: match_explosion
+        fps: 17
+      - type: text
+        text: (winner_number)
+        opacity: 0.0
+        color: red
+        style: dmd_big
+        animations:
+          show_slide:
+            - property: opacity
+              value: 0
+              duration: 1s
+            - property: opacity
+              value: 1
+              duration: 2s
+  match_slide:
+    widgets:
+      - type: text
+        text: MATCH
+        color: red
+        style: dmd_big
+        y: 21
+      - type: text
+        text: (winner_number)
+        color: red
+        style: dmd_big
+        y: 11
+      - type: text
+        text: (match_number0)
+        y: 31
+        x: 10
+        style: dmd_med
+        anchor_x: left
+        anchor_y: top
+      - type: text
+        text: (match_number1)
+        y: 31
+        x: right-10
+        anchor_x: right
+        anchor_y: top
+        style: dmd_med
+      - type: text
+        text: (match_number2)
+        y: 0
+        x: 10
+        style: dmd_med
+        anchor_x: left
+        anchor_y: bottom
+        number_grouping: true
+      - type: text
+        text: (match_number3)
+        y: 0
+        x: right-10
+        anchor_x: right
+        anchor_y: bottom
+        style: dmd_med
+  no_match_slide:
+    widgets:
+      - type: text
+        text: NO MATCH
+        color: 009cff
+        style: dmd_big
+      - type: text
+        text: (match_number0)
+        y: 31
+        x: 10
+        style: dmd_med
+        anchor_x: left
+        anchor_y: top
+      - type: text
+        text: (match_number1)
+        y: 31
+        x: right-10
+        anchor_x: right
+        anchor_y: top
+        style: dmd_med
+      - type: text
+        text: (match_number2)
+        y: 0
+        x: 10
+        style: dmd_med
+        anchor_x: left
+        anchor_y: bottom
+        number_grouping: true
+      - type: text
+        text: (match_number3)
+        y: 0
+        x: right-10
+        anchor_x: right
+        anchor_y: bottom
+        style: dmd_med

@@ -26,7 +26,7 @@ counters:
     disable_on_complete: true
 
 slide_player:
-  player_room_1b_victory_counter_value{value % 20 == 0}: room_1b_victory_progress_slide
+  player_room_1b_victory_scan_percent{value % 10 == 0}: room_1b_victory_progress_slide
   mode_room_1b_gunship_victory_started:
     room_1b_victory_backglass_slide:
       target: backglass
@@ -55,8 +55,8 @@ slides:
 
 variable_player:
   logicblock_room_1b_victory_counter_updated:
-    room_1b_victory_counter_value:
-      int: value
+    room_1b_victory_scan_percent:
+      int: value / 2
       action: set
   room_1b_victory_scan_achieved:
     room_1b_victory_step_1:

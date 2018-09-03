@@ -19,7 +19,7 @@ player_vars:
     initial_value: 0
   room_1b_step_2:
     initial_value: 0
-  room_1b_victory_counter_value:
+  room_1b_victory_scan_percent:
     initial_value: 0
   room_1b_victory_step_1:
     initial_value: 0
