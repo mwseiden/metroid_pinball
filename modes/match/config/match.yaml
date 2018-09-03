@@ -19,18 +19,22 @@ queue_relay_player:
     wait_for: slide_match_slide_removed
     pass_args: True
 
-slide_player:
-  no_match:
-    match_drama_slide:
-      expire: 3.5s
-    no_match_slide:
-      expire: 3s
-  has_match:
-    match_drama_slide:
-      expire: 3.5s
-    match_slide:
-      expire: 3s
+show_player:
+  no_match: no_match_show
+  has_match: has_match_show
 
+shows:
+  no_match_show:
+    - duration: 3.5s
+      slides: match_drama_slide
+    - duration: 3s
+      slides: no_match_slide
+  has_match_show:
+    - duration: 3.5s
+      slides: match_drama_slide
+    - duration: 3s
+      slides: match_slide
+  
 slides:
   match_drama_slide:
     widgets:
