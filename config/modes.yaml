@@ -6,6 +6,7 @@ modes:
   - chozo_multiball
   - high_score
   - lanes
+  - match
   - missiles
   - pop_bumpers
   - power_bombs
