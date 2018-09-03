@@ -2,7 +2,7 @@
 mode:
   priority: 1000
   start_events: game_ending
-  code: mpf.modes.match.code.match.Match
+  code: match.MyMatch
   game_mode: False
   use_wait_queue: true
 
@@ -13,15 +13,11 @@ queue_relay_player:
   match_no_match:
     post: no_match
     wait_for: slide_no_match_slide_removed
-    pass_args: True
+    pass_args: true
   match_has_match:
     post: has_match
     wait_for: slide_match_slide_removed
-    pass_args: True
-
-show_player:
-  no_match: no_match_show
-  has_match: has_match_show
+    pass_args: true
 
 shows:
   no_match_show:
@@ -38,9 +34,6 @@ shows:
 slides:
   match_drama_slide:
     widgets:
-      - type: image
-        image: match_explosion
-        fps: 17
       - type: text
         text: (winner_number)
         opacity: 0.0
@@ -54,6 +47,9 @@ slides:
             - property: opacity
               value: 1
               duration: 2s
+      - type: image
+        image: match_explosion
+        fps: 17
   match_slide:
     widgets:
       - type: text
