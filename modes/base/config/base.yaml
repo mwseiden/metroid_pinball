@@ -127,6 +127,16 @@ show_player:
   base_bits_small:
     bits_small:
       loops: 0
+  ball_save_default_disabled:
+    base_ball_save_default_blink:
+      action: stop
+  ball_save_default_enabled:
+    blink_light:
+      key: base_ball_save_default_blink
+      loops: -1
+      show_tokens:
+        led: led_ball_save
+        color: ff0000
 
 slide_player:
   mode_base_started: score_slide
