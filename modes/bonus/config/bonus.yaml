@@ -18,7 +18,7 @@ slides:
   bonus_start_slide:
     widgets:
       - type: text
-        text: Bonus
+        text: BONUS
         style: dmd_big
   bonus_ramp_slide:
     - type: text

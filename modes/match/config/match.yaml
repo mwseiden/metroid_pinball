@@ -34,12 +34,13 @@ shows:
                 show_slide:
                   - property: opacity
                     value: 0
-                    duration: 1s
+                    duration: .5s
                   - property: opacity
                     value: 1
-                    duration: 2s
+                    duration: 2.5s
             - type: image
               image: match_explosion
+              start_frame: 0
               fps: 17
     - duration: 3s
       slides:
@@ -93,12 +94,13 @@ shows:
                 show_slide:
                   - property: opacity
                     value: 0
-                    duration: 1s
+                    duration: .5s
                   - property: opacity
                     value: 1
-                    duration: 2s
+                    duration: 2.5s
             - type: image
               image: match_explosion
+              start_frame: 0
               fps: 17
     - duration: 3s
       slides:

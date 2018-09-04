@@ -2,6 +2,7 @@ import sys
 import irc.bot
 import requests
 import logging
+import textwrap
 
 class TwitchClient(irc.bot.SingleServerIRCBot):
     def __init__(self, machine, username, password, channel):
@@ -38,18 +39,38 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             tags = self.build_tag_dict(e.tags)
             bits = tags.get('bits')
             message_type = tags.get('msg-id')
+            user = tags.get('display-name', user)
             if message_type == 'sub' or message_type == 'resub':
                 months = tags.get('msg-param-months', 1)
                 subscriber_message = tags.get('message', '')
                 self.machine.events.post('twitch_subscription', user=user, message=e.arguments[0], months=int(months), subscriber_message=subscriber_message)
             elif bits is not None:
-                self.machine.set_machine_var('twitch_last_bits_user', user)
-                self.machine.set_machine_var('twitch_last_bits_amount', bits)
+                self.machine.set_machine_var('twitch_last_bits_user', user, persist=True)
+                self.machine.set_machine_var('twitch_last_bits_amount', bits, persist=True)
                 self.machine.events.post('twitch_bit_donation', user=user, message=e.arguments[0], bits=int(bits))
             else:
-                self.machine.set_machine_var('twitch_last_chat_user', user)
-                self.machine.set_machine_var('twitch_last_chat_message', e.arguments[0])
-                self.machine.events.post('twitch_new_chat_message', user=user, message=e.arguments[0])
+                length, lines = self.split_message(e.arguments[0], 6)
+                self.machine.set_machine_var('twitch_last_chat_user', user, persist=True)
+                self.machine.set_machine_var('twitch_last_chat_message', e.arguments[0], persist=True)
+                self.machine.set_machine_var('twitch_last_chat_message_line_count', length, persist=True)
+                self.machine.set_machine_var('twitch_last_chat_message_line_1', lines[0], persist=True)
+                self.machine.set_machine_var('twitch_last_chat_message_line_2', lines[1], persist=True)
+                self.machine.set_machine_var('twitch_last_chat_message_line_3', lines[2], persist=True)
+                self.machine.set_machine_var('twitch_last_chat_message_line_4', lines[3], persist=True)
+                self.machine.set_machine_var('twitch_last_chat_message_line_5', lines[4], persist=True)
+                self.machine.set_machine_var('twitch_last_chat_message_line_6', lines[5], persist=True)
+                self.machine.events.post(
+                    'twitch_new_chat_message',
+                    user=user,
+                    message=e.arguments[0],
+                    line_count=length,
+                    line_1=lines[0],
+                    line_2=lines[1],
+                    line_3=lines[2],
+                    line_4=lines[3],
+                    line_5=lines[4],
+                    line_6=lines[5]
+                )
 
     def on_privmsg(self, c, e):
         user = e.source.split('!')[0]
@@ -68,3 +89,12 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
 
     def build_tag_dict(self, seq):
         return dict((d['key'], d['value']) for (index, d) in enumerate(seq))
+
+    def split_message(self, message, min_lines):
+        lines = textwrap.wrap(message, 21)
+        length = len(list)
+
+        if length < min_lines:
+            lines += [''] * (min_lines - len(lines))
+
+        return length, lines
