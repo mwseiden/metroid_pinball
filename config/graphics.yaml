@@ -59,6 +59,8 @@ slides:
         y: 780
       - type: image
         image: backglass_main_nebula
+    transition: fade
+    transition_out: fade
 
   dmd_slide:
     - type: text
