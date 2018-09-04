@@ -130,7 +130,9 @@ show_player:
 
 slide_player:
   mode_base_started: score_slide
-  player_added: new_player_slide
+  player_added:
+    new_player_slide:
+      priority: 1000
 
 slides:
   score_slide:
