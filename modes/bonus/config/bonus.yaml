@@ -10,12 +10,15 @@ mode_settings:
       score: 100 * current_player.switches
     - event: bonus_capsides
       score: 5000 * current_player.capsides
+    - event: bonus_missiles
+      score: 1000 * current_player.missiles
 
 slide_player:
   mode_bonus_started: bonus_start_slide
   bonus_ramps: bonus_ramp_slide
   bonus_switches: bonus_switches_slide
   bonus_capsides: bonus_capsides_slide
+  bonus_missiles: bonus_missiles_slide
 
 slides:
   bonus_start_slide:
@@ -44,6 +47,15 @@ slides:
   bonus_capsides_slide:
     - type: text
       text: Cap-Side Combos (player|capsides)
+      style: dmd_med
+      y: 20
+    - type: text
+      text: (score)
+      style: dmd_med
+      y: 12
+  bonus_missiles_slide:
+    - type: text
+      text: Missiles (player|missiles)
       style: dmd_med
       y: 20
     - type: text
