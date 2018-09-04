@@ -92,7 +92,7 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
 
     def split_message(self, message, min_lines):
         lines = textwrap.wrap(message, 21)
-        length = len(list)
+        length = len(lines)
 
         if length < min_lines:
             lines += [''] * (min_lines - len(lines))
