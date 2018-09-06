@@ -137,7 +137,7 @@ show_player:
       show_tokens:
         led: led_ball_save
         color: ff0000
-        duration: .1s
+        duration: 100
 
 slide_player:
   mode_base_started: score_slide

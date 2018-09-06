@@ -100,6 +100,7 @@ slides:
       image: landing_site_norfair_backglass
 
 
+
 variable_player:
   select_landing_site_item_selected:
     has_chosen_landing_site:

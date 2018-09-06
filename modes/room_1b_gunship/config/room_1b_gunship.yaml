@@ -48,7 +48,7 @@ show_player:
       show_tokens:
         led: led_enter_scoop
         color: ffff00
-        duration: .5s
+        duration: 500
   room_1b_achieved:
     room_1b_land_ship:
       events_when_completed: room_1b_gunship_landing_animated
@@ -62,7 +62,7 @@ show_player:
       show_tokens:
         led: led_enter_left_orbit
         color: 00ffff
-        duration: .5s
+        duration: 500
   mode_room_1b_gunship_started{current_player.room_1b_step_1b == 0}:
     blink_light:
       key: room_1b_right_orbit_blink
@@ -70,7 +70,7 @@ show_player:
       show_tokens:
         led: led_enter_right_orbit
         color: 00ffff
-        duration: .5s
+        duration: 500
   mode_room_1b_gunship_started{current_player.room_1b_step_1a == 1 and current_player.room_1b_step_1b == 1 and current_player.room_1b_step_2 == 0}:
     blink_light:
       key: room_1b_scoop_blink
@@ -78,7 +78,7 @@ show_player:
       show_tokens:
         led: led_enter_scoop
         color: ffff00
-        duration: .5s
+        duration: 500
 
 event_player:
   room_1b_gunship_landing_animated:
