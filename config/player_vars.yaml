@@ -9,6 +9,8 @@ player_vars:
     initial_value: 0
   chozo_multiballs:
     initial_value: 0
+  has_chosen_landing_site:
+    initial_value: 0
   lanes:
     initial_value: 0
   missiles:
