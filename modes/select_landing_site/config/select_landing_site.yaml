@@ -99,10 +99,3 @@ slides:
     - type: image
       image: landing_site_norfair_backglass
 
-
-
-variable_player:
-  select_landing_site_item_selected:
-    has_chosen_landing_site:
-      int: 1
-      action: set

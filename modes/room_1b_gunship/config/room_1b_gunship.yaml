@@ -85,6 +85,9 @@ event_player:
     - room_1b_already_complete
 
 variable_player:
+  has_chosen_landing_site:
+    int: 1
+    action: set
   room_1b_ship_left:
     score: 50000
     room_1b_step_1a:
