@@ -1,9 +1,9 @@
 #show_version=5
 
-- duration: (duration)
+- duration: .5s
   lights:
     (led): (color)
 
-- duration: (duration)
+- duration: .5s
   lights:
     (led): off

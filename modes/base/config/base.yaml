@@ -134,10 +134,10 @@ show_player:
     blink_light:
       key: base_ball_save_default_blink
       loops: -1
+      speed: 2
       show_tokens:
         led: led_ball_save
         color: ff0000
-        duration: 100
 
 slide_player:
   mode_base_started: score_slide
