@@ -12,6 +12,7 @@ modes:
   - power_bombs
   - room_1b_gunship
   - room_1b_gunship_victory
+  - select_landing_site
   - spin_jumps
   - twitch_bits_multiball
 
