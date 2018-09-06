@@ -2,7 +2,7 @@
 mode:
   code: select_landing_site.SelectLandingSite
   start_events: ball_starting
-  stop_events: ball_ended, s_shooter_lane_inactive, select_landing_site_item_selected
+  stop_events: ball_ended, s_shooter_lane_inactive
   priority: 500
   game_mode: false
 
