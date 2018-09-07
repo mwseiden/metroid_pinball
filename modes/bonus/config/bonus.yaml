@@ -74,3 +74,8 @@ slides:
       text: (score)
       style: dmd_med
       y: 12
+
+event_player:
+  mode_bonus_ending:
+    cmd_backbox_show:
+      show_type: none
