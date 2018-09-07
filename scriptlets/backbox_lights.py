@@ -10,6 +10,13 @@ class BackBoxLights(Scriptlet):
     REFRESH_RATE = 35
 
     def on_load(self):
+        self.shows = {
+            'rain': self.show_rain,
+            'solid': self.show_solid,
+            'sweep_horizontal': self.show_sweep_horizontal,
+            'sweep_vertical': self.show_sweep_vertical,
+        }
+
         self.set_effects_to_default()
         self._schedule_update()
         self.machine.events.add_handler('backbox_show', self._show_base_effect)
@@ -84,14 +91,7 @@ class BackBoxLights(Scriptlet):
         self.set_overlay_effect(self._create_show(**kwargs))
 
     def _create_show(self, **kwargs):
-        shows = {
-            'rain': self.show_rain,
-            'solid': self.show_solid,
-            'sweep_horizontal': self.show_sweep_horizontal,
-            'sweep_vertical': self.show_sweep_vertical,
-        }
-
-        return shows.get(kwargs.get('show_type', 'rain').lower())(**kwargs)
+        return self.shows.get(kwargs.get('show_type', 'rain').lower())(**kwargs)
 
     def _clear_lights(self):
         set_base_effect(show_solid(self, color='off'))
