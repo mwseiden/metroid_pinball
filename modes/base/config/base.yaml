@@ -181,28 +181,28 @@ event_player:
   twitch_new_chat_message:
     backbox_show_overlay:
       show_type: sweep_horizontal
-      color: 802000
+      color: { value: 802000, type: string }
       speed: 1
       repeat: 3
       direction: left
   base_bits_small:
     backbox_show_overlay:
       show_type: sweep_vertical
-      color: A00000
+      color: { value: A00000, type: string }
       speed: 1
       repeat: 4
       direction: left
   base_bits_medium:
     backbox_show_overlay:
       show_type: sweep_vertical
-      color: A00000
+      color: { value: A00000, type: string }
       speed: 1
       repeat: 9
       direction: left
   base_bits_large:
     backbox_show_overlay:
       show_type: sweep_vertical
-      color: A00000
+      color: { value: A00000, type: string }
       speed: 1
       repeat: 20
       direction: left

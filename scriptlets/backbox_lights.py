@@ -94,4 +94,4 @@ class BackBoxLights(Scriptlet):
         return shows.get(kwargs.get('show_type', 'rain').lower())(**kwargs)
 
     def _clear_lights(self):
-        set_base_effect(show_solid(self, color=RGBColor([0,0,0])))
+        set_base_effect(show_solid(self, color='off'))
