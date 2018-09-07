@@ -53,7 +53,7 @@ event_player:
   twitch_new_chat_message:
     backbox_show_overlay:
       show_type: sweep_horizontal
-      color: 400080
+      color: "400080"
       speed: 2
       repeat: 3
       direction: right

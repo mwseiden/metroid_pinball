@@ -33,13 +33,15 @@ class BackBoxLights(Scriptlet):
             self._clear_lights()
 
     def set_overlay_effect(self, effect):
-        if self.overlay_effect is None:
+        if self.overlay_effect is None and self.base_effect is not None:
             self.base_effect.save_state()
 
         self.overlay_effect = effect
 
-        if effect is None:
+        if effect is None and self.base_effect is not None:
             self.base_effect.restore_state()
+        else:
+            self._clear_lights()
 
     # show factories ---------------------------------------------------------
 
@@ -47,7 +49,7 @@ class BackBoxLights(Scriptlet):
         return Rain(self.machine)
 
     def show_solid(self, **kwargs):
-        return Show(self.machine, RGBColor(kwargs.get('color', [0, 0, 0])))
+        return Solid(self.machine, RGBColor(kwargs.get('color', [0, 0, 0])))
 
     def show_sweep_horizontal(self, **kwargs):
         self.info_log('WTF: %s', str(kwargs.get('color', '400000')))
@@ -74,7 +76,8 @@ class BackBoxLights(Scriptlet):
         if self.overlay_effect is not None:
             if self.overlay_effect.is_finished():
                 self.overlay_effect = None
-                self.base_effect.restore_state()
+                if self.base_effect is not None:
+                    self.base_effect.restore_state()
             else:
                 self.overlay_effect.animate()
         elif self.base_effect is not None:
@@ -95,4 +98,4 @@ class BackBoxLights(Scriptlet):
         return self.shows.get(kwargs.get('show_type', 'rain').lower())(**kwargs)
 
     def _clear_lights(self):
-        set_base_effect(show_solid(self, color='off'))
+        self.set_base_effect(self.show_solid(color='off'))
