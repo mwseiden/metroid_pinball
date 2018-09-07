@@ -91,7 +91,7 @@ class BackBoxLights(Scriptlet):
             'sweep_vertical': self.show_sweep_vertical,
         }
 
-        return shows.get(show_args.get('show_type', 'rain').lower())(**kwargs)
+        return shows.get(kwargs.get('show_type', 'rain').lower())(**kwargs)
 
     def _clear_lights(self):
         set_base_effect(show_solid(self, color=RGBColor([0,0,0])))
