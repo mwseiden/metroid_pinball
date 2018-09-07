@@ -179,30 +179,30 @@ event_player:
   twitch_bit_donation{bits >= 25 and bits < 500}: base_bits_medium
   twitch_bit_donation{bits >= 500}: base_bits_large
   twitch_new_chat_message:
-    backbox_show_overlay:
+    cmd_backbox_show_overlay:
       show_type: sweep_horizontal
-      color: { value: 802000, type: string }
+      color: "802000"
       speed: 1
       repeat: 3
       direction: left
   base_bits_small:
-    backbox_show_overlay:
+    cmd_backbox_show_overlay:
       show_type: sweep_vertical
-      color: { value: A00000, type: string }
+      color: "A00000"
       speed: 1
       repeat: 4
       direction: left
   base_bits_medium:
-    backbox_show_overlay:
+    cmd_backbox_show_overlay:
       show_type: sweep_vertical
-      color: { value: A00000, type: string }
+      color: "A00000"
       speed: 1
       repeat: 9
       direction: left
   base_bits_large:
-    backbox_show_overlay:
+    cmd_backbox_show_overlay:
       show_type: sweep_vertical
-      color: { value: A00000, type: string }
+      color: "A00000"
       speed: 1
       repeat: 20
       direction: left

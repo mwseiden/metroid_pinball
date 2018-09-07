@@ -84,7 +84,7 @@ event_player:
   mode_room_1b_gunship_started{current_player.room_1b_step_2 != 0}:
     - room_1b_already_complete
   mode_room_1b_gunship_started:
-    backbox_show:
+    cmd_backbox_show:
       show_type: rain
 
 variable_player:

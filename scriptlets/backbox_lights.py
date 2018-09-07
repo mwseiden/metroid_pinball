@@ -19,8 +19,8 @@ class BackBoxLights(Scriptlet):
 
         self.set_effects_to_default()
         self._schedule_update()
-        self.machine.events.add_handler('backbox_show', self._show_base_effect)
-        self.machine.events.add_handler('backbox_show_overlay', self._show_overlay_effect)
+        self.machine.events.add_handler('cmd_backbox_show', self._show_base_effect)
+        self.machine.events.add_handler('cmd_backbox_show_overlay', self._show_overlay_effect)
 
     def set_effects_to_default(self):
         self.base_effect = None
@@ -52,7 +52,6 @@ class BackBoxLights(Scriptlet):
         return Solid(self.machine, RGBColor(kwargs.get('color', [0, 0, 0])))
 
     def show_sweep_horizontal(self, **kwargs):
-        self.info_log('WTF: %s', str(kwargs.get('color', '400000')))
         return SweepHorizontal(
             self.machine,
             RGBColor(kwargs.get('color', '400000')),
@@ -99,3 +98,4 @@ class BackBoxLights(Scriptlet):
 
     def _clear_lights(self):
         self.set_base_effect(self.show_solid(color='off'))
+        self.base_effect.save_state()

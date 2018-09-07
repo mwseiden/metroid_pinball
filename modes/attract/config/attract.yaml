@@ -51,16 +51,16 @@ animations:
 
 event_player:
   twitch_new_chat_message:
-    backbox_show_overlay:
+    cmd_backbox_show_overlay:
       show_type: sweep_horizontal
       color: "400080"
       speed: 2
       repeat: 3
       direction: right
   twitch_bit_donation:
-    backbox_show_overlay:
+    cmd_backbox_show_overlay:
       show_type: sweep_horizontal
-      color: { value: 804040, type: string }
+      color: "804040"
       speed: 2
       repeat: 9
       direction: left
