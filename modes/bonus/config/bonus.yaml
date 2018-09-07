@@ -1,0 +1,76 @@
+#config_version=5
+
+mode_settings:
+  display_delay_ms: 1s
+  hurry_up_delay_ms: 0
+  bonus_entries:
+    - event: bonus_ramps
+      score: 100 * current_player.ramps
+    - event: bonus_switches
+      score: 100 * current_player.switches
+    - event: bonus_capsides
+      score: 5000 * current_player.capsides
+    - event: bonus_missiles
+      score: 500 * current_player.missiles
+    - event: bonus_power_bombs
+      score: 1000 * current_player.power_bombs
+
+slide_player:
+  mode_bonus_started: bonus_start_slide
+  bonus_ramps: bonus_ramp_slide
+  bonus_switches: bonus_switches_slide
+  bonus_capsides: bonus_capsides_slide
+  bonus_missiles: bonus_missiles_slide
+  bonus_power_bombs: bonus_power_bombs_slide
+
+slides:
+  bonus_start_slide:
+    widgets:
+      - type: text
+        text: BONUS
+        style: dmd_big
+  bonus_ramp_slide:
+    - type: text
+      text: Ramps (player|ramps)
+      style: dmd_med
+      y: 20
+    - type: text
+      text: (score)
+      style: dmd_med
+      y: 12
+  bonus_switches_slide:
+    - type: text
+      text: Switches (player|switches)
+      style: dmd_med
+      y: 20
+    - type: text
+      text: (score)
+      style: dmd_med
+      y: 12
+  bonus_capsides_slide:
+    - type: text
+      text: Cap-Side Combos (player|capsides)
+      style: dmd_med
+      y: 20
+    - type: text
+      text: (score)
+      style: dmd_med
+      y: 12
+  bonus_missiles_slide:
+    - type: text
+      text: Missiles (player|missiles)
+      style: dmd_med
+      y: 20
+    - type: text
+      text: (score)
+      style: dmd_med
+      y: 12
+  bonus_power_bombs_slide:
+    - type: text
+      text: Power Bombs (player|power_bombs)
+      style: dmd_med
+      y: 20
+    - type: text
+      text: (score)
+      style: dmd_med
+      y: 12

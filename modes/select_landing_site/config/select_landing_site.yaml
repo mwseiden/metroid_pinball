@@ -1,0 +1,101 @@
+#config_version=5
+mode:
+  code: select_landing_site.SelectLandingSite
+  start_events: ball_starting
+  stop_events: ball_ended, select_landing_site_item_selected
+  priority: 500
+  game_mode: false
+
+mode_settings:
+  selectable_items: crateria, brinstar, wrecked_ship, maridia, norfair
+  select_item_events: s_shooter_lane_inactive
+  next_item_events: s_left_flipper_active
+  previous_item_events: s_right_flipper_active
+
+queue_relay_player:
+  player_turn_starting:
+    post: landing_site_selection_started
+    wait_for: select_landing_site_item_selected
+
+slide_player:
+  select_landing_site_continue_highlighted:
+    select_landing_site_continue_slide:
+      target: dmd
+    select_landing_site_continue_backglass_slide:
+      target: backglass
+  select_landing_site_crateria_highlighted:
+    select_landing_site_crateria_slide:
+      target: dmd
+    select_landing_site_crateria_backglass_slide:
+      target: backglass
+  select_landing_site_brinstar_highlighted:
+    select_landing_site_brinstar_slide:
+      target: dmd
+    select_landing_site_brinstar_backglass_slide:
+      target: backglass
+  select_landing_site_wrecked_ship_highlighted:
+    select_landing_site_wrecked_ship_slide:
+      target: dmd
+    select_landing_site_wrecked_ship_backglass_slide:
+      target: backglass
+  select_landing_site_maridia_highlighted:
+    select_landing_site_maridia_slide:
+      target: dmd
+    select_landing_site_maridia_backglass_slide:
+      target: backglass
+  select_landing_site_norfair_highlighted:
+    select_landing_site_norfair_slide:
+      target: dmd
+    select_landing_site_norfair_backglass_slide:
+      target: backglass
+
+slides:
+  select_landing_site_continue_slide:
+    widgets:
+    - type: image
+      image: landing_site_continue
+  select_landing_site_continue_backglass_slide:
+    widgets:
+    - type: image
+      image: landing_site_continue_backglass
+  select_landing_site_crateria_slide:
+    widgets:
+    - type: image
+      image: landing_site_crateria
+  select_landing_site_crateria_backglass_slide:
+    widgets:
+    - type: image
+      image: landing_site_crateria_backglass
+  select_landing_site_brinstar_slide:
+    widgets:
+    - type: image
+      image: landing_site_brinstar
+  select_landing_site_brinstar_backglass_slide:
+    widgets:
+    - type: image
+      image: landing_site_brinstar_backglass
+  select_landing_site_wrecked_ship_slide:
+    widgets:
+    - type: image
+      image: landing_site_wrecked_ship
+  select_landing_site_wrecked_ship_backglass_slide:
+    widgets:
+    - type: image
+      image: landing_site_wrecked_ship_backglass
+  select_landing_site_maridia_slide:
+    widgets:
+    - type: image
+      image: landing_site_maridia
+  select_landing_site_maridia_backglass_slide:
+    widgets:
+    - type: image
+      image: landing_site_maridia_backglass
+  select_landing_site_norfair_slide:
+    widgets:
+    - type: image
+      image: landing_site_norfair
+  select_landing_site_norfair_backglass_slide:
+    widgets:
+    - type: image
+      image: landing_site_norfair_backglass
+

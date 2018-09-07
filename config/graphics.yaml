@@ -1,10 +1,5 @@
 #config_version=5
 
-images:
-  backglass_main:
-    load: preload
-    file: backglass_main_720.png
-
 displays:
   window:
     width: 720
@@ -64,6 +59,8 @@ slides:
         y: 780
       - type: image
         image: backglass_main_nebula
+    transition: fade
+    transition_out: fade
 
   dmd_slide:
     - type: text
@@ -88,6 +85,13 @@ slide_player:
     dmd_slide:
       expire: 2s
       target: dmd
+  game_starting:
+    backglass_slide:
+      target: backglass
+      action: remove
+  game_ended:
+    backglass_slide:
+      target: backglass
 
 kivy_config:
   kivy:

@@ -1,0 +1,64 @@
+#config_version=5
+mode:
+    start_events: room_1b_achieved, room_1b_already_complete
+    # stop_events: game_ending, room_1b_success, room_1b_already_complete
+    restart_on_next_ball: true
+    priority: 300
+
+multiballs:
+  gunship:
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 20s
+    start_events: room_1b_victory_scan_achieved
+
+counters:
+  room_1b_victory_counter:
+    count_events: whole_playfield_shot_group_hit
+    events_when_hit: room_1b_victory_scan_progress
+    starting_count: 0
+    count_complete_value: 200
+    direction: up
+    events_when_complete: room_1b_victory_scan_achieved
+    reset_events: game_start
+    persist_state: true
+    reset_on_complete: false
+    disable_on_complete: true
+
+slide_player:
+  player_room_1b_victory_scan_percent{value % 10 == 0}: room_1b_victory_progress_slide
+  mode_room_1b_gunship_victory_started:
+    room_1b_victory_backglass_slide:
+      target: backglass
+
+slides:
+  room_1b_victory_progress_slide:
+    widgets:
+      - type: text
+        text: Planet (value)% Scanned
+        color: yellow
+        style: dmd_med
+    expire: 1s
+  room_1b_victory_backglass_slide:
+    widgets:
+      - type: image
+        image: gunship_flying
+        y: 520
+      - type: image
+        image: room_1b_backglass_landed
+    transition:
+      type: push
+      duration: 1s
+      direction: down
+    transition_out: fade
+
+
+variable_player:
+  logicblock_room_1b_victory_counter_updated:
+    room_1b_victory_scan_percent:
+      int: value / 2
+      action: set
+  room_1b_victory_scan_achieved:
+    room_1b_victory_step_1:
+      int: 1
+      action: set

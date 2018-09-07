@@ -2,13 +2,21 @@
 
 modes:
   - base
+  - bonus
   - chozo_multiball
   - high_score
   - lanes
+  - match
   - missiles
-  - mode_1b_gunship
   - pop_bumpers
   - power_bombs
+  - room_1b_gunship
+  - room_1b_gunship_victory
+  - room_1l_entryway
+  - room_1r_space_pirate_battle
+  - room_2a_shifting_sands
+  - room_2i_lava_jump
+  - select_landing_site
   - spin_jumps
   - twitch_bits_multiball
 

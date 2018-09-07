@@ -1,0 +1,35 @@
+#config_version=5
+
+machine_vars:
+  twitch_last_bits_user:
+    initial_value: Goren1818
+    value_type: str
+  twitch_last_bits_amount:
+    initial_value: 237
+  twitch_last_chat_message:
+    initial_value: Yarrrrrr!
+    value_type: str
+  twitch_last_chat_message_line_1:
+    initial_value: Yarrrrrr!
+    value_type: str
+  twitch_last_chat_message_line_2:
+    initial_value: []
+    value_type: str
+  twitch_last_chat_message_line_3:
+    initial_value: []
+    value_type: str
+  twitch_last_chat_message_line_4:
+    initial_value: []
+    value_type: str
+  twitch_last_chat_message_line_5:
+    initial_value: []
+    value_type: str
+  twitch_last_chat_message_line_6:
+    initial_value: []
+    value_type: str
+  twitch_last_chat_message_line_count:
+    initial_value: 0
+  twitch_last_chat_user:
+    initial_value: TheArrrrrcade
+    value_type: str
+

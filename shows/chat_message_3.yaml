@@ -1,0 +1,30 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    chat_message_3_slide:
+      widgets:
+      - type: text
+        text: (machine|twitch_last_chat_user)
+        color: red
+        style: dmd_big
+        anchor_y: top
+        y: 32
+      - type: text
+        text: (machine|twitch_last_chat_message_line_1)
+        color: 009cff
+        style: dmd_small
+        anchor_y: top
+        y: 20
+      - type: text
+        text: (machine|twitch_last_chat_message_line_2)
+        color: 009cff
+        style: dmd_small
+        anchor_y: top
+        y: 14
+      - type: text
+        text: (machine|twitch_last_chat_message_line_3)
+        color: 009cff
+        style: dmd_small
+        anchor_y: top
+        y: 8

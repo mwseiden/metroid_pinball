@@ -1,0 +1,182 @@
+#config_version=5
+mode:
+    start_events: select_landing_site_crateria_selected, room_1b_continue
+    stop_events: game_ending, ball_ending, room_1b_success, room_1b_already_complete
+    #restart_on_next_ball: true
+    priority: 300
+
+accruals:
+  room_1b_complete_left_orbit:
+    events: left_orbit_hit
+    events_when_complete: room_1b_ship_left
+    persist_state: true
+    reset_on_complete: false
+  room_1b_complete_right_orbit:
+    events: right_orbit_hit
+    events_when_complete: room_1b_ship_right
+    persist_state: true
+    reset_on_complete: false
+  room_1b_complete_orbits:
+    events:
+      - room_1b_ship_left
+      - room_1b_ship_right
+    events_when_complete: room_1b_ship_navigated
+    persist_state: true
+    reset_on_complete: false
+  room_1b_land_ship:
+    enable_events: room_1b_ship_navigated
+    events: scoop_shot_hit
+    events_when_complete: room_1b_achieved
+    persist_state: true
+    reset_on_complete: false
+
+show_player:
+  room_1b_ship_left:
+    room_1b_go_left:
+      loops: 0
+    room_1b_left_orbit_blink:
+      action: stop
+  room_1b_ship_right:
+    room_1b_go_right:
+      loops: 0
+    room_1b_right_orbit_blink:
+      action: stop
+  room_1b_ship_navigated:
+    blink_light:
+      key: room_1b_scoop_blink
+      loops: -1
+      show_tokens:
+        led: led_enter_scoop
+        color: ffff00
+  room_1b_achieved:
+    room_1b_land_ship:
+      events_when_completed: room_1b_gunship_landing_animated
+      loops: 0
+    room_1b_scoop_blink:
+      action: stop
+  mode_room_1b_gunship_started{current_player.room_1b_step_1a == 0}:
+    blink_light:
+      key: room_1b_left_orbit_blink
+      loops: -1
+      show_tokens:
+        led: led_enter_left_orbit
+        color: 00ffff
+  mode_room_1b_gunship_started{current_player.room_1b_step_1b == 0}:
+    blink_light:
+      key: room_1b_right_orbit_blink
+      loops: -1
+      show_tokens:
+        led: led_enter_right_orbit
+        color: 00ffff
+  mode_room_1b_gunship_started{current_player.room_1b_step_1a == 1 and current_player.room_1b_step_1b == 1 and current_player.room_1b_step_2 == 0}:
+    blink_light:
+      key: room_1b_scoop_blink
+      loops: -1
+      show_tokens:
+        led: led_enter_scoop
+        color: ffff00
+
+event_player:
+  room_1b_gunship_landing_animated:
+    - room_1b_success
+  mode_room_1b_gunship_started{current_player.room_1b_step_2 == 0}:
+    - room_1b_show_backglass
+  mode_room_1b_gunship_started{current_player.room_1b_step_2 != 0}:
+    - room_1b_already_complete
+
+variable_player:
+  mode_room_1b_gunship_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 1b
+      action: set
+  room_1b_ship_left:
+    score: 50000
+    room_1b_step_1a:
+      int: 1
+      action: set
+  room_1b_ship_right:
+    score: 50000
+    room_1b_step_1b:
+      int: 1
+      action: set
+  room_1b_achieved:
+    score: 75000
+    room_1b_step_2:
+      int: 1
+      action: set
+
+animations:
+  room_1b_backglass_scroll_up_slow:
+    - property: y
+      value: 1280
+      relative: true
+      duration: 1s
+    - property: y
+      value: -1280
+      relative: true
+      duration: 0s
+      repeat: true
+  room_1b_backglass_scroll_up_fast:
+    - property: y
+      value: 1280
+      relative: true
+      duration: 0.5s
+    - property: y
+      value: -1280
+      relative: true
+      duration: 0s
+      repeat: true
+
+slides:
+  room_1b_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1b_backglass_rain
+        opacity: 0.5
+        y: -1
+        anchor_y: top
+        animations:
+          show_slide: room_1b_backglass_scroll_up_fast
+      - type: image
+        image: room_1b_backglass_rain
+        opacity: 0.5
+        y: 1279
+        anchor_y: top
+        animations:
+          show_slide: room_1b_backglass_scroll_up_fast
+      - type: image
+        image: gunship_flying
+        y: 700
+      - type: image
+        image: room_1b_backglass_rain
+        y: -1
+        anchor_y: top
+        animations:
+          show_slide: room_1b_backglass_scroll_up_slow
+      - type: image
+        image: room_1b_backglass_rain
+        y: 1279
+        anchor_y: top
+        animations:
+          show_slide: room_1b_backglass_scroll_up_slow
+    transition: fade
+    transition_out: fade
+  room_1b_splash_slide:
+    widgets:
+      - type: image
+        image: room_1b_splash
+
+slide_player:
+  room_1b_show_backglass:
+    room_1b_backglass_slide:
+      target: backglass
+    room_1b_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+images:
+  gunship_landing:
+    load: preload

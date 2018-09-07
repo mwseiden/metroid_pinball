@@ -24,8 +24,12 @@ show_player:
     flipper_code_squeak:
       priority: 200
       loops: 0
-  twitch_new_chat_message:
-    who_said_that:
+  twitch_new_chat_message{line_count <= 3}:
+    chat_message_3:
+      loops: 0
+      priority: 200
+  twitch_new_chat_message{line_count > 3 and line_count <= 1000}:
+    chat_message_6:
       loops: 0
       priority: 200
   twitch_bit_donation:
