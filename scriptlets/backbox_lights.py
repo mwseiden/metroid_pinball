@@ -47,7 +47,7 @@ class BackBoxLights(Scriptlet):
             self.machine,
             RGBColor(kwargs.get('color', [64, 0, 0])),
             int(kwargs.get('speed', 4)),
-            int(kwargs.get('repeat', 0),
+            int(kwargs.get('repeat', 0)),
             0 if kwargs.get('direction', 'left').lower() == 'left' else 1
         )
 
@@ -56,7 +56,7 @@ class BackBoxLights(Scriptlet):
             self.machine,
             RGBColor(kwargs.get('color', [64, 0, 0])),
             int(kwargs.get('speed', 4)),
-            int(kwargs.get('repeat', 0),
+            int(kwargs.get('repeat', 0)),
             0 if kwargs.get('direction', 'left').lower() == 'left' else 1
         )
 
