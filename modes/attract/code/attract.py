@@ -17,8 +17,6 @@ class MyAttract(Attract):
         self.add_mode_event_handler('s_right_flipper_inactive', self.event_right_flipper_up)
         self.add_mode_event_handler('s_left_flipper_active', self.event_left_flipper_down)
         self.add_mode_event_handler('s_left_flipper_inactive', self.event_left_flipper_up)
-        self.add_mode_event_handler('twitch_new_chat_message', self.chat_message)
-        self.add_mode_event_handler('twitch_bit_donation', self.bit_donation)
 
     def event_right_flipper_down(self, **kwargs):
         self.right_flipper_down = True
@@ -60,18 +58,3 @@ class MyAttract(Attract):
         if self.flip_pattern == 'BLRRLLL':
             self.info_log('Flipper Code: LORD SQUEAK')
             self.machine.events.post('flipper_code_squeak')
-
-    def chat_message(self, **kwargs):
-        backbox = self._backbox_scriptlet()
-        backbox.set_overlay_effect(backbox.show_sweep_horizontal(RGBColor([64, 0, 128]), 2, 3, 1))
-
-    def bit_donation(self, **kwargs):
-        backbox = self._backbox_scriptlet()
-        backbox.set_overlay_effect(backbox.show_sweep_horizontal(RGBColor([128, 64, 64]), 2, 9, 0))
-
-    # private ----------------------------------------------------------------
-
-    def _backbox_scriptlet(self):
-        for scriptlet in self.machine.scriptlets:
-            if scriptlet.name == 'BackBoxLights':
-                return scriptlet
