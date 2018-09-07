@@ -92,8 +92,11 @@ class BackBoxLights(Scriptlet):
         self.set_overlay_effect(self._create_show(**kwargs))
 
     def _create_show(self, **kwargs):
-        return self.shows.get(kwargs.get('show_type', 'rain').lower())(**kwargs)
+        show = self.shows.get(kwargs.get('show_type', 'none').lower())
+        return self._no_show() if show is None else show(**kwargs)
 
     def _clear_lights(self):
-        self.set_base_effect(self.show_solid(color='off'))
-        self.base_effect.save_state()
+        self.set_base_effect(self._no_show())
+
+    def _no_show(self):
+        return self.show_solid(color='off')

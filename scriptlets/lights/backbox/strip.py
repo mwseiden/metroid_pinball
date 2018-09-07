@@ -1,3 +1,5 @@
+from mpf.core.rgb_color import RGBColor
+
 class Strip:
     def __init__(self, machine, offset, size, forward):
         self.machine = machine
@@ -5,6 +7,7 @@ class Strip:
         self.size = size
         self.forward = forward
         self._lights = list(range(offset, offset + size) if forward else range(offset + size - 1, offset - 1, -1))
+        self._initialize_state()
 
     def get_led(self, index):
         return None if self._index_out_of_range(index) else _get_led(index)
@@ -44,3 +47,6 @@ class Strip:
 
     def _get_light_key(self, index):
         return 'led{:02X}'.format(index)
+
+    def _initialize_state(self):
+        self._state = [RGBColor('off')] * self.size
