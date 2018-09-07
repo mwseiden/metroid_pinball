@@ -31,6 +31,6 @@ variable_player:
       int: 1
       action: set
     continue_room:
-      str: 2a
+      string: 2a
       action: set
 

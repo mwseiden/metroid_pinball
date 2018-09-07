@@ -34,6 +34,6 @@ variable_player:
       int: 1
       action: set
     continue_room:
-      str: 2i
+      string: 2i
       action: set
 

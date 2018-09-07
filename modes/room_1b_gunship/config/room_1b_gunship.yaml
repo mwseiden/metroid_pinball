@@ -90,7 +90,7 @@ variable_player:
       int: 1
       action: set
     continue_room:
-      str: 1b
+      string: 1b
       action: set
   room_1b_ship_left:
     score: 50000
