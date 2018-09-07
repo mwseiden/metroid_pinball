@@ -23,7 +23,7 @@ class BackBoxLights(Scriptlet):
         self.machine.events.add_handler('cmd_backbox_show_overlay', self._show_overlay_effect)
 
     def set_effects_to_default(self):
-        self.base_effect = None
+        self._clear_lights()
         self.overlay_effect = None
 
     def set_base_effect(self, effect):
@@ -40,8 +40,6 @@ class BackBoxLights(Scriptlet):
 
         if effect is None and self.base_effect is not None:
             self.base_effect.restore_state()
-        else:
-            self._clear_lights()
 
     # show factories ---------------------------------------------------------
 
