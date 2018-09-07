@@ -76,6 +76,6 @@ slides:
       y: 12
 
 event_player:
-  mode_bonus_ending:
+  mode_bonus_stopping:
     cmd_backbox_show:
       show_type: none

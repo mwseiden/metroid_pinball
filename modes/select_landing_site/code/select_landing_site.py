@@ -17,5 +17,6 @@ class SelectLandingSite(Carousel):
         super()._update_highlighted_item(direction)
 
     def _continue_from_last_room(self, **kwargs):
+        self.info_log("WTF: %s", 'room_{}_continue'.format(player['continue_room']))
         player = self.machine.game.player
         self.machine.events.post('room_{}_continue'.format(player['continue_room']))
