@@ -1,0 +1,35 @@
+#config_version=5
+mode:
+    start_events: select_landing_site_brinstar_selected
+    stop_events: game_ending, ball_ending
+    # restart_on_next_ball: true
+    priority: 300
+
+slides:
+  room_1r_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1r_space_pirate_battle_backglass
+    transition: fade
+    transition_out: fade
+  room_1r_splash_slide:
+    widgets:
+      - type: image
+        image: room_1r_splash
+
+slide_player:
+  mode_room_1r_space_pirate_battle_started:
+    room_1r_backglass_slide:
+      target: backglass
+    room_1r_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+variable_player:
+  mode_room_1r_space_pirate_battle_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      str: 1r
+      action: set

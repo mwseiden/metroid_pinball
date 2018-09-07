@@ -6,7 +6,7 @@ class SelectLandingSite(Carousel):
         player = self.machine.game.player
         items = self._get_available_items()
 
-        if player['has_chosen_landing_site'] != 0 and direction is None:
+        if player['has_chosen_landing_site'] != 0 and 'continue' not in items:
             items.insert(0, 'continue')
 
         super()._update_highlighted_item(direction)

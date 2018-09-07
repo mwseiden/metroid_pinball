@@ -1,8 +1,8 @@
 #config_version=5
 mode:
-    start_events: ball_starting
-    stop_events: game_ending, room_1b_success, room_1b_already_complete
-    restart_on_next_ball: true
+    start_events: select_landing_site_crateria_selected
+    stop_events: game_ending, ball_ending, room_1b_success, room_1b_already_complete
+    #restart_on_next_ball: true
     priority: 300
 
 accruals:
@@ -89,6 +89,9 @@ variable_player:
     has_chosen_landing_site:
       int: 1
       action: set
+    continue_room:
+      str: 1b
+      action: set
   room_1b_ship_left:
     score: 50000
     room_1b_step_1a:
@@ -161,11 +164,18 @@ slides:
           show_slide: room_1b_backglass_scroll_up_slow
     transition: fade
     transition_out: fade
+  room_1b_splash_slide:
+    widgets:
+      - type: image
+        image: room_1b_splash
 
 slide_player:
   room_1b_show_backglass:
     room_1b_backglass_slide:
       target: backglass
+    room_1b_splash_slide:
+      target: dmd
+      expire: 1.5s
 
 images:
   gunship_landing:
