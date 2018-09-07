@@ -50,6 +50,7 @@ class BackBoxLights(Scriptlet):
         return Show(self.machine, RGBColor(kwargs.get('color', [0, 0, 0])))
 
     def show_sweep_horizontal(self, **kwargs):
+        self.info_log('WTF: %s', str(kwargs.get('color', '400000'))
         return SweepHorizontal(
             self.machine,
             RGBColor(kwargs.get('color', '400000')),
