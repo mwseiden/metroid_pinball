@@ -48,7 +48,7 @@ class BackBoxLights(Scriptlet):
             RGBColor(kwargs.get('color', [64, 0, 0])),
             int(kwargs.get('speed', 4)),
             int(kwargs.get('repeat', 0),
-            0 if int(kwargs.get('direction', 'left')) == 'left' else 1
+            0 if kwargs.get('direction', 'left').lower() == 'left' else 1
         )
 
     def show_sweep_vertical(self, **kwargs):
@@ -57,7 +57,7 @@ class BackBoxLights(Scriptlet):
             RGBColor(kwargs.get('color', [64, 0, 0])),
             int(kwargs.get('speed', 4)),
             int(kwargs.get('repeat', 0),
-            0 if int(kwargs.get('direction', 'left')) == 'left' else 1
+            0 if kwargs.get('direction', 'left').lower() == 'left' else 1
         )
 
     # private ----------------------------------------------------------------
