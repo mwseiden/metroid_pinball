@@ -2,13 +2,13 @@
 mode:
   code: select_landing_site.SelectLandingSite
   start_events: ball_starting
-  stop_events: ball_ended, s_shooter_lane_inactive
+  stop_events: ball_ended, select_landing_site_item_selected
   priority: 500
   game_mode: false
 
 mode_settings:
   selectable_items: crateria, brinstar, wrecked_ship, maridia, norfair
-  select_item_events: s_start_active
+  select_item_events: s_shooter_lane_inactive
   next_item_events: s_left_flipper_active
   previous_item_events: s_right_flipper_active
 
