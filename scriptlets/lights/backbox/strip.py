@@ -18,6 +18,12 @@ class Strip:
 
         self._set_color(index, color)
 
+    def get_color(self, index):
+        if self._index_out_of_range(index):
+            return None
+
+        return self._get_color(index)
+
     def set_all_colors(self, color):
         for index in range(self.size):
             self._set_color(index, color)

@@ -74,6 +74,11 @@ slide_player:
       target: dmd
       expire: 1.5s
 
+event_player:
+  mode_room_2i_lava_jump_started:
+    cmd_backbox_show:
+      show_type: fire
+
 variable_player:
   mode_room_2i_lava_jump_started:
     has_chosen_landing_site:

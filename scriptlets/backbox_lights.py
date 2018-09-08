@@ -1,5 +1,6 @@
 from mpf.core.rgb_color import RGBColor
 from mpf.core.scriptlet import Scriptlet
+from .lights.backbox.fire import Fire
 from .lights.backbox.rain import Rain
 from .lights.backbox.solid import Solid
 from .lights.backbox.sweep_horizontal import SweepHorizontal
@@ -11,6 +12,7 @@ class BackBoxLights(Scriptlet):
 
     def on_load(self):
         self.shows = {
+            'fire': self.show_fire,
             'rain': self.show_rain,
             'solid': self.show_solid,
             'sweep_horizontal': self.show_sweep_horizontal,
@@ -45,6 +47,9 @@ class BackBoxLights(Scriptlet):
 
     def show_rain(self, **kwargs):
         return Rain(self.machine)
+
+    def show_fire(self, **kwargs):
+        return Fire(self.machine)
 
     def show_solid(self, **kwargs):
         return Solid(self.machine, RGBColor(kwargs.get('color', [0, 0, 0])))
