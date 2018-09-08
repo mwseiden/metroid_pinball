@@ -13,5 +13,7 @@ class Fire(DynamicBackBoxShow):
         for strip in self.strips:
             for light_index in range(1, strip.size - 1):
                 strip.set_color(light_index + 1, (strip.get_color(light_index) * 0.5 + strip.get_color(light_index + 1) * 0.5))
-            strip.set_color(0, RGBColor([intensity, intensity / 2, intensity / 2])
+            intensity = randint(0, 120)
+            highlight = randint(0, 60)
+            strip.set_color(0, RGBColor([intensity, highlight, highlight])
             strip.set_color(strip.size - 1, strip.get_color(strip.size - 1) * 0.5)
