@@ -17,12 +17,12 @@ class Fire(DynamicBackBoxShow):
             strip.set_color(0, RGBColor([intensity, highlight, highlight / 2]))
 
             for light_index in range(0, strip.size - 1):
-                strip.set_color(light_index + 1, self._average_colors(strip.get_color(light_index), strip.get_color(light_index + 1)))
+                strip.set_color(light_index + 1, self._decay_colors(strip.get_color(light_index), strip.get_color(light_index + 1)))
 
-            strip.set_color(strip.size - 1, self._average_colors(strip.get_color(strip.size - 1), self.OFF_COLOR))
+            strip.set_color(strip.size - 1, self._decay_colors(strip.get_color(strip.size - 1), self.OFF_COLOR))
 
-    def _average_colors(self, a, b):
+    def _decay_colors(self, a, b):
         r1, g1, b1 = a.rgb
         r2, g2, b2 = b.rgb
 
-        return RGBColor([(r1 + r2) / 2, (g1 + g2) / 2, (b1 + b2) / 2])
+        return RGBColor([(r1 + r2) / 3, (g1 + g2) / 3, (b1 + b2) / 3])
