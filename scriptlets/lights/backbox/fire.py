@@ -23,9 +23,6 @@ class Fire(DynamicBackBoxShow):
         super().animate()
 
         for strip in self.strips:
-            # highlight = randint(0, 30)
-            # intensity = randint(0, 80)
-            # RGBColor([intensity, intensity / 2, intensity / 4])
             strip.set_color(strip.size - 1, choice(self.FIRE_COLORS))
 
             for light_index in reversed(range(1, strip.size)):
@@ -37,4 +34,8 @@ class Fire(DynamicBackBoxShow):
         r1, g1, b1 = a.rgb
         r2, g2, b2 = b.rgb
 
-        return RGBColor([(r1 + r2) / 2.5, (g1 + g2) / 3, (b1 + b2) / 3])
+        return RGBColor([
+            int(((r1 + r2) / 2.5) * 0.9)),
+            int(((g1 + g2) / 3) * 0.8)),
+            int(((b1 + b2) / 3) * 0.7))
+        ])
