@@ -32,14 +32,14 @@ slides:
     widgets:
       - type: image
         image: room_2i_lava_jump_backglass
-        opacity: 0.75
+        opacity: 0.5
         y: -1
         anchor_y: top
         animations:
           show_slide: room_2i_backglass_scroll_up
       - type: image
         image: room_2i_lava_jump_backglass
-        opacity: 0.75
+        opacity: 0.5
         y: 1279
         anchor_y: top
         animations:
