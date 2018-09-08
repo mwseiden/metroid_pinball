@@ -5,7 +5,7 @@ from .dynamic_backbox_show import DynamicBackBoxShow
 class Fire(DynamicBackBoxShow):
     FIRE_COLOR = RGBColor([80, 35, 0])
 
-    def __init__(self):
+    def __init__(self, machine):
         super().__init__(machine)
 
     def animate(self):
