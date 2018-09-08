@@ -34,8 +34,9 @@ class Fire(DynamicBackBoxShow):
         r1, g1, b1 = a.rgb
         r2, g2, b2 = b.rgb
 
+        decay = 1.0 - (0.1 * randint(1, 5))
         return RGBColor([
-            int(((r1 + r2) / 2.5) * 0.9)),
-            int(((g1 + g2) / 3) * 0.8)),
-            int(((b1 + b2) / 3) * 0.7))
+            int(((r1 + r2) / 1.8) * decay),
+            int(((g1 + g2) / 2.6) * decay),
+            int(((b1 + b2) / 3.2) * decay)
         ])
