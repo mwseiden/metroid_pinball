@@ -55,7 +55,7 @@ class BackBoxLights(Scriptlet):
 
     def show_rain(self, **kwargs):
         return Rain(self.machine)
--
+
     #def show_sunny_days_that_i_thought_would_never_end(self, **kwargs):
     #    return Sunshine(self.machine)
 
