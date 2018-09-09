@@ -55,7 +55,7 @@ class ColumnPour():
         if self.dripping:
             if self.frame % self.drop_frequency == 0:
                 self.current_length -= 1
-                drops += Drop(self.strip, self.current_length, self._randomized_color())
+                self.drops += [Drop(self.strip, self.current_length, self._randomized_color())]
                 if self.drop_frequency > 2:
                     self.drop_frequency -= 1
 
@@ -64,7 +64,7 @@ class ColumnPour():
             for drop in self.drops:
                 drop.animate()
                 if drop.is_finished():
-                    finished_drops += drop
+                    finished_drops += [drop]
 
             self.drops = list(set(self.drops).difference(finished_drops))
         else:
@@ -72,7 +72,7 @@ class ColumnPour():
             self.dripping = self.current_length >= self.length
 
     def is_finished(self):
-        return self.dripping and self.current_length == 0 and self.drops.length == 0
+        return self.dripping and self.current_length == 0 and len(self.drops) == 0
 
     def _randomized_color(self):
         r, g, b = self.color.rgb
