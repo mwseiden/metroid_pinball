@@ -28,8 +28,7 @@ class Pour(DynamicBackBoxShow):
                 self._generate_pour(pour_number)
 
     def _generate_pour(self, index):
-        self.pour_columns[index] = choice(range(self.strip_count) - self.pour_columns)
-        # self.info_log('WTF: generating pour in column %s', self.pour_columns[index])
+        self.pour_columns[index] = choice(list(set(range(self.strip_count)).difference(self.pour_columns)))
         self.pours[index] = ColumnPour(
             self.strips[self.pour_columns[index]],
             randint(self.min_length, self.max_length + 1),
