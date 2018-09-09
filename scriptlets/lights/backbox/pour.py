@@ -44,15 +44,18 @@ class ColumnPour():
         self.dripping = False
         self.current_length = 0
         self.drop_frequency = 8
+        self.frame = 0
 
     def animate(self):
+        self.frame += 1
+
         for light_number in range(0, self.current_length):
-            self.strip.set_color(light_number, _randomized_color())
+            self.strip.set_color(light_number, self._randomized_color())
 
         if self.dripping:
             if self.frame % self.drop_frequency == 0:
                 self.current_length -= 1
-                drops += Drop(self.strip, self.current_length, _randomized_color())
+                drops += Drop(self.strip, self.current_length, self._randomized_color())
                 if self.drop_frequency > 2:
                     self.drop_frequency -= 1
 
@@ -72,7 +75,7 @@ class ColumnPour():
         return self.dripping and self.current_length == 0 and self.drops.length == 0
 
     def _randomized_color(self):
-        r, g, b = color.rgb
+        r, g, b = self.color.rgb
         variance = 1.1 - (0.05 * randint(0, 5))
 
         return RGBColor([int(r * variance), int(g * variance), int(b * variance)])
@@ -92,3 +95,4 @@ class Drop():
 
     def is_finished(self):
         return self.position >= self.strip.size
+
