@@ -65,8 +65,8 @@ class ColumnPour():
                 drop.animate()
                 if drop.is_finished():
                     finished_drops += drop
-                    
-            self.drops -= finished_drops
+
+            self.drops = list(set(self.drops).difference(finished_drops))
         else:
             self.current_length += 1
             self.dripping = self.current_length >= self.length
