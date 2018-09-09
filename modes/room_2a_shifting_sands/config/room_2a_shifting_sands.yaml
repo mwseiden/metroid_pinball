@@ -25,6 +25,15 @@ slide_player:
       target: dmd
       expire: 1.5s
 
+event_player:
+  mode_room_1b_gunship_victory_started:
+    cmd_backbox_show:
+      show_type: pour
+      count: 3
+      min_length: 4
+      max_length: 12
+      color: "101000"
+
 variable_player:
   mode_room_2a_shifting_sands_started:
     has_chosen_landing_site:
