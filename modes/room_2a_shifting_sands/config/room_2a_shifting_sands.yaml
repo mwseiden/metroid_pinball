@@ -26,7 +26,7 @@ slide_player:
       expire: 1.5s
 
 event_player:
-  mode_room_1b_gunship_victory_started:
+  mode_room_2a_shifting_sands_started:
     cmd_backbox_show:
       show_type: pour
       count: 3
