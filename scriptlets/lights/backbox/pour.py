@@ -29,6 +29,7 @@ class Pour(DynamicBackBoxShow):
 
     def _generate_pour(self, index):
         self.pour_columns[index] = choice(range(self.strip_count) - self.pour_columns)
+        # self.info_log('WTF: generating pour in column %s', self.pour_columns[index])
         self.pours[index] = ColumnPour(
             self.strips[self.pour_columns[index]],
             randint(self.min_length, self.max_length + 1),
@@ -46,10 +47,8 @@ class ColumnPour():
         self.drop_frequency = 8
 
     def animate(self):
-        super().animate()
-
         for light_number in range(0, self.current_length):
-            strip.set_color(light_number, _randomized_color())
+            self.strip.set_color(light_number, _randomized_color())
 
         if self.dripping:
             if self.frame % self.drop_frequency == 0:
@@ -68,7 +67,7 @@ class ColumnPour():
             self.drops -= finished_drops
         else:
             self.current_length += 1
-            self.dripping = self.current_length < self.length
+            self.dripping = self.current_length >= self.length
 
     def is_finished(self):
         return self.dripping and self.current_length == 0 and self.drops.length == 0
