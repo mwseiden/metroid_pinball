@@ -35,7 +35,7 @@ class Pour(DynamicBackBoxShow):
             self.color
         )
 
-class ColumnPour(self, strip, length, color):
+class ColumnPour():
     def __init__(self, strip, length, color):
         self.strip = strip
         self.length = length
@@ -71,7 +71,7 @@ class ColumnPour(self, strip, length, color):
             self.dripping = self.current_length < self.length
 
     def is_finished(self):
-        return self.dripping and self.current_length == 0 and self.drops.length = 0
+        return self.dripping and self.current_length == 0 and self.drops.length == 0
 
     def _randomized_color(self):
         r, g, b = color.rgb
