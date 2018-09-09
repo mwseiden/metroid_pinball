@@ -53,7 +53,7 @@ class ColumnPour():
             self.strip.set_color(light_number, self._randomized_color())
 
         if self.dripping:
-            if self.frame % self.drop_frequency == 0:
+            if self.current_length > 0 and self.frame % self.drop_frequency == 0:
                 self.current_length -= 1
                 self.drops += [Drop(self.strip, self.current_length, self._randomized_color())]
                 if self.drop_frequency > 2:
