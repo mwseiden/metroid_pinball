@@ -52,6 +52,11 @@ slides:
       direction: down
     transition_out: fade
 
+event_player:
+  mode_room_1b_gunship_victory_started:
+    cmd_backbox_show:
+      show_type: cloudy_landscape
+
 
 variable_player:
   logicblock_room_1b_victory_counter_updated:
