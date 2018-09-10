@@ -4,7 +4,7 @@ from .lights.backbox.cloudy_landscape import CloudyLandscape
 from .lights.backbox.fire import Fire
 from .lights.backbox.pour import Pour
 from .lights.backbox.rain import Rain
-from .lights.backbox.rain import Rainbow
+from .lights.backbox.rainbow import Rainbow
 from .lights.backbox.solid import Solid
 from .lights.backbox.sweep_horizontal import SweepHorizontal
 from .lights.backbox.sweep_vertical import SweepVertical
