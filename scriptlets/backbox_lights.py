@@ -4,6 +4,7 @@ from .lights.backbox.cloudy_landscape import CloudyLandscape
 from .lights.backbox.fire import Fire
 from .lights.backbox.pour import Pour
 from .lights.backbox.rain import Rain
+from .lights.backbox.rain import Rainbow
 from .lights.backbox.solid import Solid
 from .lights.backbox.sweep_horizontal import SweepHorizontal
 from .lights.backbox.sweep_vertical import SweepVertical
@@ -18,6 +19,7 @@ class BackBoxLights(Scriptlet):
             'fire': self.show_fire,
             'pour': self.show_pour,
             'rain': self.show_rain,
+            'rainbow': self.show_rainbow,
             'solid': self.show_solid,
             'sweep_horizontal': self.show_sweep_horizontal,
             'sweep_vertical': self.show_sweep_vertical,
@@ -61,11 +63,17 @@ class BackBoxLights(Scriptlet):
             int(kwargs.get('count', 1)),
             int(kwargs.get('min_length', 5)),
             int(kwargs.get('max_length', 10)),
-            RGBColor(kwargs.get('color', '400000')),
+            RGBColor(kwargs.get('color', '400000'))
         )
 
     def show_rain(self, **kwargs):
         return Rain(self.machine)
+
+    def show_rainbow(self, **kwargs):
+        return Rainbow(
+            self.machine,
+            int(kwargs.get('speed', 4))
+        )
 
     #def show_sunny_days_that_i_thought_would_never_end(self, **kwargs):
     #    return Sunshine(self.machine)

@@ -64,3 +64,6 @@ event_player:
       speed: 2
       repeat: 9
       direction: left
+  mode_attract_started:
+    cmd_backbox_show:
+      show_type: rainbow
