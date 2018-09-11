@@ -67,3 +67,7 @@ event_player:
   mode_attract_started:
     cmd_backbox_show:
       show_type: rainbow
+  mode_attract_stopping:
+    cmd_backbox_show:
+      show_type: solid
+      color: off

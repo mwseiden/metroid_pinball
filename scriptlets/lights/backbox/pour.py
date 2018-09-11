@@ -5,6 +5,7 @@ from mpf.core.rgb_color import RGBColor
 from .dynamic_backbox_show import DynamicBackBoxShow
 
 class Pour(DynamicBackBoxShow):
+
     def __init__(self, machine, pour_count, min_length, max_length, color):
         super().__init__(machine)
 
@@ -20,6 +21,10 @@ class Pour(DynamicBackBoxShow):
             self._generate_pour(pour_number)
 
     def animate(self):
+        if self.frame == 0:
+            for strip in self.strips:
+                strip.set_all_colors(self.OFF_COLOR)
+
         super().animate()
 
         for pour_number in range(self.pour_count):

@@ -2,7 +2,6 @@ from mpf.core.rgb_color import RGBColor
 from .dynamic_backbox_show import DynamicBackBoxShow
 
 class Sweep(DynamicBackBoxShow):
-    OFF_COLOR = RGBColor([0, 0, 0])
 
     def __init__(self, machine, color, speed, repeat, direction, max_sweep):
         super().__init__(machine)

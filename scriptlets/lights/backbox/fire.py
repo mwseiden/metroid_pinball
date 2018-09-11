@@ -4,7 +4,6 @@ from mpf.core.rgb_color import RGBColor
 from .dynamic_backbox_show import DynamicBackBoxShow
 
 class Fire(DynamicBackBoxShow):
-    OFF_COLOR = RGBColor([0, 0, 0])
     FIRE_COLORS = [
         RGBColor([80, 80, 80]),
         RGBColor([80, 70, 60]),
