@@ -107,11 +107,11 @@ event_player:
       show_type: fire
   slide_erin_slide_active:
     cmd_backbox_show:
-      show_type: drop
-      min_delay: 0
-      max_delay: 1
-      background_color: "040004"
-      drop_color: "100010"
+      show_type: two_tone
+      min_cutoff: 2
+      max_cutoff: 8
+      color1: "000040"
+      color2: "403000"
   slide_owl_slide_active:
     cmd_backbox_show:
       show_type: pour
