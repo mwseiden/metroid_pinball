@@ -74,7 +74,7 @@ class BackBoxLights(Scriptlet):
 
     def show_drop(self, **kwargs):
         return Drop(
-            self.machine
+            self.machine,
             int(kwargs.get('min_delay', 1)),
             int(kwargs.get('max_delay', 2)),
             RGBColor(kwargs.get('background_color', '000000')),
