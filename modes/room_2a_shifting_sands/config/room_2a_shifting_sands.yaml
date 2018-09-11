@@ -32,7 +32,7 @@ event_player:
       count: 3
       min_length: 4
       max_length: 12
-      color: "181000"
+      color: "200C00"
 
 variable_player:
   mode_room_2a_shifting_sands_started:

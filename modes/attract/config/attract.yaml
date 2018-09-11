@@ -108,10 +108,13 @@ event_player:
   slide_erin_slide_active:
     cmd_backbox_show:
       show_type: two_tone
-      min_cutoff: 2
+      min_cutoff: 8
       max_cutoff: 8
       color1: "000040"
-      color2: "403000"
+      color2: "401800"
+  slide_rubber_ducks_slide_active:
+    cmd_backbox_show:
+      show_type: fire
   slide_owl_slide_active:
     cmd_backbox_show:
       show_type: pour

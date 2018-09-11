@@ -83,7 +83,7 @@ event_player:
     - room_1b_show_backglass
   mode_room_1b_gunship_started{current_player.room_1b_step_2 != 0}:
     - room_1b_already_complete
-  mode_room_1b_gunship_started:
+  room_1b_show_backglass:
     cmd_backbox_show:
       show_type: drop
       min_delay: 1
