@@ -55,7 +55,11 @@ slides:
 event_player:
   mode_room_1b_gunship_victory_started:
     cmd_backbox_show:
-      show_type: cloudy_landscape
+      show_type: two_tone
+      min_cutoff: 6
+      max_cutoff: 8
+      color1: "040404"
+      color2: "04100C"
 
 
 variable_player:

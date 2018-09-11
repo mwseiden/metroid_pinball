@@ -1,6 +1,6 @@
 from mpf.core.rgb_color import RGBColor
 from mpf.core.scriptlet import Scriptlet
-from .lights.backbox.cloudy_landscape import CloudyLandscape
+from .lights.backbox.solid_two_tone import SolidTwoTone
 from .lights.backbox.fire import Fire
 from .lights.backbox.pour import Pour
 from .lights.backbox.rain import Rain
@@ -15,7 +15,7 @@ class BackBoxLights(Scriptlet):
 
     def on_load(self):
         self.shows = {
-            'cloudy_landscape': self.show_cloudy_landscape,
+            'two_tone': self.show_two_tone,
             'fire': self.show_fire,
             'pour': self.show_pour,
             'rain': self.show_rain,
@@ -51,8 +51,14 @@ class BackBoxLights(Scriptlet):
 
     # show factories ---------------------------------------------------------
 
-    def show_cloudy_landscape(self, **kwargs):
-        return CloudyLandscape(self.machine)
+    def show_two_tone(self, **kwargs):
+        return SolidTwoTone(
+            self.machine,
+            int(kwargs.get('min_cutoff', 5)),
+            int(kwargs.get('max_cutoff', 5)),
+            RGBColor(kwargs.get('color1', '400000')),
+            RGBColor(kwargs.get('color2', '400000'))
+        )
 
     def show_fire(self, **kwargs):
         return Fire(self.machine)
