@@ -26,5 +26,5 @@ class SolidTwoTone(DynamicBackBoxShow):
             for light_number in range(0, self.strips[strip_number].size):
                 self.strips[strip_number].set_color(
                     light_number,
-                    self.color1 if light_number >= self.cutoff[strip_number] else self.color2
+                    self.color1 if light_number < self.cutoff[strip_number] else self.color2
                 )
