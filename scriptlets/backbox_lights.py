@@ -3,7 +3,7 @@ from mpf.core.scriptlet import Scriptlet
 from .lights.backbox.solid_two_tone import SolidTwoTone
 from .lights.backbox.fire import Fire
 from .lights.backbox.pour import Pour
-from .lights.backbox.rain import Rain
+from .lights.backbox.drop import Drop
 from .lights.backbox.rainbow import Rainbow
 from .lights.backbox.solid import Solid
 from .lights.backbox.sweep_horizontal import SweepHorizontal
@@ -18,7 +18,7 @@ class BackBoxLights(Scriptlet):
             'two_tone': self.show_two_tone,
             'fire': self.show_fire,
             'pour': self.show_pour,
-            'rain': self.show_rain,
+            'drop': self.show_drop,
             'rainbow': self.show_rainbow,
             'solid': self.show_solid,
             'sweep_horizontal': self.show_sweep_horizontal,
@@ -72,8 +72,14 @@ class BackBoxLights(Scriptlet):
             RGBColor(kwargs.get('color', '400000'))
         )
 
-    def show_rain(self, **kwargs):
-        return Rain(self.machine)
+    def show_drop(self, **kwargs):
+        return Drop(
+            self.machine
+            int(kwargs.get('min_delay', 1)),
+            int(kwargs.get('max_delay', 2)),
+            RGBColor(kwargs.get('background_color', '000000')),
+            RGBColor(kwargs.get('drop_color', '400000'))
+        )
 
     def show_rainbow(self, **kwargs):
         return Rainbow(

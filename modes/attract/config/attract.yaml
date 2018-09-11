@@ -90,7 +90,15 @@ event_player:
       color2: "000040"
   slide_double_danger_slide_active:
     cmd_backbox_show:
-      show_type: rain
+      show_type: drop
+      min_delay: 4
+      max_delay: 6
+      background_color: "040000"
+      drop_color: "100C00"
+  slide_pbu_slide_active:
+    cmd_backbox_show:
+      show_type: fire
+
   mode_attract_stopping:
     cmd_backbox_show:
       show_type: none
