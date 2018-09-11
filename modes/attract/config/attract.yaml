@@ -64,9 +64,33 @@ event_player:
       speed: 2
       repeat: 9
       direction: left
-  mode_attract_started:
+  slide_last_game_high_scores_active:
     cmd_backbox_show:
       show_type: rainbow
+  slide_fast_logo_active:
+    cmd_backbox_show:
+      show_type: two_tone
+      min_cutoff: 5
+      max_cutoff: 5
+      color1: "400000"
+      color2: "000040"
+  slide_arrrrrcade_active:
+    cmd_backbox_show:
+      show_type: pour
+      count: 7
+      min_length: 2
+      max_length: 16
+      color: "400000"
+  slide_metroid_logo_active:
+    cmd_backbox_show:
+      show_type: two_tone
+      min_cutoff: 2
+      max_cutoff: 8
+      color1: "404040"
+      color2: "000040"
+  slide_double_danger_slide_active:
+    cmd_backbox_show:
+      show_type: rain
   mode_attract_stopping:
     cmd_backbox_show:
       show_type: none
