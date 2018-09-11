@@ -106,14 +106,14 @@ event_player:
   select_landing_site_continue_highlighted:
     cmd_backbox_show:
       show_type: none
-  select_landing_site_crateria_highlighted{room_1b_step_2 == 0}:
+  select_landing_site_crateria_highlighted{current_player.room_1b_step_2 == 0}:
     cmd_backbox_show:
       show_type: drop
       min_delay: 1
       max_delay: 2
       background_color: "000004"
       drop_color: "101020"
-  select_landing_site_crateria_highlighted{room_1b_step_2 != 0}:
+  select_landing_site_crateria_highlighted{current_player.room_1b_step_2 != 0}:
     cmd_backbox_show:
       show_type: two_tone
       min_cutoff: 6
