@@ -137,3 +137,6 @@ event_player:
   select_landing_site_norfair_highlighted:
     cmd_backbox_show:
       show_type: fire
+  mode_select_landing_site_stopping:
+    cmd_backbox_show:
+      show_type: none
