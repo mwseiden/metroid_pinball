@@ -1,0 +1,15 @@
+#config_version=5
+
+drop_targets:
+  drop_one:
+    switch: s_drop_target_1
+    coil: c_drop_1_reset
+    knockdown_coil: c_drop_1_down
+  drop_two:
+    switch: s_drop_target_1
+    coil: c_drop_1_reset
+    knockdown_coil: c_drop_1_down
+  drop_three:
+    switch: s_drop_target_1
+    coil: c_drop_1_reset
+    knockdown_coil: c_drop_1_down

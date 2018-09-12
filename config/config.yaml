@@ -23,6 +23,7 @@ config:
   - coils.yaml
   - autofire_coils.yaml
   - flippers.yaml
+  - drop_targets.yaml
   - ball_devices.yaml
   - sequence_shots.yaml
 
