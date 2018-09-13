@@ -6,19 +6,19 @@ mode:
 
 shots:
   skillshot_drops_one:
-    switches: s_drop_target_1
+    switch: s_drop_target_1
     enable_events: drop_target_drop_one_up
     disable_events:
       - drop_target_drop_one_down
       - mode_skillshot_drops_started
   skillshot_drops_two:
-    switches: s_drop_target_1
+    switch: s_drop_target_1
     enable_events: drop_target_drop_two_up
     disable_events:
       - drop_target_drop_two_down
       - mode_skillshot_drops_started
   skillshot_drops_three:
-    switches: s_drop_target_1
+    switch: s_drop_target_1
     enable_events: drop_target_drop_three_up
     disable_events:
       - drop_target_drop_three_down
