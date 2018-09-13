@@ -81,5 +81,5 @@ variable_player:
     score: 10000
   skillshot_drops_two_hit:
     score: 25000
-  skillshot_drops_one_hit:
+  skillshot_drops_three_hit:
     score: 50000
