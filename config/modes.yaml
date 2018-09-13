@@ -17,6 +17,7 @@ modes:
   - room_2a_shifting_sands
   - room_2i_lava_jump
   - select_landing_site
+  - skillshot_drops
   - spin_jumps
   - twitch_bits_multiball
 

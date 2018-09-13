@@ -206,65 +206,68 @@ event_player:
       speed: 1
       repeat: 20
       direction: left
+  whole_playfield_shot_group_hit: cmd_end_skillshot
+  mode_skillshot_drops_ended:
+    - cmd_reset_all_drops: 3s
 
 variable_player:
   left_orbit_hit:
     orbits: 1
     score:
-      int: (current_player.orbits * 500) + (current_player.spinners * 10)
+      int: ((current_player.orbits * 500) + (current_player.spinners * 10)) * current_player.multiplier
   right_orbit_hit:
     orbits: 1
     score:
-      int: (current_player.orbits * 500) + (current_player.spinners * 10)
+      int: ((current_player.orbits * 500) + (current_player.spinners * 10)) * current_player.multiplier
   ramp_shot_hit:
     ramps: 1
     score:
-      int: current_player.ramps * 1250
+      int: (current_player.ramps * 1250) * current_player.multiplier
   side_ramp_shot_hit:
     ramps: 1
     score:
-      int: current_player.ramps * 2010
+      int: (current_player.ramps * 2010) * current_player.multiplier
   secret_passage_shot_hit:
     score: 420
   upper_right_sling_shot_hit:
     slingshots: 1
     score:
-      int: 100 + (10 * current_player.slingshots)
+      int: (100 + (10 * current_player.slingshots)) * current_player.multiplier
   upper_left_sling_shot_hit:
     slingshots: 1
     score:
-      int: 100 + (10 * current_player.slingshots)
+      int: (100 + (10 * current_player.slingshots)) * current_player.multiplier
   left_sling_shot_hit:
     slingshots: 1
     score:
-      int: 100 + (10 * current_player.slingshots)
+      int: (100 + (10 * current_player.slingshots)) * current_player.multiplier
   right_sling_shot_hit:
     slingshots: 1
     score:
-      int: 100 + (10 * current_player.slingshots)
+      int: (100 + (10 * current_player.slingshots)) * current_player.multiplier
   big_red_shot_hit:
-    score: 5000
+    score: 5000 * current_player.multiplier
   rollover_shot_hit:
-    score: 1000
+    score: 1000 * current_player.multiplier
   shatz_shot_hit:
-    score: 1500
+    score: 1500 * current_player.multiplier
   full_shatz_hit:
-    score: 10000
+    score: 30000 * current_player.multiplier
   captive_shot_hit:
     captives: 1
     score:
-      int: 500 + (500 * current_player.captives)
+      int: (500 + (500 * current_player.captives)) * current_player.multiplier
   side_1_shot_hit:
-    score: 25000
+    score: 25000 * current_player.multiplier
   side_2_shot_hit:
-    score: 25000
+    score: 25000 * current_player.multiplier
   capside_combo_hit:
     capsides: 1
     score:
-      int: 10000 + (2000 * current_player.capsides)
+      int: (10000 + (2000 * current_player.capsides)) * current_player.multiplier
   scoop_shot_hit:
     scoops: 1
     score:
-      int: 1000 + (500 * current_player.scoops)
+      int: (1000 + (500 * current_player.scoops)) * current_player.multiplier
   whole_playfield_shot_group_hit:
     switches: 1

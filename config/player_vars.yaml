@@ -18,6 +18,8 @@ player_vars:
     initial_value: 0
   missiles:
     initial_value: 0
+  multiplier:
+    initial_value: 1
   room_1b_step_1a:
     initial_value: 0
   room_1b_step_1b:

@@ -1,0 +1,85 @@
+#config_version=5
+mode:
+  start_events: mode_base_started
+  stop_events: cmd_end_skillshot
+  priority: 500
+
+shots:
+  skillshot_drops_one:
+    switches: s_drop_target_1
+    enable_events: drop_target_drop_one_up
+    disable_events:
+      - drop_target_drop_one_down
+      - mode_skillshot_drops_started
+  skillshot_drops_two:
+    switches: s_drop_target_1
+    enable_events: drop_target_drop_two_up
+    disable_events:
+      - drop_target_drop_two_down
+      - mode_skillshot_drops_started
+  skillshot_drops_three:
+    switches: s_drop_target_1
+    enable_events: drop_target_drop_three_up
+    disable_events:
+      - drop_target_drop_three_down
+      - mode_skillshot_drops_started
+
+timers:
+  skillshot_drops_reset_all:
+    end_value: 1
+    tick_interval: .25s
+    control_events:
+      - event: mode_skillshot_drops_started
+        action: start
+  skillshot_drops_first_up:
+    end_value: 1
+    tick_interval: 1s
+    control_events:
+      - event: timer_skillshot_drops_reset_all_stopped
+        action: start
+      - event: timer_skillshot_drops_third_down_stopped
+        action: start
+  skillshot_drops_first_down:
+    end_value: 1
+    tick_interval: .25s
+    control_events:
+      - event: timer_skillshot_drops_first_up_stopped
+        action: start
+  skillshot_drops_second_up:
+    end_value: 1
+    tick_interval: 1s
+    control_events:
+      - event: timer_skillshot_drops_first_down_stopped
+        action: start
+  skillshot_drops_second_down:
+    end_value: 1
+    tick_interval: .25s
+    control_events:
+      - event: timer_skillshot_drops_second_up_stopped
+        action: start
+  skillshot_drops_third_up:
+    end_value: 1
+    tick_interval: 1s
+    control_events:
+      - event: timer_skillshot_drops_second_down_stopped
+        action: start
+  skillshot_drops_third_down:
+    end_value: 1
+    tick_interval: .25s
+    control_events:
+      - event: timer_skillshot_drops_third_up_stopped
+        action: start
+
+event_player:
+  timer_skillshot_drops_reset_all_started: cmd_drop_all_drops
+  skillshot_drops_one_hit: cmd_end_skillshot
+  skillshot_drops_two_hit: cmd_end_skillshot
+  skillshot_drops_three_hit: cmd_end_skillshot
+
+variable_player:
+  skillshot_drops_one_hit:
+    score: 10000
+  skillshot_drops_two_hit:
+    score: 25000
+  skillshot_drops_one_hit:
+    score: 50000

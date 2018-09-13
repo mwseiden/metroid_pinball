@@ -22,14 +22,14 @@ show_player:
 variable_player:
   lower_right_bank_1_shot_hit:
     score:
-      int: 500 + (500 * current_player.power_bombs)
+      int: (500 + (500 * current_player.power_bombs)) * current_player.multiplier
   lower_right_bank_2_shot_hit:
     score:
-      int: 500 + (500 * current_player.power_bombs)
+      int: (500 + (500 * current_player.power_bombs)) * current_player.multiplier
   lower_right_bank_3_shot_hit:
     score:
-      int: 500 + (500 * current_player.power_bombs)
+      int: (500 + (500 * current_player.power_bombs)) * current_player.multiplier
   power_bomb_collected:
     power_bombs: 1
     score:
-      int: 2000 + (1000 * current_player.power_bombs)
+      int: (2000 + (1000 * current_player.power_bombs)) * current_player.multiplier

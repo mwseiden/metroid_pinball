@@ -18,12 +18,12 @@ variable_player:
   pop_1_shot_hit:
     pops: 1
     score:
-      int: 100 + (80 * current_player.pops)
+      int: (100 + (80 * current_player.pops)) * current_player.multiplier
   pop_2_shot_hit:
     pops: 1
     score:
-      int: 100 + (80 * current_player.pops)
+      int: (100 + (80 * current_player.pops)) * current_player.multiplier
   pop_3_shot_hit:
     pops: 1
     score:
-      int: 100 + (80 * current_player.pops)
+      int: (100 + (80 * current_player.pops)) * current_player.multiplier

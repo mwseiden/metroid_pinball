@@ -7,16 +7,16 @@ variable_player:
   left_outlane_shot_hit:
     lanes: 1
     score:
-      int: 100 + (10 * current_player.lanes)
+      int: (100 + (10 * current_player.lanes)) * current_player.multiplier
   left_inlane_shot_hit:
     lanes: 1
     score:
-      int: 100 + (10 * current_player.lanes)
+      int: (100 + (10 * current_player.lanes)) * current_player.multiplier
   right_outlane_shot_hit:
     lanes: 1
     score:
-      int: 100 + (10 * current_player.lanes)
+      int: (100 + (10 * current_player.lanes)) * current_player.multiplier
   right_inlane_shot_hit:
     lanes: 1
     score:
-      int: 100 + (10 * current_player.lanes)
+      int: (100 + (10 * current_player.lanes)) * current_player.multiplier

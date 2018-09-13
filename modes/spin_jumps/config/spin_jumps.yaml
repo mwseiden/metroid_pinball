@@ -12,4 +12,4 @@ variable_player:
   spinner_shot_hit:
     spinners: 1
     score:
-      int: 50 + (10 * current_player.spinners)
+      int: (50 + (10 * current_player.spinners)) * current_player.multiplier

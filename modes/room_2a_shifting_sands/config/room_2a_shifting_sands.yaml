@@ -8,6 +8,7 @@ timers:
   room_2a_do_not_sink:
     direction: down
     start_value: 3
+    end_value: 0
     tick_interval: 1s
     control_events:
       - event: mode_room_2a_shifting_sands_started
