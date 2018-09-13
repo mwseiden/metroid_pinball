@@ -5,11 +5,57 @@ mode:
     # restart_on_next_ball: true
     priority: 300
 
+animations:
+  room_2i_backglass_scroll_up:
+    - property: y
+      value: 1280
+      relative: true
+      duration: 5s
+    - property: y
+      value: -1280
+      relative: true
+      duration: 0s
+      repeat: true
+  room_2i_backglass_scroll_down:
+    - property: y
+      value: -1280
+      relative: true
+      duration: 5s
+    - property: y
+      value: 1280
+      relative: true
+      duration: 0s
+      repeat: true
+
 slides:
   room_2i_backglass_slide:
     widgets:
       - type: image
         image: room_2i_lava_jump_backglass
+        opacity: 0.5
+        y: -1
+        anchor_y: top
+        animations:
+          show_slide: room_2i_backglass_scroll_up
+      - type: image
+        image: room_2i_lava_jump_backglass
+        opacity: 0.5
+        y: 1279
+        anchor_y: top
+        animations:
+          show_slide: room_2i_backglass_scroll_up
+      - type: image
+        image: room_2i_lava_jump_backglass
+        y: 1280
+        anchor_y: bottom
+        animations:
+          show_slide: room_2i_backglass_scroll_down
+      - type: image
+        image: room_2i_lava_jump_backglass
+        y: 0
+        anchor_y: bottom
+        animations:
+          show_slide: room_2i_backglass_scroll_down
     transition: fade
     transition_out: fade
   room_2i_splash_slide:
@@ -27,6 +73,11 @@ slide_player:
     room_2i_splash_slide:
       target: dmd
       expire: 1.5s
+
+event_player:
+  mode_room_2i_lava_jump_started:
+    cmd_backbox_show:
+      show_type: fire
 
 variable_player:
   mode_room_2i_lava_jump_started:

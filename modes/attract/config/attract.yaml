@@ -48,3 +48,82 @@ animations:
       relative: true
       duration: 0s
       repeat: true
+
+event_player:
+  twitch_new_chat_message:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "400080"
+      speed: 2
+      repeat: 3
+      direction: right
+  twitch_bit_donation:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "804040"
+      speed: 2
+      repeat: 9
+      direction: left
+  slide_last_game_high_scores_active:
+    cmd_backbox_show:
+      show_type: rainbow
+  slide_fast_logo_active:
+    cmd_backbox_show:
+      show_type: two_tone
+      min_cutoff: 5
+      max_cutoff: 5
+      color1: "400000"
+      color2: "000040"
+  slide_press_start_active:
+    cmd_backbox_show:
+      show_type: two_tone
+      min_cutoff: 5
+      max_cutoff: 5
+      color1: "404040"
+      color2: "004000"
+  slide_arrrrrcade_active:
+    cmd_backbox_show:
+      show_type: pour
+      count: 7
+      min_length: 2
+      max_length: 16
+      color: "400000"
+  slide_metroid_logo_active:
+    cmd_backbox_show:
+      show_type: two_tone
+      min_cutoff: 2
+      max_cutoff: 8
+      color1: "404040"
+      color2: "000040"
+  slide_double_danger_slide_active:
+    cmd_backbox_show:
+      show_type: drop
+      min_delay: 4
+      max_delay: 6
+      background_color: "040000"
+      drop_color: "100C00"
+  slide_pbu_slide_active:
+    cmd_backbox_show:
+      show_type: fire
+  slide_erin_slide_active:
+    cmd_backbox_show:
+      show_type: two_tone
+      min_cutoff: 8
+      max_cutoff: 8
+      color1: "000040"
+      color2: "401800"
+  slide_rubber_ducks_slide_active:
+    cmd_backbox_show:
+      show_type: fire
+  slide_owl_slide_active:
+    cmd_backbox_show:
+      show_type: pour
+      count: 4
+      min_length: 2
+      max_length: 16
+      color: "401040"
+
+
+  mode_attract_stopping:
+    cmd_backbox_show:
+      show_type: none

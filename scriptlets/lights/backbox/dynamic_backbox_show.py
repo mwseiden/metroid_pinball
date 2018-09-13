@@ -1,9 +1,8 @@
-
-
+from mpf.core.rgb_color import RGBColor
 from .strip import Strip
 
 class DynamicBackBoxShow:
-
+    OFF_COLOR = RGBColor('off')
     BASE_LEFT = 128
     BASE_RIGHT = 192
     STRIP_LENGTH = 10

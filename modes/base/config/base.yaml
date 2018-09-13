@@ -2,7 +2,6 @@
 mode:
     start_events: ball_starting
     priority: 100
-    code: base.Base
 
 shots:
   scoop_shot:
@@ -174,6 +173,39 @@ slides:
       - type: text
         text: PLAYER (num) ADDED
         style: dmd_med
+
+event_player:
+  twitch_bit_donation{bits < 25}: base_bits_small
+  twitch_bit_donation{bits >= 25 and bits < 500}: base_bits_medium
+  twitch_bit_donation{bits >= 500}: base_bits_large
+  twitch_new_chat_message:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "802000"
+      speed: 1
+      repeat: 3
+      direction: left
+  base_bits_small:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: "A00000"
+      speed: 1
+      repeat: 4
+      direction: left
+  base_bits_medium:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: "A00000"
+      speed: 1
+      repeat: 9
+      direction: left
+  base_bits_large:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: "A00000"
+      speed: 1
+      repeat: 20
+      direction: left
 
 variable_player:
   left_orbit_hit:

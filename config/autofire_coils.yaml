@@ -10,9 +10,6 @@ autofire_coils:
   pop_3:
     coil: c_pop_3
     switch: s_pop_3
-  drop_reset:
-    coil: c_drop_1_reset
-    switch: s_thin_green
   left_slingshot:
     coil: c_left_slingshot
     switch: s_left_sling
