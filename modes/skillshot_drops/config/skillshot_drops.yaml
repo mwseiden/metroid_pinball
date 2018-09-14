@@ -71,14 +71,16 @@ timers:
         action: start
 
 event_player:
-  timer_skillshot_drops_reset_all_started:
-    - cmd_drop_all_drops
-  skillshot_drops_one_hit:
-    - cmd_end_skillshot
-  skillshot_drops_two_hit:
-    - cmd_end_skillshot
-  skillshot_drops_three_hit:
-    - cmd_end_skillshot
+  timer_skillshot_drops_reset_all_started: cmd_drop_all_drops
+  timer_skillshot_drops_first_up_started: cmd_drop_one_up
+  timer_skillshot_drops_first_down_started: cmd_drop_one_down
+  timer_skillshot_drops_second_up_started: cmd_drop_two_up
+  timer_skillshot_drops_second_down_started: cmd_drop_two_down
+  timer_skillshot_drops_third_up_started: cmd_drop_three_up
+  timer_skillshot_drops_third_down_started: cmd_drop_three_down
+  skillshot_drops_one_hit: cmd_end_skillshot
+  skillshot_drops_two_hit: cmd_end_skillshot
+  skillshot_drops_three_hit: cmd_end_skillshot
 
 variable_player:
   skillshot_drops_one_hit:

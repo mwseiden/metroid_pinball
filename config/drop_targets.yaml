@@ -8,8 +8,10 @@ drop_targets:
     reset_events:
       - machine_reset_phase_3
       - cmd_reset_all_drops
+      - cmd_drop_one_up
     knockdown_events:
       - cmd_drop_all_drops
+      - cmd_drop_one_down
   drop_two:
     switch: s_drop_target_2
     reset_coil: c_drop_2_reset
@@ -17,8 +19,10 @@ drop_targets:
     reset_events:
       - machine_reset_phase_3
       - cmd_reset_all_drops
+      - cmd_drop_two_up
     knockdown_events:
       - cmd_drop_all_drops
+      - cmd_drop_two_down
   drop_three:
     switch: s_drop_target_3
     reset_coil: c_drop_3_reset
@@ -26,5 +30,7 @@ drop_targets:
     reset_events:
       - machine_reset_phase_3
       - cmd_reset_all_drops
+      - cmd_drop_three_up
     knockdown_events:
       - cmd_drop_all_drops
+      - cmd_drop_three_down
