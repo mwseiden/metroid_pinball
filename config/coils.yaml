@@ -13,7 +13,7 @@ coils:
   c_drop_1_reset:
     number: 0-3
     default_hold_power: 0.125
-    default_pulse_ms: 17
+    default_pulse_ms: 20
     allow_enable: true
   c_flipper_upper_right_main:
     number: 0-4
@@ -27,13 +27,13 @@ coils:
   c_drop_1_down:
     number: 0-8
     default_hold_power: 0.125
-    default_pulse_power: 0.25
+    default_pulse_power: 0.5
     default_pulse_ms: 20
     allow_enable: true
   c_drop_2_down:
     number: 0-9
     default_hold_power: 0.125
-    default_pulse_power: 0.25
+    default_pulse_power: 0.5
     default_pulse_ms: 20
     allow_enable: true
   c_drop_2_reset:
@@ -44,12 +44,12 @@ coils:
   c_drop_3_reset:
     number: 0-11
     default_hold_power: 0.125
-    default_pulse_ms: 17
+    default_pulse_ms: 20
     allow_enable: true
   c_drop_3_down:
     number: 0-12
     default_hold_power: 0.125
-    default_pulse_power: 0.25
+    default_pulse_power: 0.5
     default_pulse_ms: 20
     allow_enable: true
   c_flipper_right_main:
