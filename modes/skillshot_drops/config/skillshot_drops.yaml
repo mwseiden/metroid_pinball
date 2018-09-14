@@ -30,45 +30,45 @@ timers:
     tick_interval: .25s
     control_events:
       - event: mode_skillshot_drops_started
-        action: start
+        action: restart
   skillshot_drops_first_up:
     end_value: 2
     tick_interval: 1s
     control_events:
       - event: timer_skillshot_drops_reset_all_stopped
-        action: start
+        action: restart
       - event: timer_skillshot_drops_third_down_stopped
-        action: start
+        action: restart
   skillshot_drops_first_down:
     end_value: 2
     tick_interval: .25s
     control_events:
       - event: timer_skillshot_drops_first_up_stopped
-        action: start
+        action: restart
   skillshot_drops_second_up:
     end_value: 2
     tick_interval: 1s
     control_events:
       - event: timer_skillshot_drops_first_down_stopped
-        action: start
+        action: restart
   skillshot_drops_second_down:
     end_value: 2
     tick_interval: .25s
     control_events:
       - event: timer_skillshot_drops_second_up_stopped
-        action: start
+        action: restart
   skillshot_drops_third_up:
     end_value: 2
     tick_interval: 1s
     control_events:
       - event: timer_skillshot_drops_second_down_stopped
-        action: start
+        action: restart
   skillshot_drops_third_down:
     end_value: 2
     tick_interval: .25s
     control_events:
       - event: timer_skillshot_drops_third_up_stopped
-        action: start
+        action: restart
 
 event_player:
   timer_skillshot_drops_reset_all_started: cmd_drop_all_drops
