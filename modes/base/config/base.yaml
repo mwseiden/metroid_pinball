@@ -208,7 +208,7 @@ event_player:
       direction: left
   whole_playfield_shot_group_hit: cmd_end_skillshot
   mode_skillshot_drops_ended:
-    - cmd_reset_all_drops: 3s
+    - cmd_reset_all_drops:3s
 
 variable_player:
   left_orbit_hit:
