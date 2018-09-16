@@ -206,8 +206,6 @@ event_player:
       speed: 1
       repeat: 20
       direction: left
-  mode_skillshot_drops_ended:
-    - cmd_reset_all_drops:3s
 
 variable_player:
   left_orbit_hit:

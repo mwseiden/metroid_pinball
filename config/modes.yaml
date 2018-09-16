@@ -4,6 +4,7 @@ modes:
   - base
   - bonus
   - chozo_multiball
+  - drop_targets
   - high_score
   - lanes
   - match
