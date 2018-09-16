@@ -27,9 +27,6 @@ shot_groups:
       - big_red_shot
       - rollover_shot
       - shatz_shot
-      - purple_1_shot
-      - purple_2_shot
-      - purple_3_shot
       - captive_shot
       - side_1_shot
       - side_2_shot
@@ -57,6 +54,14 @@ show_player:
     skillshot_drops_three_made:
       loops: 0
       events_when_completed: skillshot_monitor_should_end
+  skillshot_purple_success:
+    skillshot_purple_made:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
+  skillshot_purple_failure:
+    skillshot_purple_missed:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
 
 event_player:
   skillshot_unused_shot_group_hit: skillshot_stage_one_end
@@ -66,3 +71,5 @@ event_player:
   skillshot_drops_one_behind_hit: skillshot_stage_one_end
   skillshot_drops_two_behind_hit: skillshot_stage_one_end
   skillshot_drops_three_behind_hit: skillshot_stage_one_end
+  skillshot_purple_success: skillshot_stage_one_end
+  skillshot_purple_failure: skillshot_stage_one_end

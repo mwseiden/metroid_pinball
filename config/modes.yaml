@@ -20,6 +20,7 @@ modes:
   - select_landing_site
   - skillshot
   - skillshot_drops
+  - skillshot_purple
   - spin_jumps
   - twitch_bits_multiball
 
