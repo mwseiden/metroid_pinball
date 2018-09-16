@@ -1,0 +1,28 @@
+#config_version=5
+mode:
+  start_events: mode_base_started
+  stop_events: skillshot_monitor_should_end
+  priority: 500
+
+show_player:
+  skillshot_drops_made_1:
+    skillshot_drops_one_made:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
+  skillshot_drops_made_2:
+    skillshot_drops_two_made:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
+  skillshot_drops_made_3:
+    skillshot_drops_three_made:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
+
+event_player:
+  whole_playfield_shot_group_hit: skillshot_stage_one_end
+  skillshot_drops_made_1: skillshot_stage_one_end
+  skillshot_drops_made_2: skillshot_stage_one_end
+  skillshot_drops_made_3: skillshot_stage_one_end
+  skillshot_drops_one_behind_hit: skillshot_stage_one_end
+  skillshot_drops_two_behind_hit: skillshot_stage_one_end
+  skillshot_drops_three_behind_hit: skillshot_stage_one_end
