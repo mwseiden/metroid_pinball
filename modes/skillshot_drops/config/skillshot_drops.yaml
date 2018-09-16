@@ -110,6 +110,41 @@ event_player:
 #    - cmd_drop_two_up
     - skillshot_drops_made_3
 
+show_player:
+  skillshot_drops_enable_1:
+    blink_light:
+      key: skillshot_drops_blink_1
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_drop_1
+        color: ff0000
+  timer_skillshot_drops_first_up_stopped:
+    skillshot_drops_blink_1:
+      action: stop
+  skillshot_drops_enable_2:
+    blink_light:
+      key: skillshot_drops_blink_2
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_drop_2
+        color: ff0000
+  timer_skillshot_drops_second_up_stopped:
+    skillshot_drops_blink_2:
+      action: stop
+  skillshot_drops_enable_3:
+    blink_light:
+      key: skillshot_drops_blink_3
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_drop_3
+        color: ff0000
+  timer_skillshot_drops_third_up_stopped:
+    skillshot_drops_blink_3:
+      action: stop
+
 variable_player:
   skillshot_drops_one_hit:
     score: 10000

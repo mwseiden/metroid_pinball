@@ -60,6 +60,12 @@ shots:
    switch: s_lower_right_bank_2
   lower_right_bank_3_shot:
    switch: s_lower_right_bank_3
+  missile_bank_1_shot:
+    switch: s_missile_bank_1
+  missile_bank_2_shot:
+    switch: s_missile_bank_2
+  missile_bank_3_shot:
+    switch: s_missile_bank_3
 
 shot_groups:
   whole_playfield_shot_group:
@@ -92,6 +98,9 @@ shot_groups:
       - lower_right_bank_1_shot
       - lower_right_bank_2_shot
       - lower_right_bank_3_shot
+      - missile_bank_1_shot
+      - missile_bank_2_shot
+      - missile_bank_3_shot
 
 ball_saves:
   default:
