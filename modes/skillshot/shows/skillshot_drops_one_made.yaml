@@ -1,6 +1,6 @@
 #show_version=5
 
-- duration: 1s
+- duration: 0.5s
   slides:
     skillshot_drops_one_made_animation_slide:
       widgets:
@@ -13,20 +13,20 @@
             - property: x
               value: 21
               relative: true
-              duration: 1s
+              duration: .5s
       - type: image
         image: skillshot_drop_up
         x: 21
         anchor_x: left
       - type: image
-        image: skillshot_drop_up
+        image: skillshot_drop_down
         x: 64
       - type: image
-        image: skillshot_drop_up
+        image: skillshot_drop_down
         x: 107
         anchor_x: right
 
-- duration: 2s
+- duration: 1.2s
   slides:
     skillshot_drops_one_made_rollback_animation_slide:
       widgets:
@@ -52,16 +52,16 @@
             - property: x
               value: -21
               relative: true
-              duration: 2s
+              duration: 1s
       - type: image
         image: skillshot_drop_down
         x: 21
         anchor_x: left
       - type: image
-        image: skillshot_drop_up
+        image: skillshot_drop_down
         x: 64
       - type: image
-        image: skillshot_drop_up
+        image: skillshot_drop_down
         x: 107
         anchor_x: right
 

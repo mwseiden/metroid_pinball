@@ -1,6 +1,6 @@
 #show_version=5
 
-- duration: 2.5s
+- duration: 1.5s
   slides:
     skillshot_drops_three_made_animation_slide:
       widgets:
@@ -13,7 +13,7 @@
             - property: x
               value: 97
               relative: true
-              duration: 2.2s
+              duration: 1.5s
       - type: image
         image: skillshot_drop_down
         x: 21
@@ -26,7 +26,7 @@
         x: 107
         anchor_x: right
 
-- duration: 2s
+- duration: 1.2s
   slides:
     skillshot_drops_three_made_rollback_animation_slide:
       widgets:
@@ -52,7 +52,7 @@
             - property: x
               value: -21
               relative: true
-              duration: 2s
+              duration: 1s
       - type: image
         image: skillshot_drop_down
         x: 21
