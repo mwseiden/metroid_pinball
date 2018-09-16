@@ -50,9 +50,9 @@
         animations:
           show_slide:
             - property: x
-              value: -17
+              value: -4
               relative: true
-              duration: 1s
+              duration: .5s
       - type: image
         image: skillshot_drop_up
         x: 21
