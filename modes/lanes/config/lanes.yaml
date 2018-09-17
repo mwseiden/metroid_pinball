@@ -13,25 +13,25 @@ shot_profiles:
 
 shots:
   left_outlane_shot:
-    advance_events: s_left_outlane_active
+    switch: s_left_outlane
     profile: lanes
     show_tokens:
       led: led_left_outlane
       color: 4040FF
   left_inlane_shot:
-    advance_events: s_left_inlane_active
+    switch: s_left_inlane
     profile: lanes
     show_tokens:
       led: led_left_inlane
       color: 4040FF
   right_outlane_shot:
-    advance_events: s_right_outlane_active
+    switch: s_right_outlane
     profile: lanes
     show_tokens:
       led: led_right_outlane
       color: 4040FF
   right_inlane_shot:
-    advance_events: s_right_inlane_active
+    switch: s_right_inlane
     profile: lanes
     show_tokens:
       led: led_right_inlane
