@@ -37,7 +37,7 @@ shots:
       led: led_right_inlane
       color: 4040FF
 
-shot_group:
+shot_groups:
   lanes_shot_group:
     shots: s_left_outlane, s_left_inlane, s_right_inlane, s_right_outlane
     rotate_left_events: s_left_flipper_active
