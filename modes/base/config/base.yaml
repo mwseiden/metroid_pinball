@@ -34,12 +34,6 @@ shots:
     switch: s_rollover_button
   shatz_shot:
     switch: s_shatz
-  purple_1_shot:
-    switch: s_purple_1
-  purple_2_shot:
-    switch: s_purple_2
-  purple_3_shot:
-    switch: s_purple_3
   captive_shot:
     switch: s_captive_ball
   side_1_shot:
@@ -73,10 +67,10 @@ shot_groups:
       - pop_1_shot
       - pop_2_shot
       - pop_3_shot
-#      - left_outlane_shot
-#      - right_outlane_shot
-#      - left_inlane_shot
-#      - right_inlane_shot
+      - left_outlane_shot
+      - right_outlane_shot
+      - left_inlane_shot
+      - right_inlane_shot
       - spinner_shot
       - big_red_shot
       - rollover_shot

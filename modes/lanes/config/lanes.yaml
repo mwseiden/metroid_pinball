@@ -69,5 +69,6 @@ variable_player:
     score:
       int: (100 + (10 * current_player.lanes)) * current_player.multiplier
   lanes_shot_group_lit_complete:
+    kickbacks: 1
     score:
       int: (1000 + (10 * current_player.lanes)) * current_player.multiplier
