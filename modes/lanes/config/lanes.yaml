@@ -39,7 +39,7 @@ shots:
 
 shot_groups:
   lanes_shot_group:
-    shots: s_left_outlane, s_left_inlane, s_right_inlane, s_right_outlane
+    shots: left_outlane_shot, left_inlane_shot, right_inlane_shot, right_outlane_shot
     rotate_left_events: s_left_flipper_active
     rotate_right_events: s_right_flipper_active
     reset_events: lanes_shot_group_lit_complete
