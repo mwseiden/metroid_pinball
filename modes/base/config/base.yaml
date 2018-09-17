@@ -3,14 +3,6 @@ mode:
   start_events: ball_starting
   priority: 100
 
-shot_profiles:
-  lanes:
-    states:
-      - name: unlit
-        show: off
-      - name: lit
-        show: led_color
-
 shots:
   scoop_shot:
     switch: s_scoop
@@ -34,30 +26,6 @@ shots:
     switch: s_pop_2
   pop_3_shot:
     switch: s_pop_3
-  left_outlane_shot:
-    switch: s_left_outlane
-    profile: lanes
-    show_tokens:
-      led: led_left_outlane
-      color: 0000FF
-  left_inlane_shot:
-    switch: s_left_inlane
-    profile: lanes
-    show_tokens:
-      led: led_left_inlane
-      color: 0000FF
-  right_outlane_shot:
-    switch: s_right_outlane
-    profile: lanes
-    show_tokens:
-      led: led_right_outlane
-      color: 0000FF
-  right_inlane_shot:
-    switch: s_right_inlane
-    profile: lanes
-    show_tokens:
-      led: led_right_inlane
-      color: 0000FF
   spinner_shot:
     switch: s_spinner
   big_red_shot:

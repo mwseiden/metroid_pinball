@@ -147,14 +147,14 @@ show_player:
 
 variable_player:
   skillshot_drops_one_hit:
-    score: 10000
+    score: 10000 * current_player.multiplier
   skillshot_drops_two_hit:
-    score: 25000
+    score: 25000 * current_player.multiplier
   skillshot_drops_three_hit:
-    score: 50000
+    score: 50000 * current_player.multiplier
   skillshot_drops_one_behind_hit:
-    score: 50000
+    score: 50000 * current_player.multiplier
   skillshot_drops_two_behind_hit:
-    score: 100000
+    score: 100000 * current_player.multiplier
   skillshot_drops_three_behind_hit:
-    score: 250000
+    score: 250000 * current_player.multiplier
