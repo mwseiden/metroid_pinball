@@ -73,10 +73,10 @@ shot_groups:
       - pop_1_shot
       - pop_2_shot
       - pop_3_shot
-      - left_outlane_shot
-      - right_outlane_shot
-      - left_inlane_shot
-      - right_inlane_shot
+#      - left_outlane_shot
+#      - right_outlane_shot
+#      - left_inlane_shot
+#      - right_inlane_shot
       - spinner_shot
       - big_red_shot
       - rollover_shot

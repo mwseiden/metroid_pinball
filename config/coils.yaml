@@ -80,7 +80,8 @@ coils:
     allow_enable: true
   c_trough_eject:
     number: 1-7
-    default_pulse_ms: 17
+    default_pulse_ms: 20
+    # default_pulse_power:  0.8
     allow_enable: true
   c_vuk:
     number: 2-0

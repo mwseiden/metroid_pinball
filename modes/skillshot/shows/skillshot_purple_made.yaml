@@ -20,5 +20,5 @@
       - type: text
         text: +1 MISSILE
         style: dmd_big
-        color red
+        color: red
         y: 10
