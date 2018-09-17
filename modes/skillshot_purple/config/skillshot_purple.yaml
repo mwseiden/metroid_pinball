@@ -48,15 +48,15 @@ variable_player:
   skillshot_purple_left_lit:
     skillshot_purple_lit:
       action: set
-      value: 0
+      int: 0
   skillshot_purple_center_lit:
     skillshot_purple_lit:
       action: set
-      value: 1
+      int: 1
   skillshot_purple_right_lit:
     skillshot_purple_lit:
       action: set
-      value: 2
+      int: 2
   skillshot_purple_success:
     score: 10000
     missiles: 1
