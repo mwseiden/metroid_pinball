@@ -4,15 +4,9 @@ mode:
   stop_events: skillshot_stage_one_end, skillshot_purple_success, skillshot_purple_failure
   priority: 500
 
-shot_groups:
-  skillshot_purple_shot_group:
-    shots: purple_1_shot, purple_2_shot, purple_3_shot
-    rotate_right_events: skillshot_purple_move_right
-    rotate_left_events: skillshot_purple_move_left
-
 timers:
   skillshot_purple_move:
-    end_value: 3
+    end_value: 4
     tick_interval: 1s
     restart_on_complete: true
     control_events:
@@ -22,38 +16,47 @@ timers:
 light_player:
   skillshot_purple_left_lit:
     led_upgrade_bank_1:
-      color: "800040"
+      color: "A00050"
     led_upgrade_bank_2:
       color: off
   skillshot_purple_center_lit:
     led_upgrade_bank_1:
       color: off
     led_upgrade_bank_2:
-      color: "800040"
+      color: "A00050"
     led_upgrade_bank_3:
       color: off
   skillshot_purple_right_lit:
     led_upgrade_bank_2:
       color: off
     led_upgrade_bank_3:
-      color: "800040"
+      color: "A00050"
 
 event_player:
-  timer_skillshot_purple_move_tick{ticks == 0}:
-    - skillshot_purple_move_right
-    - skillshot_purple_center_lit
-  timer_skillshot_purple_move_tick{ticks == 1}:
-    - skillshot_purple_move_right
-    - skillshot_purple_right_lit
-  timer_skillshot_purple_move_tick{ticks == 2}:
-    - skillshot_purple_move_left
-    - skillshot_purple_center_lit
-  timer_skillshot_purple_move_tick{ticks == 3}:
-    - skillshot_purple_move_left
-    - skillshot_purple_left_lit
-  purple_1_shot_default_lit_hit: skillshot_purple_success
-  purple_2_shot_default_lit_hit: skillshot_purple_success
-  purple_3_shot_default_lit_hit: skillshot_purple_success
-  purple_1_shot_default_unlit_hit: skillshot_purple_failure
-  purple_2_shot_default_unlit_hit: skillshot_purple_failure
-  purple_3_shot_default_unlit_hit: skillshot_purple_failure
+  timer_skillshot_purple_move_tick{ticks == 0}: skillshot_purple_left_lit
+  timer_skillshot_purple_move_tick{ticks == 1}: skillshot_purple_center_lit
+  timer_skillshot_purple_move_tick{ticks == 2}: skillshot_purple_right_lit
+  timer_skillshot_purple_move_tick{ticks == 3}: skillshot_purple_center_lit
+  purple_1_shot_hit{current_player.skillshot_purple_lit == 0}: skillshot_purple_success
+  purple_1_shot_hit{current_player.skillshot_purple_lit != 0}: skillshot_purple_failure
+  purple_2_shot_hit{current_player.skillshot_purple_lit == 1}: skillshot_purple_success
+  purple_2_shot_hit{current_player.skillshot_purple_lit != 1}: skillshot_purple_failure
+  purple_3_shot_hit{current_player.skillshot_purple_lit == 2}: skillshot_purple_success
+  purple_3_shot_hit{current_player.skillshot_purple_lit != 2}: skillshot_purple_failure
+
+variable_player:
+  skillshot_purple_left_lit:
+    skillshot_purple_lit:
+      action: set
+      value: 0
+  skillshot_purple_center_lit:
+    skillshot_purple_lit:
+      action: set
+      value: 1
+  skillshot_purple_right_lit:
+    skillshot_purple_lit:
+      action: set
+      value: 2
+  skillshot_purple_success:
+    score: 10000
+    missiles: 1
