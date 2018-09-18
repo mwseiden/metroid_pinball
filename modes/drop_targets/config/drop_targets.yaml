@@ -24,9 +24,9 @@ shots:
     enable_events: drop_targets_enable_scoring
 
 variable_player:
-  drop_1_shot:
+  drop_1_shot_hit:
     score: 1000
-  drop_2_shot:
+  drop_2_shot_hit:
     score: 10000
-  drop_3_shot:
+  drop_3_shot_hit:
     score: 25000
