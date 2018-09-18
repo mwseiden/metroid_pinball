@@ -347,7 +347,7 @@
          duration: 1s
          direction: top
 
-- duration: 5s
+- duration: 8s
   slides:
     arrrrrcade:
       widgets:
