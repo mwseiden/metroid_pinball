@@ -6,4 +6,27 @@ mode:
 event_player:
   mode_drop_targets_started:
     - cmd_drop_all_drops
+    - drop_targets_enable_scoring:0.5s
     - cmd_reset_all_drops:3s
+
+shots:
+  drop_1_shot:
+    switch: s_drop_target_1
+    disable_events: mode_drop_targets_started
+    enable_events: drop_targets_enable_scoring
+  drop_2_shot:
+    switch: s_drop_target_2
+    disable_events: mode_drop_targets_started
+    enable_events: drop_targets_enable_scoring
+  drop_3_shot:
+    switch: s_drop_target_3
+    disable_events: mode_drop_targets_started
+    enable_events: drop_targets_enable_scoring
+
+variable_player:
+  drop_1_shot:
+    score: 1000
+  drop_2_shot:
+    score: 10000
+  drop_3_shot:
+    score: 25000
