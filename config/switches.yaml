@@ -213,13 +213,13 @@ switches:
   s_big_red:
     number: 2-2
     tags: playfield_active
-  s_purple_1:
+  s_purple_3:
     number: 2-3
     tags: playfield_active
   s_purple_2:
     number: 2-4
     tags: playfield_active
-  s_purple_3:
+  s_purple_1:
     number: 2-5
     tags: playfield_active
   s_orbit_r:
