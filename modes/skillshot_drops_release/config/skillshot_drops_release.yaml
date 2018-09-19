@@ -5,7 +5,7 @@ mode:
   priority: 500
 
 show_player:
-  skillshot_drops_release_started:
+  mode_skillshot_drops_release_started:
     skillshot_drops_release_countdown:
       loops: 0
       events_when_completed: skillshot_drops_release_ball
