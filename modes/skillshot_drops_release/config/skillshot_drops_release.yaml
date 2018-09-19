@@ -26,7 +26,14 @@ timers:
         action: restart
 
 event_player:
-  skillshot_drops_release_ball: cmd_drop_all_drops
+  skillshot_drops_release_ball{device.switches.s_behind_drop_1.state == 1}:
+    - cmd_drop_two_up
+    - cmd_drop_one_down
+  skillshot_drops_release_ball{device.switches.s_behind_drop_2.state == 1}:
+    - cmd_drop_three_up
+    - cmd_drop_one_down
+    - cmd_drop_two_down
+  skillshot_drops_release_ball{device.switches.s_behind_drop_1.state == 0 and device.switches.s_behind_drop_2.state == 0}: cmd_drop_all_drops
   mode_skillshot_drops_release_stopping: skillshot_monitor_should_end
 
 variable_player:
