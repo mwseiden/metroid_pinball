@@ -99,6 +99,16 @@ slides:
     - type: image
       image: landing_site_norfair_backglass
 
+display_light_player:
+  mode_select_landing_site_started:
+    backglass:
+      lights: reflective
+      action: play
+  mode_select_landing_site_stopping:
+    backglass:
+      lights: reflective
+      action: stop
+
 event_player:
   mode_select_landing_site_started:
     cmd_backbox_show:
