@@ -1,11 +1,10 @@
 #config_version=5
 mode:
-    start_events: mode_skillshot_drops_stopped
+    start_events: mode_skillshot_stopped
     priority: 100
 
 event_player:
   mode_drop_targets_started:
-    - cmd_drop_all_drops
     - drop_targets_enable_scoring:0.5s
     - cmd_reset_all_drops:3s
 

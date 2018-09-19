@@ -1,0 +1,34 @@
+#config_version=5
+mode:
+  start_events: skillshot_drops_release_should_start
+  stop_events: timer_skillshot_drops_release_super_skill_stopped, skillshot_drops_release_should_end
+  priority: 500
+
+show_player:
+  skillshot_drops_release_started:
+    skillshot_drops_release_countdown:
+      loops: 0
+      events_when_completed: skillshot_drops_release_ball
+  skillshot_drops_release_ball:
+    skillshot_drops_release_go:
+      loops: 0
+  side_ramp_shot_hit:
+    skillshot_drops_release_success:
+      loops: 0
+      events_when_completed: skillshot_drops_release_should_end
+
+timers:
+  skillshot_drops_release_super_skill:
+    end_value: 5
+    tick_interval: 1s
+    control_events:
+      - event: skillshot_drops_release_ball
+        action: restart
+
+event_player:
+  skillshot_drops_release_ball: cmd_drop_all_drops
+  mode_skillshot_drops_release_stopping: skillshot_monitor_should_end
+
+variable_player:
+  side_ramp_shot_hit:
+    score: 100000

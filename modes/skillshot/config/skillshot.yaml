@@ -41,6 +41,7 @@ show_player:
   skillshot_unused_shot_group_hit:
     skillshot_missed:
       loops: 0
+      priority: -10
       events_when_completed: skillshot_monitor_should_end
   skillshot_drops_made_1:
     skillshot_drops_one_made:
@@ -49,11 +50,11 @@ show_player:
   skillshot_drops_made_2:
     skillshot_drops_two_made:
       loops: 0
-      events_when_completed: skillshot_monitor_should_end
+      events_when_completed: skillshot_drops_release_should_start
   skillshot_drops_made_3:
     skillshot_drops_three_made:
       loops: 0
-      events_when_completed: skillshot_monitor_should_end
+      events_when_completed: skillshot_drops_release_should_start
   skillshot_purple_success:
     skillshot_purple_made:
       loops: 0
