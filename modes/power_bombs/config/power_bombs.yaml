@@ -17,19 +17,19 @@ shots:
     profile: power_bombs
     show_tokens:
       led: led_bomb_bank_1
-      color: "808000"
+      color: "FFFF00"
   power_bomb_2_shot:
     switch: s_lower_right_bank_2
     profile: power_bombs
     show_tokens:
       led: led_bomb_bank_2
-      color: "808000"
+      color: "FFFF00"
   power_bomb_3_shot:
     switch: s_lower_right_bank_3
     profile: power_bombs
     show_tokens:
       led: led_bomb_bank_3
-      color: "808000"
+      color: "FFFF00"
 
 shot_groups:
   power_bombs_shot_group:

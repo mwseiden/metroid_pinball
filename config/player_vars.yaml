@@ -32,7 +32,13 @@ player_vars:
     initial_value: 0
   room_1b_victory_step_1:
     initial_value: 0
+  skillshot_bombs_lit:
+    initial_value: 0
+  skillshot_missiles_lit:
+    initial_value: 0
   skillshot_purple_lit:
+    initial_value: 0
+  super_missiles:
     initial_value: 0
   switches:
     initial_value: 0

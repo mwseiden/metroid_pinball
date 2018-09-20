@@ -33,17 +33,17 @@ lights:
     number: 0-6
   led_side_3:
     number: 0-7
-  led_missile_1:
+  led_missile_bank_1:
     number: 0-8
     x: 0.28610812746151093
     y: 0.5005370569280344
     tags: reflective
-  led_missile_2:
+  led_missile_bank_2:
     number: 0-9
     x: 0.3057644110275689
     y: 0.4887218045112782
     tags: reflective
-  led_missile_3:
+  led_missile_bank_3:
     number: 0-10
     x: 0.32542069459362694
     y: 0.47798066595059074

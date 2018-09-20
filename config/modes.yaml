@@ -19,8 +19,10 @@ modes:
   - room_2i_lava_jump
   - select_landing_site
   - skillshot
+  - skillshot_bombs
   - skillshot_drops
   - skillshot_drops_release
+  - skillshot_missiles
   - skillshot_purple
   - spin_jumps
   - twitch_bits_multiball

@@ -30,12 +30,6 @@ shot_groups:
       - captive_shot
       - side_1_shot
       - side_2_shot
-      - power_bomb_1_shot
-      - power_bomb_2_shot
-      - power_bomb_3_shot
-      - missile_bank_1_shot
-      - missile_bank_2_shot
-      - missile_bank_3_shot
 
 show_player:
   skillshot_unused_shot_group_hit:
@@ -63,6 +57,29 @@ show_player:
     skillshot_purple_missed:
       loops: 0
       events_when_completed: skillshot_monitor_should_end
+  skillshot_bombs_success:
+    skillshot_bombs_made:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
+  skillshot_bombs_failure:
+    skillshot_bombs_missed:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
+  skillshot_missiles_upgrade:
+    skillshot_missiles_made:
+      loops: 0
+  skillshot_missiles_success:
+    skillshot_missiles_made_normal:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
+  skillshot_missiles_success_super:
+    skillshot_missiles_made_super:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
+  skillshot_missiles_failure:
+    skillshot_missiles_missed:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
 
 event_player:
   skillshot_unused_shot_group_hit: skillshot_stage_one_end
@@ -74,3 +91,9 @@ event_player:
   skillshot_drops_three_behind_hit: skillshot_stage_one_end
   skillshot_purple_success: skillshot_stage_one_end
   skillshot_purple_failure: skillshot_stage_one_end
+  skillshot_bombs_success: skillshot_stage_one_end
+  skillshot_bombs_failure: skillshot_stage_one_end
+  skillshot_missiles_success: skillshot_stage_one_end
+  skillshot_missiles_success_super: skillshot_stage_one_end
+  skillshot_missiles_failure: skillshot_stage_one_end
+
