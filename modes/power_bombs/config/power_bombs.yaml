@@ -50,10 +50,10 @@ variable_player:
   power_bomb_1_shot_hit:
     score:
       int: (500 + (500 * current_player.power_bombs)) * current_player.multiplier
-  power_bomb_1_shot_hit:
+  power_bomb_2_shot_hit:
     score:
       int: (500 + (500 * current_player.power_bombs)) * current_player.multiplier
-  power_bomb_1_shot_hit:
+  power_bomb_3_shot_hit:
     score:
       int: (500 + (500 * current_player.power_bombs)) * current_player.multiplier
   power_bomb_collected:
