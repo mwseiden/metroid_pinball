@@ -30,9 +30,9 @@ shot_groups:
       - captive_shot
       - side_1_shot
       - side_2_shot
-      - lower_right_bank_1_shot
-      - lower_right_bank_2_shot
-      - lower_right_bank_3_shot
+      - power_bomb_1_shot
+      - power_bomb_2_shot
+      - power_bomb_3_shot
       - missile_bank_1_shot
       - missile_bank_2_shot
       - missile_bank_3_shot

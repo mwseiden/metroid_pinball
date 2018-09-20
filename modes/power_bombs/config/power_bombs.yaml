@@ -1,18 +1,45 @@
 #config_version=5
 mode:
-    start_events: mode_base_starting
-    priority: 100
+  start_events: mode_base_starting
+  priority: 100
 
-accruals:
-  complete_power_bombs:
-    events:
-      - lower_right_bank_1_shot_hit
-      - lower_right_bank_2_shot_hit
-      - lower_right_bank_3_shot_hit
-    events_when_complete: power_bomb_collected
-    persist_state: true
-    reset_on_complete: true
-    disable_on_complete: false
+shot_profiles:
+  power_bombs:
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: led_color
+
+shots:
+  power_bomb_1_shot:
+    switch: s_lower_right_bank_1
+    profile: power_bombs
+    show_tokens:
+      led: led_bomb_bank_1
+      color: "808000"
+  power_bomb_2_shot:
+    switch: s_lower_right_bank_2
+    profile: power_bombs
+    show_tokens:
+      led: led_bomb_bank_2
+      color: "808000"
+  power_bomb_3_shot:
+    switch: s_lower_right_bank_3
+    profile: power_bombs
+    show_tokens:
+      led: led_bomb_bank_3
+      color: "808000"
+
+shot_groups:
+  power_bombs_shot_group:
+    shots: power_bomb_1_shot, power_bomb_2_shot, power_bomb_2_shot
+    reset_events: power_bombs_shot_group_lit_complete
+    enable_events: mode_power_bombs_started
+    disable_events: mode_power_bombs_ending
+
+event_player:
+  power_bombs_shot_group_lit_complete: power_bomb_collected
 
 show_player:
   power_bomb_collected:
@@ -20,13 +47,13 @@ show_player:
       loops: 0
 
 variable_player:
-  lower_right_bank_1_shot_hit:
+  power_bomb_1_shot_hit:
     score:
       int: (500 + (500 * current_player.power_bombs)) * current_player.multiplier
-  lower_right_bank_2_shot_hit:
+  power_bomb_1_shot_hit:
     score:
       int: (500 + (500 * current_player.power_bombs)) * current_player.multiplier
-  lower_right_bank_3_shot_hit:
+  power_bomb_1_shot_hit:
     score:
       int: (500 + (500 * current_player.power_bombs)) * current_player.multiplier
   power_bomb_collected:

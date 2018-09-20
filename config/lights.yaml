@@ -65,10 +65,19 @@ lights:
     tags: reflective
   led_bomb_bank_1:
     number: 0-14
+    x: 0.7141783029001074
+    y: 0.5177228786251343
+    tags: reflective
   led_bomb_bank_2:
     number: 0-15
+    x: 0.7447547440028643
+    y: 0.5381310418904404
+    tags: reflective
   led_bomb_bank_3:
     number: 0-16
+    x: 0.7731471535982816
+    y: 0.5574650912996778
+    tags: reflective
   led_enter_left_orbit:
     number: 0-17
     x: 0.2536593479707252

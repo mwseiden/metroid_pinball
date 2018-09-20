@@ -47,13 +47,13 @@ show_player:
       loops: 0
 
 variable_player:
-  purple_1_shot:
+  purple_1_shot_hit:
     score:
       int: (100 + (100 * current_player.missiles)) * current_player.multiplier
-  purple_2_shot:
+  purple_2_shot_hit:
     score:
       int: (100 + (100 * current_player.missiles)) * current_player.multiplier
-  purple_3_shot:
+  purple_3_shot_hit:
     score:
       int: (100 + (100 * current_player.missiles)) * current_player.multiplier
   missile_collected:
