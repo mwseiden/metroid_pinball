@@ -1,6 +1,6 @@
 #config_version=5
 mode:
-  start_events: mode_base_started
+  start_events: mode_select_landing_site_stopped
   stop_events:
     - skillshot_stage_one_end
     - skillshot_missiles_success
