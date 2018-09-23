@@ -1,0 +1,24 @@
+#config_version=5
+mode:
+  start_events: mode_select_landing_site_stopped
+  stop_events:
+    - skillshot_stage_one_end
+    - skillshot_unskilled_right_outlane_hit
+    - skillshot_unskilled_left_outlane_hit
+    - skillshot_unskilled_right_flipper_hit
+    - skillshot_unskilled_left_flipper_hit
+    - skillshot_unskilled_success
+  priority: 500
+
+shots:
+  skillshot_unskilled_left_outlane:
+    switch: s_left_outlane
+  skillshot_unskilled_right_outlane:
+    switch: s_right_outlane
+  skillshot_unskilled_left_flipper:
+    switch: s_left_flipper
+  skillshot_unskilled_right_flipper:
+    switch: s_right_flipper
+
+event_player:
+  balldevice_bd_trough_ball_enter: skillshot_unskilled_success

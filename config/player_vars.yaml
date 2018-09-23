@@ -12,6 +12,8 @@ player_vars:
   continue_room:
     value_type: str
     initial_value: 1b
+  emergency_landings:
+    initial_value: 0
   has_chosen_landing_site:
     initial_value: 0
   kickbacks:

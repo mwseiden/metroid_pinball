@@ -14,6 +14,10 @@ mode_settings:
       score: 500 * current_player.missiles
     - event: bonus_power_bombs
       score: 1000 * current_player.power_bombs
+    - event: bonus_super_missiles
+      score: 1000 * current_player.super_missiles
+    - event: bonus_emergency_landing
+      score: 100000 * current_player.emergency_landings
 
 slide_player:
   mode_bonus_started: bonus_start_slide
@@ -22,6 +26,8 @@ slide_player:
   bonus_capsides: bonus_capsides_slide
   bonus_missiles: bonus_missiles_slide
   bonus_power_bombs: bonus_power_bombs_slide
+  bonus_super_missiles: bonus_super_missiles_slide
+  bonus_emergency_landing: bonus_emergency_landing_slide
 
 slides:
   bonus_start_slide:
@@ -74,8 +80,26 @@ slides:
       text: (score)
       style: dmd_med
       y: 12
+  bonus_super_missiles_slide:
+    - type: text
+      text: Super Missiles (player|super_missiles)
+      style: dmd_med
+      y: 20
+    - type: text
+      text: (score)
+      style: dmd_med
+      y: 12
+  bonus_emergency_landing_slide:
+    - type: text
+      text: Emergency Landing
+      style: dmd_med
+      y: 20
+    - type: text
+      text: (score)
+      style: dmd_med
+      y: 12
 
 event_player:
-  mode_bonus_stopping:
+  mode_bonus_started:
     cmd_backbox_show:
       show_type: none

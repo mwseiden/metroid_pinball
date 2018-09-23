@@ -96,4 +96,6 @@ event_player:
   skillshot_missiles_success: skillshot_stage_one_end
   skillshot_missiles_success_super: skillshot_stage_one_end
   skillshot_missiles_failure: skillshot_stage_one_end
+  skillshot_unskilled_success: skillshot_stage_one_end
+  mode_bonus_starting: skillshot_stage_one_end
 

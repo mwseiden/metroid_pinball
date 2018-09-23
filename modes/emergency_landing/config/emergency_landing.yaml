@@ -1,0 +1,21 @@
+#config_version=5
+mode:
+  start_events: skillshot_unskilled_success
+  stop_events:
+    - emergency_landing_left_outlane_hit
+    - emergency_landing_right_outlane_hit
+  priority: 100
+
+# add bonus when ball drains down center
+shots:
+  emergency_landing_left_outlane:
+    switch: s_left_outlane
+  emergency_landing_right_outlane:
+    switch: s_right_outlane
+
+variable_player:
+  ball_ending:
+    emergency_landings:
+      action: set
+      int: 1
+

@@ -257,3 +257,7 @@ variable_player:
       int: (1000 + (500 * current_player.scoops)) * current_player.multiplier
   whole_playfield_shot_group_hit:
     switches: 1
+  mode_base_started:
+    emergency_landings:
+      action: set
+      int: 0
