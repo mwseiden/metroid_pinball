@@ -14,7 +14,7 @@ shots:
     switch: s_right_outlane
 
 variable_player:
-  ball_ending:
+  balldevice_bd_trough_ball_enter:
     emergency_landings:
       action: set
       int: 1
