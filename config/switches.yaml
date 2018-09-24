@@ -124,7 +124,7 @@ switches:
     type: NC
   s_unknown_1f:
     number: 1-15
-  s_missile_bank_1:
+  s_missile_bank_3:
     number: 1-16
     platform_settings:
       debounce_close: 10
@@ -136,7 +136,7 @@ switches:
       debounce_close: 10
       debounce_open: 10
     tags: playfield_active
-  s_missile_bank_3:
+  s_missile_bank_1:
     number: 1-18
     platform_settings:
       debounce_close: 10
