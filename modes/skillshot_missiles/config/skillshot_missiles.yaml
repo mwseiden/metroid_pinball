@@ -31,14 +31,12 @@ light_player:
     led_missile_bank_2:
       color: stop
   skillshot_missiles_center_lit:
-    led_missile_bank_1:
-      color: stop
     led_missile_bank_2:
       color: "00A050"
     led_missile_bank_3:
       color: stop
   skillshot_missiles_right_lit:
-    led_missile_bank_2:
+    led_missile_bank_1:
       color: stop
     led_missile_bank_3:
       color: "00A050"
