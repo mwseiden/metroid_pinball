@@ -1,0 +1,16 @@
+#show_version=5
+
+- duration: 1s
+  slides:
+    skillshot_unskilled_made_slide:
+      widgets:
+      - type: text
+        text: Emergency Landing
+        style: dmd_med
+        color: green
+        y: 19
+      - type: text
+        text: Acquired
+        style: dmd_med
+        color: green
+        y: 13
