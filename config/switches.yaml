@@ -12,13 +12,10 @@ switches:
     tags: start
   s_pop_1:
     number: 0-3
-    tags: playfield_active
   s_pop_2:
     number: 0-4
-    tags: playfield_active
   s_pop_3:
     number: 0-5
-    tags: playfield_active
   s_drop_target_1:
     number: 0-6
   s_thin_green:
@@ -42,7 +39,6 @@ switches:
     number: 0-11
   s_upper_sling:
     number: 0-12
-    tags: playfield_active
     platform_settings:
       debounce_close: 10
       debounce_open: 10
@@ -51,7 +47,6 @@ switches:
     platform_settings:
       debounce_close: 20
       debounce_open: 20
-    tags: playfield_active
     type: NC
   s_drop_target_2:
     number: 0-14
@@ -106,13 +101,11 @@ switches:
     platform_settings:
       debounce_close: 10
       debounce_open: 10
-    tags: playfield_active
   s_right_sling:
     number: 1-11
     platform_settings:
       debounce_close: 10
       debounce_open: 10
-    tags: playfield_active
   s_left_inlane:
     number: 1-12
     tags: playfield_active
@@ -200,13 +193,11 @@ switches:
     type: NC
   s_vuk:
     number: 2-0
-    tags: playfield_active
     platform_settings:
       debounce_close: 10
       debounce_open: 10
   s_pop_sling:
     number: 2-1
-    tags: playfield_active
     platform_settings:
       debounce_close: 10
       debounce_open: 10
