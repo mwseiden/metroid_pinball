@@ -1,8 +1,6 @@
 #config_version=5
 mode:
     start_events: room_1b_achieved, room_1b_already_complete
-    # stop_events: game_ending, room_1b_success, room_1b_already_complete
-    restart_on_next_ball: true
     priority: 300
 
 multiballs:

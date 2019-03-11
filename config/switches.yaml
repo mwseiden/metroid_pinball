@@ -124,19 +124,19 @@ switches:
     type: NC
   s_unknown_1f:
     number: 1-15
-  s_skill_bank_1:
+  s_missile_bank_3:
     number: 1-16
     platform_settings:
       debounce_close: 10
       debounce_open: 10
     tags: playfield_active
-  s_skill_bank_2:
+  s_missile_bank_2:
     number: 1-17
     platform_settings:
       debounce_close: 10
       debounce_open: 10
     tags: playfield_active
-  s_skill_bank_3:
+  s_missile_bank_1:
     number: 1-18
     platform_settings:
       debounce_close: 10
@@ -213,13 +213,13 @@ switches:
   s_big_red:
     number: 2-2
     tags: playfield_active
-  s_purple_1:
+  s_purple_3:
     number: 2-3
     tags: playfield_active
   s_purple_2:
     number: 2-4
     tags: playfield_active
-  s_purple_3:
+  s_purple_1:
     number: 2-5
     tags: playfield_active
   s_orbit_r:

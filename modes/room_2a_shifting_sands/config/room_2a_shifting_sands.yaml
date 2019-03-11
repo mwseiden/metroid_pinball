@@ -8,6 +8,7 @@ timers:
   room_2a_do_not_sink:
     direction: down
     start_value: 3
+    end_value: 0
     tick_interval: 1s
     control_events:
       - event: mode_room_2a_shifting_sands_started
@@ -43,7 +44,8 @@ event_player:
       min_length: 4
       max_length: 12
       color: "200C00"
-  timer_room_2a_do_not_sink_complete: room_2a_sink_into_sand
+  timer_room_2a_do_not_sink_complete:
+    - room_2a_sink_into_sand
 
 variable_player:
   mode_room_2a_shifting_sands_started:

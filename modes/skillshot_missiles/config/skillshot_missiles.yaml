@@ -1,0 +1,81 @@
+#config_version=5
+mode:
+  start_events: mode_base_started
+  stop_events:
+    - skillshot_stage_one_end
+    - skillshot_missiles_success
+    - skillshot_missiles_success_super
+    - skillshot_missiles_failure
+  priority: 500
+
+timers:
+  skillshot_missiles_move:
+    end_value: 3
+    tick_interval: 1.5s
+    restart_on_complete: true
+    control_events:
+      - event: mode_skillshot_missiles_started
+        action: restart
+  skillshot_missiles_super:
+    end_value: 3
+    tick_interval: 1s
+    restart_on_complete: true
+    control_events:
+      - event: skillshot_missiles_upgrade
+        action: restart
+
+light_player:
+  skillshot_missiles_left_lit:
+    led_missile_bank_1:
+      color: "00A050"
+    led_missile_bank_2:
+      color: stop
+  skillshot_missiles_center_lit:
+    led_missile_bank_2:
+      color: "00A050"
+    led_missile_bank_3:
+      color: stop
+  skillshot_missiles_right_lit:
+    led_missile_bank_1:
+      color: stop
+    led_missile_bank_3:
+      color: "00A050"
+
+shots:
+  skillshot_missiles_rollover_shot:
+    switch: s_rollover_button
+    enable_events: skillshot_missiles_upgrade
+    disable_events: skillshot_missiles_success
+
+event_player:
+  timer_skillshot_missiles_move_tick{ticks == 0}: skillshot_missiles_right_lit
+  timer_skillshot_missiles_move_tick{ticks == 1}: skillshot_missiles_center_lit
+  timer_skillshot_missiles_move_tick{ticks == 2}: skillshot_missiles_left_lit
+  missile_bank_1_shot_hit{current_player.skillshot_missiles_lit == 0}: skillshot_missiles_upgrade
+  missile_bank_1_shot_hit{current_player.skillshot_missiles_lit != 0}: skillshot_missiles_failure
+  missile_bank_2_shot_hit{current_player.skillshot_missiles_lit == 1}: skillshot_missiles_upgrade
+  missile_bank_2_shot_hit{current_player.skillshot_missiles_lit != 1}: skillshot_missiles_failure
+  missile_bank_3_shot_hit{current_player.skillshot_missiles_lit == 2}: skillshot_missiles_upgrade
+  missile_bank_3_shot_hit{current_player.skillshot_missiles_lit != 2}: skillshot_missiles_failure
+  timer_skillshot_missiles_super_stopped: skillshot_missiles_success
+  skillshot_missiles_rollover_shot_hit: skillshot_missiles_success_super
+
+variable_player:
+  skillshot_missiles_left_lit:
+    skillshot_missiles_lit:
+      action: set
+      int: 0
+  skillshot_missiles_center_lit:
+    skillshot_missiles_lit:
+      action: set
+      int: 1
+  skillshot_missiles_right_lit:
+    skillshot_missiles_lit:
+      action: set
+      int: 2
+  skillshot_missiles_success:
+    score: 10000
+    missiles: 1
+  skillshot_missiles_success_super:
+    score: 20000
+    super_missiles: 1

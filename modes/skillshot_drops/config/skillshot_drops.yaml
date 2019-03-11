@@ -1,0 +1,160 @@
+#config_version=5
+mode:
+  start_events: mode_select_landing_site_stopped
+  stop_events: skillshot_stage_one_end
+  priority: 500
+
+shots:
+  skillshot_drops_one:
+    switch: s_drop_target_1
+    enable_events: skillshot_drops_enable_1
+    disable_events:
+      - timer_skillshot_drops_first_up_stopped
+      - mode_skillshot_drops_started
+  skillshot_drops_two:
+    switch: s_drop_target_2
+    enable_events: skillshot_drops_enable_2
+    disable_events:
+      - timer_skillshot_drops_second_up_stopped
+      - mode_skillshot_drops_started
+  skillshot_drops_three:
+    switch: s_drop_target_3
+    enable_events: skillshot_drops_enable_3
+    disable_events:
+      - timer_skillshot_drops_third_up_stopped
+      - mode_skillshot_drops_started
+  skillshot_drops_one_behind:
+    switch: s_behind_drop_1
+    enable_events: skillshot_drops_enable_1
+    disable_events:
+      - timer_skillshot_drops_first_up_stopped
+      - mode_skillshot_drops_started
+  skillshot_drops_two_behind:
+    switch: s_behind_drop_2
+    enable_events: skillshot_drops_enable_2
+    disable_events:
+      - timer_skillshot_drops_second_up_stopped
+      - mode_skillshot_drops_started
+  skillshot_drops_three_behind:
+    switch: s_behind_drop_3
+    enable_events: skillshot_drops_enable_3
+    disable_events:
+      - timer_skillshot_drops_third_up_stopped
+      - mode_skillshot_drops_started
+
+timers:
+  skillshot_drops_reset_all:
+    end_value: 2
+    tick_interval: .25s
+    control_events:
+      - event: mode_skillshot_drops_started
+        action: restart
+  skillshot_drops_first_up:
+    end_value: 2
+    tick_interval: 1s
+    control_events:
+      - event: timer_skillshot_drops_reset_all_stopped
+        action: restart
+      - event: timer_skillshot_drops_third_down_stopped
+        action: restart
+  skillshot_drops_first_down:
+    end_value: 2
+    tick_interval: .25s
+    control_events:
+      - event: timer_skillshot_drops_first_up_stopped
+        action: restart
+  skillshot_drops_second_up:
+    end_value: 2
+    tick_interval: 1s
+    control_events:
+      - event: timer_skillshot_drops_first_down_stopped
+        action: restart
+  skillshot_drops_second_down:
+    end_value: 2
+    tick_interval: .25s
+    control_events:
+      - event: timer_skillshot_drops_second_up_stopped
+        action: restart
+  skillshot_drops_third_up:
+    end_value: 2
+    tick_interval: 1s
+    control_events:
+      - event: timer_skillshot_drops_second_down_stopped
+        action: restart
+  skillshot_drops_third_down:
+    end_value: 2
+    tick_interval: .25s
+    control_events:
+      - event: timer_skillshot_drops_third_up_stopped
+        action: restart
+
+event_player:
+  timer_skillshot_drops_reset_all_started: cmd_drop_all_drops
+  timer_skillshot_drops_first_up_started:
+    - cmd_drop_one_up
+    - skillshot_drops_enable_1
+  timer_skillshot_drops_first_down_started: cmd_drop_one_down
+  timer_skillshot_drops_second_up_started:
+    - cmd_drop_two_up
+    - skillshot_drops_enable_2
+  timer_skillshot_drops_second_down_started: cmd_drop_two_down
+  timer_skillshot_drops_third_up_started:
+    - cmd_drop_three_up
+    - skillshot_drops_enable_3
+  timer_skillshot_drops_third_down_started: cmd_drop_three_down
+  skillshot_drops_one_hit: skillshot_drops_made_1
+  skillshot_drops_two_hit:
+    - cmd_drop_one_up
+    - skillshot_drops_made_2
+  skillshot_drops_three_hit:
+    - cmd_drop_two_up
+    - skillshot_drops_made_3
+
+show_player:
+  skillshot_drops_enable_1:
+    blink_light:
+      key: skillshot_drops_blink_1
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_drop_1
+        color: ff0000
+  timer_skillshot_drops_first_up_stopped:
+    skillshot_drops_blink_1:
+      action: stop
+  skillshot_drops_enable_2:
+    blink_light:
+      key: skillshot_drops_blink_2
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_drop_2
+        color: ff0000
+  timer_skillshot_drops_second_up_stopped:
+    skillshot_drops_blink_2:
+      action: stop
+  skillshot_drops_enable_3:
+    blink_light:
+      key: skillshot_drops_blink_3
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_drop_3
+        color: ff0000
+  timer_skillshot_drops_third_up_stopped:
+    skillshot_drops_blink_3:
+      action: stop
+
+variable_player:
+  skillshot_drops_one_hit:
+    score: 10000 * current_player.multiplier
+  skillshot_drops_two_hit:
+    score: 25000 * current_player.multiplier
+  skillshot_drops_three_hit:
+    score: 50000 * current_player.multiplier
+  skillshot_drops_one_behind_hit:
+    score: 50000 * current_player.multiplier
+  skillshot_drops_two_behind_hit:
+    score: 100000 * current_player.multiplier
+  skillshot_drops_three_behind_hit:
+    score: 250000 * current_player.multiplier

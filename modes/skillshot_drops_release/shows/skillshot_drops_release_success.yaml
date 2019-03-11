@@ -1,0 +1,15 @@
+#show_version=5
+
+- duration: 1s
+  slides:
+    skillshot_drops_release_success_slide:
+      widgets:
+      - type: text
+        text: SUCCESS!
+        style: dmd_big
+        color: green
+        y: 19
+      - type: text
+        text: 100000
+        style: dmd_big
+        y: 9

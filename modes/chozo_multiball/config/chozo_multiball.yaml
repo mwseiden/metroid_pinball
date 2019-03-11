@@ -14,7 +14,7 @@ counters:
   captive_ball_counter:
     count_events: captive_shot_hit
     events_when_hit: chozo_multiball_progress
-    starting_count: 6 + (2 * current_player.chozo_multiballs)
+    starting_count: 4 + (2 * current_player.chozo_multiballs)
     count_complete_value: 0
     direction: down
     events_when_complete: chozo_multiball_bashed

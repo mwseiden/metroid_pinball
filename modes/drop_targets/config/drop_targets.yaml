@@ -1,0 +1,31 @@
+#config_version=5
+mode:
+    start_events: mode_skillshot_stopped
+    priority: 100
+
+event_player:
+  mode_drop_targets_started:
+    - drop_targets_enable_scoring:0.5s
+    - cmd_reset_all_drops:3s
+
+shots:
+  drop_1_shot:
+    switch: s_drop_target_1
+    disable_events: mode_drop_targets_started
+    enable_events: drop_targets_enable_scoring
+  drop_2_shot:
+    switch: s_drop_target_2
+    disable_events: mode_drop_targets_started
+    enable_events: drop_targets_enable_scoring
+  drop_3_shot:
+    switch: s_drop_target_3
+    disable_events: mode_drop_targets_started
+    enable_events: drop_targets_enable_scoring
+
+variable_player:
+  drop_1_shot_hit:
+    score: 1000
+  drop_2_shot_hit:
+    score: 10000
+  drop_3_shot_hit:
+    score: 25000

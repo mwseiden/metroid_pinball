@@ -1,0 +1,10 @@
+#show_version=5
+
+- duration: 1s
+  slides:
+    skillshot_missed_slide:
+      widgets:
+      - type: text
+        text: MISSED!
+        style: dmd_big
+        color: red

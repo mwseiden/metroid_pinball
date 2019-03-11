@@ -1,0 +1,80 @@
+#show_version=5
+
+- duration: 0.5s
+  slides:
+    skillshot_drops_one_made_animation_slide:
+      widgets:
+      - type: image
+        image: pinball_26
+        x: 0
+        anchor_x: right
+        animations:
+          show_slide:
+            - property: x
+              value: 21
+              relative: true
+              duration: .5s
+      - type: image
+        image: skillshot_drop_up
+        x: 21
+        anchor_x: left
+      - type: image
+        image: skillshot_drop_down
+        x: 64
+      - type: image
+        image: skillshot_drop_down
+        x: 107
+        anchor_x: right
+
+- duration: 1.2s
+  slides:
+    skillshot_drops_one_made_rollback_animation_slide:
+      widgets:
+      - type: text
+        text: SKILLSHOT!
+        style: dmd_big
+        color: red
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0
+              duration: .5s
+            - property: opacity
+              value: 1
+              duration: .5s
+              repeat: -1
+      - type: image
+        image: pinball_26
+        x: 21
+        anchor_x: right
+        animations:
+          show_slide:
+            - property: x
+              value: -21
+              relative: true
+              duration: 1s
+      - type: image
+        image: skillshot_drop_down
+        x: 21
+        anchor_x: left
+      - type: image
+        image: skillshot_drop_down
+        x: 64
+      - type: image
+        image: skillshot_drop_down
+        x: 107
+        anchor_x: right
+
+- duration: 2s
+  slides:
+    skillshot_drops_one_made_score_slide:
+      widgets:
+      - type: text
+        text: 10000
+        style: dmd_big
+        color: white
+      transition:
+         type: push
+         duration: 1s
+         direction: up
+         easing: in_elastic

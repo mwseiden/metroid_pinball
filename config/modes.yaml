@@ -4,6 +4,8 @@ modes:
   - base
   - bonus
   - chozo_multiball
+  - drop_targets
+  - emergency_landing
   - high_score
   - lanes
   - match
@@ -17,6 +19,13 @@ modes:
   - room_2a_shifting_sands
   - room_2i_lava_jump
   - select_landing_site
+  - skillshot
+  - skillshot_bombs
+  - skillshot_drops
+  - skillshot_drops_release
+  - skillshot_missiles
+  - skillshot_purple
+  - skillshot_unskilled
   - spin_jumps
   - twitch_bits_multiball
 

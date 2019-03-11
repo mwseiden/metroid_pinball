@@ -1,0 +1,62 @@
+#config_version=5
+mode:
+  start_events: mode_base_started
+  stop_events: skillshot_stage_one_end, skillshot_purple_success, skillshot_purple_failure
+  priority: 500
+
+timers:
+  skillshot_purple_move:
+    end_value: 4
+    tick_interval: 1s
+    restart_on_complete: true
+    control_events:
+      - event: mode_skillshot_purple_started
+        action: restart
+
+light_player:
+  skillshot_purple_left_lit:
+    led_upgrade_bank_1:
+      color: "A00050"
+    led_upgrade_bank_2:
+      color: stop
+  skillshot_purple_center_lit:
+    led_upgrade_bank_1:
+      color: stop
+    led_upgrade_bank_2:
+      color: "A00050"
+    led_upgrade_bank_3:
+      color: stop
+  skillshot_purple_right_lit:
+    led_upgrade_bank_2:
+      color: stop
+    led_upgrade_bank_3:
+      color: "A00050"
+
+event_player:
+  timer_skillshot_purple_move_tick{ticks == 0}: skillshot_purple_left_lit
+  timer_skillshot_purple_move_tick{ticks == 1}: skillshot_purple_center_lit
+  timer_skillshot_purple_move_tick{ticks == 2}: skillshot_purple_right_lit
+  timer_skillshot_purple_move_tick{ticks == 3}: skillshot_purple_center_lit
+  purple_1_shot_hit{current_player.skillshot_purple_lit == 0}: skillshot_purple_success
+  purple_1_shot_hit{current_player.skillshot_purple_lit != 0}: skillshot_purple_failure
+  purple_2_shot_hit{current_player.skillshot_purple_lit == 1}: skillshot_purple_success
+  purple_2_shot_hit{current_player.skillshot_purple_lit != 1}: skillshot_purple_failure
+  purple_3_shot_hit{current_player.skillshot_purple_lit == 2}: skillshot_purple_success
+  purple_3_shot_hit{current_player.skillshot_purple_lit != 2}: skillshot_purple_failure
+
+variable_player:
+  skillshot_purple_left_lit:
+    skillshot_purple_lit:
+      action: set
+      int: 0
+  skillshot_purple_center_lit:
+    skillshot_purple_lit:
+      action: set
+      int: 1
+  skillshot_purple_right_lit:
+    skillshot_purple_lit:
+      action: set
+      int: 2
+  skillshot_purple_success:
+    score: 10000
+    missiles: 1
