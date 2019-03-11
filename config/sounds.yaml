@@ -5,55 +5,51 @@ sounds:
     file: ball_one_locked.ogg
     streaming: False
     track: voice
-    volume: -4.5db
     priority: 50
     max_queue_time: None
     ducking:
       target: music
       delay: 0
       attack: 0.3 sec
-      attenuation: -18db
+      attenuation: 0.15
       release_point: 2.0 sec
       release: 1.0 sec
   crateria:
     file: crateria.ogg
     streaming: False
     track: voice
-    volume: -4.5db
     priority: 50
     max_queue_time: None
     ducking:
       target: music
       delay: 0
       attack: 0.3 sec
-      attenuation: -18db
+      attenuation: 0.15
       release_point: 2.0 sec
       release: 1.0 sec
   norfair:
     file: norfair.ogg
     streaming: False
     track: voice
-    volume: -4.5db
     priority: 50
     max_queue_time: None
     ducking:
       target: music
       delay: 0
       attack: 0.3 sec
-      attenuation: -18db
+      attenuation: 0.15
       release_point: 2.0 sec
       release: 1.0 sec
   torvus_bog:
     file: crateria.ogg
     streaming: False
     track: voice
-    volume: -4.5db
     priority: 50
     max_queue_time: None
     ducking:
       target: music
       delay: 0
       attack: 0.3 sec
-      attenuation: -18db
+      attenuation: 0.15
       release_point: 2.0 sec
       release: 1.0 sec
