@@ -2,7 +2,7 @@
 
 sounds:
   music_crateria:
-    file: music_crateria.flac
+    file: music_crateria.ogg
     streaming: True
     track: music
     priority: 50

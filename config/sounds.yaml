@@ -2,10 +2,10 @@
 
 sounds:
   ball_1_locked:
-    file: ball_one_locked.flac
+    file: ball_one_locked.ogg
     streaming: False
     track: voice
-    volume: -4.5 db
+    volume: -4.5db
     priority: 50
     max_queue_time: None
     ducking:
@@ -16,10 +16,10 @@ sounds:
       release_point: 2.0 sec
       release: 1.0 sec
   crateria:
-    file: crateria.flac
+    file: crateria.ogg
     streaming: False
     track: voice
-    volume: -4.5 db
+    volume: -4.5db
     priority: 50
     max_queue_time: None
     ducking:
@@ -30,10 +30,10 @@ sounds:
       release_point: 2.0 sec
       release: 1.0 sec
   norfair:
-    file: norfair.flac
+    file: norfair.ogg
     streaming: False
     track: voice
-    volume: -4.5 db
+    volume: -4.5db
     priority: 50
     max_queue_time: None
     ducking:
@@ -44,10 +44,10 @@ sounds:
       release_point: 2.0 sec
       release: 1.0 sec
   torvus_bog:
-    file: crateria.flac
+    file: crateria.ogg
     streaming: False
     track: voice
-    volume: -4.5 db
+    volume: -4.5db
     priority: 50
     max_queue_time: None
     ducking:
