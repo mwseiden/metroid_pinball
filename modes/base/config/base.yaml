@@ -3,6 +3,9 @@ mode:
   start_events: ball_starting
   priority: 100
 
+config:
+  - music_player.yaml
+
 shots:
   scoop_shot:
     switch: s_scoop
