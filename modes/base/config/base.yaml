@@ -264,3 +264,6 @@ variable_player:
     emergency_landings:
       action: set
       int: 0
+
+sound_player:
+  ball_starting: harmony_metroid

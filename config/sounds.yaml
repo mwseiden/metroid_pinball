@@ -40,6 +40,19 @@ sounds:
       attenuation: 0.15
       release_point: 2.0 sec
       release: 1.0 sec
+  harmony_metroid:
+    file: harmony_metroid.ogg
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
   norfair:
     file: norfair.ogg
     streaming: False

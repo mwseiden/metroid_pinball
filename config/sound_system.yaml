@@ -1,7 +1,7 @@
 #config_version=5
 
 sound_system:
-  buffer: 16384
+  buffer: 1024
   channels: 2
   enabled: True
   frequency: 44100
@@ -10,7 +10,7 @@ sound_system:
     music:
       type: standard
       simultaneous_sounds: 1
-      volume: 0.5
+      volume: 0.25
     voice:
       type: standard
       simultaneous_sounds: 1
