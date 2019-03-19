@@ -266,4 +266,4 @@ variable_player:
       int: 0
 
 sound_player:
-  ball_starting: harmony_metroid
+  mode_base_started: harmony_metroid
