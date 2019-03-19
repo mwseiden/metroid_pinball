@@ -1,8 +1,8 @@
 #config_version=5
 
 sound_system:
-  buffer: 1024
-  channels: 1
+  buffer: 16384
+  channels: 2
   enabled: True
   frequency: 44100
   master_volume: 0.75
