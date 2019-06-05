@@ -60,3 +60,6 @@ variable_player:
   skillshot_bombs_success:
     score: 10000
     power_bombs: 1
+
+sound_player:
+  skillshot_bombs_success: skillshot

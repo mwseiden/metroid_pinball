@@ -39,3 +39,6 @@ event_player:
 variable_player:
   side_ramp_shot_hit:
     score: 100000
+
+sound_player:
+  side_ramp_shot_hit: super_skillshot

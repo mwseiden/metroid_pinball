@@ -149,5 +149,10 @@ event_player:
       show_type: fire
 
 sound_player:
+  select_landing_site_continue_highlighted: continue
   select_landing_site_crateria_highlighted: crateria
+  select_landing_site_brinstar_highlighted: brinstar
   select_landing_site_norfair_highlighted: norfair
+  select_landing_site_maridia_highlighted: maridia
+  select_landing_site_wrecked_ship_highlighted: wrecked_ship
+
