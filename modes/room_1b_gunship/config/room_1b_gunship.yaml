@@ -187,3 +187,6 @@ slide_player:
 images:
   gunship_landing:
     load: preload
+
+sound_player:
+  room_1b_ship_navigated: shoot_the_scoop

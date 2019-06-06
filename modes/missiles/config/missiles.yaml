@@ -60,3 +60,6 @@ variable_player:
     missiles: 1
     score:
       int: (500 + (200 * current_player.missiles)) * current_player.multiplier
+
+sound_player:
+  missile_collected: missile_collected
