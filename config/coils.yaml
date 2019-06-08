@@ -20,7 +20,7 @@ coils:
     number: 0-4
     allow_enable: true
     default_hold_power: 0.125
-    default_pulse_ms: 20
+    default_pulse_ms: 23
   c_scoop:
     number: 0-5
     allow_enable: true
@@ -71,7 +71,7 @@ coils:
   c_ball_launch:
     number: 1-3
     allow_enable: true
-    default_pulse_ms: 14
+    default_pulse_ms: 16
   c_left_slingshot:
     number: 1-4
     allow_enable: true
@@ -81,11 +81,10 @@ coils:
   c_trough_eject:
     number: 1-7
     default_pulse_ms: 25
-    # default_pulse_power:  0.8
     allow_enable: true
   c_vuk:
     number: 2-0
-    default_pulse_ms: 16
+    default_pulse_ms: 20
     allow_enable: true
   c_pop_sling:
     number: 2-1

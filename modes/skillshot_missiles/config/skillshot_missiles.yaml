@@ -79,3 +79,7 @@ variable_player:
   skillshot_missiles_success_super:
     score: 20000
     super_missiles: 1
+
+sound_player:
+  skillshot_missiles_success: skillshot
+  skillshot_missiles_success_super: super_skillshot

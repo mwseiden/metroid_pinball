@@ -1,0 +1,11 @@
+#config_version=5
+
+sound_player:
+  mode_room_1b_gunship_started: music_crateria
+  mode_room_1b_gunship_victory_started: music_crateria
+  mode_room_1r_space_pirate_battle_started: music_brinstar
+  ball_ending:
+    music_crateria:
+      action: stop
+    music_brinstar:
+      action: stop

@@ -239,7 +239,6 @@ switches:
     tags: playfield_active
   s_side_ramp_made:
     number: 2-13
-    type: NC
     tags: playfield_active
   s_tilt:
     number: 2-14

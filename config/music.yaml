@@ -1,0 +1,21 @@
+#config_version=5
+
+sounds:
+  music_crateria:
+    file: music_crateria.ogg
+    streaming: True
+    track: music
+    priority: 50
+    max_queue_time: 500ms
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip
+  music_brinstar:
+    file: music_brinstar.ogg
+    streaming: True
+    track: music
+    priority: 50
+    max_queue_time: 500ms
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip
