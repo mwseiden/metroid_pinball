@@ -366,303 +366,403 @@ lights:
 #left backbox
   led80:
     number: 2-0
+    platform: fast
     type: grb
   led81:
     number: 2-1
+    platform: fast
     type: grb
   led82:
     number: 2-2
+    platform: fast
     type: grb
   led83:
     number: 2-3
+    platform: fast
     type: grb
   led84:
     number: 2-4
+    platform: fast
     type: grb
   led85:
     number: 2-5
+    platform: fast
     type: grb
   led86:
     number: 2-6
+    platform: fast
     type: grb
   led87:
     number: 2-7
+    platform: fast
     type: grb
   led88:
     number: 2-8
+    platform: fast
     type: grb
   led89:
     number: 2-9
+    platform: fast
     type: grb
   led8A:
     number: 2-10
+    platform: fast
     type: grb
   led8B:
     number: 2-11
+    platform: fast
     type: grb
   led8C:
     number: 2-12
+    platform: fast
     type: grb
   led8D:
     number: 2-13
+    platform: fast
     type: grb
   led8E:
     number: 2-14
+    platform: fast
     type: grb
   led8F:
     number: 2-15
+    platform: fast
     type: grb
   led90:
     number: 2-16
+    platform: fast
     type: grb
   led91:
     number: 2-17
+    platform: fast
     type: grb
   led92:
     number: 2-18
+    platform: fast
     type: grb
   led93:
     number: 2-19
+    platform: fast
     type: grb
   led94:
     number: 2-20
+    platform: fast
     type: grb
   led95:
     number: 2-21
+    platform: fast
     type: grb
   led96:
     number: 2-22
+    platform: fast
     type: grb
   led97:
     number: 2-23
+    platform: fast
     type: grb
   led98:
     number: 2-24
+    platform: fast
     type: grb
   led99:
     number: 2-25
+    platform: fast
     type: grb
   led9A:
     number: 2-26
+    platform: fast
     type: grb
   led9B:
     number: 2-27
+    platform: fast
     type: grb
   led9C:
     number: 2-28
+    platform: fast
     type: grb
   led9D:
     number: 2-29
+    platform: fast
     type: grb
   led9E:
     number: 2-30
+    platform: fast
     type: grb
   led9F:
     number: 2-31
+    platform: fast
     type: grb
   ledA0:
     number: 2-32
+    platform: fast
     type: grb
   ledA1:
     number: 2-33
+    platform: fast
     type: grb
   ledA2:
     number: 2-34
+    platform: fast
     type: grb
   ledA3:
     number: 2-35
+    platform: fast
     type: grb
   ledA4:
     number: 2-36
+    platform: fast
     type: grb
   ledA5:
     number: 2-37
+    platform: fast
     type: grb
   ledA6:
     number: 2-38
+    platform: fast
     type: grb
   ledA7:
     number: 2-39
+    platform: fast
     type: grb
   ledA8:
     number: 2-40
+    platform: fast
     type: grb
   ledA9:
     number: 2-41
+    platform: fast
     type: grb
   ledAA:
     number: 2-42
+    platform: fast
     type: grb
   ledAB:
     number: 2-43
+    platform: fast
     type: grb
   ledAC:
     number: 2-44
+    platform: fast
     type: grb
   ledAD:
     number: 2-45
+    platform: fast
     type: grb
   ledAE:
     number: 2-46
+    platform: fast
     type: grb
   ledAF:
     number: 2-47
+    platform: fast
     type: grb
   ledB0:
     number: 2-48
+    platform: fast
     type: grb
   ledB1:
     number: 2-49
+    platform: fast
     type: grb
 
 #right backbox
   ledC0:
     number: 3-0
+    platform: fast
     type: grb
   ledC1:
     number: 3-1
+    platform: fast
     type: grb
   ledC2:
     number: 3-2
+    platform: fast
     type: grb
   ledC3:
     number: 3-3
+    platform: fast
     type: grb
   ledC4:
     number: 3-4
+    platform: fast
     type: grb
   ledC5:
     number: 3-5
+    platform: fast
     type: grb
   ledC6:
     number: 3-6
+    platform: fast
     type: grb
   ledC7:
     number: 3-7
+    platform: fast
     type: grb
   ledC8:
     number: 3-8
+    platform: fast
     type: grb
   ledC9:
     number: 3-9
+    platform: fast
     type: grb
   ledCA:
     number: 3-10
+    platform: fast
     type: grb
   ledCB:
     number: 3-11
+    platform: fast
     type: grb
   ledCC:
     number: 3-12
+    platform: fast
     type: grb
   ledCD:
     number: 3-13
+    platform: fast
     type: grb
   ledCE:
     number: 3-14
+    platform: fast
     type: grb
   ledCF:
     number: 3-15
+    platform: fast
     type: grb
   ledD0:
     number: 3-16
+    platform: fast
     type: grb
   ledD1:
     number: 3-17
+    platform: fast
     type: grb
   ledD2:
     number: 3-18
+    platform: fast
     type: grb
   ledD3:
     number: 3-19
+    platform: fast
     type: grb
   ledD4:
     number: 3-20
+    platform: fast
     type: grb
   ledD5:
     number: 3-21
+    platform: fast
     type: grb
   ledD6:
     number: 3-22
+    platform: fast
     type: grb
   ledD7:
     number: 3-23
+    platform: fast
     type: grb
   ledD8:
     number: 3-24
+    platform: fast
     type: grb
   ledD9:
     number: 3-25
+    platform: fast
     type: grb
   ledDA:
     number: 3-26
+    platform: fast
     type: grb
   ledDB:
     number: 3-27
+    platform: fast
     type: grb
   ledDC:
     number: 3-28
+    platform: fast
     type: grb
   ledDD:
     number: 3-29
+    platform: fast
     type: grb
   ledDE:
     number: 3-30
+    platform: fast
     type: grb
   ledDF:
     number: 3-31
+    platform: fast
     type: grb
   ledE0:
     number: 3-32
+    platform: fast
     type: grb
   ledE1:
     number: 3-33
+    platform: fast
     type: grb
   ledE2:
     number: 3-34
+    platform: fast
     type: grb
   ledE3:
     number: 3-35
+    platform: fast
     type: grb
   ledE4:
     number: 3-36
+    platform: fast
     type: grb
   ledE5:
     number: 3-37
+    platform: fast
     type: grb
   ledE6:
     number: 3-38
+    platform: fast
     type: grb
   ledE7:
     number: 3-39
+    platform: fast
     type: grb
   ledE8:
     number: 3-40
+    platform: fast
     type: grb
   ledE9:
     number: 3-41
+    platform: fast
     type: grb
   ledEA:
     number: 3-42
+    platform: fast
     type: grb
   ledEB:
     number: 3-43
+    platform: fast
     type: grb
   ledEC:
     number: 3-44
+    platform: fast
     type: grb
   ledED:
     number: 3-45
+    platform: fast
     type: grb
   ledEE:
     number: 3-46
+    platform: fast
     type: grb
   ledEF:
     number: 3-47
+    platform: fast
     type: grb
   ledF0:
     number: 3-48
+    platform: fast
     type: grb
   ledF1:
     number: 3-49
+    platform: fast
     type: grb

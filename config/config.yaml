@@ -3,6 +3,7 @@
 hardware:
   platform: fast
   driverboards: fast
+  lights: fadecandy
 
 fast:
   ports: /dev/ttyUSB1, /dev/ttyUSB2
