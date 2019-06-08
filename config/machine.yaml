@@ -1,5 +1,5 @@
 #config_version=5
 
 machine:
-  balls_installed: 8
-  min_balls: 8
+  balls_installed: 4
+  min_balls: 4

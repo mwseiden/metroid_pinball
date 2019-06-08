@@ -60,3 +60,6 @@ variable_player:
   skillshot_purple_success:
     score: 10000
     missiles: 1
+
+sound_player:
+  skillshot_purple_success: skillshot

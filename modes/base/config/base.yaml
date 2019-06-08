@@ -3,6 +3,9 @@ mode:
   start_events: ball_starting
   priority: 100
 
+config:
+  - music_player.yaml
+
 shots:
   scoop_shot:
     switch: s_scoop
@@ -261,3 +264,15 @@ variable_player:
     emergency_landings:
       action: set
       int: 0
+
+sound_player:
+  ball_started{ball > 1 and player == 1}: player_1
+  ball_started{ball > 1 and player == 2}: player_2
+  ball_started{ball > 1 and player == 3}: player_3
+  ball_started{ball > 1 and player == 4}: player_4
+  twitch_bit_donation{bits < 100}: jackpot
+  twitch_bit_donation{bits >= 100 and bits < 500}: super_jackpot
+  twitch_bit_donation{bits >= 500}: double_super_jackpot
+  player_added{num == 2}: player_2
+  player_added{num == 3}: player_3
+  player_added{num == 4}: player_4

@@ -38,3 +38,7 @@ variable_player:
       action: set
   chozo_multiball_bashed:
     chozo_multiballs: 1
+
+sound_player:
+  chozo_multiball_bashed: multiball
+  chozo_multiball_progress: lock_the_ball

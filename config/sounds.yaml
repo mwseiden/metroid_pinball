@@ -1,0 +1,783 @@
+#config_version=5
+
+sounds:
+  ball_1_locked:
+    file: VO_Ball1Locked.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  ball_2_locked:
+    file: VO_Ball2Locked.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  ball_3_locked:
+    file: VO_Ball3Locked.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  ball_added:
+    file: VO_BallAdded.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  bomb_the_wall:
+    file: VO_BombTheWall.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  bonus:
+    file: VO_Bonus.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  bridge_destroyed:
+    file: VO_BridgeDestroyed.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  brinstar:
+    file: VO_Brinstar.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  choose_landing_site:
+    file: VO_ChooseLandingSite.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  continue:
+    file: VO_Continue.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  continue_alt_1:
+    file: VO_Continue_alt.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  continue_alt_2:
+    file: VO_Continue_alt2.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  continue_alt_3:
+    file: VO_Continue_alt3.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  crateria:
+    file: VO_Crateria.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  crateria_alt_1:
+    file: VO_Crateria_alt.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  double_super_jackpot:
+    file: VO_DoubleSuperJackpot.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  extra_ball:
+    file: VO_ExtraBall.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  jackpot:
+    file: VO_Jackpot.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  jackpot_alt_1:
+    file: VO_Jackpot_alt.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  jackpot_mother_fuckers:
+    file: jackpot_mother_fuckers.ogg
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  harmony_metroid:
+    file: harmony_metroid.ogg
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  lets_blow_up_that_bridge:
+    file: VO_LetsBlowUpThatBridge.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  lock_the_ball:
+    file: VO_LockTheBall.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  maridia:
+    file: VO_Maridia.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  metroid:
+    file: VO_Metroid.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  metroid_alt_1:
+    file: VO_Metroid_alt.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  missile_collected:
+    file: VO_MissileCollected.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  multiball:
+    file: VO_Multiball.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  multiball_alt_1:
+    file: VO_Multiball_alt.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  multiball_alt_2:
+    file: VO_Multiball_alt2.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  multiball_alt_3:
+    file: VO_Multiball_alt3.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  norfair:
+    file: VO_Norfair.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  player_1:
+    file: VO_Player1.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  player_2:
+    file: VO_Player2.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  player_3:
+    file: VO_Player3.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  player_4:
+    file: VO_Player4.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  power_bomb_collected:
+    file: VO_PowerbombCollected.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_back_ramp:
+    file: VO_ShootTheBackRamp.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_captive_ball:
+    file: VO_ShootTheCaptiveBall.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_drop_target:
+    file: VO_ShootTheDropTarget.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_flashing_target:
+    file: VO_ShootTheFlashingTarget.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_flashing_targets:
+    file: VO_ShootTheFlashingTargets.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_left_orbit:
+    file: VO_ShootTheLeftOrbit.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_mini_loop:
+    file: VO_ShootTheMiniLoop.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_orbit:
+    file: VO_ShootTheOrbit.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_orbit_alt_1:
+    file: VO_ShootTheOrbit_alt.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_pops:
+    file: VO_ShootThePops.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_ramp:
+    file: VO_ShootTheRamp.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_right_orbit:
+    file: VO_ShootTheRightOrbit.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_scoop:
+    file: VO_ShootTheScoop.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_secret_passage:
+    file: VO_ShootTheSecretPassage.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_side_ramp:
+    file: VO_ShootTheSideRamp.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_upkicker:
+    file: VO_ShootTheUpkicker.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  shoot_the_zero_suit:
+    file: VO_ShootTheZeroSuit.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  skillshot:
+    file: VO_SkillShot.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  super_jackpot:
+    file: VO_SuperJackpot.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  super_missile_collected:
+    file: VO_SuperMissleCollected.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  super_skillshot:
+    file: VO_SuperSkillShot.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  tourian:
+    file: VO_Tourian.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  wrecked_ship:
+    file: VO_WreckedShip.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec

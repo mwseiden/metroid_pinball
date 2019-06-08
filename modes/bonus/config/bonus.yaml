@@ -103,3 +103,6 @@ event_player:
   mode_bonus_started:
     cmd_backbox_show:
       show_type: none
+
+sound_player:
+  mode_bonus_started: bonus

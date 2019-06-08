@@ -60,3 +60,6 @@ variable_player:
     power_bombs: 1
     score:
       int: (2000 + (1000 * current_player.power_bombs)) * current_player.multiplier
+
+sound_player:
+  power_bombs_collected: power_bomb_collected
