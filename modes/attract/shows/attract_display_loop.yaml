@@ -401,6 +401,7 @@
 - duration: 5s
   slides:
     replace_backglass_slide:
+      target: backglass
       widgets:
         - type: image
           image: backglass_main_symbol
