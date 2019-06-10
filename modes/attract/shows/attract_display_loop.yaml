@@ -380,6 +380,19 @@
          duration: 1s
          direction: left
 
+- duration: 8s
+  slides:
+    metroid_metal_slide:
+      widgets:
+      - type: image
+        image: backglass_metroid_metal
+        target: backglass
+      - type: image
+        image: dmd_stemage
+      transition:
+         type: fade
+         duration: 1s
+
 - duration: 5s
   slides:
     double_danger_slide:
