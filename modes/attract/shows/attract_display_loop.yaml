@@ -400,6 +400,15 @@
 
 - duration: 5s
   slides:
+    replace_backglass_slide:
+      widgets:
+        - type: image
+          image: backglass_main_symbol
+          y: 780
+        - type: image
+          image: backglass_main_nebula
+      transition: fade
+      transition_out: fade
     double_danger_slide:
       widgets:
       - type: Text
