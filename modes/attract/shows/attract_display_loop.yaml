@@ -383,10 +383,15 @@
 - duration: 8s
   slides:
     metroid_metal_slide:
+      target: backglass
       widgets:
       - type: image
         image: backglass_metroid_metal
-        target: backglass
+      transition:
+         type: fade
+         duration: 1s
+    stemage_slide:
+      widgets:
       - type: image
         image: dmd_stemage
       transition:
