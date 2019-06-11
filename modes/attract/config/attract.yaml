@@ -39,7 +39,7 @@ show_player:
   slide_stemage_slide_active:
     lights_metroid_metal:
       loops: 0
-      time: 33ms
+      speed: 33ms
 
 animations:
   high_score_scroll_up:
