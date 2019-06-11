@@ -381,6 +381,8 @@
          direction: left
 
 - duration: 8s
+  shows:
+    - lights_metroid_metal
   slides:
     metroid_metal_slide:
       target: backglass
