@@ -36,10 +36,14 @@ show_player:
     bits_small:
       loops: 0
       priority: 300
+  slide_metroid_logo_active:
+    lights_samus_logo:
+      loops: 0
+      speed: 5
   slide_stemage_slide_active:
     lights_metroid_metal:
       loops: 0
-      speed: 33ms
+      speed: 5
 
 animations:
   high_score_scroll_up:
