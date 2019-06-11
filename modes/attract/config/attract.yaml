@@ -36,6 +36,9 @@ show_player:
     bits_small:
       loops: 0
       priority: 300
+  slide_stemage_slide_active:
+    lights_metroid_metal:
+      loops: 0
 
 animations:
   high_score_scroll_up:
