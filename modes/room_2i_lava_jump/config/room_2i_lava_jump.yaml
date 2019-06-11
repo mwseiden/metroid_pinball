@@ -118,7 +118,7 @@ show_player:
       loops: -1
       show_tokens:
         led: led_enter_secret_passage
-        color: 8F0000
+        color: '8F0000'
   timer_lava_jump_shot_timer_tick{ticks==2}:
     room_2i_shot_1_blink:
       action: stop
@@ -127,7 +127,7 @@ show_player:
       loops: -1
       show_tokens:
         led: led_enter_left_orbit
-        color: 8F0000
+        color: '8F0000'
   timer_lava_jump_shot_timer_tick{ticks==3}:
     room_2i_shot_2_blink:
       action: stop
@@ -136,7 +136,7 @@ show_player:
       loops: -1
       show_tokens:
         led: led_enter_ramp
-        color: 8F0000
+        color: '8F0000'
   timer_lava_jump_shot_timer_tick{ticks==4}:
     room_2i_shot_3_blink:
       action: stop
@@ -145,7 +145,7 @@ show_player:
       loops: -1
       show_tokens:
         led: led_enter_right_orbit
-        color: 8F0000
+        color: '8F0000'
 
 event_player:
   mode_room_2i_lava_jump_started:
