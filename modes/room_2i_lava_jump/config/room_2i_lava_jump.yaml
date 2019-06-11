@@ -1,9 +1,41 @@
 #config_version=5
 mode:
-    start_events: select_landing_site_norfair_selected, room_2i_continue
-    stop_events: game_ending, ball_ending
-    # restart_on_next_ball: true
-    priority: 300
+  start_events: select_landing_site_norfair_selected, room_2i_continue
+  stop_events: game_ending, ball_ending
+  priority: 300
+
+timers:
+  lava_jump_shot_timer:
+    start_value: 1
+    end_value: 4
+    restart_on_complete: true
+    tick_interval: 10s
+
+shots:
+  lava_jump_first_shot:
+    switch: s_left_passage
+    enable_events:
+      - timer_lava_jump_shot_timer_tick{ticks==1}
+    disable_events:
+      - timer_lava_jump_shot_timer_tick{ticks==2}
+  lava_jump_second_shot:
+    switch: s_orbit_l
+    enable_events:
+      - timer_lava_jump_shot_timer_tick{ticks==2}
+    disable_events:
+      - timer_lava_jump_shot_timer_tick{ticks==3}
+  lava_jump_third_shot:
+    switch: s_ramp_enter
+    enable_events:
+      - timer_lava_jump_shot_timer_tick{ticks==3}
+    disable_events:
+      - timer_lava_jump_shot_timer_tick{ticks==4}
+  lava_jump_fourth_shot:
+    switch: s_orbit_r
+    enable_events:
+      - timer_lava_jump_shot_timer_tick{ticks==4}
+    disable_events:
+      - timer_lava_jump_shot_timer_tick{ticks==1}
 
 animations:
   room_2i_backglass_scroll_up:
@@ -73,6 +105,44 @@ slide_player:
     room_2i_splash_slide:
       target: dmd
       expire: 1.5s
+
+show_player:
+  timer_lava_jump_shot_timer_tick{ticks==1}:
+    room_2i_shot_4_blink:
+      action: stop
+    blink_light:
+      key: room_2i_shot_1_blink
+      loops: -1
+      show_tokens:
+        led: led_enter_secret_passage
+        color: 8F0000
+  timer_lava_jump_shot_timer_tick{ticks==2}:
+    room_2i_shot_1_blink:
+      action: stop
+    blink_light:
+      key: room_2i_shot_2_blink
+      loops: -1
+      show_tokens:
+        led: led_enter_secret_passage
+        color: 8F0000
+  timer_lava_jump_shot_timer_tick{ticks==3}:
+    room_2i_shot_2_blink:
+      action: stop
+    blink_light:
+      key: room_2i_shot_3_blink
+      loops: -1
+      show_tokens:
+        led: led_enter_secret_passage
+        color: 8F0000
+  timer_lava_jump_shot_timer_tick{ticks==4}:
+    room_2i_shot_3_blink:
+      action: stop
+    blink_light:
+      key: room_2i_shot_4_blink
+      loops: -1
+      show_tokens:
+        led: led_enter_secret_passage
+        color: 8F0000
 
 event_player:
   mode_room_2i_lava_jump_started:
