@@ -9,6 +9,12 @@ fast:
   ports: /dev/ttyUSB1, /dev/ttyUSB2
   net_buffer: 200
 
+fadecandy:
+  dithering: True
+
+open_pixel_control:
+  debug: False
+
 config:
   - logging.yaml
   - machine.yaml
