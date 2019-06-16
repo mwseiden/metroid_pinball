@@ -36,43 +36,33 @@ lights:
     platform: fadecandy
   gi_strip_1:
     number: 8
-    type: grb
     platform: fadecandy
   gi_strip_2:
     number: 9
-    type: grb
     platform: fadecandy
   gi_strip_3:
     number: 10
-    type: grb
     platform: fadecandy
   gi_strip_4:
     number: 11
-    type: grb
     platform: fadecandy
   gi_strip_5:
     number: 12
-    type: grb
     platform: fadecandy
   gi_strip_6:
     number: 13
-    type: grb
     platform: fadecandy
   gi_strip_7:
     number: 14
-    type: grb
     platform: fadecandy
   gi_strip_8:
     number: 15
-    type: grb
     platform: fadecandy
   gi_strip_9:
     number: 16
-    type: grb
     platform: fadecandy
   gi_strip_10:
     number: 17
-    type: grb
     platform: fadecandy
 
 #gi-right
