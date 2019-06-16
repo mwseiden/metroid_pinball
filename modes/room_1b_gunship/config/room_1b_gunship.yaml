@@ -193,6 +193,26 @@ images:
   gunship_landing:
     load: preload
 
+sounds:
+  room_1b_sound_ship_left:
+    file: room_1b_sound_ship_left.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  room_1b_sound_ship_right:
+    file: room_1b_sound_ship_right.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  room_1b_sound_ship_land:
+    file: room_1b_sound_ship_land.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
 sound_player:
   room_1b_ship_navigated: shoot_the_scoop
   room_1b_ship_left: room_1b_sound_ship_left
