@@ -37,7 +37,7 @@ show_player:
       loops: 0
       priority: 300
   slide_last_game_high_scores_active:
-    lights_rainbow_spin:
+    lights_rainbow_blurred:
       loops: -1
       speed: 10
   slide_press_start_active:
