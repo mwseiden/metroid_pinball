@@ -112,7 +112,13 @@ show_player:
     lights_metroid_metal:
       loops: 0
       speed: 10
+  slide_double_danger_slide_active:
+    lights_fire:
+      loops: -1
+      speed: 15
   slide_owl_slide_active:
+    lights_fire:
+      action: stop
     lights_purple_spotlight:
       loops: -1
       speed: 10
