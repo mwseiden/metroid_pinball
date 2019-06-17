@@ -380,8 +380,36 @@
          duration: 1s
          direction: left
 
+- duration: 8s
+  slides:
+    metroid_metal_slide:
+      target: backglass
+      widgets:
+      - type: image
+        image: backglass_metroid_metal
+      transition:
+         type: fade
+         duration: 1s
+    stemage_slide:
+      widgets:
+      - type: image
+        image: dmd_stemage
+      transition:
+         type: fade
+         duration: 1s
+
 - duration: 5s
   slides:
+    replace_backglass_slide:
+      target: backglass
+      widgets:
+        - type: image
+          image: backglass_main_symbol
+          y: 780
+        - type: image
+          image: backglass_main_nebula
+      transition: fade
+      transition_out: fade
     double_danger_slide:
       widgets:
       - type: Text

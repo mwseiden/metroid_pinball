@@ -1,0 +1,330 @@
+#show_version=5
+- time: 0
+  lights:
+    gi_back_right: (color)
+    gi_bomb_bank: (color)
+    gi_left_sling_top: (color)
+    gi_upgrade_bank: (color)
+    led_enter_secret_passage: (color)
+    led_pop_1: (color)
+    led_thin_orange: (color)
+    
+- time: '+1'
+  lights:
+    gi_back_right: stop
+    gi_bomb_bank: stop
+    gi_left_sling_bottom: (color)
+    gi_left_sling_top: stop
+    gi_strip_1: (color)
+    led_boss_phantoon: (color)
+    led_enter_secret_passage: stop
+    led_pop_1: stop
+    led_right_outlane: (color)
+    led_thin_orange: stop
+    
+- time: '+1'
+  lights:
+    gi_back_left: (color)
+    gi_left_ball_guide: (color)
+    gi_left_sling_bottom: stop
+    gi_side_bank: (color)
+    gi_strip_1: stop
+    gi_strip_8: (color)
+    gi_upgrade_bank: stop
+    led_boss_phantoon: stop
+    led_goal_4: (color)
+    led_right_outlane: (color)
+    led_upgrade_bank_3: (color)
+    
+- time: '+1'
+  lights:
+    gi_back_left: stop
+    gi_side_bank: stop
+    gi_strip_8: stop
+    led_goal_4: stop
+    led_pop_1: (color)
+    led_right_outlane: stop
+    led_upgrade_bank_3: stop
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: stop
+    led_pop_1: stop
+    led_side_1: (color)
+    
+- time: '+1'
+  lights:
+    gi_strip_10: (color)
+    gi_strip_2: (color)
+    led_motherbrain_2: (color)
+    led_motherbrain_3: (color)
+    led_right_kickback: (color)
+    led_side_1: stop
+    
+- time: '+1'
+  lights:
+    gi_back_right: (color)
+    gi_left_sling_bottom: (color)
+    gi_strip_10: stop
+    gi_strip_6: (color)
+    led_bomb_bank_1: (color)
+    led_missile_bank_3: (color)
+    led_motherbrain_2: (color)
+    led_right_kickback: stop
+    
+- time: '+1'
+  lights:
+    gi_back_right: stop
+    gi_left_sling_bottom: stop
+    gi_strip_2: stop
+    gi_strip_6: stop
+    led_bomb_bank_1: stop
+    led_bomb_bank_2: (color)
+    led_goal_3: (color)
+    led_missile_bank_3: stop
+    led_motherbrain_2: stop
+    led_motherbrain_3: stop
+    led_scanner_e: (color)
+    led_scanner_ne: (color)
+    led_scanner_se: (color)
+    
+- time: '+1'
+  lights:
+    gi_strip_10: (color)
+    gi_upper_flipper_top: (color)
+    led_2x: (color)
+    led_bomb_bank_2: stop
+    led_captive_ball: (color)
+    led_left_outlane: (color)
+    led_pit: (color)
+    led_scanner_e: stop
+    led_scanner_ne: stop
+    led_scanner_se: (color)
+    led_side_3: (color)
+    
+- time: '+1'
+  lights:
+    gi_strip_10: (color)
+    gi_upper_flipper_top: stop
+    led_2x: stop
+    led_captive_ball: stop
+    led_drop_2: (color)
+    led_goal_3: stop
+    led_left_outlane: stop
+    led_pit: stop
+    led_pop_3: (color)
+    led_scanner_se: stop
+    led_side_2: (color)
+    led_side_3: stop
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: (color)
+    gi_strip_10: stop
+    led_drop_2: stop
+    led_pop_3: stop
+    led_right_inlane: (color)
+    led_side_1: (color)
+    led_side_2: stop
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: stop
+    gi_strip_3: (color)
+    led_ball_save: (color)
+    led_drop_3: (color)
+    led_side_1: stop
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: (color)
+    gi_strip_3: stop
+    gi_upper_flipper_bottom: (color)
+    led_ball_save: (color)
+    led_drop_1: (color)
+    led_drop_3: stop
+    led_right_inlane: stop
+    
+- time: '+1'
+  lights:
+    gi_upper_flipper_bottom: stop
+    led_ball_save: stop
+    led_bomb_bank_2: (color)
+    led_drop_1: stop
+    led_drop_2: (color)
+    led_enter_side_ramp: (color)
+    led_pit: (color)
+    led_upper_playfield_3: (color)
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: stop
+    gi_right_ball_guide: (color)
+    gi_under_side_ramp: (color)
+    led_bomb_bank_2: stop
+    led_bomb_bank_3: (color)
+    led_drop_2: stop
+    led_enter_side_ramp: stop
+    led_left_outlane: (color)
+    led_pit: stop
+    led_rollover: (color)
+    led_side_1: (color)
+    
+- time: '+1'
+  lights:
+    gi_right_ball_guide: stop
+    led_bomb_bank_3: stop
+    led_boss_draygon: (color)
+    led_left_outlane: stop
+    led_motherbrain_3: (color)
+    led_rollover: stop
+    led_side_1: stop
+    led_upper_playfield_3: stop
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: stop
+    led_boss_draygon: stop
+    led_boss_ridley: (color)
+    led_drop_1: (color)
+    led_enter_left_orbit: (color)
+    led_motherbrain_3: stop
+    led_right_outlane: (color)
+    
+- time: '+1'
+  lights:
+    led_boss_ridley: stop
+    led_drop_1: stop
+    led_enter_left_orbit: stop
+    led_goal_3: (color)
+    led_goal_4: (color)
+    led_right_outlane: stop
+    led_zero_suit: (color)
+    
+- time: '+1'
+  lights:
+    gi_strip_9: (color)
+    led_goal_3: stop
+    led_goal_4: stop
+    led_left_kickback: (color)
+    led_upgrade_bank_3: (color)
+    led_zero_suit: stop
+    
+- time: '+1'
+  lights:
+    gi_strip_9: stop
+    led_enter_scoop: (color)
+    led_left_kickback: stop
+    led_upgrade_bank_3: stop
+    
+- time: '+1'
+  lights:
+    gi_strip_4: (color)
+    led_boss_phantoon: (color)
+    led_enter_scoop: (color)
+    led_left_inlane: (color)
+    led_upper_playfield_1: (color)
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: (color)
+    gi_strip_1: (color)
+    gi_strip_4: stop
+    gi_strip_6: (color)
+    led_boss_phantoon: stop
+    led_enter_scoop: stop
+    led_left_inlane: stop
+    led_upper_playfield_1: stop
+    
+- time: '+1'
+  lights:
+    gi_back_left: (color)
+    gi_behind_zero_suit: stop
+    gi_strip_6: stop
+    gi_upgrade_bank: (color)
+    gi_upper_flipper_top: (color)
+    
+- time: '+1'
+  lights:
+    gi_missile_bank: (color)
+    gi_strip_1: stop
+    gi_upgrade_bank: stop
+    gi_upper_flipper_top: stop
+    led_upgrade_bank_2: (color)
+    led_upper_playfield_2: (color)
+    
+- time: '+1'
+  lights:
+    gi_back_left: stop
+    gi_missile_bank: stop
+    led_boss_draygon: (color)
+    led_upgrade_bank_2: stop
+    led_upper_playfield_2: stop
+    
+- time: '+1'
+  lights:
+    gi_back_center: (color)
+    gi_strip_7: (color)
+    led_boss_draygon: stop
+    led_enter_right_orbit: (color)
+    led_goal_1: (color)
+    led_wall_jump: (color)
+    
+- time: '+1'
+  lights:
+    gi_back_center: stop
+    gi_side_bank: (color)
+    gi_strip_7: stop
+    led_drop_3: (color)
+    led_enter_right_orbit: stop
+    led_enter_secret_passage: (color)
+    led_goal_1: stop
+    led_right_inlane: (color)
+    led_wall_jump: stop
+    
+- time: '+1'
+  lights:
+    gi_right_sling_top: (color)
+    gi_side_bank: stop
+    gi_upper_flipper_bottom: (color)
+    led_boss_kraid: (color)
+    led_drop_3: stop
+    led_enter_ramp: (color)
+    led_enter_secret_passage: stop
+    led_goal_1: (color)
+    led_right_inlane: stop
+    
+- time: '+1'
+  lights:
+    gi_right_sling_top: stop
+    gi_upper_flipper_bottom: stop
+    led_boss_kraid: stop
+    led_enter_ramp: stop
+    led_rollover: (color)
+    led_scanner_center: (color)
+    led_scanner_ne: (color)
+    led_scanner_nw: (color)
+    
+- time: '+1'
+  lights:
+    led_goal_1: stop
+    led_left_kickback: (color)
+    led_rollover: stop
+    led_scanner_ne: stop
+    led_scanner_nw: stop
+    led_scanner_se: (color)
+    led_scanner_sw: (color)
+    led_upper_playfield_3: (color)
+    
+- time: '+1'
+  lights:
+    gi_back_right: (color)
+    gi_right_ball_guide: (color)
+    led_3x: (color)
+    led_left_kickback: stop
+    led_missile_bank_1: (color)
+    led_scanner_center: stop
+    led_scanner_se: stop
+    led_scanner_sw: stop
+    led_upper_playfield_3: stop
+    

@@ -254,4 +254,16 @@ switches:
   s_left_target_2:
     number: 2-17
     tags: playfield_active
+  s_what_am_i_1:
+    number: 2-18
+  s_what_am_i_2:
+    number: 2-19
+  s_what_am_i_3:
+    number: 2-20
+  s_what_am_i_4:
+    number: 2-21
+  s_what_am_i_5:
+    number: 2-22
+  s_what_am_i_6:
+    number: 2-23
 

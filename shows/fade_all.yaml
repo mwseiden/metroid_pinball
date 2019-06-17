@@ -1,0 +1,626 @@
+#show_version=5
+
+- time: 0
+  lights:
+    gi_left_sling_top: (start_color)
+    gi_left_sling_bottom: (start_color)
+    gi_left_ball_guide: (start_color)
+    gi_behind_zero_suit: (start_color)
+    gi_missile_bank: (start_color)
+    gi_middle_sling: (start_color)
+    gi_side_bank: (start_color)
+    gi_back_left: (start_color)
+    gi_strip_1: (start_color)
+    gi_strip_2: (start_color)
+    gi_strip_3: (start_color)
+    gi_strip_4: (start_color)
+    gi_strip_5: (start_color)
+    gi_strip_6: (start_color)
+    gi_strip_7: (start_color)
+    gi_strip_8: (start_color)
+    gi_strip_9: (start_color)
+    gi_strip_10: (start_color)
+    gi_right_sling_top: (start_color)
+    gi_right_sling_bottom: (start_color)
+    gi_right_ball_guide: (start_color)
+    gi_bomb_bank: (start_color)
+    gi_upper_flipper_bottom: (start_color)
+    gi_upper_flipper_top: (start_color)
+    gi_upgrade_bank: (start_color)
+    gi_under_side_ramp: (start_color)
+    gi_back_center: (start_color)
+    gi_back_right: (start_color)
+    led_right_outlane: (start_color)
+    led_right_kickback: (start_color)
+    led_right_inlane: (start_color)
+    led_boss_phantoon: (start_color)
+    led_goal_4: (start_color)
+    led_goal_3: (start_color)
+    led_boss_kraid: (start_color)
+    led_motherbrain_3: (start_color)
+    led_motherbrain_2: (start_color)
+    led_motherbrain_1: (start_color)
+    led_boss_ridley: (start_color)
+    led_goal_2: (start_color)
+    led_ball_save: (start_color)
+    led_goal_1: (start_color)
+    led_boss_draygon: (start_color)
+    led_left_inlane: (start_color)
+    led_left_outlane: (start_color)
+    led_left_kickback: (start_color)
+    led_bomb_bank_3: (start_color)
+    led_bomb_bank_2: (start_color)
+    led_bomb_bank_1: (start_color)
+    led_rollover: (start_color)
+    led_3x: (start_color)
+    led_2x: (start_color)
+    led_scanner_center: (start_color)
+    led_scanner_nw: (start_color)
+    led_scanner_ne: (start_color)
+    led_scanner_e: (start_color)
+    led_scanner_se: (start_color)
+    led_scanner_sw: (start_color)
+    led_scanner_w: (start_color)
+    led_upgrade_bank_3: (start_color)
+    led_upgrade_bank_2: (start_color)
+    led_upgrade_bank_1: (start_color)
+    led_wall_jump: (start_color)
+    led_missile_bank_3: (start_color)
+    led_missile_bank_2: (start_color)
+    led_missile_bank_1: (start_color)
+    led_enter_secret_passage: (start_color)
+    led_zero_suit: (start_color)
+    led_upper_playfield_1: (start_color)
+    led_upper_playfield_2: (start_color)
+    led_upper_playfield_3: (start_color)
+    led_enter_side_ramp: (start_color)
+    led_drop_1: (start_color)
+    led_drop_2: (start_color)
+    led_drop_3: (start_color)
+    led_enter_right_orbit: (start_color)
+    led_thin_orange: (start_color)
+    led_captive_ball: (start_color)
+    led_pop_1: (start_color)
+    led_pop_2: (start_color)
+    led_pop_3: (start_color)
+    led_pit: (start_color)
+    led_enter_ramp: (start_color)
+    led_enter_scoop: (start_color)
+    led_enter_left_orbit: (start_color)
+    led_side_3: (start_color)
+    led_side_2: (start_color)
+    led_side_1: (start_color)
+
+- time: '+1'
+  lights:
+    gi_left_sling_top:
+      color: (color)
+      fade: (fade)
+    gi_left_sling_bottom:
+      color: (color)
+      fade: (fade)
+    gi_left_ball_guide:
+      color: (color)
+      fade: (fade)
+    gi_behind_zero_suit:
+      color: (color)
+      fade: (fade)
+    gi_missile_bank:
+      color: (color)
+      fade: (fade)
+    gi_middle_sling:
+      color: (color)
+      fade: (fade)
+    gi_side_bank:
+      color: (color)
+      fade: (fade)
+    gi_back_left:
+      color: (color)
+      fade: (fade)
+    gi_strip_1:
+      color: (color)
+      fade: (fade)
+    gi_strip_2:
+      color: (color)
+      fade: (fade)
+    gi_strip_3:
+      color: (color)
+      fade: (fade)
+    gi_strip_4:
+      color: (color)
+      fade: (fade)
+    gi_strip_5:
+      color: (color)
+      fade: (fade)
+    gi_strip_6:
+      color: (color)
+      fade: (fade)
+    gi_strip_7:
+      color: (color)
+      fade: (fade)
+    gi_strip_8:
+      color: (color)
+      fade: (fade)
+    gi_strip_9:
+      color: (color)
+      fade: (fade)
+    gi_strip_10:
+      color: (color)
+      fade: (fade)
+    gi_right_sling_top:
+      color: (color)
+      fade: (fade)
+    gi_right_sling_bottom:
+      color: (color)
+      fade: (fade)
+    gi_right_ball_guide:
+      color: (color)
+      fade: (fade)
+    gi_bomb_bank:
+      color: (color)
+      fade: (fade)
+    gi_upper_flipper_bottom:
+      color: (color)
+      fade: (fade)
+    gi_upper_flipper_top:
+      color: (color)
+      fade: (fade)
+    gi_upgrade_bank:
+      color: (color)
+      fade: (fade)
+    gi_under_side_ramp:
+      color: (color)
+      fade: (fade)
+    gi_back_center:
+      color: (color)
+      fade: (fade)
+    gi_back_right:
+      color: (color)
+      fade: (fade)
+    led_right_outlane:
+      color: (color)
+      fade: (fade)
+    led_right_kickback:
+      color: (color)
+      fade: (fade)
+    led_right_inlane:
+      color: (color)
+      fade: (fade)
+    led_boss_phantoon:
+      color: (color)
+      fade: (fade)
+    led_goal_4:
+      color: (color)
+      fade: (fade)
+    led_goal_3:
+      color: (color)
+      fade: (fade)
+    led_boss_kraid:
+      color: (color)
+      fade: (fade)
+    led_motherbrain_3:
+      color: (color)
+      fade: (fade)
+    led_motherbrain_2:
+      color: (color)
+      fade: (fade)
+    led_motherbrain_1:
+      color: (color)
+      fade: (fade)
+    led_boss_ridley:
+      color: (color)
+      fade: (fade)
+    led_goal_2:
+      color: (color)
+      fade: (fade)
+    led_ball_save:
+      color: (color)
+      fade: (fade)
+    led_goal_1:
+      color: (color)
+      fade: (fade)
+    led_boss_draygon:
+      color: (color)
+      fade: (fade)
+    led_left_inlane:
+      color: (color)
+      fade: (fade)
+    led_left_outlane:
+      color: (color)
+      fade: (fade)
+    led_left_kickback:
+      color: (color)
+      fade: (fade)
+    led_bomb_bank_3:
+      color: (color)
+      fade: (fade)
+    led_bomb_bank_2:
+      color: (color)
+      fade: (fade)
+    led_bomb_bank_1:
+      color: (color)
+      fade: (fade)
+    led_rollover:
+      color: (color)
+      fade: (fade)
+    led_3x:
+      color: (color)
+      fade: (fade)
+    led_2x:
+      color: (color)
+      fade: (fade)
+    led_scanner_center:
+      color: (color)
+      fade: (fade)
+    led_scanner_nw:
+      color: (color)
+      fade: (fade)
+    led_scanner_ne:
+      color: (color)
+      fade: (fade)
+    led_scanner_e:
+      color: (color)
+      fade: (fade)
+    led_scanner_se:
+      color: (color)
+      fade: (fade)
+    led_scanner_sw:
+      color: (color)
+      fade: (fade)
+    led_scanner_w:
+      color: (color)
+      fade: (fade)
+    led_upgrade_bank_3:
+      color: (color)
+      fade: (fade)
+    led_upgrade_bank_2:
+      color: (color)
+      fade: (fade)
+    led_upgrade_bank_1:
+      color: (color)
+      fade: (fade)
+    led_wall_jump:
+      color: (color)
+      fade: (fade)
+    led_missile_bank_3:
+      color: (color)
+      fade: (fade)
+    led_missile_bank_2:
+      color: (color)
+      fade: (fade)
+    led_missile_bank_1:
+      color: (color)
+      fade: (fade)
+    led_enter_secret_passage:
+      color: (color)
+      fade: (fade)
+    led_zero_suit:
+      color: (color)
+      fade: (fade)
+    led_upper_playfield_1:
+      color: (color)
+      fade: (fade)
+    led_upper_playfield_2:
+      color: (color)
+      fade: (fade)
+    led_upper_playfield_3:
+      color: (color)
+      fade: (fade)
+    led_enter_side_ramp:
+      color: (color)
+      fade: (fade)
+    led_drop_1:
+      color: (color)
+      fade: (fade)
+    led_drop_2:
+      color: (color)
+      fade: (fade)
+    led_drop_3:
+      color: (color)
+      fade: (fade)
+    led_enter_right_orbit:
+      color: (color)
+      fade: (fade)
+    led_thin_orange:
+      color: (color)
+      fade: (fade)
+    led_captive_ball:
+      color: (color)
+      fade: (fade)
+    led_pop_1:
+      color: (color)
+      fade: (fade)
+    led_pop_2:
+      color: (color)
+      fade: (fade)
+    led_pop_3:
+      color: (color)
+      fade: (fade)
+    led_pit:
+      color: (color)
+      fade: (fade)
+    led_enter_ramp:
+      color: (color)
+      fade: (fade)
+    led_enter_scoop:
+      color: (color)
+      fade: (fade)
+    led_enter_left_orbit:
+      color: (color)
+      fade: (fade)
+    led_side_3:
+      color: (color)
+      fade: (fade)
+    led_side_2:
+      color: (color)
+      fade: (fade)
+    led_side_1:
+      color: (color)
+      fade: (fade)
+
+- time: '+1'
+  lights:
+    gi_left_sling_top:
+      color: (end_color)
+      fade: (fade)
+    gi_left_sling_bottom:
+      color: (end_color)
+      fade: (fade)
+    gi_left_ball_guide:
+      color: (end_color)
+      fade: (fade)
+    gi_behind_zero_suit:
+      color: (end_color)
+      fade: (fade)
+    gi_missile_bank:
+      color: (end_color)
+      fade: (fade)
+    gi_middle_sling:
+      color: (end_color)
+      fade: (fade)
+    gi_side_bank:
+      color: (end_color)
+      fade: (fade)
+    gi_back_left:
+      color: (end_color)
+      fade: (fade)
+    gi_strip_1:
+      color: (end_color)
+      fade: (fade)
+    gi_strip_2:
+      color: (end_color)
+      fade: (fade)
+    gi_strip_3:
+      color: (end_color)
+      fade: (fade)
+    gi_strip_4:
+      color: (end_color)
+      fade: (fade)
+    gi_strip_5:
+      color: (end_color)
+      fade: (fade)
+    gi_strip_6:
+      color: (end_color)
+      fade: (fade)
+    gi_strip_7:
+      color: (end_color)
+      fade: (fade)
+    gi_strip_8:
+      color: (end_color)
+      fade: (fade)
+    gi_strip_9:
+      color: (end_color)
+      fade: (fade)
+    gi_strip_10:
+      color: (end_color)
+      fade: (fade)
+    gi_right_sling_top:
+      color: (end_color)
+      fade: (fade)
+    gi_right_sling_bottom:
+      color: (end_color)
+      fade: (fade)
+    gi_right_ball_guide:
+      color: (end_color)
+      fade: (fade)
+    gi_bomb_bank:
+      color: (end_color)
+      fade: (fade)
+    gi_upper_flipper_bottom:
+      color: (end_color)
+      fade: (fade)
+    gi_upper_flipper_top:
+      color: (end_color)
+      fade: (fade)
+    gi_upgrade_bank:
+      color: (end_color)
+      fade: (fade)
+    gi_under_side_ramp:
+      color: (end_color)
+      fade: (fade)
+    gi_back_center:
+      color: (end_color)
+      fade: (fade)
+    gi_back_right:
+      color: (end_color)
+      fade: (fade)
+    led_right_outlane:
+      color: (end_color)
+      fade: (fade)
+    led_right_kickback:
+      color: (end_color)
+      fade: (fade)
+    led_right_inlane:
+      color: (end_color)
+      fade: (fade)
+    led_boss_phantoon:
+      color: (end_color)
+      fade: (fade)
+    led_goal_4:
+      color: (end_color)
+      fade: (fade)
+    led_goal_3:
+      color: (end_color)
+      fade: (fade)
+    led_boss_kraid:
+      color: (end_color)
+      fade: (fade)
+    led_motherbrain_3:
+      color: (end_color)
+      fade: (fade)
+    led_motherbrain_2:
+      color: (end_color)
+      fade: (fade)
+    led_motherbrain_1:
+      color: (end_color)
+      fade: (fade)
+    led_boss_ridley:
+      color: (end_color)
+      fade: (fade)
+    led_goal_2:
+      color: (end_color)
+      fade: (fade)
+    led_ball_save:
+      color: (end_color)
+      fade: (fade)
+    led_goal_1:
+      color: (end_color)
+      fade: (fade)
+    led_boss_draygon:
+      color: (end_color)
+      fade: (fade)
+    led_left_inlane:
+      color: (end_color)
+      fade: (fade)
+    led_left_outlane:
+      color: (end_color)
+      fade: (fade)
+    led_left_kickback:
+      color: (end_color)
+      fade: (fade)
+    led_bomb_bank_3:
+      color: (end_color)
+      fade: (fade)
+    led_bomb_bank_2:
+      color: (end_color)
+      fade: (fade)
+    led_bomb_bank_1:
+      color: (end_color)
+      fade: (fade)
+    led_rollover:
+      color: (end_color)
+      fade: (fade)
+    led_3x:
+      color: (end_color)
+      fade: (fade)
+    led_2x:
+      color: (end_color)
+      fade: (fade)
+    led_scanner_center:
+      color: (end_color)
+      fade: (fade)
+    led_scanner_nw:
+      color: (end_color)
+      fade: (fade)
+    led_scanner_ne:
+      color: (end_color)
+      fade: (fade)
+    led_scanner_e:
+      color: (end_color)
+      fade: (fade)
+    led_scanner_se:
+      color: (end_color)
+      fade: (fade)
+    led_scanner_sw:
+      color: (end_color)
+      fade: (fade)
+    led_scanner_w:
+      color: (end_color)
+      fade: (fade)
+    led_upgrade_bank_3:
+      color: (end_color)
+      fade: (fade)
+    led_upgrade_bank_2:
+      color: (end_color)
+      fade: (fade)
+    led_upgrade_bank_1:
+      color: (end_color)
+      fade: (fade)
+    led_wall_jump:
+      color: (end_color)
+      fade: (fade)
+    led_missile_bank_3:
+      color: (end_color)
+      fade: (fade)
+    led_missile_bank_2:
+      color: (end_color)
+      fade: (fade)
+    led_missile_bank_1:
+      color: (end_color)
+      fade: (fade)
+    led_enter_secret_passage:
+      color: (end_color)
+      fade: (fade)
+    led_zero_suit:
+      color: (end_color)
+      fade: (fade)
+    led_upper_playfield_1:
+      color: (end_color)
+      fade: (fade)
+    led_upper_playfield_2:
+      color: (end_color)
+      fade: (fade)
+    led_upper_playfield_3:
+      color: (end_color)
+      fade: (fade)
+    led_enter_side_ramp:
+      color: (end_color)
+      fade: (fade)
+    led_drop_1:
+      color: (end_color)
+      fade: (fade)
+    led_drop_2:
+      color: (end_color)
+      fade: (fade)
+    led_drop_3:
+      color: (end_color)
+      fade: (fade)
+    led_enter_right_orbit:
+      color: (end_color)
+      fade: (fade)
+    led_thin_orange:
+      color: (end_color)
+      fade: (fade)
+    led_captive_ball:
+      color: (end_color)
+      fade: (fade)
+    led_pop_1:
+      color: (end_color)
+      fade: (fade)
+    led_pop_2:
+      color: (end_color)
+      fade: (fade)
+    led_pop_3:
+      color: (end_color)
+      fade: (fade)
+    led_pit:
+      color: (end_color)
+      fade: (fade)
+    led_enter_ramp:
+      color: (end_color)
+      fade: (fade)
+    led_enter_scoop:
+      color: (end_color)
+      fade: (fade)
+    led_enter_left_orbit:
+      color: (end_color)
+      fade: (fade)
+    led_side_3:
+      color: (end_color)
+      fade: (fade)
+    led_side_2:
+      color: (end_color)
+      fade: (fade)
+    led_side_1:
+      color: (end_color)
+      fade: (fade)

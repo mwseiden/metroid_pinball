@@ -1,496 +1,758 @@
 #config_version=5
 
 lights:
-#playfield
-  led_pit:
-    number: 0-0
-    x: 0.24960079840319363
-    y: 0.1307385229540918
-    tags: reflective
-  led_pop_1:
-    number: 0-1
-    x: 0.3835329341317365
-    y: 0.11676646706586825
-    tags: reflective
-  led_pop_2:
-    number: 0-2
-    x: 0.5296407185628742
-    y: 0.11676646706586825
-    tags: reflective
-  led_pop_3:
-    number: 0-3
-    x: 0.44644045242847635
-    y: 0.18463073852295409
-    tags: reflective
-  led_pop_center:
-    number: 0-4
-    x: 0.44441117764471055
-    y: 0.14271457085828343
-    tags: reflective
-  led_side_1:
-    number: 0-5
-  led_side_2:
-    number: 0-6
-  led_side_3:
-    number: 0-7
-  led_missile_bank_1:
-    number: 0-8
-    x: 0.28610812746151093
-    y: 0.5005370569280344
-    tags: reflective
-  led_missile_bank_2:
-    number: 0-9
-    x: 0.3057644110275689
-    y: 0.4887218045112782
-    tags: reflective
-  led_missile_bank_3:
-    number: 0-10
-    x: 0.32542069459362694
-    y: 0.47798066595059074
-    tags: reflective
-  led_upgrade_bank_1:
-    number: 0-11
-    x: 0.42588614393125673
-    y: 0.34371643394199786
-    tags: reflective
-  led_upgrade_bank_2:
-    number: 0-12
-    x: 0.4651987110633727
-    y: 0.3533834586466165
-    tags: reflective
-  led_upgrade_bank_3:
-    number: 0-13
-    x: 0.502327246688149
-    y: 0.364124597207304
-    tags: reflective
-  led_bomb_bank_1:
-    number: 0-14
-    x: 0.7141783029001074
-    y: 0.5177228786251343
-    tags: reflective
-  led_bomb_bank_2:
-    number: 0-15
-    x: 0.7447547440028643
-    y: 0.5381310418904404
-    tags: reflective
-  led_bomb_bank_3:
-    number: 0-16
-    x: 0.7731471535982816
-    y: 0.5574650912996778
-    tags: reflective
-  led_enter_left_orbit:
-    number: 0-17
-    x: 0.2536593479707252
-    y: 0.3403193612774451
-    tags: reflective
-  led_enter_scoop:
-    number: 0-18
-    x: 0.30236194278110445
-    y: 0.2834331337325349
-    tags: reflective
-  led_enter_ramp:
-    number: 0-19
-  led_enter_pops:
-    number: 0-20
-  led_captive_ball:
-    number: 0-21
-  led_enter_right_orbit:
-    number: 0-22
-    x: 0.7224218230206254
-    y: 0.2335329341317365
-    tags: reflective
-  led_enter_wall:
-    number: 0-23
-    x: 0.7812707917498337
-    y: 0.2934131736526946
-    tags: reflective
-  led_drop_1:
-    number: 0-24
-    x: 0.825563909774436
-    y: 0.2513426423200859
-    tags: reflective
-  led_drop_2:
-    number: 0-25
-    x: 0.825563909774436
-    y: 0.1460794844253491
-    tags: reflective
-  led_drop_3:
-    number: 0-26
-    x: 0.7316505549588257
-    y: 0.09559613319011816
-    tags: reflective
-  led_scoop:
-    number: 0-27
-  led_upper_playfield_1:
-    number: 0-28
-  led_upper_playfield_2:
-    number: 0-29
-  led_upper_playfield_3:
-    number: 0-30
-  led_rollover:
-    number: 0-31
-    x: 0.8340319361277445
-    y: 0.41317365269461076
-    tags: reflective
-  led_scanner_nw:
-    number: 0-32
-  led_scanner_ne:
-    number: 0-33
-  led_scanner_e:
-    number: 0-34
-  led_scanner_se:
-    number: 0-35
-  led_scanner_sw:
-    number: 0-36
-  led_scanner_w:
-    number: 0-37
-  led_scanner_center:
-    number: 0-38
-  led_enter_secret_passage:
-    number: 0-39
-    x: 0.24554224883566203
-    y: 0.5299401197604791
-    tags: reflective
-  led_boss_phantoon:
-    number: 0-40
-  led_boss_draygon:
-    number: 0-41
-  led_boss_ridley:
-    number: 0-42
-  led_boss_kraid:
-    number: 0-43
-  led_boss_motherbrain:
-    number: 0-44
-  led_left_kickback:
-    number: 0-45
-  led_left_outlane:
-    number: 0-46
-    x: 0.10349301397205589
-    y: 0.6606786427145709
-    tags: reflective
-  led_left_inlane:
-    number: 0-47
-    x: 0.17451763140385895
-    y: 0.6606786427145709
-    tags: reflective
-  led_ball_save:
-    number: 0-48
-    x: 0.46673320026613435
-    y: 0.8532934131736527
-    tags: reflective
-  led_right_inlane:
-    number: 0-49
-    x: 0.7345974717232202
-    y: 0.6586826347305389
-    tags: reflective
+#gi-left
+  gi_left_sling_top:
+    number: 0
+    type: grb
+    platform: fadecandy
+  gi_left_sling_bottom:
+    number: 1
+    type: grb
+    platform: fadecandy
+  gi_left_ball_guide:
+    number: 2
+    type: grb
+    platform: fadecandy
+  gi_behind_zero_suit:
+    number: 3
+    type: grb
+    platform: fadecandy
+  gi_missile_bank:
+    number: 4
+    type: grb
+    platform: fadecandy
+  gi_middle_sling:
+    number: 5
+    type: grb
+    platform: fadecandy
+  gi_side_bank:
+    number: 6
+    type: grb
+    platform: fadecandy
+  gi_back_left:
+    number: 7
+    type: grb
+    platform: fadecandy
+  gi_strip_1:
+    number: 8
+    platform: fadecandy
+  gi_strip_2:
+    number: 9
+    platform: fadecandy
+  gi_strip_3:
+    number: 10
+    platform: fadecandy
+  gi_strip_4:
+    number: 11
+    platform: fadecandy
+  gi_strip_5:
+    number: 12
+    platform: fadecandy
+  gi_strip_6:
+    number: 13
+    platform: fadecandy
+  gi_strip_7:
+    number: 14
+    platform: fadecandy
+  gi_strip_8:
+    number: 15
+    platform: fadecandy
+  gi_strip_9:
+    number: 16
+    platform: fadecandy
+  gi_strip_10:
+    number: 17
+    platform: fadecandy
+
+#gi-right
+  gi_right_sling_top:
+    number: 64
+    type: grb
+    platform: fadecandy
+  gi_right_sling_bottom:
+    number: 65
+    type: grb
+    platform: fadecandy
+  gi_right_ball_guide:
+    number: 66
+    type: grb
+    platform: fadecandy
+  gi_bomb_bank:
+    number: 67
+    type: grb
+    platform: fadecandy
+  gi_upper_flipper_bottom:
+    number: 68
+    type: grb
+    platform: fadecandy
+  gi_upper_flipper_top:
+    number: 69
+    type: grb
+    platform: fadecandy
+  gi_upgrade_bank:
+    number: 70
+    type: grb
+    platform: fadecandy
+  gi_under_side_ramp:
+    number: 71
+    type: grb
+    platform: fadecandy
+  gi_back_center:
+    number: 72
+    type: grb
+    platform: fadecandy
+  gi_back_right:
+    number: 73
+    type: grb
+    platform: fadecandy
+
+#playfield-lower
   led_right_outlane:
-    number: 0-50
-    x: 0.8056220891550233
-    y: 0.657684630738523
+    number: 128
+    platform: fadecandy
     tags: reflective
   led_right_kickback:
-    number: 0-51
+    number: 129
+    platform: fadecandy
+    tags: reflective
+  led_right_inlane:
+    number: 130
+    platform: fadecandy
+    tags: reflective
+  led_boss_phantoon:
+    number: 131
+    platform: fadecandy
+    tags: reflective
+  led_goal_4:
+    number: 132
+    platform: fadecandy
+    tags: reflective
+  led_goal_3:
+    number: 133
+    platform: fadecandy
+    tags: reflective
+  led_boss_kraid:
+    number: 134
+    platform: fadecandy
+    tags: reflective
+  led_motherbrain_3:
+    number: 135
+    platform: fadecandy
+    tags: reflective
+  led_motherbrain_2:
+    number: 136
+    platform: fadecandy
+    tags: reflective
+  led_motherbrain_1:
+    number: 137
+    platform: fadecandy
+    tags: reflective
+  led_boss_ridley:
+    number: 138
+    platform: fadecandy
+    tags: reflective
+  led_goal_2:
+    number: 139
+    platform: fadecandy
+    tags: reflective
+  led_ball_save:
+    number: 140
+    platform: fadecandy
+    tags: reflective
+  led_goal_1:
+    number: 141
+    platform: fadecandy
+    tags: reflective
+  led_boss_draygon:
+    number: 142
+    platform: fadecandy
+    tags: reflective
+  led_left_inlane:
+    number: 143
+    platform: fadecandy
+    tags: reflective
+  led_left_outlane:
+    number: 144
+    platform: fadecandy
+    tags: reflective
+  led_left_kickback:
+    number: 145
+    platform: fadecandy
+    tags: reflective
 
-    #left backbox
+#playfield-middle
+  led_bomb_bank_3:
+    number: 320
+    platform: fadecandy
+    tags: reflective
+  led_bomb_bank_2:
+    number: 321
+    platform: fadecandy
+    tags: reflective
+  led_bomb_bank_1:
+    number: 322
+    platform: fadecandy
+    tags: reflective
+  led_rollover:
+    number: 323
+    platform: fadecandy
+    tags: reflective
+  led_3x:
+    number: 324
+    platform: fadecandy
+    tags: reflective
+  led_2x:
+    number: 325
+    platform: fadecandy
+    tags: reflective
+  led_scanner_center:
+    number: 326
+    platform: fadecandy
+    tags: reflective
+  led_scanner_nw:
+    number: 327
+    platform: fadecandy
+    tags: reflective
+  led_scanner_ne:
+    number: 328
+    platform: fadecandy
+    tags: reflective
+  led_scanner_e:
+    number: 329
+    platform: fadecandy
+    tags: reflective
+  led_scanner_se:
+    number: 330
+    platform: fadecandy
+    tags: reflective
+  led_scanner_sw:
+    number: 331
+    platform: fadecandy
+    tags: reflective
+  led_scanner_w:
+    number: 332
+    platform: fadecandy
+    tags: reflective
+  led_upgrade_bank_3:
+    number: 333
+    platform: fadecandy
+    tags: reflective
+  led_upgrade_bank_2:
+    number: 334
+    platform: fadecandy
+    tags: reflective
+  led_upgrade_bank_1:
+    number: 335
+    platform: fadecandy
+    tags: reflective
+  led_wall_jump:
+    number: 336
+    platform: fadecandy
+    tags: reflective
+  led_missile_bank_3:
+    number: 337
+    platform: fadecandy
+    tags: reflective
+  led_missile_bank_2:
+    number: 338
+    platform: fadecandy
+    tags: reflective
+  led_missile_bank_1:
+    number: 339
+    platform: fadecandy
+    tags: reflective
+  led_enter_secret_passage:
+    number: 340
+    platform: fadecandy
+    tags: reflective
+  led_zero_suit:
+    number: 341
+    platform: fadecandy
+    tags: reflective
+
+#playfield-upper
+  led_upper_playfield_1:
+    number: 384
+    platform: fadecandy
+    tags: reflective
+  led_upper_playfield_2:
+    number: 385
+    platform: fadecandy
+    tags: reflective
+  led_upper_playfield_3:
+    number: 386
+    platform: fadecandy
+    tags: reflective
+  led_enter_side_ramp:
+    number: 387
+    platform: fadecandy
+    tags: reflective
+  led_drop_1:
+    number: 388
+    platform: fadecandy
+    tags: reflective
+  led_drop_2:
+    number: 389
+    platform: fadecandy
+    tags: reflective
+  led_drop_3:
+    number: 390
+    platform: fadecandy
+    tags: reflective
+  led_enter_right_orbit:
+    number: 391
+    platform: fadecandy
+    tags: reflective
+  led_thin_orange:
+    number: 392
+    platform: fadecandy
+    tags: reflective
+  led_captive_ball:
+    number: 393
+    platform: fadecandy
+    tags: reflective
+  led_pop_1:
+    number: 394
+    platform: fadecandy
+    tags: reflective
+  led_pop_2:
+    number: 395
+    platform: fadecandy
+    tags: reflective
+  led_pop_3:
+    number: 396
+    platform: fadecandy
+    tags: reflective
+  led_pit:
+    number: 397
+    platform: fadecandy
+    tags: reflective
+  led_enter_ramp:
+    number: 398
+    platform: fadecandy
+    tags: reflective
+  led_enter_scoop:
+    number: 399
+    platform: fadecandy
+    tags: reflective
+  led_enter_left_orbit:
+    number: 400
+    platform: fadecandy
+    tags: reflective
+  led_side_3:
+    number: 401
+    platform: fadecandy
+    tags: reflective
+  led_side_2:
+    number: 402
+    platform: fadecandy
+    tags: reflective
+  led_side_1:
+    number: 403
+    platform: fadecandy
+    tags: reflective
+
+#left backbox
   led80:
     number: 2-0
+    platform: fast
     type: grb
   led81:
     number: 2-1
+    platform: fast
     type: grb
   led82:
     number: 2-2
+    platform: fast
     type: grb
   led83:
     number: 2-3
+    platform: fast
     type: grb
   led84:
     number: 2-4
+    platform: fast
     type: grb
   led85:
     number: 2-5
+    platform: fast
     type: grb
   led86:
     number: 2-6
+    platform: fast
     type: grb
   led87:
     number: 2-7
+    platform: fast
     type: grb
   led88:
     number: 2-8
+    platform: fast
     type: grb
   led89:
     number: 2-9
+    platform: fast
     type: grb
   led8A:
     number: 2-10
+    platform: fast
     type: grb
   led8B:
     number: 2-11
+    platform: fast
     type: grb
   led8C:
     number: 2-12
+    platform: fast
     type: grb
   led8D:
     number: 2-13
+    platform: fast
     type: grb
   led8E:
     number: 2-14
+    platform: fast
     type: grb
   led8F:
     number: 2-15
+    platform: fast
     type: grb
   led90:
     number: 2-16
+    platform: fast
     type: grb
   led91:
     number: 2-17
+    platform: fast
     type: grb
   led92:
     number: 2-18
+    platform: fast
     type: grb
   led93:
     number: 2-19
+    platform: fast
     type: grb
   led94:
     number: 2-20
+    platform: fast
     type: grb
   led95:
     number: 2-21
+    platform: fast
     type: grb
   led96:
     number: 2-22
+    platform: fast
     type: grb
   led97:
     number: 2-23
+    platform: fast
     type: grb
   led98:
     number: 2-24
+    platform: fast
     type: grb
   led99:
     number: 2-25
+    platform: fast
     type: grb
   led9A:
     number: 2-26
+    platform: fast
     type: grb
   led9B:
     number: 2-27
+    platform: fast
     type: grb
   led9C:
     number: 2-28
+    platform: fast
     type: grb
   led9D:
     number: 2-29
+    platform: fast
     type: grb
   led9E:
     number: 2-30
+    platform: fast
     type: grb
   led9F:
     number: 2-31
+    platform: fast
     type: grb
   ledA0:
     number: 2-32
+    platform: fast
     type: grb
   ledA1:
     number: 2-33
+    platform: fast
     type: grb
   ledA2:
     number: 2-34
+    platform: fast
     type: grb
   ledA3:
     number: 2-35
+    platform: fast
     type: grb
   ledA4:
     number: 2-36
+    platform: fast
     type: grb
   ledA5:
     number: 2-37
+    platform: fast
     type: grb
   ledA6:
     number: 2-38
+    platform: fast
     type: grb
   ledA7:
     number: 2-39
+    platform: fast
     type: grb
   ledA8:
     number: 2-40
+    platform: fast
     type: grb
   ledA9:
     number: 2-41
+    platform: fast
     type: grb
   ledAA:
     number: 2-42
+    platform: fast
     type: grb
   ledAB:
     number: 2-43
+    platform: fast
     type: grb
   ledAC:
     number: 2-44
+    platform: fast
     type: grb
   ledAD:
     number: 2-45
+    platform: fast
     type: grb
   ledAE:
     number: 2-46
+    platform: fast
     type: grb
   ledAF:
     number: 2-47
+    platform: fast
     type: grb
   ledB0:
     number: 2-48
+    platform: fast
     type: grb
   ledB1:
     number: 2-49
+    platform: fast
     type: grb
 
 #right backbox
   ledC0:
     number: 3-0
+    platform: fast
     type: grb
   ledC1:
     number: 3-1
+    platform: fast
     type: grb
   ledC2:
     number: 3-2
+    platform: fast
     type: grb
   ledC3:
     number: 3-3
+    platform: fast
     type: grb
   ledC4:
     number: 3-4
+    platform: fast
     type: grb
   ledC5:
     number: 3-5
+    platform: fast
     type: grb
   ledC6:
     number: 3-6
+    platform: fast
     type: grb
   ledC7:
     number: 3-7
+    platform: fast
     type: grb
   ledC8:
     number: 3-8
+    platform: fast
     type: grb
   ledC9:
     number: 3-9
+    platform: fast
     type: grb
   ledCA:
     number: 3-10
+    platform: fast
     type: grb
   ledCB:
     number: 3-11
+    platform: fast
     type: grb
   ledCC:
     number: 3-12
+    platform: fast
     type: grb
   ledCD:
     number: 3-13
+    platform: fast
     type: grb
   ledCE:
     number: 3-14
+    platform: fast
     type: grb
   ledCF:
     number: 3-15
+    platform: fast
     type: grb
   ledD0:
     number: 3-16
+    platform: fast
     type: grb
   ledD1:
     number: 3-17
+    platform: fast
     type: grb
   ledD2:
     number: 3-18
+    platform: fast
     type: grb
   ledD3:
     number: 3-19
+    platform: fast
     type: grb
   ledD4:
     number: 3-20
+    platform: fast
     type: grb
   ledD5:
     number: 3-21
+    platform: fast
     type: grb
   ledD6:
     number: 3-22
+    platform: fast
     type: grb
   ledD7:
     number: 3-23
+    platform: fast
     type: grb
   ledD8:
     number: 3-24
+    platform: fast
     type: grb
   ledD9:
     number: 3-25
+    platform: fast
     type: grb
   ledDA:
     number: 3-26
+    platform: fast
     type: grb
   ledDB:
     number: 3-27
+    platform: fast
     type: grb
   ledDC:
     number: 3-28
+    platform: fast
     type: grb
   ledDD:
     number: 3-29
+    platform: fast
     type: grb
   ledDE:
     number: 3-30
+    platform: fast
     type: grb
   ledDF:
     number: 3-31
+    platform: fast
     type: grb
   ledE0:
     number: 3-32
+    platform: fast
     type: grb
   ledE1:
     number: 3-33
+    platform: fast
     type: grb
   ledE2:
     number: 3-34
+    platform: fast
     type: grb
   ledE3:
     number: 3-35
+    platform: fast
     type: grb
   ledE4:
     number: 3-36
+    platform: fast
     type: grb
   ledE5:
     number: 3-37
+    platform: fast
     type: grb
   ledE6:
     number: 3-38
+    platform: fast
     type: grb
   ledE7:
     number: 3-39
+    platform: fast
     type: grb
   ledE8:
     number: 3-40
+    platform: fast
     type: grb
   ledE9:
     number: 3-41
+    platform: fast
     type: grb
   ledEA:
     number: 3-42
+    platform: fast
     type: grb
   ledEB:
     number: 3-43
+    platform: fast
     type: grb
   ledEC:
     number: 3-44
+    platform: fast
     type: grb
   ledED:
     number: 3-45
+    platform: fast
     type: grb
   ledEE:
     number: 3-46
+    platform: fast
     type: grb
   ledEF:
     number: 3-47
+    platform: fast
     type: grb
   ledF0:
     number: 3-48
+    platform: fast
     type: grb
   ledF1:
     number: 3-49
+    platform: fast
     type: grb

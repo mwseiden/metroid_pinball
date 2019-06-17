@@ -16,6 +16,13 @@ timers:
       - event: whole_playfield_shot_group_hit
         action: restart
 
+show_player:
+  mode_room_2a_shifting_sands_started:
+    gi_solid:
+      loops: -1
+      show_tokens:
+        color: 'a78600'
+
 slides:
   room_2a_backglass_slide:
     widgets:

@@ -2,7 +2,7 @@
 
 sounds:
   music_crateria:
-    file: music_crateria.ogg
+    file: music_crateria.wav
     streaming: True
     track: music
     priority: 50
@@ -11,7 +11,16 @@ sounds:
     simultaneous_limit: 1
     stealing_method: skip
   music_brinstar:
-    file: music_brinstar.ogg
+    file: music_brinstar.wav
+    streaming: True
+    track: music
+    priority: 50
+    max_queue_time: 500ms
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip
+  music_norfair:
+    file: music_norfair.wav
     streaming: True
     track: music
     priority: 50

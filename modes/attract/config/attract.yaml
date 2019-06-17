@@ -36,6 +36,80 @@ show_player:
     bits_small:
       loops: 0
       priority: 300
+  slide_last_game_high_scores_active:
+    lights_rainbow_spin:
+      loops: -1
+      speed: 10
+  slide_press_start_active:
+    lights_rainbow_spin:
+      action: stop
+    gi_solid:
+      key: attract_lights_press_start_gi
+      loops: -1
+      speed: 10
+      show_tokens:
+        color: '009000'
+    theater_chase:
+      key: attract_lights_press_start
+      loops: -1
+      speed: 10
+      show_tokens:
+        color: '009000'
+  slide_fast_logo_active:
+    attract_lights_press_start:
+      action: stop
+    attract_lights_press_start_gi:
+      action: stop
+    gi_solid:
+      key: attract_lights_fast_logo_gi
+      loops: -1
+      speed: 10
+      show_tokens:
+        color: '900000'
+    theater_chase:
+      key: attract_lights_fast_logo
+      loops: -1
+      speed: 10
+      show_tokens:
+        color: '900000'
+  slide_mission_pinball_active:
+    attract_lights_fast_logo:
+      action: stop
+    attract_lights_fast_logo_gi:
+      action: stop
+    gi_solid:
+      key: attract_lights_mission_pinball_gi
+      loops: -1
+      speed: 10
+      show_tokens:
+        color: '000090'
+    theater_chase:
+      key: attract_lights_mission_pinball
+      loops: -1
+      speed: 10
+      show_tokens:
+        color: '000090'
+  slide_arrrrrcade_active:
+    attract_lights_mission_pinball:
+      action: stop
+    attract_lights_mission_pinball_gi:
+      action: stop
+    drizzle:
+      key: attract_lights_arrrrrcade
+      loops: -1
+      speed: 10
+      show_tokens:
+        color: '900000'
+  slide_metroid_logo_active:
+    attract_lights_arrrrrcade:
+      action: stop
+    lights_samus_logo:
+      loops: 0
+      speed: 10
+  slide_stemage_slide_active:
+    lights_metroid_metal:
+      loops: 0
+      speed: 10
 
 animations:
   high_score_scroll_up:
