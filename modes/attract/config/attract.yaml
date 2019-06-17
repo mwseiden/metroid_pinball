@@ -121,7 +121,7 @@ show_player:
       action: stop
     lights_purple_spotlight:
       loops: -1
-      speed: 10
+      speed: 20
 
 animations:
   high_score_scroll_up:
