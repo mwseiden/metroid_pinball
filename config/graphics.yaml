@@ -79,6 +79,8 @@ slides:
   asset_status_slide:
     - type: text
       text: "LOADING ASSETS: (percent)%"
+      style: dmd_med
+
 
 slide_player:
   init_done:
@@ -89,7 +91,7 @@ slide_player:
     dmd_slide:
       expire: 2s
       target: dmd
-  loading_assets:
+  loading_assets{machine.metroid_game_booted == 0}:
     asset_status_slide:
       target: dmd
   asset_loading_complete:

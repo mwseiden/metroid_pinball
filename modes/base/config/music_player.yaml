@@ -7,7 +7,7 @@ sound_player:
   mode_room_1r_space_pirate_battle_started: music_brinstar
   mode_room_2a_shifting_sands_started: music_maridia
   mode_room_2i_lava_jump_started: music_norfair
-  ball_ending:
+  mode_bonus_started:
     music_crateria:
       action: stop
       fade_out: 3s
