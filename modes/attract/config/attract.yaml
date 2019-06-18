@@ -106,9 +106,11 @@ show_player:
     attract_lights_arrrrrcade:
       action: stop
     lights_samus_logo:
-      loops: 0
+      loops: -1
       speed: 10
   slide_stemage_slide_active:
+    lights_samus_logo:
+      action: stop
     lights_asterix_spin:
       loops: -1
       speed: 14
