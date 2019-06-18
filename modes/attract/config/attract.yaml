@@ -109,10 +109,12 @@ show_player:
       loops: 0
       speed: 10
   slide_stemage_slide_active:
-    lights_metroid_metal:
-      loops: 0
-      speed: 10
+    lights_asterix_spin:
+      loops: -1
+      speed: 14
   slide_double_danger_slide_active:
+    lights_asterix_spin:
+      action: stop
     lights_fire:
       loops: -1
       speed: 15
