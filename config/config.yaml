@@ -19,6 +19,7 @@ config:
   - logging.yaml
   - machine.yaml
   - bcp.yaml
+  - assets.yaml
   - graphics.yaml
   - scriptlets.yaml
   - playfields.yaml
