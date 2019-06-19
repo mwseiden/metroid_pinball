@@ -91,7 +91,7 @@ slide_player:
     dmd_slide:
       expire: 2s
       target: dmd
-  loading_assets{machine.metroid_game_booted == 0}:
+  loading_assets:
     asset_status_slide:
       target: dmd
   asset_loading_complete:
