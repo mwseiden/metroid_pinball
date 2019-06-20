@@ -360,3 +360,4 @@ sound_player:
   upper_left_sling_shot_hit: mid_sling
   ramp_shot_hit: ramp_sound_1
   side_ramp_shot_hit: ramp_sound_4
+  secret_passage_shot_hit: ramp_sound_2
