@@ -61,6 +61,7 @@ shot_groups:
 show_player:
   mode_room_2i_lava_jump_started:
     gi_fire:
+      speed: 16
       loops: -1
 
 animations:
