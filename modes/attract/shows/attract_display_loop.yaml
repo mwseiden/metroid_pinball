@@ -382,6 +382,16 @@
 
 - duration: 8s
   slides:
+    claire_samus:
+      widgets:
+      - type: image
+        image: dmd_samus_claire
+      transition:
+         type: wipe
+         duration: 1s
+
+- duration: 8s
+  slides:
     metroid_metal_slide:
       target: backglass
       widgets:

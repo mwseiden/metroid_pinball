@@ -108,8 +108,14 @@ show_player:
     lights_samus_logo:
       loops: -1
       speed: 10
-  slide_stemage_slide_active:
+  slide_claire_samus_active:
     lights_samus_logo:
+      action: stop
+    lights_fire:
+      loops: -1
+      speed: 15
+  slide_stemage_slide_active:
+    lights_fire:
       action: stop
     lights_asterix_spin:
       loops: -1
