@@ -278,6 +278,45 @@ sounds:
     track: sfx
     priority: 50
     max_queue_time: None
+  mid_sling:
+    file: mid_sling.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  ramp_sound_1:
+    file: ramp_sound_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  ramp_sound_2:
+    file: ramp_sound_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  ramp_sound_3:
+    file: ramp_sound_3.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  ramp_sound_4:
+    file: ramp_sound_4.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_pools:
+  ramp_sound_pool:
+    type: random
+      sounds:
+         - ramp_sound_1
+         - ramp_sound_2
+         - ramp_sound_3
+         - ramp_sound_4
 
 sound_player:
   ball_started{ball > 1 and player == 1}: player_1
@@ -292,3 +331,5 @@ sound_player:
   player_added{num == 4}: player_4
   left_sling_shot_hit: left_sling
   right_sling_shot_hit: right_sling
+  upper_left_sling_shot_hit: mid_sling
+  ramp_shot_hit: ramp_sound_pool
