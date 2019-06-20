@@ -129,6 +129,30 @@ show_player:
       show_tokens:
         led: led_ball_save
         color: ff0000
+  left_sling_shot_hit:
+    blink_2_lights:
+      loops: 0
+      show_player:
+        led_1: gi_left_sling_top
+        led_2: gi_left_sling_bottom
+        color_1: 'FFFFFF'
+        color_2: '000000'
+  right_sling_shot_hit:
+    blink_2_lights:
+      loops: 0
+      show_player:
+        led_1: gi_right_sling_top
+        led_2: gi_right_sling_bottom
+        color_1: 'FFFFFF'
+        color_2: '000000'
+  upper_left_sling_shot_hit:
+    blink_2_lights:
+      loops: 0
+      show_player:
+        led_1: gi_missile_bank
+        led_2: gi_middle_sling
+        color_1: 'FFFFFF'
+        color_2: '000000'
 
 slide_player:
   mode_base_started: score_slide
@@ -329,3 +353,4 @@ sound_player:
   right_sling_shot_hit: right_sling
   upper_left_sling_shot_hit: mid_sling
   ramp_shot_hit: ramp_sound_1
+  side_ramp_shot_hit: ramp_sound_4
