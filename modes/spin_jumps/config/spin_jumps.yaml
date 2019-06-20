@@ -8,6 +8,17 @@ show_player:
     spin_jump_spins:
       loops: 0
 
+sounds:
+  spin_jump:
+    file: spin_jump.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_player:
+  spinner_shot_hit: spin_jump
+
 variable_player:
   spinner_shot_hit:
     spinners: 1

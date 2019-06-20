@@ -265,6 +265,20 @@ variable_player:
       action: set
       int: 0
 
+sounds:
+  left_slingshot:
+    file: left_slingshot.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  right_slingshot:
+    file: right_slingshot.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
 sound_player:
   ball_started{ball > 1 and player == 1}: player_1
   ball_started{ball > 1 and player == 2}: player_2
@@ -276,3 +290,5 @@ sound_player:
   player_added{num == 2}: player_2
   player_added{num == 3}: player_3
   player_added{num == 4}: player_4
+  left_sling_shot_hit: slingshot_left
+  right_sling_shot_hit: slingshot_right
