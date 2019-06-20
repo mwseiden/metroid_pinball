@@ -533,6 +533,17 @@
 
 - duration: 3s
   slides:
+    pinstadium_slide:
+      widgets:
+      - type: image
+        image: dmd_pinstadium
+      transition:
+         type: push
+         duration: 1s
+         direction: down
+
+- duration: 3s
+  slides:
     goren_slide:
       widgets:
       - type: image
