@@ -266,14 +266,14 @@ variable_player:
       int: 0
 
 sounds:
-  left_slingshot:
-    file: left_slingshot.wav
+  left_sling:
+    file: left_sling.wav
     streaming: False
     track: sfx
     priority: 50
     max_queue_time: None
-  right_slingshot:
-    file: right_slingshot.wav
+  right_sling:
+    file: right_sling.wav
     streaming: False
     track: sfx
     priority: 50
@@ -290,5 +290,5 @@ sound_player:
   player_added{num == 2}: player_2
   player_added{num == 3}: player_3
   player_added{num == 4}: player_4
-  left_sling_shot_hit: slingshot_left
-  right_sling_shot_hit: slingshot_right
+  left_sling_shot_hit: left_sling
+  right_sling_shot_hit: right_sling
