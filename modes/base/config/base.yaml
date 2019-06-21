@@ -361,3 +361,4 @@ sound_player:
   ramp_shot_hit: ramp_sound_1
   side_ramp_shot_hit: ramp_sound_4
   secret_passage_shot_hit: ramp_sound_2
+  #rollover_shot_hit:

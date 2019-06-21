@@ -7,12 +7,40 @@ show_player:
   pop_1_shot_hit:
     pop_bumpers_1:
       loops: 0
+    blink_light:
+      loops: 0
+      show_tokens:
+        led: led_pop_1
+        color: 8000C0
   pop_2_shot_hit:
     pop_bumpers_2:
       loops: 0
+    blink_light:
+      loops: 0
+      show_tokens:
+        led: led_pop_2
+        color: 8000C0
   pop_3_shot_hit:
     pop_bumpers_3:
       loops: 0
+    blink_light:
+      loops: 0
+      show_tokens:
+        led: led_pop_3
+        color: 8000C0
+
+sounds:
+  pop_1:
+    file: pop_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_player:
+  pop_1_shot_hit: pop_1
+  pop_2_shot_hit: pop_1
+  pop_3_shot_hit: pop_1
 
 variable_player:
   pop_1_shot_hit:
