@@ -8,6 +8,7 @@ modes:
   - emergency_landing
   - high_score
   - lanes
+  - upper_lanes
   - match
   - missiles
   - pop_bumpers
