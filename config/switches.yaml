@@ -83,7 +83,6 @@ switches:
     tags: playfield_active
   s_rollover_button:
     number: 1-6
-    debounce: quick
     tags: playfield_active
   s_removed_upper_flipper_rubber:
     number: 1-7

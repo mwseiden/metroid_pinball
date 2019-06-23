@@ -7,6 +7,7 @@ sound_player:
   mode_room_1r_space_pirate_battle_started: music_brinstar
   mode_room_2a_shifting_sands_started: music_maridia
   mode_room_2i_lava_jump_started: music_norfair
+  mode_select_landing_site_started: music_item_room
   mode_bonus_started:
     music_crateria:
       action: stop
@@ -23,4 +24,6 @@ sound_player:
     music_wrecked_ship:
       action: stop
       fade_out: 3s
-
+    music_item_room:
+      action: stop
+      fade_out: 3s

@@ -51,12 +51,12 @@ slide_player:
 
 slides:
   select_landing_site_continue_slide:
+    widgets:
     - type: text
       text: Player (player|number)
       color: "FF6030"
       y: 3
       style: dmd_small
-    widgets:
     - type: image
       image: landing_site_continue
       y: 18

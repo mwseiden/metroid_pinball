@@ -159,6 +159,16 @@ show_player:
         led_2: gi_middle_sling
         color_1: 'FFFFFF'
         color_2: '000000'
+  upper_right_sling_shot_hit:
+    blink_2_lights:
+      loops: 0
+      priority: 500
+      speed: 2
+      show_tokens:
+        led_1: gi_under_side_ramp
+        led_2: led_null
+        color_1: 'FFFFFF'
+        color_2: '000000'
   rollover_shot_hit:
     blink_light:
       key: rollover_blink
