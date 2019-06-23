@@ -50,11 +50,11 @@ variable_player:
     lanes: 1
     score:
       int: (1000 + (100 * current_player.lanes)) * current_player.multiplier
-  upper_lane_left_shot_hit:
+  upper_lane_middle_shot_hit:
     lanes: 1
     score:
       int: (1000 + (100 * current_player.lanes)) * current_player.multiplier
-  upper_lane_left_shot_hit:
+  upper_lane_right_shot_hit:
     lanes: 1
     score:
       int: (1000 + (100 * current_player.lanes)) * current_player.multiplier
