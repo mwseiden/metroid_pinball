@@ -19,7 +19,7 @@ show_player:
   spinner_shot_hit:
     spin_jump_spins:
       loops: 0
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 0}:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 0}:
     scanner_nw:
       action: stop
     small_theater_chase:
@@ -34,7 +34,7 @@ show_player:
         led_4: led_null
         led_5: led_null
         led_6: led_null
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 1}:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 1}:
     scanner_ne:
       action: stop
     small_theater_chase:
@@ -49,7 +49,7 @@ show_player:
         led_4: led_null
         led_5: led_null
         led_6: led_null
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 2:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 2:
     scanner_e:
       action: stop
     small_theater_chase:
@@ -64,7 +64,7 @@ show_player:
         led_4: led_null
         led_5: led_null
         led_6: led_null
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 3}:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 3}:
     scanner_se:
       action: stop
     small_theater_chase:
@@ -79,7 +79,7 @@ show_player:
         led_4: led_null
         led_5: led_null
         led_6: led_null
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 4}:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 4}:
     scanner_sw:
       action: stop
     small_theater_chase:
@@ -94,7 +94,7 @@ show_player:
         led_4: led_null
         led_5: led_null
         led_6: led_null
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 5}:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 5}:
     scanner_w:
       action: stop
     small_theater_chase:
@@ -126,42 +126,42 @@ variable_player:
     spinners: 1
     score:
       int: (50 + (10 * current_player.spinners)) * current_player.multiplier
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 0}:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 0}:
     area_bonus_nw: 0
     area_bonus_ne: 1
     area_bonus_e: 0
     area_bonus_se: 0
     area_bonus_sw: 0
     area_bonus_w: 0
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 1}:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 1}:
     area_bonus_nw: 0
     area_bonus_ne: 0
     area_bonus_e: 1
     area_bonus_se: 0
     area_bonus_sw: 0
     area_bonus_w: 0
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 2}:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 2}:
     area_bonus_nw: 0
     area_bonus_ne: 0
     area_bonus_e: 0
     area_bonus_se: 1
     area_bonus_sw: 0
     area_bonus_w: 0
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 3}:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 3}:
     area_bonus_nw: 0
     area_bonus_ne: 0
     area_bonus_e: 0
     area_bonus_se: 0
     area_bonus_sw: 1
     area_bonus_w: 0
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 4}:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 4}:
     area_bonus_nw: 0
     area_bonus_ne: 0
     area_bonus_e: 0
     area_bonus_se: 0
     area_bonus_sw: 0
     area_bonus_w: 1
-  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 5}:
+  logicblock_spin_jump_sequence_hit{device.counters.spin_jump_sequence.value == 5}:
     area_bonus_nw: 1
     area_bonus_ne: 0
     area_bonus_e: 0
