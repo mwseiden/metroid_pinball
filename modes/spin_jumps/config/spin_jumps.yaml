@@ -109,6 +109,84 @@ show_player:
         led_4: led_null
         led_5: led_null
         led_6: led_null
+  mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 0}:
+    small_theater_chase:
+      key: scanner_ne
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_sw
+        led_2: led_scanner_center
+        led_3: led_scanner_ne
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
+  mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 1}:
+    small_theater_chase:
+      key: scanner_e
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_w
+        led_2: led_scanner_center
+        led_3: led_scanner_e
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
+  mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 2}:
+    small_theater_chase:
+      key: scanner_se
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_nw
+        led_2: led_scanner_center
+        led_3: led_scanner_se
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
+  mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 3}:
+    small_theater_chase:
+      key: scanner_sw
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_ne
+        led_2: led_scanner_center
+        led_3: led_scanner_sw
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
+  mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 4}:
+    small_theater_chase:
+      key: scanner_w
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_e
+        led_2: led_scanner_center
+        led_3: led_scanner_w
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
+  mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 5}:
+    small_theater_chase:
+      key: scanner_nw
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_se
+        led_2: led_scanner_center
+        led_3: led_scanner_nw
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
 
 sounds:
   spin_jump:

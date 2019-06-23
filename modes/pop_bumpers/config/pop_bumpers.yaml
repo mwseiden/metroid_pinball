@@ -8,7 +8,8 @@ show_player:
     pop_bumpers_1:
       loops: 0
     blink_light:
-      loops: 0
+      loops: 1
+      speed: 20
       show_tokens:
         led: led_pop_2
         color: 8000C0
@@ -16,7 +17,8 @@ show_player:
     pop_bumpers_2:
       loops: 0
     blink_light:
-      loops: 0
+      loops: 1
+      speed: 20
       show_tokens:
         led: led_pop_3
         color: 8000C0
@@ -24,7 +26,8 @@ show_player:
     pop_bumpers_3:
       loops: 0
     blink_light:
-      loops: 0
+      loops: 1
+      speed: 20
       show_tokens:
         led: led_pop_1
         color: 8000C0
