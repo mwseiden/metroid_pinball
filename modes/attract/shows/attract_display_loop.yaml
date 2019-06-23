@@ -388,7 +388,6 @@
         image: dmd_samus_claire
       transition:
          type: wipe
-         duration: 1s
 
 - duration: 8s
   slides:
