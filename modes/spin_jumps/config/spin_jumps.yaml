@@ -3,10 +3,112 @@ mode:
     start_events: mode_base_starting
     priority: 100
 
+sequences:
+   spin_jump_sequence:
+      events:
+         - spinner_shot_hit
+         - spinner_shot_hit
+         - spinner_shot_hit
+         - spinner_shot_hit
+         - spinner_shot_hit
+         - spinner_shot_hit
+      persist_state: True
+      reset_on_complete: True
+
 show_player:
   spinner_shot_hit:
     spin_jump_spins:
       loops: 0
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 0}:
+    scanner_nw:
+      action: stop
+    small_theater_chase:
+      key: scanner_ne
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_sw
+        led_2: led_scanner_center
+        led_3: led_scanner_ne
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 1}:
+    scanner_ne:
+      action: stop
+    small_theater_chase:
+      key: scanner_e
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_w
+        led_2: led_scanner_center
+        led_3: led_scanner_e
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 2:
+    scanner_e:
+      action: stop
+    small_theater_chase:
+      key: scanner_se
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_nw
+        led_2: led_scanner_center
+        led_3: led_scanner_se
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 3}:
+    scanner_se:
+      action: stop
+    small_theater_chase:
+      key: scanner_sw
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_ne
+        led_2: led_scanner_center
+        led_3: led_scanner_sw
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 4}:
+    scanner_sw:
+      action: stop
+    small_theater_chase:
+      key: scanner_w
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_e
+        led_2: led_scanner_center
+        led_3: led_scanner_w
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 5}:
+    scanner_w:
+      action: stop
+    small_theater_chase:
+      key: scanner_nw
+      loops: -1
+      speed: 5
+      show_tokens:
+        color: yellow
+        led_1: led_scanner_se
+        led_2: led_scanner_center
+        led_3: led_scanner_nw
+        led_4: led_null
+        led_5: led_null
+        led_6: led_null
 
 sounds:
   spin_jump:
@@ -24,3 +126,45 @@ variable_player:
     spinners: 1
     score:
       int: (50 + (10 * current_player.spinners)) * current_player.multiplier
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 0}:
+    area_bonus_nw: 0
+    area_bonus_ne: 1
+    area_bonus_e: 0
+    area_bonus_se: 0
+    area_bonus_sw: 0
+    area_bonus_w: 0
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 1}:
+    area_bonus_nw: 0
+    area_bonus_ne: 0
+    area_bonus_e: 1
+    area_bonus_se: 0
+    area_bonus_sw: 0
+    area_bonus_w: 0
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 2}:
+    area_bonus_nw: 0
+    area_bonus_ne: 0
+    area_bonus_e: 0
+    area_bonus_se: 1
+    area_bonus_sw: 0
+    area_bonus_w: 0
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 3}:
+    area_bonus_nw: 0
+    area_bonus_ne: 0
+    area_bonus_e: 0
+    area_bonus_se: 0
+    area_bonus_sw: 1
+    area_bonus_w: 0
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 4}:
+    area_bonus_nw: 0
+    area_bonus_ne: 0
+    area_bonus_e: 0
+    area_bonus_se: 0
+    area_bonus_sw: 0
+    area_bonus_w: 1
+  logicblock_spin_jump_sequence_hit{device.counters.logic_block_1.value == 5}:
+    area_bonus_nw: 1
+    area_bonus_ne: 0
+    area_bonus_e: 0
+    area_bonus_se: 0
+    area_bonus_sw: 0
+    area_bonus_w: 0

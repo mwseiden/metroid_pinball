@@ -10,7 +10,7 @@ show_player:
     blink_light:
       loops: 0
       show_tokens:
-        led: led_pop_1
+        led: led_pop_2
         color: 8000C0
   pop_2_shot_hit:
     pop_bumpers_2:
@@ -18,7 +18,7 @@ show_player:
     blink_light:
       loops: 0
       show_tokens:
-        led: led_pop_2
+        led: led_pop_3
         color: 8000C0
   pop_3_shot_hit:
     pop_bumpers_3:
@@ -26,7 +26,7 @@ show_player:
     blink_light:
       loops: 0
       show_tokens:
-        led: led_pop_3
+        led: led_pop_1
         color: 8000C0
 
 sounds:

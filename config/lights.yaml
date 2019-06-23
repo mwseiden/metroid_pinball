@@ -353,6 +353,12 @@ lights:
     platform: fadecandy
     tags: reflective
 
+#null
+  led_null:
+    number: 404
+    platform: fadecandy
+    tags: reflective
+
 #left backbox
   led80:
     number: 2-0

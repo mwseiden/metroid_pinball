@@ -1,0 +1,32 @@
+#show_version=5
+
+- time: 0
+  lights:
+    (led_1): (color)
+    (led_6): stop
+
+- time: '+1'
+  lights:
+    (led_2): (color)
+    (led_1): stop
+
+- time: '+1'
+  lights:
+    (led_3): (color)
+    (led_2): stop
+
+- time: '+1'
+  lights:
+    (led_4): (color)
+    (led_3): stop
+
+- time: '+1'
+  lights:
+    (led_5): (color)
+    (led_4): stop
+
+- time: '+1'
+  lights:
+    (led_6): (color)
+    (led_5): stop
+

@@ -256,12 +256,16 @@ switches:
     tags: playfield_active
   s_top_lane_3:
     number: 2-18
+    tags: playfield_active
   s_top_lane_2:
     number: 2-19
+    tags: playfield_active
   s_top_lane_1:
     number: 2-20
+    tags: playfield_active
   s_what_am_i_4:
     number: 2-21
+    tags: playfield_active
   s_left_target_1:
     number: 2-22
   s_what_am_i_6:

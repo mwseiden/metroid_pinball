@@ -1,6 +1,18 @@
 #config_version=5
 
 player_vars:
+  area_bonus_nw:
+    initial_value: 0
+  area_bonus_ne:
+    initial_value: 0
+  area_bonus_e:
+    initial_value: 0
+  area_bonus_se:
+    initial_value: 0
+  area_bonus_sw:
+    initial_value: 0
+  area_bonus_w:
+    initial_value: 0
   capsides:
     initial_value: 0
   captive_ball_counter_value:

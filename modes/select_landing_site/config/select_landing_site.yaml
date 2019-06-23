@@ -54,6 +54,12 @@ slides:
     widgets:
     - type: image
       image: landing_site_continue
+      y: 12
+    - type: text
+      text: Player (player|number)
+      color: "FF6030"
+      y: 28
+      style: dmd_med
   select_landing_site_continue_backglass_slide:
     widgets:
     - type: image
