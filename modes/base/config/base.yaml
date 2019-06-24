@@ -178,7 +178,7 @@ show_player:
   rollover_shot_hit:
     blink_light:
       key: rollover_blink
-      loops: 5
+      loops: 4
       speed: 3
       show_tokens:
         led: led_rollover
@@ -186,6 +186,13 @@ show_player:
   the_pit_shot_hit:
     base_the_pit:
       loops: 0
+    blink_light:
+      key: pit_blink
+      loops: 10
+      speed: 15
+      show_tokens:
+        led: led_rollover
+        color: ff0000
 
 
 slide_player:
