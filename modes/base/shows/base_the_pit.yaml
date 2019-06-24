@@ -1,0 +1,8 @@
+#show_version=5
+
+- duration: 4s
+  slides:
+    fell_in_the_pit_slide:
+      widgets:
+      - type: image
+        image: the_pit

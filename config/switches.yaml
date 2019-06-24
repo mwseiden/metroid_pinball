@@ -263,8 +263,9 @@ switches:
   s_top_lane_1:
     number: 2-20
     tags: playfield_active
-  s_what_am_i_4:
+  s_pit:
     number: 2-21
+    type: NC
     tags: playfield_active
   s_left_target_1:
     number: 2-22

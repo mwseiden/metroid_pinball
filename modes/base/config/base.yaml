@@ -43,12 +43,16 @@ shots:
     switch: s_left_target_1
   side_2_shot:
     switch: s_left_target_2
+  side_3_shot:
+    switch: s_left_target_3
   missile_bank_1_shot:
     switch: s_missile_bank_1
   missile_bank_2_shot:
     switch: s_missile_bank_2
   missile_bank_3_shot:
     switch: s_missile_bank_3
+  the_pit_shot:
+    switch: s_pit
 
 shot_groups:
   whole_playfield_shot_group:
@@ -78,12 +82,14 @@ shot_groups:
       - captive_shot
       - side_1_shot
       - side_2_shot
+      - side_3_shot
       - power_bomb_1_shot
       - power_bomb_2_shot
       - power_bomb_3_shot
       - missile_bank_1_shot
       - missile_bank_2_shot
       - missile_bank_3_shot
+      - the_pit_shot
 
 ball_saves:
   default:
@@ -177,6 +183,9 @@ show_player:
       show_tokens:
         led: led_rollover
         color: ff0000
+  the_pit_shot_hit:
+    base_the_pit:
+      loops: 0
 
 
 slide_player:
@@ -299,6 +308,8 @@ variable_player:
     score: 25000 * current_player.multiplier
   side_2_shot_hit:
     score: 25000 * current_player.multiplier
+  side_3_shot_hit:
+    score: 25000 * current_player.multiplier
   capside_combo_hit:
     capsides: 1
     score:
@@ -313,6 +324,8 @@ variable_player:
     emergency_landings:
       action: set
       int: 0
+  the_pit_shot_hit:
+    score: 16660 * current_player.multiplier
 
 sounds:
   left_sling:

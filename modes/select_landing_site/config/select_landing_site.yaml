@@ -161,7 +161,9 @@ sound_player:
   select_landing_site_norfair_highlighted: norfair
   select_landing_site_maridia_highlighted: maridia
   select_landing_site_wrecked_ship_highlighted: wrecked_ship
-  mode_select_landing_site_started: music_item_room
+  mode_select_landing_site_started:
+    music_item_room:
+      volume: 0.15
   select_landing_site_item_selected:
     music_item_room:
       action: stop
