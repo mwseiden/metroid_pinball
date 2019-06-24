@@ -191,7 +191,7 @@ show_player:
       loops: 10
       speed: 15
       show_tokens:
-        led: led_rollover
+        led: led_pit
         color: ff0000
 
 
