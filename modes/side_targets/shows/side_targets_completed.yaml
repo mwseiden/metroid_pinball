@@ -1,0 +1,13 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    side_targets_completed_slide:
+      widgets:
+      - type: text
+        text: Targets Completed!
+        color: red
+        style: dmd_med
+        y: 20
+        x: 80
+

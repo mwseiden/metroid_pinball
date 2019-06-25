@@ -39,12 +39,6 @@ shots:
     switch: s_shatz
   captive_shot:
     switch: s_captive_ball
-  side_1_shot:
-    switch: s_left_target_1
-  side_2_shot:
-    switch: s_left_target_2
-  side_3_shot:
-    switch: s_left_target_3
   missile_bank_1_shot:
     switch: s_missile_bank_1
   missile_bank_2_shot:
@@ -325,12 +319,6 @@ variable_player:
     captives: 1
     score:
       int: (500 + (500 * current_player.captives) + (current_player.area_bonus_ne * 2000)) * current_player.multiplier
-  side_1_shot_hit:
-    score: 25000 * current_player.multiplier
-  side_2_shot_hit:
-    score: 25000 * current_player.multiplier
-  side_3_shot_hit:
-    score: 25000 * current_player.multiplier
   capside_combo_hit:
     capsides: 1
     score:
