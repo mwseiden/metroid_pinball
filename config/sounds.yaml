@@ -110,7 +110,7 @@ sounds:
     streaming: False
     track: voice
     priority: 50
-    max_queue_time: 0.1s
+    max_queue_time: None
     ducking:
       target: music
       delay: 0
@@ -136,7 +136,7 @@ sounds:
     streaming: False
     track: voice
     priority: 50
-    max_queue_time: 0.1s
+    max_queue_time: None
     ducking:
       target: music
       delay: 0
@@ -188,7 +188,7 @@ sounds:
     streaming: False
     track: voice
     priority: 50
-    max_queue_time: 0.1s
+    max_queue_time: None
     ducking:
       target: music
       delay: 0
@@ -318,7 +318,7 @@ sounds:
     streaming: False
     track: voice
     priority: 50
-    max_queue_time: 0.1s
+    max_queue_time: None
     ducking:
       target: music
       delay: 0
@@ -422,7 +422,7 @@ sounds:
     streaming: False
     track: voice
     priority: 50
-    max_queue_time: 0.1s
+    max_queue_time: None
     ducking:
       target: music
       delay: 0
@@ -786,7 +786,7 @@ sounds:
     streaming: False
     track: voice
     priority: 50
-    max_queue_time: 0.1s
+    max_queue_time: None
     ducking:
       target: music
       delay: 0
