@@ -1,0 +1,59 @@
+#config_version=5
+mode:
+  start_events: mode_base_starting
+  priority: 100
+
+shot_profiles:
+  left_targets:
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: led_color
+
+shots:
+  missile_bank_1_shot:
+    switch: s_missile_bank_1
+    profile: left_targets
+    show_tokens:
+      led: led_missile_bank_1
+      color: "9900ff"
+  missile_bank_2_shot:
+    switch: s_missile_bank_2
+    profile: left_targets
+    show_tokens:
+      led: led_missile_bank_2
+      color: "9900ff"
+  missile_bank_3_shot:
+    switch: s_missile_bank_3
+    profile: left_targets
+    show_tokens:
+      led: led_missile_bank_3
+      color: "9900ff"
+
+shot_groups:
+  left_targets_shot_group:
+    shots: missile_bank_1_shot, missile_bank_2_shot, missile_bank_3_shot
+    reset_events: left_targets_shot_group_lit_complete
+    enable_events: mode_left_targets_started
+    disable_events: mode_left_targets_ending
+
+event_player:
+  left_targets_shot_group_lit_complete: left_targets_completed
+
+show_player:
+  left_targets_completed:
+    left_targets_completed:
+      loops: 0
+
+variable_player:
+  missile_bank_1_shot_hit:
+    score: 1000 * current_player.multiplier
+  missile_bank_2_shot_hit:
+    score: 1000 * current_player.multiplier
+  missile_bank_3_shot_hit:
+    score: 1000 * current_player.multiplier
+  left_targets_completed:
+    score:
+      int: 2500 * current_player.multiplier
+

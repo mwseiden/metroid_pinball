@@ -39,12 +39,6 @@ shots:
     switch: s_shatz
   captive_shot:
     switch: s_captive_ball
-  missile_bank_1_shot:
-    switch: s_missile_bank_1
-  missile_bank_2_shot:
-    switch: s_missile_bank_2
-  missile_bank_3_shot:
-    switch: s_missile_bank_3
   the_pit_shot:
     switch: s_pit
   thin_orange_shot:
