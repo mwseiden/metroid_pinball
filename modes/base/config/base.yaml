@@ -403,6 +403,12 @@ sounds:
     track: sfx
     priority: 50
     max_queue_time: None
+  scoop_eject:
+    file: scoop_eject.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
 
 #sound_pools:
 #  ramp_sound_pool:
@@ -427,3 +433,4 @@ sound_player:
   side_ramp_shot_hit: ramp_sound_4
   secret_passage_shot_hit: ramp_sound_2
   rollover_shot_hit: mini_loop
+  scoop_shot_hit: scoop_eject
