@@ -55,21 +55,12 @@ switches:
   s_lower_right_bank_1:
     number: 1-0
     tags: playfield_active
-    platform_settings:
-      debounce_close: 10
-      debounce_open: 10
   s_lower_right_bank_2:
     number: 1-1
     tags: playfield_active
-    platform_settings:
-      debounce_close: 10
-      debounce_open: 10
   s_lower_right_bank_3:
     number: 1-2
     tags: playfield_active
-    platform_settings:
-      debounce_close: 10
-      debounce_open: 10
   s_shooter_lane:
     number: 1-3
     platform_settings:

@@ -4,3 +4,4 @@ assets:
   sounds:
     default:
       load: preload
+      stealing_method: oldest
