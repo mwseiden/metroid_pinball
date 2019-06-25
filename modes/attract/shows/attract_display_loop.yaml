@@ -611,7 +611,7 @@
         # color: E67300
         # y: 13
       - type: Text
-        text: ...and thanks to everyone
+        text: And thanks to everyone
         style: dmd_med
         color: E67300
         y: 25
