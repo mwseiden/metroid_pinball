@@ -43,6 +43,8 @@ shots:
     switch: s_pit
   thin_orange_shot:
     switch: s_thin_orange
+  vuk_shot:
+    switch: s_vuk
 
 shot_groups:
   whole_playfield_shot_group:
@@ -166,6 +168,24 @@ show_player:
         led_2: led_null
         color_1: 'FFFFFF'
         color_2: '000000'
+  vuk_shot_hit:
+    blink_2_lights:
+      loops: 0
+      priority: 500
+      speed: 3
+      show_tokens:
+        led_1: gi_strip_8
+        led_2: gi_strip_9
+        color_1: 'FF0000'
+        color_2: '0000FF'
+  scoop_shot_hit:
+    blink_light:
+      key: scoop_blink
+      loops: 4
+      speed: 5
+      show_tokens:
+        led: led_enter_scoop
+        color: ffff00
   rollover_shot_hit:
     blink_light:
       key: rollover_blink
@@ -331,6 +351,8 @@ variable_player:
     score: 16660 * current_player.multiplier
   thin_orange_shot_hit:
     score: 800 * current_player.multiplier
+  vuk_shot_hit:
+    score: 10000 * current_player.multiplier
 
 sounds:
   left_sling:
