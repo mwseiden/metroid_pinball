@@ -18,7 +18,6 @@ shots:
   lava_jump_first_shot:
     switch: s_left_passage
     profile: lava_jump_blink
-    # advance_events: mode_room_2i_lava_jump_started
     show_tokens:
       led: led_enter_secret_passage
       color: '8F0000'
@@ -56,7 +55,7 @@ shot_groups:
   lava_jump_initial_shots:
     shots: lava_jump_first_shot, lava_jump_second_shot, lava_jump_third_shot, lava_jump_fourth_shot
     rotate_events: timer_lava_jump_shot_timer_tick
-    reset_events: mode_room_2i_lava_jump_started
+    # reset_events: mode_room_2i_lava_jump_started
 
 show_player:
   mode_room_2i_lava_jump_started:
