@@ -53,6 +53,8 @@ shots:
     switch: s_missile_bank_3
   the_pit_shot:
     switch: s_pit
+  thin_orange_shot:
+    switch: s_thin_orange
 
 shot_groups:
   whole_playfield_shot_group:
@@ -90,6 +92,7 @@ shot_groups:
       - missile_bank_2_shot
       - missile_bank_3_shot
       - the_pit_shot
+      - thin_orange_shot
 
 ball_saves:
   default:
@@ -194,6 +197,16 @@ show_player:
       show_tokens:
         led: led_pit
         color: ff0000
+  thin_orange_shot_hit:
+    blink_light:
+      key: thin_orange_blink
+      priority: 500
+      loops: 8
+      speed: 18
+      show_tokens:
+        led: led_thin_orange
+        color: ff9000
+
 
 
 slide_player:
@@ -334,6 +347,8 @@ variable_player:
       int: 0
   the_pit_shot_hit:
     score: 16660 * current_player.multiplier
+  thin_orange_shot_hit:
+    score: 800 * current_player.multiplier
 
 sounds:
   left_sling:
