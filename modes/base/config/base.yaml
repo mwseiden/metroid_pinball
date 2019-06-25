@@ -188,6 +188,7 @@ show_player:
       loops: 0
     blink_light:
       key: pit_blink
+      priority: 500
       loops: 10
       speed: 15
       show_tokens:
