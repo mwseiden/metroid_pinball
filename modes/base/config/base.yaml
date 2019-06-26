@@ -214,7 +214,7 @@ show_player:
       show_tokens:
         led: led_thin_orange
         color: ff9000
-
+  dirty_pool_locked: base_dirty_pool
 
 
 slide_player:
@@ -285,6 +285,10 @@ event_player:
       speed: 1
       repeat: 20
       direction: left
+  s_behind_drop_1_active{device.switches.s_drop_target_1.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_locked
+  s_behind_drop_2_active{device.switches.s_drop_target_2.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_locked
+  s_behind_drop_3_active{device.switches.s_drop_target_3.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_locked
+  dirty_pool_locked: cmd_drop_all_drops
 
 variable_player:
   left_orbit_hit:
@@ -353,6 +357,8 @@ variable_player:
     score: 800 * current_player.multiplier
   vuk_shot_hit:
     score: 10000 * current_player.multiplier
+  dirty_pool_locked:
+    score: 66600 * current_player.multiplier
 
 sounds:
   left_sling:

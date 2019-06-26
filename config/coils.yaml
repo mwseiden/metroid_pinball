@@ -89,4 +89,7 @@ coils:
   c_pop_sling:
     number: 2-1
     allow_enable: true
+  c_bridge:
+    number: 2-2
+    allow_enable: true
 
