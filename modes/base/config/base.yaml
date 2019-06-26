@@ -214,7 +214,9 @@ show_player:
       show_tokens:
         led: led_thin_orange
         color: ff9000
-  dirty_pool_locked: base_dirty_pool
+  dirty_pool_locked:
+    base_dirty_pool:
+      loops: 0
 
 
 slide_player:
