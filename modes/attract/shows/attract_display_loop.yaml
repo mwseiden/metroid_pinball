@@ -419,6 +419,16 @@
           image: backglass_main_nebula
       transition: fade
       transition_out: fade
+    joel_slide:
+      widgets:
+      - type: image
+        image: dmd_joel
+      transition:
+         type: fade
+         duration: 1s
+
+- duration: 5s
+  slides:
     double_danger_slide:
       widgets:
       - type: Text

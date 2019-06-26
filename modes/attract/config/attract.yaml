@@ -120,8 +120,16 @@ show_player:
     lights_asterix_spin:
       loops: -1
       speed: 14
-  slide_double_danger_slide_active:
+  slide_joel_slide_active:
     lights_asterix_spin:
+      action: stop
+    gi_solid:
+      key: attract_lights_joel_gi
+      loops: -1
+      show_tokens:
+        color: 'c1a24d'
+  slide_double_danger_slide_active:
+    attract_lights_joel_gi:
       action: stop
     lights_fire:
       loops: -1
