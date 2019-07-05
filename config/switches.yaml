@@ -75,6 +75,9 @@ switches:
   s_rollover_button:
     number: 1-6
     tags: playfield_active
+    platform_settings:
+      debounce_open: 4
+      debounce_close: 4
   s_removed_upper_flipper_rubber:
     number: 1-7
   s_right_flipper_eos:

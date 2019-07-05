@@ -154,6 +154,14 @@ event_player:
     cmd_backbox_show:
       show_type: fire
 
+show_player:
+  mode_select_landing_site_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: "808040"
+        color2: "C0C0C0"
+
 sound_player:
 # crateria, brinstar, wrecked_ship, maridia, norfair
 # continue, crateria, brinstar, wrecked_ship, maridia, norfair

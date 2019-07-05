@@ -55,10 +55,12 @@ show_player:
     room_1b_scoop_blink:
       action: stop
   mode_room_1b_gunship_started:
-    gi_solid:
+    gi_solid_with_overhead:
       loops: -1
       show_tokens:
         color: '404080'
+        color2: "808080"
+
   mode_room_1b_gunship_started{current_player.room_1b_step_1a == 0}:
     blink_light:
       key: room_1b_left_orbit_blink
