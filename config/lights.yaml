@@ -132,7 +132,7 @@ lights:
     number: 133
     platform: fadecandy
     tags: reflective
-  led_boss_kraid:
+  led_boss_ridley:
     number: 134
     platform: fadecandy
     tags: reflective
@@ -148,7 +148,7 @@ lights:
     number: 137
     platform: fadecandy
     tags: reflective
-  led_boss_ridley:
+  led_boss_kraid:
     number: 138
     platform: fadecandy
     tags: reflective
