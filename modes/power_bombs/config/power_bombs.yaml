@@ -62,4 +62,4 @@ variable_player:
       int: (2000 + (1000 * current_player.power_bombs)) * current_player.multiplier
 
 sound_player:
-  power_bombs_collected: power_bomb_collected
+  power_bomb_collected: power_bomb_collected

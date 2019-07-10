@@ -107,17 +107,17 @@ variable_player:
       string: 1b
       action: set
   room_1b_ship_left:
-    score: 50000
+    score: (50000 + (current_player.area_bonus_nw * 10000)) * current_player.multiplier
     room_1b_step_1a:
       int: 1
       action: set
   room_1b_ship_right:
-    score: 50000
+    score: (50000 + (current_player.area_bonus_ne * 10000)) * current_player.multiplier
     room_1b_step_1b:
       int: 1
       action: set
   room_1b_achieved:
-    score: 75000
+    score: (75000 + (current_player.area_bonus_nw * 10000)) * current_player.multiplier
     room_1b_step_2:
       int: 1
       action: set
