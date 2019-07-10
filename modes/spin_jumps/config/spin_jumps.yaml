@@ -22,6 +22,14 @@ show_player:
   logicblock_spin_jump_sequence_updated{value == 0}:
     scanner_nw:
       action: stop
+    scanner_w:
+      action: stop
+    scanner_e:
+      action: stop
+    scanner_sw:
+      action: stop
+    scanner_se:
+      action: stop
     small_theater_chase:
       key: scanner_ne
       loops: -1
@@ -36,6 +44,14 @@ show_player:
         led_6: led_null
   logicblock_spin_jump_sequence_updated{value == 1}:
     scanner_ne:
+      action: stop
+    scanner_w:
+      action: stop
+    scanner_nw:
+      action: stop
+    scanner_sw:
+      action: stop
+    scanner_se:
       action: stop
     small_theater_chase:
       key: scanner_e
@@ -52,6 +68,14 @@ show_player:
   logicblock_spin_jump_sequence_updated{value == 2}:
     scanner_e:
       action: stop
+    scanner_w:
+      action: stop
+    scanner_ne:
+      action: stop
+    scanner_sw:
+      action: stop
+    scanner_nw:
+      action: stop
     small_theater_chase:
       key: scanner_se
       loops: -1
@@ -66,6 +90,14 @@ show_player:
         led_6: led_null
   logicblock_spin_jump_sequence_updated{value == 3}:
     scanner_se:
+      action: stop
+    scanner_w:
+      action: stop
+    scanner_e:
+      action: stop
+    scanner_nw:
+      action: stop
+    scanner_ne:
       action: stop
     small_theater_chase:
       key: scanner_sw
@@ -82,6 +114,14 @@ show_player:
   logicblock_spin_jump_sequence_updated{value == 4}:
     scanner_sw:
       action: stop
+    scanner_nw:
+      action: stop
+    scanner_ne:
+      action: stop
+    scanner_se:
+      action: stop
+    scanner_e:
+      action: stop
     small_theater_chase:
       key: scanner_w
       loops: -1
@@ -96,6 +136,14 @@ show_player:
         led_6: led_null
   logicblock_spin_jump_sequence_updated{value == 5}:
     scanner_w:
+      action: stop
+    scanner_ne:
+      action: stop
+    scanner_e:
+      action: stop
+    scanner_sw:
+      action: stop
+    scanner_se:
       action: stop
     small_theater_chase:
       key: scanner_nw
