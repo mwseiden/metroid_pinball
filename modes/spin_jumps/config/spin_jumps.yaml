@@ -20,18 +20,8 @@ show_player:
     spin_jump_spins:
       loops: 0
   logicblock_spin_jump_sequence_updated{value == 0}:
-    scanner_nw:
-      action: stop
-    scanner_w:
-      action: stop
-    scanner_e:
-      action: stop
-    scanner_sw:
-      action: stop
-    scanner_se:
-      action: stop
     small_theater_chase:
-      key: scanner_ne
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
@@ -43,18 +33,8 @@ show_player:
         led_5: led_null
         led_6: led_null
   logicblock_spin_jump_sequence_updated{value == 1}:
-    scanner_ne:
-      action: stop
-    scanner_w:
-      action: stop
-    scanner_nw:
-      action: stop
-    scanner_sw:
-      action: stop
-    scanner_se:
-      action: stop
     small_theater_chase:
-      key: scanner_e
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
@@ -66,18 +46,8 @@ show_player:
         led_5: led_null
         led_6: led_null
   logicblock_spin_jump_sequence_updated{value == 2}:
-    scanner_e:
-      action: stop
-    scanner_w:
-      action: stop
-    scanner_ne:
-      action: stop
-    scanner_sw:
-      action: stop
-    scanner_nw:
-      action: stop
     small_theater_chase:
-      key: scanner_se
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
@@ -89,18 +59,8 @@ show_player:
         led_5: led_null
         led_6: led_null
   logicblock_spin_jump_sequence_updated{value == 3}:
-    scanner_se:
-      action: stop
-    scanner_w:
-      action: stop
-    scanner_e:
-      action: stop
-    scanner_nw:
-      action: stop
-    scanner_ne:
-      action: stop
     small_theater_chase:
-      key: scanner_sw
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
@@ -112,18 +72,8 @@ show_player:
         led_5: led_null
         led_6: led_null
   logicblock_spin_jump_sequence_updated{value == 4}:
-    scanner_sw:
-      action: stop
-    scanner_nw:
-      action: stop
-    scanner_ne:
-      action: stop
-    scanner_se:
-      action: stop
-    scanner_e:
-      action: stop
     small_theater_chase:
-      key: scanner_w
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
@@ -135,18 +85,8 @@ show_player:
         led_5: led_null
         led_6: led_null
   logicblock_spin_jump_sequence_updated{value == 5}:
-    scanner_w:
-      action: stop
-    scanner_ne:
-      action: stop
-    scanner_e:
-      action: stop
-    scanner_sw:
-      action: stop
-    scanner_se:
-      action: stop
     small_theater_chase:
-      key: scanner_nw
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
@@ -159,7 +99,7 @@ show_player:
         led_6: led_null
   mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 0}:
     small_theater_chase:
-      key: scanner_ne
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
@@ -172,7 +112,7 @@ show_player:
         led_6: led_null
   mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 1}:
     small_theater_chase:
-      key: scanner_e
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
@@ -185,7 +125,7 @@ show_player:
         led_6: led_null
   mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 2}:
     small_theater_chase:
-      key: scanner_se
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
@@ -198,7 +138,7 @@ show_player:
         led_6: led_null
   mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 3}:
     small_theater_chase:
-      key: scanner_sw
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
@@ -211,7 +151,7 @@ show_player:
         led_6: led_null
   mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 4}:
     small_theater_chase:
-      key: scanner_w
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
@@ -224,7 +164,7 @@ show_player:
         led_6: led_null
   mode_spin_jumps_started{device.sequences.spin_jump_sequence.value == 5}:
     small_theater_chase:
-      key: scanner_nw
+      key: scanner_show
       loops: -1
       speed: 5
       show_tokens:
