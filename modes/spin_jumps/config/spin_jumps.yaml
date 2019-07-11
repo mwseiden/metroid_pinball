@@ -14,6 +14,7 @@ sequences:
          - spinner_shot_hit
       persist_state: True
       reset_on_complete: True
+      disable_on_complete: False
 
 show_player:
   spinner_shot_hit:
