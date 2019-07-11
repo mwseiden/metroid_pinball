@@ -226,7 +226,7 @@ show_player:
     base_dirty_pool:
       loops: 0
   secret_passage_shot_hit:
-    blink_2_lights:
+    blink_3_lights:
       loops: 0
       priority: 500
       speed: 3
