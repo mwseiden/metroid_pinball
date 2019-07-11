@@ -76,8 +76,8 @@ switches:
     number: 1-6
     tags: playfield_active
     platform_settings:
-      debounce_open: 4
-      debounce_close: 4
+      debounce_open: 2
+      debounce_close: 2
   s_removed_upper_flipper_rubber:
     number: 1-7
   s_right_flipper_eos:
@@ -219,6 +219,9 @@ switches:
   s_left_passage:
     number: 2-9
     tags: playfield_active
+    platform_settings:
+      debounce_close: 2
+      debounce_open: 2
   s_behind_drop_1:
     number: 2-10
     type: NC
@@ -242,6 +245,9 @@ switches:
   s_spinner:
     number: 2-15
     tags: playfield_active
+    platform_settings:
+      debounce_close: 3
+      debounce_open: 3
   s_left_target_3:
     number: 2-16
     tags: playfield_active
