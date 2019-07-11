@@ -44,6 +44,7 @@ shots:
     profile: lava_jump_blink
     enable_events: lava_jump_initial_shots_lit_complete
     disable_events: lava_jump_jackpot_shot_hit
+    reset_events: lava_jump_jackpot_shot_hit
     show_tokens:
       led: led_enter_side_ramp
       color: '8F0000'
