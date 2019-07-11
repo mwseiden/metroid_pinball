@@ -18,6 +18,8 @@ class MyAttract(Attract):
         self.add_mode_event_handler('s_left_flipper_active', self.event_left_flipper_down)
         self.add_mode_event_handler('s_left_flipper_inactive', self.event_left_flipper_up)
 
+        self.machine.set_machine_var('metroid_game_booted', 1)
+
     def event_right_flipper_down(self, **kwargs):
         self.right_flipper_down = True
 

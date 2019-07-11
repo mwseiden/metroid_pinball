@@ -8,6 +8,7 @@ modes:
   - emergency_landing
   - high_score
   - lanes
+  - left_targets
   - match
   - missiles
   - pop_bumpers
@@ -19,6 +20,7 @@ modes:
   - room_2a_shifting_sands
   - room_2i_lava_jump
   - select_landing_site
+  - side_targets
   - skillshot
   - skillshot_bombs
   - skillshot_drops
@@ -28,4 +30,5 @@ modes:
   - skillshot_unskilled
   - spin_jumps
   - twitch_bits_multiball
+  - upper_lanes
 

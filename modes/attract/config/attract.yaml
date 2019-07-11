@@ -37,11 +37,13 @@ show_player:
       loops: 0
       priority: 300
   slide_last_game_high_scores_active:
-    lights_rainbow_spin:
+    lights_purple_spotlight:
+      action: stop
+    lights_rainbow_blurred:
       loops: -1
       speed: 10
   slide_press_start_active:
-    lights_rainbow_spin:
+    lights_rainbow_blurred:
       action: stop
     gi_solid:
       key: attract_lights_press_start_gi
@@ -104,12 +106,40 @@ show_player:
     attract_lights_arrrrrcade:
       action: stop
     lights_samus_logo:
-      loops: 0
+      loops: -1
       speed: 10
+  slide_claire_samus_active:
+    lights_samus_logo:
+      action: stop
+    lights_fire:
+      loops: -1
+      speed: 15
   slide_stemage_slide_active:
-    lights_metroid_metal:
-      loops: 0
-      speed: 10
+    lights_fire:
+      action: stop
+    lights_asterix_spin:
+      loops: -1
+      speed: 14
+  slide_joel_slide_active:
+    lights_asterix_spin:
+      action: stop
+    gi_solid:
+      key: attract_lights_joel_gi
+      loops: -1
+      show_tokens:
+        color: 'c1a24d'
+  slide_double_danger_slide_active:
+    attract_lights_joel_gi:
+      action: stop
+    lights_fire:
+      loops: -1
+      speed: 15
+  slide_owl_slide_active:
+    lights_fire:
+      action: stop
+    lights_purple_spotlight:
+      loops: -1
+      speed: 20
 
 animations:
   high_score_scroll_up:

@@ -1,0 +1,7 @@
+#config_version=5
+
+assets:
+  sounds:
+    default:
+      load: preload
+      stealing_method: oldest

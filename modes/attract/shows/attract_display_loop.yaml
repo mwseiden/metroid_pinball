@@ -382,6 +382,15 @@
 
 - duration: 8s
   slides:
+    claire_samus:
+      widgets:
+      - type: image
+        image: dmd_samus_claire
+      transition:
+         type: wipe
+
+- duration: 8s
+  slides:
     metroid_metal_slide:
       target: backglass
       widgets:
@@ -410,6 +419,16 @@
           image: backglass_main_nebula
       transition: fade
       transition_out: fade
+    joel_slide:
+      widgets:
+      - type: image
+        image: dmd_joel
+      transition:
+         type: fade
+         duration: 1s
+
+- duration: 5s
+  slides:
     double_danger_slide:
       widgets:
       - type: Text
@@ -533,6 +552,17 @@
 
 - duration: 3s
   slides:
+    pinstadium_slide:
+      widgets:
+      - type: image
+        image: dmd_pinstadium
+      transition:
+         type: push
+         duration: 1s
+         direction: down
+
+- duration: 3s
+  slides:
     goren_slide:
       widgets:
       - type: image
@@ -580,13 +610,23 @@
   slides:
     thank_you_slide:
       widgets:
+      # - type: Text
+        # text: ...and thanks to
+        # style: dmd_med
+        # color: E67300
+        # y: 25
+      # - type: Text
+        # text: everyone watching!
+        # style: dmd_med
+        # color: E67300
+        # y: 13
       - type: Text
-        text: ...and thanks to
+        text: And thanks to everyone
         style: dmd_med
         color: E67300
         y: 25
       - type: Text
-        text: everyone watching!
+        text: at Pintastic!
         style: dmd_med
         color: E67300
         y: 13

@@ -30,6 +30,17 @@ show_player:
   chozo_multiball_bashed:
     chozo_multiball_started:
       loops: 0
+  multiball_chozo_shoot_again_ended:
+    chozo_ball_save_blink:
+      action: stop
+  multiball_chozo_started:
+    blink_light:
+      key: chozo_ball_save_blink
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_ball_save
+        color: ff4700
 
 variable_player:
   logicblock_captive_ball_counter_updated:
@@ -41,4 +52,4 @@ variable_player:
 
 sound_player:
   chozo_multiball_bashed: multiball
-  chozo_multiball_progress: lock_the_ball
+  chozo_multiball_progress: ball_locked

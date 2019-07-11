@@ -1,0 +1,63 @@
+#config_version=5
+mode:
+  start_events: mode_base_starting
+  priority: 100
+
+shot_profiles:
+  upper_lanes:
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: led_color
+
+shots:
+  upper_lane_left_shot:
+    switch: s_top_lane_1
+    profile: upper_lanes
+    show_tokens:
+      led: led_upper_playfield_1
+      color: '2e9f61'
+  upper_lane_middle_shot:
+    switch: s_top_lane_2
+    profile: upper_lanes
+    show_tokens:
+      led: led_upper_playfield_2
+      color: '2e9f61'
+  upper_lane_right_shot:
+    switch: s_top_lane_3
+    profile: upper_lanes
+    show_tokens:
+      led: led_upper_playfield_3
+      color: '2e9f61'
+
+shot_groups:
+  upper_lanes_shot_group:
+    shots: upper_lane_left_shot, upper_lane_middle_shot, upper_lane_right_shot
+    rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+    reset_events: upper_lanes_shot_group_lit_complete
+    enable_events: mode_upper_lanes_started
+    disable_events: mode_upper_lanes_ending
+
+show_player:
+  upper_lanes_shot_group_lit_complete:
+    upper_lanes_complete:
+      loops: 0
+
+variable_player:
+  upper_lane_left_shot_hit:
+    lanes: 1
+    score:
+      int: (1000 + (100 * current_player.lanes)) * current_player.multiplier
+  upper_lane_middle_shot_hit:
+    lanes: 1
+    score:
+      int: (1000 + (100 * current_player.lanes)) * current_player.multiplier
+  upper_lane_right_shot_hit:
+    lanes: 1
+    score:
+      int: (1000 + (100 * current_player.lanes)) * current_player.multiplier
+  upper_lanes_shot_group_lit_complete:
+    score:
+      int: (10000 + (100 * current_player.lanes)) * current_player.multiplier

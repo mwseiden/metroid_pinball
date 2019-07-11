@@ -18,7 +18,6 @@ shots:
   lava_jump_first_shot:
     switch: s_left_passage
     profile: lava_jump_blink
-    advance_events: mode_room_2i_lava_jump_started
     show_tokens:
       led: led_enter_secret_passage
       color: '8F0000'
@@ -40,30 +39,38 @@ shots:
     show_tokens:
       led: led_enter_right_orbit
       color: '8F0000'
+  lava_jump_jackpot_shot:
+    switch: s_side_ramp_made
+    profile: lava_jump_blink
+    enable_events: lava_jump_initial_shots_lit_complete
+    disable_events: lava_jump_jackpot_shot_hit
+    reset_events: lava_jump_jackpot_shot_hit
+    show_tokens:
+      led: led_enter_side_ramp
+      color: '8F0000'
 
 shot_profiles:
   lava_jump_blink:
     rotation_pattern: r, r, r, r
     states:
     - name: unlit
-      show: off
-    - name: lit
       show: blink_light
       loops: -1
       speed: 10
+    - name: lit
+      show: led_color
 
 shot_groups:
   lava_jump_initial_shots:
     shots: lava_jump_first_shot, lava_jump_second_shot, lava_jump_third_shot, lava_jump_fourth_shot
     rotate_events: timer_lava_jump_shot_timer_tick
-    reset_events: mode_room_2i_lava_jump_started
+    reset_events: lava_jump_jackpot_shot_hit
 
 show_player:
   mode_room_2i_lava_jump_started:
-    gi_solid:
+    gi_fire:
+      speed: 16
       loops: -1
-      show_tokens:
-        color: 'ff2b00'
 
 animations:
   room_2i_backglass_scroll_up:
@@ -147,4 +154,8 @@ variable_player:
     continue_room:
       string: 2i
       action: set
+  lava_jump_jackpot_shot_hit:
+    score: (75000 + (current_player.area_bonus_ne * 10000)) * current_player.multiplier
+  lava_jump_initial_shots_lit_hit:
+    score: 20000 * current_player.multiplier
 

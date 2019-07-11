@@ -76,6 +76,12 @@ slides:
       height: 32
       color: black
 
+  asset_status_slide:
+    - type: text
+      text: "LOADING ASSETS: (percent)%"
+      style: dmd_med
+
+
 slide_player:
   init_done:
     window_slide:
@@ -85,6 +91,12 @@ slide_player:
     dmd_slide:
       expire: 2s
       target: dmd
+  # loading_assets:
+    # asset_status_slide:
+      # target: dmd
+  # asset_loading_complete:
+    # asset_status_slide:
+      # action: remove
   game_starting:
     backglass_slide:
       target: backglass

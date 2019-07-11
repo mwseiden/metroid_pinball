@@ -1,0 +1,17 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    dirty_pool_text_slide:
+      widgets:
+      - type: text
+        text: DIRTY POOL!
+        color: "3dbeff"
+        style: dmd_big
+
+- duration: 6s
+  slides:
+    dirty_pool_slide:
+      widgets:
+      - type: image
+        image: dirty_pool

@@ -55,10 +55,12 @@ show_player:
     room_1b_scoop_blink:
       action: stop
   mode_room_1b_gunship_started:
-    gi_solid:
+    gi_solid_with_overhead:
       loops: -1
       show_tokens:
         color: '404080'
+        color2: "808080"
+
   mode_room_1b_gunship_started{current_player.room_1b_step_1a == 0}:
     blink_light:
       key: room_1b_left_orbit_blink
@@ -105,17 +107,17 @@ variable_player:
       string: 1b
       action: set
   room_1b_ship_left:
-    score: 50000
+    score: (50000 + (current_player.area_bonus_nw * 10000)) * current_player.multiplier
     room_1b_step_1a:
       int: 1
       action: set
   room_1b_ship_right:
-    score: 50000
+    score: (50000 + (current_player.area_bonus_ne * 10000)) * current_player.multiplier
     room_1b_step_1b:
       int: 1
       action: set
   room_1b_achieved:
-    score: 75000
+    score: (75000 + (current_player.area_bonus_nw * 10000)) * current_player.multiplier
     room_1b_step_2:
       int: 1
       action: set

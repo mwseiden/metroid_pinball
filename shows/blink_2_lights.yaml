@@ -1,0 +1,51 @@
+#show_version=5
+
+- duration: .25s
+  lights:
+    (led_1): (color_1)
+    (led_2): (color_1)
+
+- duration: .25s
+  lights:
+    (led_1): (color_2)
+    (led_2): (color_2)
+
+- duration: .15s
+  lights:
+    (led_1): (color_1)
+    (led_2): (color_1)
+
+- duration: .15s
+  lights:
+    (led_1): (color_2)
+    (led_2): (color_2)
+
+- duration: .15s
+  lights:
+    (led_1): (color_1)
+    (led_2): (color_1)
+
+- duration: .15s
+  lights:
+    (led_1): (color_2)
+    (led_2): (color_2)
+
+- duration: .1s
+  lights:
+    (led_1): (color_1)
+    (led_2): (color_1)
+
+- duration: .1s
+  lights:
+    (led_1): (color_2)
+    (led_2): (color_2)
+
+- duration: .1s
+  lights:
+    (led_1): (color_1)
+    (led_2): (color_1)
+
+- duration: .1s
+  lights:
+    (led_1): (color_2)
+    (led_2): (color_2)

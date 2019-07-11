@@ -1,0 +1,59 @@
+#config_version=5
+mode:
+  start_events: mode_base_starting
+  priority: 100
+
+shot_profiles:
+  side_targets:
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: led_color
+
+shots:
+  side_1_shot:
+    switch: s_left_target_1
+    profile: side_targets
+    show_tokens:
+      led: led_side_1
+      color: "0088ff"
+  side_2_shot:
+    switch: s_left_target_2
+    profile: side_targets
+    show_tokens:
+      led: led_side_2
+      color: "ff7700"
+  side_3_shot:
+    switch: s_left_target_3
+    profile: side_targets
+    show_tokens:
+      led: led_side_3
+      color: "0088ff"
+
+shot_groups:
+  side_targets_shot_group:
+    shots: side_1_shot, side_2_shot, side_3_shot
+    reset_events: side_targets_shot_group_lit_complete
+    enable_events: mode_side_targets_started
+    disable_events: mode_side_targets_ending
+
+event_player:
+  side_targets_shot_group_lit_complete: side_targets_completed
+
+show_player:
+  side_targets_completed:
+    side_targets_completed:
+      loops: 0
+
+variable_player:
+  side_1_shot_hit:
+    score: 20000 * current_player.multiplier
+  side_2_shot_hit:
+    score: 20000 * current_player.multiplier
+  side_3_shot_hit:
+    score: 20000 * current_player.multiplier
+  side_targets_completed:
+    score:
+      int: 50000 * current_player.multiplier
+

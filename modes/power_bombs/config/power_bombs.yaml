@@ -34,7 +34,8 @@ shots:
 shot_groups:
   power_bombs_shot_group:
     shots: power_bomb_1_shot, power_bomb_2_shot, power_bomb_2_shot
-    reset_events: power_bombs_shot_group_lit_complete
+    reset_events:
+      power_bombs_shot_group_lit_complete:  1s
     enable_events: mode_power_bombs_started
     disable_events: mode_power_bombs_ending
 
@@ -62,4 +63,4 @@ variable_player:
       int: (2000 + (1000 * current_player.power_bombs)) * current_player.multiplier
 
 sound_player:
-  power_bombs_collected: power_bomb_collected
+  power_bomb_collected: power_bomb_collected

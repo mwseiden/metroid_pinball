@@ -1,0 +1,11 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    left_targets_completed_slide:
+      widgets:
+      - type: text
+        text: Targets Completed!
+        color: green
+        style: dmd_med
+
