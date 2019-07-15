@@ -4,345 +4,345 @@
   lights:
     (led_1):
       color: (color)
-      brightness: '10'
+      # brightness: '10'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '10'
+      # brightness: '10'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '10'
+      # brightness: '10'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '20'
+      # brightness: '20'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '20'
+      # brightness: '20'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '20'
+      # brightness: '20'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '30'
+      # brightness: '30'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '30'
+      # brightness: '30'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '30'
+      # brightness: '30'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '40'
+      # brightness: '40'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '40'
+      # brightness: '40'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '40'
+      # brightness: '40'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '50'
+      # brightness: '50'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '50'
+      # brightness: '50'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '50'
+      # brightness: '50'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '60'
+      # brightness: '60'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '60'
+      # brightness: '60'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '60'
+      # brightness: '60'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '70'
+      # brightness: '70'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '70'
+      # brightness: '70'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '70'
+      # brightness: '70'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '80'
+      # brightness: '80'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '80'
+      # brightness: '80'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '80'
+      # brightness: '80'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '90'
+      # brightness: '90'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '90'
+      # brightness: '90'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '90'
+      # brightness: '90'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: 'A0'
+      # brightness: 'A0'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'A0'
+      # brightness: 'A0'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'A0'
+      # brightness: 'A0'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: 'B0'
+      # brightness: 'B0'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'B0'
+      # brightness: 'B0'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'B0'
+      # brightness: 'B0'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: 'C0'
+      # brightness: 'C0'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'C0'
+      # brightness: 'C0'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'C0'
+      # brightness: 'C0'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: 'D0'
+      # brightness: 'D0'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'D0'
+      # brightness: 'D0'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'D0'
+      # brightness: 'D0'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: 'E0'
+      # brightness: 'E0'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'E0'
+      # brightness: 'E0'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'E0'
+      # brightness: 'E0'
       fade: 50ms
 
 - duration: .2s
   lights:
     (led_1):
       color: (color)
-      brightness: 'F0'
+      # brightness: 'F0'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'F0'
+      # brightness: 'F0'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'F0'
+      # brightness: 'F0'
       fade: 50ms
 
 - duration: .3s
   lights:
     (led_1):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_2):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_3):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
 
 - duration: .2s
   lights:
     (led_1):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
 
 - duration: .3s
   lights:
     (led_1):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_2):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_3):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
 
 - duration: .2s
   lights:
     (led_1):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
 
 - duration: .3s
   lights:
     (led_1):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_2):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_3):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
 
 - duration: .2s
   lights:
     (led_1):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
 
 - duration: .3s
   lights:
     (led_1):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_2):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_3):
       color: stop
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
 
 - duration: .2s
   lights:
     (led_1):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'FF'
+      # brightness: 'FF'
       fade: 50ms
 
 # Fade out
@@ -351,193 +351,193 @@
   lights:
     (led_1):
       color: (color)
-      brightness: 'E0'
+      # brightness: 'E0'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'E0'
+      # brightness: 'E0'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'E0'
+      # brightness: 'E0'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: 'D0'
+      # brightness: 'D0'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'D0'
+      # brightness: 'D0'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'D0'
+      # brightness: 'D0'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: 'C0'
+      # brightness: 'C0'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'C0'
+      # brightness: 'C0'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'C0'
+      # brightness: 'C0'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: 'B0'
+      # brightness: 'B0'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'B0'
+      # brightness: 'B0'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'B0'
+      # brightness: 'B0'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: 'A0'
+      # brightness: 'A0'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: 'A0'
+      # brightness: 'A0'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: 'A0'
+      # brightness: 'A0'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '90'
+      # brightness: '90'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '90'
+      # brightness: '90'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '90'
+      # brightness: '90'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '80'
+      # brightness: '80'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '80'
+      # brightness: '80'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '80'
+      # brightness: '80'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '70'
+      # brightness: '70'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '70'
+      # brightness: '70'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '70'
+      # brightness: '70'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '60'
+      # brightness: '60'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '60'
+      # brightness: '60'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '60'
+      # brightness: '60'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '50'
+      # brightness: '50'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '50'
+      # brightness: '50'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '50'
+      # brightness: '50'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '40'
+      # brightness: '40'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '40'
+      # brightness: '40'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '40'
+      # brightness: '40'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '30'
+      # brightness: '30'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '30'
+      # brightness: '30'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '30'
+      # brightness: '30'
       fade: 50ms
 
 - duration: .1s
   lights:
     (led_1):
       color: (color)
-      brightness: '20'
+      # brightness: '20'
       fade: 50ms
     (led_2):
       color: (color)
-      brightness: '20'
+      # brightness: '20'
       fade: 50ms
     (led_3):
       color: (color)
-      brightness: '20'
+      # brightness: '20'
       fade: 50ms
