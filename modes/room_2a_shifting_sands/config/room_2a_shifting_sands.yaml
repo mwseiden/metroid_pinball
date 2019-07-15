@@ -49,7 +49,8 @@ shots:
       led_1: led_upgrade_bank_1
       led_2: led_upgrade_bank_2
       led_3: led_upgrade_bank_3
-      color: '808010'
+      color_1: '808010'
+      color_2: stop
   room_2a_bank_4_shot:
     switch: s_left_target_1, s_left_target_2, s_left_target_3
     profile: room_2a_strobe
@@ -60,13 +61,14 @@ shots:
       led_1: led_side_1
       led_2: led_side_2
       led_3: led_side_3
-      color: '808010'
+      color_1: '808010'
+      color_2: stop
 
 shot_profiles:
   room_2a_strobe:
     states:
     - name: lit
-      show: strobe_bank
+      show: blink_3_lights
       loops: -1
 
 show_player:
