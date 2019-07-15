@@ -31,8 +31,8 @@ switches:
     ignore_window_ms: 500
     tags: playfield_active
     platform_settings:
-      debounce_close: 8
-      debounce_open: 8
+      debounce_close: 1
+      debounce_open: 1
   s_upper_right_flipper:
     number: 0-10
   s_unknown_0_11:
