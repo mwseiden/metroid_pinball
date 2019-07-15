@@ -26,7 +26,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_sw
         led_2: led_scanner_center
         led_3: led_scanner_ne
@@ -39,7 +39,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_w
         led_2: led_scanner_center
         led_3: led_scanner_e
@@ -52,7 +52,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_nw
         led_2: led_scanner_center
         led_3: led_scanner_se
@@ -65,7 +65,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_ne
         led_2: led_scanner_center
         led_3: led_scanner_sw
@@ -78,7 +78,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_e
         led_2: led_scanner_center
         led_3: led_scanner_w
@@ -91,7 +91,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_se
         led_2: led_scanner_center
         led_3: led_scanner_nw
@@ -104,7 +104,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_sw
         led_2: led_scanner_center
         led_3: led_scanner_ne
@@ -117,7 +117,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_w
         led_2: led_scanner_center
         led_3: led_scanner_e
@@ -130,7 +130,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_nw
         led_2: led_scanner_center
         led_3: led_scanner_se
@@ -143,7 +143,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_ne
         led_2: led_scanner_center
         led_3: led_scanner_sw
@@ -156,7 +156,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_e
         led_2: led_scanner_center
         led_3: led_scanner_w
@@ -169,7 +169,7 @@ show_player:
       loops: -1
       speed: 5
       show_tokens:
-        color: yellow
+        color: '603000'
         led_1: led_scanner_se
         led_2: led_scanner_center
         led_3: led_scanner_nw
