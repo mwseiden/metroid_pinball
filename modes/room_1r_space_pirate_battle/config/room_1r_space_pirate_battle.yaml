@@ -4,6 +4,12 @@ mode:
     stop_events: game_ending, ball_ending
     priority: 300
 
+multiballs:
+  room_1r_battle:
+    ball_count: 2
+    ball_count_type: total
+    start_events: mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}
+
 show_player:
   mode_room_1r_space_pirate_battle_started:
     gi_solid_with_overhead:
@@ -39,4 +45,8 @@ variable_player:
       action: set
     continue_room:
       string: 1r
+      action: set
+  multiball_room_1r_battle_started:
+    room_1r_multiball_started:
+      int: 1
       action: set
