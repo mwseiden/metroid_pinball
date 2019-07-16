@@ -1,5 +1,8 @@
 #config_version=5
 
+light_settings:
+  default_fade_ms: 50ms
+
 lights:
 #gi-left
   gi_left_sling_top:
