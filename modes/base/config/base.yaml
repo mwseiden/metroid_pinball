@@ -144,6 +144,9 @@ show_player:
   ball_save_default_grace_period:
     base_ball_save_default_blink:
       action: stop
+  ball_save_default_disabled:
+    base_ball_save_default_blink:
+      action: stop
   ball_save_default_hurry_up:
     blink_light:
       key: base_ball_save_default_blink
