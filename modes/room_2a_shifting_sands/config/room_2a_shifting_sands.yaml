@@ -115,7 +115,7 @@ slides:
       x: 1
       y: 30
     - type: text
-      text: (mode_room_2a_shifting_sands_room_2a_do_not_sink_tick)
+      text: (player|mode_room_2a_shifting_sands_room_2a_do_not_sink_tick)
       min_digits: 1
       style: dmd_big
       color: 'FF0000'
