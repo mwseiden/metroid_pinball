@@ -216,4 +216,12 @@ variable_player:
     continue_room:
       string: 2a
       action: set
+  room_2a_bank_1_shot_hit:
+    score: (5000 + (current_player.area_bonus_w * 5000)) * current_player.multiplier
+  room_2a_bank_2_shot_hit:
+    score: (5000 + (current_player.area_bonus_e * 5000)) * current_player.multiplier
+  room_2a_bank_3_shot_hit:
+    score: (3000) * current_player.multiplier
+  room_2a_bank_4_shot_hit:
+    score: (15000 + (current_player.area_bonus_nw * 15000)) * current_player.multiplier
 
