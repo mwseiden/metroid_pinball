@@ -8,7 +8,7 @@ multiballs:
   room_1r_battle:
     ball_count: 2
     ball_count_type: total
-    start_events: mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}
+    start_events: room_1r_multiball_should_start
 
 show_player:
   mode_room_1r_space_pirate_battle_started:
@@ -37,6 +37,9 @@ slide_player:
     room_1r_splash_slide:
       target: dmd
       expire: 1.5s
+
+event_player:
+  mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:

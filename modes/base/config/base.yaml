@@ -108,9 +108,25 @@ show_player:
     base_full_shatz:
       loops: 0
       priority: 10
+    blink_light:
+      key: full_shatz_shot_blink
+      priority: 320
+      loops: 8
+      speed: 18
+      show_tokens:
+        led: led_zero_suit
+        color: '00FF00'
   shatz_shot_hit:
     base_white_target:
       loops: 0
+    blink_light:
+      key: shatz_shot_blink
+      priority: 310
+      loops: 8
+      speed: 18
+      show_tokens:
+        led: led_zero_suit
+        color: '0000FF'
   capside_combo_hit:
     base_capside_combo:
       loops: 0
