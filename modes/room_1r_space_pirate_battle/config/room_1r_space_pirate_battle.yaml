@@ -4,6 +4,34 @@ mode:
     stop_events: game_ending, ball_ending
     priority: 300
 
+timers:
+  room_1r_light_shot_timer:
+    start_value: 1
+    end_value: 8
+    restart_on_complete: true
+    tick_interval: 4s
+    control_events:
+      - event: mode_room_1r_space_pirate_battle_started
+        action: start
+
+shots:
+  room_1r_start_shot_1:
+    switch: s_zero_suit
+    profile: room_1r_blink
+    enable_events: room_1r_shot_1_activate
+    disable_events: room_1r_shot_2_activate
+    reset_events: room_1r_shot_2_activate
+    show_tokens:
+      led: led_zero_suit
+      color: 'FF40FF'
+
+shot_profiles:
+  room_1r_blink:
+    states:
+    - name: lit
+      show: blink_light
+      loops: -1
+
 multiballs:
   room_1r_battle:
     ball_count: 2
@@ -40,6 +68,7 @@ slide_player:
 
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
+  timer_room_1r_light_shot_timer_tick{ticks == 1}: room_1r_shot_1_activate
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:
