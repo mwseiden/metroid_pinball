@@ -115,6 +115,15 @@ slides:
       x: 1
       y: 30
     - type: text
+      text: Time Remaining
+      min_digits: 1
+      style: dmd_small
+      color: 'FF40FF'
+      anchor_x: right
+      anchor_y: top
+      x: 126
+      y: 30
+    - type: text
       text: (player|room_2a_shifting_sands_room_2a_do_not_sink_tick)
       min_digits: 1
       style: dmd_big
@@ -122,7 +131,7 @@ slides:
       anchor_x: right
       anchor_y: top
       x: 126
-      y: 30
+      y: 22
     - type: text
       text: PLAYER (number)
       y: 0
@@ -137,6 +146,24 @@ slides:
       anchor_x: right
       anchor_y: bottom
       style: dmd_med
+  room_2a_time_plus_2:
+    widgets:
+    - type: text
+      text: +2 Seconds
+      style: dmd_big
+      color: 'FF1030'
+  room_2a_time_plus_4:
+    widgets:
+    - type: text
+      text: +4 Seconds
+      style: dmd_big
+      color: 'FF1030'
+  room_2a_time_plus_8:
+    widgets:
+    - type: text
+      text: +8 Seconds
+      style: dmd_big
+      color: 'FF1030'
 
 slide_player:
   mode_room_2a_shifting_sands_started:
@@ -144,10 +171,31 @@ slide_player:
       target: backglass
     room_2a_splash_slide:
       target: dmd
-      expire: 1.5s
+      expire: 1s
       priority: 500
     room_2a_score_slide:
       target: dmd
+  room_2a_bank_1_shot_hit:
+    room_2a_time_plus_4:
+      target: dmd
+      expire: 1s
+      priority: 310
+  room_2a_bank_2_shot_hit:
+    room_2a_time_plus_4:
+      target: dmd
+      expire: 1.5s
+      priority: 310
+  room_2a_bank_3_shot_hit:
+    room_2a_time_plus_2:
+      target: dmd
+      expire: 1s
+      priority: 310
+  room_2a_bank_4_shot_hit:
+    room_2a_time_plus_8:
+      target: dmd
+      expire: 1s
+      priority: 310
+
 
 event_player:
   mode_room_2a_shifting_sands_started:
