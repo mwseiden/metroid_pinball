@@ -6,10 +6,11 @@ mode:
 
 show_player:
   mode_room_1r_space_pirate_battle_started:
-    gi_solid:
+    gi_solid_with_overhead:
       loops: -1
       show_tokens:
         color: '8000C0'
+        color2: "8080C0"
 
 slides:
   room_1r_backglass_slide:

@@ -28,6 +28,13 @@ slide_player:
 #      expire: 1s
 #      priority: 500
 
+show_player:
+  mode_room_2e_sandy_cavern_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: '806000'
+        color2: 'a78600'
 
 event_player:
   mode_room_2e_sandy_cavern_started:

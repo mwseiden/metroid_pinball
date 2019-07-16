@@ -125,9 +125,17 @@ show_player:
   base_bits_small:
     bits_small:
       loops: 0
-  ball_save_default_disabled:
+  ball_save_default_grace_period:
     base_ball_save_default_blink:
       action: stop
+  ball_save_default_hurry_up:
+    blink_light:
+      key: base_ball_save_default_blink
+      loops: -1
+      speed: 4
+      show_tokens:
+        led: led_ball_save
+        color: ff0000
   ball_save_default_enabled:
     blink_light:
       key: base_ball_save_default_blink
