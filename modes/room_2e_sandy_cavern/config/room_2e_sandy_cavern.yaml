@@ -1,0 +1,49 @@
+#config_version=5
+mode:
+    start_events: room_2a_sink_into_sand, room_2e_continue
+    stop_events: game_ending, ball_ending
+    priority: 300
+
+slides:
+  room_2e_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2e_sandy_cavern_backglass
+    transition:
+      type: push
+      duration: 1s
+      direction: down
+    transition_out: fade
+#  room_2a_splash_slide:
+#    widgets:
+#      - type: image
+#        image: room_2a_splash
+
+slide_player:
+  mode_room_2e_sandy_cavern_started:
+    room_2e_backglass_slide:
+      target: backglass
+#    room_2a_splash_slide:
+#      target: dmd
+#      expire: 1s
+#      priority: 500
+
+
+event_player:
+  mode_room_2e_sandy_cavern_started:
+    cmd_backbox_show:
+      show_type: pour
+      count: 3
+      min_length: 4
+      max_length: 12
+      color: "200C00"
+
+variable_player:
+  mode_room_2e_sandy_cavern_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 2e
+      action: set
+
