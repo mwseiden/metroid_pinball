@@ -33,7 +33,7 @@ shots:
 
 shot_groups:
   power_bombs_shot_group:
-    shots: power_bomb_1_shot, power_bomb_2_shot, power_bomb_2_shot
+    shots: power_bomb_1_shot, power_bomb_2_shot, power_bomb_3_shot
     reset_events:
       power_bombs_shot_group_lit_complete:  1s
     enable_events: mode_power_bombs_started
