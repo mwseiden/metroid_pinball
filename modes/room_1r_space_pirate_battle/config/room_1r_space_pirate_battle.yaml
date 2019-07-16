@@ -24,6 +24,24 @@ shots:
     show_tokens:
       led: led_zero_suit
       color: 'FF40FF'
+  room_1r_start_shot_2:
+    switch: s_left_passage
+    profile: room_1r_blink
+    enable_events: room_1r_shot_2_activate
+    disable_events: room_1r_shot_3_activate
+    reset_events: room_1r_shot_3_activate
+    show_tokens:
+      led: led_enter_secret_passage
+      color: 'FF40FF'
+  room_1r_start_shot_3:
+    switch: s_orbit_l
+    profile: room_1r_blink
+    enable_events: room_1r_shot_3_activate
+    disable_events: room_1r_shot_4_activate
+    reset_events: room_1r_shot_4_activate
+    show_tokens:
+      led: led_enter_left_orbit
+      color: 'FF40FF'
 
 shot_profiles:
   room_1r_blink:
@@ -69,6 +87,13 @@ slide_player:
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
   timer_room_1r_light_shot_timer_tick{ticks == 1}: room_1r_shot_1_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 2}: room_1r_shot_2_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 3}: room_1r_shot_3_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 4}: room_1r_shot_4_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 5}: room_1r_shot_5_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 6}: room_1r_shot_6_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 7}: room_1r_shot_7_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 8}: room_1r_shot_8_activate
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:
