@@ -25,6 +25,8 @@ timers:
       - event: room_2a_bank_4_shot_hit
         action: add
         value: 8
+      - event: mode_room_2a_shifting_sands_started
+        action: reset
 
 shots:
   room_2a_bank_1_shot:
@@ -111,6 +113,15 @@ slides:
       anchor_x: left
       anchor_y: top
       x: 1
+      y: 30
+    - type: text
+      text: (mode_room_2a_shifting_sands_room_2a_do_not_sink_tick)
+      min_digits: 1
+      style: dmd_big
+      color: 'FF0000'
+      anchor_x: right
+      anchor_y: top
+      x: 126
       y: 30
     - type: text
       text: PLAYER (number)
