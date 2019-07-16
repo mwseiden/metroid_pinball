@@ -2,60 +2,120 @@
 
 - duration: .25s
   lights:
-    (led_1): (color_1)
-    (led_2): (color_1)
-    (led_3): (color_1)
+    (led_1):
+      color:  (color_1)
+      fade: 50ms
+    (led_2):
+      color:  (color_1)
+      fade: 50ms
+    (led_3):
+      color:  (color_1)
+      fade: 50ms
 
 - duration: .25s
   lights:
-    (led_1): (color_2)
-    (led_2): (color_2)
-    (led_3): (color_2)
+    (led_1):
+      color:  (color_2)
+      fade: 50ms
+    (led_2):
+      color:  (color_2)
+      fade: 50ms
+    (led_3):
+      color:  (color_2)
+      fade: 50ms
 
 - duration: .15s
   lights:
-    (led_1): (color_1)
-    (led_2): (color_1)
-    (led_3): (color_1)
+    (led_1):
+      color:  (color_1)
+      fade: 50ms
+    (led_2):
+      color:  (color_1)
+      fade: 50ms
+    (led_3):
+      color:  (color_1)
+      fade: 50ms
 
 - duration: .15s
   lights:
-    (led_1): (color_2)
-    (led_2): (color_2)
-    (led_3): (color_2)
+    (led_1):
+      color:  (color_2)
+      fade: 50ms
+    (led_2):
+      color:  (color_2)
+      fade: 50ms
+    (led_3):
+      color:  (color_2)
+      fade: 50ms
 
 - duration: .15s
   lights:
-    (led_1): (color_1)
-    (led_2): (color_1)
-    (led_3): (color_1)
+    (led_1):
+      color:  (color_1)
+      fade: 50ms
+    (led_2):
+      color:  (color_1)
+      fade: 50ms
+    (led_3):
+      color:  (color_1)
+      fade: 50ms
 
 - duration: .15s
   lights:
-    (led_1): (color_2)
-    (led_2): (color_2)
-    (led_3): (color_2)
+    (led_1):
+      color:  (color_2)
+      fade: 50ms
+    (led_2):
+      color:  (color_2)
+      fade: 50ms
+    (led_3):
+      color:  (color_2)
+      fade: 50ms
 
 - duration: .1s
   lights:
-    (led_1): (color_1)
-    (led_2): (color_1)
-    (led_3): (color_1)
+    (led_1):
+      color:  (color_1)
+      fade: 50ms
+    (led_2):
+      color:  (color_1)
+      fade: 50ms
+    (led_3):
+      color:  (color_1)
+      fade: 50ms
 
 - duration: .1s
   lights:
-    (led_1): (color_2)
-    (led_2): (color_2)
-    (led_3): (color_2)
+    (led_1):
+      color:  (color_2)
+      fade: 50ms
+    (led_2):
+      color:  (color_2)
+      fade: 50ms
+    (led_3):
+      color:  (color_2)
+      fade: 50ms
 
 - duration: .1s
   lights:
-    (led_1): (color_1)
-    (led_2): (color_1)
-    (led_3): (color_1)
+    (led_1):
+      color:  (color_1)
+      fade: 50ms
+    (led_2):
+      color:  (color_1)
+      fade: 50ms
+    (led_3):
+      color:  (color_1)
+      fade: 50ms
 
 - duration: .1s
   lights:
-    (led_1): (color_2)
-    (led_2): (color_2)
-    (led_3): (color_2)
+    (led_1):
+      color:  (color_2)
+      fade: 50ms
+    (led_2):
+      color:  (color_2)
+      fade: 50ms
+    (led_3):
+      color:  (color_2)
+      fade: 50ms
