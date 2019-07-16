@@ -16,7 +16,7 @@ timers:
 
 shots:
   room_1r_start_shot_1:
-    switch: s_zero_suit
+    switch: s_shatz
     profile: room_1r_blink
     enable_events: room_1r_shot_1_activate
     disable_events: room_1r_shot_2_activate
