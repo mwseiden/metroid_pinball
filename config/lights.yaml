@@ -1,358 +1,443 @@
 #config_version=5
 
-light_settings:
-  default_fade_ms: 50
-
 lights:
 #gi-left
   gi_left_sling_top:
     number: 0
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_left_sling_bottom:
     number: 1
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_left_ball_guide:
     number: 2
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_behind_zero_suit:
     number: 3
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_missile_bank:
     number: 4
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_middle_sling:
     number: 5
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_side_bank:
     number: 6
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_back_left:
     number: 7
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_strip_1:
     number: 8
+    fade_ms: 40ms
     platform: fadecandy
   gi_strip_2:
     number: 9
+    fade_ms: 40ms
     platform: fadecandy
   gi_strip_3:
     number: 10
+    fade_ms: 40ms
     platform: fadecandy
   gi_strip_4:
     number: 11
+    fade_ms: 40ms
     platform: fadecandy
   gi_strip_5:
     number: 12
+    fade_ms: 40ms
     platform: fadecandy
   gi_strip_6:
     number: 13
+    fade_ms: 40ms
     platform: fadecandy
   gi_strip_7:
     number: 14
+    fade_ms: 40ms
     platform: fadecandy
   gi_strip_8:
     number: 15
+    fade_ms: 40ms
     platform: fadecandy
   gi_strip_9:
     number: 16
+    fade_ms: 40ms
     platform: fadecandy
   gi_strip_10:
     number: 17
+    fade_ms: 40ms
     platform: fadecandy
 
 #gi-right
   gi_right_sling_top:
     number: 64
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_right_sling_bottom:
     number: 65
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_right_ball_guide:
     number: 66
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_bomb_bank:
     number: 67
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_upper_flipper_bottom:
     number: 68
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_upper_flipper_top:
     number: 69
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_upgrade_bank:
     number: 70
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_under_side_ramp:
     number: 71
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_back_center:
     number: 72
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
   gi_back_right:
     number: 73
     type: grb
+    fade_ms: 40ms
     platform: fadecandy
 
 #playfield-lower
   led_right_outlane:
     number: 128
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_right_kickback:
     number: 129
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_right_inlane:
     number: 130
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_boss_phantoon:
     number: 131
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_goal_4:
     number: 132
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_goal_3:
     number: 133
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_boss_ridley:
     number: 134
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_motherbrain_3:
     number: 135
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_motherbrain_2:
     number: 136
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_motherbrain_1:
     number: 137
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_boss_kraid:
     number: 138
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_goal_2:
     number: 139
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_ball_save:
     number: 140
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_goal_1:
     number: 141
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_boss_draygon:
     number: 142
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_left_inlane:
     number: 143
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_left_outlane:
     number: 144
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_left_kickback:
     number: 145
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
 
 #playfield-middle
   led_bomb_bank_3:
     number: 320
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_bomb_bank_2:
     number: 321
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_bomb_bank_1:
     number: 322
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_rollover:
     number: 323
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_3x:
     number: 324
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_2x:
     number: 325
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_scanner_center:
     number: 326
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_scanner_nw:
     number: 327
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_scanner_ne:
     number: 328
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_scanner_e:
     number: 329
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_scanner_se:
     number: 330
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_scanner_sw:
     number: 331
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_scanner_w:
     number: 332
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_upgrade_bank_3:
     number: 333
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_upgrade_bank_2:
     number: 334
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_upgrade_bank_1:
     number: 335
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_wall_jump:
     number: 336
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_missile_bank_3:
     number: 337
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_missile_bank_2:
     number: 338
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_missile_bank_1:
     number: 339
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_enter_secret_passage:
     number: 340
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_zero_suit:
     number: 341
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
 
 #playfield-upper
   led_upper_playfield_1:
     number: 384
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_upper_playfield_2:
     number: 385
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_upper_playfield_3:
     number: 386
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_enter_side_ramp:
     number: 387
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_drop_1:
     number: 388
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_drop_2:
     number: 389
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_drop_3:
     number: 390
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_enter_right_orbit:
     number: 391
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_thin_orange:
     number: 392
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_captive_ball:
     number: 393
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_pop_1:
     number: 394
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_pop_2:
     number: 395
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_pop_3:
     number: 396
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_pit:
     number: 397
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_enter_ramp:
     number: 398
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_enter_scoop:
     number: 399
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_enter_left_orbit:
     number: 400
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_side_3:
     number: 401
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_side_2:
     number: 402
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
   led_side_1:
     number: 403
+    fade_ms: 40ms
     platform: fadecandy
     tags: reflective
 

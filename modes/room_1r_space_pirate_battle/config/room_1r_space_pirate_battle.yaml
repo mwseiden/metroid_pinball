@@ -7,41 +7,96 @@ mode:
 timers:
   room_1r_light_shot_timer:
     start_value: 1
-    end_value: 8
+    end_value: 10
     restart_on_complete: true
     tick_interval: 4s
     control_events:
       - event: mode_room_1r_space_pirate_battle_started
         action: start
 
+
 shots:
   room_1r_start_shot_1:
-    switch: s_shatz
+    switch: s_rollover_button
     profile: room_1r_blink
     enable_events: room_1r_shot_1_activate
     disable_events: room_1r_shot_2_activate
     reset_events: room_1r_shot_2_activate
     show_tokens:
-      led: led_zero_suit
+      led: led_rollover
       color: 'FF40FF'
   room_1r_start_shot_2:
-    switch: s_left_passage
+    switch: s_side_ramp_made
     profile: room_1r_blink
     enable_events: room_1r_shot_2_activate
     disable_events: room_1r_shot_3_activate
     reset_events: room_1r_shot_3_activate
     show_tokens:
-      led: led_enter_secret_passage
+      led: led_enter_side_ramp
       color: 'FF40FF'
   room_1r_start_shot_3:
-    switch: s_orbit_l
+    switch: s_scoop
     profile: room_1r_blink
     enable_events: room_1r_shot_3_activate
     disable_events: room_1r_shot_4_activate
     reset_events: room_1r_shot_4_activate
     show_tokens:
+      led: led_enter_scoop
+      color: 'FF40FF'
+  room_1r_start_shot_4:
+    switch: s_left_passage
+    profile: room_1r_blink
+    enable_events: room_1r_shot_4_activate
+    disable_events: room_1r_shot_5_activate
+    reset_events: room_1r_shot_5_activate
+    show_tokens:
+      led: led_enter_secret_passage
+      color: 'FF40FF'
+  room_1r_start_shot_5:
+    switch: s_orbit_r
+    profile: room_1r_blink
+    enable_events: room_1r_shot_5_activate
+    disable_events: room_1r_shot_6_activate
+    reset_events: room_1r_shot_6_activate
+    show_tokens:
+      led: led_enter_right_orbit
+      color: 'FF40FF'
+  room_1r_start_shot_6:
+    switch: s_ramp_enter
+    profile: room_1r_blink
+    enable_events: room_1r_shot_6_activate
+    disable_events: room_1r_shot_7_activate
+    reset_events: room_1r_shot_7_activate
+    show_tokens:
+      led: led_enter_ramp
+      color: 'FF40FF'
+  room_1r_start_shot_7:
+    switch: s_orbit_l
+    profile: room_1r_blink
+    enable_events: room_1r_shot_7_activate
+    disable_events: room_1r_shot_8_activate
+    reset_events: room_1r_shot_8_activate
+    show_tokens:
       led: led_enter_left_orbit
       color: 'FF40FF'
+  room_1r_start_shot_8:
+    switch: s_shatz
+    profile: room_1r_blink
+    enable_events: room_1r_shot_8_activate
+    disable_events: room_1r_shot_9_activate
+    reset_events: room_1r_shot_9_activate
+    show_tokens:
+      led: led_zero_suit
+      color: 'FF40FF'
+  room_1r_start_shot_9:
+    switch: s_pit
+    profile: room_1r_blink
+    enable_events: room_1r_shot_9_activate
+    disable_events: room_1r_shot_1_activate
+    reset_events: room_1r_shot_1_activate
+    show_tokens:
+      led: led_pit
+      color: 'FF0000'
 
 shot_profiles:
   room_1r_blink:
@@ -94,6 +149,7 @@ event_player:
   timer_room_1r_light_shot_timer_tick{ticks == 6}: room_1r_shot_6_activate
   timer_room_1r_light_shot_timer_tick{ticks == 7}: room_1r_shot_7_activate
   timer_room_1r_light_shot_timer_tick{ticks == 8}: room_1r_shot_8_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 9}: room_1r_shot_9_activate
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:

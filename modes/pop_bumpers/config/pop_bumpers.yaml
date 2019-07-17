@@ -12,7 +12,7 @@ show_player:
       speed: 20
       show_tokens:
         led: led_pop_2
-        color: 8000C0
+        color: A000FF
   pop_2_shot_hit:
     pop_bumpers_2:
       loops: 0
@@ -21,7 +21,7 @@ show_player:
       speed: 20
       show_tokens:
         led: led_pop_3
-        color: 8000C0
+        color: A000FF
   pop_3_shot_hit:
     pop_bumpers_3:
       loops: 0
@@ -30,7 +30,7 @@ show_player:
       speed: 20
       show_tokens:
         led: led_pop_1
-        color: 8000C0
+        color: A000FF
 
 sounds:
   pop_1:
