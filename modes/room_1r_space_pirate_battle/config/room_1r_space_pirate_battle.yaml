@@ -4,6 +4,16 @@ mode:
     stop_events: game_ending, ball_ending
     priority: 300
 
+sequences:
+   room_1r_battle_sequence:
+      events:
+         - shoot_space_pirates_shot_group_lit_hit
+         - shoot_space_pirates_shot_group_lit_hit
+         - shoot_space_pirates_shot_group_lit_hit
+         - shoot_space_pirates_shot_group_lit_hit
+      persist_state: True
+      disable_on_complete: True
+
 timers:
   room_1r_light_shot_timer:
     start_value: 1
@@ -11,7 +21,7 @@ timers:
     restart_on_complete: true
     tick_interval: 8s
     control_events:
-      - event: mode_room_1r_space_pirate_battle_started
+      - event: room_1r_start_timer
         action: start
       - event: timer_room_1r_shoot_space_pirates_timer_started
         action: stop
@@ -231,6 +241,7 @@ slide_player:
 
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
+  mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 0}: room_1r_start_timer
   timer_room_1r_light_shot_timer_tick{ticks == 1}: room_1r_shot_1_activate
   timer_room_1r_light_shot_timer_tick{ticks == 2}: room_1r_shot_2_activate
   timer_room_1r_light_shot_timer_tick{ticks == 3}: room_1r_shot_3_activate
@@ -261,3 +272,25 @@ variable_player:
     room_1r_multiball_started:
       int: 1
       action: set
+  logicblock_room_1r_battle_sequence_complete:
+    room_1r_finished:
+      int: 1
+      action: set
+  room_1r_start_shot_1_hit:
+    score: 30000
+  room_1r_start_shot_2_hit:
+    score: 50000
+  room_1r_start_shot_3_hit:
+    score: 10000
+  room_1r_start_shot_4_hit:
+    score: 15000
+  room_1r_start_shot_5_hit:
+    score: 10000
+  room_1r_start_shot_6_hit:
+    score: 20000
+  room_1r_start_shot_7_hit:
+    score: 30000
+  room_1r_start_shot_8_hit:
+    score: 20000
+  room_1r_start_shot_9_hit:
+    score: 100000
