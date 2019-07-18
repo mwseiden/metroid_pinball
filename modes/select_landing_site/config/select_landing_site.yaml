@@ -122,6 +122,7 @@ widgets:
       anchor_x: left
       x: 8
       y: 120
+      z: 2
       animations:
         select_landing_site_left_arrow_animation:
           - property: opacity
@@ -137,6 +138,7 @@ widgets:
       anchor_x: right
       x: 712
       y: 120
+      z: 2
       animations:
         select_landing_site_right_arrow_animation:
           - property: opacity
@@ -150,9 +152,9 @@ widgets:
 widget_player:
   mode_select_landing_site_started:
     select_landing_site_left_arrow:
-      target: window
+      slide: window_slide
     select_landing_site_right_arrow:
-      target: window
+      slide: window_slide
 
 event_player:
   mode_select_landing_site_started:
