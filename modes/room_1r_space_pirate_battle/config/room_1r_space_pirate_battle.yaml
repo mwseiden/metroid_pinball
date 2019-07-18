@@ -99,7 +99,6 @@ shots:
   room_1r_pirate_shot_1:
     switch: s_rollover_button
     profile: room_1r_pirate
-    advance_events: timer_room_1r_light_shot_timer_started
     show_tokens:
       led: led_rollover
       color: 'FF40FF'
