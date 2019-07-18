@@ -103,6 +103,7 @@ timers:
       - event: dirty_pool_possible
         action: restart
 
+
 show_player:
   full_shatz_hit:
     base_full_shatz:
@@ -336,9 +337,9 @@ event_player:
   s_behind_drop_1_active{device.switches.s_drop_target_1.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
   s_behind_drop_2_active{device.switches.s_drop_target_2.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
   s_behind_drop_3_active{device.switches.s_drop_target_3.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
-  timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_1.state==1}: dirty_pool_locked
-  timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_2.state==1}: dirty_pool_locked
-  timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_3.state==1}: dirty_pool_locked
+  timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_1.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
+  timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_2.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
+  timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_3.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
   dirty_pool_locked: cmd_drop_all_drops
 
 variable_player:

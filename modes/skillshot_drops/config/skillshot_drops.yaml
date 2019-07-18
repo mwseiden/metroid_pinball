@@ -107,12 +107,12 @@ event_player:
 #    - cmd_drop_one_up
     - skillshot_drops_made_2
   skillshot_drops_three_hit:
-#    - cmd_drop_two_up
+    - cmd_drop_one_up
     - skillshot_drops_made_3
 
-coil_player:
-  skillshot_drops_two_hit: c_drop_1_reset
-  skillshot_drops_three_hit: c_drop_2_reset
+#coil_player:
+#  skillshot_drops_two_hit: c_drop_1_reset
+#  skillshot_drops_three_hit: c_drop_2_reset
 
 show_player:
   skillshot_drops_enable_1:
