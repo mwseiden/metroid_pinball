@@ -25,6 +25,8 @@ timers:
         action: start
       - event: timer_room_1r_shoot_space_pirates_timer_started
         action: stop
+      - event: logicblock_room_1r_battle_sequence_complete
+        action: stop
       - event: timer_room_1r_shoot_space_pirates_timer_complete
         action: start
   room_1r_shoot_space_pirates_timer:
@@ -34,6 +36,8 @@ timers:
     control_events:
       - event: room_1r_kill_pirates
         action: start
+      - event: logicblock_room_1r_battle_sequence_complete
+        action: stop
       - event: timer_room_1r_shoot_space_pirates_timer_complete
         action: reset
 
@@ -42,7 +46,7 @@ shot_groups:
     shots: room_1r_pirate_shot_1, room_1r_pirate_shot_2, room_1r_pirate_shot_3, room_1r_pirate_shot_4, room_1r_pirate_shot_5, room_1r_pirate_shot_6, room_1r_pirate_shot_7, room_1r_pirate_shot_8
     enable_events: timer_room_1r_shoot_space_pirates_timer_started
     reset_events: timer_room_1r_shoot_space_pirates_timer_started
-    disable_events: shoot_space_pirates_shot_group_unlit_complete, timer_room_1r_shoot_space_pirates_timer_complete
+    disable_events: shoot_space_pirates_shot_group_unlit_complete, timer_room_1r_shoot_space_pirates_timer_complete, logicblock_room_1r_battle_sequence_complete
 
 shots:
   room_1r_start_shot_1:
