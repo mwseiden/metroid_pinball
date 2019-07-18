@@ -22,7 +22,7 @@ timers:
     end_value: 20
     tick_interval: 1s
     control_events:
-      - event: light_space_pirates_shot_group_lit_hit
+      - event: room_1r_kill_pirates
         action: start
       - event: timer_room_1r_shoot_space_pirates_timer_complete
         action: reset
@@ -240,6 +240,14 @@ event_player:
   timer_room_1r_light_shot_timer_tick{ticks == 7}: room_1r_shot_7_activate
   timer_room_1r_light_shot_timer_tick{ticks == 8}: room_1r_shot_8_activate
   timer_room_1r_light_shot_timer_tick{ticks == 9}: room_1r_shot_9_activate
+  room_1r_start_shot_1_hit: room_1r_kill_pirates
+  room_1r_start_shot_2_hit: room_1r_kill_pirates
+  room_1r_start_shot_3_hit: room_1r_kill_pirates
+  room_1r_start_shot_4_hit: room_1r_kill_pirates
+  room_1r_start_shot_5_hit: room_1r_kill_pirates
+  room_1r_start_shot_6_hit: room_1r_kill_pirates
+  room_1r_start_shot_7_hit: room_1r_kill_pirates
+  room_1r_start_shot_8_hit: room_1r_kill_pirates
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:
