@@ -44,7 +44,7 @@ shots:
   room_1r_start_shot_1:
     switch: s_rollover_button
     profile: room_1r_pirate
-    advance_events: mode_room_1r_space_pirate_battle_started
+    #advance_events: mode_room_1r_space_pirate_battle_started
     show_tokens:
       led: led_rollover
       color: 'FF40FF'
