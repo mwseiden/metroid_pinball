@@ -39,7 +39,7 @@ shots:
     switch: s_rollover_button
     profile: room_1r_blink
     enable_events: room_1r_shot_1_activate
-    disable_events: room_1r_shot_2_activate
+    disable_events: room_1r_shot_2_activate, mode_room_1r_space_pirate_battle_started
     reset_events: room_1r_shot_2_activate, mode_room_1r_space_pirate_battle_started
     show_tokens:
       led: led_rollover
@@ -48,7 +48,7 @@ shots:
     switch: s_side_ramp_made
     profile: room_1r_blink
     enable_events: room_1r_shot_2_activate
-    disable_events: room_1r_shot_3_activate
+    disable_events: room_1r_shot_3_activate, mode_room_1r_space_pirate_battle_started
     reset_events: room_1r_shot_3_activate, mode_room_1r_space_pirate_battle_started
     show_tokens:
       led: led_enter_side_ramp
@@ -57,7 +57,7 @@ shots:
     switch: s_scoop
     profile: room_1r_blink
     enable_events: room_1r_shot_3_activate
-    disable_events: room_1r_shot_4_activate
+    disable_events: room_1r_shot_4_activate, mode_room_1r_space_pirate_battle_started
     reset_events: room_1r_shot_4_activate, mode_room_1r_space_pirate_battle_started
     show_tokens:
       led: led_enter_scoop
@@ -66,7 +66,7 @@ shots:
     switch: s_left_passage
     profile: room_1r_blink
     enable_events: room_1r_shot_4_activate
-    disable_events: room_1r_shot_5_activate
+    disable_events: room_1r_shot_5_activate, mode_room_1r_space_pirate_battle_started
     reset_events: room_1r_shot_5_activate, mode_room_1r_space_pirate_battle_started
     show_tokens:
       led: led_enter_secret_passage
@@ -75,7 +75,7 @@ shots:
     switch: s_orbit_r
     profile: room_1r_blink
     enable_events: room_1r_shot_5_activate
-    disable_events: room_1r_shot_6_activate
+    disable_events: room_1r_shot_6_activate, mode_room_1r_space_pirate_battle_started
     reset_events: room_1r_shot_6_activate, mode_room_1r_space_pirate_battle_started
     show_tokens:
       led: led_enter_right_orbit
@@ -84,7 +84,7 @@ shots:
     switch: s_ramp_enter
     profile: room_1r_blink
     enable_events: room_1r_shot_6_activate
-    disable_events: room_1r_shot_7_activate
+    disable_events: room_1r_shot_7_activate, mode_room_1r_space_pirate_battle_started
     reset_events: room_1r_shot_7_activate, mode_room_1r_space_pirate_battle_started
     show_tokens:
       led: led_enter_ramp
@@ -93,7 +93,7 @@ shots:
     switch: s_orbit_l
     profile: room_1r_blink
     enable_events: room_1r_shot_7_activate
-    disable_events: room_1r_shot_8_activate
+    disable_events: room_1r_shot_8_activate, mode_room_1r_space_pirate_battle_started
     reset_events: room_1r_shot_8_activate, mode_room_1r_space_pirate_battle_started
     show_tokens:
       led: led_enter_left_orbit
@@ -102,7 +102,7 @@ shots:
     switch: s_shatz
     profile: room_1r_blink
     enable_events: room_1r_shot_8_activate
-    disable_events: room_1r_shot_9_activate
+    disable_events: room_1r_shot_9_activate, mode_room_1r_space_pirate_battle_started
     reset_events: room_1r_shot_9_activate, mode_room_1r_space_pirate_battle_started
     show_tokens:
       led: led_zero_suit
@@ -111,8 +111,8 @@ shots:
     switch: s_pit
     profile: room_1r_blink
     enable_events: room_1r_shot_9_activate
-    disable_events: room_1r_shot_1_activate
-    reset_events: room_1r_shot_1_activate
+    disable_events: room_1r_shot_1_activate, mode_room_1r_space_pirate_battle_started
+    reset_events: room_1r_shot_1_activate, mode_room_1r_space_pirate_battle_started
     show_tokens:
       led: led_pit
       color: 'FF0000'
