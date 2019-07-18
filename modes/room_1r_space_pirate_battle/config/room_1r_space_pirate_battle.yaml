@@ -13,10 +13,10 @@ timers:
     control_events:
       - event: mode_room_1r_space_pirate_battle_started
         action: start
-      - event: timer_room_1r_shoot_space_pirates_timer_started
-        action: stop
-      - event: timer_room_1r_shoot_space_pirates_timer_complete
-        action: start
+#      - event: timer_room_1r_shoot_space_pirates_timer_started
+#        action: stop
+#      - event: timer_room_1r_shoot_space_pirates_timer_complete
+#        action: start
 #  room_1r_shoot_space_pirates_timer:
 #    start_value: 1
 #    end_value: 20
@@ -27,13 +27,13 @@ timers:
 #      - event: timer_room_1r_shoot_space_pirates_timer_complete
 #        action: reset
 
-shot_groups:
-  light_space_pirates_shot_group:
-    shots: room_1r_start_shot_1, room_1r_start_shot_2, room_1r_start_shot_3, room_1r_start_shot_4, room_1r_start_shot_5, room_1r_start_shot_6, room_1r_start_shot_7, room_1r_start_shot_8, room_1r_start_shot_9
-    rotate_events: timer_room_1r_light_shot_timer_tick
-    enable_events: mode_room_1r_space_pirate_battle_started, timer_room_1r_shoot_space_pirates_timer_complete
-    disable_events: light_space_pirates_shot_group_lit_hit
-    reset_events: mode_room_1r_space_pirate_battle_started
+#shot_groups:
+#  light_space_pirates_shot_group:
+#    shots: room_1r_start_shot_1, room_1r_start_shot_2, room_1r_start_shot_3, room_1r_start_shot_4, room_1r_start_shot_5, room_1r_start_shot_6, room_1r_start_shot_7, room_1r_start_shot_8, room_1r_start_shot_9
+#    rotate_events: timer_room_1r_light_shot_timer_tick
+#    enable_events: mode_room_1r_space_pirate_battle_started, timer_room_1r_shoot_space_pirates_timer_complete
+#    disable_events: light_space_pirates_shot_group_lit_hit
+#    reset_events: mode_room_1r_space_pirate_battle_started
 #  shoot_space_pirates_shot_group:
 #    shots: room_1r_pirate_shot_1, room_1r_pirate_shot_2, room_1r_pirate_shot_3, room_1r_pirate_shot_4, room_1r_pirate_shot_5, room_1r_pirate_shot_6, room_1r_pirate_shot_7, room_1r_pirate_shot_8
 #    enable_events: timer_room_1r_shoot_space_pirates_timer_started
@@ -43,56 +43,82 @@ shot_groups:
 shots:
   room_1r_start_shot_1:
     switch: s_rollover_button
-    profile: room_1r_pirate
-    #advance_events: mode_room_1r_space_pirate_battle_started
+    profile: room_1r_blink
+    enable_events: room_1r_shot_1_activate
+    disable_events: room_1r_shot_2_activate
+    reset_events: room_1r_shot_2_activate
     show_tokens:
       led: led_rollover
       color: 'FF40FF'
   room_1r_start_shot_2:
     switch: s_side_ramp_made
     profile: room_1r_blink
+    enable_events: room_1r_shot_2_activate
+    disable_events: room_1r_shot_3_activate
+    reset_events: room_1r_shot_3_activate
     show_tokens:
       led: led_enter_side_ramp
       color: 'FF40FF'
   room_1r_start_shot_3:
     switch: s_scoop
     profile: room_1r_blink
+    enable_events: room_1r_shot_3_activate
+    disable_events: room_1r_shot_4_activate
+    reset_events: room_1r_shot_4_activate
     show_tokens:
       led: led_enter_scoop
       color: 'FF40FF'
   room_1r_start_shot_4:
     switch: s_left_passage
     profile: room_1r_blink
+    enable_events: room_1r_shot_4_activate
+    disable_events: room_1r_shot_5_activate
+    reset_events: room_1r_shot_5_activate
     show_tokens:
       led: led_enter_secret_passage
       color: 'FF40FF'
   room_1r_start_shot_5:
     switch: s_orbit_r
     profile: room_1r_blink
+    enable_events: room_1r_shot_5_activate
+    disable_events: room_1r_shot_6_activate
+    reset_events: room_1r_shot_6_activate
     show_tokens:
       led: led_enter_right_orbit
       color: 'FF40FF'
   room_1r_start_shot_6:
     switch: s_ramp_enter
     profile: room_1r_blink
+    enable_events: room_1r_shot_6_activate
+    disable_events: room_1r_shot_7_activate
+    reset_events: room_1r_shot_7_activate
     show_tokens:
       led: led_enter_ramp
       color: 'FF40FF'
   room_1r_start_shot_7:
     switch: s_orbit_l
     profile: room_1r_blink
+    enable_events: room_1r_shot_7_activate
+    disable_events: room_1r_shot_8_activate
+    reset_events: room_1r_shot_8_activate
     show_tokens:
       led: led_enter_left_orbit
       color: 'FF40FF'
   room_1r_start_shot_8:
     switch: s_shatz
     profile: room_1r_blink
+    enable_events: room_1r_shot_8_activate
+    disable_events: room_1r_shot_9_activate
+    reset_events: room_1r_shot_9_activate
     show_tokens:
       led: led_zero_suit
       color: 'FF40FF'
   room_1r_start_shot_9:
     switch: s_pit
     profile: room_1r_blink
+    enable_events: room_1r_shot_9_activate
+    disable_events: room_1r_shot_1_activate
+    reset_events: room_1r_shot_1_activate
     show_tokens:
       led: led_pit
       color: 'FF0000'
@@ -164,8 +190,6 @@ shots:
 shot_profiles:
   room_1r_blink:
     states:
-    - name: unlit
-      show: off
     - name: lit
       show: blink_light
       loops: -1
@@ -213,15 +237,15 @@ slide_player:
 
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
-  # timer_room_1r_light_shot_timer_tick{ticks == 1}: room_1r_shot_1_activate
-  # timer_room_1r_light_shot_timer_tick{ticks == 2}: room_1r_shot_2_activate
-  # timer_room_1r_light_shot_timer_tick{ticks == 3}: room_1r_shot_3_activate
-  # timer_room_1r_light_shot_timer_tick{ticks == 4}: room_1r_shot_4_activate
-  # timer_room_1r_light_shot_timer_tick{ticks == 5}: room_1r_shot_5_activate
-  # timer_room_1r_light_shot_timer_tick{ticks == 6}: room_1r_shot_6_activate
-  # timer_room_1r_light_shot_timer_tick{ticks == 7}: room_1r_shot_7_activate
-  # timer_room_1r_light_shot_timer_tick{ticks == 8}: room_1r_shot_8_activate
-  # timer_room_1r_light_shot_timer_tick{ticks == 9}: room_1r_shot_9_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 1}: room_1r_shot_1_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 2}: room_1r_shot_2_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 3}: room_1r_shot_3_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 4}: room_1r_shot_4_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 5}: room_1r_shot_5_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 6}: room_1r_shot_6_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 7}: room_1r_shot_7_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 8}: room_1r_shot_8_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 9}: room_1r_shot_9_activate
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:
