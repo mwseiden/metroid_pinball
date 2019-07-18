@@ -9,7 +9,7 @@ timers:
     start_value: 1
     end_value: 10
     restart_on_complete: true
-    tick_interval: 4s
+    tick_interval: 8s
     control_events:
       - event: mode_room_1r_space_pirate_battle_started
         action: start

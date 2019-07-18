@@ -104,11 +104,15 @@ event_player:
   timer_skillshot_drops_third_down_started: cmd_drop_three_down
   skillshot_drops_one_hit: skillshot_drops_made_1
   skillshot_drops_two_hit:
-    - cmd_drop_one_up
+#    - cmd_drop_one_up
     - skillshot_drops_made_2
   skillshot_drops_three_hit:
-    - cmd_drop_two_up
+#    - cmd_drop_two_up
     - skillshot_drops_made_3
+
+coil_player:
+  skillshot_drops_two_hit: c_drop_1_reset
+  skillshot_drops_three_hit: c_drop_2_reset
 
 show_player:
   skillshot_drops_enable_1:
