@@ -27,8 +27,8 @@ timers:
         action: stop
       - event: logicblock_room_1r_battle_sequence_complete
         action: stop
-      - event: timer_room_1r_shoot_space_pirates_timer_complete
-        action: start
+#      - event: timer_room_1r_shoot_space_pirates_timer_complete
+#        action: start
   room_1r_shoot_space_pirates_timer:
     start_value: 1
     end_value: 20
@@ -45,7 +45,7 @@ shot_groups:
   shoot_space_pirates_shot_group:
     shots: room_1r_pirate_shot_1, room_1r_pirate_shot_2, room_1r_pirate_shot_3, room_1r_pirate_shot_4, room_1r_pirate_shot_5, room_1r_pirate_shot_6, room_1r_pirate_shot_7, room_1r_pirate_shot_8
     enable_events: timer_room_1r_shoot_space_pirates_timer_started
-    reset_events: timer_room_1r_shoot_space_pirates_timer_started
+    reset_events: timer_room_1r_shoot_space_pirates_timer_started, timer_room_1r_shoot_space_pirates_timer_complete, logicblock_room_1r_battle_sequence_complete
     disable_events: shoot_space_pirates_shot_group_unlit_complete, timer_room_1r_shoot_space_pirates_timer_complete, logicblock_room_1r_battle_sequence_complete
 
 shots:
@@ -246,6 +246,7 @@ slide_player:
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 0}: room_1r_start_timer
+  timer_room_1r_shoot_space_pirates_timer_complete{current_player.room_1r_finished == 0}: room_1r_start_timer
   timer_room_1r_light_shot_timer_tick{ticks == 1}: room_1r_shot_1_activate
   timer_room_1r_light_shot_timer_tick{ticks == 2}: room_1r_shot_2_activate
   timer_room_1r_light_shot_timer_tick{ticks == 3}: room_1r_shot_3_activate
