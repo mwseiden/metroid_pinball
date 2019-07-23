@@ -3,9 +3,9 @@ mode:
   start_events: mode_base_started
   stop_events: skillshot_stage_one_end, skillshot_side_success
 
-  shot_groups:
-    skillshot_side_shots:
-      shots: side_1_shot, side_2_shot, side_3_shot
+shot_groups:
+  skillshot_side_shots:
+    shots: side_1_shot, side_2_shot, side_3_shot
 
 event_player:
   skillshot_side_shots_hit: skillshot_side_success
