@@ -28,8 +28,6 @@ shot_groups:
       - rollover_shot
       - shatz_shot
       - captive_shot
-      - side_1_shot
-      - side_2_shot
 
 show_player:
   skillshot_unused_shot_group_hit:
@@ -101,5 +99,6 @@ event_player:
   skillshot_missiles_success_super: skillshot_stage_one_end
   skillshot_missiles_failure: skillshot_stage_one_end
   skillshot_unskilled_success: skillshot_stage_one_end
+  skillshot_side_success: skillshot_stage_one_end
   ball_will_end: skillshot_stage_one_end
 
