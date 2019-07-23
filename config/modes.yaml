@@ -28,6 +28,7 @@ modes:
   - skillshot_drops_release
   - skillshot_missiles
   - skillshot_purple
+  - skillshot_side_targets
   - skillshot_unskilled
   - spin_jumps
   - twitch_bits_multiball
