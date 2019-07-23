@@ -232,6 +232,20 @@ slides:
     widgets:
       - type: image
         image: room_1r_splash
+  room_1r_super_kill_slide:
+    widgets:
+      - type: text
+        text: SUPER KILL!!!
+        color: 'FF00FF'
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0
+              duration: .5s
+            - property: opacity
+              value: 1
+              duration: .5s
+              repeat: -1
 
 slide_player:
   mode_room_1r_space_pirate_battle_started:
@@ -240,6 +254,9 @@ slide_player:
     room_1r_splash_slide:
       target: dmd
       expire: 1.5s
+  room_1r_super_kill:
+    room_1r_super_kill_slide:
+      expire: 3s
 
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
@@ -262,6 +279,7 @@ event_player:
   room_1r_start_shot_6_hit: room_1r_kill_pirates
   room_1r_start_shot_7_hit: room_1r_kill_pirates
   room_1r_start_shot_8_hit: room_1r_kill_pirates
+  room_1r_start_shot_9_hit: room_1r_super_kill, logicblock_room_1r_battle_sequence_complete
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:
