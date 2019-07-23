@@ -60,3 +60,6 @@ class MyAttract(Attract):
         if self.flip_pattern == 'BLRRLLL':
             self.info_log('Flipper Code: LORD SQUEAK')
             self.machine.events.post('flipper_code_squeak')
+        elif self.flip_pattern == 'BLLRRRLLLL':
+            self.info_log('Flipper Code: NO MUSIC')
+            self.machine.events.post('flipper_code_no_music')
