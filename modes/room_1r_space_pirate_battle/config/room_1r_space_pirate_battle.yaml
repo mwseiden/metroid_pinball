@@ -315,4 +315,4 @@ variable_player:
   room_1r_start_shot_8_hit:
     score: 20000
   room_1r_start_shot_9_hit:
-    score: 100000
+    score: 300000

@@ -252,7 +252,7 @@ sound_player:
       action: stop
     wrecked_ship:
       action: play
-  mode_select_landing_site_started:
+  mode_select_landing_site_started{machine.next_game_acapella == 0}:
     music_item_room:
       volume: 0.15
   select_landing_site_item_selected:
