@@ -237,6 +237,7 @@ slides:
       - type: text
         text: SUPER KILL!!!
         color: 'FF00FF'
+        style: dmd_big
         animations:
           pre_show_slide:
             - property: opacity
@@ -256,7 +257,7 @@ slide_player:
       expire: 1.5s
   room_1r_super_kill:
     room_1r_super_kill_slide:
-      expire: 3s
+      expire: 3.4s
 
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start

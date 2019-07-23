@@ -24,6 +24,10 @@ show_player:
     flipper_code_squeak:
       priority: 200
       loops: 0
+  flipper_code_no_music:
+    flipper_code_no_music:
+      priority: 200
+      loops: 0
   twitch_new_chat_message{line_count <= 3}:
     chat_message_3:
       loops: 0

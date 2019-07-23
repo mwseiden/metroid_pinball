@@ -1,0 +1,10 @@
+#show_version=5
+
+- duration: 5s
+  slides:
+    attract_hear_no_fn_monkeys:
+      widgets:
+      - type: text
+        text: Hear No...
+        style: dmd_big
+        color: '804000'
