@@ -8,16 +8,23 @@ shots:
     switch: s_top_lane_2
 
 timers:
-  bridge_disable_coil_timer:
+  bridge_enable_coil_timer:
     start_value: 1
-    end_value: 4
-    tick_interval: 1s
+    end_value: 2
+    tick_interval: .5s
     control_events:
       - event: bridge_rail_shot_hit
         action: restart
+  bridge_disable_coil_timer:
+    start_value: 1
+    end_value: 3
+    tick_interval: 1s
+    control_events:
+      - event: timer_bridge_enable_coil_timer_complete
+        action: restart
 
 coil_player:
-  bridge_rail_shot_hit:
+  timer_bridge_enable_coil_timer_complete:
     c_bridge:
       action: enable
   mode_bridge_ending:
