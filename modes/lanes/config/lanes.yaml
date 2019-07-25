@@ -36,6 +36,18 @@ shots:
     show_tokens:
       led: led_right_inlane
       color: 8040FF
+  left_ballsave_shot:
+    switch: s_left_outlane
+    profile: lanes
+    show_tokens:
+      led: led_left_kickback
+      color: 'FF8000'
+  right_ballsave_shot:
+    switch: s_right_outlane
+    profile: lanes
+    show_tokens:
+      led: led_right_kickback
+      color: 'FF8000'
 
 shot_groups:
   lanes_shot_group:
@@ -45,6 +57,13 @@ shot_groups:
     reset_events: lanes_shot_group_lit_complete
     enable_events: mode_lanes_started
     disable_events: mode_lanes_ending
+  ballsave_shot_group:
+    shots: left_ballsave_shot, right_ballsave_shot
+    rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+    reset_events: lanes_shot_group_lit_complete
+    enable_events: lanes_shot_group_lit_complete
+    disable_events: ballsave_shot_group_lit_hit
 
 show_player:
   lanes_shot_group_lit_complete:
