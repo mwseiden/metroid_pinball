@@ -217,6 +217,9 @@ variable_player:
     continue_room:
       string: 2a
       action: set
+    room_2a_alive_score:
+      action: set
+      int: 0
   room_2a_bank_1_shot_hit:
     score: (5000 + (current_player.area_bonus_w * 5000)) * current_player.multiplier
   room_2a_bank_2_shot_hit:
@@ -226,6 +229,6 @@ variable_player:
   room_2a_bank_4_shot_hit:
     score: (15000 + (current_player.area_bonus_nw * 15000)) * current_player.multiplier
   timer_room_2a_do_not_sink_tick:
-    room_2a_alive_score: 500
+    room_2a_alive_score: 100
     score: current_player.room_2a_alive_score * current_player.multiplier
 
