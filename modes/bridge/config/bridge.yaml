@@ -48,3 +48,4 @@ show_player:
         color_off: '000000'
     playfield_explode:
       priority: 1000
+      speed: 7
