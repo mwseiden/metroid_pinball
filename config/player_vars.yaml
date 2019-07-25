@@ -46,6 +46,8 @@ player_vars:
     initial_value: 0
   room_1b_victory_step_1:
     initial_value: 0
+  room_2a_alive_score:
+    initial_value: 0
   skillshot_bombs_lit:
     initial_value: 0
   skillshot_missiles_lit:
