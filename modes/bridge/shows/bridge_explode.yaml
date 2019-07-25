@@ -1,0 +1,81 @@
+#show_version=5
+
+- duration: .1s
+  lights:
+    (led_1): (color_1)
+    (led_2): (color_off)
+
+- duration: .1s
+  lights:
+    (led_1): (color_off)
+    (led_2): (color_1)
+
+- duration: .1s
+  lights:
+    (led_1): (color_1)
+    (led_2): (color_1)
+
+- duration: .1s
+  lights:
+    (led_1): (color_off)
+    (led_2): (color_off)
+
+- duration: .1s
+  lights:
+    (led_1): (color_2)
+    (led_2): (color_off)
+
+- duration: .1s
+  lights:
+    (led_1): (color_off)
+    (led_2): (color_2)
+
+- duration: .1s
+  lights:
+    (led_1): (color_2)
+    (led_2): (color_2)
+
+- duration: .1s
+  lights:
+    (led_1): (color_off)
+    (led_2): (color_off)
+
+- duration: .1s
+  lights:
+    (led_1): (color_3)
+    (led_2): (color_off)
+
+- duration: .1s
+  lights:
+    (led_1): (color_off)
+    (led_2): (color_3)
+
+- duration: .1s
+  lights:
+    (led_1): (color_3)
+    (led_2): (color_3)
+
+- duration: .1s
+  lights:
+    (led_1): (color_off)
+    (led_2): (color_off)
+
+- duration: .1s
+  lights:
+    (led_1): (color_4)
+    (led_2): (color_off)
+
+- duration: .1s
+  lights:
+    (led_1): (color_off)
+    (led_2): (color_4)
+
+- duration: .1s
+  lights:
+    (led_1): (color_4)
+    (led_2): (color_4)
+
+- duration: .1s
+  lights:
+    (led_1): (color_off)
+    (led_2): (color_off)

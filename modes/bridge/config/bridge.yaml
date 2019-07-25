@@ -33,3 +33,14 @@ coil_player:
   timer_bridge_disable_coil_timer_complete:
     c_bridge:
       action: disable
+
+show_player:
+  timer_bridge_enable_coil_timer_complete:
+    bridge_explode:
+      priority: 500
+      show_tokens:
+        color_1: 'FF0000'
+        color_2: 'FF8000'
+        color_3: 'FFFF00'
+        color_4: 'FFFFFF'
+        color_off: '000000'
