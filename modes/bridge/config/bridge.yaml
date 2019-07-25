@@ -1,0 +1,28 @@
+#config_version=5
+mode:
+  start_events: mode_base_starting
+  priority: 100
+
+shots:
+  bridge_rail_shot:
+    switch: s_top_lane_2
+
+timers:
+  bridge_disable_coil_timer:
+    start_value: 1
+    end_value: 4
+    tick_interval: 1s
+    control_events:
+      - event: bridge_rail_shot_hit
+        action: restart
+
+coil_player:
+  bridge_rail_shot_hit:
+    c_bridge:
+      action: enable
+  mode_bridge_ending:
+    c_bridge:
+      action: disable
+  timer_bridge_disable_coil_timer_complete:
+    c_bridge:
+      action: disable

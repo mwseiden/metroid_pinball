@@ -89,6 +89,9 @@ event_player:
   skillshot_drops_three_hit:
     - cmd_drop_one_up
     - skillshot_drops_made_3
+  s_behind_drop_1_active: cmd_drop_one_up
+  s_behind_drop_2_active: cmd_drop_two_up
+  s_behind_drop_3_active: cmd_drop_three_up
 
 show_player:
   skillshot_drops_enable_1:

@@ -26,7 +26,7 @@ show_player:
 
 variable_player:
   skillshot_side_shots_hit:
-    score: 150000
+    score: 100000
 
 sound_player:
   skillshot_side_success: skillshot

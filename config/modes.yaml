@@ -3,6 +3,7 @@
 modes:
   - base
   - bonus
+  - bridge
   - chozo_multiball
   - drop_targets
   - emergency_landing
