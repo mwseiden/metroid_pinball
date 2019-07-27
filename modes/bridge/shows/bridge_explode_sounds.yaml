@@ -1,37 +1,37 @@
 #show_version=5
 
 - duration: .1s
-    sounds:
-      bridge_explosion_sound_pool: play
+#    sounds:
+#      bridge_explosion_sound_pool: play
 
 - duration: .1s
-    sounds:
-      bridge_explosion_sound_pool: play
+#    sounds:
+#      bridge_explosion_sound_pool: play
 
 - duration: .3s
-    sounds:
-      bridge_explosion_sound_pool: play
+#    sounds:
+#      bridge_explosion_sound_pool: play
 
 - duration: .1s
     sounds:
-      bridge_explosion_sound_pool: play
+      bridge_explosion_sound_pool:
 
 - duration: .2s
-    sounds:
-      bridge_explosion_sound_pool: play
+#    sounds:
+#      bridge_explosion_sound_pool: play
 
 - duration: .3s
-    sounds:
-      bridge_explosion_sound_pool: play
+#    sounds:
+#      bridge_explosion_sound_pool: play
 
 - duration: .1s
-    sounds:
-      bridge_explosion_sound_pool: play
+#    sounds:
+#      bridge_explosion_sound_pool: play
 
 - duration: .2s
-    sounds:
-      bridge_explosion_sound_pool: play
+#    sounds:
+#      bridge_explosion_sound_pool: play
 
 - duration: .2s
-    sounds:
-      bridge_explosion_sound_pool: play
+#    sounds:
+#      bridge_explosion_sound_pool: play
