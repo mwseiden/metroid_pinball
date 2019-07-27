@@ -2,36 +2,36 @@
 
 - duration: .1s
     sounds:
-      - bridge_explosion_sound_pool
+      bridge_explosion_sound_pool: play
 
 - duration: .1s
     sounds:
-      - bridge_explosion_sound_pool
+      bridge_explosion_sound_pool: play
 
 - duration: .3s
     sounds:
-      - bridge_explosion_sound_pool
+      bridge_explosion_sound_pool: play
 
 - duration: .1s
     sounds:
-      - bridge_explosion_sound_pool
+      bridge_explosion_sound_pool: play
 
 - duration: .2s
     sounds:
-      - bridge_explosion_sound_pool
+      bridge_explosion_sound_pool: play
 
 - duration: .3s
     sounds:
-      - bridge_explosion_sound_pool
+      bridge_explosion_sound_pool: play
 
 - duration: .1s
     sounds:
-      - bridge_explosion_sound_pool
+      bridge_explosion_sound_pool: play
 
 - duration: .2s
     sounds:
-      - bridge_explosion_sound_pool
+      bridge_explosion_sound_pool: play
 
 - duration: .2s
     sounds:
-      - bridge_explosion_sound_pool
+      bridge_explosion_sound_pool: play
