@@ -69,42 +69,49 @@ sounds:
     streaming: False
     track: sfx
     priority: 50
+    volume: 1.0
     max_queue_time: None
   bridge_explosion_2:
     file: bridge_explosion_2.wav
     streaming: False
     track: sfx
     priority: 50
+    volume: 1.0
     max_queue_time: None
   bridge_explosion_3:
     file: bridge_explosion_3.wav
     streaming: False
     track: sfx
     priority: 50
+    volume: 1.0
     max_queue_time: None
   bridge_explosion_4:
     file: bridge_explosion_4.wav
     streaming: False
     track: sfx
     priority: 50
+    volume: 1.0
     max_queue_time: None
   bridge_explosion_5:
     file: bridge_explosion_5.wav
     streaming: False
     track: sfx
     priority: 50
+    volume: 1.0
     max_queue_time: None
   bridge_explosion_6:
     file: bridge_explosion_6.wav
     streaming: False
     track: sfx
     priority: 50
+    volume: 1.0
     max_queue_time: None
   bridge_explosion_7:
     file: bridge_explosion_7.wav
     streaming: False
     track: sfx
     priority: 50
+    volume: 1.0
     max_queue_time: None
 
 sound_pools:
@@ -147,7 +154,7 @@ shows:
 event_player:
   bridge_rail_shot_hit{current_player.power_bombs > 0}: bridge_should_explode
   ball_hold_bridge_skillshot_held_ball: skillshot_should_start
-  timer_bridge_enable_coil_timer_complete{not device.multiballs.chozo.enabled and not device.multiballs.room_1r_battle.enabled and not device.multiballs.twitch_bit_donation_multiball.enabled}: bridge_enable_skillshot
+  timer_bridge_enable_coil_timer_started{not device.multiballs.chozo.enabled and not device.multiballs.room_1r_battle.enabled and not device.multiballs.twitch_bit_donation_multiball.enabled}: bridge_enable_skillshot
 
 variable_player:
   bridge_should_explode:
