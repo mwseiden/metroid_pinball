@@ -1,8 +1,8 @@
 #show_version=5
 
 - duration: .1s
-#    sounds:
-#      bridge_explosion_sound_pool: play
+    events:
+      bridge_explosion_sound_play:
 
 - duration: .1s
 #    sounds:
