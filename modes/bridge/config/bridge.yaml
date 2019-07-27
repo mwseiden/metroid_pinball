@@ -60,6 +60,7 @@ show_player:
       speed: 50
       loops: 1
     bridge_explode_sounds:
+      loops: 0
       priority: 1000
 
 sounds:
