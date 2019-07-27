@@ -38,6 +38,8 @@ show_player:
   timer_bridge_enable_coil_timer_complete:
     bridge_explode:
       priority: 1000
+      speed: 1.5
+      loops: 1
       show_tokens:
         led_1: gi_bomb_bank
         led_2: gi_upper_flipper_bottom
@@ -48,4 +50,5 @@ show_player:
         color_off: '000000'
     playfield_explode:
       priority: 1000
-      speed: 7
+      speed: 50
+      loops: 1
