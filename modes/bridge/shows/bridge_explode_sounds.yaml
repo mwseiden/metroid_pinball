@@ -13,8 +13,8 @@
 #      bridge_explosion_sound_pool: play
 
 - duration: .1s
-    sounds:
-      bridge_explosion_sound_pool:
+#    sounds:
+#      bridge_explosion_sound_pool:
 
 - duration: .2s
 #    sounds:
