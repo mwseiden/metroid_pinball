@@ -120,8 +120,14 @@ sound_pools:
       - bridge_explosion_6
       - bridge_explosion_7
 
-sound_player:
-  bridge_explosion_sound_play: bridge_explosion_sound_pool
+#sound_player:
+#  bridge_explosion_sound_play: bridge_explosion_sound_pool
+
+shows:
+  bridge_explode_sounds:
+    - duration: 0.1s
+      sounds:
+        bridge_explosion_sound_pool:
 
 event_player:
   bridge_rail_shot_hit{current_player.power_bombs > 0}: bridge_should_explode
