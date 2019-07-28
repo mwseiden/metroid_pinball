@@ -155,8 +155,7 @@ shows:
 event_player:
   bridge_rail_shot_hit{current_player.power_bombs > 0}: bridge_should_explode
   ball_hold_bridge_skillshot_held_ball: skillshot_should_start
-  #timer_bridge_enable_coil_timer_started{not device.multiballs.chozo.enabled and not device.multiballs.room_1r_battle.enabled and not device.multiballs.twitch_bit_donation_multiball.enabled}: bridge_enable_skillshot
-  timer_bridge_disable_coil_timer_started: bridge_enable_skillshot
+  timer_bridge_disable_coil_timer_started{device.multiballs.chozo.balls_added_live == 0 and device.multiballs.room_1r_battle.balls_added_live == 0 and device.multiballs.twitch_bit_donation_multiball.balls_added_live == 0}: bridge_enable_skillshot
 
 variable_player:
   bridge_should_explode:
