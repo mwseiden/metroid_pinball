@@ -11,7 +11,8 @@ ball_holds:
    bridge_skillshot:
       balls_to_hold: 1
       hold_devices: bd_plunger
-      disable_events: mode_bridge_starting, mode_bridge_ending, whole_playfield_shot_group_hit, ball_will_end
+      reset_events: mode_bridge_starting, mode_bridge_ending, whole_playfield_shot_group_hit, s_shooter_lane_inactive, ball_will_end
+      disable_events: mode_bridge_starting, mode_bridge_ending, whole_playfield_shot_group_hit, s_shooter_lane_inactive, ball_will_end
       enable_events: bridge_enable_skillshot
 
 timers:
