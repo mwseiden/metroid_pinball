@@ -14,3 +14,4 @@ ball_devices:
         eject_coil: c_ball_launch
         mechanical_eject: true
         eject_timeouts: 3s
+        entrance_events: ball_hold_bridge_skillshot_held_ball
