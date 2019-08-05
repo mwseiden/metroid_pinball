@@ -352,6 +352,9 @@ event_player:
   timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_2.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
   timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_3.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
   dirty_pool_locked: cmd_drop_all_drops
+  player_added{num == 2}: base_sound_player_2
+  player_added{num == 3}: base_sound_player_3
+  player_added{num == 4}: base_sound_player_4
 
 variable_player:
   left_orbit_hit:
@@ -492,9 +495,9 @@ sound_player:
   twitch_bit_donation{bits < 100}: jackpot
   twitch_bit_donation{bits >= 100 and bits < 500}: super_jackpot
   twitch_bit_donation{bits >= 500}: double_super_jackpot
-  player_added{num == 2}: player_2
-  player_added{num == 3}: player_3
-  player_added{num == 4}: player_4
+  base_sound_player_2: player_2
+  base_sound_player_3: player_3
+  base_sound_player_4: player_4
   left_sling_shot_hit: left_sling
   right_sling_shot_hit: right_sling
   upper_left_sling_shot_hit: mid_sling
