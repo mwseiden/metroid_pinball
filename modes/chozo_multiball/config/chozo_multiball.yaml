@@ -100,7 +100,7 @@ variable_player:
       int: 25000 * (current_player.chozo_multiballs + 1)
   chozo_multiball_jackpot_one_shot_hit:
     chozo_multiball_jackpot_progress: 100000
-  chozo_multiball_jackpot_one_shot_hit:
+  chozo_multiball_jackpot_two_shot_hit:
     chozo_multiball_jackpot_progress: 175000
   chozo_multiball_jackpot_collect_shot_hit:
     score: current_player.chozo_multiball_jackpot_progress
