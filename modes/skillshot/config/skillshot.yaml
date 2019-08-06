@@ -26,7 +26,6 @@ shot_groups:
       - spinner_shot
       - pop_subway_shot
       - rollover_shot
-      - shatz_shot
       - captive_shot
 
 show_player:
@@ -82,6 +81,10 @@ show_player:
     skillshot_unskilled_made:
       loops: 0
       events_when_completed: skillshot_monitor_should_end
+  skillshot_big_points_success:
+    skillshot_big_points_made:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
 
 event_player:
   skillshot_unused_shot_group_hit: skillshot_stage_one_end
@@ -100,5 +103,6 @@ event_player:
   skillshot_missiles_failure: skillshot_stage_one_end
   skillshot_unskilled_success: skillshot_stage_one_end
   skillshot_side_success: skillshot_stage_one_end
+  skillshot_big_points_success: skillshot_stage_one_end
   ball_will_end: skillshot_stage_one_end
 
