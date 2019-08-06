@@ -51,8 +51,9 @@ shots:
 
 shot_profiles:
   chozo_multiball_jackpot:
-    - name: lit
-      show: fade_one_light
+    states:
+      - name: lit
+        show: fade_one_light
 
 show_player:
   chozo_multiball_progress:
