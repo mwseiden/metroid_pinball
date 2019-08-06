@@ -1,0 +1,11 @@
+#show_version=5
+
+- duration: 2s
+  lights:
+    (led): (color)
+    fade: 2s
+
+- duration: 2s
+  lights:
+    (led): stop
+    fade: 2s
