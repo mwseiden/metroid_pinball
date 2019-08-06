@@ -6,4 +6,4 @@
 
 - duration: .5s
   lights:
-    (led): off
+    (led): stop
