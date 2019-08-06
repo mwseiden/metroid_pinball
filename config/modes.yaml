@@ -24,6 +24,7 @@ modes:
   - select_landing_site
   - side_targets
   - skillshot
+  - skillshot_big_points
   - skillshot_bombs
   - skillshot_drops
   - skillshot_drops_release
