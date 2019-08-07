@@ -138,6 +138,16 @@ show_player:
     lights_fire:
       loops: -1
       speed: 15
+  slide_rudy_slide_active:
+     rudy_tas:
+      loops: -1
+      speed: 11
+  slide_erin_slide_active:
+    rudy_tas:
+      action: stop
+    lights_fire:
+      loops: -1
+      speed: 15
   slide_owl_slide_active:
     lights_fire:
       action: stop
