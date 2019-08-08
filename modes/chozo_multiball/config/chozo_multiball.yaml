@@ -113,6 +113,9 @@ variable_player:
 sound_player:
   chozo_multiball_bashed: multiball
   chozo_multiball_progress: ball_locked
+  chozo_multiball_jackpot_one_shot_hit: jackpot
+  chozo_multiball_jackpot_two_shot_hit: jackpot_alt_1
+  chozo_multiball_jackpot_collect_shot_hit: super_jackpot
 
 event_player:
   multiball_chozo_started: cmd_drop_all_drops
