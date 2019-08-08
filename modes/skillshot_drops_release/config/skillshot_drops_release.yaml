@@ -27,13 +27,14 @@ timers:
 
 event_player:
   skillshot_drops_release_ball:
-    - cmd_drop_two_up
+    - cmd_drop_three_up
     - cmd_drop_one_down
+    - cmd_drop_two_down
   mode_skillshot_drops_release_stopping: skillshot_monitor_should_end
 
 variable_player:
   side_ramp_shot_hit:
-    score: 100000
+    score: 250000
 
 sound_player:
   side_ramp_shot_hit: super_skillshot
