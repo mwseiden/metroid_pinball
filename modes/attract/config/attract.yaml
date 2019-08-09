@@ -24,6 +24,10 @@ show_player:
     flipper_code_squeak:
       priority: 200
       loops: 0
+  flipper_code_no_music:
+    flipper_code_no_music:
+      priority: 200
+      loops: 0
   twitch_new_chat_message{line_count <= 3}:
     chat_message_3:
       loops: 0
@@ -130,6 +134,18 @@ show_player:
         color: 'c1a24d'
   slide_double_danger_slide_active:
     attract_lights_joel_gi:
+      action: stop
+    lights_fire:
+      loops: -1
+      speed: 15
+  slide_rudy_slide_active:
+    lights_fire:
+      action: stop
+     rudy_tas:
+      loops: -1
+      speed: 11
+  slide_erin_slide_active:
+    rudy_tas:
       action: stop
     lights_fire:
       loops: -1

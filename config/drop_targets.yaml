@@ -9,7 +9,6 @@ drop_targets:
       - machine_reset_phase_3
       - cmd_reset_all_drops
       - cmd_drop_one_up
-      - skillshot_drops_two_hit
     knockdown_events:
       - cmd_drop_all_drops
       - cmd_drop_one_down
@@ -21,7 +20,6 @@ drop_targets:
       - machine_reset_phase_3
       - cmd_reset_all_drops
       - cmd_drop_two_up
-      - skillshot_drops_three_hit
     knockdown_events:
       - cmd_drop_all_drops
       - cmd_drop_two_down

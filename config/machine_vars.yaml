@@ -4,6 +4,9 @@ machine_vars:
   metroid_game_booted:
     initial_value: 0
     value_type: int
+  next_game_acapella:
+    initial_value: 0
+    value_type: int
   twitch_last_bits_user:
     initial_value: Goren1818
     value_type: str

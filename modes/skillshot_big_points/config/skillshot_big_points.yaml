@@ -1,0 +1,29 @@
+#config_version=5
+mode:
+  start_events: mode_base_started, skillshot_should_start
+  stop_events: skillshot_stage_one_end
+  priority: 500
+
+shots:
+  skillshot_big_points_shot:
+    switch: s_shatz
+    profile: skillshot_big_points_profile
+    show_tokens:
+      led: led_zero_suit
+      color: '0000FF'
+
+shot_profiles:
+  skillshot_big_points_profile:
+    states:
+      - name: lit
+        show: fade_one_light
+
+variable_player:
+  skillshot_big_points_shot_hit:
+    score: 50000
+
+sound_player:
+  skillshot_big_points_shot_hit: skillshot
+  
+event_player:
+  skillshot_big_points_shot_hit: skillshot_big_points_success

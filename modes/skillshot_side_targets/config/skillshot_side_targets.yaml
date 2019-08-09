@@ -1,0 +1,32 @@
+#config_version=5
+
+mode:
+  start_events: mode_base_started, skillshot_should_start
+  stop_events: skillshot_stage_one_end, skillshot_side_success
+
+shot_groups:
+  skillshot_side_shots:
+    shots: side_1_shot, side_2_shot, side_3_shot
+
+event_player:
+  skillshot_side_shots_hit: skillshot_side_success
+
+show_player:
+  mode_skillshot_side_targets_started:
+    blink_3_lights:
+      loops: -1
+      priority: 500
+      speed: 5
+      show_tokens:
+        led_1: led_side_1
+        led_2: led_side_2
+        led_3: led_side_3
+        color_1: 'FF8000'
+        color_2: stop
+
+variable_player:
+  skillshot_side_shots_hit:
+    score: 100000
+
+sound_player:
+  skillshot_side_success: skillshot

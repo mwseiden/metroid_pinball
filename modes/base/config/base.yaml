@@ -103,14 +103,31 @@ timers:
       - event: dirty_pool_possible
         action: restart
 
+
 show_player:
   full_shatz_hit:
     base_full_shatz:
       loops: 0
       priority: 10
+    blink_light:
+      key: full_shatz_shot_blink
+      priority: 320
+      loops: 8
+      speed: 18
+      show_tokens:
+        led: led_zero_suit
+        color: '00FF00'
   shatz_shot_hit:
     base_white_target:
       loops: 0
+    blink_light:
+      key: shatz_shot_blink
+      priority: 310
+      loops: 8
+      speed: 18
+      show_tokens:
+        led: led_zero_suit
+        color: '0000FF'
   capside_combo_hit:
     base_capside_combo:
       loops: 0
@@ -125,9 +142,20 @@ show_player:
   base_bits_small:
     bits_small:
       loops: 0
+  ball_save_default_grace_period:
+    base_ball_save_default_blink:
+      action: stop
   ball_save_default_disabled:
     base_ball_save_default_blink:
       action: stop
+  ball_save_default_hurry_up:
+    blink_light:
+      key: base_ball_save_default_blink
+      loops: -1
+      speed: 4
+      show_tokens:
+        led: led_ball_save
+        color: ff0000
   ball_save_default_enabled:
     blink_light:
       key: base_ball_save_default_blink
@@ -236,6 +264,17 @@ show_player:
         led_3: gi_middle_sling
         color_1: 'FF0000'
         color_2: '000000'
+  pop_subway_shot_hit:
+    blink_3_lights:
+      loops: 0
+      priority: 500
+      speed: 3
+      show_tokens:
+        led_1: led_pop_1
+        led_2: led_pop_2
+        led_3: led_pop_3
+        color_1: 'FF0000'
+        color_2: '000000'
 
 
 slide_player:
@@ -306,13 +345,16 @@ event_player:
       speed: 1
       repeat: 20
       direction: left
-  s_behind_drop_1_active{device.switches.s_drop_target_1.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
-  s_behind_drop_2_active{device.switches.s_drop_target_2.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
-  s_behind_drop_3_active{device.switches.s_drop_target_3.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
-  timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_1.state==1}: dirty_pool_locked
-  timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_2.state==1}: dirty_pool_locked
-  timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_3.state==1}: dirty_pool_locked
-  dirty_pool_locked: cmd_drop_all_drops
+  #s_behind_drop_1_active{device.switches.s_drop_target_1.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
+  #s_behind_drop_2_active{device.switches.s_drop_target_2.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
+  #s_behind_drop_3_active{device.switches.s_drop_target_3.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
+  #timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_1.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
+  #timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_2.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
+  #timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_3.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
+  #dirty_pool_locked: cmd_drop_all_drops
+  player_added{num == 2}: base_sound_player_2
+  player_added{num == 3}: base_sound_player_3
+  player_added{num == 4}: base_sound_player_4
 
 variable_player:
   left_orbit_hit:
@@ -446,16 +488,16 @@ sounds:
 #    sounds: ramp_sound_1, ramp_sound_2, ramp_sound_3, ramp_sound_4
 
 sound_player:
-  player_turn_starting{number == 1}: player_1
-  player_turn_starting{number == 2}: player_2
-  player_turn_starting{number == 3}: player_3
-  player_turn_starting{number == 4}: player_4
+  #player_turn_starting{player.number == 1}: player_1
+  #player_turn_starting{player.number == 2}: player_2
+  #player_turn_starting{player.number == 3}: player_3
+  #player_turn_starting{player.number == 4}: player_4
   twitch_bit_donation{bits < 100}: jackpot
   twitch_bit_donation{bits >= 100 and bits < 500}: super_jackpot
   twitch_bit_donation{bits >= 500}: double_super_jackpot
-  player_added{num == 2}: player_2
-  player_added{num == 3}: player_3
-  player_added{num == 4}: player_4
+  base_sound_player_2: player_2
+  base_sound_player_3: player_3
+  base_sound_player_4: player_4
   left_sling_shot_hit: left_sling
   right_sling_shot_hit: right_sling
   upper_left_sling_shot_hit: mid_sling

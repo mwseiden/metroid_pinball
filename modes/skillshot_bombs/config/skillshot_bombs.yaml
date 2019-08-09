@@ -1,6 +1,6 @@
 #config_version=5
 mode:
-  start_events: mode_base_started
+  start_events: mode_base_started, skillshot_should_start
   stop_events: skillshot_stage_one_end, skillshot_bombs_success, skillshot_bombs_failure
   priority: 500
 

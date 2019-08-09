@@ -13,6 +13,8 @@ player_vars:
     initial_value: 0
   area_bonus_w:
     initial_value: 0
+  bridges:
+    initial_value: 0
   capsides:
     initial_value: 0
   captive_ball_counter_value:
@@ -36,6 +38,14 @@ player_vars:
     initial_value: 0
   multiplier:
     initial_value: 1
+  orbits:
+    initial_value: 0
+  pops:
+    initial_value: 0
+  power_bombs:
+    initial_value: 0
+  ramps:
+    initial_value: 0
   room_1b_step_1a:
     initial_value: 0
   room_1b_step_1b:
@@ -46,25 +56,21 @@ player_vars:
     initial_value: 0
   room_1b_victory_step_1:
     initial_value: 0
+  room_2a_alive_score:
+    initial_value: 0
+  scoops:
+    initial_value: 0
   skillshot_bombs_lit:
     initial_value: 0
   skillshot_missiles_lit:
     initial_value: 0
   skillshot_purple_lit:
     initial_value: 0
-  super_missiles:
-    initial_value: 0
-  switches:
-    initial_value: 0
-  orbits:
-    initial_value: 0
-  pops:
-    initial_value: 0
-  ramps:
-    initial_value: 0
-  scoops:
-    initial_value: 0
   slingshots:
     initial_value: 0
   spinners:
+    initial_value: 0
+  super_missiles:
+    initial_value: 0
+  switches:
     initial_value: 0

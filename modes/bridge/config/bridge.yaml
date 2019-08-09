@@ -1,0 +1,170 @@
+#config_version=5
+mode:
+  start_events: ball_starting
+  priority: 200
+
+shots:
+  bridge_rail_shot:
+    switch: s_top_lane_2
+
+ball_holds:
+   bridge_skillshot:
+      balls_to_hold: 1
+      hold_devices: bd_plunger
+      reset_events: mode_bridge_starting, mode_bridge_ending, whole_playfield_shot_group_hit, s_shooter_lane_inactive, ball_will_end
+      disable_events: mode_bridge_starting, mode_bridge_ending, whole_playfield_shot_group_hit, s_shooter_lane_inactive, ball_will_end
+      enable_events: bridge_enable_skillshot
+
+timers:
+  bridge_enable_coil_timer:
+    start_value: 1
+    end_value: 2
+    tick_interval: .5s
+    control_events:
+      - event: bridge_should_explode
+        action: restart
+  bridge_disable_coil_timer:
+    start_value: 1
+    end_value: 2
+    tick_interval: 1s
+    control_events:
+      - event: timer_bridge_enable_coil_timer_complete
+        action: restart
+
+coil_player:
+  timer_bridge_enable_coil_timer_complete:
+    c_bridge:
+      action: enable
+  mode_bridge_ending:
+    c_bridge:
+      action: disable
+  timer_bridge_disable_coil_timer_complete:
+    c_bridge:
+      action: disable
+
+show_player:
+  timer_bridge_enable_coil_timer_complete:
+    bridge_explode:
+      priority: 1000
+      speed: 1.5
+      loops: 1
+      show_tokens:
+        led_1: gi_bomb_bank
+        led_2: gi_upper_flipper_bottom
+        color_1: 'FF0000'
+        color_2: 'FF8000'
+        color_3: 'FFFF00'
+        color_4: 'FFFFFF'
+        color_off: '000000'
+    playfield_explode:
+      priority: 1000
+      speed: 50
+      loops: 1
+    bridge_explode_sounds:
+      loops: 0
+      priority: 1000
+  ball_hold_bridge_skillshot_held_ball:
+    bridge_skillshot_earned:
+      loops: -1
+  s_shooter_lane_inactive:
+    bridge_skillshot_earned:
+      action: stop
+
+sounds:
+  bridge_explosion_1:
+    file: bridge_explosion_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bridge_explosion_2:
+    file: bridge_explosion_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bridge_explosion_3:
+    file: bridge_explosion_3.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bridge_explosion_4:
+    file: bridge_explosion_4.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bridge_explosion_5:
+    file: bridge_explosion_5.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bridge_explosion_6:
+    file: bridge_explosion_6.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bridge_explosion_7:
+    file: bridge_explosion_7.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
+sound_pools:
+  bridge_explosion_sound_pool:
+    load: preload
+    type: random
+    track: sfx
+    sounds:
+      - bridge_explosion_1
+      - bridge_explosion_2
+      - bridge_explosion_3
+      - bridge_explosion_4
+      - bridge_explosion_5
+      - bridge_explosion_6
+      - bridge_explosion_7
+
+shows:
+  bridge_explode_sounds:
+    - duration: 0.1s
+      sounds: bridge_explosion_sound_pool
+    - duration: 0.1s
+      sounds: bridge_explosion_sound_pool
+    - duration: 0.1s
+      sounds: bridge_explosion_sound_pool
+    - duration: 0.2s
+      sounds: bridge_explosion_sound_pool
+    - duration: 0.3s
+      sounds: bridge_explosion_sound_pool
+    - duration: 0.1s
+      sounds: bridge_explosion_sound_pool
+    - duration: 0.1s
+      sounds: bridge_explosion_sound_pool
+    - duration: 0.2s
+      sounds: bridge_explosion_sound_pool
+    - duration: 0.1s
+      sounds: bridge_explosion_sound_pool
+    - duration: 0.3s
+      sounds: bridge_explosion_sound_pool
+
+event_player:
+  bridge_rail_shot_hit{current_player.power_bombs > 0}: bridge_should_explode
+  ball_hold_bridge_skillshot_held_ball: skillshot_should_start
+  timer_bridge_disable_coil_timer_started{device.multiballs.chozo.balls_added_live == 0 and device.multiballs.room_1r_battle.balls_added_live == 0 and device.multiballs.twitch_bit_donation_multiball.balls_added_live == 0}: bridge_enable_skillshot
+
+variable_player:
+  bridge_should_explode:
+    power_bombs: -1
+    score: (200000 + (100000 * current_player.bridges) + (50000 * current_player.area_bonus_e))* current_player.multiplier
+    bridges: 1

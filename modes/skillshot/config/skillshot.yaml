@@ -1,6 +1,6 @@
 #config_version=5
 mode:
-  start_events: mode_base_started
+  start_events: mode_base_started, skillshot_should_start
   stop_events: skillshot_monitor_should_end
   priority: 500
 
@@ -26,10 +26,7 @@ shot_groups:
       - spinner_shot
       - pop_subway_shot
       - rollover_shot
-      - shatz_shot
       - captive_shot
-      - side_1_shot
-      - side_2_shot
 
 show_player:
   skillshot_unused_shot_group_hit:
@@ -84,6 +81,10 @@ show_player:
     skillshot_unskilled_made:
       loops: 0
       events_when_completed: skillshot_monitor_should_end
+  skillshot_big_points_success:
+    skillshot_big_points_made:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
 
 event_player:
   skillshot_unused_shot_group_hit: skillshot_stage_one_end
@@ -101,5 +102,7 @@ event_player:
   skillshot_missiles_success_super: skillshot_stage_one_end
   skillshot_missiles_failure: skillshot_stage_one_end
   skillshot_unskilled_success: skillshot_stage_one_end
+  skillshot_side_success: skillshot_stage_one_end
+  skillshot_big_points_success: skillshot_stage_one_end
   ball_will_end: skillshot_stage_one_end
 

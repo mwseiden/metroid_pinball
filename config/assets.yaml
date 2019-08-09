@@ -5,3 +5,6 @@ assets:
     default:
       load: preload
       stealing_method: oldest
+  images:
+    default:
+      load: preload

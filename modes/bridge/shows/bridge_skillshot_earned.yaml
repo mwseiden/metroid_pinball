@@ -1,0 +1,10 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    bridge_skillshot_slide:
+      widgets:
+      - type: text
+        text: SHOOT SKILLSHOT
+        style: dmd_big
+        color: red

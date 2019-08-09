@@ -4,12 +4,222 @@ mode:
     stop_events: game_ending, ball_ending
     priority: 300
 
+sequences:
+   room_1r_battle_sequence:
+      events:
+         - shoot_space_pirates_shot_group_lit_hit
+         - shoot_space_pirates_shot_group_lit_hit
+         - shoot_space_pirates_shot_group_lit_hit
+         - shoot_space_pirates_shot_group_lit_hit
+      persist_state: True
+      disable_on_complete: True
+
+timers:
+  room_1r_light_shot_timer:
+    start_value: 1
+    end_value: 10
+    restart_on_complete: true
+    tick_interval: 8s
+    control_events:
+      - event: room_1r_start_timer
+        action: start
+      - event: timer_room_1r_shoot_space_pirates_timer_started
+        action: stop
+      - event: logicblock_room_1r_battle_sequence_complete
+        action: stop
+  room_1r_shoot_space_pirates_timer:
+    start_value: 1
+    end_value: 20
+    tick_interval: 1s
+    control_events:
+      - event: room_1r_kill_pirates
+        action: start
+      - event: logicblock_room_1r_battle_sequence_complete
+        action: stop
+      - event: timer_room_1r_shoot_space_pirates_timer_complete
+        action: reset
+
+shot_groups:
+  shoot_space_pirates_shot_group:
+    shots: room_1r_pirate_shot_1, room_1r_pirate_shot_2, room_1r_pirate_shot_3, room_1r_pirate_shot_4, room_1r_pirate_shot_5, room_1r_pirate_shot_6, room_1r_pirate_shot_7, room_1r_pirate_shot_8
+    enable_events: timer_room_1r_shoot_space_pirates_timer_started
+    reset_events: timer_room_1r_shoot_space_pirates_timer_started, timer_room_1r_shoot_space_pirates_timer_complete, logicblock_room_1r_battle_sequence_complete
+    disable_events: shoot_space_pirates_shot_group_lit_complete, timer_room_1r_shoot_space_pirates_timer_complete, logicblock_room_1r_battle_sequence_complete
+
+shots:
+  room_1r_start_shot_1:
+    switch: s_rollover_button
+    profile: room_1r_blink
+    enable_events: room_1r_shot_1_activate
+    disable_events: room_1r_shot_2_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    reset_events: room_1r_shot_2_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    show_tokens:
+      led: led_rollover
+      color: 'FF40FF'
+  room_1r_start_shot_2:
+    switch: s_side_ramp_made
+    profile: room_1r_blink
+    enable_events: room_1r_shot_2_activate
+    disable_events: room_1r_shot_3_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    reset_events: room_1r_shot_3_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    show_tokens:
+      led: led_enter_side_ramp
+      color: 'FF40FF'
+  room_1r_start_shot_3:
+    switch: s_scoop
+    profile: room_1r_blink
+    enable_events: room_1r_shot_3_activate
+    disable_events: room_1r_shot_4_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    reset_events: room_1r_shot_4_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    show_tokens:
+      led: led_enter_scoop
+      color: 'FF40FF'
+  room_1r_start_shot_4:
+    switch: s_left_passage
+    profile: room_1r_blink
+    enable_events: room_1r_shot_4_activate
+    disable_events: room_1r_shot_5_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    reset_events: room_1r_shot_5_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    show_tokens:
+      led: led_enter_secret_passage
+      color: 'FF40FF'
+  room_1r_start_shot_5:
+    switch: s_orbit_r
+    profile: room_1r_blink
+    enable_events: room_1r_shot_5_activate
+    disable_events: room_1r_shot_6_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    reset_events: room_1r_shot_6_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    show_tokens:
+      led: led_enter_right_orbit
+      color: 'FF40FF'
+  room_1r_start_shot_6:
+    switch: s_ramp_enter
+    profile: room_1r_blink
+    enable_events: room_1r_shot_6_activate
+    disable_events: room_1r_shot_7_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    reset_events: room_1r_shot_7_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    show_tokens:
+      led: led_enter_ramp
+      color: 'FF40FF'
+  room_1r_start_shot_7:
+    switch: s_orbit_l
+    profile: room_1r_blink
+    enable_events: room_1r_shot_7_activate
+    disable_events: room_1r_shot_8_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    reset_events: room_1r_shot_8_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    show_tokens:
+      led: led_enter_left_orbit
+      color: 'FF40FF'
+  room_1r_start_shot_8:
+    switch: s_shatz
+    profile: room_1r_blink
+    enable_events: room_1r_shot_8_activate
+    disable_events: room_1r_shot_9_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    reset_events: room_1r_shot_9_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    show_tokens:
+      led: led_zero_suit
+      color: 'FF40FF'
+  room_1r_start_shot_9:
+    switch: s_pit
+    profile: room_1r_blink
+    enable_events: room_1r_shot_9_activate
+    disable_events: room_1r_shot_1_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    reset_events: room_1r_shot_1_activate, mode_room_1r_space_pirate_battle_started, shoot_space_pirates_shot_group_lit_complete, logicblock_room_1r_battle_sequence_complete
+    show_tokens:
+      led: led_pit
+      color: 'FF0000'
+  room_1r_pirate_shot_1:
+    switch: s_rollover_button
+    profile: room_1r_pirate
+    disable_events: mode_room_1r_space_pirate_battle_started, timer_room_1r_light_shot_timer_started
+    enable_events: timer_room_1r_shoot_space_pirates_timer_started
+    show_tokens:
+      led: led_rollover
+      color: 'FF40FF'
+  room_1r_pirate_shot_2:
+    switch: s_side_ramp_made
+    profile: room_1r_pirate
+    disable_events: mode_room_1r_space_pirate_battle_started, timer_room_1r_light_shot_timer_started
+    enable_events: timer_room_1r_shoot_space_pirates_timer_started
+    show_tokens:
+      led: led_enter_side_ramp
+      color: 'FF40FF'
+  room_1r_pirate_shot_3:
+    switch: s_scoop
+    profile: room_1r_pirate
+    disable_events: mode_room_1r_space_pirate_battle_started, timer_room_1r_light_shot_timer_started
+    enable_events: timer_room_1r_shoot_space_pirates_timer_started
+    show_tokens:
+      led: led_enter_scoop
+      color: 'FF40FF'
+  room_1r_pirate_shot_4:
+    switch: s_left_passage
+    profile: room_1r_pirate
+    disable_events: mode_room_1r_space_pirate_battle_started, timer_room_1r_light_shot_timer_started
+    enable_events: timer_room_1r_shoot_space_pirates_timer_started
+    show_tokens:
+      led: led_enter_secret_passage
+      color: 'FF40FF'
+  room_1r_pirate_shot_5:
+    switch: s_orbit_r
+    profile: room_1r_pirate
+    disable_events: mode_room_1r_space_pirate_battle_started, timer_room_1r_light_shot_timer_started
+    enable_events: timer_room_1r_shoot_space_pirates_timer_started
+    show_tokens:
+      led: led_enter_right_orbit
+      color: 'FF40FF'
+  room_1r_pirate_shot_6:
+    switch: s_ramp_enter
+    profile: room_1r_pirate
+    disable_events: mode_room_1r_space_pirate_battle_started, timer_room_1r_light_shot_timer_started
+    enable_events: timer_room_1r_shoot_space_pirates_timer_started
+    show_tokens:
+      led: led_enter_ramp
+      color: 'FF40FF'
+  room_1r_pirate_shot_7:
+    switch: s_orbit_l
+    profile: room_1r_pirate
+    enable_events: timer_room_1r_shoot_space_pirates_timer_started
+    disable_events: mode_room_1r_space_pirate_battle_started, timer_room_1r_light_shot_timer_started
+    show_tokens:
+      led: led_enter_left_orbit
+      color: 'FF40FF'
+  room_1r_pirate_shot_8:
+    switch: s_shatz
+    profile: room_1r_pirate
+    disable_events: mode_room_1r_space_pirate_battle_started, timer_room_1r_light_shot_timer_started
+    enable_events: timer_room_1r_shoot_space_pirates_timer_started
+    show_tokens:
+      led: led_zero_suit
+      color: 'FF40FF'
+
+shot_profiles:
+  room_1r_blink:
+    states:
+    - name: lit
+      show: blink_light
+      loops: -1
+  room_1r_pirate:
+    states:
+    - name: lit
+      show: blink_light
+      loops: -1
+    - name: unlit
+      show: off
+
+multiballs:
+  room_1r_battle:
+    ball_count: 2
+    ball_count_type: total
+    start_events: room_1r_multiball_should_start
+
 show_player:
   mode_room_1r_space_pirate_battle_started:
-    gi_solid:
+    gi_solid_with_overhead:
       loops: -1
       show_tokens:
         color: '8000C0'
+        color2: "8080C0"
 
 slides:
   room_1r_backglass_slide:
@@ -22,6 +232,21 @@ slides:
     widgets:
       - type: image
         image: room_1r_splash
+  room_1r_super_kill_slide:
+    widgets:
+      - type: text
+        text: SUPER KILL!!!
+        color: 'FF00FF'
+        style: dmd_big
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0
+              duration: .5s
+            - property: opacity
+              value: 1
+              duration: .5s
+              repeat: -1
 
 slide_player:
   mode_room_1r_space_pirate_battle_started:
@@ -30,6 +255,32 @@ slide_player:
     room_1r_splash_slide:
       target: dmd
       expire: 1.5s
+  room_1r_super_kill:
+    room_1r_super_kill_slide:
+      expire: 3.4s
+
+event_player:
+  mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
+  mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 0}: room_1r_start_timer
+  timer_room_1r_shoot_space_pirates_timer_complete{current_player.room_1r_finished == 0}: room_1r_start_timer
+  timer_room_1r_light_shot_timer_tick{ticks == 1}: room_1r_shot_1_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 2}: room_1r_shot_2_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 3}: room_1r_shot_3_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 4}: room_1r_shot_4_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 5}: room_1r_shot_5_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 6}: room_1r_shot_6_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 7}: room_1r_shot_7_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 8}: room_1r_shot_8_activate
+  timer_room_1r_light_shot_timer_tick{ticks == 9}: room_1r_shot_9_activate
+  room_1r_start_shot_1_hit: room_1r_kill_pirates
+  room_1r_start_shot_2_hit: room_1r_kill_pirates
+  room_1r_start_shot_3_hit: room_1r_kill_pirates
+  room_1r_start_shot_4_hit: room_1r_kill_pirates
+  room_1r_start_shot_5_hit: room_1r_kill_pirates
+  room_1r_start_shot_6_hit: room_1r_kill_pirates
+  room_1r_start_shot_7_hit: room_1r_kill_pirates
+  room_1r_start_shot_8_hit: room_1r_kill_pirates
+  room_1r_start_shot_9_hit: room_1r_super_kill, logicblock_room_1r_battle_sequence_complete
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:
@@ -39,3 +290,29 @@ variable_player:
     continue_room:
       string: 1r
       action: set
+  multiball_room_1r_battle_started:
+    room_1r_multiball_started:
+      int: 1
+      action: set
+  logicblock_room_1r_battle_sequence_complete:
+    room_1r_finished:
+      int: 1
+      action: set
+  room_1r_start_shot_1_hit:
+    score: 30000
+  room_1r_start_shot_2_hit:
+    score: 50000
+  room_1r_start_shot_3_hit:
+    score: 10000
+  room_1r_start_shot_4_hit:
+    score: 15000
+  room_1r_start_shot_5_hit:
+    score: 10000
+  room_1r_start_shot_6_hit:
+    score: 20000
+  room_1r_start_shot_7_hit:
+    score: 30000
+  room_1r_start_shot_8_hit:
+    score: 20000
+  room_1r_start_shot_9_hit:
+    score: 300000

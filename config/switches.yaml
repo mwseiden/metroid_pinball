@@ -31,8 +31,8 @@ switches:
     ignore_window_ms: 500
     tags: playfield_active
     platform_settings:
-      debounce_close: 8
-      debounce_open: 8
+      debounce_close: 1
+      debounce_open: 1
   s_upper_right_flipper:
     number: 0-10
   s_unknown_0_11:
@@ -116,21 +116,24 @@ switches:
     number: 1-15
   s_missile_bank_3:
     number: 1-16
+    ignore_window_ms: 100
     platform_settings:
-      debounce_close: 10
-      debounce_open: 10
+      debounce_close: 1
+      debounce_open: 1
     tags: playfield_active
   s_missile_bank_2:
     number: 1-17
+    ignore_window_ms: 100
     platform_settings:
-      debounce_close: 10
-      debounce_open: 10
+      debounce_close: 1
+      debounce_open: 1
     tags: playfield_active
   s_missile_bank_1:
     number: 1-18
+    ignore_window_ms: 100
     platform_settings:
-      debounce_close: 10
-      debounce_open: 10
+      debounce_close: 1
+      debounce_open: 1
     tags: playfield_active
   s_unknown_1_19:
     number: 1-19
@@ -140,9 +143,6 @@ switches:
     tags: playfield_active
   s_shatz:
     number: 1-20
-    platform_settings:
-      debounce_close: 10
-      debounce_open: 10
     tags: playfield_active
   s_unknown_25:
     number: 1-21
@@ -203,13 +203,25 @@ switches:
     tags: playfield_active
   s_purple_3:
     number: 2-3
+    ignore_window_ms: 100
     tags: playfield_active
+    platform_settings:
+      debounce_close: 1
+      debounce_open: 1
   s_purple_2:
     number: 2-4
+    ignore_window_ms: 100
     tags: playfield_active
+    platform_settings:
+      debounce_close: 1
+      debounce_open: 1
   s_purple_1:
     number: 2-5
+    ignore_window_ms: 100
     tags: playfield_active
+    platform_settings:
+      debounce_close: 1
+      debounce_open: 1
   s_orbit_r:
     number: 2-6
     tags: playfield_active
@@ -254,9 +266,17 @@ switches:
   s_left_target_3:
     number: 2-16
     tags: playfield_active
+    ignore_window_ms: 100
+    platform_settings:
+      debounce_close: 1
+      debounce_open: 1
   s_left_target_2:
     number: 2-17
     tags: playfield_active
+    ignore_window_ms: 100
+    platform_settings:
+      debounce_close: 1
+      debounce_open: 1
   s_top_lane_3:
     number: 2-18
     tags: playfield_active
@@ -272,6 +292,11 @@ switches:
     tags: playfield_active
   s_left_target_1:
     number: 2-22
+    tags: playfield_active
+    ignore_window_ms: 100
+    platform_settings:
+      debounce_close: 1
+      debounce_open: 1
   s_what_am_i_6:
     number: 2-23
 

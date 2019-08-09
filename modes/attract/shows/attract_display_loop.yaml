@@ -472,7 +472,7 @@
          duration: 1s
          direction: left
 
-- duration: 3s
+- duration: 5s
   slides:
     rudy_slide:
       widgets:
@@ -610,26 +610,26 @@
   slides:
     thank_you_slide:
       widgets:
-      # - type: Text
-        # text: ...and thanks to
-        # style: dmd_med
-        # color: E67300
-        # y: 25
-      # - type: Text
-        # text: everyone watching!
-        # style: dmd_med
-        # color: E67300
-        # y: 13
       - type: Text
-        text: And thanks to everyone
+        text: ...and thanks to
         style: dmd_med
         color: E67300
         y: 25
       - type: Text
-        text: at Pintastic!
+        text: everyone watching!
         style: dmd_med
         color: E67300
         y: 13
+      # - type: Text
+        # text: And thanks to everyone
+        # style: dmd_med
+        # color: E67300
+        # y: 25
+      # - type: Text
+        # text: at Pintastic!
+        # style: dmd_med
+        # color: E67300
+        # y: 13
       transition:
          type: swap
          duration: 1s

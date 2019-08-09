@@ -1,7 +1,7 @@
 #config_version=5
 mode:
     start_events: mode_base_starting
-    priority: 100
+    priority: 300
 
 multiballs:
   chozo:
@@ -23,6 +23,38 @@ counters:
     reset_on_complete: true
     disable_on_complete: false
 
+shots:
+  chozo_multiball_jackpot_one_shot:
+    switch: s_ramp_enter
+    profile: chozo_multiball_jackpot
+    enable_events: multiball_chozo_started
+    disable_events: multiball_chozo_ended
+    show_tokens:
+      led: led_enter_ramp
+      color: 'C00000'
+  chozo_multiball_jackpot_two_shot:
+    switch: s_side_ramp_made
+    profile: chozo_multiball_jackpot
+    enable_events: multiball_chozo_started
+    disable_events: multiball_chozo_ended
+    show_tokens:
+      led: led_enter_side_ramp
+      color: 'C00000'
+  chozo_multiball_jackpot_collect_shot:
+    switch: s_vuk
+    profile: chozo_multiball_jackpot
+    enable_events: multiball_chozo_started
+    disable_events: multiball_chozo_ended
+    show_tokens:
+      led: gi_strip_9
+      color: '7000C0'
+
+shot_profiles:
+  chozo_multiball_jackpot:
+    states:
+      - name: lit
+        show: fade_one_light
+
 show_player:
   chozo_multiball_progress:
     chozo_multiball_progress:
@@ -41,6 +73,21 @@ show_player:
       show_tokens:
         led: led_ball_save
         color: ff4700
+    small_theater_chase:
+      key: chozo_multiball_drop_show
+      loops: -1
+      speed: 6
+      show_tokens:
+        color: '7000C0'
+        led_1: led_drop_1
+        led_2: led_drop_2
+        led_3: led_drop_3
+        led_4: led_drop_1
+        led_5: led_drop_2
+        led_6: led_drop_3
+  multiball_chozo_ended:
+    chozo_multiball_drop_show:
+      action: stop
 
 variable_player:
   logicblock_captive_ball_counter_updated:
@@ -49,7 +96,27 @@ variable_player:
       action: set
   chozo_multiball_bashed:
     chozo_multiballs: 1
+    chozo_multiball_jackpot_progress:
+      action: set
+      int: 25000 * (current_player.chozo_multiballs + 1)
+  chozo_multiball_jackpot_one_shot_hit:
+    chozo_multiball_jackpot_progress: 100000
+  chozo_multiball_jackpot_two_shot_hit:
+    chozo_multiball_jackpot_progress: 175000
+  chozo_multiball_jackpot_collect_shot_hit:
+    score: current_player.chozo_multiball_jackpot_progress
+  chozo_multiball_reset_jackpot:
+    chozo_multiball_jackpot_progress:
+      action: set
+      int: 25000 * (current_player.chozo_multiballs + 1)
 
 sound_player:
   chozo_multiball_bashed: multiball
   chozo_multiball_progress: ball_locked
+  chozo_multiball_jackpot_one_shot_hit: jackpot
+  chozo_multiball_jackpot_two_shot_hit: jackpot_alt_1
+  chozo_multiball_jackpot_collect_shot_hit: super_jackpot
+
+event_player:
+  multiball_chozo_started: cmd_drop_all_drops
+  chozo_multiball_jackpot_collect_shot_hit: chozo_multiball_reset_jackpot

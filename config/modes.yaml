@@ -3,6 +3,7 @@
 modes:
   - base
   - bonus
+  - bridge
   - chozo_multiball
   - drop_targets
   - emergency_landing
@@ -18,15 +19,18 @@ modes:
   - room_1l_entryway
   - room_1r_space_pirate_battle
   - room_2a_shifting_sands
+  - room_2e_sandy_cavern
   - room_2i_lava_jump
   - select_landing_site
   - side_targets
   - skillshot
+  - skillshot_big_points
   - skillshot_bombs
   - skillshot_drops
   - skillshot_drops_release
   - skillshot_missiles
   - skillshot_purple
+  - skillshot_side_targets
   - skillshot_unskilled
   - spin_jumps
   - twitch_bits_multiball
