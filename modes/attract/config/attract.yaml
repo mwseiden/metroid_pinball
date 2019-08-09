@@ -139,6 +139,8 @@ show_player:
       loops: -1
       speed: 15
   slide_rudy_slide_active:
+    lights_fire:
+      action: stop
      rudy_tas:
       loops: -1
       speed: 11

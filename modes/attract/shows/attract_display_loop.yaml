@@ -472,7 +472,7 @@
          duration: 1s
          direction: left
 
-- duration: 3s
+- duration: 5s
   slides:
     rudy_slide:
       widgets:
