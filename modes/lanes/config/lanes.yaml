@@ -3,6 +3,12 @@ mode:
   start_events: mode_base_starting
   priority: 100
 
+multiballs:
+  virtual_kickback:
+    ball_count: 2
+    shoot_again: 0s
+    start_events: ballsave_shot_group_lit_hit
+
 shot_profiles:
   lanes:
     states:
@@ -39,6 +45,7 @@ shots:
   left_ballsave_shot:
     switch: s_left_outlane
     profile: lanes
+    advance_events: lanes_shot_group_lit_complete
     show_tokens:
       led: led_left_kickback
       color: 'FF8000'
@@ -61,7 +68,7 @@ shot_groups:
     shots: left_ballsave_shot, right_ballsave_shot
     rotate_left_events: s_left_flipper_active
     rotate_right_events: s_right_flipper_active
-    reset_events: lanes_shot_group_lit_complete
+    reset_events: lanes_shot_group_lit_complete, ballsave_shot_group_lit_hit
     enable_events: lanes_shot_group_lit_complete
     disable_events: ballsave_shot_group_lit_hit
 
