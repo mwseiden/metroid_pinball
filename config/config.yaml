@@ -18,6 +18,7 @@ open_pixel_control:
 config:
   - logging.yaml
   - machine.yaml
+  - keyboard.yaml
   - bcp.yaml
   - assets.yaml
   - graphics.yaml

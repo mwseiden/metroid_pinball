@@ -6,8 +6,10 @@ mode:
 show_player:
   pop_1_shot_hit:
     pop_bumpers_1:
+      key: pop_bumpers_image
       loops: 0
     blink_light:
+      key: pop_bumpers_blink_1
       loops: 1
       speed: 20
       show_tokens:
@@ -15,8 +17,10 @@ show_player:
         color: A000FF
   pop_2_shot_hit:
     pop_bumpers_2:
+      key: pop_bumpers_image
       loops: 0
     blink_light:
+      key: pop_bumpers_blink_2
       loops: 1
       speed: 20
       show_tokens:
@@ -24,8 +28,10 @@ show_player:
         color: A000FF
   pop_3_shot_hit:
     pop_bumpers_3:
+      key: pop_bumpers_image
       loops: 0
     blink_light:
+      key: pop_bumpers_blink_3
       loops: 1
       speed: 20
       show_tokens:

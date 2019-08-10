@@ -9,8 +9,8 @@ modes:
   - emergency_landing
   - high_score
   - lanes
-  - left_targets
   - match
+  - miniboss
   - missiles
   - pop_bumpers
   - power_bombs

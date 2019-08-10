@@ -12,28 +12,29 @@ shot_profiles:
         show: led_color
 
 shots:
-  purple_1_shot:
-    switch: s_purple_1
+  missile_bank_1_shot:
+    switch: s_missile_bank_1
     profile: missiles
     show_tokens:
-      led: led_upgrade_bank_1
-      color: FF0000
-  purple_2_shot:
-    switch: s_purple_2
+      led: led_missile_bank_1
+      color: "9900ff"
+  missile_bank_2_shot:
+    switch: s_missile_bank_2
     profile: missiles
     show_tokens:
-      led: led_upgrade_bank_2
-      color: FF0000
-  purple_3_shot:
-    switch: s_purple_3
+      led: led_missile_bank_2
+      color: "9900ff"
+  missile_bank_3_shot:
+    switch: s_missile_bank_3
     profile: missiles
     show_tokens:
-      led: led_upgrade_bank_3
-      color: FF0000
+      led: led_missile_bank_3
+      color: "9900ff"
+
 
 shot_groups:
   missiles_shot_group:
-    shots: purple_1_shot, purple_2_shot, purple_3_shot
+    shots: missile_bank_1_shot, missile_bank_2_shot, missile_bank_3_shot
     reset_events: missiles_shot_group_lit_complete
     enable_events: mode_missiles_started
     disable_events: mode_missiles_ending
@@ -47,19 +48,15 @@ show_player:
       loops: 0
 
 variable_player:
-  purple_1_shot_hit:
-    score:
-      int: (100 + (100 * current_player.missiles)) * current_player.multiplier
-  purple_2_shot_hit:
-    score:
-      int: (100 + (100 * current_player.missiles)) * current_player.multiplier
-  purple_3_shot_hit:
-    score:
-      int: (100 + (100 * current_player.missiles)) * current_player.multiplier
+  missile_bank_1_shot_hit:
+   score: 1000 * current_player.multiplier
+  missile_bank_2_shot_hit:
+   score: 1000 * current_player.multiplier
+  missile_bank_3_shot_hit:
+   score: 1000 * current_player.multiplier
   missile_collected:
     missiles: 1
-    score:
-      int: (500 + (200 * current_player.missiles)) * current_player.multiplier
+    score: (2500 + (500 * current_player.missiles)) * current_player.multiplier
 
 sound_player:
   missile_collected: missile_collected

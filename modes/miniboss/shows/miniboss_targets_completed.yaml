@@ -2,7 +2,7 @@
 
 - duration: 2s
   slides:
-    left_targets_completed_slide:
+    miniboss_targets_completed_slide:
       widgets:
       - type: text
         text: Targets Completed!

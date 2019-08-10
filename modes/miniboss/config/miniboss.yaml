@@ -1,0 +1,59 @@
+#config_version=5
+mode:
+  start_events: mode_base_starting
+  priority: 100
+
+shot_profiles:
+  miniboss_targets:
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: led_color
+
+shots:
+  purple_1_shot:
+    switch: s_purple_1
+    profile: miniboss_targets
+    show_tokens:
+      led: led_upgrade_bank_1
+      color: FF0000
+  purple_2_shot:
+    switch: s_purple_2
+    profile: miniboss_targets
+    show_tokens:
+      led: led_upgrade_bank_2
+      color: FF0000
+  purple_3_shot:
+    switch: s_purple_3
+    profile: miniboss_targets
+    show_tokens:
+      led: led_upgrade_bank_3
+      color: FF0000
+
+shot_groups:
+  miniboss_targets_shot_group:
+    shots: purple_1_shot, purple_2_shot, purple_3_shot
+    reset_events: miniboss_targets_shot_group_lit_complete
+    enable_events: mode_miniboss_started
+    disable_events: mode_miniboss_ending
+
+event_player:
+  miniboss_targets_shot_group_lit_complete: miniboss_targets_completed
+
+show_player:
+  miniboss_targets_completed:
+    miniboss_targets_completed:
+      loops: 0
+
+variable_player:
+  purple_1_shot_hit:
+    score: (100 + (100 * current_player.missiles)) * current_player.multiplier
+  purple_2_shot_hit:
+    score: (100 + (100 * current_player.missiles)) * current_player.multiplier
+  purple_3_shot_hit:
+    score: (100 + (100 * current_player.missiles)) * current_player.multiplier
+  miniboss_targets_completed:
+    score:
+      int: 1000 * current_player.multiplier
+
