@@ -104,7 +104,6 @@ shows:
               style: dmd_med
               anchor_x: left
               anchor_y: bottom
-              number_grouping: true
             - type: text
               text: (match_number3)
               number_grouping: true
@@ -184,7 +183,6 @@ shows:
               style: dmd_med
               anchor_x: left
               anchor_y: bottom
-              number_grouping: true
             - type: text
               text: (match_number3)
               number_grouping: true
