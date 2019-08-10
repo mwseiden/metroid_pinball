@@ -33,6 +33,7 @@ modes:
   - skillshot_side_targets
   - skillshot_unskilled
   - spin_jumps
+  - tilt
   - twitch_bits_multiball
   - upper_lanes
 
