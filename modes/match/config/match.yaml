@@ -19,14 +19,40 @@ queue_relay_player:
     wait_for: slide_match_slide_removed
     pass_args: true
 
+sounds:
+  matched:
+    file: matched.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  no_match:
+    file: no_match.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  match_drama:
+    file: match_drama.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
 shows:
   no_match_show:
     - duration: 3.5s
+      sounds: match_drama
       slides:
         no_match_drama_slide:
           widgets:
             - type: text
               text: (winner_number)
+              number_grouping: true
+              min_digits: 2
               opacity: 0.0
               color: red
               style: dmd_big
@@ -43,6 +69,7 @@ shows:
               start_frame: 0
               fps: 17
     - duration: 3s
+      sounds: no_match
       slides:
         no_match_slide:
           widgets:
@@ -52,6 +79,8 @@ shows:
               style: dmd_big
             - type: text
               text: (match_number0)
+              number_grouping: true
+              min_digits: 2
               y: 31
               x: 10
               style: dmd_med
@@ -59,6 +88,8 @@ shows:
               anchor_y: top
             - type: text
               text: (match_number1)
+              number_grouping: true
+              min_digits: 2
               y: 31
               x: right-10
               anchor_x: right
@@ -66,6 +97,8 @@ shows:
               style: dmd_med
             - type: text
               text: (match_number2)
+              number_grouping: true
+              min_digits: 2
               y: 0
               x: 10
               style: dmd_med
@@ -74,6 +107,8 @@ shows:
               number_grouping: true
             - type: text
               text: (match_number3)
+              number_grouping: true
+              min_digits: 2
               y: 0
               x: right-10
               anchor_x: right
@@ -82,11 +117,14 @@ shows:
 
   has_match_show:
     - duration: 3.5s
+      sounds: match_drama
       slides:
         match_drama_slide:
           widgets:
             - type: text
               text: (winner_number)
+              number_grouping: true
+              min_digits: 2
               opacity: 0.0
               color: red
               style: dmd_big
@@ -103,6 +141,7 @@ shows:
               start_frame: 0
               fps: 17
     - duration: 3s
+      sounds: matched
       slides:
         match_slide:
           widgets:
@@ -113,11 +152,15 @@ shows:
               y: 21
             - type: text
               text: (winner_number)
+              number_grouping: true
+              min_digits: 2
               color: red
               style: dmd_big
               y: 11
             - type: text
               text: (match_number0)
+              number_grouping: true
+              min_digits: 2
               y: 31
               x: 10
               style: dmd_med
@@ -125,6 +168,8 @@ shows:
               anchor_y: top
             - type: text
               text: (match_number1)
+              number_grouping: true
+              min_digits: 2
               y: 31
               x: right-10
               anchor_x: right
@@ -132,6 +177,8 @@ shows:
               style: dmd_med
             - type: text
               text: (match_number2)
+              number_grouping: true
+              min_digits: 2
               y: 0
               x: 10
               style: dmd_med
@@ -140,6 +187,8 @@ shows:
               number_grouping: true
             - type: text
               text: (match_number3)
+              number_grouping: true
+              min_digits: 2
               y: 0
               x: right-10
               anchor_x: right
