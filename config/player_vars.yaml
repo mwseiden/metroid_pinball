@@ -32,6 +32,8 @@ player_vars:
     initial_value: 0
   kickbacks:
     initial_value: 0
+  kickback_active:
+    initial_value: 0
   lanes:
     initial_value: 0
   missiles:
