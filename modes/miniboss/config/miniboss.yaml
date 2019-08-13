@@ -9,6 +9,7 @@ sequences:
          - miniboss_targets_level_1_shot_group_lit_complete
          - miniboss_targets_level_2_shot_group_lit_complete
          - miniboss_targets_level_3_shot_group_lit_complete
+         - miniboss_final_shot_hit
       persist_state: True
       reset_on_complete: True
       disable_on_complete: False
@@ -20,6 +21,10 @@ shot_profiles:
         show: off
       - name: lit
         show: led_color
+  miniboss_scoop:
+    states:
+      - name: lit
+        show: fade_one_light
 
 shots:
   miniboss_level_1_1_shot:
@@ -94,6 +99,14 @@ shots:
     show_tokens:
       led: led_upgrade_bank_3
       color: 00FF00
+  miniboss_final_shot:
+    switch: s_scoop
+    profile: miniboss_scoop
+    enable_events: miniboss_enable_level_4
+    disable_events: mode_miniboss_starting
+    show_tokens:
+      led: led_enter_scoop
+      color: 00FF80
 
 shot_groups:
   miniboss_targets_level_1_shot_group:
@@ -116,9 +129,11 @@ event_player:
   mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 0}: miniboss_enable_level_1
   mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 1}: miniboss_enable_level_2
   mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 2}: miniboss_enable_level_3
+  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 3}: miniboss_enable_level_4
   logicblock_miniboss_progress_sequence_updated{value == 0}: miniboss_enable_level_1
   logicblock_miniboss_progress_sequence_updated{value == 1}: miniboss_enable_level_2
   logicblock_miniboss_progress_sequence_updated{value == 2}: miniboss_enable_level_3
+  logicblock_miniboss_progress_sequence_updated{value == 3}: miniboss_enable_level_4
   miniboss_targets_level_1_shot_group_lit_complete: miniboss_targets_completed
   miniboss_targets_level_2_shot_group_lit_complete: miniboss_targets_completed
   miniboss_targets_level_3_shot_group_lit_complete: miniboss_targets_completed
