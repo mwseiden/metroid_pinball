@@ -99,6 +99,30 @@ shots:
     show_tokens:
       led: led_upgrade_bank_3
       color: 00FF00
+  miniboss_level_4_1_shot:
+    switch: s_purple_1
+    profile: miniboss_scoop
+    enable_events: miniboss_enable_level_3
+    disable_events: mode_miniboss_starting
+    show_tokens:
+      led: led_upgrade_bank_1
+      color: 00FF80
+  miniboss_level_4_2_shot:
+    switch: s_purple_2
+    profile: miniboss_scoop
+    enable_events: miniboss_enable_level_3
+    disable_events: mode_miniboss_starting
+    show_tokens:
+      led: led_upgrade_bank_2
+      color: 00FF80
+  miniboss_level_4_3_shot:
+    switch: s_purple_3
+    profile: miniboss_scoop
+    enable_events: miniboss_enable_level_3
+    disable_events: mode_miniboss_starting
+    show_tokens:
+      led: led_upgrade_bank_3
+      color: 00FF80
   miniboss_final_shot:
     switch: s_scoop
     profile: miniboss_scoop
@@ -195,6 +219,12 @@ variable_player:
     score: 5000 * current_player.multiplier
   miniboss_level_3_3_shot_hit:
     score: 5000 * current_player.multiplier
+  miniboss_level_4_1_shot_hit:
+    score: 10000 * current_player.multiplier
+  miniboss_level_4_2_shot_hit:
+    score: 10000 * current_player.multiplier
+  miniboss_level_4_3_shot_hit:
+    score: 10000 * current_player.multiplier 
   miniboss_final_shot_hit:
     score: 50000 * current_player.multiplier
   miniboss_targets_completed:

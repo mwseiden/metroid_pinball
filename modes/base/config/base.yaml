@@ -77,6 +77,9 @@ shot_groups:
       - miniboss_level_3_1_shot
       - miniboss_level_3_2_shot
       - miniboss_level_3_3_shot
+      - miniboss_level_4_1_shot
+      - miniboss_level_4_2_shot
+      - miniboss_level_4_3_shot
       - captive_shot
       - side_1_shot
       - side_2_shot
