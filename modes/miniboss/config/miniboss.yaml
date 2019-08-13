@@ -102,7 +102,7 @@ shots:
   miniboss_level_4_1_shot:
     switch: s_purple_1
     profile: miniboss_scoop
-    enable_events: miniboss_enable_level_3
+    enable_events: miniboss_enable_level_4
     disable_events: mode_miniboss_starting
     show_tokens:
       led: led_upgrade_bank_1
@@ -110,7 +110,7 @@ shots:
   miniboss_level_4_2_shot:
     switch: s_purple_2
     profile: miniboss_scoop
-    enable_events: miniboss_enable_level_3
+    enable_events: miniboss_enable_level_4
     disable_events: mode_miniboss_starting
     show_tokens:
       led: led_upgrade_bank_2
@@ -118,7 +118,7 @@ shots:
   miniboss_level_4_3_shot:
     switch: s_purple_3
     profile: miniboss_scoop
-    enable_events: miniboss_enable_level_3
+    enable_events: miniboss_enable_level_4
     disable_events: mode_miniboss_starting
     show_tokens:
       led: led_upgrade_bank_3
