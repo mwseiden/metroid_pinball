@@ -3,6 +3,16 @@ mode:
   start_events: mode_base_starting
   priority: 100
 
+sequences:
+   miniboss_progress_sequence:
+      events:
+         - miniboss_targets_level_1_shot_group_lit_complete
+         - miniboss_targets_level_2_shot_group_lit_complete
+         - miniboss_targets_level_3_shot_group_lit_complete
+      persist_state: True
+      reset_on_complete: True
+      disable_on_complete: False
+
 shot_profiles:
   miniboss_targets:
     states:
@@ -90,23 +100,28 @@ shot_groups:
     shots: miniboss_level_1_1_shot, miniboss_level_1_2_shot, miniboss_level_1_3_shot
     reset_events: miniboss_targets_level_1_shot_group_lit_complete
     enable_events: miniboss_enable_level_1
-    disable_events: mode_miniboss_ending
+    disable_events: mode_miniboss_starting, mode_miniboss_ending, miniboss_targets_level_1_shot_group_lit_complete
   miniboss_targets_level_2_shot_group:
     shots: miniboss_level_2_1_shot, miniboss_level_2_2_shot, miniboss_level_2_3_shot
     reset_events: miniboss_targets_level_2_shot_group_lit_complete
     enable_events: miniboss_enable_level_2
-    disable_events: mode_miniboss_ending, miniboss_targets_level_2_shot_group_lit_complete
+    disable_events: mode_miniboss_starting, mode_miniboss_ending, miniboss_targets_level_2_shot_group_lit_complete
   miniboss_targets_level_3_shot_group:
     shots: miniboss_level_3_1_shot, miniboss_level_3_2_shot, miniboss_level_3_3_shot
     reset_events: miniboss_targets_level_3_shot_group_lit_complete
     enable_events: miniboss_enable_level_3
-    disable_events: mode_miniboss_ending, miniboss_targets_level_3_shot_group_lit_complete
+    disable_events: mode_miniboss_starting, mode_miniboss_ending, miniboss_targets_level_3_shot_group_lit_complete
 
 event_player:
-  mode_miniboss_started: miniboss_enable_level_1
-  miniboss_targets_level_1_shot_group_lit_complete: miniboss_targets_completed, miniboss_enable_level_2
-  miniboss_targets_level_2_shot_group_lit_complete: miniboss_targets_completed, miniboss_enable_level_3
-  miniboss_targets_level_3_shot_group_lit_complete: miniboss_targets_completed, miniboss_enable_level_1
+  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 0}: miniboss_enable_level_1
+  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 1}: miniboss_enable_level_2
+  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 2}: miniboss_enable_level_3
+  logicblock_miniboss_progress_sequence_updated{value == 0}: miniboss_enable_level_1
+  logicblock_miniboss_progress_sequence_updated{value == 1}: miniboss_enable_level_2
+  logicblock_miniboss_progress_sequence_updated{value == 2}: miniboss_enable_level_3
+  miniboss_targets_level_1_shot_group_lit_complete: miniboss_targets_completed
+  miniboss_targets_level_2_shot_group_lit_complete: miniboss_targets_completed
+  miniboss_targets_level_3_shot_group_lit_complete: miniboss_targets_completed
 
 show_player:
   miniboss_targets_completed:
