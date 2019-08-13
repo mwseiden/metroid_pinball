@@ -103,7 +103,7 @@ shots:
     switch: s_scoop
     profile: miniboss_scoop
     enable_events: miniboss_enable_level_4
-    disable_events: mode_miniboss_starting
+    disable_events: mode_miniboss_starting, miniboss_final_shot_hit
     show_tokens:
       led: led_enter_scoop
       color: 00FF80
@@ -195,6 +195,8 @@ variable_player:
     score: 5000 * current_player.multiplier
   miniboss_level_3_3_shot_hit:
     score: 5000 * current_player.multiplier
+  miniboss_final_shot_hit:
+    score: 50000 * current_player.multiplier
   miniboss_targets_completed:
     score:
       int: 1000 * current_player.multiplier
