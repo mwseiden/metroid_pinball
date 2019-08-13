@@ -5,6 +5,7 @@ mode:
 
 multiballs:
   virtual_kickback:
+    ball_count_type: add
     ball_count: 2
     shoot_again: 0s
     start_events: left_ballsave_shot_hit, right_ballsave_shot_hit
@@ -49,7 +50,7 @@ shots:
   left_ballsave_shot:
     switch: s_left_outlane
     profile: virtual_kickback
-    enable_events: lanes_enable_left_ball_save, lanes_enable_ball_save
+    enable_events: lanes_enable_left_ball_save
     disable_events: lanes_disable_ball_save, lanes_enable_right_ball_save
     show_tokens:
       led: led_left_kickback
