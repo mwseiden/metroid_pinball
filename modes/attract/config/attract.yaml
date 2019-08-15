@@ -147,6 +147,12 @@ show_player:
   slide_erin_slide_active:
     rudy_tas:
       action: stop
+    attract_pinball_monkey:
+      loops: -1
+      speed: 15
+  slide_rubber_ducks_slide_active:
+    attract_pinball_monkey:
+      action: stop
     lights_fire:
       loops: -1
       speed: 15

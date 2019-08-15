@@ -8,7 +8,7 @@ multiballs:
     ball_count: 3
     ball_count_type: total
     shoot_again: 20s
-    start_or_add_a_ball_events: chozo_multiball_bashed
+    start_events: chozo_multiball_bashed
 
 counters:
   captive_ball_counter:
@@ -18,6 +18,8 @@ counters:
     count_complete_value: 0
     direction: down
     events_when_complete: chozo_multiball_bashed
+    disable_events: multiball_chozo_started
+    enable_events: multiball_chozo_ended, mode_chozo_multiball_starting
     reset_events: game_start
     persist_state: true
     reset_on_complete: true
@@ -59,6 +61,9 @@ show_player:
   chozo_multiball_progress:
     chozo_multiball_progress:
       loops: 0
+    chozo_multiball_ball_locked:
+      loops: 1
+      speed: 15
   chozo_multiball_bashed:
     chozo_multiball_started:
       loops: 0
