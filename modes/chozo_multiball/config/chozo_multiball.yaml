@@ -62,8 +62,8 @@ show_player:
     chozo_multiball_progress:
       loops: 0
     chozo_multiball_ball_locked:
-      loops: 1
-      speed: 40
+      loops: 0
+      speed: 50
   chozo_multiball_bashed:
     chozo_multiball_started:
       loops: 0
