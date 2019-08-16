@@ -138,7 +138,10 @@ Base Game Mechanics
         yet.
 
     Miniboss Targets:
-        Scores points when hit and more points when complete.
+        Complete three banks, red, orange, and green. Afterwards the scoop
+        will be lit. Hitting the scoop resets to the begining. Score points
+        for each hit and completion. More points are scored the further you
+        get. But when it resets so do the points.
 
     Side Targets:
         Scores points when hit and more points when complete.

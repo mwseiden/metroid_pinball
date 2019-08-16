@@ -5,7 +5,7 @@ sound_player:
   mode_room_1b_gunship_victory_started{machine.next_game_acapella == 0}: music_crateria
   mode_room_1l_entryway_started{machine.next_game_acapella == 0}: music_wrecked_ship
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0}: music_brinstar
-  mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia
+  mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia_intro
   mode_room_2e_sandy_cavern_started{machine.next_game_acapella == 0}: music_maridia
   mode_room_2i_lava_jump_started{machine.next_game_acapella == 0}: music_norfair
   mode_bonus_started:
@@ -22,5 +22,8 @@ sound_player:
       action: stop
       fade_out: 3s
     music_wrecked_ship:
+      action: stop
+      fade_out: 3s
+    music_maridia_intro:
       action: stop
       fade_out: 3s
