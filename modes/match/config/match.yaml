@@ -148,7 +148,7 @@ shows:
               text: MATCH
               color: red
               style: dmd_big
-              y: 21
+              y: 22
             - type: text
               text: (winner_number)
               number_grouping: true
