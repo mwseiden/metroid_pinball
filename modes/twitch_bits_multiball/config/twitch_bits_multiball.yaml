@@ -15,11 +15,9 @@ show_player:
   multiball_twitch_bit_donation_multiball_started:
     twitch_bit_donation_start_up:
       loops: 0
-      tag: twitch_bit_donation_show
   whole_playfield_shot_group_hit:
     twitch_bit_donation_hit:
       loops: 0
-      tag: twitch_bit_donation_show
 
 variable_player:
   whole_playfield_shot_group_hit:
