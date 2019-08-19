@@ -1,14 +1,8 @@
 #config_version=5
 mode:
+  code: lanes.Lanes
   start_events: mode_base_starting
   priority: 100
-
-multiballs:
-  virtual_kickback:
-    ball_count_type: add
-    ball_count: 2
-    shoot_again: 0s
-    start_events: left_ballsave_shot_hit, right_ballsave_shot_hit
 
 shot_profiles:
   lanes:
