@@ -1,0 +1,36 @@
+#config_version=5
+mode:
+  start_events: room_1z_continue, room_1z_enter
+  stop_events: game_ending, ball_ending
+  priority: 300
+
+slides:
+  room_underground_desert_backglass_slide:
+    widgets:
+      - type: image
+        image: room_underground_desert_backglass
+    transition: fade
+    transition_out: fade
+  room_underground_desert_splash_slide:
+    widgets:
+      - type: image
+        image: room_underground_desert_splash
+
+slide_player:
+  mode_room_1z_underground_desert_started:
+    room_underground_desert_backglass_slide:
+      target: backglass
+    room_underground_desert_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+event_player:
+  mode_room_1z_underground_desert_started:
+    cmd_backbox_show:
+      show_type: fire
+
+variable_player:
+  mode_room_1z_underground_desert_started:
+    continue_room:
+      string: 1z
+      action: set
