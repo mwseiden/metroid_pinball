@@ -18,6 +18,17 @@ show_player:
   whole_playfield_shot_group_hit:
     twitch_bit_donation_hit:
       loops: 0
+  multiball_twitch_bit_donation_multiball_shoot_again_ended:
+    twitch_bit_donation_multiball_ball_save_blink:
+      action: stop
+  multiball_twitch_bit_donation_multiball_started:
+    blink_light:
+      key: twitch_bit_donation_multiball_ball_save_blink
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_ball_save
+        color: '6441a4'
 
 variable_player:
   whole_playfield_shot_group_hit:
