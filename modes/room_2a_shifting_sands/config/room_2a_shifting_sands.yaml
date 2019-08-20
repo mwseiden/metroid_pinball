@@ -85,7 +85,7 @@ shots:
     reset_events: room_2a_exit_west_shot_hit
     show_tokens:
       led: led_enter_secret_passage
-      color: '4040ff'
+      color: '6969ff'
 
 shot_profiles:
   room_2a_strobe:
@@ -96,7 +96,7 @@ shot_profiles:
   room_2a_exit:
     states:
     - name: lit
-      show: on
+      show: led_color
       loops: -1
 
 show_player:
