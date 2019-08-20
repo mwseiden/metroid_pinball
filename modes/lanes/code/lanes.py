@@ -16,4 +16,5 @@ class Lanes(Mode):
         if self.machine.game.balls_in_play < 4:
             self.machine.game.balls_in_play += 1
             self.machine.playfield.add_ball()
+            self.machine.player.kickbacks -= 1
 
