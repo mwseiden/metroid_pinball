@@ -10,5 +10,5 @@ class Lanes(Mode):
 
     def event_add_a_ball(self, **kwargs):
         self.machine.playfield.add_ball()
-        self.machine.game.add_balls_in_play()
+        self.machine.game.balls_in_play += 1
 
