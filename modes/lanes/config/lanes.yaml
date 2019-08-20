@@ -53,7 +53,7 @@ shots:
     switch: s_right_outlane
     profile: virtual_kickback
     enable_events: lanes_enable_right_ball_save
-    disable_events: lanes_disable_ball_save, lanes_enable_left_ball_save
+    disable_events: lanes_disable_ball_save, lanes_enable_ball_save, lanes_enable_left_ball_save
     show_tokens:
       led: led_right_kickback
       color: 'FF8000'
