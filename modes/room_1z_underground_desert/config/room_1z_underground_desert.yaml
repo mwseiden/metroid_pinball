@@ -1,8 +1,26 @@
 #config_version=5
 mode:
   start_events: room_1z_continue, room_1z_enter
-  stop_events: game_ending, ball_ending
+  stop_events: game_ending, ball_ending, room_2a_enter
   priority: 300
+
+shot_profiles:
+  room_1z_exit:
+    states:
+    - name: lit
+      show: led_color
+      loops: -1
+
+shots:
+  room_1z_exit_east_shot:
+    hit_events: right_orbit_hit
+    profile: room_1z_exit
+    enable_events: mode_room_1z_underground_desert_started
+    disable_events: room_1z_exit_east_shot_hit
+    reset_events: room_1z_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_right_orbit
+      color: '6969ff'
 
 slides:
   room_underground_desert_backglass_slide:
@@ -24,10 +42,23 @@ slide_player:
       target: dmd
       expire: 1.5s
 
+show_player:
+  mode_room_1z_underground_desert_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: 'FFFF00'
+        color2: '8080FF'
+
 event_player:
   mode_room_1z_underground_desert_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: pour
+      count: 1
+      min_length: 4
+      max_length: 12
+      color: "200C00"
+  room_1z_exit_east_shot_hit: room_2a_enter
 
 variable_player:
   mode_room_1z_underground_desert_started:
