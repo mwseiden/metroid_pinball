@@ -13,7 +13,7 @@ class Lanes(Mode):
             if ball_save.enabled:
                 return
 
-        if self.machine.game.balls_in_play < 4
+        if self.machine.game.balls_in_play < 4:
             self.machine.game.balls_in_play += 1
             self.machine.playfield.add_ball()
 
