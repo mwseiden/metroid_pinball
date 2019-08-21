@@ -1,0 +1,62 @@
+#config_version=5
+mode:
+  start_events: room_2b_continue
+  stop_events: game_ending, ball_ending
+  priority: 300
+
+slides:
+  room_2b_crevasse_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2b_crevasse_backglass
+    transition: fade
+    transition_out: fade
+  room_2b_crevasse_splash_slide:
+    widgets:
+      - type: image
+        image: room_2b_crevasse_splash
+
+slide_player:
+  mode_room_2b_crevasse_started:
+    room_2b_crevasse_backglass_slide:
+      target: backglass
+    room_2b_crevasse_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+shots:
+  room_2b_exit_west_shot:
+    hit_events: left_orbit_hit
+    profile: exit_door
+    enable_events: mode_room_2b_crevasse_started
+    disable_events: room_2b_exit_west_shot_hit
+    reset_events: room_2b_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_left_orbit
+      color: door_blue
+
+show_player:
+  mode_room_2b_crevasse_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: 'C0C0FF'
+        color2: '404080'
+
+event_player:
+  mode_room_2b_crevasse_started:
+    cmd_backbox_show:
+      show_type: two_tone
+      min_cutoff: 2
+      max_cutoff: 8
+      color1: "000050"
+      color2: "404050"
+
+variable_player:
+  mode_room_2b_crevasse_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 2b
+      action: set
