@@ -49,7 +49,7 @@ shots:
     disable_events: multiball_chozo_ended
     show_tokens:
       led: led_captive_ball
-      color: 'C00000'
+      color: 'FF4040'
   chozo_multiball_jackpot_collect_shot:
     switch: s_vuk
     profile: chozo_multiball_jackpot

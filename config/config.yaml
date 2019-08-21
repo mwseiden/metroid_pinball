@@ -26,6 +26,8 @@ config:
   - playfields.yaml
   - player_vars.yaml
   - machine_vars.yaml
+  - named_colors.yaml
+  - shot_profiles.yaml
   - modes.yaml
   - lights.yaml
   - switches.yaml

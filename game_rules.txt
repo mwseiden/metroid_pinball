@@ -158,11 +158,16 @@ Base Game Mechanics
         Scores points.
 
     Doors:
-        They don't exist yet. Just be aware that they will! This will be how
-        you change modes in game and travel further into the planet to fight
-        bosses.
+        Doors are how you change modes in game and travel further into the
+        planet to fight bosses. Doors are shots with certain solid colors.
+        There are a few types of doors and each has a different requirement in
+        order to pass through them.
 
-Modes
+        Blue:
+            No special requirement. Hitting the shot will travel to another
+            room and start (or continue) that new mode.
+
+Landing Sites
 
     Crateria:
         You must land the ship. First shoot the left and right orbits to
