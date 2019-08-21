@@ -7,6 +7,7 @@ hardware:
 
 fast:
   ports: /dev/ttyUSB1, /dev/ttyUSB2
+  watchdog: 1500
   # net_buffer: 200
 
 fadecandy:
