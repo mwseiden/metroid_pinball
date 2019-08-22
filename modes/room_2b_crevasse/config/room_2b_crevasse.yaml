@@ -1,7 +1,7 @@
 #config_version=5
 mode:
-  start_events: room_2b_continue
-  stop_events: game_ending, ball_ending
+  start_events: room_2b_continue, room_2b_enter
+  stop_events: game_ending, ball_ending, room_2a_enter
   priority: 300
 
 slides:
@@ -51,6 +51,7 @@ event_player:
       max_cutoff: 8
       color1: "000050"
       color2: "404050"
+  room_2b_exit_west_shot_hit: room_2a_enter
 
 variable_player:
   mode_room_2b_crevasse_started:
