@@ -6,3 +6,4 @@ named_colors:
   door_red: 'ff6969'
   door_yellow: 'ffff69'
   door_closed: '808080'
+  dmd_orange: 'E67300'

@@ -64,7 +64,7 @@
         anchor_y: bottom
       - type: text
         text: PLAYER FOUR
-        color: orange
+        color: dmd_orange
         number_grouping: true
         min_digits: 2
         y: 0

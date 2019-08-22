@@ -46,7 +46,7 @@
         anchor_y: top
       - type: text
         text: PLAYER TWO
-        color: orange
+        color: dmd_orange
         number_grouping: true
         min_digits: 2
         y: 31

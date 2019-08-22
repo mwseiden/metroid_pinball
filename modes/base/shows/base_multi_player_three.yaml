@@ -57,7 +57,7 @@
         text: PLAYER THREE
         number_grouping: true
         min_digits: 2
-        color: orange
+        color: dmd_orange
         y: 0
         x: 1
         style: dmd_small
