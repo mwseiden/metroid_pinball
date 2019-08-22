@@ -13,7 +13,7 @@ timers:
     control_events:
       - event: mode_room_2a_shifting_sands_started
         action: start
-      - event: mode_room_2a_shifting_sands_ending
+      - event: ball_ending
         action: stop
       - event: room_2a_bank_1_shot_hit
         action: add
