@@ -47,6 +47,15 @@ sounds:
     loops: -1
     simultaneous_limit: 1
     stealing_method: skip
+  music_maridia_snow:
+    file: music_maridia_snow.wav
+    #streaming: True
+    track: music
+    priority: 50
+    #max_queue_time: 1s
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip
   music_wrecked_ship:
     file: music_wrecked_ship.wav
     #streaming: True
