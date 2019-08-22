@@ -114,6 +114,19 @@ timers:
 
 
 show_player:
+  player_added:
+    base_single_player:
+      action: stop
+    base_start_multiplayer:
+      loops: -1
+  base_start_singleplayer:
+    base_single_player:
+      loops: -1
+  base_start_multiplayer:
+    base_single_player:
+      action: stop
+    base_multi_player:
+      loops: -1
   full_shatz_hit:
     base_full_shatz:
       loops: 0
@@ -364,6 +377,8 @@ event_player:
   player_added{num == 2}: base_sound_player_2
   player_added{num == 3}: base_sound_player_3
   player_added{num == 4}: base_sound_player_4
+  mode_base_started{game.num_players > 1}: base_start_multiplayer
+  mode_base_started{game.num_players == 1}: base_start_singleplayer
 
 variable_player:
   left_orbit_hit:
