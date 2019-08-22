@@ -40,7 +40,7 @@
         number_grouping: true
         min_digits: 2
         y: 31
-        x: 10
+        x: 1
         style: dmd_small
         anchor_x: left
         anchor_y: top
@@ -49,7 +49,7 @@
         number_grouping: true
         min_digits: 2
         y: 31
-        x: right-10
+        x: right-1
         anchor_x: right
         anchor_y: top
         style: dmd_small
@@ -58,7 +58,7 @@
         number_grouping: true
         min_digits: 2
         y: 0
-        x: 10
+        x: 1
         style: dmd_small
         anchor_x: left
         anchor_y: bottom
@@ -67,7 +67,7 @@
         number_grouping: true
         min_digits: 2
         y: 0
-        x: right-10
+        x: right-1
         anchor_x: right
         anchor_y: bottom
         style: dmd_small
