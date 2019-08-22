@@ -36,7 +36,8 @@
         style: dmd_big
         y: 18
       - type: text
-        text: (player1|score)
+        text: PLAYER ONE
+        color: orange
         number_grouping: true
         min_digits: 2
         y: 31

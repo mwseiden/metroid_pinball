@@ -114,18 +114,25 @@ timers:
 
 
 show_player:
-  player_added:
+  base_start_single_player:
     base_single_player:
-      action: stop
-    base_multi_player:
+      key: base_score_loop
       loops: -1
-  base_start_singleplayer:
-    base_single_player:
+  base_start_multi_player_one:
+    base_multi_player_one:
+      key: base_score_loop
       loops: -1
-  base_start_multiplayer:
-    base_single_player:
-      action: stop
-    base_multi_player:
+  base_start_multi_player_two:
+    base_multi_player_two:
+      key: base_score_loop
+      loops: -1
+  base_start_multi_player_three:
+    base_multi_player_three:
+      key: base_score_loop
+      loops: -1
+  base_start_multi_player_four:
+    base_multi_player_four:
+      key: base_score_loop
       loops: -1
   full_shatz_hit:
     base_full_shatz:
@@ -300,7 +307,6 @@ show_player:
 
 
 slide_player:
-  mode_base_started: score_slide
   player_added:
     new_player_slide:
       priority: 1000
@@ -377,8 +383,14 @@ event_player:
   player_added{num == 2}: base_sound_player_2
   player_added{num == 3}: base_sound_player_3
   player_added{num == 4}: base_sound_player_4
-  mode_base_started{game.num_players > 1}: base_start_multiplayer
-  mode_base_started{game.num_players == 1}: base_start_singleplayer
+  player_added{current_player.number == 1}: base_start_multi_player_one
+  player_added{current_player.number == 2}: base_start_multi_player_two
+  player_added{current_player.number == 3}: base_start_multi_player_three
+  mode_base_started{game.num_players == 1}: base_start_single_player
+  mode_base_started{game.num_players > 1 and current_player.number == 1}: base_start_multi_player_one
+  mode_base_started{game.num_players > 1 and current_player.number == 2}: base_start_multi_player_two
+  mode_base_started{game.num_players > 1 and current_player.number == 3}: base_start_multi_player_three
+  mode_base_started{game.num_players > 1 and current_player.number == 4}: base_start_multi_player_four
 
 variable_player:
   left_orbit_hit:
