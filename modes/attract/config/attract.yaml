@@ -143,7 +143,7 @@ show_player:
       action: stop
     rudy_tas:
       loops: -1
-      speed: 11
+      speed: 19
   slide_erin_slide_active:
     rudy_tas:
       action: stop
