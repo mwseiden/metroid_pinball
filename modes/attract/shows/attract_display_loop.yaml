@@ -55,7 +55,7 @@
         text: (machine|score1_value)
         y: 0
         style: dmd_big
-        color: dmd_orage
+        color: dmd_orange
         number_grouping: true
         anchor_y: bottom
 
@@ -83,7 +83,7 @@
         text: (machine|score2_value)
         y: -16
         style: dmd_med
-        color: dmd_orage
+        color: dmd_orange
         number_grouping: true
         anchor_y: top
         animations:
@@ -108,7 +108,7 @@
         text: (machine|score3_value)
         y: -44
         style: dmd_med
-        color: dmd_orage
+        color: dmd_orange
         number_grouping: true
         anchor_y: top
         animations:
@@ -133,7 +133,7 @@
         text: (machine|score4_value)
         y: -72
         style: dmd_med
-        color: dmd_orage
+        color: dmd_orange
         number_grouping: true
         anchor_y: top
         animations:
@@ -158,7 +158,7 @@
         text: (machine|score5_value)
         y: -100
         style: dmd_med
-        color: dmd_orage
+        color: dmd_orange
         number_grouping: true
         anchor_y: top
         animations:
@@ -182,7 +182,7 @@
         text: (machine|spinners1_value)
         y: 0
         style: dmd_big
-        color: dmd_orage
+        color: dmd_orange
         number_grouping: true
         anchor_y: bottom
 
@@ -204,7 +204,7 @@
         text: (machine|ramps1_value)
         y: 0
         style: dmd_big
-        color: dmd_orage
+        color: dmd_orange
         number_grouping: true
         anchor_y: bottom
 
@@ -226,7 +226,7 @@
         text: (machine|pops1_value)
         y: 0
         style: dmd_big
-        color: dmd_orage
+        color: dmd_orange
         number_grouping: true
         anchor_y: bottom
 
@@ -248,7 +248,7 @@
         text: (machine|slingshots1_value)
         y: 0
         style: dmd_big
-        color: dmd_orage
+        color: dmd_orange
         number_grouping: true
         anchor_y: bottom
 
@@ -270,7 +270,7 @@
         text: (machine|orbits1_value)
         y: 0
         style: dmd_big
-        color: dmd_orage
+        color: dmd_orange
         number_grouping: true
         anchor_y: bottom
 
@@ -292,7 +292,7 @@
         text: (machine|lanes1_value)
         y: 0
         style: dmd_big
-        color: dmd_orage
+        color: dmd_orange
         number_grouping: true
         anchor_y: bottom
 
@@ -434,17 +434,17 @@
       - type: Text
         text: DOUBLE
         style: dmd_big
-        color: dmd_orage
+        color: dmd_orange
         y: 25
       - type: Text
         text: DANGER
         style: dmd_big
-        color: dmd_orage
+        color: dmd_orange
         y: 13
       - type: Text
         text: ddpinball.com
         style: dmd_small
-        color: dmd_orage
+        color: dmd_orange
         y: 3
       transition:
          type: swap
@@ -613,22 +613,22 @@
       - type: Text
         text: ...and thanks to
         style: dmd_med
-        color: dmd_orage
+        color: dmd_orange
         y: 25
       - type: Text
         text: everyone watching!
         style: dmd_med
-        color: dmd_orage
+        color: dmd_orange
         y: 13
       # - type: Text
         # text: And thanks to everyone
         # style: dmd_med
-        # color: dmd_orage
+        # color: dmd_orange
         # y: 25
       # - type: Text
         # text: at Pintastic!
         # style: dmd_med
-        # color: dmd_orage
+        # color: dmd_orange
         # y: 13
       transition:
          type: swap
