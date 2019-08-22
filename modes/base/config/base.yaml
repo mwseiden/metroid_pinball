@@ -117,7 +117,7 @@ show_player:
   player_added:
     base_single_player:
       action: stop
-    base_start_multiplayer:
+    base_multi_player:
       loops: -1
   base_start_singleplayer:
     base_single_player:
