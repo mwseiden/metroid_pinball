@@ -50,7 +50,7 @@
       - type: text
         text: (machine|score1_name)
         style: dmd_big
-        color: 009cff
+        color: dmd_blue
       - type: text
         text: (machine|score1_value)
         y: 0
@@ -75,7 +75,7 @@
         text: (machine|score2_name)
         y: -8
         style: dmd_med
-        color: 009cff
+        color: dmd_blue
         anchor_y: top
         animations:
           show_slide: high_score_scroll_up
@@ -100,7 +100,7 @@
         text: (machine|score3_name)
         y: -36
         style: dmd_med
-        color: 009cff
+        color: dmd_blue
         anchor_y: top
         animations:
           show_slide: high_score_scroll_up
@@ -125,7 +125,7 @@
         text: (machine|score4_name)
         y: -64
         style: dmd_med
-        color: 009cff
+        color: dmd_blue
         anchor_y: top
         animations:
           show_slide: high_score_scroll_up
@@ -150,7 +150,7 @@
         text: (machine|score5_name)
         y: -92
         style: dmd_med
-        color: 009cff
+        color: dmd_blue
         anchor_y: top
         animations:
           show_slide: high_score_scroll_up
@@ -177,7 +177,7 @@
       - type: text
         text: (machine|spinners1_name)
         style: dmd_big
-        color: 009cff
+        color: dmd_blue
       - type: text
         text: (machine|spinners1_value)
         y: 0
@@ -199,7 +199,7 @@
       - type: text
         text: (machine|ramps1_name)
         style: dmd_big
-        color: 009cff
+        color: dmd_blue
       - type: text
         text: (machine|ramps1_value)
         y: 0
@@ -221,7 +221,7 @@
       - type: text
         text: (machine|pops1_name)
         style: dmd_big
-        color: 009cff
+        color: dmd_blue
       - type: text
         text: (machine|pops1_value)
         y: 0
@@ -243,7 +243,7 @@
       - type: text
         text: (machine|slingshots1_name)
         style: dmd_big
-        color: 009cff
+        color: dmd_blue
       - type: text
         text: (machine|slingshots1_value)
         y: 0
@@ -265,7 +265,7 @@
       - type: text
         text: (machine|orbits1_name)
         style: dmd_big
-        color: 009cff
+        color: dmd_blue
       - type: text
         text: (machine|orbits1_value)
         y: 0
@@ -287,7 +287,7 @@
       - type: text
         text: (machine|lanes1_name)
         style: dmd_big
-        color: 009cff
+        color: dmd_blue
       - type: text
         text: (machine|lanes1_value)
         y: 0
@@ -605,6 +605,137 @@
          type: push
          duration: 1s
          direction: down
+
+- duration: 8s
+  slides:
+    attract_special_thanks:
+      widgets:
+      - type: text
+        text: Special Thanks To...
+        y: 0
+        style: dmd_med
+        color: dmd_blue
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Erin
+        y: -8
+        style: dmd_med
+        color: dmd_orange
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Mark Incitti
+        y: -16
+        style: dmd_med
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: John Marsh
+        y: -24
+        style: dmd_med
+        color: dmd_orange
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Wilder Hamm
+        y: -32
+        style: dmd_med
+        color: dmd_orange
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Victoria Chen
+        y: -40
+        style: dmd_med
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: John Manuelian
+        y: -48
+        style: dmd_med
+        color: dmd_orange
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Dave O'Neil
+        y: -56
+        style: dmd_med
+        color: dmd_orange
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Jab_Doa
+        y: -64
+        style: dmd_med
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Mission Pinball
+        y: -72
+        style: dmd_med
+        color: dmd_orange
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Grant Henry
+        y: -80
+        style: dmd_med
+        color: dmd_orange
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Claire Henry
+        y: -88
+        style: dmd_med
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Aaron Davis
+        y: -96
+        style: dmd_med
+        color: dmd_orange
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Fast Pinball
+        y: -102
+        style: dmd_med
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Joel De Guzman
+        y: -110
+        style: dmd_med
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
 
 - duration: 6s
   slides:

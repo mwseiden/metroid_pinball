@@ -75,7 +75,7 @@ shows:
           widgets:
             - type: text
               text: NO MATCH
-              color: 009cff
+              color: dmd_blue
               style: dmd_big
             - type: text
               text: (match_number0)

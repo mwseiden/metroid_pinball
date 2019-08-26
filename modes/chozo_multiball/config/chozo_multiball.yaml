@@ -20,9 +20,8 @@ counters:
     events_when_complete: chozo_multiball_bashed
     disable_events: multiball_chozo_started
     enable_events: multiball_chozo_ended, mode_chozo_multiball_starting
-    reset_events: game_start
+    reset_events: game_start, multiball_chozo_started
     persist_state: true
-    reset_on_complete: true
     disable_on_complete: false
 
 shots:
@@ -133,6 +132,7 @@ sound_player:
   chozo_multiball_progress: ball_locked
   chozo_multiball_jackpot_one_shot_hit: jackpot
   chozo_multiball_jackpot_two_shot_hit: jackpot_alt_1
+  chozo_multiball_jackpot_three_shot_hit: jackpot
   chozo_multiball_jackpot_collect_shot_hit: super_jackpot
 
 event_player:
