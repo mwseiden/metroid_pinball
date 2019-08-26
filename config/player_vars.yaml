@@ -26,6 +26,10 @@ player_vars:
   continue_room:
     value_type: str
     initial_value: 1b
+  door_2d_2e:
+    initial_value: 0
+  door_2e_2f:
+    initial_value: 0
   emergency_landings:
     initial_value: 0
   has_chosen_landing_site:

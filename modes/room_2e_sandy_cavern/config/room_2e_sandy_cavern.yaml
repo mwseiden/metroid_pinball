@@ -9,8 +9,8 @@ shots:
     hit_events: left_orbit_hit
     profile: exit_door
     enable_events: room_2e_enable_west_missile_door
-    disable_events: room_2e_disable_west_missile_door
-    reset_events: room_2e_disable_west_missile_door
+    disable_events: room_2e_disable_west_missile_door, room_2e_open_west_door
+    reset_events: room_2e_disable_west_missile_door, room_2e_open_west_door
     show_tokens:
       led: led_enter_left_orbit
       color: door_red
@@ -18,8 +18,8 @@ shots:
     hit_events: rollover_shot_hit
     profile: exit_door
     enable_events: room_2e_enable_east_missile_door
-    disable_events: room_2e_disable_east_missile_door
-    reset_events: room_2e_disable_east_missile_door
+    disable_events: room_2e_disable_east_missile_door, room_2e_open_east_door
+    reset_events: room_2e_disable_east_missile_door, room_2e_open_east_door
     show_tokens:
       led: led_rollover
       color: door_red
@@ -64,8 +64,12 @@ event_player:
       min_length: 4
       max_length: 12
       color: "200C00"
-  mode_room_2e_sandy_cavern_started{current_player.door_2e_2f == 0}: room_2e_enable_east_missile_door
   mode_room_2e_sandy_cavern_started{current_player.door_2d_2e == 0}: room_2e_enable_west_missile_door
+  mode_room_2e_sandy_cavern_started{current_player.door_2e_2f == 0}: room_2e_enable_east_missile_door
+  room_2e_exit_west_closed_shot_hit{current_player.missiles > 0}: room_2e_open_west_door
+  room_2e_exit_east_closed_shot_hit{current_player.missiles > 0}: room_2e_open_east_door
+  room_2e_open_west_door: room_2e_exit_west_shot_hit
+  room_2e_open_east_door: room_2e_exit_east_shot_hit
 
 variable_player:
   mode_room_2e_sandy_cavern_started:
@@ -75,4 +79,15 @@ variable_player:
     continue_room:
       string: 2e
       action: set
+  room_2e_open_west_door:
+    missiles: -1
+    door_2d_2e:
+      int: 1
+      action: set
+  room_2e_open_east_door:
+    missiles: -1
+    door_2e_2f:
+      int: 1
+      action: set
+
 
