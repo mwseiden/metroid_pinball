@@ -162,7 +162,7 @@ show_player:
     lights_purple_spotlight:
       loops: -1
       speed: 20
-  attract_special_thanks_slide_active:
+  slide_attract_special_thanks_slide_active:
     lights_purple_spotlight:
       action: stop
     attract_water:
