@@ -11,6 +11,10 @@ sound_player:
       action: play
       fade_in: 2s
   mode_room_1z_underground_desert_started{machine.next_game_acapella == 0}: music_maridia_intro
+  mode_room_2d_abyss_started{machine.next_game_acapella == 0}:
+    music_maridia:
+      action: play
+      fade_in: 2s
   mode_room_2e_sandy_cavern_started{machine.next_game_acapella == 0}:
     music_maridia:
       action: play
@@ -20,12 +24,16 @@ sound_player:
     music_maridia_intro:
       action: stop
       fade_out: 1s
+  room_2a_enter:
+    music_maridia_snow:
+      action: stop
+      fade_out: 1s
   room_2b_enter:
     music_maridia_intro:
       action: stop
       fade_out: 1s
-  room_2a_enter:
-    music_maridia_snow:
+  room_2d_enter:
+    music_maridia_intro:
       action: stop
       fade_out: 1s
   mode_bonus_started:
