@@ -1,7 +1,7 @@
 #config_version=5
 mode:
     start_events: room_2a_sink_into_sand, room_2e_continue
-    stop_events: game_ending, ball_ending, room_2e_exit_west_shot_hit, room_2e_exit_east_shot_hit
+    stop_events: game_ending, ball_ending, room_2d_enter, room_2f_enter
     priority: 300
 
 shots:
@@ -90,6 +90,8 @@ event_player:
   room_2e_exit_east_closed_shot_hit{current_player.missiles > 0}: room_2e_open_east_door
   room_2e_open_west_door: room_2e_exit_west_shot_hit
   room_2e_open_east_door: room_2e_exit_east_shot_hit
+  room_2e_exit_west_shot_hit: room_2d_enter
+  room_2e_exit_east_shot_hit: room_2f_enter
 
 variable_player:
   mode_room_2e_sandy_cavern_started:

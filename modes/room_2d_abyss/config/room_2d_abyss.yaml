@@ -1,0 +1,42 @@
+#config_version=5
+mode:
+  start_events: room_2d_continue, room_2d_enter
+  stop_events: game_ending, ball_ending, room_1z_enter, room_2e_enter
+  priority: 300
+
+slides:
+  room_2d_abyss_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2d_abyss_backglass
+    transition: fade
+    transition_out: fade
+  room_2d_abyss_splash_slide:
+    widgets:
+      - type: image
+        image: room_2d_abyss_splash
+
+slide_player:
+  mode_room_2d_abyss_started:
+    room_template_backglass_slide:
+      target: backglass
+    room_2d_abyss_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_2d_abyss_started:
+    room_2d_underwater:
+      loops: -1
+      speed: 10
+
+event_player:
+  mode_room_2d_abyss_started:
+    cmd_backbox_show:
+      show_type: fire
+
+variable_player:
+  mode_room_2d_abyss_started:
+    continue_room:
+      string: 2d
+      action: set
