@@ -63,8 +63,8 @@ event_player:
   mode_room_2d_abyss_started:
     cmd_backbox_show:
       show_type: fire
-  mode_room_2d_abyss_started{current_player.door_2d_2e == 0}: room_2e_enable_east_missile_door, room_2e_disable_east_door
-  mode_room_2d_abyss_started{current_player.door_2d_2e == 1}: room_2e_enable_east_door, room_2e_disable_east_missile_door
+  mode_room_2d_abyss_started{current_player.door_2d_2e == 0}: room_2d_enable_east_missile_door, room_2d_disable_east_door
+  mode_room_2d_abyss_started{current_player.door_2d_2e == 1}: room_2d_enable_east_door, room_2d_disable_east_missile_door
   room_2d_exit_east_closed_shot_hit{current_player.missiles > 0}: room_2d_open_east_door
   room_2d_open_east_door: room_2d_exit_east_shot_hit
   room_2d_exit_north_shot_hit: room_1z_enter
