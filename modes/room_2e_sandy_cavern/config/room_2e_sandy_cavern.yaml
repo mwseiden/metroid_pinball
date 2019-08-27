@@ -1,6 +1,6 @@
 #config_version=5
 mode:
-    start_events: room_2a_sink_into_sand, room_2e_continue
+    start_events: room_2a_sink_into_sand, room_2e_continue, room_2e_enter
     stop_events: game_ending, ball_ending, room_2d_enter, room_2f_enter
     priority: 300
 
