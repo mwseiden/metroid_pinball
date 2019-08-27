@@ -44,6 +44,10 @@ sound_player:
     music_maridia:
       action: stop
       fade_out: 1s
+  room_2e_enter:
+    music_maridia_snow:
+      action: stop
+      fade_out: 1s
   mode_bonus_started:
     music_crateria:
       action: stop
