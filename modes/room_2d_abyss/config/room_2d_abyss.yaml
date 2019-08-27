@@ -18,7 +18,7 @@ slides:
 
 slide_player:
   mode_room_2d_abyss_started:
-    room_template_backglass_slide:
+    room_2d_abyss_backglass_slide:
       target: backglass
     room_2d_abyss_splash_slide:
       target: dmd
