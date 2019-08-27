@@ -608,7 +608,7 @@
 
 - duration: 8s
   slides:
-    attract_special_thanks:
+    attract_special_thanks_slide:
       widgets:
       - type: text
         text: Special Thanks To...

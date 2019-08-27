@@ -41,7 +41,7 @@ show_player:
       loops: 0
       priority: 300
   slide_last_game_high_scores_active:
-    lights_purple_spotlight:
+    attract_water:
       action: stop
     lights_rainbow_blurred:
       loops: -1
@@ -162,6 +162,12 @@ show_player:
     lights_purple_spotlight:
       loops: -1
       speed: 20
+  attract_special_thanks_slide_active:
+    lights_purple_spotlight:
+      action: stop
+    attract_water:
+      loops: -1
+      speed: 8
 
 animations:
   high_score_scroll_up:
