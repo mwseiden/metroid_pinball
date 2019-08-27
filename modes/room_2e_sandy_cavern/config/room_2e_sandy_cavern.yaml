@@ -36,8 +36,8 @@ shots:
     hit_events: rollover_shot_hit
     profile: exit_door
     enable_events: room_2e_enable_east_door
-    disable_events: room_2e_disable_east_missile_door
-    reset_events: room_2e_disable_east_missile_door
+    disable_events: room_2e_disable_east_door
+    reset_events: room_2e_disable_east_door
     show_tokens:
       led: led_rollover
       color: door_blue
