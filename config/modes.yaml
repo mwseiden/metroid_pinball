@@ -23,6 +23,7 @@ modes:
   - room_2b_crevasse
   - room_2d_abyss
   - room_2e_sandy_cavern
+  - room_2f_frozen_lake
   - room_2i_lava_jump
   - select_landing_site
   - side_targets
