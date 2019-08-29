@@ -264,6 +264,13 @@ event_player:
       min_length: 2
       max_length: 16
       color: "401040"
+  slide_attract_special_thanks_slide_active:
+    cmd_backbox_show:
+      show_type: pour
+      count: 6
+      min_length: 3
+      max_length: 10
+      color: "000040"
 
 
   mode_attract_stopping:
