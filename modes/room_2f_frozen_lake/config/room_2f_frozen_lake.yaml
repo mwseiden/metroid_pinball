@@ -64,7 +64,11 @@ show_player:
 event_player:
   mode_room_2f_frozen_lake_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: two_tone
+      min_cutoff: 1
+      max_cutoff: 9
+      color1: "404020"
+      color2: "202040"
   mode_room_2f_frozen_lake_started{current_player.door_2e_2f == 0}: room_2f_enable_west_missile_door, room_2f_disable_west_door
   mode_room_2f_frozen_lake_started{current_player.door_2e_2f == 1}: room_2f_enable_west_door, room_2f_disable_west_missile_door
   room_2f_exit_west_closed_shot_hit{current_player.missiles > 0}: room_2f_open_west_door
