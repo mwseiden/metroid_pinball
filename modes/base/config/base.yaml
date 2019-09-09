@@ -391,7 +391,6 @@ event_player:
   mode_base_started{game.num_players > 1 and current_player.number == 2}: base_start_multi_player_two
   mode_base_started{game.num_players > 1 and current_player.number == 3}: base_start_multi_player_three
   mode_base_started{game.num_players > 1 and current_player.number == 4}: base_start_multi_player_four
-  ball_ending{not game.tilted}: bonus_should_start
 
 variable_player:
   left_orbit_hit:
