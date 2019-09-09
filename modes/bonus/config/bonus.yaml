@@ -1,4 +1,9 @@
 #config_version=5
+mode:
+  start_events: bonus_should_start
+  code: mpf.modes.bonus.code.bonus.Bonus
+  priority: 500
+  use_wait_queue: true
 
 mode_settings:
   display_delay_ms: 1s
