@@ -41,13 +41,13 @@ slides:
     widgets:
     - type: text
       text: WARNING
-      y: 15
+      y: 17
       anchor_y: bottom
       style: dmd_big
       color: red
     - type: text
       text: WARNING
-      y: 17
+      y: 15
       anchor_y: top
       style: dmd_big
       color: red
