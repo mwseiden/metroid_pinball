@@ -43,6 +43,8 @@ slides:
       text: WARNING
       y: 15
       anchor_y: bottom
+      style: dmd_big
+      color: red
     - type: text
       text: WARNING
       y: 17
