@@ -16,22 +16,28 @@ tilt:
   tilt_warnings_player_var: tilt_warnings
 
 slide_player:
-  tilt_warning_1: tilt_warning_1
-  tilt_warning_2: tilt_warning_2
-  tilt: tilt
+  tilt_warning_1:
+    tilt_metroid_warning_1:
+      priority: 1
+  tilt_warning_2:
+    tilt_metroid_warning_2:
+      priority: 1
+  tilt:
+    tilt_metroid:
+      priority: 1
   tilt_clear:
-    tilt:
+    tilt_metroid:
       action: remove
 
 slides:
-  tilt_warning_1:
+  tilt_metroid_warning_1:
     widgets:
     - type: text
       text: WARNING
       style: dmd_big
       color: red
     expire: 1s
-  tilt_warning_2:
+  tilt_metroid_warning_2:
     widgets:
     - type: text
       text: WARNING
@@ -44,7 +50,7 @@ slides:
       style: dmd_big
       color: red
     expire: 2s
-  tilt:
+  tilt_metroid:
   - type: text
     text: TILT
     style: dmd_big
