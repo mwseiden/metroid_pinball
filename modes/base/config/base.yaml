@@ -112,7 +112,7 @@ timers:
       - event: dirty_pool_possible
         action: restart
   base_twitch_left_flipper_timer:
-    end_value: 3
+    end_value: 2
     tick_interval: 1s
     control_events:
       - event: twitch_flip_left
@@ -122,7 +122,7 @@ timers:
       - event: timer_base_twitch_left_flipper_timer_complete
         action: stop
   base_twitch_right_flipper_timer:
-    end_value: 3
+    end_value: 2
     tick_interval: 1s
     control_events:
       - event: twitch_flip_right

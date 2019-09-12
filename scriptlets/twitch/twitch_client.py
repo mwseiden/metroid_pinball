@@ -87,9 +87,9 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
         self.log.info('Received command: [' + user + '] ' + cmd)
 
         if self.TWITCH_PLAYS_ENABLED:
-            if cmd == 'flipl':
+            if cmd == 'l':
                 self.machine.events.post('twitch_flip_left', user=user)
-            elif cmd == 'flipr':
+            elif cmd == 'r':
                 self.machine.events.post('twitch_flip_right', user=user)
 
     def is_connected(self):
