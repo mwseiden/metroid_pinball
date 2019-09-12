@@ -373,6 +373,20 @@ event_player:
       speed: 1
       repeat: 20
       direction: left
+  twitch_flip_left:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "432c6f"
+      speed: 1
+      repeat: 1
+      direction: right
+  twitch_flip_right:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "432c6f"
+      speed: 1
+      repeat: 1
+      direction: left
   #s_behind_drop_1_active{device.switches.s_drop_target_1.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
   #s_behind_drop_2_active{device.switches.s_drop_target_2.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
   #s_behind_drop_3_active{device.switches.s_drop_target_3.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible

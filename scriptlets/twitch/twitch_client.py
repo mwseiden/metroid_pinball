@@ -5,6 +5,8 @@ import logging
 import textwrap
 
 class TwitchClient(irc.bot.SingleServerIRCBot):
+    TWITCH_PLAYS_ENABLED = True
+
     def __init__(self, machine, username, password, channel):
         self.log = logging.getLogger('TwitchClient') 
         self.machine = machine
@@ -31,7 +33,7 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
         # If a chat message starts with ! or ?, try to run it as a command
         if e.arguments[0][:1] == '!' or e.arguments[0][:1] == '?':
             cmd = e.arguments[0].split(' ')[0][1:]
-            self.do_command(e, cmd)
+            self.do_command(e, cmd.lower())
         else:
             user = e.source.split('!')[0]
             message = 'Chat: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
@@ -83,6 +85,12 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
     def do_command(self, e, cmd):
         user = e.source.split('!')[0]
         self.log.info('Received command: [' + user + '] ' + cmd)
+
+        if self.TWITCH_PLAYS_ENABLED:
+            if cmd == 'flipl':
+                self.machine.events.post('twitch_flip_left', user=user)
+            elif cmd == 'flipr':
+                self.machine.events.post('twitch_flip_right', user=user)
 
     def is_connected(self):
         return self.connection.is_connected()
