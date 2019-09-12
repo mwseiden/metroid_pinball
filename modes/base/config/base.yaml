@@ -116,7 +116,7 @@ timers:
     tick_interval: 1s
     control_events:
       - event: twitch_flip_left
-        action: enable
+        action: start
       - event: timer_base_twitch_left_flipper_timer_complete
         action: restart
       - event: timer_base_twitch_left_flipper_timer_complete
@@ -126,7 +126,7 @@ timers:
     tick_interval: 1s
     control_events:
       - event: twitch_flip_right
-        action: enable
+        action: start
       - event: timer_base_twitch_right_flipper_timer_complete
         action: restart
       - event: timer_base_twitch_right_flipper_timer_complete
