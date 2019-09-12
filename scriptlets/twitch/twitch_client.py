@@ -5,7 +5,7 @@ import logging
 import textwrap
 
 class TwitchClient(irc.bot.SingleServerIRCBot):
-    TWITCH_PLAYS_ENABLED = True
+    TWITCH_PLAYS_ENABLED = False
 
     def __init__(self, machine, username, password, channel):
         self.log = logging.getLogger('TwitchClient') 
