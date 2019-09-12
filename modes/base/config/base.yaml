@@ -118,9 +118,9 @@ timers:
       - event: twitch_flip_left
         action: start
       - event: timer_base_twitch_left_flipper_timer_complete
-        action: restart
+        action: reset
       - event: timer_base_twitch_left_flipper_timer_complete
-        action: disable
+        action: stop
   base_twitch_right_flipper_timer:
     end_value: 3
     tick_interval: 1s
@@ -128,9 +128,9 @@ timers:
       - event: twitch_flip_right
         action: start
       - event: timer_base_twitch_right_flipper_timer_complete
-        action: restart
+        action: reset
       - event: timer_base_twitch_right_flipper_timer_complete
-        action: disable
+        action: stop
 
 
 show_player:
