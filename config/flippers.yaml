@@ -5,6 +5,8 @@ flippers:
     main_coil: c_flipper_right_main
     activation_switch: s_right_flipper
     #eos_switch: s_right_flipper_eos
+    sw_flip_events: twitch_flip_right
+    sw_release_events: twitch_unflip_right
   left_flipper:
     main_coil: c_flipper_left_main
     activation_switch: s_left_flipper

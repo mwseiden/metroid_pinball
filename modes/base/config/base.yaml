@@ -111,6 +111,26 @@ timers:
     control_events:
       - event: dirty_pool_possible
         action: restart
+  base_twitch_left_flipper_timer:
+    end_value: 3
+    tick_interval: 1s
+    control_events:
+      - event: twitch_flip_left
+        action: enable
+      - event: timer_base_twitch_left_flipper_timer_complete
+        action: restart
+      - event: timer_base_twitch_left_flipper_timer_complete
+        action: disable
+  base_twitch_right_flipper_timer:
+    end_value: 3
+    tick_interval: 1s
+    control_events:
+      - event: twitch_flip_right
+        action: enable
+      - event: timer_base_twitch_right_flipper_timer_complete
+        action: restart
+      - event: timer_base_twitch_right_flipper_timer_complete
+        action: disable
 
 
 show_player:
@@ -387,6 +407,8 @@ event_player:
       speed: 1
       repeat: 1
       direction: left
+  timer_base_twitch_left_flipper_timer_complete: twitch_unflip_left
+  timer_base_twitch_right_flipper_timer_complete: twitch_unflip_right
   #s_behind_drop_1_active{device.switches.s_drop_target_1.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
   #s_behind_drop_2_active{device.switches.s_drop_target_2.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
   #s_behind_drop_3_active{device.switches.s_drop_target_3.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
