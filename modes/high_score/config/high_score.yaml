@@ -32,6 +32,8 @@ high_score:
       - ORBIT CHAMP
   - lanes:
       - INSANE LANES
+  - bridges:
+      - BRIDGE DESTROYER
 
   # set the defaults
   defaults:
@@ -53,6 +55,8 @@ high_score:
       - BLZ: 5
     lanes:
       - GRN: 10
+    bridges:
+      - GNZ: 1
 
 
 
