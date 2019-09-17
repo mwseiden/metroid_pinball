@@ -58,6 +58,12 @@ show_player:
     room_2d_underwater:
       loops: -1
       speed: 10
+  show_mode_status_report:
+    room_2d_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_2d_status_report:
+      action: stop
 
 event_player:
   mode_room_2d_abyss_started:

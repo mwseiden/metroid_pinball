@@ -47,7 +47,7 @@
         min_digits: 2
         style: dmd_big
 
-- duration: 3s
+- duration: 5s
   slides:
     base_status_report_stuff_slide:
       widgets:
