@@ -1,0 +1,26 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_1b_status_slide_splash:
+      widgets:
+      - type: image
+        image: room_1b_splash
+
+
+- duration: 5s
+  slides:
+    room_1b_status_slide_help:
+      widgets:
+      - type: Text
+        text: Shoot left and right orbits
+        color: '00ffff'
+        style: dmd_med
+        y: 14
+        anchor_y: bottom
+      - type: Text
+        text: then shoot scoop
+        color: 'ffff00'
+        style: dmd_med
+        y: 12
+        anchor_y: top
