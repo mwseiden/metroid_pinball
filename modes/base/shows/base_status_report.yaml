@@ -52,18 +52,18 @@
     base_status_report_stuff_slide:
       widgets:
       - type: text
-        text: Missiles: (player|missiles)
+        text: Missiles (player|missiles)
         style: dmd_small
         y: 25
       - type: text
-        text: Power Bombs: (player|power_bombs)
+        text: Power Bombs (player|power_bombs)
         style: dmd_small
         y: 19
       - type: text
-        text: Bridges: (player|bridges)
+        text: Bridges (player|bridges)
         style: dmd_small
         y: 13
       - type: text
-        text: Locks Until MB: (player|captive_ball_counter_value)
+        text: Locks Until MB (player|captive_ball_counter_value)
         style: dmd_small
         y: 7
