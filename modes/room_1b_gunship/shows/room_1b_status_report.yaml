@@ -16,7 +16,7 @@
         text: Shoot left
         color: '00ffff'
         style: dmd_med
-        y: 20
+        y: 24
       - type: Text
         text: and right orbits
         color: '00ffff'
@@ -25,4 +25,4 @@
         text: then shoot scoop
         color: 'ffff00'
         style: dmd_med
-        y: 12
+        y: 8
