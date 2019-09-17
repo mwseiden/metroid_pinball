@@ -13,14 +13,16 @@
     room_1b_status_slide_help:
       widgets:
       - type: Text
-        text: Shoot left and right orbits
+        text: Shoot left
         color: '00ffff'
         style: dmd_med
-        y: 14
-        anchor_y: bottom
+        y: 20
+      - type: Text
+        text: and right orbits
+        color: '00ffff'
+        style: dmd_med
       - type: Text
         text: then shoot scoop
         color: 'ffff00'
         style: dmd_med
         y: 12
-        anchor_y: top
