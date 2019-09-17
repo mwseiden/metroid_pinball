@@ -5,7 +5,7 @@
     room_2b_status_slide_splash:
       widgets:
       - type: image
-        image: room_2b_abyss_splash
+        image: room_2d_abyss_splash
 
 
 - duration: 5s
