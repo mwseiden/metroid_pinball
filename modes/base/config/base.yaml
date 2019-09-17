@@ -324,6 +324,13 @@ show_player:
         led_3: led_pop_3
         color_1: 'FF0000'
         color_2: '000000'
+  flipper_cradle:
+    base_status_report:
+      loops: 0
+      events_when_completed: show_mode_status_report
+  flipper_cradle_release:
+    base_status_report:
+      action: stop
 
 
 slide_player:
