@@ -1,0 +1,30 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_1b_victory_status_slide_splash:
+      widgets:
+      - type: image
+        image: room_1b_victory_splash
+
+
+- duration: 5s
+  slides:
+    room_1b_victory_status_slide_help:
+      widgets:
+      - type: Text
+        text: Hit switches to
+        color: dmd_blue
+        style: dmd_med
+        y: 25
+      - type: Text
+        text: scan planet
+        color: dmd_blue
+        style: dmd_med
+        y: 17
+      - type: text
+        text: Planet (player|room_1b_victory_scan_percent)% Scanned
+        color: yellow
+        style: dmd_med
+        y: 7
+
