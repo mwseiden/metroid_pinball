@@ -5,6 +5,12 @@
     lanes_complete_slide:
       widgets:
       - type: text
-        text: LANES!
+        text: BALL SAVE
         style: dmd_big
         color: green
+        y: 20
+      - type: text
+        text: COLLECTED
+        style: dmd_big
+        color: green
+        y: 11
