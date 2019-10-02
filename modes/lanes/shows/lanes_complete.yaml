@@ -8,7 +8,7 @@
         text: BALL SAVE
         style: dmd_big
         color: green
-        y: 20
+        y: 22
       - type: text
         text: COLLECTED
         style: dmd_big
