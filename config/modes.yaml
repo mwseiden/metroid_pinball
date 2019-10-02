@@ -12,7 +12,7 @@ modes:
   - match
   - miniboss
   - missiles
-#  - pop_bumpers
+  - pop_bumpers
   - power_bombs
   - room_1b_gunship
   - room_1b_gunship_victory
