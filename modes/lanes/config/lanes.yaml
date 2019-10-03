@@ -78,6 +78,7 @@ show_player:
   lanes_shot_group_lit_complete:
     lanes_complete:
       loops: 0
+      priority: 300
 
 event_player:
   mode_lanes_starting: lanes_disable_ball_save
