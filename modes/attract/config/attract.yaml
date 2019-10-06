@@ -41,7 +41,7 @@ show_player:
       loops: 0
       priority: 300
   slide_last_game_high_scores_active:
-    lights_purple_spotlight:
+    attract_water:
       action: stop
     lights_rainbow_blurred:
       loops: -1
@@ -141,11 +141,17 @@ show_player:
   slide_rudy_slide_active:
     lights_fire:
       action: stop
-     rudy_tas:
+    rudy_tas:
       loops: -1
-      speed: 11
+      speed: 19
   slide_erin_slide_active:
     rudy_tas:
+      action: stop
+    attract_pinball_monkey:
+      loops: -1
+      speed: 15
+  slide_rubber_ducks_slide_active:
+    attract_pinball_monkey:
       action: stop
     lights_fire:
       loops: -1
@@ -156,6 +162,12 @@ show_player:
     lights_purple_spotlight:
       loops: -1
       speed: 20
+  slide_attract_special_thanks_slide_active:
+    lights_purple_spotlight:
+      action: stop
+    attract_water:
+      loops: -1
+      speed: 8
 
 animations:
   high_score_scroll_up:
@@ -165,6 +177,16 @@ animations:
       duration: 8s
     - property: y
       value: -140
+      relative: true
+      duration: 0s
+      repeat: true
+  special_thanks_scroll_up:
+    - property: y
+      value: 150
+      relative: true
+      duration: 8s
+    - property: y
+      value: -150
       relative: true
       duration: 0s
       repeat: true
@@ -242,6 +264,13 @@ event_player:
       min_length: 2
       max_length: 16
       color: "401040"
+  slide_attract_special_thanks_slide_active:
+    cmd_backbox_show:
+      show_type: pour
+      count: 6
+      min_length: 3
+      max_length: 10
+      color: "000040"
 
 
   mode_attract_stopping:

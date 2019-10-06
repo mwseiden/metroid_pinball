@@ -12,19 +12,19 @@
         y: 32
       - type: text
         text: (machine|twitch_last_chat_message_line_1)
-        color: 009cff
+        color: dmd_blue
         style: dmd_small
         anchor_y: top
         y: 20
       - type: text
         text: (machine|twitch_last_chat_message_line_2)
-        color: 009cff
+        color: dmd_blue
         style: dmd_small
         anchor_y: top
         y: 14
       - type: text
         text: (machine|twitch_last_chat_message_line_3)
-        color: 009cff
+        color: dmd_blue
         style: dmd_small
         anchor_y: top
         y: 8

@@ -259,6 +259,9 @@ slide_player:
     room_1r_super_kill_slide:
       expire: 3.4s
 
+sound_player:
+  multiball_room_1r_battle_started: multiball_alt_3
+
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 0}: room_1r_start_timer

@@ -9,8 +9,8 @@ modes:
   - emergency_landing
   - high_score
   - lanes
-  - left_targets
   - match
+  - miniboss
   - missiles
   - pop_bumpers
   - power_bombs
@@ -18,8 +18,12 @@ modes:
   - room_1b_gunship_victory
   - room_1l_entryway
   - room_1r_space_pirate_battle
+  - room_1z_underground_desert
   - room_2a_shifting_sands
+  - room_2b_crevasse
+  - room_2d_abyss
   - room_2e_sandy_cavern
+  - room_2f_frozen_lake
   - room_2i_lava_jump
   - select_landing_site
   - side_targets
@@ -33,6 +37,7 @@ modes:
   - skillshot_side_targets
   - skillshot_unskilled
   - spin_jumps
+  - tilt
   - twitch_bits_multiball
   - upper_lanes
 

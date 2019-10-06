@@ -1,0 +1,10 @@
+#config_version=5
+
+named_colors:
+  door_blue: '6969ff'
+  door_green: '69ff69'
+  door_red: 'ff6969'
+  door_yellow: 'ffff69'
+  door_closed: '808080'
+  dmd_orange: 'E67300'
+  dmd_blue: '009cff'

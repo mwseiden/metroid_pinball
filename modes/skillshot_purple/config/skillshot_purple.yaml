@@ -4,6 +4,14 @@ mode:
   stop_events: skillshot_stage_one_end, skillshot_purple_success, skillshot_purple_failure
   priority: 500
 
+shots:
+  miniboss_skillshot_1_shot:
+    switch: s_purple_1
+  miniboss_skillshot_2_shot:
+    switch: s_purple_2
+  miniboss_skillshot_3_shot:
+    switch: s_purple_3
+
 timers:
   skillshot_purple_move:
     end_value: 4
@@ -37,12 +45,12 @@ event_player:
   timer_skillshot_purple_move_tick{ticks == 1}: skillshot_purple_center_lit
   timer_skillshot_purple_move_tick{ticks == 2}: skillshot_purple_right_lit
   timer_skillshot_purple_move_tick{ticks == 3}: skillshot_purple_center_lit
-  purple_1_shot_hit{current_player.skillshot_purple_lit == 0}: skillshot_purple_success
-  purple_1_shot_hit{current_player.skillshot_purple_lit != 0}: skillshot_purple_failure
-  purple_2_shot_hit{current_player.skillshot_purple_lit == 1}: skillshot_purple_success
-  purple_2_shot_hit{current_player.skillshot_purple_lit != 1}: skillshot_purple_failure
-  purple_3_shot_hit{current_player.skillshot_purple_lit == 2}: skillshot_purple_success
-  purple_3_shot_hit{current_player.skillshot_purple_lit != 2}: skillshot_purple_failure
+  miniboss_skillshot_1_shot_hit{current_player.skillshot_purple_lit == 0}: skillshot_purple_success
+  miniboss_skillshot_1_shot_hit{current_player.skillshot_purple_lit != 0}: skillshot_purple_failure
+  miniboss_skillshot_2_shot_hit{current_player.skillshot_purple_lit == 1}: skillshot_purple_success
+  miniboss_skillshot_2_shot_hit{current_player.skillshot_purple_lit != 1}: skillshot_purple_failure
+  miniboss_skillshot_3_shot_hit{current_player.skillshot_purple_lit == 2}: skillshot_purple_success
+  miniboss_skillshot_3_shot_hit{current_player.skillshot_purple_lit != 2}: skillshot_purple_failure
 
 variable_player:
   skillshot_purple_left_lit:

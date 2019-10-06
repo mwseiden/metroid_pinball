@@ -21,8 +21,8 @@ Starting The Game
 
     On every ball except the first, you will have the opportunity to choose to
     continue playing in the room where you left off. This currently does not
-    have much use. But if you fell into the pit in Maridia you probably don't
-    want to continue down there!
+    have much use for any area except Maridia.
+
 
 Skillshots
 
@@ -80,7 +80,7 @@ Base Game Mechanics
 
     Missiles:
         Collect missiles by completing the lower left, small standup bank.
-        This adds to your bonus.
+        This adds to your bonus and allows you to open RED doors.
 
     Power Bombs:
         Collect a power bomb by completing the right standup bank. This adds
@@ -138,7 +138,10 @@ Base Game Mechanics
         yet.
 
     Miniboss Targets:
-        Scores points when hit and more points when complete.
+        Complete three banks, red, orange, and green. Afterwards the scoop
+        will be lit. Hitting the scoop resets to the begining. Score points
+        for each hit and completion. More points are scored the further you
+        get. But when it resets so do the points.
 
     Side Targets:
         Scores points when hit and more points when complete.
@@ -155,40 +158,199 @@ Base Game Mechanics
         Scores points.
 
     Doors:
-        They don't exist yet. Just be aware that they will! This will be how
-        you change modes in game and travel further into the planet to fight
-        bosses.
+        Doors are how you change modes in game and travel further into the
+        planet to fight bosses. Doors are shots with certain solid colors.
+        There are a few types of doors and each has a different requirement in
+        order to pass through them.
 
-Modes
+        Blue:
+            No special requirement. Hitting the shot will travel to another
+            room and start (or continue) that new mode.
 
-    Crateria:
+
+World Map
+                                Wrecked Ship
+                                [H]-[I]-[J]
+                                     |
+                                    [K]
+                  Crateria           |
+                    [A]-[B]-[C]-[D]=[L]-[M]
+   Tourian           |       =       |
+[r]-[s]-[t]-[u]=[E]-[F]-[G]  =      [N]
+                     =       =       |
+           Brinstar [R]-[S]-[T] [O]-[P]-[Q]
+                     |       |           =
+                    [U]     [V]     [Z]-[a]-[b]~[?]
+                     |       |       |   v   |  Maridia
+                [?]~[W]-[X]-[Y]=[c]-[d]-[e]-[f]
+                                 |   |
+                                [g]-[h]
+                                     =
+                                    [i]-[j] [k]
+                        Norfair      |       |
+                                [l]-[m]-[n]-[o]-[p]
+                                         |       ~
+                                        [q]     [?]
+
+
+
+Landing Sites
+
+    Brinstar [R]:
+        Fight the space pirates. The first time here will be a 2 ball
+        multiball. First you must hit the roving purple shot. Then most of the
+        playfield will light up. Hit 4 lit shots to complete the mode.
+
+    Crateria [B]:
         You must land the ship. First shoot the left and right orbits to
         steer. Then shoot the scoop to land.
 
         Once landed you can scan the site by hitting switches. It takes 200
         switches to scan to 100%
 
-    Brinstar:
-        Fight the space pirates. The first time here will be a 2 ball
-        multiball. First you must hit the roving purple shot. Then most of the
-        playfield will light up. Hit 4 lit shots to complete the mode.
-
-    Wrecked Ship:
-        Does nothing extra except play calming music.
-
-    Maridia:
+    Maridia [a]:
         Don't sink in the quicksand! Hit blinking standup target banks to add
         time. You can't hit the same bank twice in a row. The side bank awards
         8 seconds, missile and bomb banks award 4 seconds, miniboss targets
         award 2 seconds.
 
-        You gain points as long as you don't sink. Points increase the longer
-        last.
+        You gain points as long as you don't sink. Points per second increases
+        the longer you last.
 
-        Sinking puts you in the sand pit. There are no special rules here.
+        Sinking puts you in the Sandy Cavern [e].
 
-    Norfair:
+        Doors:
+            Secret Passage (Blue) -> Underground Desert [Z]
+            Right Orbit (Blue) -> Crevasse [b]
+
+    Norfair [i]:
         Jump over the lava. Complete the 4 flashing shots to light the side
         ramp for the jackpot. This is repeatable.
 
+    Wrecked Ship [L]:
+        Does nothing extra except play calming music.
+
+
+Rooms (Modes)
+
+    Brinstar:
+
+        Map:
+             =       =
+            [R]-[S]-[T]
+             |       |
+            [U]     [V]
+             |       |
+        [?]~[W]-[X]-[Y]=
+
+        Space Pirate Battle/Communication Center [R]:
+
+            See Brinstar Landing Site for rules
+
+
+    Crateria:
+
+        Map:
+             [A]-[B]-[C]-[D]=
+              |       =
+        =[E]-[F]-[G]  =
+              =       =
+
+        Land The Gunship/Landing Site [B]:
+
+            See Crateria Landing Site for rules
+
+
+    Maridia:
+
+        Map:
+                  =
+             [Z]-[a]-[b]~[?]
+              |   v   |
+        =[c]-[d]-[e]-[f]
+          |   |
+         [g]-[h]
+
+        Underground Desert [Z]:
+
+            Rules unimplemented
+
+            Doors:
+                 Secret Passage (Blue) -> The Abyss [d]
+                 Right Orbit (Blue) -> Shifting Sands [a]
+
+        Shifting Sands [a]:
+
+            See Maridia Landing Site for rules
+
+        Crevasse [b]:
+
+            Rules Unimplemented
+
+            Doors:
+                Left Orbit (Blue) -> Shifting Sands [a]
+                Star Rollover (Blue) -> Frozen Lake [f]
+
+        The Abyss [d]:
+
+            2x Bridge Scoring
+
+            Doors:
+                Left Orbit (Blue) -> Shifting Sands [a]
+                Right Orbit (Red) -> Sandy Cavern [e]
+
+        Sandy Cavern [e]:
+
+            Rules Unimplemented
+
+            Doors:
+                Left Orbit (Red) -> The Abyss [d]
+                Star Rollover (Red) -> Frozen Lake [f]
+
+        Frozen Lake [f]:
+
+            Rules Unimplemented
+
+            Doors:
+                Secret Passage (Red) -> Sandy Cavern [e]
+                Side Ramp (Blue) -> Crevasse [b]
+
+    Norfair:
+
+        Map:
+             =
+            [i]-[j] [k]
+             |       |
+        [l]-[m]-[n]-[o]-[p]
+                 |       ~
+                [q]     [?]
+
+        Lava Jump [i]:
+
+            See Norfair Landing Site for rules
+
+
+    Tourian:
+
+        Map:
+        [r]-[s]-[t]-[u]=
+
+
+    Wrecked Ship:
+
+        Map:
+        [H]-[I]-[J]
+             |
+            [K]
+             |
+           =[L]-[M]
+             |
+            [N]
+             |
+        [O]-[P]-[Q]
+             =
+
+        Entryway [L]:
+
+            See Wrecked Ship Landing Site for rules
 

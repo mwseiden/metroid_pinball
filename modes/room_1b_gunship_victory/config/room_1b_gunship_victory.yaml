@@ -29,6 +29,12 @@ show_player:
       loops: -1
       show_tokens:
         color: '606070'
+  show_mode_status_report:
+    room_1b_victory_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1b_victory_status_report:
+      action: stop
 
 slide_player:
   player_room_1b_victory_scan_percent{value % 10 == 0}: room_1b_victory_progress_slide
@@ -65,6 +71,12 @@ event_player:
       max_cutoff: 8
       color1: "040404"
       color2: "04100C"
+  show_mode_status_report:
+    room_1b_victory_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1b_victory_status_report:
+      action: stop
 
 
 variable_player:

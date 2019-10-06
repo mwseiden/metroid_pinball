@@ -64,13 +64,21 @@ shot_groups:
       - right_outlane_shot
       - left_inlane_shot
       - right_inlane_shot
-      - spinner_shot
       - pop_subway_shot
       - rollover_shot
       - shatz_shot
-      - purple_1_shot
-      - purple_2_shot
-      - purple_3_shot
+      - miniboss_level_1_1_shot
+      - miniboss_level_1_2_shot
+      - miniboss_level_1_3_shot
+      - miniboss_level_2_1_shot
+      - miniboss_level_2_2_shot
+      - miniboss_level_2_3_shot
+      - miniboss_level_3_1_shot
+      - miniboss_level_3_2_shot
+      - miniboss_level_3_3_shot
+      - miniboss_level_4_1_shot
+      - miniboss_level_4_2_shot
+      - miniboss_level_4_3_shot
       - captive_shot
       - side_1_shot
       - side_2_shot
@@ -102,9 +110,49 @@ timers:
     control_events:
       - event: dirty_pool_possible
         action: restart
+  base_twitch_left_flipper_timer:
+    end_value: 2
+    tick_interval: 1s
+    control_events:
+      - event: twitch_flip_left
+        action: start
+      - event: timer_base_twitch_left_flipper_timer_complete
+        action: reset
+      - event: timer_base_twitch_left_flipper_timer_complete
+        action: stop
+  base_twitch_right_flipper_timer:
+    end_value: 2
+    tick_interval: 1s
+    control_events:
+      - event: twitch_flip_right
+        action: start
+      - event: timer_base_twitch_right_flipper_timer_complete
+        action: reset
+      - event: timer_base_twitch_right_flipper_timer_complete
+        action: stop
 
 
 show_player:
+  base_start_single_player:
+    base_single_player:
+      key: base_score_loop
+      loops: -1
+  base_start_multi_player_one:
+    base_multi_player_one:
+      key: base_score_loop
+      loops: -1
+  base_start_multi_player_two:
+    base_multi_player_two:
+      key: base_score_loop
+      loops: -1
+  base_start_multi_player_three:
+    base_multi_player_three:
+      key: base_score_loop
+      loops: -1
+  base_start_multi_player_four:
+    base_multi_player_four:
+      key: base_score_loop
+      loops: -1
   full_shatz_hit:
     base_full_shatz:
       loops: 0
@@ -275,10 +323,17 @@ show_player:
         led_3: led_pop_3
         color_1: 'FF0000'
         color_2: '000000'
+  flipper_cradle:
+    base_status_report:
+      loops: 0
+      priority: 1000
+      events_when_completed: show_mode_status_report
+  flipper_cradle_release:
+    base_status_report:
+      action: stop
 
 
 slide_player:
-  mode_base_started: score_slide
   player_added:
     new_player_slide:
       priority: 1000
@@ -345,6 +400,22 @@ event_player:
       speed: 1
       repeat: 20
       direction: left
+  twitch_flip_left:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "432c6f"
+      speed: 1
+      repeat: 1
+      direction: right
+  twitch_flip_right:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "432c6f"
+      speed: 1
+      repeat: 1
+      direction: left
+  timer_base_twitch_left_flipper_timer_complete: twitch_unflip_left
+  timer_base_twitch_right_flipper_timer_complete: twitch_unflip_right
   #s_behind_drop_1_active{device.switches.s_drop_target_1.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
   #s_behind_drop_2_active{device.switches.s_drop_target_2.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
   #s_behind_drop_3_active{device.switches.s_drop_target_3.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
@@ -355,6 +426,14 @@ event_player:
   player_added{num == 2}: base_sound_player_2
   player_added{num == 3}: base_sound_player_3
   player_added{num == 4}: base_sound_player_4
+  player_added{current_player.number == 1}: base_start_multi_player_one
+  player_added{current_player.number == 2}: base_start_multi_player_two
+  player_added{current_player.number == 3}: base_start_multi_player_three
+  mode_base_started{game.num_players == 1}: base_start_single_player
+  mode_base_started{game.num_players > 1 and current_player.number == 1}: base_start_multi_player_one
+  mode_base_started{game.num_players > 1 and current_player.number == 2}: base_start_multi_player_two
+  mode_base_started{game.num_players > 1 and current_player.number == 3}: base_start_multi_player_three
+  mode_base_started{game.num_players > 1 and current_player.number == 4}: base_start_multi_player_four
 
 variable_player:
   left_orbit_hit:

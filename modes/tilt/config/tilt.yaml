@@ -1,0 +1,95 @@
+#config_version=5
+mode:
+  code: mpf.modes.tilt.code.tilt.Tilt
+  priority: 1000000
+  start_events: machine_reset_phase_3
+  game_mode: False
+  stop_on_ball_end: False
+
+tilt:
+  tilt_warning_switch_tag: tilt_warning
+  tilt_switch_tag: tilt
+  slam_tilt_switch_tag: slam_tilt
+  warnings_to_tilt: 3
+  multiple_hit_window: 300ms
+  settle_time: 5s
+  tilt_warnings_player_var: tilt_warnings
+
+slide_player:
+  tilt_warning_1:
+    tilt_metroid_warning_1:
+      priority: 1
+  tilt_warning_2:
+    tilt_metroid_warning_2:
+      priority: 1
+  tilt:
+    tilt_metroid:
+      priority: 1
+  tilt_clear:
+    tilt_metroid:
+      action: remove
+
+slides:
+  tilt_metroid_warning_1:
+    widgets:
+    - type: text
+      text: WARNING
+      style: dmd_big
+      color: red
+    expire: 1s
+  tilt_metroid_warning_2:
+    widgets:
+    - type: text
+      text: WARNING
+      y: 17
+      anchor_y: bottom
+      style: dmd_big
+      color: red
+    - type: text
+      text: WARNING
+      y: 15
+      anchor_y: top
+      style: dmd_big
+      color: red
+    expire: 2s
+  tilt_metroid:
+  - type: text
+    text: TILT
+    style: dmd_big
+    color: red
+    
+sounds:
+  tilt_warning:
+    file: tilt_warning.wav
+    streaming: False
+    track: voice
+    priority: 100
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  tilted:
+    file: tilted.wav
+    streaming: False
+    track: voice
+    priority: 100
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+
+
+sound_player:
+  tilt_warning_1: tilt_warning
+  tilt_warning_2:
+    tilt_warning:
+      loops: 1
+  tilt: tilted

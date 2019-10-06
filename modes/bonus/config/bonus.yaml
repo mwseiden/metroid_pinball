@@ -105,4 +105,4 @@ event_player:
       show_type: none
 
 sound_player:
-  mode_bonus_started: bonus
+  bonus_start: bonus

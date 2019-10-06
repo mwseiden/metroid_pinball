@@ -254,6 +254,7 @@ switches:
     tags: playfield_active
   s_tilt:
     number: 2-14
+    tags: tilt_warning
     platform_settings:
       debounce_close: 10
       debounce_open: 10

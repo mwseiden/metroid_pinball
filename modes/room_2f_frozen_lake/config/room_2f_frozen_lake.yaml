@@ -1,0 +1,88 @@
+#config_version=5
+mode:
+  start_events: room_2f_continue, room_2f_enter
+  stop_events: game_ending, ball_ending, room_2e_enter, room_2b_enter
+  priority: 300
+
+shots:
+  room_2f_exit_west_closed_shot:
+    switch: s_left_passage
+    profile: exit_door
+    enable_events: room_2f_enable_west_missile_door
+    disable_events: room_2f_disable_west_missile_door, room_2f_open_west_door
+    reset_events: room_2f_disable_west_missile_door, room_2f_open_west_door
+    show_tokens:
+      led: led_enter_secret_passage
+      color: door_red
+  room_2f_exit_north_shot:
+    hit_events: side_ramp_shot_hit
+    profile: exit_door
+    enable_events: mode_room_2f_frozen_lake_started
+    disable_events: room_2f_exit_north_shot_hit
+    reset_events: room_2f_exit_north_shot_hit
+    show_tokens:
+      led: led_enter_side_ramp
+      color: door_blue
+  room_2f_exit_west_shot:
+    switch: s_left_passage
+    profile: exit_door
+    enable_events: room_2f_enable_west_door
+    disable_events: room_2f_disable_west_door
+    reset_events: room_2f_disable_west_door
+    show_tokens:
+      led: led_enter_secret_passage
+      color: door_blue
+
+slides:
+  room_2f_frozen_lake_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2f_frozen_lake_backglass
+    transition: fade
+    transition_out: fade
+  room_2f_frozen_lake_splash_slide:
+    widgets:
+      - type: image
+        image: room_2f_frozen_lake_splash
+
+slide_player:
+  mode_room_2f_frozen_lake_started:
+    room_2f_frozen_lake_backglass_slide:
+      target: backglass
+    room_2f_frozen_lake_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_2f_frozen_lake_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: '808080'
+        color2: '808080'
+
+event_player:
+  mode_room_2f_frozen_lake_started:
+    cmd_backbox_show:
+      show_type: two_tone
+      min_cutoff: 1
+      max_cutoff: 9
+      color1: "404020"
+      color2: "202040"
+  mode_room_2f_frozen_lake_started{current_player.door_2e_2f == 0}: room_2f_enable_west_missile_door, room_2f_disable_west_door
+  mode_room_2f_frozen_lake_started{current_player.door_2e_2f == 1}: room_2f_enable_west_door, room_2f_disable_west_missile_door
+  room_2f_exit_west_closed_shot_hit{current_player.missiles > 0}: room_2f_open_west_door
+  room_2f_open_west_door: room_2f_exit_west_shot_hit
+  room_2f_exit_north_shot_hit: room_2b_enter
+  room_2f_exit_west_shot_hit: room_2e_enter
+
+variable_player:
+  mode_room_2f_frozen_lake_started:
+    continue_room:
+      string: 2f
+      action: set
+  room_2f_open_west_door:
+    missiles: -1
+    door_2e_2f:
+      int: 1
+      action: set

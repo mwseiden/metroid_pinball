@@ -1,5 +1,8 @@
 #config_version=5
 
+sound_player:
+  machine_reset_phase_3: harmony_metroid
+
 sound_system:
   buffer: 1024
   channels: 2
@@ -9,7 +12,7 @@ sound_system:
   tracks:
     music:
       type: standard
-      simultaneous_sounds: 1
+      simultaneous_sounds: 2
       volume: 0.25
     voice:
       type: standard

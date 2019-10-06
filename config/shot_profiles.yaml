@@ -1,0 +1,8 @@
+#config_version=5
+
+shot_profiles:
+  exit_door:
+    states:
+    - name: lit
+      show: led_color
+      loops: -1

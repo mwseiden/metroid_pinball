@@ -1,0 +1,74 @@
+#config_version=5
+
+# https://commons.wikimedia.org/w/index.php?search=desert+cave&title=Special:Search&go=Go&ns0=1&ns6=1&ns12=1&ns14=1&ns100=1&ns106=1#/media/File:Sonora_Desert_Museum_cave_-_Flickr_-_gailhampshire_(1).jpg
+# https://commons.wikimedia.org/w/index.php?search=desert+cave&title=Special:Search&go=Go&ns0=1&ns6=1&ns12=1&ns14=1&ns100=1&ns106=1#/media/File:GaraCaveInside4.jpg
+
+mode:
+  start_events: room_1z_continue, room_1z_enter
+  stop_events: game_ending, ball_ending, room_2a_enter, room_2d_enter
+  priority: 300
+
+shots:
+  room_1z_exit_east_shot:
+    hit_events: right_orbit_hit
+    profile: exit_door
+    enable_events: mode_room_1z_underground_desert_started
+    disable_events: room_1z_exit_east_shot_hit
+    reset_events: room_1z_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_right_orbit
+      color: door_blue
+  room_1z_exit_south_shot:
+    switch: s_left_passage
+    profile: exit_door
+    enable_events: mode_room_1z_underground_desert_started
+    disable_events: room_1z_exit_south_shot_hit
+    reset_events: room_1z_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_secret_passage
+      color: door_blue
+
+slides:
+  room_underground_desert_backglass_slide:
+    widgets:
+      - type: image
+        image: room_underground_desert_backglass
+    transition: fade
+    transition_out: fade
+  room_underground_desert_splash_slide:
+    widgets:
+      - type: image
+        image: room_underground_desert_splash
+
+slide_player:
+  mode_room_1z_underground_desert_started:
+    room_underground_desert_backglass_slide:
+      target: backglass
+    room_underground_desert_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_1z_underground_desert_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: 'FFC000'
+        color2: '8080FF'
+
+event_player:
+  mode_room_1z_underground_desert_started:
+    cmd_backbox_show:
+      show_type: pour
+      count: 1
+      min_length: 4
+      max_length: 12
+      color: "200C00"
+  room_1z_exit_east_shot_hit: room_2a_enter
+  room_1z_exit_south_shot_hit: room_2d_enter
+
+variable_player:
+  mode_room_1z_underground_desert_started:
+    continue_room:
+      string: 1z
+      action: set

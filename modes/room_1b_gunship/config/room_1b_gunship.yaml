@@ -2,7 +2,6 @@
 mode:
     start_events: select_landing_site_crateria_selected, room_1b_continue
     stop_events: game_ending, ball_ending, room_1b_success, room_1b_already_complete
-    #restart_on_next_ball: true
     priority: 300
 
 accruals:
@@ -60,7 +59,6 @@ show_player:
       show_tokens:
         color: '404080'
         color2: "808080"
-
   mode_room_1b_gunship_started{current_player.room_1b_step_1a == 0}:
     blink_light:
       key: room_1b_left_orbit_blink
@@ -82,6 +80,12 @@ show_player:
       show_tokens:
         led: led_enter_scoop
         color: ffff00
+  show_mode_status_report:
+    room_1b_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1b_status_report:
+      action: stop
 
 event_player:
   room_1b_gunship_landing_animated:

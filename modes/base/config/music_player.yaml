@@ -5,9 +5,53 @@ sound_player:
   mode_room_1b_gunship_victory_started{machine.next_game_acapella == 0}: music_crateria
   mode_room_1l_entryway_started{machine.next_game_acapella == 0}: music_wrecked_ship
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0}: music_brinstar
-  mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia
-  mode_room_2e_sandy_cavern_started{machine.next_game_acapella == 0}: music_maridia
+  mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia_intro
+  mode_room_2b_crevasse_started{machine.next_game_acapella == 0}:
+    music_maridia_snow:
+      action: play
+      fade_in: 2s
+  mode_room_2f_frozen_lake_started{machine.next_game_acapella == 0}:
+    music_maridia_snow:
+      action: play
+      fade_in: 2s
+  mode_room_1z_underground_desert_started{machine.next_game_acapella == 0}: music_maridia_intro
+  mode_room_2d_abyss_started{machine.next_game_acapella == 0}:
+    music_maridia:
+      action: play
+      fade_in: 2s
+  mode_room_2e_sandy_cavern_started{machine.next_game_acapella == 0}:
+    music_maridia:
+      action: play
+      fade_in: 2s
   mode_room_2i_lava_jump_started{machine.next_game_acapella == 0}: music_norfair
+  room_2a_sink_into_sand:
+    music_maridia_intro:
+      action: stop
+      fade_out: 1s
+  room_1z_enter:
+    music_maridia:
+      action: stop
+      fade_out: 1s
+  room_2a_enter:
+    music_maridia_snow:
+      action: stop
+      fade_out: 1s
+  room_2b_enter:
+    music_maridia_intro:
+      action: stop
+      fade_out: 1s
+  room_2d_enter:
+    music_maridia_intro:
+      action: stop
+      fade_out: 1s
+  room_2f_enter:
+    music_maridia:
+      action: stop
+      fade_out: 1s
+  room_2e_enter:
+    music_maridia_snow:
+      action: stop
+      fade_out: 1s
   mode_bonus_started:
     music_crateria:
       action: stop
@@ -22,5 +66,11 @@ sound_player:
       action: stop
       fade_out: 3s
     music_wrecked_ship:
+      action: stop
+      fade_out: 3s
+    music_maridia_intro:
+      action: stop
+      fade_out: 3s
+    music_maridia_snow:
       action: stop
       fade_out: 3s
