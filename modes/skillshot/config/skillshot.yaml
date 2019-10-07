@@ -1,7 +1,7 @@
 #config_version=5
 mode:
   start_events: mode_base_started, skillshot_should_start
-  stop_events: skillshot_monitor_should_end
+  stop_events: skillshot_monitor_end
   priority: 500
 
 shot_groups:
@@ -104,5 +104,6 @@ event_player:
   skillshot_unskilled_success: skillshot_stage_one_end
   skillshot_side_success: skillshot_stage_one_end
   skillshot_big_points_success: skillshot_stage_one_end
+  skillshot_monitor_should_end: skillshot_monitor_end, drop_target_mode_should_start
   ball_will_end: skillshot_stage_one_end
 
