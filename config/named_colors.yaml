@@ -8,3 +8,5 @@ named_colors:
   door_closed: '808080'
   dmd_orange: 'E67300'
   dmd_blue: '009cff'
+  drop_target_can_hit: '96ff00'
+

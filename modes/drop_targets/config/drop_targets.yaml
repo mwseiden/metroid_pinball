@@ -8,9 +8,6 @@ event_player:
     - drop_targets_enable_scoring:3.5s
     - cmd_reset_all_drops:3s
 
-named_colors:
-  drop_target_can_hit: '96ff00'
-
 shot_profiles:
   drop_target_hit_me:
     states:
