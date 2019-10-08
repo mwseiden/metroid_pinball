@@ -1,7 +1,8 @@
 #config_version=5
 mode:
-    start_events: drop_target_mode_should_start
-    priority: 100
+  code: drop_targets.DropTargets
+  start_events: drop_target_mode_should_start
+  priority: 100
 
 event_player:
   mode_drop_targets_started:
