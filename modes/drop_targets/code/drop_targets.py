@@ -21,4 +21,4 @@ class DropTargets(Mode):
         self.machine.events.post('drop_targets_start_three' if pattern[2] == 'U' else 'cmd_drop_three_down')
 
     def drop_status(self, name):
-        return 'U' if self.machine.drop_targets[name].up else 'D'
+        return 'D' if self.machine.drop_targets[name].complete else 'U'
