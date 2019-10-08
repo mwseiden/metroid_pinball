@@ -6,7 +6,7 @@ mode:
 event_player:
   mode_drop_targets_started:
     - drop_targets_enable_scoring:3.5s
-    - cmd_reset_all_drops:3s
+    - drop_targets_continue:3s
 
 shot_profiles:
   drop_target_hit_me:

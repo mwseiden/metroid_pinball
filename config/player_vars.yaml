@@ -30,6 +30,9 @@ player_vars:
     initial_value: 0
   door_2e_2f:
     initial_value: 0
+  drops_2i:
+    value_type: str
+    initial_value: 'DDU'
   emergency_landings:
     initial_value: 0
   has_chosen_landing_site:
