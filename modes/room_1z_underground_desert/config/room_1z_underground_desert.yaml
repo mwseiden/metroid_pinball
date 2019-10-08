@@ -67,6 +67,7 @@ event_player:
     drop_targets_continue:
   room_1z_exit_east_shot_hit: room_2a_enter
   room_1z_exit_south_shot_hit: room_2d_enter
+  mode_room_1z_underground_desert_ending: drop_targets_save
 
 variable_player:
   mode_room_1z_underground_desert_started:

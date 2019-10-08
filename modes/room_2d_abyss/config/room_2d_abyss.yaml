@@ -80,6 +80,7 @@ event_player:
   room_2d_open_east_door: room_2d_exit_east_shot_hit
   room_2d_exit_north_shot_hit: room_1z_enter
   room_2d_exit_east_shot_hit: room_2e_enter
+  mode_room_2d_abyss_ending: drop_targets_save
 
 
 variable_player:
