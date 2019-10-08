@@ -42,7 +42,7 @@ event_player:
   mode_room_template_started:
     cmd_backbox_show:
       show_type: fire
-  room_xx_enter: drop_targets_continue
+    drop_targets_continue:
 
 variable_player:
   mode_room_template_started:
