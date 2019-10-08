@@ -8,9 +8,10 @@ class DropTargets(Mode):
         self.add_mode_event_handler('drop_targets_continue', self.event_restore_drop_state)
 
     def mode_stop(self, **kwargs):
+        player = self.machine.game.player
         super().mode_stop(**kwargs)
 
-        self.machine.game.player['drops_{}'.format(player['continue_room'])] = self.drop_status('drop_one') + self.drop_status('drop_two') + self.drop_status('drop_three')
+        player['drops_{}'.format(player['continue_room'])] = self.drop_status('drop_one') + self.drop_status('drop_two') + self.drop_status('drop_three')
 
     def event_restore_drop_state(self, **kwargs):
         player = self.machine.game.player
