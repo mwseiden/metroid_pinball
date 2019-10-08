@@ -6,8 +6,11 @@ mode:
 
 event_player:
   mode_drop_targets_started:
-    - drop_targets_enable_scoring:3.5s
-    - drop_targets_continue:3s
+    - drop_targets_enable_scoring:1.5s
+    - drop_targets_continue:1s
+  drop_targets_start_one: cmd_drop_one_up, drop_targets_enable_shot_1
+  drop_targets_start_two: cmd_drop_two_up, drop_targets_enable_shot_2
+  drop_targets_start_three: cmd_drop_three_up, drop_targets_enable_shot_3
 
 shot_profiles:
   drop_target_hit_me:
@@ -20,7 +23,7 @@ shots:
     hit_events: drop_target_drop_one_down
     profile: drop_target_hit_me
     disable_events: mode_drop_targets_started, drop_target_drop_one_down
-    enable_events: drop_targets_enable_scoring
+    enable_events: drop_targets_enable_shot_1
     show_tokens:
       led: led_drop_1
       color: drop_target_can_hit
@@ -28,7 +31,7 @@ shots:
     hit_events: drop_target_drop_two_down
     profile: drop_target_hit_me
     disable_events: mode_drop_targets_started, drop_target_drop_two_down
-    enable_events: drop_targets_enable_scoring
+    enable_events: drop_targets_enable_shot_2
     show_tokens:
       led: led_drop_2
       color: drop_target_can_hit
@@ -36,7 +39,7 @@ shots:
     hit_events: drop_target_drop_three_down
     profile: drop_target_hit_me
     disable_events: mode_drop_targets_started, drop_target_drop_three_down
-    enable_events: drop_targets_enable_scoring
+    enable_events: drop_targets_enable_shot_3
     show_tokens:
       led: led_drop_3
       color: drop_target_can_hit
