@@ -92,6 +92,7 @@ event_player:
   room_2e_open_east_door: room_2e_exit_east_shot_hit
   room_2e_exit_west_shot_hit: room_2d_enter
   room_2e_exit_east_shot_hit: room_2f_enter
+  room_2e_enter: drop_targets_continue
 
 variable_player:
   mode_room_2e_sandy_cavern_started:

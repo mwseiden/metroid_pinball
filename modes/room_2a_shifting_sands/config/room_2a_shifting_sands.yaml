@@ -230,6 +230,7 @@ event_player:
     - room_2a_sink_into_sand
   room_2a_exit_west_shot_hit: room_1z_enter
   room_2a_exit_east_shot_hit: room_2b_enter
+  room_2a_enter: drop_targets_continue
 
 variable_player:
   mode_room_2a_shifting_sands_started:

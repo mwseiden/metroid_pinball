@@ -62,6 +62,7 @@ event_player:
       color2: "404050"
   room_2b_exit_west_shot_hit: room_2a_enter
   room_2b_exit_south_shot_hit: room_2f_enter
+  room_2b_enter: drop_targets_continue
 
 variable_player:
   mode_room_2b_crevasse_started:
