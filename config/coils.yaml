@@ -25,6 +25,7 @@ coils:
     number: 0-5
     allow_enable: true
     default_pulse_ms: 20
+    default_pulse_power: 0.90
   c_drop_1_down:
     number: 0-8
     default_hold_power: 0.8
@@ -59,12 +60,12 @@ coils:
     number: 0-13
     allow_enable: true
     default_hold_power: 0.125
-    default_pulse_ms: 20
+    default_pulse_ms: 22
   c_flipper_left_main:
     number: 0-14
     allow_enable: true
     default_hold_power: 0.125
-    default_pulse_ms: 20
+    default_pulse_ms: 22
   c_upper_slingshot:
     number: 0-15
     allow_enable: true
