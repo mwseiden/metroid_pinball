@@ -30,6 +30,18 @@ player_vars:
     initial_value: 0
   door_2e_2f:
     initial_value: 0
+  drops_1z:
+    value_type: str
+    initial_value: 'UDU'
+  drops_2a:
+    value_type: str
+    initial_value: 'UDD'
+  drops_2b:
+    value_type: str
+    initial_value: 'DDD'
+  drops_2d:
+    value_type: str
+    initial_value: 'DUD'
   drops_2i:
     value_type: str
     initial_value: 'DDU'
