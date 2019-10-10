@@ -7,6 +7,9 @@ mode:
   game_mode: False
   use_wait_queue: true
 
+sound_player:
+  high_score_enter_initials: music_high_score
+
 high_score:
   _overwrite: True
   enter_initials_timeout: 60
