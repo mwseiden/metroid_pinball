@@ -74,7 +74,7 @@ sound_player:
     music_maridia_snow:
       action: stop
       fade_out: 3s
-  mode_high_score_stopped:
+  mode_attract_started:
     music_high_score:
       action: stop
       fade_out: 15s
