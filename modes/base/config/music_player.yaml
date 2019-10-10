@@ -74,3 +74,11 @@ sound_player:
     music_maridia_snow:
       action: stop
       fade_out: 3s
+  high_score_enter_initials: music_high_score
+  mode_high_score_stopped:
+    music_high_score:
+      action: stop
+      fade_out: 15s
+  game_starting:
+    music_high_score:
+      action: stop
