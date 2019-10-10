@@ -3,6 +3,11 @@
 mode:
   code: attract.MyAttract
 
+sound_player:
+  mode_attract_stopping:
+    music_high_score:
+      action: stop
+
 show_player:
   mode_attract_started:
     attract_display_loop:

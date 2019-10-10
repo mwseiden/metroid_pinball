@@ -9,6 +9,10 @@ mode:
 
 sound_player:
   high_score_enter_initials: music_high_score
+  mode_high_score_stopping:
+    music_high_score:
+      action: stop
+      fade_out: 15s
 
 high_score:
   _overwrite: True
