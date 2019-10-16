@@ -674,7 +674,7 @@
         animations:
           show_slide: special_thanks_scroll_up
       - type: text
-        text: Victoria Chen
+        text: Victoria Shen
         y: -40
         style: dmd_med
         color: dmd_orange
@@ -742,7 +742,7 @@
           show_slide: special_thanks_scroll_up
       - type: text
         text: Fast Pinball
-        y: -102
+        y: -104
         style: dmd_med
         color: dmd_orange
         number_grouping: true
@@ -751,7 +751,7 @@
           show_slide: special_thanks_scroll_up
       - type: text
         text: Joel De Guzman
-        y: -110
+        y: -112
         style: dmd_med
         color: dmd_orange
         number_grouping: true
