@@ -55,6 +55,8 @@ player_vars:
     initial_value: 0
   lanes:
     initial_value: 0
+  lanes_last_shot:
+    initial_value: 0
   missiles:
     initial_value: 0
   multiplier:

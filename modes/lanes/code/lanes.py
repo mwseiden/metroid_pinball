@@ -17,4 +17,5 @@ class Lanes(Mode):
             self.machine.game.balls_in_play += 1
             self.machine.playfield.add_ball()
             self.player.kickbacks -= 1
+            self.player.lanes_last_shot = 0
 
