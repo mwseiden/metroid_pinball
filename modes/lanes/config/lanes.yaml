@@ -77,9 +77,10 @@ event_player:
   mode_lanes_starting: lanes_disable_ball_save
   left_ballsave_shot_hit: lanes_check_kickbacks
   right_ballsave_shot_hit: lanes_check_kickbacks
-  lanes_shot_group_lit_complete: lanes_check_kickbacks
-  lanes_check_kickbacks{current_player.lanes_last_shot == 1 and not device.shots.left_ballsave_shot.enabled}: lanes_collect_ball_save
-  lanes_check_kickbacks{current_player.lanes_last_shot == 2 and not device.shots.right_ballsave_shot.enabled}: lanes_collect_ball_save
+#  lanes_shot_group_lit_complete: lanes_check_kickbacks
+  lanes_shot_group_lit_complete{current_player.lanes_last_shot > 0 and current_player.kickbacks == 0}: lanes_collect_ball_save
+  lanes_shot_group_lit_complete{current_player.lanes_last_shot > 0 and current_player.kickbacks > 0}: lanes_check_kickbacks
+  lanes_shot_group_lit_complete{current_player.lanes_last_shot == 0}: lanes_check_kickbacks
   lanes_check_kickbacks{current_player.kickbacks < 1}: lanes_disable_ball_save
   lanes_check_kickbacks{current_player.kickbacks > 0}: lanes_enable_ball_save
   s_left_flipper_active{current_player.kickbacks > 0 and current_player.kickback_active == 0}: lanes_enable_right_ball_save
