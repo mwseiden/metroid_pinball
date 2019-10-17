@@ -271,8 +271,8 @@ switches:
     number: 2-15
     tags: playfield_active
     platform_settings:
-      debounce_close: 3
-      debounce_open: 3
+      debounce_close: 10
+      debounce_open: 10
   s_left_target_3:
     number: 2-16
     tags: playfield_active

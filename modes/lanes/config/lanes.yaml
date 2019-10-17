@@ -77,7 +77,6 @@ event_player:
   mode_lanes_starting: lanes_disable_ball_save
   left_ballsave_shot_hit: lanes_check_kickbacks
   right_ballsave_shot_hit: lanes_check_kickbacks
-#  lanes_shot_group_lit_complete: lanes_check_kickbacks
   lanes_shot_group_lit_complete{current_player.lanes_last_shot > 0 and current_player.kickbacks == 0}: lanes_collect_ball_save
   lanes_shot_group_lit_complete{current_player.lanes_last_shot > 0 and current_player.kickbacks > 0}: lanes_check_kickbacks
   lanes_shot_group_lit_complete{current_player.lanes_last_shot == 0}: lanes_check_kickbacks
