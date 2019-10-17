@@ -24,8 +24,8 @@ coils:
   c_scoop:
     number: 0-5
     allow_enable: true
-    default_pulse_ms: 20
-    default_pulse_power: 0.90
+    default_pulse_ms: 19
+    default_pulse_power: 0.95
   c_drop_1_down:
     number: 0-8
     default_hold_power: 0.8
