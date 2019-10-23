@@ -14,6 +14,61 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
+  room_1c_bank_1_shot:
+    switch: s_missile_bank_1, s_missile_bank_2, s_missile_bank_3
+    profile: room_1c_strobe
+    enable_events: mode_room_1c_shifting_sands_started, room_1c_bank_2_shot_hit, room_1c_bank_3_shot_hit, room_1c_bank_4_shot_hit
+    disable_events: room_1c_bank_1_shot_hit
+    reset_events: room_1c_bank_1_shot_hit
+    show_tokens:
+      led_1: led_missile_bank_1
+      led_2: led_missile_bank_2
+      led_3: led_missile_bank_3
+      color_1: '80C080'
+      color_2: stop
+  room_1c_bank_2_shot:
+    switch: s_lower_right_bank_1, s_lower_right_bank_2, s_lower_right_bank_3
+    profile: room_1c_strobe
+    enable_events: mode_room_1c_shifting_sands_started, room_1c_bank_1_shot_hit, room_1c_bank_3_shot_hit, room_1c_bank_4_shot_hit
+    disable_events: room_1c_bank_2_shot_hit
+    reset_events: room_1c_bank_2_shot_hit
+    show_tokens:
+      led_1: led_bomb_bank_1
+      led_2: led_bomb_bank_2
+      led_3: led_bomb_bank_3
+      color_1: '80C080'
+      color_2: stop
+  room_1c_bank_3_shot:
+    switch: s_purple_1, s_purple_2, s_purple_3
+    profile: room_1c_strobe
+    enable_events: mode_room_1c_shifting_sands_started, room_1c_bank_1_shot_hit, room_1c_bank_2_shot_hit, room_1c_bank_4_shot_hit
+    disable_events: room_1c_bank_3_shot_hit
+    reset_events: room_1c_bank_3_shot_hit
+    show_tokens:
+      led_1: led_upgrade_bank_1
+      led_2: led_upgrade_bank_2
+      led_3: led_upgrade_bank_3
+      color_1: '80C080'
+      color_2: stop
+  room_1c_bank_4_shot:
+    switch: s_left_target_1, s_left_target_2, s_left_target_3
+    profile: room_1c_strobe
+    enable_events: mode_room_1c_shifting_sands_started, room_1c_bank_1_shot_hit, room_1c_bank_2_shot_hit, room_1c_bank_3_shot_hit
+    disable_events: room_1c_bank_4_shot_hit
+    reset_events: room_1c_bank_4_shot_hit
+    show_tokens:
+      led_1: led_side_1
+      led_2: led_side_2
+      led_3: led_side_3
+      color_1: '80C080'
+      color_2: stop
+
+shot_profiles:
+  room_1c_strobe:
+    states:
+    - name: lit
+      show: blink_3_lights
+      loops: -1
 
 slides:
   room_1c_plains_backglass_slide:
@@ -65,3 +120,11 @@ variable_player:
     continue_room:
       string: 1c
       action: set
+  room_1c_bank_1_shot:
+    score: (5000 + current_player.room_1b_shot_bonus) * current_player.multiplier
+  room_1c_bank_2_shot:
+    score: (5000 + current_player.room_1b_shot_bonus) * current_player.multiplier
+  room_1c_bank_3_shot:
+    score: (1000 + current_player.room_1b_shot_bonus) * current_player.multiplier
+  room_1c_bank_4_shot:
+    score: (10000 + current_player.room_1b_shot_bonus) * current_player.multiplier

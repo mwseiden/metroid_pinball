@@ -69,6 +69,8 @@ player_vars:
     initial_value: 0
   ramps:
     initial_value: 0
+  room_1b_shot_bonus:
+    initial_value: 0
   room_1b_step_1a:
     initial_value: 0
   room_1b_step_1b:
