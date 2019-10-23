@@ -89,7 +89,7 @@ event_player:
   flipper_cradle_release:
     room_1b_victory_status_report:
       action: stop
-  room_2a_exit_east_shot_hit: room_1c_enter
+  room_1b_exit_east_shot_hit: room_1c_enter
 
 
 variable_player:
