@@ -7,10 +7,10 @@ mode:
 shots:
   room_1b_increase_value_shot:
     switch: s_shatz
-      profile: lit
-      show_tokens:
-        led: led_zero_suit
-        color: 'ffff00'
+    profile: lit
+    show_tokens:
+      led: led_zero_suit
+      color: 'ffff00'
 
 
 accruals:
