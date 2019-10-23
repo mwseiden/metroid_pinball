@@ -166,6 +166,7 @@ show_player:
       action: stop
     lights_sweep_rgb:
       loops: -1
+      speed: 20
   slide_owl_slide_active:
     lights_sweep_rgb:
       action: stop
