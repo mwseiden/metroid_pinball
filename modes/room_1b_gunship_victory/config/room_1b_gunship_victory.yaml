@@ -1,7 +1,7 @@
 #config_version=5
 mode:
     start_events: room_1b_achieved, room_1b_already_complete
-    stop_events: game_ending, ball_ending, room_1b_exit_east_shot_hit
+    stop_events: game_ending, ball_ending, room_1c_enter
     priority: 300
 
 multiballs:
