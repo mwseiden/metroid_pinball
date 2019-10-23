@@ -10,7 +10,7 @@ shots:
     profile: room_1b_increase
     show_tokens:
       led: led_zero_suit
-      color: 'ffff00'
+      color: '00ffff'
 
 shot_profiles:
   room_1b_increase:
