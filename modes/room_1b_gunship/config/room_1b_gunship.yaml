@@ -7,11 +7,16 @@ mode:
 shots:
   room_1b_increase_value_shot:
     switch: s_shatz
-    profile: lit
+    profile: room_1b_increase
     show_tokens:
       led: led_zero_suit
       color: 'ffff00'
 
+shot_profiles:
+  room_1b_increase:
+    states:
+      - name: lit
+        show: fade_one_light
 
 accruals:
   room_1b_complete_left_orbit:
