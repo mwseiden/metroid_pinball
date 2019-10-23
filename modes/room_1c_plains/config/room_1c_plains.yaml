@@ -1,0 +1,67 @@
+#config_version=5
+mode:
+  start_events: room_1c_continue, room_1c_enter
+  stop_events: game_ending, ball_ending, room_1c_exit_west_shot_hit
+  priority: 300
+
+shots:
+  room_1c_exit_west_shot:
+    switch: s_left_passage
+    profile: exit_door
+    enable_events: mode_room_1c_plains_started
+    disable_events: room_1c_exit_west_shot_hit
+    reset_events: room_1c_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_secret_passage
+      color: door_blue
+
+slides:
+  room_1c_plains_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1c_plains_backglass
+    transition: fade
+    transition_out: fade
+  room_1c_plains_splash_slide:
+    widgets:
+      - type: image
+        image: room_1c_plains_splash
+
+slide_player:
+  mode_room_1c_plains_started:
+    room_1c_plains_backglass_slide:
+      target: backglass
+    room_1c_plains_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_1c_plains_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: '80C080'
+        color2: '404080'
+  show_mode_status_report:
+    room_1c_plains_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1c_plains_status_report:
+      action: stop
+
+event_player:
+  mode_room_1c_plains_started:
+    cmd_backbox_show:
+      show_type: two_tone
+      min_cutoff: 7
+      max_cutoff: 7
+      color1: "404040"
+      color2: "204020"
+  mode_room_1c_plains_ending: drop_targets_save
+  room_1c_exit_west_shot_hit: room_1b_enter
+
+variable_player:
+  mode_room_1c_plains_started:
+    continue_room:
+      string: 1c
+      action: set
