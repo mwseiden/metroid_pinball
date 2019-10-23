@@ -3,6 +3,7 @@
 sound_player:
   mode_room_1b_gunship_started{machine.next_game_acapella == 0}: music_crateria
   mode_room_1b_gunship_victory_started{machine.next_game_acapella == 0}: music_crateria
+  mode_room_1c_plains_started{machine.next_game_acapella == 0}: music_crateria
   mode_room_1l_entryway_started{machine.next_game_acapella == 0}: music_wrecked_ship
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0}: music_brinstar
   mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia_intro
