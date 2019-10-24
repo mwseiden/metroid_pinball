@@ -13,6 +13,31 @@
     room_1c_plains_status_slide_help:
       widgets:
       - type: Text
-        text: NO MODE RULES
-        color: red
+        text: Side Targets: 10000
+        color: blue
         style: dmd_med
+        y: 21
+      - type: Text
+        text: Center Targets: 1000
+        color: blue
+        style: dmd_med
+      - type: Text
+        text: Lower Targets: 5000
+        color: blue
+        style: dmd_med
+       y: 11
+
+- duration: 5s
+  slides:
+    room_1c_plains_status_crateria_bonus:
+      widgets:
+      - type: Text
+        text: Crateria Shot Bonus
+        color: blue
+        style: dmd_med
+        y: 21
+      - type: Text
+        text: +(player|crateria_shot_bonus)
+        color: white
+        style: dmd_med
+        y: 11
