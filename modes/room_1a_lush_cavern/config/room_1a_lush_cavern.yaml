@@ -53,8 +53,8 @@ event_player:
   mode_room_1a_lush_cavern_started:
     cmd_backbox_show:
       show_type: twinkle
-      background_color: "000010"
-      twinkle_color: "404000"
+      background_color: "001000"
+      twinkle_color: "604000"
       twinkle_count: 20
     drop_targets_continue:
   mode_room_1a_lush_cavern_ending: drop_targets_save
