@@ -53,9 +53,9 @@ event_player:
   mode_room_1a_lush_cavern_started:
     cmd_backbox_show:
       show_type: twinkle
-      background_color: "100040"
-      twinkle_color: "104000"
-      twinkle_count: 15
+      background_color: "000010"
+      twinkle_color: "404000"
+      twinkle_count: 20
     drop_targets_continue:
   mode_room_1a_lush_cavern_ending: drop_targets_save
   room_1a_exit_east_shot_hit: room_1b_enter
