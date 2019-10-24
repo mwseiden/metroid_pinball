@@ -16,7 +16,7 @@
         text: Side Targets 10000
         color: blue
         style: dmd_med
-        y: 21
+        y: 24
       - type: text
         text: Center Targets 1000
         color: blue
@@ -25,7 +25,7 @@
         text: Lower Targets 5000
         color: blue
         style: dmd_med
-        y: 11
+        y: 8
 
 - duration: 5s
   slides:
