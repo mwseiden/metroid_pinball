@@ -25,6 +25,17 @@ class Twinkle(DynamicBackBoxShow):
                 int((g1 + g2) / (1 + 100 / twinkle[2])),
                 int((b1 + b2) / (1 + 100 / twinkle[2])),
             ])
+            
+            if twinkle[3] == 0:
+                twinkle[2] = twinkle[2] + 1
+                if twinkle[2] > 100:
+                    twinkle[2] = 100
+                    twinkle[3] = 1
+            else:
+                twinkle[2] = twinkle[2] - 1
+                if twinkle[2] < 1:
+                    twinkle[2] = 1
+                    twinkle[3] = 0
 
             self.strips[twinkle[0]].set_color(twinkle[1], color)
 
@@ -35,4 +46,4 @@ class Twinkle(DynamicBackBoxShow):
             self.strips[strip_number].set_all_colors(self.background_color)
 
         for twinkle_number in range(self.twinkle_count):
-            self.twinkles[twinkle_number] = [randint(0, self.strip_count - 1), randint(0, 9), randint(0, 100), randint(0, 1)]
+            self.twinkles[twinkle_number] = [randint(0, self.strip_count - 1), randint(0, 9), randint(1, 100), randint(0, 1)]
