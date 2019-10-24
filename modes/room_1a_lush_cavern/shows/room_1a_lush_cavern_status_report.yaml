@@ -2,15 +2,15 @@
 
 - duration: 2s
   slides:
-    room_template_status_slide_splash:
+    room_1a_lush_cavern_status_slide_splash:
       widgets:
       - type: image
-        image: room_template_splash
+        image: room_1a_lush_cavern_splash
 
 
 - duration: 5s
   slides:
-    room_template_status_slide_help:
+    room_1a_lush_cavern_status_slide_help:
       widgets:
       - type: Text
         text: NO MODE RULES
