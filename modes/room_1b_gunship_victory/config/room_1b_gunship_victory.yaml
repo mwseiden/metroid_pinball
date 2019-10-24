@@ -1,7 +1,7 @@
 #config_version=5
 mode:
     start_events: room_1b_achieved, room_1b_already_complete
-    stop_events: game_ending, ball_ending, room_1c_enter
+    stop_events: game_ending, ball_ending, room_1c_enter, room_1a_enter
     priority: 300
 
 multiballs:
@@ -33,6 +33,15 @@ shots:
     reset_events: room_1b_exit_east_shot_hit
     show_tokens:
       led: led_enter_right_orbit
+      color: door_blue
+  room_1b_exit_west_shot:
+    switch: s_left_passage
+    profile: exit_door
+    enable_events: mode_room_1b_gunship_victory_started
+    disable_events: room_1b_exit_east_shot_hit
+    reset_events: room_1b_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_secret_passage
       color: door_blue
 
 show_player:
@@ -90,6 +99,7 @@ event_player:
     room_1b_victory_status_report:
       action: stop
   room_1b_exit_east_shot_hit: room_1c_enter
+  room_1b_exit_west_shot_hit: room_1a_enter
 
 
 variable_player:

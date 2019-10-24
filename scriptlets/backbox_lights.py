@@ -8,6 +8,7 @@ from .lights.backbox.rainbow import Rainbow
 from .lights.backbox.solid import Solid
 from .lights.backbox.sweep_horizontal import SweepHorizontal
 from .lights.backbox.sweep_vertical import SweepVertical
+from .lights.twinkle import Twinkle
 
 class BackBoxLights(Scriptlet):
 
@@ -23,6 +24,7 @@ class BackBoxLights(Scriptlet):
             'solid': self.show_solid,
             'sweep_horizontal': self.show_sweep_horizontal,
             'sweep_vertical': self.show_sweep_vertical,
+            'twinkle': self.show_twinkle,
         }
 
         self.set_effects_to_default()
@@ -109,6 +111,14 @@ class BackBoxLights(Scriptlet):
             int(kwargs.get('speed', 4)),
             int(kwargs.get('repeat', 0)),
             0 if kwargs.get('direction', 'left').lower() == 'left' else 1
+        )
+
+    def show_twinkle(self, **kwargs):
+        return Twinkle(
+            self.machine,
+            RGBColor(kwargs.get('background_color', '000000')),
+            RGBColor(kwargs.get('twinkle_color', '404040')),
+            int(kwargs.get('twinkle_count', 4))
         )
 
     # private ----------------------------------------------------------------

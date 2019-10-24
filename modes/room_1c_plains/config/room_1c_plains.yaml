@@ -118,10 +118,10 @@ variable_player:
       string: 1c
       action: set
   room_1c_bank_1_shot:
-    score: (5000 + current_player.room_1b_shot_bonus) * current_player.multiplier
+    score: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
   room_1c_bank_2_shot:
-    score: (5000 + current_player.room_1b_shot_bonus) * current_player.multiplier
+    score: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
   room_1c_bank_3_shot:
-    score: (1000 + current_player.room_1b_shot_bonus) * current_player.multiplier
+    score: (1000 + current_player.crateria_shot_bonus) * current_player.multiplier
   room_1c_bank_4_shot:
-    score: (10000 + current_player.room_1b_shot_bonus) * current_player.multiplier
+    score: (10000 + current_player.crateria_shot_bonus) * current_player.multiplier
