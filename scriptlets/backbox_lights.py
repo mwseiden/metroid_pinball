@@ -8,7 +8,7 @@ from .lights.backbox.rainbow import Rainbow
 from .lights.backbox.solid import Solid
 from .lights.backbox.sweep_horizontal import SweepHorizontal
 from .lights.backbox.sweep_vertical import SweepVertical
-from .lights.twinkle import Twinkle
+from .lights.backbox.twinkle import Twinkle
 
 class BackBoxLights(Scriptlet):
 
