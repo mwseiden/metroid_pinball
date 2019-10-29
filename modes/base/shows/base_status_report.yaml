@@ -47,9 +47,9 @@
         min_digits: 2
         style: dmd_big
       - type: text
-        text: Player (player|number)
+        text: Ball (ball)
         color: "FF6030"
-        y: 3
+        y: 7
         style: dmd_small
 
 - duration: 5s
