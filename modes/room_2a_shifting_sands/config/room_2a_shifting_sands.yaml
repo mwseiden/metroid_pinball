@@ -29,6 +29,10 @@ timers:
         value: 8
       - event: mode_room_2a_shifting_sands_started
         action: reset
+      - event: flipper_cradle
+        action: pause
+      - event: flipper_cradle_release
+        action: start
 
 shots:
   room_2a_bank_1_shot:

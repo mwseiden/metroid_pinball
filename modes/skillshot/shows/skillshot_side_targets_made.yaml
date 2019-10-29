@@ -7,10 +7,10 @@
       - type: text
         text: SKILLSHOT!
         style: dmd_big
-        color: "800040"
+        color: red
         y: 24
       - type: text
         text: BRIDGE BONUS (bridge_bonus)00k
         style: dmd_big
-        color: "800040"
+        color: red
         y: 10
