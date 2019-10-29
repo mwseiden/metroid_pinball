@@ -155,7 +155,7 @@ variable_player:
       string: 2i
       action: set
   lava_jump_jackpot_shot_hit:
-    score: (75000 + (current_player.area_bonus_ne * 10000)) * current_player.multiplier
+    score: (150000 + (current_player.area_bonus_ne * 25000)) * current_player.multiplier
   lava_jump_initial_shots_lit_hit:
-    score: 20000 * current_player.multiplier
+    score: 80000 * current_player.multiplier
 

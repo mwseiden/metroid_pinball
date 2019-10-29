@@ -27,6 +27,7 @@ show_player:
 variable_player:
   skillshot_side_shots_hit:
     score: (100000 + (50000 * current_player.bridges) + (50000 * current_player.area_bonus_nw)) * current_player.multiplier
+    bridge_bonus: 1
 
 sound_player:
   skillshot_side_success: skillshot

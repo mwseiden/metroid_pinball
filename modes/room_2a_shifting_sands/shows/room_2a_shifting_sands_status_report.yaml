@@ -35,7 +35,7 @@
         text: EXITS
         color: red
         style: dmd_med
-        y: 28
+        y: 29
       - type: text
         text: "West: Secret Passage"
         color: blue

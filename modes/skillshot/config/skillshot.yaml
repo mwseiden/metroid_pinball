@@ -85,6 +85,10 @@ show_player:
     skillshot_big_points_made:
       loops: 0
       events_when_completed: skillshot_monitor_should_end
+  skillshot_side_success:
+    skillshot_side_targets_made:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
 
 event_player:
   skillshot_unused_shot_group_hit: skillshot_stage_one_end

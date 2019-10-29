@@ -166,5 +166,5 @@ event_player:
 variable_player:
   bridge_should_explode:
     power_bombs: -1
-    score: (200000 + (100000 * current_player.bridges) + (50000 * current_player.area_bonus_e)) * current_player.multiplier * (2 if current_player.continue_room == '2d' else 1)
+    score: (200000 + (100000 * (current_player.bridges + current_player.bridge_bonus)) + (50000 * current_player.area_bonus_e)) * current_player.multiplier * (2 if current_player.continue_room == '2d' else 1)
     bridges: 1

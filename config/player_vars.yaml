@@ -13,6 +13,8 @@ player_vars:
     initial_value: 0
   area_bonus_w:
     initial_value: 0
+  bridge_bonus:
+    initial_value: 0
   bridges:
     initial_value: 0
   capsides:
