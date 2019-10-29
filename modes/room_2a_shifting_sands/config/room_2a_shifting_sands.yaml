@@ -33,6 +33,8 @@ timers:
         action: pause
       - event: flipper_cradle_release
         action: start
+      - event: room_2a_shifting_sands_status_over
+        action: start
 
 shots:
   room_2a_bank_1_shot:
@@ -119,6 +121,7 @@ show_player:
   show_mode_status_report:
     room_2a_shifting_sands_status_report:
       loops: 0
+      events_when_completed: room_2a_shifting_sands_status_over
   flipper_cradle_release:
     room_2a_shifting_sands_status_report:
       action: stop
