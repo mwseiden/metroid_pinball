@@ -232,6 +232,12 @@ event_player:
   room_2a_exit_west_shot_hit: room_1z_enter
   room_2a_exit_east_shot_hit: room_2b_enter
   mode_room_2a_shifting_sands_ending: drop_targets_save
+  show_mode_status_report:
+    room_2a_shifting_sands_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_2a_shifting_sands_status_report:
+      action: stop
 
 variable_player:
   mode_room_2a_shifting_sands_started:
