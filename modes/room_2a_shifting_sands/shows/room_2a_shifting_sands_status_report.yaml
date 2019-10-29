@@ -37,12 +37,12 @@
         style: dmd_med
         y: 28
       - type: text
-        text: West: Secret Passage
+        text: "West: Secret Passage"
         color: blue
         style: dmd_small
         y: 22
       - type: text
-        text: East: Right Orbit
+        text: "East: Right Orbit"
         color: blue
         style: dmd_small
         y: 16
