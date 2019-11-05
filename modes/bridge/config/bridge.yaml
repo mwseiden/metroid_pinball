@@ -158,6 +158,9 @@ shows:
     - duration: 0.3s
       sounds: bridge_explosion_sound_pool
 
+sound_player:
+  bridge_should_explode: bridge_destroyed
+
 event_player:
   bridge_rail_shot_hit{current_player.power_bombs > 0}: bridge_should_explode
   ball_hold_bridge_skillshot_held_ball: skillshot_should_start

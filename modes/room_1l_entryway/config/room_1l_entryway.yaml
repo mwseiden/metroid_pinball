@@ -33,6 +33,9 @@ slide_player:
       target: dmd
       expire: 1.5s
 
+sound_player:
+  mode_room_1l_entryway_started: bomb_the_wall
+
 variable_player:
   mode_room_1l_entryway_started:
     has_chosen_landing_site:
