@@ -112,7 +112,7 @@ show_player:
     blink_light:
       key: chozo_progress_blink
       loops: -1
-      speed: 1
+      speed: 2
       show_tokens:
         led: led_captive_ball
         color: 'bfff00'
@@ -120,7 +120,7 @@ show_player:
     blink_light:
       key: chozo_progress_blink
       loops: -1
-      speed: 2
+      speed: 3
       show_tokens:
         led: led_captive_ball
         color: '7fff00'
@@ -128,7 +128,7 @@ show_player:
     blink_light:
       key: chozo_progress_blink
       loops: -1
-      speed: 3
+      speed: 5
       show_tokens:
         led: led_captive_ball
         color: '00ff00'
