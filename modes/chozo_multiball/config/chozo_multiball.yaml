@@ -22,7 +22,7 @@ counters:
     enable_events: multiball_chozo_ended, mode_chozo_multiball_starting
     reset_events: game_start, multiball_chozo_started
     persist_state: true
-    disable_on_complete: false
+    disable_on_complete: true
 
 shots:
   chozo_multiball_jackpot_one_shot:
