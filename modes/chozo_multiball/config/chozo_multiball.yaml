@@ -100,7 +100,7 @@ show_player:
     chozo_multiball_spin:
       priority: 600
       loops: 0
-      speed: 40
+      speed: 50
   multiball_chozo_ended:
     chozo_multiball_drop_show:
       action: stop
