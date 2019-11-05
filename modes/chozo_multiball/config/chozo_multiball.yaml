@@ -198,5 +198,5 @@ event_player:
   logicblock_captive_ball_counter_updated{value == 2}: chozo_multiball_light_stage_3
   logicblock_captive_ball_counter_updated{value == 1}: chozo_multiball_light_stage_4
   chozo_multiball_progress{device.counters.captive_ball_counter.value == 1}: chozo_multiball_sound_captive
-  chozo_multiball_progress{device.counters.captive_ball_counter.value > 1}: chozo_multiball_sound_locked
+  chozo_multiball_progress{device.counters.captive_ball_counter.value > 1 and device.counters.captive_ball_counter.enabled}: chozo_multiball_sound_locked
 
