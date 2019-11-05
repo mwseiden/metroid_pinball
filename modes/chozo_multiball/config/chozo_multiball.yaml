@@ -139,8 +139,8 @@ show_player:
     blink_light:
       key: chozo_captive_blink
       priority: 500
-      loops: 5
-      speed: 15
+      loops: 10
+      speed: 20
       show_tokens:
         led: led_captive_ball
         color: 'ff0000'
