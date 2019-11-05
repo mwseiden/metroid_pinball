@@ -134,6 +134,14 @@ show_player:
       show_tokens:
         led: led_captive_ball
         color: '00ff00'
+  s_captive_ball_active:
+    blink_light:
+      key: chozo_captive_blink
+      loops: 5
+      speed: 10
+      show_tokens:
+        led: led_captive_ball
+        color: 'ff0000'
 
 variable_player:
   logicblock_captive_ball_counter_updated:
