@@ -74,6 +74,8 @@ show_player:
   chozo_multiball_bashed:
     chozo_multiball_started:
       loops: 0
+    chozo_progress_blink:
+      action: stop
   multiball_chozo_shoot_again_ended:
     chozo_ball_save_blink:
       action: stop
@@ -85,8 +87,6 @@ show_player:
       show_tokens:
         led: led_ball_save
         color: ff4700
-    chozo_progress_blink:
-      action: stop
     small_theater_chase:
       key: chozo_multiball_drop_show
       loops: -1
@@ -108,7 +108,7 @@ show_player:
       loops: -1
       speed: 0.5
       show_tokens:
-        led: led_ball_save
+        led: led_captive_ball
         color: 'ffff00'
   chozo_multiball_light_stage_2:
     blink_light:
@@ -116,7 +116,7 @@ show_player:
       loops: -1
       speed: 1
       show_tokens:
-        led: led_ball_save
+        led: led_captive_ball
         color: 'bfff00'
   chozo_multiball_light_stage_3:
     blink_light:
@@ -124,7 +124,7 @@ show_player:
       loops: -1
       speed: 2
       show_tokens:
-        led: led_ball_save
+        led: led_captive_ball
         color: '7fff00'
   chozo_multiball_light_stage_4:
     blink_light:
@@ -132,7 +132,7 @@ show_player:
       loops: -1
       speed: 3
       show_tokens:
-        led: led_ball_save
+        led: led_captive_ball
         color: '00ff00'
 
 variable_player:
@@ -171,6 +171,10 @@ sound_player:
 
 event_player:
   multiball_chozo_started: cmd_drop_all_drops, chozo_multiball_reset_jackpot
+  mode_chozo_multiball_started{device.counters.captive_ball_counter.value > 3}: chozo_multiball_light_stage_1
+  mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 3}: chozo_multiball_light_stage_2
+  mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 2}: chozo_multiball_light_stage_3
+  mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 1}: chozo_multiball_light_stage_4
   chozo_multiball_jackpot_collect_shot_hit: chozo_multiball_reset_jackpot
   logicblock_captive_ball_counter_updated{value > 3}: chozo_multiball_light_stage_1
   logicblock_captive_ball_counter_updated{value == 3}: chozo_multiball_light_stage_2
