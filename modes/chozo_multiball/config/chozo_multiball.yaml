@@ -97,6 +97,10 @@ show_player:
         led_4: led_drop_1
         led_5: led_drop_2
         led_6: led_drop_3
+    chozo_multiball_spin:
+      priority: 600
+      loops: 0
+      speed: 40
   multiball_chozo_ended:
     chozo_multiball_drop_show:
       action: stop
