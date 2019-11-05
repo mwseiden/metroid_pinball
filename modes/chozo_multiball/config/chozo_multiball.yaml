@@ -20,7 +20,7 @@ counters:
     events_when_complete: chozo_multiball_bashed
     disable_events: multiball_chozo_started
     enable_events: multiball_chozo_ended, mode_chozo_multiball_starting
-    reset_events: game_start, multiball_chozo_started
+    reset_events: game_start, multiball_chozo_ended # multiball_chozo_started
     persist_state: true
     disable_on_complete: false
 
