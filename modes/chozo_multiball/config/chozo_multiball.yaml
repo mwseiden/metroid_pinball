@@ -74,8 +74,6 @@ show_player:
   chozo_multiball_bashed:
     chozo_multiball_started:
       loops: 0
-    chozo_progress_blink:
-      action: stop
   multiball_chozo_shoot_again_ended:
     chozo_ball_save_blink:
       action: stop
@@ -134,11 +132,15 @@ show_player:
       show_tokens:
         led: led_captive_ball
         color: '00ff00'
+  chozo_multiball_light_stage_0:
+    chozo_progress_blink:
+      action: stop
   s_captive_ball_active:
     blink_light:
       key: chozo_captive_blink
+      priority: 500
       loops: 5
-      speed: 10
+      speed: 15
       show_tokens:
         led: led_captive_ball
         color: 'ff0000'
@@ -183,6 +185,8 @@ event_player:
   mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 3}: chozo_multiball_light_stage_2
   mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 2}: chozo_multiball_light_stage_3
   mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 1}: chozo_multiball_light_stage_4
+  multiball_chozo_ended: chozo_multiball_light_stage_1
+  multiball_chozo_started: chozo_multiball_light_stage_0
   chozo_multiball_jackpot_collect_shot_hit: chozo_multiball_reset_jackpot
   logicblock_captive_ball_counter_updated{value > 3}: chozo_multiball_light_stage_1
   logicblock_captive_ball_counter_updated{value == 3}: chozo_multiball_light_stage_2
