@@ -54,7 +54,7 @@ sound_player:
     music_maridia_snow:
       action: stop
       fade_out: 1s
-  mode_bonus_started:
+  mode_bonus_will_start:
     music_crateria:
       action: stop
       fade_out: 3s
@@ -76,3 +76,4 @@ sound_player:
     music_maridia_snow:
       action: stop
       fade_out: 3s
+
