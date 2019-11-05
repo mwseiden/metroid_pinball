@@ -85,6 +85,8 @@ show_player:
       show_tokens:
         led: led_ball_save
         color: ff4700
+    chozo_progress_blink:
+      action: stop
     small_theater_chase:
       key: chozo_multiball_drop_show
       loops: -1
@@ -100,6 +102,38 @@ show_player:
   multiball_chozo_ended:
     chozo_multiball_drop_show:
       action: stop
+  chozo_multiball_light_stage_1:
+    blink_light:
+      key: chozo_progress_blink
+      loops: -1
+      speed: 0.5
+      show_tokens:
+        led: led_ball_save
+        color: 'ffff00'
+  chozo_multiball_light_stage_2:
+    blink_light:
+      key: chozo_progress_blink
+      loops: -1
+      speed: 1
+      show_tokens:
+        led: led_ball_save
+        color: 'bfff00'
+  chozo_multiball_light_stage_3:
+    blink_light:
+      key: chozo_progress_blink
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_ball_save
+        color: '7fff00'
+  chozo_multiball_light_stage_4:
+    blink_light:
+      key: chozo_progress_blink
+      loops: -1
+      speed: 3
+      show_tokens:
+        led: led_ball_save
+        color: '00ff00'
 
 variable_player:
   logicblock_captive_ball_counter_updated:
@@ -138,3 +172,7 @@ sound_player:
 event_player:
   multiball_chozo_started: cmd_drop_all_drops, chozo_multiball_reset_jackpot
   chozo_multiball_jackpot_collect_shot_hit: chozo_multiball_reset_jackpot
+  logicblock_captive_ball_counter_updated{value > 3}: chozo_multiball_light_stage_1
+  logicblock_captive_ball_counter_updated{value == 3}: chozo_multiball_light_stage_2
+  logicblock_captive_ball_counter_updated{value == 2}: chozo_multiball_light_stage_3
+  logicblock_captive_ball_counter_updated{value == 1}: chozo_multiball_light_stage_4
