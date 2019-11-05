@@ -177,12 +177,12 @@ variable_player:
 
 sound_player:
   chozo_multiball_bashed: multiball
-  chozo_multiball_progress: ball_locked
+  chozo_multiball_sound_locked: ball_locked
   chozo_multiball_jackpot_one_shot_hit: jackpot
   chozo_multiball_jackpot_two_shot_hit: jackpot_alt_1
   chozo_multiball_jackpot_three_shot_hit: jackpot
   chozo_multiball_jackpot_collect_shot_hit: super_jackpot
-  chozo_multiball_light_stage_4: shoot_the_captive_ball
+  chozo_multiball_sound_captive: shoot_the_captive_ball
 
 event_player:
   multiball_chozo_started: cmd_drop_all_drops, chozo_multiball_reset_jackpot
@@ -197,3 +197,6 @@ event_player:
   logicblock_captive_ball_counter_updated{value == 3}: chozo_multiball_light_stage_2
   logicblock_captive_ball_counter_updated{value == 2}: chozo_multiball_light_stage_3
   logicblock_captive_ball_counter_updated{value == 1}: chozo_multiball_light_stage_4
+  chozo_multiball_progress{device.counters.captive_ball_counter.value == 1}: chozo_multiball_sound_captive
+  chozo_multiball_progress{device.counters.captive_ball_counter.value != 1}: chozo_multiball_sound_locked
+
