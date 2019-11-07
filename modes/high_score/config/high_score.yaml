@@ -41,6 +41,8 @@ high_score:
       - INSANE LANES
   - bridges:
       - BRIDGE DESTROYER
+  - drops:
+      - DROPPED IT
 
   # set the defaults
   defaults:
@@ -64,6 +66,7 @@ high_score:
       - GRN: 10
     bridges:
       - GNZ: 1
-
+    drops:
+      - NO1: 3
 
 

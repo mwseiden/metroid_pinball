@@ -47,7 +47,10 @@ shots:
 variable_player:
   drop_1_shot_hit:
     score: 1000
+    drops: 1
   drop_2_shot_hit:
     score: 10000
+    drops: 1
   drop_3_shot_hit:
     score: 25000
+    drops: 1
