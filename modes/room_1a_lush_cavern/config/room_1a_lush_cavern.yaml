@@ -24,7 +24,7 @@ shots:
       led: led_enter_scoop
       color: door_red
   room_1a_exit_south_shot:
-    hit_events: left_orbit_hit
+    switch: s_scoop
     profile: exit_door
     enable_events: room_1a_enable_south_door
     disable_events: room_1a_disable_south_door
