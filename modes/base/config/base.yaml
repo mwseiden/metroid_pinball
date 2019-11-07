@@ -276,6 +276,7 @@ show_player:
         color: ff0000
   the_pit_shot_hit:
     base_the_pit:
+      priority: 666
       loops: 0
     blink_light:
       key: pit_blink
