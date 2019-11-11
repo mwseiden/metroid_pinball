@@ -1,0 +1,85 @@
+#config_version=5
+mode:
+  start_events: room_1f_continue, room_1f_enter
+  stop_events: game_ending, ball_ending, room_1a_enter
+  priority: 300
+
+shots:
+  room_1f_exit_north_closed_shot:
+    hit_events: left_orbit_hit
+    profile: exit_door
+    enable_events: room_1f_enable_north_missile_door
+    disable_events: room_1f_disable_north_missile_door, room_1f_open_north_door
+    reset_events: room_1f_disable_north_missile_door, room_1f_open_north_door
+    show_tokens:
+      led: led_enter_left_orbit
+      color: door_red
+  room_1f_exit_north_shot:
+    hit_events: left_orbit_hit
+    profile: exit_door
+    enable_events: room_1f_enable_north_door
+    disable_events: room_1f_disable_north_door
+    reset_events: room_1f_disable_north_door
+    show_tokens:
+      led: led_enter_left_orbit
+      color: door_blue
+
+slides:
+  room_1f_mushroom_chamber_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1f_mushroom_chamber_backglass
+    transition: fade
+    transition_out: fade
+  room_1f_mushroom_chamber_splash_slide:
+    widgets:
+      - type: image
+        image: room_1f_mushroom_chamber_splash
+
+slide_player:
+  mode_room_1f_mushroom_chamber_started:
+    room_1f_mushroom_chamber_backglass_slide:
+      target: backglass
+    room_1f_mushroom_chamber_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_1f_mushroom_chamber_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: '808080'
+        color2: '808080'
+  show_mode_status_report:
+    room_1f_mushroom_chamber_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1f_mushroom_chamber_status_report:
+      action: stop
+
+event_player:
+  mode_room_1f_mushroom_chamber_started:
+    cmd_backbox_show:
+      show_type: fire
+    drop_targets_continue:
+  mode_room_1f_mushroom_chamber_started{current_player.door_1a_1f == 0}: room_1f_enable_north_missile_door, room_1f_disable_north_door
+  mode_room_1f_mushroom_chamber_started{current_player.door_1a_1f == 1}: room_1f_enable_north_door, room_1f_disable_north_missile_door
+  room_1f_exit_north_closed_shot_hit{current_player.missiles > 0}: room_1f_open_north_door
+  room_1f_open_north_door: room_1f_exit_north_shot_hit
+  room_1f_exit_north_shot_hit: room_1a_enter
+  mode_room_1f_mushroom_chamber_ending: drop_targets_save
+
+variable_player:
+  mode_room_1f_mushroom_chamber_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 1f
+      action: set
+  room_1f_open_north_door:
+    missiles: -1
+    door_1a_1f:
+      int: 1
+      action: set

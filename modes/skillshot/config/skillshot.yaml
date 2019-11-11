@@ -1,7 +1,7 @@
 #config_version=5
 mode:
   start_events: mode_base_started, skillshot_should_start
-  stop_events: skillshot_monitor_should_end
+  stop_events: skillshot_monitor_end
   priority: 500
 
 shot_groups:
@@ -85,6 +85,10 @@ show_player:
     skillshot_big_points_made:
       loops: 0
       events_when_completed: skillshot_monitor_should_end
+  skillshot_side_success:
+    skillshot_side_targets_made:
+      loops: 0
+      events_when_completed: skillshot_monitor_should_end
 
 event_player:
   skillshot_unused_shot_group_hit: skillshot_stage_one_end
@@ -104,5 +108,6 @@ event_player:
   skillshot_unskilled_success: skillshot_stage_one_end
   skillshot_side_success: skillshot_stage_one_end
   skillshot_big_points_success: skillshot_stage_one_end
+  skillshot_monitor_should_end: skillshot_monitor_end, drop_target_mode_should_start
   ball_will_end: skillshot_stage_one_end
 

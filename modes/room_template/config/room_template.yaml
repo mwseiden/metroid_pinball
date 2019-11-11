@@ -42,6 +42,8 @@ event_player:
   mode_room_template_started:
     cmd_backbox_show:
       show_type: fire
+    drop_targets_continue:
+  mode_room_template_ending: drop_targets_save
 
 variable_player:
   mode_room_template_started:

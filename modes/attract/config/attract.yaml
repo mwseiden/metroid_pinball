@@ -3,6 +3,11 @@
 mode:
   code: attract.MyAttract
 
+sound_player:
+  mode_attract_stopping:
+    music_high_score:
+      action: stop
+
 show_player:
   mode_attract_started:
     attract_display_loop:
@@ -156,8 +161,14 @@ show_player:
     lights_fire:
       loops: -1
       speed: 15
-  slide_owl_slide_active:
+  slide_berz_slide_active:
     lights_fire:
+      action: stop
+    lights_sweep_rgb:
+      loops: -1
+      speed: 20
+  slide_owl_slide_active:
+    lights_sweep_rgb:
       action: stop
     lights_purple_spotlight:
       loops: -1

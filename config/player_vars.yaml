@@ -13,6 +13,8 @@ player_vars:
     initial_value: 0
   area_bonus_w:
     initial_value: 0
+  bridge_bonus:
+    initial_value: 0
   bridges:
     initial_value: 0
   capsides:
@@ -26,10 +28,29 @@ player_vars:
   continue_room:
     value_type: str
     initial_value: 1b
+  crateria_shot_bonus:
+    initial_value: 0
   door_2d_2e:
     initial_value: 0
   door_2e_2f:
     initial_value: 0
+  drops:
+    initial_value: 0
+  drops_1z:
+    value_type: str
+    initial_value: 'UDU'
+  drops_2a:
+    value_type: str
+    initial_value: 'UDD'
+  drops_2b:
+    value_type: str
+    initial_value: 'DDD'
+  drops_2d:
+    value_type: str
+    initial_value: 'DUD'
+  drops_2i:
+    value_type: str
+    initial_value: 'DDU'
   emergency_landings:
     initial_value: 0
   has_chosen_landing_site:
@@ -39,6 +60,8 @@ player_vars:
   kickback_active:
     initial_value: 0
   lanes:
+    initial_value: 0
+  lanes_last_shot:
     initial_value: 0
   missiles:
     initial_value: 0
@@ -51,6 +74,8 @@ player_vars:
   power_bombs:
     initial_value: 0
   ramps:
+    initial_value: 0
+  door_1a_1f:
     initial_value: 0
   room_1b_step_1a:
     initial_value: 0

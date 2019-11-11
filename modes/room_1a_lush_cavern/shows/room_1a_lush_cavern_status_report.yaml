@@ -1,0 +1,33 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_1a_lush_cavern_status_slide_splash:
+      widgets:
+      - type: image
+        image: room_1a_lush_cavern_splash
+
+
+- duration: 5s
+  slides:
+    room_1a_lush_cavern_status_slide_help:
+      widgets:
+      - type: Text
+        text: NO MODE RULES
+        color: red
+        style: dmd_med
+
+- duration: 5s
+  slides:
+    room_1c_plains_status_crateria_bonus:
+      widgets:
+      - type: text
+        text: Crateria Shot Bonus
+        color: blue
+        style: dmd_med
+        y: 21
+      - type: text
+        text: +(player|crateria_shot_bonus)
+        color: white
+        style: dmd_med
+        y: 11

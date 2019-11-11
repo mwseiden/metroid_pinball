@@ -12,10 +12,19 @@ switches:
     tags: start
   s_pop_1:
     number: 0-3
+    platform_settings:
+      debounce_close: 10
+      debounce_open: 10
   s_pop_2:
     number: 0-4
+    platform_settings:
+      debounce_close: 10
+      debounce_open: 10
   s_pop_3:
     number: 0-5
+    platform_settings:
+      debounce_close: 10
+      debounce_open: 10
   s_drop_target_1:
     number: 0-6
   s_thin_orange:
@@ -262,8 +271,8 @@ switches:
     number: 2-15
     tags: playfield_active
     platform_settings:
-      debounce_close: 3
-      debounce_open: 3
+      debounce_close: 10
+      debounce_open: 10
   s_left_target_3:
     number: 2-16
     tags: playfield_active

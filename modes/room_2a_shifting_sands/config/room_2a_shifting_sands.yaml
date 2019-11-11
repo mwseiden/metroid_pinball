@@ -15,6 +15,8 @@ timers:
         action: start
       - event: ball_ending
         action: stop
+      - event: mode_bonus_will_start
+        action: stop
       - event: room_2a_bank_1_shot_hit
         action: add
         value: 4
@@ -29,6 +31,12 @@ timers:
         value: 8
       - event: mode_room_2a_shifting_sands_started
         action: reset
+      - event: flipper_cradle
+        action: pause
+      - event: flipper_cradle_release
+        action: start
+      - event: room_2a_shifting_sands_status_over
+        action: start
 
 shots:
   room_2a_bank_1_shot:
@@ -112,6 +120,13 @@ show_player:
       show_tokens:
         color: 'a78600'
         color2: 'FF8000'
+  show_mode_status_report:
+    room_2a_shifting_sands_status_report:
+      loops: 0
+      events_when_completed: room_2a_shifting_sands_status_over
+  flipper_cradle_release:
+    room_2a_shifting_sands_status_report:
+      action: stop
 
 slides:
   room_2a_backglass_slide:
@@ -226,10 +241,12 @@ event_player:
       min_length: 4
       max_length: 12
       color: "200C00"
+    drop_targets_continue:
   timer_room_2a_do_not_sink_complete:
     - room_2a_sink_into_sand
   room_2a_exit_west_shot_hit: room_1z_enter
   room_2a_exit_east_shot_hit: room_2b_enter
+  mode_room_2a_shifting_sands_ending: drop_targets_save
 
 variable_player:
   mode_room_2a_shifting_sands_started:

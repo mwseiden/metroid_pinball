@@ -1,0 +1,16 @@
+#show_version=5
+
+- duration: 1s
+  slides:
+    skillshot_missiles_made_slide:
+      widgets:
+      - type: text
+        text: SKILLSHOT!
+        style: dmd_big
+        color: red
+        y: 24
+      - type: text
+        text: BRIDGE BONUS (bridge_bonus)00k
+        style: dmd_big
+        color: red
+        y: 10

@@ -46,6 +46,11 @@
         number_grouping: true
         min_digits: 2
         style: dmd_big
+      - type: text
+        text: Ball (ball)
+        color: "FF6030"
+        y: 7
+        style: dmd_small
 
 - duration: 5s
   slides:

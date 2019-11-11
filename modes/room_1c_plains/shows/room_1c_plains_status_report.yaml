@@ -1,0 +1,43 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_1c_plains_status_slide_splash:
+      widgets:
+      - type: image
+        image: room_1c_plains_splash
+
+
+- duration: 5s
+  slides:
+    room_1c_plains_status_slide_help:
+      widgets:
+      - type: text
+        text: Side Targets 10000
+        color: blue
+        style: dmd_med
+        y: 24
+      - type: text
+        text: Center Targets 1000
+        color: blue
+        style: dmd_med
+      - type: text
+        text: Lower Targets 5000
+        color: blue
+        style: dmd_med
+        y: 8
+
+- duration: 5s
+  slides:
+    room_1c_plains_status_crateria_bonus:
+      widgets:
+      - type: text
+        text: Crateria Shot Bonus
+        color: blue
+        style: dmd_med
+        y: 21
+      - type: text
+        text: +(player|crateria_shot_bonus)
+        color: white
+        style: dmd_med
+        y: 11

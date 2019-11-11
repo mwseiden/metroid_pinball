@@ -22,7 +22,7 @@ counters:
     enable_events: multiball_chozo_ended, mode_chozo_multiball_starting
     reset_events: game_start, multiball_chozo_started
     persist_state: true
-    disable_on_complete: false
+    disable_on_complete: true
 
 shots:
   chozo_multiball_jackpot_one_shot:
@@ -97,9 +97,57 @@ show_player:
         led_4: led_drop_1
         led_5: led_drop_2
         led_6: led_drop_3
+    chozo_multiball_spin:
+      priority: 600
+      loops: 0
+      speed: 50
   multiball_chozo_ended:
     chozo_multiball_drop_show:
       action: stop
+  chozo_multiball_light_stage_1:
+    blink_light:
+      key: chozo_progress_blink
+      loops: -1
+      speed: 0.5
+      show_tokens:
+        led: led_captive_ball
+        color: 'ffff00'
+  chozo_multiball_light_stage_2:
+    blink_light:
+      key: chozo_progress_blink
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_captive_ball
+        color: 'bfff00'
+  chozo_multiball_light_stage_3:
+    blink_light:
+      key: chozo_progress_blink
+      loops: -1
+      speed: 3
+      show_tokens:
+        led: led_captive_ball
+        color: '7fff00'
+  chozo_multiball_light_stage_4:
+    blink_light:
+      key: chozo_progress_blink
+      loops: -1
+      speed: 5
+      show_tokens:
+        led: led_captive_ball
+        color: '00ff00'
+  chozo_multiball_light_stage_0:
+    chozo_progress_blink:
+      action: stop
+  s_captive_ball_active:
+    blink_light:
+      key: chozo_captive_blink
+      priority: 500
+      loops: 10
+      speed: 20
+      show_tokens:
+        led: led_captive_ball
+        color: 'ff0000'
 
 variable_player:
   logicblock_captive_ball_counter_updated:
@@ -129,12 +177,26 @@ variable_player:
 
 sound_player:
   chozo_multiball_bashed: multiball
-  chozo_multiball_progress: ball_locked
+  chozo_multiball_sound_locked: ball_locked
   chozo_multiball_jackpot_one_shot_hit: jackpot
   chozo_multiball_jackpot_two_shot_hit: jackpot_alt_1
   chozo_multiball_jackpot_three_shot_hit: jackpot
   chozo_multiball_jackpot_collect_shot_hit: super_jackpot
+  chozo_multiball_sound_captive: shoot_the_captive_ball
 
 event_player:
   multiball_chozo_started: cmd_drop_all_drops, chozo_multiball_reset_jackpot
+  mode_chozo_multiball_started{device.counters.captive_ball_counter.value > 3}: chozo_multiball_light_stage_1
+  mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 3}: chozo_multiball_light_stage_2
+  mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 2}: chozo_multiball_light_stage_3
+  mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 1}: chozo_multiball_light_stage_4
+  multiball_chozo_ended: chozo_multiball_light_stage_1
+  chozo_multiball_bashed: chozo_multiball_light_stage_0
   chozo_multiball_jackpot_collect_shot_hit: chozo_multiball_reset_jackpot
+  logicblock_captive_ball_counter_updated{value > 3 and not completed and enabled}: chozo_multiball_light_stage_1
+  logicblock_captive_ball_counter_updated{value == 3}: chozo_multiball_light_stage_2
+  logicblock_captive_ball_counter_updated{value == 2}: chozo_multiball_light_stage_3
+  logicblock_captive_ball_counter_updated{value == 1}: chozo_multiball_light_stage_4
+  chozo_multiball_progress{device.counters.captive_ball_counter.value == 1}: chozo_multiball_sound_captive
+  chozo_multiball_progress{device.counters.captive_ball_counter.value > 1 and not device.counters.captive_ball_counter.completed and device.counters.captive_ball_counter.enabled}: chozo_multiball_sound_locked
+

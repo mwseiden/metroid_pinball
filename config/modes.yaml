@@ -14,8 +14,11 @@ modes:
   - missiles
   - pop_bumpers
   - power_bombs
+  - room_1a_lush_cavern
   - room_1b_gunship
   - room_1b_gunship_victory
+  - room_1c_plains
+  - room_1f_mushroom_chamber
   - room_1l_entryway
   - room_1r_space_pirate_battle
   - room_1z_underground_desert

@@ -1,0 +1,48 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_2a_shifting_sands_status_slide_splash:
+      widgets:
+      - type: image
+        image: room_2a_splash
+
+
+- duration: 5s
+  slides:
+    room_2a_shifting_sands_status_slide_help:
+      widgets:
+      - type: Text
+        text: Hit Flashing Yellow
+        color: yellow
+        style: dmd_med
+        y: 24
+      - type: Text
+        text: Target Banks to Stop
+        color: yellow
+        style: dmd_med
+      - type: Text
+        text: Sinking in Quicksand
+        color: yellow
+        style: dmd_med
+        y: 8
+
+- duration: 5s
+  slides:
+    room_2a_shifting_sands_exit_slide:
+      widgets:
+      - type: text
+        text: EXITS
+        color: red
+        style: dmd_med
+        y: 29
+      - type: text
+        text: "West: Secret Passage"
+        color: blue
+        style: dmd_small
+        y: 22
+      - type: text
+        text: "East: Right Orbit"
+        color: blue
+        style: dmd_small
+        y: 16

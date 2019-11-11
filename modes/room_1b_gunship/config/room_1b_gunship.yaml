@@ -1,8 +1,22 @@
 #config_version=5
 mode:
-    start_events: select_landing_site_crateria_selected, room_1b_continue
+    start_events: select_landing_site_crateria_selected, room_1b_continue, room_1b_enter
     stop_events: game_ending, ball_ending, room_1b_success, room_1b_already_complete
     priority: 300
+
+shots:
+  room_1b_increase_value_shot:
+    switch: s_shatz
+    profile: room_1b_increase
+    show_tokens:
+      led: led_zero_suit
+      color: '00ffff'
+
+shot_profiles:
+  room_1b_increase:
+    states:
+      - name: lit
+        show: fade_one_light
 
 accruals:
   room_1b_complete_left_orbit:
@@ -111,20 +125,22 @@ variable_player:
       string: 1b
       action: set
   room_1b_ship_left:
-    score: (50000 + (current_player.area_bonus_nw * 10000)) * current_player.multiplier
+    score: (150000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 10000)) * current_player.multiplier
     room_1b_step_1a:
       int: 1
       action: set
   room_1b_ship_right:
-    score: (50000 + (current_player.area_bonus_ne * 10000)) * current_player.multiplier
+    score: (100000 + current_player.crateria_shot_bonus + (current_player.area_bonus_ne * 10000)) * current_player.multiplier
     room_1b_step_1b:
       int: 1
       action: set
   room_1b_achieved:
-    score: (75000 + (current_player.area_bonus_nw * 10000)) * current_player.multiplier
+    score: (75000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 10000)) * current_player.multiplier
     room_1b_step_2:
       int: 1
       action: set
+  room_1b_increase_value_shot_hit:
+    crateria_shot_bonus: 25000
 
 animations:
   room_1b_backglass_scroll_up_slow:

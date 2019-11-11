@@ -57,16 +57,12 @@ shot_groups:
       - upper_left_sling_shot
       - left_sling_shot
       - right_sling_shot
-      - pop_1_shot
-      - pop_2_shot
-      - pop_3_shot
       - left_outlane_shot
       - right_outlane_shot
       - left_inlane_shot
       - right_inlane_shot
       - pop_subway_shot
       - rollover_shot
-      - shatz_shot
       - miniboss_level_1_1_shot
       - miniboss_level_1_2_shot
       - miniboss_level_1_3_shot
@@ -280,6 +276,7 @@ show_player:
         color: ff0000
   the_pit_shot_hit:
     base_the_pit:
+      priority: 666
       loops: 0
     blink_light:
       key: pit_blink

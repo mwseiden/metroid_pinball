@@ -11,8 +11,8 @@ ball_holds:
    bridge_skillshot:
       balls_to_hold: 1
       hold_devices: bd_plunger
-      reset_events: mode_bridge_starting, mode_bridge_ending, whole_playfield_shot_group_hit, s_shooter_lane_inactive, ball_will_end
-      disable_events: mode_bridge_starting, mode_bridge_ending, whole_playfield_shot_group_hit, s_shooter_lane_inactive, ball_will_end
+      reset_events: mode_bridge_starting, whole_playfield_shot_group_hit, s_shooter_lane_inactive
+      disable_events: mode_bridge_starting, whole_playfield_shot_group_hit, s_shooter_lane_inactive
       enable_events: bridge_enable_skillshot
 
 timers:
@@ -158,6 +158,9 @@ shows:
     - duration: 0.3s
       sounds: bridge_explosion_sound_pool
 
+sound_player:
+  bridge_should_explode: bridge_destroyed
+
 event_player:
   bridge_rail_shot_hit{current_player.power_bombs > 0}: bridge_should_explode
   ball_hold_bridge_skillshot_held_ball: skillshot_should_start
@@ -166,5 +169,5 @@ event_player:
 variable_player:
   bridge_should_explode:
     power_bombs: -1
-    score: (200000 + (100000 * current_player.bridges) + (50000 * current_player.area_bonus_e)) * current_player.multiplier * (2 if current_player.continue_room == '2d' else 1)
+    score: (200000 + (100000 * (current_player.bridges + current_player.bridge_bonus)) + (50000 * current_player.area_bonus_e)) * current_player.multiplier * (2 if current_player.continue_room == '2d' else 1)
     bridges: 1

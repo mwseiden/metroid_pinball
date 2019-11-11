@@ -19,6 +19,15 @@ sounds:
     loops: -1
     simultaneous_limit: 1
     stealing_method: skip
+  music_high_score:
+    file: music_high_score.wav
+    #streaming: True
+    track: music
+    priority: 50
+    #max_queue_time: 1s
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip
   music_norfair:
     file: music_norfair.wav
     #streaming: True

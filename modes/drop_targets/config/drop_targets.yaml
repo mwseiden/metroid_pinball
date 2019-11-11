@@ -1,31 +1,56 @@
 #config_version=5
 mode:
-    start_events: mode_skillshot_stopped
-    priority: 100
+  code: drop_targets.DropTargets
+  start_events: drop_target_mode_should_start
+  priority: 100
 
 event_player:
   mode_drop_targets_started:
-    - drop_targets_enable_scoring:0.5s
-    - cmd_reset_all_drops:3s
+    - drop_targets_enable_scoring:1.5s
+    - drop_targets_continue:1s
+  drop_targets_start_one: cmd_drop_one_up, drop_targets_enable_shot_1
+  drop_targets_start_two: cmd_drop_two_up, drop_targets_enable_shot_2
+  drop_targets_start_three: cmd_drop_three_up, drop_targets_enable_shot_3
+
+shot_profiles:
+  drop_target_hit_me:
+    states:
+      - name: lit
+        show: fade_one_light
 
 shots:
   drop_1_shot:
-    switch: s_drop_target_1
-    disable_events: mode_drop_targets_started
-    enable_events: drop_targets_enable_scoring
+    hit_events: drop_target_drop_one_down
+    profile: drop_target_hit_me
+    disable_events: mode_drop_targets_started, drop_target_drop_one_down
+    enable_events: drop_targets_enable_shot_1
+    show_tokens:
+      led: led_drop_1
+      color: drop_target_can_hit
   drop_2_shot:
-    switch: s_drop_target_2
-    disable_events: mode_drop_targets_started
-    enable_events: drop_targets_enable_scoring
+    hit_events: drop_target_drop_two_down
+    profile: drop_target_hit_me
+    disable_events: mode_drop_targets_started, drop_target_drop_two_down
+    enable_events: drop_targets_enable_shot_2
+    show_tokens:
+      led: led_drop_2
+      color: drop_target_can_hit
   drop_3_shot:
-    switch: s_drop_target_3
-    disable_events: mode_drop_targets_started
-    enable_events: drop_targets_enable_scoring
+    hit_events: drop_target_drop_three_down
+    profile: drop_target_hit_me
+    disable_events: mode_drop_targets_started, drop_target_drop_three_down
+    enable_events: drop_targets_enable_shot_3
+    show_tokens:
+      led: led_drop_3
+      color: drop_target_can_hit
 
 variable_player:
   drop_1_shot_hit:
     score: 1000
+    drops: 1
   drop_2_shot_hit:
     score: 10000
+    drops: 1
   drop_3_shot_hit:
     score: 25000
+    drops: 1

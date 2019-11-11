@@ -5,7 +5,7 @@
     lanes_complete_slide:
       widgets:
       - type: text
-        text: BALL SAVE
+        text: OUTLANE SAVE
         style: dmd_big
         color: green
         y: 22
