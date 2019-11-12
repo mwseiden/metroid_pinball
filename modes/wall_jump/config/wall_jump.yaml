@@ -11,7 +11,7 @@ counters:
     count_complete_value: 0
     direction: down
     events_when_complete: wall_jump_should_activate
-    enable_events: mode_wall_jump_started, wall_jump_deactivated
+    enable_events: mode_wall_jump_started, wall_jump_deactivated, timer_wall_jump_activation_timer_complete
     reset_events: game_start, wall_jump_deactivated
     persist_state: true
     disable_on_complete: true
