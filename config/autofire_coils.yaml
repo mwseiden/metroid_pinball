@@ -30,4 +30,6 @@ autofire_coils:
   pop_sling:
     coil: c_pop_sling
     switch: s_pop_sling
+    disable_events: ball_ending, service_mode_entered, pop_slingshot_should_disable
+    enable_events: ball_started, pop_slingshot_should_enable
 

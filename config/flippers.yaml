@@ -24,3 +24,10 @@ flippers:
     enable_events: left_sling_flipper_should_enable
     main_coil_overwrite:
       pulse_ms: 20
+  right_sling_flipper:
+    main_coil: c_pop_sling
+    activation_switch: s_upper_right_flipper
+    disable_events: ball_will_end, service_mode_entered, right_sling_flipper_should_disable
+    enable_events: right_sling_flipper_should_enable
+    #main_coil_overwrite:
+    #  pulse_ms: 20
