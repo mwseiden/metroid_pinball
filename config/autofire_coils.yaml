@@ -19,6 +19,8 @@ autofire_coils:
   upper_slingshot:
     coil: c_upper_slingshot
     switch: s_upper_sling
+    disable_events: ball_ending, service_mode_entered, upper_slingshot_should_disable
+    enable_events: ball_started, upper_slingshot_should_enable
   scoop:
     coil: c_scoop
     switch: s_scoop
