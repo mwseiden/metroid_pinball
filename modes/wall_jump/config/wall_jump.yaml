@@ -11,8 +11,8 @@ counters:
     count_complete_value: 0
     direction: down
     events_when_complete: wall_jump_should_activate
-    enable_events: mode_wall_jump_started, wall_jump_deactivated
-    reset_events: game_start, wall_jump_deactivated
+    enable_events: mode_wall_jump_started, wall_jump_deactivated, wall_jump_reset
+    reset_events: game_start, wall_jump_deactivated, wall_jump_reset
     persist_state: true
     disable_on_complete: true
 
@@ -43,4 +43,4 @@ show_player:
 
 event_player:
   wall_jump_should_activate: left_sling_flipper_should_enable, upper_slingshot_should_disable
-  timer_wall_jump_activation_timer_complete: left_sling_flipper_should_disable, upper_slingshot_should_enable, wall_jump_deactivated
+  timer_wall_jump_activation_timer_complete: left_sling_flipper_should_disable, upper_slingshot_should_enable, wall_jump_reset
