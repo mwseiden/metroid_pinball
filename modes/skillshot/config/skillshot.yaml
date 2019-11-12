@@ -108,6 +108,6 @@ event_player:
   skillshot_unskilled_success: skillshot_stage_one_end
   skillshot_side_success: skillshot_stage_one_end
   skillshot_big_points_success: skillshot_stage_one_end
-  skillshot_monitor_should_end: skillshot_monitor_end, drop_target_mode_should_start
+  skillshot_monitor_should_end: skillshot_monitor_end, drop_target_mode_should_start, wall_jump_mode_should_start
   ball_will_end: skillshot_stage_one_end
 
