@@ -36,10 +36,10 @@ show_player:
         color: "FF6000"
   timer_wall_jump_activation_timer_complete:
     wall_jump_blink:
-      color: stop
+      action: stop
   mode_wall_jump_ending:
     wall_jump_blink:
-      color: stop
+      action: stop
 
 event_player:
   wall_jump_should_activate: left_sling_flipper_should_enable, upper_slingshot_should_disable
