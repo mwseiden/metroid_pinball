@@ -16,5 +16,31 @@ counters:
     persist_state: true
     disable_on_complete: true
 
+timers:
+  wall_jump_activation_timer:
+    end_value: 20
+    tick_interval: 1.0s
+    restart_on_complete: false
+    control_events:
+      - event: wall_jump_should_activate
+        action: restart
+
+show_player:
+  wall_jump_should_activate:
+    blink_light:
+      key: wall_jump_blink
+      loops: -1
+      speed: 10
+      show_tokens:
+        led: led_wall_jump
+        color: "FF6000"
+  timer_wall_jump_activation_timer_complete:
+    wall_jump_blink:
+      color: stop
+  mode_wall_jump_ending:
+    wall_jump_blink:
+      color: stop
+
 event_player:
   wall_jump_should_activate: left_sling_flipper_should_enable, upper_slingshot_should_disable
+  timer_wall_jump_activation_timer_complete: left_sling_flipper_should_disable, upper_slingshot_should_enable
