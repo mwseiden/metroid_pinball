@@ -69,10 +69,12 @@ coils:
   c_upper_slingshot:
     number: 0-15
     allow_enable: true
+    default_hold_power: 0.125
   c_ball_launch:
     number: 1-3
     allow_enable: true
-    default_pulse_ms: 16
+    default_pulse_ms: 17
+    default_pulse_power: 0.8
   c_left_slingshot:
     number: 1-4
     allow_enable: true

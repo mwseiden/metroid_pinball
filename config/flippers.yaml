@@ -17,3 +17,10 @@ flippers:
     main_coil: c_flipper_upper_right_main
     activation_switch: s_upper_right_flipper
     #eos_switch: s_upper_right_flipper_eos
+  left_sling_flipper:
+    main_coil: c_upper_slingshot
+    activation_switch: s_left_flipper
+    disable_events: ball_will_end, service_mode_entered, left_sling_flipper_should_disable
+    enable_events: left_sling_flipper_should_enable
+    main_coil_overwrite:
+      pulse_ms: 20
