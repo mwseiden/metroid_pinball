@@ -1,0 +1,20 @@
+#config_version=5
+
+mode:
+  start_events: wall_jump_mode_should_start
+  priority: 100
+
+counters:
+  wall_jump_counter:
+    count_events: s_upper_sling_active
+    starting_count: 10
+    count_complete_value: 0
+    direction: down
+    events_when_complete: wall_jump_should_activate
+    enable_events: mode_wall_jump_started, wall_jump_deactivated
+    reset_events: game_start, wall_jump_deactivated
+    persist_state: true
+    disable_on_complete: true
+
+event_player:
+  wall_jump_should_activate: left_sling_flipper_should_enable, upper_slingshot_should_disable
