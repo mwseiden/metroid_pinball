@@ -5,8 +5,9 @@ mode:
   priority: 100
 
 event_player:
+  skillshot_monitor_should_end:
+    - drop_targets_continue:1s
   mode_drop_targets_started:
-    - drop_targets_enable_scoring:1.5s
     - drop_targets_continue:1s
   drop_targets_start_one: cmd_drop_one_up, drop_targets_enable_shot_1
   drop_targets_start_two: cmd_drop_two_up, drop_targets_enable_shot_2
