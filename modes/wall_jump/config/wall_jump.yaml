@@ -42,5 +42,6 @@ show_player:
       action: stop
 
 event_player:
-  wall_jump_should_activate: left_sling_flipper_should_enable, upper_slingshot_should_disable
+  wall_jump_should_activate: upper_slingshot_should_disable, wall_jump_delayed_flipper_activate
+  wall_jump_delayed_flipper_activate: left_sling_flipper_should_enable
   timer_wall_jump_activation_timer_complete: left_sling_flipper_should_disable, upper_slingshot_should_enable, wall_jump_deactivated
