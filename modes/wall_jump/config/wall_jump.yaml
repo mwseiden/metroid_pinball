@@ -43,7 +43,7 @@ show_player:
 
 event_player:
   wall_jump_should_activate: upper_slingshot_should_disable
-  timer_wall_jump_activation_timer_tick{ticks == 1}: left_sling_flipper_should_enable
-  timer_wall_jump_activation_timer_tick{ticks == 40}: left_sling_flipper_should_disable
+  timer_wall_jump_activation_timer_tick{ticks == 0}: left_sling_flipper_should_enable
+  timer_wall_jump_activation_timer_tick{ticks == 39}: left_sling_flipper_should_disable
   timer_wall_jump_activation_timer_complete: wall_jump_deactivated
   wall_jump_deactivated: upper_slingshot_should_enable
