@@ -8,6 +8,28 @@ shots:
   ramp_shot:
     switch: s_ramp_enter
 
+show_player:
+  ramp_shot_hit:
+    blink_3_lights:
+      loops: 0
+      priority: 500
+      speed: 3
+      show_tokens:
+        led_1: gi_strip_1
+        led_2: gi_strip_2
+        led_3: gi_strip_3
+        color_1: 'FF0000'
+        color_2: '00FF00'
+    blink_2_lights:
+      loops: 0
+      priority: 500
+      speed: 2
+      show_tokens:
+        led_1: gi_back_left
+        led_2: led_enter_ramp
+        color_1: '00FF00'
+        color_2: '0000FF'
+
 sounds:
   ramp_sound_1:
     file: ramp_sound_1.wav
