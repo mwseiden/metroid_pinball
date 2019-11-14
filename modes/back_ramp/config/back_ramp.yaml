@@ -8,6 +8,19 @@ shots:
   ramp_shot:
     switch: s_ramp_enter
 
+counters:
+  back_ramp_counter:
+    count_events: ramp_shot_hit
+    # events_when_hit: chozo_multiball_progress
+    starting_count: 0
+    count_complete_value: 10
+    events_when_complete: mode_high_jump_should_start
+    disable_events: mode_high_jump_should_start
+    enable_events: mode_back_ramp_started, mode_high_jump_ended
+    reset_events: game_start, mode_high_jump_should_start
+    persist_state: true
+    disable_on_complete: true
+
 show_player:
   ramp_shot_hit:
     blink_3_lights:

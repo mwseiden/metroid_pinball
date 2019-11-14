@@ -55,6 +55,8 @@ player_vars:
     initial_value: 0
   has_chosen_landing_site:
     initial_value: 0
+  high_jump_bonus:
+    initial_value: 0
   kickbacks:
     initial_value: 0
   kickback_active:

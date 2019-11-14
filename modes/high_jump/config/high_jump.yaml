@@ -1,0 +1,55 @@
+#config_version=5
+
+mode:
+  start_events: mode_high_jump_should_start
+  stop_events: timer_high_jump_duration_timer_complete
+  priority: 500
+
+shot_profiles:
+  high_jump_jackpot:
+    states:
+      - name: lit
+        show: fade_one_light
+  high_jump_build_up:
+    states:
+      - name: lit
+        show: blink_2_lights
+
+shots:
+  high_jump_ramp_shot:
+    switch: s_ramp_enter
+    profile: high_jump_jackpot
+    show_tokens:
+      led: led_enter_ramp
+      color: 'FFFF80'
+  high_jump_side_ramp_shot:
+    switch: s_side_ramp_made
+    profile: high_jump_jackpot
+    show_tokens:
+      led: led_enter_side_ramp
+      color: 'FFFF80'
+  high_jump_increase_shot:
+    switches: s_right_inlane, s_left_inlane
+    profile: high_jump_build_up
+    show_tokens:
+      led_1: led_right_inlane
+      led_2: led_left_inlane
+      color_1: 'FFFFFF'
+      color_2: stop
+
+timers:
+  high_jump_duration_timer:
+    start_value: 1
+    end_value: 30
+    tick_interval: 1.0s
+    control_events:
+      - event: mode_high_jump_started
+        action: restart
+
+variable_player:
+  high_jump_ramp_shot_hit:
+    score: ((250000 + current_player.high_jump_bonus) * current_player.multiplier) + (current_player.area_bonus_nw * 50000)
+  high_jump_side_ramp_shot_hit:
+    score: ((500000 + (current_player.high_jump_bonus * 2)) * current_player.multiplier) + (current_player.area_bonus_ne * 50000)
+  high_jump_increase_shot_hit:
+    high_jump_bonus: 50000
