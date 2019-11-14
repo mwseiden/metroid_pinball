@@ -18,7 +18,7 @@ counters:
 
 timers:
   wall_jump_activation_timer:
-    end_value: 40
+    end_value: 80
     tick_interval: 0.25s
     restart_on_complete: false
     control_events:
@@ -44,6 +44,6 @@ show_player:
 event_player:
   wall_jump_should_activate: upper_slingshot_should_disable
   timer_wall_jump_activation_timer_tick{ticks == 0}: left_sling_flipper_should_enable
-  timer_wall_jump_activation_timer_tick{ticks == 39}: left_sling_flipper_should_disable
+  timer_wall_jump_activation_timer_tick{ticks == 79}: left_sling_flipper_should_disable
   timer_wall_jump_activation_timer_complete: wall_jump_deactivated
   wall_jump_deactivated: upper_slingshot_should_enable
