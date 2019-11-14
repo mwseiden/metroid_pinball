@@ -9,8 +9,6 @@ config:
 shots:
   scoop_shot:
     switch: s_scoop
-  ramp_shot:
-    switch: s_ramp_enter
   side_ramp_shot:
     switch: s_side_ramp_made
   secret_passage_shot:
@@ -441,10 +439,6 @@ variable_player:
     orbits: 1
     score:
       int: ((current_player.orbits * 500) + (current_player.spinners * 10) + (current_player.area_bonus_ne * 500)) * current_player.multiplier
-  ramp_shot_hit:
-    ramps: 1
-    score:
-      int: ((current_player.ramps * 1250) + (current_player.area_bonus_nw * 1000)) * current_player.multiplier
   side_ramp_shot_hit:
     ramps: 1
     score:
@@ -527,12 +521,6 @@ sounds:
     track: sfx
     priority: 50
     max_queue_time: None
-  ramp_sound_1:
-    file: ramp_sound_1.wav
-    streaming: False
-    track: sfx
-    priority: 50
-    max_queue_time: None
   ramp_sound_2:
     file: ramp_sound_2.wav
     streaming: False
@@ -577,7 +565,6 @@ sound_player:
   left_sling_shot_hit: left_sling
   right_sling_shot_hit: right_sling
   upper_left_sling_shot_hit: mid_sling
-  ramp_shot_hit: ramp_sound_1
   side_ramp_shot_hit: ramp_sound_4
   secret_passage_shot_hit: ramp_sound_2
   rollover_shot_hit: mini_loop

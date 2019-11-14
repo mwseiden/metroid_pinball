@@ -1,0 +1,27 @@
+#config_version=5
+
+mode:
+  start_events: mode_base_starting
+  priority: 100
+
+shots:
+  ramp_shot:
+    switch: s_ramp_enter
+
+sounds:
+  ramp_sound_1:
+    file: ramp_sound_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_player:
+  ramp_shot_hit: ramp_sound_1
+
+variable_player:
+  ramp_shot_hit:
+    ramps: 1
+    score:
+      int: ((current_player.ramps * 1250) + (current_player.area_bonus_nw * 1000)) * current_player.multiplier
+
