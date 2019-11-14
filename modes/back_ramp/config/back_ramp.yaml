@@ -17,7 +17,7 @@ counters:
     events_when_complete: mode_high_jump_should_start
     disable_events: mode_high_jump_should_start
     enable_events: mode_back_ramp_started, mode_high_jump_ended
-    reset_events: game_start, mode_high_jump_should_start
+    reset_events: game_start, mode_high_jump_should_start, mode_high_jump_ended
     persist_state: true
     disable_on_complete: true
 
