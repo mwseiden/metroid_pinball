@@ -42,7 +42,11 @@ high_score:
   - bridges:
       - BRIDGE DESTROYER
   - drops:
-      - DROPPED IT
+      - WALL BOMBER
+  - missiles:
+      - MISSILE COLLECTOR
+  - power_bombs:
+      - POWER BOMBER
 
   # set the defaults
   defaults:
@@ -67,6 +71,10 @@ high_score:
     bridges:
       - GNZ: 1
     drops:
-      - NO1: 3
+      - WHO: 3
+    missiles:
+      - DAD: 5
+    power_bombs:
+      - DPF: 5
 
 
