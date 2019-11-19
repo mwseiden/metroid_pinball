@@ -16,3 +16,18 @@
         text: NO MODE RULES
         color: red
         style: dmd_med
+
+- duration: 5s
+  slides:
+    room_1c_plains_status_crateria_bonus:
+      widgets:
+      - type: text
+        text: Crateria Shot Bonus
+        color: blue
+        style: dmd_med
+        y: 21
+      - type: text
+        text: +(player|crateria_shot_bonus)
+        color: white
+        style: dmd_med
+        y: 11
