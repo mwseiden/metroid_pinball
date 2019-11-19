@@ -56,7 +56,7 @@ sounds:
 
 event_player:
   missiles_shot_group_lit_complete: missile_collected
-  missiles_shot_group_lit_hit: missile_play_missed_sound
+  missiles_shot_group_lit_hit{state == 'lit'}: missile_play_missed_sound
 
 show_player:
   missile_collected:
