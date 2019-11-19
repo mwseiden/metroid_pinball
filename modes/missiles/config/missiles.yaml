@@ -47,9 +47,6 @@ sounds:
     volume: 1.0
     max_queue_time: None
 
-sound_player:
-  missiles_shot_group_unlit_hit: missile_hit
-
 event_player:
   missiles_shot_group_lit_complete: missile_collected
 
@@ -71,3 +68,4 @@ variable_player:
 
 sound_player:
   missile_collected: missile_collected
+  missiles_shot_group_unlit_hit: missile_hit
