@@ -31,13 +31,24 @@ shots:
       led: led_missile_bank_3
       color: "9900ff"
 
-
 shot_groups:
   missiles_shot_group:
     shots: missile_bank_1_shot, missile_bank_2_shot, missile_bank_3_shot
     reset_events: missiles_shot_group_lit_complete
     enable_events: mode_missiles_started
     disable_events: mode_missiles_ending
+
+sounds:
+  missile_hit:
+    file: missile_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
+sound_player:
+  missiles_shot_group_unlit_hit: missile_hit
 
 event_player:
   missiles_shot_group_lit_complete: missile_collected
