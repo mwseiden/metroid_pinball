@@ -45,6 +45,44 @@ shots:
       led: led_drop_3
       color: drop_target_can_hit
 
+sounds:
+  drop_target_explosion_1:
+    file: drop_target_explode_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  drop_target_explosion_2:
+    file: drop_target_explode_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  drop_target_explosion_3:
+    file: drop_target_explode_3.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
+sound_pools:
+  drop_target_explosion_sound_pool:
+    load: preload
+    type: random
+    track: sfx
+    sounds:
+      - drop_target_explosion_1
+      - drop_target_explosion_2
+      - drop_target_explosion_3
+
+sound_player:
+  drop_1_shot_hit: drop_target_explosion_sound_pool
+  drop_2_shot_hit: drop_target_explosion_sound_pool
+  drop_3_shot_hit: drop_target_explosion_sound_pool
+
 variable_player:
   drop_1_shot_hit:
     score: 1000
