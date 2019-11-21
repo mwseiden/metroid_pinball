@@ -39,8 +39,26 @@ shot_groups:
     enable_events: mode_power_bombs_started
     disable_events: mode_power_bombs_ending
 
+sounds:
+  power_bomb_hit:
+    file: power_bomb_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  power_bomb_already_hit:
+    file: power_bomb_already_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
+
 event_player:
   power_bombs_shot_group_lit_complete: power_bomb_collected
+  power_bombs_shot_group_lit_hit: power_bomb_play_missed_sound
 
 show_player:
   power_bomb_collected:
@@ -64,3 +82,5 @@ variable_player:
 
 sound_player:
   power_bomb_collected: power_bomb_collected
+  power_bombs_shot_group_unlit_hit: power_bomb_hit
+  power_bomb_play_missed_sound: power_bomb_already_hit
