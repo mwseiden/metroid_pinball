@@ -45,14 +45,14 @@ sounds:
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.9
     max_queue_time: None
   power_bomb_already_hit:
     file: power_bomb_already_hit.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.75
     max_queue_time: None
 
 
