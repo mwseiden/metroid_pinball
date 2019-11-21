@@ -79,6 +79,27 @@ sounds:
     priority: 50
     volume: 1.0
     max_queue_time: None
+  drop_target_pass_1:
+    file: drop_target_pass_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  drop_target_pass_2:
+    file: drop_target_pass_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  drop_target_pass_3:
+    file: drop_target_pass_3.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
 
 sound_pools:
   drop_target_explosion_sound_pool:
@@ -94,6 +115,9 @@ sound_player:
   drop_1_shot_hit: drop_target_explosion_sound_pool
   drop_2_shot_hit: drop_target_explosion_sound_pool
   drop_3_shot_hit: drop_target_explosion_sound_pool
+  drop_1_passed_shot_hit: drop_target_pass_1
+  drop_2_passed_shot_hit: drop_target_pass_2
+  drop_3_passed_shot_hit: drop_target_pass_3
 
 show_player:
   drop_1_passed_shot_hit:
@@ -131,3 +155,9 @@ variable_player:
   drop_3_shot_hit:
     score: 25000
     drops: 1
+  drop_1_passed_shot_hit:
+    score: 1000
+  drop_2_passed_shot_hit:
+    score: 7500
+  drop_3_passed_shot_hit:
+    score: 15000
