@@ -40,6 +40,10 @@ shots:
     show_tokens:
       led: led_drop_2
       color: drop_target_can_hit
+  drop_2_passed_shot:
+    switch: s_behind_drop_2
+    disable_events: drop_targets_enable_shot_2
+    enable_events: mode_drop_targets_started, drop_target_drop_one_down
   drop_3_shot:
     hit_events: drop_target_drop_three_down
     profile: drop_target_hit_me
@@ -48,6 +52,10 @@ shots:
     show_tokens:
       led: led_drop_3
       color: drop_target_can_hit
+  drop_3_passed_shot:
+    switch: s_behind_drop_3
+    disable_events: drop_targets_enable_shot_3
+    enable_events: mode_drop_targets_started, drop_target_drop_one_down
 
 sounds:
   drop_target_explosion_1:
@@ -90,11 +98,28 @@ sound_player:
 show_player:
   drop_1_passed_shot_hit:
     blink_light:
+      key: drop_targets_1_down_blinking
       loops: 5
       speed: 10
       show_tokens:
         led: led_drop_1
-        color: "00FF00"
+        color: "0000FF"
+  drop_2_passed_shot_hit:
+    blink_light:
+      key: drop_targets_2_down_blinking
+      loops: 5
+      speed: 10
+      show_tokens:
+        led: led_drop_2
+        color: "0000FF"
+  drop_3_passed_shot_hit:
+    blink_light:
+      key: drop_targets_3_down_blinking
+      loops: 5
+      speed: 10
+      show_tokens:
+        led: led_drop_3
+        color: "0000FF"
 
 variable_player:
   drop_1_shot_hit:
