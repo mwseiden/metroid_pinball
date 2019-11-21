@@ -28,6 +28,10 @@ shots:
     show_tokens:
       led: led_drop_1
       color: drop_target_can_hit
+  drop_1_passed_shot:
+    switch: s_behind_drop_1
+    disable_events: drop_targets_enable_shot_1
+    enable_events: mode_drop_targets_started, drop_target_drop_one_down
   drop_2_shot:
     hit_events: drop_target_drop_two_down
     profile: drop_target_hit_me
@@ -82,6 +86,15 @@ sound_player:
   drop_1_shot_hit: drop_target_explosion_sound_pool
   drop_2_shot_hit: drop_target_explosion_sound_pool
   drop_3_shot_hit: drop_target_explosion_sound_pool
+
+show_player:
+  drop_1_passed_shot_hit:
+    blink_light:
+      loops: 5
+      speed: 10
+      show_tokens:
+        led: led_drop_1
+        color: "00FF00"
 
 variable_player:
   drop_1_shot_hit:
