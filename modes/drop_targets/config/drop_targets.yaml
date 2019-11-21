@@ -147,17 +147,17 @@ show_player:
 
 variable_player:
   drop_1_shot_hit:
-    score: 1000
+    score: (1000 + (current_player.area_bonus_ne * 500)) * current_player.multiplier
     drops: 1
   drop_2_shot_hit:
-    score: 10000
+    score: (10000 + (current_player.area_bonus_ne * 2500)) * current_player.multiplier
     drops: 1
   drop_3_shot_hit:
-    score: 25000
+    score: (25000 + (current_player.area_bonus_ne * 5000)) * current_player.multiplier
     drops: 1
   drop_1_passed_shot_hit:
-    score: 1000
+    score: (1000 + (current_player.area_bonus_ne * 100)) * current_player.multiplier
   drop_2_passed_shot_hit:
-    score: 7500
+    score: (7500 + (current_player.area_bonus_ne * 1500)) * current_player.multiplier
   drop_3_passed_shot_hit:
-    score: 15000
+    score: (15000 + (current_player.area_bonus_ne * 5000)) * current_player.multiplier
