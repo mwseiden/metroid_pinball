@@ -84,21 +84,21 @@ sounds:
     streaming: False
     track: sfx
     priority: 50
-    volume: 0.5
+    volume: 0.25
     max_queue_time: None
   drop_target_pass_2:
     file: drop_target_pass_2.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 0.5
+    volume: 0.25
     max_queue_time: None
   drop_target_pass_3:
     file: drop_target_pass_3.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 0.5
+    volume: 0.25
     max_queue_time: None
 
 sound_pools:
