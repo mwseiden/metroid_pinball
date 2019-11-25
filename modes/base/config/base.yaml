@@ -411,13 +411,6 @@ event_player:
       direction: left
   timer_base_twitch_left_flipper_timer_complete: twitch_unflip_left
   timer_base_twitch_right_flipper_timer_complete: twitch_unflip_right
-  #s_behind_drop_1_active{device.switches.s_drop_target_1.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
-  #s_behind_drop_2_active{device.switches.s_drop_target_2.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
-  #s_behind_drop_3_active{device.switches.s_drop_target_3.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
-  #timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_1.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
-  #timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_2.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
-  #timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_3.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
-  #dirty_pool_locked: cmd_drop_all_drops
   player_added{num == 2}: base_sound_player_2
   player_added{num == 3}: base_sound_player_3
   player_added{num == 4}: base_sound_player_4
@@ -429,6 +422,7 @@ event_player:
   mode_base_started{game.num_players > 1 and current_player.number == 2}: base_start_multi_player_two
   mode_base_started{game.num_players > 1 and current_player.number == 3}: base_start_multi_player_three
   mode_base_started{game.num_players > 1 and current_player.number == 4}: base_start_multi_player_four
+  mode_base_started: metroid_base_started
 
 variable_player:
   left_orbit_hit:
