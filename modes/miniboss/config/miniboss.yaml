@@ -216,6 +216,19 @@ show_player:
       priority: 9000
       events_when_stopped: miniboss_battle_mode_should_start
 
+sounds:
+  miniboss_level_1_hit:
+    file: miniboss_level_1_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
+sound_player:
+  miniboss_targets_level_1_shot_group_unlit_hit: miniboss_level_1_hit
+  # missile_play_missed_sound: missile_already_hit
+
 variable_player:
   miniboss_level_1_1_shot_hit:
     score: 100 * current_player.multiplier
