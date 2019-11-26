@@ -172,6 +172,9 @@ event_player:
   miniboss_targets_level_3_shot_group_lit_complete: miniboss_targets_completed
   miniboss_enable_level_4: scoop_autofire_should_disable
   miniboss_battle_mode_should_start: scoop_autofire_should_enable, miniboss_hold_disable
+  miniboss_targets_level_1_shot_group_lit_hit: miniboss_play_missed_sound
+  miniboss_targets_level_2_shot_group_lit_hit: miniboss_play_missed_sound
+  miniboss_targets_level_3_shot_group_lit_hit: miniboss_play_missed_sound
 
 show_player:
   miniboss_targets_level_1_shot_group_lit_complete:
@@ -217,6 +220,13 @@ show_player:
       events_when_stopped: miniboss_battle_mode_should_start
 
 sounds:
+  miniboss_miss:
+    file: miniboss_miss.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
   miniboss_level_1_hit:
     file: miniboss_level_1_hit.wav
     streaming: False
@@ -227,7 +237,7 @@ sounds:
 
 sound_player:
   miniboss_targets_level_1_shot_group_unlit_hit: miniboss_level_1_hit
-  # missile_play_missed_sound: missile_already_hit
+  miniboss_play_missed_sound: miniboss_miss
 
 variable_player:
   miniboss_level_1_1_shot_hit:
