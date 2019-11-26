@@ -1,7 +1,7 @@
 #config_version=5
 
 mode:
-  start_events: mode_base_started, skillshot_should_start
+  start_events: metroid_base_started, skillshot_should_start
   stop_events: skillshot_stage_one_end, skillshot_side_success
 
 shot_groups:
