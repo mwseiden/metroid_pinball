@@ -213,6 +213,7 @@ show_player:
   ball_hold_miniboss_final_shot_held_ball:
     miniboss_starting:
       loops: 0
+      priority: 9000
       events_when_stopped: miniboss_battle_mode_should_start
 
 variable_player:
