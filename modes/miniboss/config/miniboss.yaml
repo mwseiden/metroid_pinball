@@ -225,7 +225,7 @@ sounds:
     streaming: False
     track: sfx
     priority: 50
-    volume: 0.5
+    volume: 0.75
     max_queue_time: None
   miniboss_level_1_hit:
     file: miniboss_level_1_hit.wav
@@ -234,9 +234,25 @@ sounds:
     priority: 50
     volume: 1.0
     max_queue_time: None
+  miniboss_level_2_hit:
+    file: miniboss_level_2_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  miniboss_level_3_hit:
+    file: miniboss_level_3_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
 
 sound_player:
   miniboss_targets_level_1_shot_group_unlit_hit: miniboss_level_1_hit
+  miniboss_targets_level_2_shot_group_unlit_hit: miniboss_level_2_hit
+  miniboss_targets_level_3_shot_group_unlit_hit: miniboss_level_3_hit
   miniboss_play_missed_sound: miniboss_miss
 
 variable_player:
