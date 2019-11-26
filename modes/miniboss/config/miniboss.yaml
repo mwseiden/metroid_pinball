@@ -133,6 +133,11 @@ shots:
       led: led_enter_scoop
       color: 00FF80
 
+# ball_holds:
+#   bunker:
+#      balls_to_hold: 1
+#      hold_devices: bd_bunker
+
 shot_groups:
   miniboss_targets_level_1_shot_group:
     shots: miniboss_level_1_1_shot, miniboss_level_1_2_shot, miniboss_level_1_3_shot
