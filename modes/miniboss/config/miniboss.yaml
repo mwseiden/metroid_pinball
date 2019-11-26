@@ -133,10 +133,13 @@ shots:
       led: led_enter_scoop
       color: 00FF80
 
-# ball_holds:
-#   bunker:
-#      balls_to_hold: 1
-#      hold_devices: bd_bunker
+ball_holds:
+  miniboss_final_shot:
+    balls_to_hold: 1
+    hold_devices: bd_scoop
+    enable_events: miniboss_enable_level_4
+    disable_events: mode_miniboss_starting, mode_miniboss_ending, miniboss_hold_disable
+    release_all_events: miniboss_battle_mode_should_start
 
 shot_groups:
   miniboss_targets_level_1_shot_group:
@@ -167,6 +170,8 @@ event_player:
   miniboss_targets_level_1_shot_group_lit_complete: miniboss_targets_completed
   miniboss_targets_level_2_shot_group_lit_complete: miniboss_targets_completed
   miniboss_targets_level_3_shot_group_lit_complete: miniboss_targets_completed
+  miniboss_enable_level_4: scoop_autofire_should_disable
+  miniboss_battle_mode_should_start: scoop_autofire_should_enable, miniboss_hold_disable
 
 show_player:
   miniboss_targets_level_1_shot_group_lit_complete:
@@ -205,6 +210,10 @@ show_player:
   miniboss_targets_completed:
     miniboss_targets_completed:
       loops: 0
+  ball_hold_miniboss_final_shot_held_ball:
+    miniboss_starting:
+      loops: 0
+      events_when_stopped: miniboss_battle_mode_should_start
 
 variable_player:
   miniboss_level_1_1_shot_hit:
