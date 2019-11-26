@@ -1,6 +1,6 @@
 #config_version=5
 mode:
-  start_events: metroid_base_started, skillshot_should_start
+  start_events: skillshot_should_start
   stop_events: skillshot_monitor_end
   priority: 500
 

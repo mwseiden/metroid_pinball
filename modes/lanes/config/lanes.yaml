@@ -2,6 +2,7 @@
 mode:
   code: lanes.Lanes
   start_events: metroid_base_started
+  stop_events: metroid_base_ended
   priority: 100
 
 shot_profiles:

@@ -1,7 +1,8 @@
 #config_version=5
 mode:
-    start_events: metroid_base_started
-    priority: 300
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
+  priority: 300
 
 multiballs:
   chozo:
