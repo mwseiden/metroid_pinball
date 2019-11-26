@@ -225,7 +225,7 @@ sounds:
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.5
     max_queue_time: None
   miniboss_level_1_hit:
     file: miniboss_level_1_hit.wav
