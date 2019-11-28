@@ -2,6 +2,7 @@
 mode:
   code: drop_targets.DropTargets
   start_events: drop_target_mode_should_start
+  stop_events: game_ending, ball_ending, metroid_base_ended, drop_target_mode_should_end
   priority: 100
 
 event_player:

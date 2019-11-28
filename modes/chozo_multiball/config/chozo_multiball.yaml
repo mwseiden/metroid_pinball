@@ -187,7 +187,8 @@ sound_player:
 
 event_player:
   multiball_chozo_started.1: drop_targets_save
-  multiball_chozo_started.2: cmd_drop_all_drops, chozo_multiball_reset_jackpot
+  multiball_chozo_started.2: drop_target_mode_should_end
+  multiball_chozo_started.3: cmd_drop_all_drops, chozo_multiball_reset_jackpot
   mode_chozo_multiball_started{device.counters.captive_ball_counter.value > 3}: chozo_multiball_light_stage_1
   mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 3}: chozo_multiball_light_stage_2
   mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 2}: chozo_multiball_light_stage_3
