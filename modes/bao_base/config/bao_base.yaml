@@ -3,3 +3,44 @@ mode:
   start_events: bao_base_started
   stop_events: bao_base_ended
   priority: 200
+
+shot_profiles:
+  bao_charge_targets:
+    states:
+      - name: unlit
+        show: off
+      - name: level_1
+        show: led_color
+        show_tokens:
+          color: '0000FF'
+      - name: level_2
+        show: led_color
+        show_tokens:
+          color: '8000FF'
+      - name: level_3
+        show: led_color
+        show_tokens:
+          color: FF00FF
+
+shots:
+  bao_charge_1_shot:
+    switch: s_purple_1
+    profile: bao_charge_targets
+    enable_events: mode_bao_base_starting
+    disable_events: mode_bao_base_ending
+    show_tokens:
+      led: led_upgrade_bank_1
+  bao_charge_2_shot:
+    switch: s_purple_2
+    profile: bao_charge_targets
+    enable_events: mode_bao_base_starting
+    disable_events: mode_bao_base_ending
+    show_tokens:
+      led: led_upgrade_bank_2
+  bao_charge_3_shot:
+    switch: s_purple_3
+    profile: bao_charge_targets
+    enable_events: mode_bao_base_starting
+    disable_events: mode_bao_base_ending
+    show_tokens:
+      led: led_upgrade_bank_3
