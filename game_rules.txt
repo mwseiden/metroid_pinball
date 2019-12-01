@@ -170,6 +170,10 @@ Base Game Mechanics
             No special requirement. Hitting the shot will travel to another
             room and start (or continue) that new mode.
 
+        Red:
+            Requires one missile. The missile is lost after use. The door will
+            become a BLUE door for the rest of the game.
+
 
 
 World Map
