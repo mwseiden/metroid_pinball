@@ -21,26 +21,50 @@ shot_profiles:
         show: led_color
         show_tokens:
           color: FF00FF
+  bao_charged_scoop:
+    states:
+      - name: lit
+        show: led_color
 
 shots:
   bao_charge_1_shot:
     switch: s_purple_1
     profile: bao_charge_targets
-    enable_events: mode_bao_base_starting
-    disable_events: mode_bao_base_ending
+    enable_events: bao_enable_stage_1
+    disable_events: mode_bao_base_starting, bao_enable_stage_2
     show_tokens:
       led: led_upgrade_bank_1
   bao_charge_2_shot:
     switch: s_purple_2
     profile: bao_charge_targets
-    enable_events: mode_bao_base_starting
-    disable_events: mode_bao_base_ending
+    enable_events: bao_enable_stage_1
+    disable_events: mode_bao_base_starting, bao_enable_stage_2
     show_tokens:
       led: led_upgrade_bank_2
   bao_charge_3_shot:
     switch: s_purple_3
     profile: bao_charge_targets
-    enable_events: mode_bao_base_starting
-    disable_events: mode_bao_base_ending
+    enable_events: bao_enable_stage_1
+    disable_events: mode_bao_base_starting, bao_enable_stage_2
     show_tokens:
       led: led_upgrade_bank_3
+  bao_charged_scoop_shot:
+    switch: s_scoop
+    profile: bao_charged_scoop
+    enable_events: bao_enable_stage_2
+    disable_events: mode_bao_base_starting, bao_enable_stage_3
+    show_tokens:
+      led: led_enter_scoop
+      color: 'FFFF00'
+
+shot_groups:
+  bao_charge_shot_group:
+    shots: bao_charge_1_shot, bao_charge_2_shot, bao_charge_3_shot
+    reset_events: bao_enable_stage_2
+    enable_events: bao_enable_stage_1
+    disable_events: mode_bao_base_starting, bao_enable_stage_2
+
+event_player:
+   mode_bao_base_starting: bao_enable_stage_1
+   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
+   bao_charged_scoop_shot_hit: bao_enable_stage_3
