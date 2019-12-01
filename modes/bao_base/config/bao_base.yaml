@@ -1,0 +1,5 @@
+#config_version=5
+mode:
+  start_events: bao_base_started
+  stop_events: bao_base_ended
+  priority: 200

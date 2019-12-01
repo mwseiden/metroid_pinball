@@ -1,8 +1,8 @@
 #config_version=5
 mode:
   code: select_landing_site.SelectLandingSite
-  start_events: ball_starting
-  stop_events: ball_ended, select_landing_site_item_selected
+  start_events: metroid_base_started
+  stop_events: ball_ended, metroid_base_ended, select_landing_site_item_selected
   priority: 500
   game_mode: false
 

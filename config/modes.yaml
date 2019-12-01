@@ -2,6 +2,7 @@
 
 modes:
   - back_ramp
+  - bao_base
   - base
   - bonus
   - bridge
