@@ -4,6 +4,15 @@ mode:
   stop_events: bao_base_ended
   priority: 200
 
+sequences:
+   bao_progress_sequence:
+      events:
+         - bao_enable_stage_2
+         - bao_enable_stage_3
+      persist_state: True
+      reset_on_complete: True
+      disable_on_complete: False
+
 shot_profiles:
   bao_charge_targets:
     states:
@@ -65,6 +74,8 @@ shot_groups:
     disable_events: bao_enable_stage_2
 
 event_player:
-   mode_bao_base_started: bao_enable_stage_1
-   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
-   bao_charged_scoop_shot_hit: bao_enable_stage_3
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value == 1}: bao_enable_stage_2
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value == 2}: bao_enable_stage_3
+  bao_charge_shot_group_level_3_complete: bao_enable_stage_2
+  bao_charged_scoop_shot_hit: bao_enable_stage_3
