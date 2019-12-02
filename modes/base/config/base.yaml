@@ -422,8 +422,9 @@ event_player:
   mode_base_started{game.num_players > 1 and current_player.number == 2}: base_start_multi_player_two
   mode_base_started{game.num_players > 1 and current_player.number == 3}: base_start_multi_player_three
   mode_base_started{game.num_players > 1 and current_player.number == 4}: base_start_multi_player_four
-  mode_base_started{machine.next_game_bao == 0}: metroid_base_started, skillshot_should_start
+  mode_base_started{machine.next_game_bao == 0}: metroid_base_started, base_skillshot_should_start
   mode_base_started{machine.next_game_bao == 1}: bao_base_started
+  base_skillshot_should_start: skillshot_should_start
 
 variable_player:
   left_orbit_hit:
