@@ -287,7 +287,8 @@ Rooms (Modes)
 
         Plains [C]:
 
-            Rules unimplemented
+            Hit the standup targets for points. Side targets are worth more
+            than the center targets.
 
             Doors:
                  Secret Passage (Blue) -> Landing Site [B]
