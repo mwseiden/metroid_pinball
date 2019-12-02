@@ -1,6 +1,7 @@
 #config_version=5
 mode:
-  start_events: mode_base_starting
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
   priority: 100
 
 shot_profiles:

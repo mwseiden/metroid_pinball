@@ -21,7 +21,8 @@ Starting The Game
 
     On every ball except the first, you will have the opportunity to choose to
     continue playing in the room where you left off. This currently does not
-    have much use for any area except Maridia.
+    have much use for any area except Maridia and Crateria (after landing the
+    gunship.)
 
 
 Skillshots
@@ -128,6 +129,8 @@ Base Game Mechanics
     Ramps:
         Scores points. There is a Ramp Champ that you can win for the most
         ramp hits.
+        
+        Hit the back ramp 10 times to start high jump mode.
 
         Hitting the captive ball, ricocheting to the upper flipper, then
         hitting the side ramp awards the Cap-Side combo. This gives extra
@@ -167,6 +170,11 @@ Base Game Mechanics
             No special requirement. Hitting the shot will travel to another
             room and start (or continue) that new mode.
 
+        Red:
+            Requires one missile. The missile is lost after use. The door will
+            become a BLUE door for the rest of the game.
+
+
 
 World Map
                                 Wrecked Ship
@@ -205,8 +213,16 @@ Landing Sites
         You must land the ship. First shoot the left and right orbits to
         steer. Then shoot the scoop to land.
 
-        Once landed you can scan the site by hitting switches. It takes 200
+        Shooting the zero suit target will increase the value of ALL mode
+        shots in Crateria each time it is hit. This shot bonus is locked in
+        once the gunship is landed.
+
+        After landing, you can scan the site by hitting switches. It takes 200
         switches to scan to 100%
+
+        Doors (After Landing):
+             Secret Passage (Blue) -> Lush Cavern [A]
+             Right Orbit (Blue) -> Plains [C]
 
     Maridia [a]:
         Don't sink in the quicksand! Hit blinking standup target banks to add
@@ -222,6 +238,7 @@ Landing Sites
         Doors:
             Secret Passage (Blue) -> Underground Desert [Z]
             Right Orbit (Blue) -> Crevasse [b]
+            Run Out of Time (One-Way) -> Sandy Cavern [e]
 
     Norfair [i]:
         Jump over the lava. Complete the 4 flashing shots to light the side
@@ -256,10 +273,32 @@ Rooms (Modes)
         =[E]-[F]-[G]  =
               =       =
 
+        Lush Cavern [A]:
+
+            Rules unimplemented
+
+            Doors:
+                 Back Ramp (Blue) -> Landing Site [B]
+                 Scoop (Red) -> Mushroom Chamber [F]
+
         Land The Gunship/Landing Site [B]:
 
             See Crateria Landing Site for rules
 
+        Plains [C]:
+
+            Hit the standup targets for points. Side targets are worth more
+            than the center targets.
+
+            Doors:
+                 Secret Passage (Blue) -> Landing Site [B]
+
+        Mushroom Chamber [F]:
+
+            Rules unimplemented
+
+            Doors:
+                 Left Orbit (Red) -> Lush Cavern [A]
 
     Maridia:
 

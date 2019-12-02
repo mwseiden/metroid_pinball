@@ -1,0 +1,63 @@
+#config_version=5
+
+mode:
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
+  priority: 100
+
+shots:
+  ramp_shot:
+    switch: s_ramp_enter
+
+counters:
+  back_ramp_counter:
+    count_events: ramp_shot_hit
+    # events_when_hit: chozo_multiball_progress
+    starting_count: 0
+    count_complete_value: 10
+    events_when_complete: mode_high_jump_should_start
+    disable_events: mode_high_jump_should_start
+    enable_events: mode_back_ramp_started, mode_high_jump_ended
+    reset_events: game_start, mode_high_jump_should_start, mode_high_jump_ended
+    persist_state: true
+    disable_on_complete: true
+
+show_player:
+  ramp_shot_hit:
+    blink_3_lights:
+      loops: 0
+      priority: 500
+      speed: 3
+      show_tokens:
+        led_1: gi_strip_1
+        led_2: gi_strip_2
+        led_3: gi_strip_3
+        color_1: 'FF0000'
+        color_2: '00FF00'
+    blink_2_lights:
+      loops: 0
+      priority: 500
+      speed: 2
+      show_tokens:
+        led_1: gi_back_left
+        led_2: led_enter_ramp
+        color_1: '00FF00'
+        color_2: '0000FF'
+
+sounds:
+  ramp_sound_1:
+    file: ramp_sound_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_player:
+  ramp_shot_hit: ramp_sound_1
+
+variable_player:
+  ramp_shot_hit:
+    ramps: 1
+    score:
+      int: ((current_player.ramps * 1250) + (current_player.area_bonus_nw * 1000)) * current_player.multiplier
+

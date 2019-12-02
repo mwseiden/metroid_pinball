@@ -2,11 +2,13 @@
 mode:
   code: drop_targets.DropTargets
   start_events: drop_target_mode_should_start
+  stop_events: game_ending, ball_ending, metroid_base_ended, drop_target_mode_should_end
   priority: 100
 
 event_player:
+  skillshot_monitor_should_end:
+    - drop_targets_continue:1s
   mode_drop_targets_started:
-    - drop_targets_enable_scoring:1.5s
     - drop_targets_continue:1s
   drop_targets_start_one: cmd_drop_one_up, drop_targets_enable_shot_1
   drop_targets_start_two: cmd_drop_two_up, drop_targets_enable_shot_2
@@ -27,6 +29,10 @@ shots:
     show_tokens:
       led: led_drop_1
       color: drop_target_can_hit
+  drop_1_passed_shot:
+    switch: s_behind_drop_1
+    disable_events: drop_targets_enable_shot_1
+    enable_events: mode_drop_targets_started, drop_target_drop_one_down
   drop_2_shot:
     hit_events: drop_target_drop_two_down
     profile: drop_target_hit_me
@@ -35,6 +41,10 @@ shots:
     show_tokens:
       led: led_drop_2
       color: drop_target_can_hit
+  drop_2_passed_shot:
+    switch: s_behind_drop_2
+    disable_events: drop_targets_enable_shot_2
+    enable_events: mode_drop_targets_started, drop_target_drop_two_down
   drop_3_shot:
     hit_events: drop_target_drop_three_down
     profile: drop_target_hit_me
@@ -43,14 +53,112 @@ shots:
     show_tokens:
       led: led_drop_3
       color: drop_target_can_hit
+  drop_3_passed_shot:
+    switch: s_behind_drop_3
+    disable_events: drop_targets_enable_shot_3
+    enable_events: mode_drop_targets_started, drop_target_drop_three_down
+
+sounds:
+  drop_target_explosion_1:
+    file: drop_target_explode_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  drop_target_explosion_2:
+    file: drop_target_explode_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  drop_target_explosion_3:
+    file: drop_target_explode_3.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  drop_target_pass_1:
+    file: drop_target_pass_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.25
+    max_queue_time: None
+  drop_target_pass_2:
+    file: drop_target_pass_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.25
+    max_queue_time: None
+  drop_target_pass_3:
+    file: drop_target_pass_3.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.25
+    max_queue_time: None
+
+sound_pools:
+  drop_target_explosion_sound_pool:
+    load: preload
+    type: random
+    track: sfx
+    sounds:
+      - drop_target_explosion_1
+      - drop_target_explosion_2
+      - drop_target_explosion_3
+
+sound_player:
+  drop_1_shot_hit: drop_target_explosion_sound_pool
+  drop_2_shot_hit: drop_target_explosion_sound_pool
+  drop_3_shot_hit: drop_target_explosion_sound_pool
+  drop_1_passed_shot_hit: drop_target_pass_1
+  drop_2_passed_shot_hit: drop_target_pass_2
+  drop_3_passed_shot_hit: drop_target_pass_3
+
+show_player:
+  drop_1_passed_shot_hit:
+    blink_light:
+      key: drop_targets_1_down_blinking
+      loops: 5
+      speed: 10
+      show_tokens:
+        led: led_drop_1
+        color: "0000FF"
+  drop_2_passed_shot_hit:
+    blink_light:
+      key: drop_targets_2_down_blinking
+      loops: 5
+      speed: 10
+      show_tokens:
+        led: led_drop_2
+        color: "0000FF"
+  drop_3_passed_shot_hit:
+    blink_light:
+      key: drop_targets_3_down_blinking
+      loops: 5
+      speed: 10
+      show_tokens:
+        led: led_drop_3
+        color: "0000FF"
 
 variable_player:
   drop_1_shot_hit:
-    score: 1000
+    score: (1000 + (current_player.area_bonus_ne * 500)) * current_player.multiplier
     drops: 1
   drop_2_shot_hit:
-    score: 10000
+    score: (10000 + (current_player.area_bonus_ne * 2500)) * current_player.multiplier
     drops: 1
   drop_3_shot_hit:
-    score: 25000
+    score: (25000 + (current_player.area_bonus_ne * 5000)) * current_player.multiplier
     drops: 1
+  drop_1_passed_shot_hit:
+    score: (1000 + (current_player.area_bonus_ne * 100)) * current_player.multiplier
+  drop_2_passed_shot_hit:
+    score: (7500 + (current_player.area_bonus_ne * 1500)) * current_player.multiplier
+  drop_3_passed_shot_hit:
+    score: (15000 + (current_player.area_bonus_ne * 5000)) * current_player.multiplier

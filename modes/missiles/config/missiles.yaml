@@ -1,6 +1,7 @@
 #config_version=5
 mode:
-  start_events: mode_base_starting
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
   priority: 100
 
 shot_profiles:
@@ -31,7 +32,6 @@ shots:
       led: led_missile_bank_3
       color: "9900ff"
 
-
 shot_groups:
   missiles_shot_group:
     shots: missile_bank_1_shot, missile_bank_2_shot, missile_bank_3_shot
@@ -39,8 +39,25 @@ shot_groups:
     enable_events: mode_missiles_started
     disable_events: mode_missiles_ending
 
+sounds:
+  missile_hit:
+    file: missile_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  missile_already_hit:
+    file: missile_already_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
 event_player:
   missiles_shot_group_lit_complete: missile_collected
+  missiles_shot_group_lit_hit: missile_play_missed_sound
 
 show_player:
   missile_collected:
@@ -60,3 +77,5 @@ variable_player:
 
 sound_player:
   missile_collected: missile_collected
+  missiles_shot_group_unlit_hit: missile_hit
+  missile_play_missed_sound: missile_already_hit

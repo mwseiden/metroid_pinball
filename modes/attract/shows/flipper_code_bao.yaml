@@ -1,0 +1,10 @@
+#show_version=5
+
+- duration: 10s
+  slides:
+    attract_boa_entered_slide:
+      widgets:
+      - type: text
+        text: BAO
+        style: dmd_big
+        color: '008000'

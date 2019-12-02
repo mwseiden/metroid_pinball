@@ -7,6 +7,11 @@ machine_vars:
   next_game_acapella:
     initial_value: 0
     value_type: int
+    persist: False
+  next_game_bao:
+    initial_value: 0
+    value_type: int
+    persist: False
   twitch_last_bits_user:
     initial_value: Goren1818
     value_type: str

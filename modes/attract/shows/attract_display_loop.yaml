@@ -340,6 +340,50 @@
         number_grouping: true
         anchor_y: bottom
 
+- duration: 2s
+  slides:
+    missile_champ_score:
+      widgets:
+      - type: text
+        text: (machine|missiles1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|missiles1_name)
+        style: dmd_big
+        color: dmd_blue
+      - type: text
+        text: (machine|missiles1_value)
+        y: 0
+        style: dmd_big
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: bottom
+
+- duration: 2s
+  slides:
+    power_bomb_champ_score:
+      widgets:
+      - type: text
+        text: (machine|power_bombs1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|power_bombs1_name)
+        style: dmd_big
+        color: dmd_blue
+      - type: text
+        text: (machine|power_bombs1_value)
+        y: 0
+        style: dmd_big
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: bottom
+
 - duration: 5s
   slides:
     press_start:

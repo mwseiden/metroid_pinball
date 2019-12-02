@@ -1,6 +1,7 @@
 #config_version=5
 mode:
-  start_events: mode_base_starting
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
   priority: 100
 
 sequences:
@@ -103,7 +104,7 @@ shots:
     switch: s_purple_1
     profile: miniboss_scoop
     enable_events: miniboss_enable_level_4
-    disable_events: mode_miniboss_starting
+    disable_events: mode_miniboss_starting, miniboss_final_shot_hit
     show_tokens:
       led: led_upgrade_bank_1
       color: 00FF80
@@ -111,7 +112,7 @@ shots:
     switch: s_purple_2
     profile: miniboss_scoop
     enable_events: miniboss_enable_level_4
-    disable_events: mode_miniboss_starting
+    disable_events: mode_miniboss_starting, miniboss_final_shot_hit
     show_tokens:
       led: led_upgrade_bank_2
       color: 00FF80
@@ -119,7 +120,7 @@ shots:
     switch: s_purple_3
     profile: miniboss_scoop
     enable_events: miniboss_enable_level_4
-    disable_events: mode_miniboss_starting
+    disable_events: mode_miniboss_starting, miniboss_final_shot_hit
     show_tokens:
       led: led_upgrade_bank_3
       color: 00FF80
@@ -131,6 +132,14 @@ shots:
     show_tokens:
       led: led_enter_scoop
       color: 00FF80
+
+ball_holds:
+  miniboss_final_shot:
+    balls_to_hold: 1
+    hold_devices: bd_scoop
+    enable_events: miniboss_enable_level_4
+    disable_events: mode_miniboss_starting, mode_miniboss_ending, miniboss_hold_disable
+    release_all_events: miniboss_battle_mode_should_start
 
 shot_groups:
   miniboss_targets_level_1_shot_group:
@@ -161,6 +170,11 @@ event_player:
   miniboss_targets_level_1_shot_group_lit_complete: miniboss_targets_completed
   miniboss_targets_level_2_shot_group_lit_complete: miniboss_targets_completed
   miniboss_targets_level_3_shot_group_lit_complete: miniboss_targets_completed
+  miniboss_enable_level_4: scoop_autofire_should_disable
+  miniboss_battle_mode_should_start: scoop_autofire_should_enable, miniboss_hold_disable
+  miniboss_targets_level_1_shot_group_lit_hit: miniboss_play_missed_sound
+  miniboss_targets_level_2_shot_group_lit_hit: miniboss_play_missed_sound
+  miniboss_targets_level_3_shot_group_lit_hit: miniboss_play_missed_sound
 
 show_player:
   miniboss_targets_level_1_shot_group_lit_complete:
@@ -199,6 +213,57 @@ show_player:
   miniboss_targets_completed:
     miniboss_targets_completed:
       loops: 0
+  ball_hold_miniboss_final_shot_held_ball:
+    miniboss_starting:
+      loops: 0
+      priority: 9000
+      events_when_stopped: miniboss_battle_mode_should_start
+
+sounds:
+  miniboss_miss:
+    file: miniboss_miss.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.75
+    max_queue_time: None
+  miniboss_level_1_hit:
+    file: miniboss_level_1_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.75
+    max_queue_time: None
+  miniboss_level_2_hit:
+    file: miniboss_level_2_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.75
+    max_queue_time: None
+  miniboss_level_3_hit:
+    file: miniboss_level_3_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.75
+    max_queue_time: None
+  miniboss_level_4_hit:
+    file: miniboss_level_4_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.75
+    max_queue_time: None
+
+sound_player:
+  miniboss_targets_level_1_shot_group_unlit_hit: miniboss_level_1_hit
+  miniboss_targets_level_2_shot_group_unlit_hit: miniboss_level_2_hit
+  miniboss_targets_level_3_shot_group_unlit_hit: miniboss_level_3_hit
+  miniboss_level_4_1_shot_hit: miniboss_level_4_hit
+  miniboss_level_4_2_shot_hit: miniboss_level_4_hit
+  miniboss_level_4_3_shot_hit: miniboss_level_4_hit
+  miniboss_play_missed_sound: miniboss_miss
 
 variable_player:
   miniboss_level_1_1_shot_hit:

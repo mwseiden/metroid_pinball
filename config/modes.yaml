@@ -1,12 +1,15 @@
 #config_version=5
 
 modes:
+  - back_ramp
+  - bao_base
   - base
   - bonus
   - bridge
   - chozo_multiball
   - drop_targets
   - emergency_landing
+  - high_jump
   - high_score
   - lanes
   - match

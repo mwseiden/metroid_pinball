@@ -1,0 +1,146 @@
+#config_version=5
+mode:
+  start_events: bao_base_started
+  stop_events: bao_base_ended
+  priority: 200
+
+sequences:
+   bao_progress_sequence:
+      events:
+         - bao_enable_stage_2
+         - bao_enable_stage_3
+         - bao_enable_stage_4
+      persist_state: True
+      reset_on_complete: True
+      disable_on_complete: False
+
+counters:
+  bao_critical_counter:
+    count_events: bao_critical_shot_group_hit
+    starting_count: 1
+    count_complete_value: 10
+    events_when_complete: bao_critical_mass
+    disable_events: bao_enable_stage_4
+    enable_events: bao_enable_stage_3
+    reset_events: game_start, bao_enable_stage_4
+    persist_state: true
+
+shot_profiles:
+  bao_charge_targets:
+    states:
+      - name: unlit
+        show: off
+      - name: level_1
+        show: led_color
+        show_tokens:
+          color: '0000FF'
+      - name: level_2
+        show: led_color
+        show_tokens:
+          color: '8000FF'
+      - name: level_3
+        show: led_color
+        show_tokens:
+          color: FF00FF
+  bao_charged_scoop:
+    states:
+      - name: lit
+        show: led_color
+
+shots:
+  bao_charge_1_shot:
+    switch: s_purple_1
+    profile: bao_charge_targets
+    enable_events: bao_enable_stage_1
+    disable_events: mode_bao_base_started, bao_enable_stage_2
+    show_tokens:
+      led: led_upgrade_bank_1
+  bao_charge_2_shot:
+    switch: s_purple_2
+    profile: bao_charge_targets
+    enable_events: bao_enable_stage_1
+    disable_events: mode_bao_base_started, bao_enable_stage_2
+    show_tokens:
+      led: led_upgrade_bank_2
+  bao_charge_3_shot:
+    switch: s_purple_3
+    profile: bao_charge_targets
+    enable_events: bao_enable_stage_1
+    disable_events: mode_bao_base_started, bao_enable_stage_2
+    show_tokens:
+      led: led_upgrade_bank_3
+  bao_charged_scoop_shot:
+    switch: s_scoop
+    profile: bao_charged_scoop
+    enable_events: bao_enable_stage_2
+    disable_events: mode_bao_base_started, bao_enable_stage_3
+    show_tokens:
+      led: led_enter_scoop
+      color: 'FFFF00'
+
+shot_groups:
+  bao_charge_shot_group:
+    shots: bao_charge_1_shot, bao_charge_2_shot, bao_charge_3_shot
+    reset_events: bao_enable_stage_2
+    enable_events: bao_enable_stage_1
+    disable_events: bao_enable_stage_2
+  bao_critical_shot_group:
+    shots: pop_1_shot, pop_2_shot, pop_3_shot
+    reset_events: bao_enable_stage_4
+    enable_events: bao_enable_stage_3
+    disable_events: bao_enable_stage_4
+
+ball_holds:
+  bao_charged_scoop_shot:
+    balls_to_hold: 1
+    hold_devices: bd_scoop
+    enable_events: bao_enable_stage_2
+    disable_events: mode_bao_base_started, bao_enable_stage_3
+    release_all_events: bao_critical_should_start
+
+show_player:
+  pop_1_shot_hit:
+    blink_light:
+      key: pop_bumpers_blink_1
+      loops: 1
+      speed: 20
+      show_tokens:
+        led: led_pop_2
+        color: FFFFFF
+  pop_2_shot_hit:
+    blink_light:
+      key: pop_bumpers_blink_2
+      loops: 1
+      speed: 20
+      show_tokens:
+        led: led_pop_3
+        color: FFFFFF
+  pop_3_shot_hit:
+    blink_light:
+      key: pop_bumpers_blink_3
+      loops: 1
+      speed: 20
+      show_tokens:
+        led: led_pop_1
+        color: FFFFFF
+  bao_charged_scoop_shot_hit:
+    bao_scoop_hit:
+      loops: -1
+      speed: 50
+    bao_scoop_critical:
+      loops: 0
+      priority: 9000
+      events_when_stopped: bao_critical_should_start
+  bao_critical_should_start:
+    bao_scoop_hit:
+      action: stop
+
+event_player:
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value == 1}: bao_enable_stage_2
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value == 2}: bao_enable_stage_3
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value == 3}: bao_enable_stage_4
+  bao_charge_shot_group_level_3_complete: bao_enable_stage_2
+  bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
+  bao_critical_mass: bao_enable_stage_4
+  bao_enable_stage_2: scoop_autofire_should_disable

@@ -1,7 +1,8 @@
 #config_version=5
 mode:
   code: lanes.Lanes
-  start_events: mode_base_starting
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
   priority: 100
 
 shot_profiles:
@@ -42,7 +43,7 @@ shots:
       led: led_right_inlane
       color: 8040FF
   left_ballsave_shot:
-    switch: s_left_outlane
+    hit_events: s_left_outlane_inactive
     profile: virtual_kickback
     enable_events: lanes_enable_left_ball_save, lanes_enable_ball_save
     disable_events: lanes_disable_ball_save, lanes_enable_right_ball_save
@@ -50,7 +51,7 @@ shots:
       led: led_left_kickback
       color: 'FF8000'
   right_ballsave_shot:
-    switch: s_right_outlane
+    hit_events: s_right_outlane_inactive
     profile: virtual_kickback
     enable_events: lanes_enable_right_ball_save
     disable_events: lanes_disable_ball_save, lanes_enable_ball_save, lanes_enable_left_ball_save

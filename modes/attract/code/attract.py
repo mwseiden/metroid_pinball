@@ -20,6 +20,7 @@ class MyAttract(Attract):
 
         self.machine.set_machine_var('metroid_game_booted', 1)
         self.machine.set_machine_var('next_game_acapella', 0)
+        self.machine.set_machine_var('next_game_bao', 0)
 
     def event_right_flipper_down(self, **kwargs):
         self.right_flipper_down = True
@@ -65,3 +66,7 @@ class MyAttract(Attract):
             self.info_log('Flipper Code: NO MUSIC')
             self.machine.events.post('flipper_code_no_music')
             self.machine.set_machine_var("next_game_acapella", 1)
+        elif self.flip_pattern == 'BLLRLLLLLLLLLLLLLLL':
+            self.info_log('Flipper Code: BAO')
+            self.machine.events.post('flipper_code_bao')
+            self.machine.set_machine_var("next_game_bao", 1)

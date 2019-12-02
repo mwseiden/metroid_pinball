@@ -24,6 +24,10 @@ autofire_coils:
   scoop:
     coil: c_scoop
     switch: s_scoop
+    disable_events: ball_ending, service_mode_entered, scoop_autofire_should_disable
+    enable_events: ball_started, scoop_autofire_should_enable
+    switch_overwrite:
+      debounce: 300ms
   vuk:
     coil: c_vuk
     switch: s_vuk

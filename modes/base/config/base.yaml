@@ -9,8 +9,6 @@ config:
 shots:
   scoop_shot:
     switch: s_scoop
-  ramp_shot:
-    switch: s_ramp_enter
   side_ramp_shot:
     switch: s_side_ramp_made
   secret_passage_shot:
@@ -413,13 +411,6 @@ event_player:
       direction: left
   timer_base_twitch_left_flipper_timer_complete: twitch_unflip_left
   timer_base_twitch_right_flipper_timer_complete: twitch_unflip_right
-  #s_behind_drop_1_active{device.switches.s_drop_target_1.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
-  #s_behind_drop_2_active{device.switches.s_drop_target_2.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
-  #s_behind_drop_3_active{device.switches.s_drop_target_3.state==0 and not mode.skillshot_drops.active and not mode.skillshot_drops_release.active}: dirty_pool_possible
-  #timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_1.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
-  #timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_2.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
-  #timer_base_possible_dirty_pool_complete{device.switches.s_behind_drop_3.state==1 and not mode.skillshot_drops_release.active}: dirty_pool_locked
-  #dirty_pool_locked: cmd_drop_all_drops
   player_added{num == 2}: base_sound_player_2
   player_added{num == 3}: base_sound_player_3
   player_added{num == 4}: base_sound_player_4
@@ -431,6 +422,9 @@ event_player:
   mode_base_started{game.num_players > 1 and current_player.number == 2}: base_start_multi_player_two
   mode_base_started{game.num_players > 1 and current_player.number == 3}: base_start_multi_player_three
   mode_base_started{game.num_players > 1 and current_player.number == 4}: base_start_multi_player_four
+  mode_base_started{machine.next_game_bao == 0}: metroid_base_started, base_skillshot_should_start
+  mode_base_started{machine.next_game_bao == 1}: bao_base_started
+  base_skillshot_should_start: skillshot_should_start
 
 variable_player:
   left_orbit_hit:
@@ -441,10 +435,6 @@ variable_player:
     orbits: 1
     score:
       int: ((current_player.orbits * 500) + (current_player.spinners * 10) + (current_player.area_bonus_ne * 500)) * current_player.multiplier
-  ramp_shot_hit:
-    ramps: 1
-    score:
-      int: ((current_player.ramps * 1250) + (current_player.area_bonus_nw * 1000)) * current_player.multiplier
   side_ramp_shot_hit:
     ramps: 1
     score:
@@ -527,12 +517,6 @@ sounds:
     track: sfx
     priority: 50
     max_queue_time: None
-  ramp_sound_1:
-    file: ramp_sound_1.wav
-    streaming: False
-    track: sfx
-    priority: 50
-    max_queue_time: None
   ramp_sound_2:
     file: ramp_sound_2.wav
     streaming: False
@@ -558,16 +542,7 @@ sounds:
     priority: 50
     max_queue_time: None
 
-#sound_pools:
-#  ramp_sound_pool:
-#    type: random
-#    sounds: ramp_sound_1, ramp_sound_2, ramp_sound_3, ramp_sound_4
-
 sound_player:
-  #player_turn_starting{player.number == 1}: player_1
-  #player_turn_starting{player.number == 2}: player_2
-  #player_turn_starting{player.number == 3}: player_3
-  #player_turn_starting{player.number == 4}: player_4
   twitch_bit_donation{bits < 100}: jackpot
   twitch_bit_donation{bits >= 100 and bits < 500}: super_jackpot
   twitch_bit_donation{bits >= 500}: double_super_jackpot
@@ -577,7 +552,6 @@ sound_player:
   left_sling_shot_hit: left_sling
   right_sling_shot_hit: right_sling
   upper_left_sling_shot_hit: mid_sling
-  ramp_shot_hit: ramp_sound_1
   side_ramp_shot_hit: ramp_sound_4
   secret_passage_shot_hit: ramp_sound_2
   rollover_shot_hit: mini_loop
