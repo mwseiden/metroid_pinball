@@ -137,8 +137,9 @@ Base Game Mechanics
         points and adds to your bonus.
 
     Drop Targets:
-        Block the VUK. They reset each ball. Their real behavior is not coded
-        yet.
+        Block the VUK. Each room has an initial starting state for which
+        targets are up or down. Hitting a drop target will cause it to
+        remain down for that room for the remainder of the game.
 
     Miniboss Targets:
         Complete three banks, red, orange, and green. Afterwards the scoop
@@ -174,6 +175,25 @@ Base Game Mechanics
             Requires one missile. The missile is lost after use. The door will
             become a BLUE door for the rest of the game.
 
+
+Exclusive Modes
+
+    Some modes won't stack and you must play those rules exclusively.
+
+    High Jump:
+        Partially implemented. Hit the back ramp 10 times to start the mode.
+        Temporary ruleset is hit the back ramp for points. Hit an inlane to
+        increase ramp value. Lasts 30 seconds.
+
+    Miniboss:
+        Complete the miniboss targets 3 times and hit the scoop. The rest is
+        currently unimplemented.
+
+    Boss:
+        Unimplemented.
+
+    Shinespark:
+        Unimplemented. Orbits.
 
 
 World Map
