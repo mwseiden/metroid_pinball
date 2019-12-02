@@ -94,7 +94,7 @@ ball_holds:
   bao_charged_scoop_shot:
     balls_to_hold: 1
     hold_devices: bd_scoop
-    enable_events: miniboss_enable_level_2
+    enable_events: bao_enable_stage_2
     disable_events: mode_bao_base_started, bao_enable_stage_3
     release_all_events: bao_critical_should_start
 
