@@ -9,9 +9,21 @@ sequences:
       events:
          - bao_enable_stage_2
          - bao_enable_stage_3
+         - bao_enable_stage_4
       persist_state: True
       reset_on_complete: True
       disable_on_complete: False
+
+counters:
+  bao_critical_counter:
+    count_events: bao_critical_shot_group_hit
+    starting_count: 1
+    count_complete_value: 10
+    events_when_complete: bao_critical_mass
+    disable_events: bao_enable_stage_4
+    enable_events: bao_enable_stage_3
+    reset_events: game_start, bao_enable_stage_4
+    persist_state: true
 
 shot_profiles:
   bao_charge_targets:
@@ -72,10 +84,43 @@ shot_groups:
     reset_events: bao_enable_stage_2
     enable_events: bao_enable_stage_1
     disable_events: bao_enable_stage_2
+  bao_critical_shot_group:
+    shots: pop_1_shot, pop_2_shot, pop_3_shot
+    reset_events: bao_enable_stage_4
+    enable_events: bao_enable_stage_3
+    disable_events: bao_enable_stage_4
+
+show_player:
+  pop_1_shot_hit:
+    blink_light:
+      key: pop_bumpers_blink_1
+      loops: 1
+      speed: 20
+      show_tokens:
+        led: led_pop_2
+        color: FFFFFF
+  pop_2_shot_hit:
+    blink_light:
+      key: pop_bumpers_blink_2
+      loops: 1
+      speed: 20
+      show_tokens:
+        led: led_pop_3
+        color: FFFFFF
+  pop_3_shot_hit:
+    blink_light:
+      key: pop_bumpers_blink_3
+      loops: 1
+      speed: 20
+      show_tokens:
+        led: led_pop_1
+        color: FFFFFF
 
 event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 1}: bao_enable_stage_2
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 2}: bao_enable_stage_3
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value == 3}: bao_enable_stage_4
   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
   bao_charged_scoop_shot_hit: bao_enable_stage_3
+  bao_critical_mass: bao_enable_stage_4
