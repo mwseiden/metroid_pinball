@@ -19,13 +19,3 @@ ball_devices:
         ball_switches: s_scoop
         eject_coil: c_scoop
         eject_all_events: tilt
-    bd_drop_lock_1:
-        ball_switches: s_behind_drop_1
-        eject_coil: c_drop_1_down
-        eject_all_events: tilt
-        auto_fire_on_unexpected_ball: False
-    bd_drop_lock_2:
-        ball_switches: s_behind_drop_2
-        eject_coil: c_drop_2_down
-        eject_all_events: tilt
-        auto_fire_on_unexpected_ball: False

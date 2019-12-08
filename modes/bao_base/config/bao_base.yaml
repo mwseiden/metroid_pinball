@@ -1,5 +1,6 @@
 #config_version=5
 mode:
+  code: bao_base.BaoBase
   start_events: bao_base_started
   stop_events: bao_base_ended
   priority: 200
@@ -226,3 +227,10 @@ event_player:
   bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
   bao_critical_mass: bao_enable_stage_4
   bao_enable_stage_2: scoop_autofire_should_disable
+  s_behind_drop_2_active{machine.bao_balls_locked == 0}: cmd_drop_two_up, cmd_drop_three_up, bao_base_lock_a_ball
+  s_behind_drop_1_active{machine.bao_balls_locked == 1}: cmd_drop_one_up, bao_base_lock_a_ball
+  drop_target_drop_one_down{machine.bao_balls_locked == 2}: bao_base_release_locked_balls
+  drop_target_drop_two_down{machine.bao_balls_locked > 1}: cmd_drop_two_up
+  drop_target_drop_three_down: cmd_drop_three_up
+  bao_base_release_locked_balls: cmd_drop_one_down, cmd_drop_two_down
+  game_ending: cmd_drop_one_down, cmd_drop_two_down
