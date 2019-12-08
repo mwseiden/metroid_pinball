@@ -223,7 +223,7 @@ event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 1}: bao_enable_stage_2
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 2}: bao_enable_stage_3
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 3}: bao_enable_stage_4
-  mode_bao_base_started{machine.bao_balls_locked == 0}: cmd_drop_one_down, cmd_drop_two_down, cmd_drop_three_up
+  mode_bao_base_started{current_player.number == 1 and current_player.ball == 1}: bao_base_initialize, cmd_drop_one_down, cmd_drop_two_down, cmd_drop_three_up
   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
   bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
   bao_critical_mass: bao_enable_stage_4
