@@ -98,8 +98,81 @@ ball_holds:
     disable_events: mode_bao_base_started, bao_enable_stage_3
     release_all_events: bao_critical_should_start
 
+slides:
+  bao_base_backglass_slide:
+    widgets:
+      - type: text
+        text: (player1|score)
+        number_grouping: true
+        min_digits: 2
+        y: 300
+        x: 175
+        anchor_x: right
+        font_name: segmented
+        font_size: 30
+      - type: text
+        text: (player2|score)
+        number_grouping: true
+        min_digits: 2
+        y: 300
+        x: 345
+        anchor_x: right
+        font_name: segmented
+        font_size: 30
+      - type: text
+        text: (player3|score)
+        number_grouping: true
+        min_digits: 2
+        y: 300
+        x: 515
+        anchor_x: right
+        font_name: segmented
+        font_size: 30
+      - type: text
+        text: '0000000'
+        number_grouping: true
+        min_digits: 2
+        y: 300
+        x: 685
+        anchor_x: right
+        font_name: segmented
+        font_size: 30
+      - type: rectangle
+        width: 150
+        height: 40
+        color: black
+        y: 300
+        x: 105
+      - type: rectangle
+        width: 150
+        height: 40
+        color: black
+        y: 300
+        x: 275
+      - type: rectangle
+        width: 150
+        height: 40
+        color: black
+        y: 300
+        x: 445
+      - type: rectangle
+        width: 150
+        height: 40
+        color: black
+        y: 300
+        x: 615
+      - type: image
+        image: bao_backbox_secret
+    transition: fade
+    transition_out: fade
+
+slide_player:
+  mode_bao_base_started:
+    bao_base_backglass_slide:
+      target: backglass
+
 show_player:
-  mode_room_1c_plains_started:
+  mode_bao_base_started:
     gi_solid:
       loops: -1
       show_tokens:
@@ -143,7 +216,6 @@ show_player:
     bao_pops_critical:
       loops: -1
       speed: 20
-
 
 event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
