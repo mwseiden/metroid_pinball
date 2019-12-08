@@ -36,7 +36,7 @@ show_player:
     lights_bao_flipper_code:
       priority: 200
       loops: 0
-      speed: 20
+      speed: 30
   flipper_code_no_music:
     flipper_code_no_music:
       priority: 200

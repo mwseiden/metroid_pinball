@@ -105,59 +105,59 @@ slides:
         text: (player1|score)
         number_grouping: true
         min_digits: 2
-        y: 300
-        x: 175
+        y: 296
+        x: 173
         anchor_x: right
         font_name: segmented
-        font_size: 30
+        font_size: 24
       - type: text
         text: (player2|score)
         number_grouping: true
         min_digits: 2
-        y: 300
-        x: 345
+        y: 296
+        x: 343
         anchor_x: right
         font_name: segmented
-        font_size: 30
+        font_size: 24
       - type: text
         text: (player3|score)
         number_grouping: true
         min_digits: 2
-        y: 300
-        x: 515
+        y: 296
+        x: 513
         anchor_x: right
         font_name: segmented
-        font_size: 30
+        font_size: 24
       - type: text
-        text: '0000000'
+        text: (player4|score)
         number_grouping: true
         min_digits: 2
-        y: 300
-        x: 685
+        y: 296
+        x: 683
         anchor_x: right
         font_name: segmented
-        font_size: 30
+        font_size: 24
       - type: rectangle
         width: 150
-        height: 40
+        height: 34
         color: black
         y: 300
         x: 105
       - type: rectangle
         width: 150
-        height: 40
+        height: 34
         color: black
         y: 300
         x: 275
       - type: rectangle
         width: 150
-        height: 40
+        height: 34
         color: black
         y: 300
         x: 445
       - type: rectangle
         width: 150
-        height: 40
+        height: 34
         color: black
         y: 300
         x: 615
