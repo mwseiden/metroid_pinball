@@ -99,6 +99,11 @@ ball_holds:
     release_all_events: bao_critical_should_start
 
 show_player:
+  mode_room_1c_plains_started:
+    gi_solid:
+      loops: -1
+      show_tokens:
+        color: 'C0C0C0'
   pop_1_shot_hit:
     blink_light:
       key: pop_bumpers_blink_1
@@ -134,6 +139,11 @@ show_player:
   bao_critical_should_start:
     bao_scoop_hit:
       action: stop
+  bao_enable_stage_3:
+    bao_pops_critical:
+      loops: -1
+      speed: 20
+
 
 event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
