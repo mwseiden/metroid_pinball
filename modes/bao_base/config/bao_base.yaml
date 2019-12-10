@@ -270,6 +270,10 @@ show_player:
   bao_enable_stage_4:
     bao_pops_critical:
       action: stop
+  bao_final_shot_completed:
+    bao_explode:
+      loops: 3
+      speed: 60
 
 event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
