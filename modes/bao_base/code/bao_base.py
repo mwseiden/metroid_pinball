@@ -23,4 +23,4 @@ class BaoBase(Mode):
         self.machine.set_machine_var('bao_balls_locked', 0)
 
     def event_pick_shots(self, **kwargs):
-        self.machine.events.post('bao_enable_final_shot_' + str(randint(1, 3)))
+        self.machine.events.post('bao_enable_final_shot_' + str(randint(1, 6)))
