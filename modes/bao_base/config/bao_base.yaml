@@ -52,7 +52,7 @@ shot_profiles:
   bao_final_shot:
     states:
       - name: lit
-        show: led_color
+        show: fade_one_light
         show_tokens:
           color: FFFFFF
 
@@ -154,8 +154,7 @@ ball_saves:
     active_time: 8s
     hurry_up_time: 2s
     grace_period: 2s
-    enable_events: bao_base_release_locked_balls
-    # timer_start_events: bao_base_release_locked_balls
+    enable_events: bao_multiball_started
     auto_launch: yes
     balls_to_save: -1
     debug: yes
@@ -234,11 +233,29 @@ slide_player:
       target: backglass
 
 show_player:
-  mode_bao_base_started:
+  bao_multiball_started:
     gi_solid:
+      key: bao_gi
+      loops: -1
+      show_tokens:
+        color: '00C000'
+  bao_enable_stage_1:
+    gi_solid:
+      key: bao_gi
       loops: -1
       show_tokens:
         color: 'C0C0C0'
+  bao_enable_stage_3:
+    bao_pops_critical:
+      loops: -1
+      speed: 20
+  bao_enable_stage_4:
+    bao_pops_critical:
+      action: stop
+    gi_fire:
+      key: bao_gi
+      loops: -1
+      speed: 30
   pop_1_shot_hit:
     blink_light:
       key: pop_bumpers_blink_1
@@ -246,7 +263,7 @@ show_player:
       speed: 20
       show_tokens:
         led: led_pop_2
-        color: FFFFFF
+        color: 'FFFFFF'
   pop_2_shot_hit:
     blink_light:
       key: pop_bumpers_blink_2
@@ -254,7 +271,7 @@ show_player:
       speed: 20
       show_tokens:
         led: led_pop_3
-        color: FFFFFF
+        color: 'FFFFFF'
   pop_3_shot_hit:
     blink_light:
       key: pop_bumpers_blink_3
@@ -262,7 +279,7 @@ show_player:
       speed: 20
       show_tokens:
         led: led_pop_1
-        color: FFFFFF
+        color: 'FFFFFF'
   bao_charged_scoop_shot_hit:
     bao_scoop_hit:
       loops: -1
@@ -273,13 +290,6 @@ show_player:
       events_when_stopped: bao_critical_should_start
   bao_critical_should_start:
     bao_scoop_hit:
-      action: stop
-  bao_enable_stage_3:
-    bao_pops_critical:
-      loops: -1
-      speed: 20
-  bao_enable_stage_4:
-    bao_pops_critical:
       action: stop
   bao_final_shot_completed:
     bao_explode:
@@ -318,9 +328,9 @@ event_player:
   bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
   bao_critical_mass: bao_enable_stage_4
   bao_enable_stage_2: scoop_autofire_should_disable
-  s_behind_drop_2_active{machine.bao_balls_locked == 0 and game.balls_in_play == 1}: cmd_drop_two_up, cmd_drop_three_up, bao_base_lock_a_ball
-  s_behind_drop_1_active{machine.bao_balls_locked == 1 and game.balls_in_play == 1}: cmd_drop_one_up, bao_base_lock_a_ball
-  drop_target_drop_one_down{machine.bao_balls_locked == 2}: bao_base_release_locked_balls
+  s_behind_drop_2_active{machine.bao_balls_locked == 0 and game.balls_in_play == 1}: cmd_drop_two_up, cmd_drop_three_up, bao_base_lock_a_ball, bao_ball_1_locked
+  s_behind_drop_1_active{machine.bao_balls_locked == 1 and game.balls_in_play == 1}: cmd_drop_one_up, bao_base_lock_a_ball, bao_ball_2_locked
+  drop_target_drop_one_down{machine.bao_balls_locked == 2}: bao_base_release_locked_balls, bao_multiball_started
   drop_target_drop_two_down{machine.bao_balls_locked > 1}: cmd_drop_two_up
   drop_target_drop_three_down: cmd_drop_three_up
   bao_base_release_locked_balls: cmd_drop_one_down, cmd_drop_two_down
