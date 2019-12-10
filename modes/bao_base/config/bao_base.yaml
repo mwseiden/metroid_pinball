@@ -302,3 +302,25 @@ event_player:
   bao_final_shot_8_hit: bao_final_shot_completed
   bao_final_shot_9_hit: bao_final_shot_completed
   bao_final_shot_completed: bao_enable_stage_1
+
+variable_player:
+  bao_final_shot_completed:
+    score: 1
+  pop_1_shot_hit:
+    score: 500
+  pop_2_shot_hit:
+    score: 500
+  pop_3_shot_hit:
+    score: 500
+  bao_final_shot_1_hit:
+    score: 20000
+  bao_final_shot_2_hit:
+    score: 20000
+  bao_final_shot_3_hit:
+    score: 20000
+  bao_final_shot_4_hit:
+    score: 10000
+  bao_final_shot_5_hit:
+    score: 10000
+  bao_final_shot_6_hit:
+    score: 10000
