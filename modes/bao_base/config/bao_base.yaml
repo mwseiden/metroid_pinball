@@ -11,6 +11,8 @@ sequences:
          - bao_enable_stage_2
          - bao_enable_stage_3
          - bao_enable_stage_4
+         - bao_final_shot_completed
+      events_when_complete: bao_enable_stage_1
       persist_state: True
       reset_on_complete: True
       disable_on_complete: False
@@ -265,3 +267,12 @@ event_player:
   drop_target_drop_three_down: cmd_drop_three_up
   bao_base_release_locked_balls: cmd_drop_one_down, cmd_drop_two_down
   ball_will_end{current_player.number == game.num_players and current_player.ball == game.balls_per_game}: cmd_drop_one_down, cmd_drop_two_down, bao_base_initialize
+  bao_final_shot_1_hit: bao_final_shot_completed
+  bao_final_shot_2_hit: bao_final_shot_completed
+  bao_final_shot_3_hit: bao_final_shot_completed
+  bao_final_shot_4_hit: bao_final_shot_completed
+  bao_final_shot_5_hit: bao_final_shot_completed
+  bao_final_shot_6_hit: bao_final_shot_completed
+  bao_final_shot_7_hit: bao_final_shot_completed
+  bao_final_shot_8_hit: bao_final_shot_completed
+  bao_final_shot_9_hit: bao_final_shot_completed
