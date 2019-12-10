@@ -47,6 +47,12 @@ shot_profiles:
     states:
       - name: lit
         show: led_color
+  bao_final_shot:
+    states:
+      - name: lit
+        show: led_color
+        show_tokens:
+          color: FFFFFF
 
 shots:
   bao_charge_1_shot:
@@ -78,6 +84,27 @@ shots:
     show_tokens:
       led: led_enter_scoop
       color: 'FFFF00'
+  bao_final_shot_1:
+    switch: s_missile_bank_1
+    profile: bao_final_shot
+    enable_events: bao_enable_final_shot_1
+    disable_events: mode_bao_base_started, bao_enable_stage_1
+    show_tokens:
+      led: led_missile_bank_1
+  bao_final_shot_2:
+    switch: s_missile_bank_2
+    profile: bao_final_shot
+    enable_events: bao_enable_final_shot_2
+    disable_events: mode_bao_base_started, bao_enable_stage_1
+    show_tokens:
+      led: led_missile_bank_1
+  bao_final_shot_3:
+    switch: s_missile_bank_3
+    profile: bao_final_shot
+    enable_events: bao_enable_final_shot_3
+    disable_events: mode_bao_base_started, bao_enable_stage_1
+    show_tokens:
+      led: led_missile_bank_1
 
 shot_groups:
   bao_charge_shot_group:
@@ -217,6 +244,9 @@ show_player:
     bao_pops_critical:
       loops: -1
       speed: 20
+  bao_enable_stage_4:
+    bao_pops_critical:
+      action: stop
 
 event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1

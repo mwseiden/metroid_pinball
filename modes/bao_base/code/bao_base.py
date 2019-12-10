@@ -1,3 +1,4 @@
+from random import randint
 from mpf.core.mode import Mode
 
 class BaoBase(Mode):
@@ -8,6 +9,7 @@ class BaoBase(Mode):
         self.add_mode_event_handler('bao_base_lock_a_ball', self.event_add_a_ball)
         self.add_mode_event_handler('bao_base_release_locked_balls', self.event_release_locked_balls)
         self.add_mode_event_handler('bao_base_initialize', self.event_initialize)
+        self.add_mode_event_handler('bao_enable_stage_4', self.event_pick_shots)
 
     def event_add_a_ball(self, **kwargs):
         self.machine.set_machine_var('bao_balls_locked', self.machine.get_machine_var('bao_balls_locked') + 1)
@@ -19,3 +21,6 @@ class BaoBase(Mode):
 
     def event_initialize(self, **kwargs):
         self.machine.set_machine_var('bao_balls_locked', 0)
+
+    def event_pick_shots(self, **kwargs):
+        self.machine.events.post('bao_final_shot_' + randint(1, 3))
