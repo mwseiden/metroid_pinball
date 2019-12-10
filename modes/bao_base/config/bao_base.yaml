@@ -234,4 +234,4 @@ event_player:
   drop_target_drop_two_down{machine.bao_balls_locked > 1}: cmd_drop_two_up
   drop_target_drop_three_down: cmd_drop_three_up
   bao_base_release_locked_balls: cmd_drop_one_down, cmd_drop_two_down
-  game_ending: cmd_drop_one_down, cmd_drop_two_down
+  mode_bao_base_ending{current_player.number == game.num_players and current_player.ball == game.balls_per_game}: cmd_drop_one_down, cmd_drop_two_down
