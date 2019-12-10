@@ -155,7 +155,7 @@ ball_saves:
     hurry_up_time: 2s
     grace_period: 2s
     enable_events: bao_base_release_locked_balls
-    timer_start_events: bao_base_release_locked_balls
+    # timer_start_events: bao_base_release_locked_balls
     auto_launch: yes
     balls_to_save: -1
     debug: yes
