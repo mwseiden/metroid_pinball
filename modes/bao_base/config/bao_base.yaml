@@ -149,6 +149,17 @@ ball_holds:
     disable_events: mode_bao_base_started, bao_enable_stage_3
     release_all_events: bao_critical_should_start
 
+ball_saves:
+  bao_multiball_save:
+    active_time: 8s
+    hurry_up_time: 2s
+    grace_period: 2s
+    enable_events: bao_base_release_locked_balls
+    timer_start_events: bao_base_release_locked_balls
+    auto_launch: yes
+    balls_to_save: -1
+    debug: yes
+
 slides:
   bao_base_backglass_slide:
     widgets:
@@ -274,6 +285,28 @@ show_player:
     bao_explode:
       loops: 3
       speed: 60
+  ball_save_bao_multiball_save_grace_period:
+    ball_save_bao_multiball_save_blink:
+      action: stop
+  ball_save_bao_multiball_save_disabled:
+    ball_save_bao_multiball_save_blink:
+      action: stop
+  ball_save_bao_multiball_save_hurry_up:
+    blink_light:
+      key: ball_save_bao_multiball_save_blink
+      loops: -1
+      speed: 4
+      show_tokens:
+        led: led_ball_save
+        color: ff0000
+  ball_save_bao_multiball_save_enabled:
+    blink_light:
+      key: ball_save_bao_multiball_save_blink
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_ball_save
+        color: ff0000
 
 event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
