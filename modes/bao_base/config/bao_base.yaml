@@ -99,14 +99,14 @@ shots:
     enable_events: bao_enable_final_shot_2
     disable_events: mode_bao_base_started, bao_enable_stage_1
     show_tokens:
-      led: led_missile_bank_1
+      led: led_missile_bank_2
   bao_final_shot_3:
     switch: s_missile_bank_3
     profile: bao_final_shot
     enable_events: bao_enable_final_shot_3
     disable_events: mode_bao_base_started, bao_enable_stage_1
     show_tokens:
-      led: led_missile_bank_1
+      led: led_missile_bank_3
   bao_final_shot_4:
     switch: s_purple_1
     profile: bao_final_shot
@@ -239,17 +239,24 @@ show_player:
       loops: -1
       show_tokens:
         color: '00C000'
-  bao_enable_stage_1:
+  bao_stage_1_show:
     gi_solid:
       key: bao_gi
       loops: -1
       show_tokens:
         color: 'C0C0C0'
-  bao_enable_stage_3:
+  bao_stage_2_show:
+    gi_solid:
+      key: bao_gi
+      loops: -1
+      show_tokens:
+        color: 'C0C000'
+  bao_stage_3_show:
     bao_pops_critical:
+      priority: 300
       loops: -1
       speed: 20
-  bao_enable_stage_4:
+  bao_stage_4_show:
     bao_pops_critical:
       action: stop
     gi_fire:
@@ -324,10 +331,13 @@ event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 2}: bao_enable_stage_3
   mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 3}: bao_enable_stage_4
   mode_bao_base_started{current_player.number == 1 and current_player.ball == 1}: bao_base_initialize, cmd_drop_one_down, cmd_drop_two_down, cmd_drop_three_up
+  bao_enable_stage_1: bao_stage_1_show
+  bao_enable_stage_2: bao_stage_2_show, scoop_autofire_should_disable
+  bao_enable_stage_3: bao_stage_3_show
+  bao_enable_stage_4: bao_stage_4_show
   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
   bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
   bao_critical_mass: bao_enable_stage_4
-  bao_enable_stage_2: scoop_autofire_should_disable
   s_behind_drop_2_active{machine.bao_balls_locked == 0 and game.balls_in_play == 1}: cmd_drop_two_up, cmd_drop_three_up, bao_base_lock_a_ball, bao_ball_1_locked
   s_behind_drop_1_active{machine.bao_balls_locked == 1 and game.balls_in_play == 1}: cmd_drop_one_up, bao_base_lock_a_ball, bao_ball_2_locked
   drop_target_drop_one_down{machine.bao_balls_locked == 2}: bao_base_release_locked_balls, bao_multiball_started
@@ -345,6 +355,10 @@ event_player:
   bao_final_shot_8_hit: bao_final_shot_completed
   bao_final_shot_9_hit: bao_final_shot_completed
   bao_final_shot_completed: bao_enable_stage_1
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 0}: bao_stage_1_show
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 1}: bao_stage_2_show
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 2}: bao_stage_3_show
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value >= 3}: bao_stage_4_show
 
 variable_player:
   bao_final_shot_completed:
