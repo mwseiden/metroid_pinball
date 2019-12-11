@@ -40,11 +40,11 @@ shot_profiles:
       - name: level_2
         show: led_color
         show_tokens:
-          color: '8000FF'
+          color: 'FFD000'
       - name: level_3
         show: led_color
         show_tokens:
-          color: FF00FF
+          color: 'FF0000'
   bao_charged_scoop:
     states:
       - name: lit
@@ -128,6 +128,52 @@ shots:
     disable_events: mode_bao_base_started, bao_enable_stage_1
     show_tokens:
       led: led_upgrade_bank_3
+  bao_standard_shot_1:
+    switch: s_missile_bank_1
+    enable_events: mode_bao_base_started
+  bao_standard_shot_2:
+    switch: s_missile_bank_2
+    enable_events: mode_bao_base_started
+  bao_standard_shot_3:
+    switch: s_missile_bank_3
+    enable_events: mode_bao_base_started
+  bao_standard_shot_4:
+    switch: s_purple_1
+    enable_events: mode_bao_base_started
+  bao_standard_shot_5:
+    switch: s_purple_2
+    enable_events: mode_bao_base_started
+  bao_standard_shot_6:
+    switch: s_purple_3
+    enable_events: mode_bao_base_started
+  bao_standard_shot_7:
+    switch: s_lower_right_bank_1
+    enable_events: mode_bao_base_started
+  bao_standard_shot_8:
+    switch: s_lower_right_bank_2
+    enable_events: mode_bao_base_started
+  bao_standard_shot_9:
+    switch: s_lower_right_bank_3
+    enable_events: mode_bao_base_started
+  bao_standard_shot_10:
+    switch: s_thin_orange
+    enable_events: mode_bao_base_started
+  bao_standard_shot_11:
+    switch: s_shatz
+    enable_events: mode_bao_base_started
+  bao_standard_shot_12:
+    switch: s_left_target_1
+    enable_events: mode_bao_base_started
+  bao_standard_shot_13:
+    switch: s_left_target_2
+    enable_events: mode_bao_base_started
+  bao_standard_shot_14:
+    switch: s_left_target_3
+    enable_events: mode_bao_base_started
+  bao_spinner_shot:
+    switch: s_spinner
+    enable_events: mode_bao_base_started
+
 
 shot_groups:
   bao_charge_shot_group:
@@ -140,6 +186,24 @@ shot_groups:
     reset_events: bao_enable_stage_4
     enable_events: bao_enable_stage_3
     disable_events: bao_enable_stage_4
+  bao_standard_shot_group:
+    shots:
+      - bao_standard_shot_1
+      - bao_standard_shot_2
+      - bao_standard_shot_3
+      - bao_standard_shot_4
+      - bao_standard_shot_5
+      - bao_standard_shot_6
+      - bao_standard_shot_7
+      - bao_standard_shot_8
+      - bao_standard_shot_9
+      - bao_standard_shot_10
+      - bao_standard_shot_11
+      - bao_standard_shot_12
+      - bao_standard_shot_13
+      - bao_standard_shot_14
+    enable_events: mode_bao_base_started
+    disable_events: mode_bao_base_stopping
 
 ball_holds:
   bao_charged_scoop_shot:
@@ -324,6 +388,90 @@ show_player:
       show_tokens:
         led: led_ball_save
         color: ff0000
+
+sounds:
+  bao_hit_1:
+    file: bao_hit_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bao_hit_2:
+    file: bao_hit_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bao_hit_3:
+    file: bao_hit_3.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bao_hit_4:
+    file: bao_hit_4.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bao_hit_5:
+    file: bao_hit_5.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bao_hit_6:
+    file: bao_hit_6.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bao_hit_7:
+    file: bao_hit_7.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bao_hit_8:
+    file: bao_hit_8.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  bao_spinner:
+    file: bao_spinner.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
+sound_pools:
+  bao_shot_sound_pool:
+    load: preload
+    type: random
+    track: sfx
+    sounds:
+      - bao_hit_1
+      - bao_hit_2
+      - bao_hit_3
+      - bao_hit_4
+      - bao_hit_5
+      - bao_hit_6
+      - bao_hit_7
+      - bao_hit_8
+
+sound_player:
+  bao_standard_shot_group_hit: bao_shot_sound_pool
+  bao_spinner_shot_hit: bao_spinner
 
 event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
