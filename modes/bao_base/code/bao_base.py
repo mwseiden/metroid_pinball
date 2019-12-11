@@ -10,7 +10,7 @@ class BaoBase(Mode):
         self.add_mode_event_handler('bao_base_release_locked_balls', self.event_release_locked_balls)
         self.add_mode_event_handler('bao_base_initialize', self.event_initialize)
         self.add_mode_event_handler('bao_enable_stage_4', self.event_pick_shots)
-        self.add_mode_event_handler('balldevice_bd_trough_ball_enter', self.event_check_for_end)
+        self.add_mode_event_handler('balldevice_bd_trough_ball_entered', self.event_check_for_end)
 
     def event_add_a_ball(self, **kwargs):
         self.machine.set_machine_var('bao_balls_locked', self.machine.get_machine_var('bao_balls_locked') + 1)
@@ -27,5 +27,5 @@ class BaoBase(Mode):
         self.machine.events.post('bao_enable_final_shot_' + str(randint(1, 6)))
 
     def event_check_for_end(self, **kwargs):
-        if int(kwargs.get('unclaimed_balls', 1)) <= 1:
+        if self.machine.game.balls_in_play == 1:
             self.machine.events.post('bao_multiball_ended')
