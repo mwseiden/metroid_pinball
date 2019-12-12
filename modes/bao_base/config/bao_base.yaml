@@ -462,7 +462,7 @@ sounds:
 sound_pools:
   bao_shot_sound_pool:
     load: preload
-    type: random
+    type: random_force_all
     track: sfx
     sounds:
       - bao_hit_1|5
