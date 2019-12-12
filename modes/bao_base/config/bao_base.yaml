@@ -465,14 +465,34 @@ sound_pools:
     type: random_force_all
     track: sfx
     sounds:
-      - bao_hit_1|5
-      - bao_hit_2|5
-      - bao_hit_3|5
-      - bao_hit_4|5
-      - bao_hit_5|5
-      - bao_hit_6|1
-      - bao_hit_7|1
-      - bao_hit_8|1
+      - bao_hit_1
+      - bao_hit_1
+      - bao_hit_1
+      - bao_hit_1
+      - bao_hit_1
+      - bao_hit_2
+      - bao_hit_2
+      - bao_hit_2
+      - bao_hit_2
+      - bao_hit_2
+      - bao_hit_3
+      - bao_hit_3
+      - bao_hit_3
+      - bao_hit_3
+      - bao_hit_3
+      - bao_hit_4
+      - bao_hit_4
+      - bao_hit_4
+      - bao_hit_4
+      - bao_hit_4
+      - bao_hit_5
+      - bao_hit_5
+      - bao_hit_5
+      - bao_hit_5
+      - bao_hit_5
+      - bao_hit_6
+      - bao_hit_7
+      - bao_hit_8
 
 sound_player:
   bao_standard_shot_group_hit: bao_shot_sound_pool
