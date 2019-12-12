@@ -32,7 +32,7 @@ class BaoBase(Mode):
             self.machine.events.post('bao_multiball_ended')
 
     def event_play_rando_sound(self, **kwargs):
-        if (randint(0, 8) == 0):
+        if (randint(0, 12) == 0):
             self.machine.events.post('bao_play_rare')
         else:
             self.machine.events.post('bao_play_standard')
