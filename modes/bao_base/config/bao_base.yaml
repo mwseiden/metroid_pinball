@@ -466,36 +466,22 @@ sound_pools:
     track: sfx
     sounds:
       - bao_hit_1
-      - bao_hit_1
-      - bao_hit_1
-      - bao_hit_1
-      - bao_hit_1
-      - bao_hit_2
-      - bao_hit_2
-      - bao_hit_2
-      - bao_hit_2
       - bao_hit_2
       - bao_hit_3
-      - bao_hit_3
-      - bao_hit_3
-      - bao_hit_3
-      - bao_hit_3
-      - bao_hit_4
-      - bao_hit_4
-      - bao_hit_4
-      - bao_hit_4
       - bao_hit_4
       - bao_hit_5
-      - bao_hit_5
-      - bao_hit_5
-      - bao_hit_5
-      - bao_hit_5
+  bao_rare_shot_sound_pool:
+    load: preload
+    type: random_force_all
+    track: sfx
+    sounds:
       - bao_hit_6
       - bao_hit_7
       - bao_hit_8
 
 sound_player:
-  bao_standard_shot_group_hit: bao_shot_sound_pool
+  bao_play_standard: bao_shot_sound_pool
+  bao_play_rare: bao_rare_shot_sound_pool
   bao_spinner_shot_hit: bao_spinner
   bao_enable_stage_2: shoot_the_scoop
   bao_enable_stage_3: shoot_the_pops

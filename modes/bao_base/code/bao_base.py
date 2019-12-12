@@ -11,6 +11,7 @@ class BaoBase(Mode):
         self.add_mode_event_handler('bao_base_initialize', self.event_initialize)
         self.add_mode_event_handler('bao_enable_stage_4', self.event_pick_shots)
         self.add_mode_event_handler('balldevice_bd_trough_ball_count_changed', self.event_check_for_end)
+        self.add_mode_event_handler('bao_standard_shot_group_hit', self.event_play_rando_sound)
 
     def event_add_a_ball(self, **kwargs):
         self.machine.set_machine_var('bao_balls_locked', self.machine.get_machine_var('bao_balls_locked') + 1)
@@ -29,3 +30,9 @@ class BaoBase(Mode):
     def event_check_for_end(self, **kwargs):
         if int(kwargs.get('balls', 3)) >= 3:
             self.machine.events.post('bao_multiball_ended')
+
+    def event_play_rando_sound(self, **kwargs):
+        if (randint(0, 8) == 0):
+            self.machine.events.post('bao_play_rare')
+        else:
+            self.machine.events.post('bao_play_standard')
