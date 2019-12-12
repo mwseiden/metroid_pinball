@@ -314,8 +314,13 @@ show_player:
       key: bao_gi
       loops: -1
       show_tokens:
-        color: 'C0C000'
+        color: 'D0A000'
   bao_stage_3_show:
+    gi_solid:
+      key: bao_gi
+      loops: -1
+      show_tokens:
+        color: 'F08000'
     bao_pops_critical:
       priority: 300
       loops: -1
@@ -395,63 +400,63 @@ sounds:
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.7
     max_queue_time: None
   bao_hit_2:
     file: bao_hit_2.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.7
     max_queue_time: None
   bao_hit_3:
     file: bao_hit_3.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.7
     max_queue_time: None
   bao_hit_4:
     file: bao_hit_4.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.7
     max_queue_time: None
   bao_hit_5:
     file: bao_hit_5.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.7
     max_queue_time: None
   bao_hit_6:
     file: bao_hit_6.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.7
     max_queue_time: None
   bao_hit_7:
     file: bao_hit_7.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.7
     max_queue_time: None
   bao_hit_8:
     file: bao_hit_8.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.7
     max_queue_time: None
   bao_spinner:
     file: bao_spinner.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 1.0
+    volume: 0.7
     max_queue_time: None
 
 sound_pools:
@@ -460,18 +465,21 @@ sound_pools:
     type: random
     track: sfx
     sounds:
-      - bao_hit_1
-      - bao_hit_2
-      - bao_hit_3
-      - bao_hit_4
-      - bao_hit_5
-      - bao_hit_6
-      - bao_hit_7
-      - bao_hit_8
+      - bao_hit_1|5
+      - bao_hit_2|5
+      - bao_hit_3|5
+      - bao_hit_4|5
+      - bao_hit_5|5
+      - bao_hit_6|1
+      - bao_hit_7|1
+      - bao_hit_8|1
 
 sound_player:
   bao_standard_shot_group_hit: bao_shot_sound_pool
   bao_spinner_shot_hit: bao_spinner
+  bao_enable_stage_2: shoot_the_scoop
+  bao_enable_stage_3: shoot_the_pops
+  bao_enable_stage_4: shoot_the_flashing_target
 
 event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
