@@ -287,7 +287,7 @@ slides:
         y: 300
         x: 615
       - type: image
-        image: bao_backbox_secret
+        image: bao_backbox
     transition: fade
     transition_out: fade
 
@@ -295,6 +295,12 @@ slide_player:
   mode_bao_base_started:
     bao_base_backglass_slide:
       target: backglass
+
+widget_player:
+  mode_bao_base_started:
+    backglass_main_logo:
+      widget_settings:
+        y: 2000
 
 show_player:
   bao_multiball_started:
