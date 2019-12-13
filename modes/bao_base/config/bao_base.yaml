@@ -299,6 +299,7 @@ slide_player:
 widget_player:
   mode_bao_base_started:
     backglass_main_logo:
+      action: update
       slide: window_slide
       widget_settings:
         y: 2000
