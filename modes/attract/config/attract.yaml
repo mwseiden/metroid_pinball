@@ -9,7 +9,7 @@ sound_player:
       action: stop
 
 widget_player:
-  mode_bao_base_started:
+  mode_attract_started:
     backglass_main_logo:
       widget_settings:
         y: 1088

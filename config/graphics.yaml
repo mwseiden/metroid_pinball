@@ -43,15 +43,11 @@ slides:
       color: black
       y: 120
       x: 370
-    - type: image
-      key: backglass_main_logo
-      image: backglass_main_logo
-      y: 1088
+    - widget: backglass_main_logo
     - type: display
       source_display: backglass
       width: 720
       height: 1280
-
 
   backglass_slide:
     widgets:
@@ -82,6 +78,13 @@ slides:
       text: "LOADING ASSETS: (percent)%"
       style: dmd_med
 
+
+widgets:
+  backglass_main_logo:
+    type: image
+    key: backglass_main_logo
+    image: backglass_main_logo
+    y: 1088
 
 slide_player:
   init_done:
