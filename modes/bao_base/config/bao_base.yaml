@@ -296,14 +296,6 @@ slide_player:
     bao_base_backglass_slide:
       target: backglass
 
-widget_player:
-  mode_bao_base_started:
-    backglass_main_logo:
-      action: update
-      slide: window_slide
-      widget_settings:
-        y: 2000
-
 show_player:
   bao_multiball_started:
     gi_solid:

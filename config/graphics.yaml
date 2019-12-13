@@ -29,6 +29,20 @@ widgets:
       image: backglass_main_logo
       y: 1088
 
+widget_player:
+  mode_attract_started:
+    backglass_main_logo:
+      action: update
+      slide: window_slide
+      widget_settings:
+        y: 1088
+s  mode_bao_base_started:
+    backglass_main_logo:
+      action: update
+      slide: window_slide
+      widget_settings:
+        y: 2000
+
 slides:
   window_slide:
     - type: display

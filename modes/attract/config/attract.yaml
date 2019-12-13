@@ -8,14 +8,6 @@ sound_player:
     music_high_score:
       action: stop
 
-widget_player:
-  mode_attract_started:
-    backglass_main_logo:
-      action: update
-      slide: window_slide
-      widget_settings:
-        y: 1088
-
 show_player:
   mode_attract_started:
     attract_display_loop:
