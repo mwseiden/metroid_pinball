@@ -321,12 +321,12 @@ show_player:
       loops: -1
       show_tokens:
         color: 'F08000'
-    bao_pops_critical:
+    bao_pops_unlocked:
       priority: 300
       loops: -1
       speed: 20
   bao_stage_4_show:
-    bao_pops_critical:
+    bao_pops_unlocked:
       action: stop
     gi_fire:
       key: bao_gi
@@ -360,7 +360,7 @@ show_player:
     bao_scoop_hit:
       loops: -1
       speed: 50
-    bao_scoop_critical:
+    bao_scoop_unlocked:
       loops: 0
       priority: 9000
       events_when_stopped: bao_critical_should_start
@@ -451,6 +451,48 @@ sounds:
     priority: 50
     volume: 0.7
     max_queue_time: None
+  bao_hit_9:
+    file: bao_hit_9.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_10:
+    file: bao_hit_10.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_11:
+    file: bao_hit_11.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_12:
+    file: bao_hit_12.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_13:
+    file: bao_hit_13.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_14:
+    file: bao_hit_14.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
   bao_spinner:
     file: bao_spinner.wav
     streaming: False
@@ -470,6 +512,7 @@ sound_pools:
       - bao_hit_3
       - bao_hit_4
       - bao_hit_5
+      - bao_hit_14
   bao_rare_shot_sound_pool:
     load: preload
     type: random_force_all
@@ -478,6 +521,11 @@ sound_pools:
       - bao_hit_6
       - bao_hit_7
       - bao_hit_8
+      - bao_hit_9
+      - bao_hit_10
+      - bao_hit_11
+      - bao_hit_12
+      - bao_hit_13
 
 sound_player:
   bao_play_standard: bao_shot_sound_pool
