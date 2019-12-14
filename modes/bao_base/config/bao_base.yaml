@@ -568,8 +568,8 @@ event_player:
   bao_critical_mass: bao_enable_stage_4
   s_behind_drop_2_active{machine.bao_balls_locked == 0 and game.balls_in_play == 1}: cmd_drop_two_up, cmd_drop_three_up, bao_test_lock_1, bao_ball_1_locked
   s_behind_drop_1_active{machine.bao_balls_locked == 1 and game.balls_in_play == 1}: cmd_drop_one_up, bao_test_lock_2, bao_ball_2_locked
-  timer_bao_test_ball_1_locked_complete{device.switches.s_behind_drop_2.active}: bao_base_lock_a_ball
-  timer_bao_test_ball_2_locked_complete{device.switches.s_behind_drop_1.active}: bao_base_lock_a_ball
+  timer_bao_test_ball_1_locked_complete{device.switches.s_behind_drop_2.state}: bao_base_lock_a_ball
+  timer_bao_test_ball_2_locked_complete{device.switches.s_behind_drop_1.state}: bao_base_lock_a_ball
   drop_target_drop_one_down{machine.bao_balls_locked == 2}: bao_base_release_locked_balls, bao_multiball_started
   drop_target_drop_two_down{machine.bao_balls_locked > 1}: cmd_drop_two_up
   drop_target_drop_three_down: cmd_drop_three_up
