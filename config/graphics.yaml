@@ -22,28 +22,7 @@ window:
   no_window: false
   resizable: false
   show_cursor: false
-
-widgets:
-  backglass_main_logo:
-    - type: image
-      key: backglass_main_logo
-      image: backglass_main_logo
-      y: 1088
-
-# widget_player:
-  # mode_attract_started:
-    # backglass_main_logo:
-      # action: update
-      # key: backglass_main_logo
-      # widget_settings:
-        # y: 1088
-  # mode_bao_base_started:
-    # backglass_main_logo:
-      # action: update
-      # key: backglass_main_logo
-      # widget_settings:
-        # y: 2000
-
+  
 slides:
   window_slide:
     - type: display
@@ -64,11 +43,14 @@ slides:
       color: black
       y: 120
       x: 370
-    - widget: backglass_main_logo
+    - type: image
+      image: backglass_main_logo
+      y: 1088
     - type: display
       source_display: backglass
       width: 720
       height: 1280
+
 
   backglass_slide:
     widgets:
