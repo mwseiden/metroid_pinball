@@ -28,6 +28,23 @@ counters:
     reset_events: game_start, bao_enable_stage_4
     persist_state: true
 
+timers:
+  bao_test_ball_1_locked:
+    start_value: 1
+    end_value: 4
+    tick_interval: .5s
+    control_events:
+      - event: bao_test_lock_1
+        action: restart
+  bao_test_ball_2_locked:
+    start_value: 1
+    end_value: 4
+    tick_interval: .5s
+    control_events:
+      - event: bao_test_lock_2
+        action: restart
+
+
 shot_profiles:
   bao_charge_targets:
     states:
@@ -549,8 +566,10 @@ event_player:
   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
   bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
   bao_critical_mass: bao_enable_stage_4
-  s_behind_drop_2_active{machine.bao_balls_locked == 0 and game.balls_in_play == 1}: cmd_drop_two_up, cmd_drop_three_up, bao_base_lock_a_ball, bao_ball_1_locked
-  s_behind_drop_1_active{machine.bao_balls_locked == 1 and game.balls_in_play == 1}: cmd_drop_one_up, bao_base_lock_a_ball, bao_ball_2_locked
+  s_behind_drop_2_active{machine.bao_balls_locked == 0 and game.balls_in_play == 1}: cmd_drop_two_up, cmd_drop_three_up, bao_test_lock_1, bao_ball_1_locked
+  s_behind_drop_1_active{machine.bao_balls_locked == 1 and game.balls_in_play == 1}: cmd_drop_one_up, bao_test_lock_2, bao_ball_2_locked
+  timer_bao_test_ball_1_locked_complete{device.switches.s_behind_drop_2.active}: bao_base_lock_a_ball
+  timer_bao_test_ball_2_locked_complete{device.switches.s_behind_drop_1.active}: bao_base_lock_a_ball
   drop_target_drop_one_down{machine.bao_balls_locked == 2}: bao_base_release_locked_balls, bao_multiball_started
   drop_target_drop_two_down{machine.bao_balls_locked > 1}: cmd_drop_two_up
   drop_target_drop_three_down: cmd_drop_three_up
@@ -570,6 +589,7 @@ event_player:
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 1}: bao_stage_2_show
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 2}: bao_stage_3_show
   bao_multiball_ended{device.sequences.bao_progress_sequence.value >= 3}: bao_stage_4_show
+
 
 variable_player:
   bao_final_shot_completed:
