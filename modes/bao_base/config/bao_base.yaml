@@ -21,7 +21,7 @@ counters:
   bao_critical_counter:
     count_events: bao_critical_shot_group_hit
     starting_count: 1
-    count_complete_value: 10
+    count_complete_value: 5
     events_when_complete: bao_critical_mass
     disable_events: bao_enable_stage_4
     enable_events: bao_enable_stage_3
@@ -31,15 +31,15 @@ counters:
 timers:
   bao_test_ball_1_locked:
     start_value: 1
-    end_value: 4
-    tick_interval: .5s
+    end_value: 2
+    tick_interval: 1.0s
     control_events:
       - event: bao_test_lock_1
         action: restart
   bao_test_ball_2_locked:
     start_value: 1
-    end_value: 4
-    tick_interval: .5s
+    end_value: 2
+    tick_interval: 1.0s
     control_events:
       - event: bao_test_lock_2
         action: restart
