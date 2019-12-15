@@ -551,6 +551,9 @@ sound_player:
   bao_enable_stage_2: shoot_the_scoop
   bao_enable_stage_3: shoot_the_pops
   bao_enable_stage_4: shoot_the_flashing_target
+  bao_ball_1_locked: ball_1_locked
+  bao_ball_2_locked: ball_2_locked
+  bao_multiball_started: multiball_alt_1
 
 event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
@@ -571,7 +574,7 @@ event_player:
   timer_bao_test_ball_1_locked_complete{device.switches.s_behind_drop_2.state}: bao_base_lock_a_ball
   timer_bao_test_ball_2_locked_complete{device.switches.s_behind_drop_1.state}: bao_base_lock_a_ball
   drop_target_drop_one_down{machine.bao_balls_locked == 2}: bao_base_release_locked_balls, bao_multiball_started
-  drop_target_drop_two_down{machine.bao_balls_locked > 1}: cmd_drop_two_up
+  drop_target_drop_two_down{machine.bao_balls_locked > 1 or device.timers.bao_test_ball_2_locked.running}: cmd_drop_two_up
   drop_target_drop_three_down: cmd_drop_three_up
   bao_base_release_locked_balls: cmd_drop_one_down, cmd_drop_two_down
   ball_will_end{current_player.number == game.num_players and current_player.ball == game.balls_per_game}: cmd_drop_one_down, cmd_drop_two_down, bao_base_initialize
