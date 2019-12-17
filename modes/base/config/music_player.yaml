@@ -59,6 +59,8 @@ sound_player:
     music_bao_main:
       action: play
       fade_in: 2s
+    music_bao_multiball:
+      action: stop
   bao_play_multiball:
     music_bao_multiball:
       action: play
