@@ -627,7 +627,6 @@ event_player:
   bao_final_shot_7_hit: bao_final_shot_completed
   bao_final_shot_8_hit: bao_final_shot_completed
   bao_final_shot_9_hit: bao_final_shot_completed
-  bao_final_shot_completed: bao_enable_stage_1
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 0}: bao_stage_1_show
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 1}: bao_stage_2_show
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 2}: bao_stage_3_show
