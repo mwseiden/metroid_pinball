@@ -9,7 +9,7 @@ class BaoBase(Mode):
         self.add_mode_event_handler('bao_base_lock_a_ball', self.event_add_a_ball)
         self.add_mode_event_handler('bao_base_release_locked_balls', self.event_release_locked_balls)
         self.add_mode_event_handler('bao_base_initialize', self.event_initialize)
-        self.add_mode_event_handler('bao_stage_4_show', self.event_pick_shots)
+        self.add_mode_event_handler('bao_stage_4_pick_shot', self.event_pick_shots)
         self.add_mode_event_handler('balldevice_bd_trough_ball_count_changed', self.event_check_for_end)
         self.add_mode_event_handler('bao_standard_shot_group_hit', self.event_play_rando_sound)
 
@@ -25,7 +25,6 @@ class BaoBase(Mode):
         self.machine.set_machine_var('bao_balls_locked', 0)
 
     def event_pick_shots(self, **kwargs):
-        self.machine.events.post('bao_seriously_what_the_fuck')
         self.machine.events.post('bao_enable_final_shot_' + str(randint(1, 6)))
 
     def event_check_for_end(self, **kwargs):

@@ -604,7 +604,7 @@ event_player:
   bao_enable_stage_1: bao_stage_1_show
   bao_enable_stage_2: bao_stage_2_show, scoop_autofire_should_disable
   bao_enable_stage_3: bao_stage_3_show
-  bao_enable_stage_4: bao_stage_4_show
+  bao_enable_stage_4: bao_stage_4_show, bao_stage_4_pick_shot
   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
   bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
   bao_critical_mass: bao_enable_stage_4
