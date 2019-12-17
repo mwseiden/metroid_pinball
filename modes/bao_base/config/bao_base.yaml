@@ -320,6 +320,8 @@ show_player:
       loops: -1
       show_tokens:
         color: '00C000'
+    bao_multiball_drop_show:
+      action: stop
   bao_stage_1_show:
     gi_solid:
       key: bao_gi
@@ -413,10 +415,39 @@ show_player:
         color: ff0000
   bao_ball_1_locked:
     bao_multiball_lock:
-      speed: 30
+      speed: 60
+      loops: 0
   bao_ball_2_locked:
     bao_multiball_lock:
-      speed: 30
+      speed: 60
+      loops: 0
+  bao_base_started:
+    small_theater_chase:
+      key: bao_multiball_drop_show
+      loops: -1
+      speed: 6
+      show_tokens:
+        color: '00C000'
+        led_1: led_drop_1
+        led_2: led_drop_2
+        led_3: led_drop_3
+        led_4: led_drop_1
+        led_5: led_drop_2
+        led_6: led_drop_3
+  bao_multiball_ended:
+    small_theater_chase:
+      key: bao_multiball_drop_show
+      loops: -1
+      speed: 6
+      show_tokens:
+        color: '00C000'
+        led_1: led_drop_1
+        led_2: led_drop_2
+        led_3: led_drop_3
+        led_4: led_drop_1
+        led_5: led_drop_2
+        led_6: led_drop_3
+
 
 
 sounds:
