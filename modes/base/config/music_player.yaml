@@ -59,6 +59,11 @@ sound_player:
     music_bao_main:
       action: play
       fade_in: 2s
+  bao_play_multiball:
+    music_bao_multiball:
+      action: play
+    music_bao_main:
+      action: stop
   mode_bonus_will_start:
     music_crateria:
       action: stop
@@ -82,6 +87,9 @@ sound_player:
       action: stop
       fade_out: 3s
     music_bao_main:
+      action: stop
+      fade_out: 3s
+    music_bao_multiball:
       action: stop
       fade_out: 3s
 

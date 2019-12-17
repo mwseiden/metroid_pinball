@@ -592,7 +592,8 @@ event_player:
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 1}: bao_stage_2_show
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 2}: bao_stage_3_show
   bao_multiball_ended{device.sequences.bao_progress_sequence.value >= 3}: bao_stage_4_show
-
+  bao_multiball_ended: bao_play_main
+  bao_multiball_started: bao_play_multiball
 
 variable_player:
   bao_final_shot_completed:
