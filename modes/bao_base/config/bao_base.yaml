@@ -11,7 +11,6 @@ sequences:
          - bao_enable_stage_2
          - bao_enable_stage_3
          - bao_enable_stage_4
-         - ashdkjsahkshadhwadsh
          - bao_final_shot_completed
       events_when_complete: bao_enable_stage_1
       persist_state: True
@@ -605,7 +604,7 @@ event_player:
   bao_enable_stage_1: bao_stage_1_show
   bao_enable_stage_2: bao_stage_2_show, scoop_autofire_should_disable
   bao_enable_stage_3: bao_stage_3_show
-  bao_enable_stage_4: bao_stage_4_show, bao_stage_4_pick_shot
+  bao_enable_stage_4: bao_stage_4_show
   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
   bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
   bao_critical_mass: bao_enable_stage_4
@@ -627,6 +626,7 @@ event_player:
   bao_final_shot_7_hit: bao_final_shot_completed
   bao_final_shot_8_hit: bao_final_shot_completed
   bao_final_shot_9_hit: bao_final_shot_completed
+  bao_final_shot_completed: bao_enable_stage_1
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 0}: bao_stage_1_show
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 1}: bao_stage_2_show
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 2}: bao_stage_3_show

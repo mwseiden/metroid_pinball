@@ -4,14 +4,16 @@ from mpf.core.mode import Mode
 class BaoBase(Mode):
 
     def mode_start(self, **kwargs):
-        super().mode_start(**kwargs)
+        self.info_log('Initializing BAO Base')
 
         self.add_mode_event_handler('bao_base_lock_a_ball', self.event_add_a_ball)
         self.add_mode_event_handler('bao_base_release_locked_balls', self.event_release_locked_balls)
         self.add_mode_event_handler('bao_base_initialize', self.event_initialize)
-        self.add_mode_event_handler('bao_stage_4_pick_shot', self.event_pick_shots)
+        self.add_mode_event_handler('bao_enable_stage_4', self.event_pick_shots)
         self.add_mode_event_handler('balldevice_bd_trough_ball_count_changed', self.event_check_for_end)
         self.add_mode_event_handler('bao_standard_shot_group_hit', self.event_play_rando_sound)
+
+        super().mode_start(**kwargs)
 
     def event_add_a_ball(self, **kwargs):
         self.machine.set_machine_var('bao_balls_locked', self.machine.get_machine_var('bao_balls_locked') + 1)
