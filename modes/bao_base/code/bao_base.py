@@ -9,7 +9,7 @@ class BaoBase(Mode):
         self.add_mode_event_handler('bao_base_lock_a_ball', self.event_add_a_ball)
         self.add_mode_event_handler('bao_base_release_locked_balls', self.event_release_locked_balls)
         self.add_mode_event_handler('bao_base_initialize', self.event_initialize)
-        self.add_mode_event_handler('bao_enable_stage_4', self.event_pick_shots)
+        self.add_mode_event_handler('bao_stage_4_show', self.event_pick_shots)
         self.add_mode_event_handler('balldevice_bd_trough_ball_count_changed', self.event_check_for_end)
         self.add_mode_event_handler('bao_standard_shot_group_hit', self.event_play_rando_sound)
 
