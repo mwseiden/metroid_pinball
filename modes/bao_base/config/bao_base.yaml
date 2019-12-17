@@ -11,6 +11,7 @@ sequences:
          - bao_enable_stage_2
          - bao_enable_stage_3
          - bao_enable_stage_4
+         - ashdkjsahkshadhwadsh
          - bao_final_shot_completed
       events_when_complete: bao_enable_stage_1
       persist_state: True
