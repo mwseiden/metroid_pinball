@@ -421,7 +421,7 @@ show_player:
     bao_multiball_lock:
       speed: 60
       loops: 0
-  bao_base_started:
+  mode_bao_base_started:
     small_theater_chase:
       key: bao_multiball_drop_show
       loops: -1
