@@ -411,12 +411,12 @@ show_player:
       show_tokens:
         led: led_ball_save
         color: ff0000
-   bao_ball_1_locked:
-     bao_multiball_lock:
-       speed: 30
-   bao_ball_2_locked:
-     bao_multiball_lock:
-       speed: 30
+  bao_ball_1_locked:
+    bao_multiball_lock:
+      speed: 30
+  bao_ball_2_locked:
+    bao_multiball_lock:
+      speed: 30
 
 
 sounds:
