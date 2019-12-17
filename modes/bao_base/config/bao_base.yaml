@@ -386,6 +386,7 @@ show_player:
       action: stop
   bao_final_shot_completed:
     bao_explode:
+      priority: 200
       loops: 3
       speed: 60
   ball_save_bao_multiball_save_grace_period:
@@ -410,6 +411,13 @@ show_player:
       show_tokens:
         led: led_ball_save
         color: ff0000
+   bao_ball_1_locked:
+     bao_multiball_lock:
+       speed: 30
+   bao_ball_2_locked:
+     bao_multiball_lock:
+       speed: 30
+
 
 sounds:
   bao_hit_1:
