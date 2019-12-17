@@ -615,3 +615,5 @@ variable_player:
     score: 10000
   bao_final_shot_6_hit:
     score: 10000
+  bao_standard_shot_group_hit:
+    score: 230
