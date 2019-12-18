@@ -1,5 +1,6 @@
 #config_version=5
 mode:
+  code: bao_base.BaoBase
   start_events: bao_base_started
   stop_events: bao_base_ended
   priority: 200
@@ -10,6 +11,8 @@ sequences:
          - bao_enable_stage_2
          - bao_enable_stage_3
          - bao_enable_stage_4
+         - bao_final_shot_completed
+      events_when_complete: bao_enable_stage_1
       persist_state: True
       reset_on_complete: True
       disable_on_complete: False
@@ -18,12 +21,29 @@ counters:
   bao_critical_counter:
     count_events: bao_critical_shot_group_hit
     starting_count: 1
-    count_complete_value: 10
+    count_complete_value: 5
     events_when_complete: bao_critical_mass
     disable_events: bao_enable_stage_4
     enable_events: bao_enable_stage_3
     reset_events: game_start, bao_enable_stage_4
     persist_state: true
+
+timers:
+  bao_test_ball_1_locked:
+    start_value: 1
+    end_value: 2
+    tick_interval: 1.0s
+    control_events:
+      - event: bao_test_lock_1
+        action: restart
+  bao_test_ball_2_locked:
+    start_value: 1
+    end_value: 2
+    tick_interval: 1.0s
+    control_events:
+      - event: bao_test_lock_2
+        action: restart
+
 
 shot_profiles:
   bao_charge_targets:
@@ -37,15 +57,21 @@ shot_profiles:
       - name: level_2
         show: led_color
         show_tokens:
-          color: '8000FF'
+          color: 'FFD000'
       - name: level_3
         show: led_color
         show_tokens:
-          color: FF00FF
+          color: 'FF0000'
   bao_charged_scoop:
     states:
       - name: lit
         show: led_color
+  bao_final_shot:
+    states:
+      - name: lit
+        show: fade_one_light
+        show_tokens:
+          color: FFFFFF
 
 shots:
   bao_charge_1_shot:
@@ -77,6 +103,94 @@ shots:
     show_tokens:
       led: led_enter_scoop
       color: 'FFFF00'
+  bao_final_shot_1:
+    switch: s_missile_bank_1
+    profile: bao_final_shot
+    restart_events: bao_enable_final_shot_1
+    disable_events: bao_enable_stage_1
+    show_tokens:
+      led: led_missile_bank_1
+  bao_final_shot_2:
+    switch: s_missile_bank_2
+    profile: bao_final_shot
+    restart_events: bao_enable_final_shot_2
+    disable_events: bao_enable_stage_1
+    show_tokens:
+      led: led_missile_bank_2
+  bao_final_shot_3:
+    switch: s_missile_bank_3
+    profile: bao_final_shot
+    restart_events: bao_enable_final_shot_3
+    disable_events: bao_enable_stage_1
+    show_tokens:
+      led: led_missile_bank_3
+  bao_final_shot_4:
+    switch: s_purple_1
+    profile: bao_final_shot
+    restart_events: bao_enable_final_shot_4
+    disable_events: bao_enable_stage_1
+    show_tokens:
+      led: led_upgrade_bank_1
+  bao_final_shot_5:
+    switch: s_purple_2
+    profile: bao_final_shot
+    restart_events: bao_enable_final_shot_5
+    disable_events: bao_enable_stage_1
+    show_tokens:
+      led: led_upgrade_bank_2
+  bao_final_shot_6:
+    switch: s_purple_3
+    profile: bao_final_shot
+    restart_events: bao_enable_final_shot_6
+    disable_events: bao_enable_stage_1
+    show_tokens:
+      led: led_upgrade_bank_3
+  bao_standard_shot_1:
+    switch: s_missile_bank_1
+    enable_events: mode_bao_base_started
+  bao_standard_shot_2:
+    switch: s_missile_bank_2
+    enable_events: mode_bao_base_started
+  bao_standard_shot_3:
+    switch: s_missile_bank_3
+    enable_events: mode_bao_base_started
+  bao_standard_shot_4:
+    switch: s_purple_1
+    enable_events: mode_bao_base_started
+  bao_standard_shot_5:
+    switch: s_purple_2
+    enable_events: mode_bao_base_started
+  bao_standard_shot_6:
+    switch: s_purple_3
+    enable_events: mode_bao_base_started
+  bao_standard_shot_7:
+    switch: s_lower_right_bank_1
+    enable_events: mode_bao_base_started
+  bao_standard_shot_8:
+    switch: s_lower_right_bank_2
+    enable_events: mode_bao_base_started
+  bao_standard_shot_9:
+    switch: s_lower_right_bank_3
+    enable_events: mode_bao_base_started
+  bao_standard_shot_10:
+    switch: s_thin_orange
+    enable_events: mode_bao_base_started
+  bao_standard_shot_11:
+    switch: s_shatz
+    enable_events: mode_bao_base_started
+  bao_standard_shot_12:
+    switch: s_left_target_1
+    enable_events: mode_bao_base_started
+  bao_standard_shot_13:
+    switch: s_left_target_2
+    enable_events: mode_bao_base_started
+  bao_standard_shot_14:
+    switch: s_left_target_3
+    enable_events: mode_bao_base_started
+  bao_spinner_shot:
+    switch: s_spinner
+    enable_events: mode_bao_base_started
+
 
 shot_groups:
   bao_charge_shot_group:
@@ -89,6 +203,24 @@ shot_groups:
     reset_events: bao_enable_stage_4
     enable_events: bao_enable_stage_3
     disable_events: bao_enable_stage_4
+  bao_standard_shot_group:
+    shots:
+      - bao_standard_shot_1
+      - bao_standard_shot_2
+      - bao_standard_shot_3
+      - bao_standard_shot_4
+      - bao_standard_shot_5
+      - bao_standard_shot_6
+      - bao_standard_shot_7
+      - bao_standard_shot_8
+      - bao_standard_shot_9
+      - bao_standard_shot_10
+      - bao_standard_shot_11
+      - bao_standard_shot_12
+      - bao_standard_shot_13
+      - bao_standard_shot_14
+    enable_events: mode_bao_base_started
+    disable_events: mode_bao_base_stopping
 
 ball_holds:
   bao_charged_scoop_shot:
@@ -98,7 +230,127 @@ ball_holds:
     disable_events: mode_bao_base_started, bao_enable_stage_3
     release_all_events: bao_critical_should_start
 
+ball_saves:
+  bao_multiball_save:
+    active_time: 8s
+    hurry_up_time: 2s
+    grace_period: 2s
+    enable_events: bao_multiball_started
+    auto_launch: yes
+    balls_to_save: -1
+    debug: yes
+
+slides:
+  bao_base_backglass_slide:
+    widgets:
+      - type: text
+        text: (player1|score)
+        number_grouping: true
+        min_digits: 2
+        y: 296
+        x: 173
+        anchor_x: right
+        font_name: segmented
+        font_size: 24
+      - type: text
+        text: (player2|score)
+        number_grouping: true
+        min_digits: 2
+        y: 296
+        x: 343
+        anchor_x: right
+        font_name: segmented
+        font_size: 24
+      - type: text
+        text: (player3|score)
+        number_grouping: true
+        min_digits: 2
+        y: 296
+        x: 513
+        anchor_x: right
+        font_name: segmented
+        font_size: 24
+      - type: text
+        text: (player4|score)
+        number_grouping: true
+        min_digits: 2
+        y: 296
+        x: 683
+        anchor_x: right
+        font_name: segmented
+        font_size: 24
+      - type: rectangle
+        width: 150
+        height: 34
+        color: black
+        y: 300
+        x: 105
+      - type: rectangle
+        width: 150
+        height: 34
+        color: black
+        y: 300
+        x: 275
+      - type: rectangle
+        width: 150
+        height: 34
+        color: black
+        y: 300
+        x: 445
+      - type: rectangle
+        width: 150
+        height: 34
+        color: black
+        y: 300
+        x: 615
+      - type: image
+        image: bao_backbox
+    transition: fade
+    transition_out: fade
+
+slide_player:
+  mode_bao_base_started:
+    bao_base_backglass_slide:
+      target: backglass
+
 show_player:
+  bao_multiball_started:
+    gi_solid:
+      key: bao_gi
+      loops: -1
+      show_tokens:
+        color: '00C000'
+    bao_multiball_drop_show:
+      action: stop
+  bao_stage_1_show:
+    gi_solid:
+      key: bao_gi
+      loops: -1
+      show_tokens:
+        color: 'C0C0C0'
+  bao_stage_2_show:
+    gi_solid:
+      key: bao_gi
+      loops: -1
+      show_tokens:
+        color: 'D0A000'
+  bao_stage_3_show:
+    gi_solid:
+      key: bao_gi
+      loops: -1
+      show_tokens:
+        color: 'F08000'
+    bao_pops_unlocked:
+      priority: 300
+      loops: -1
+      speed: 20
+  bao_stage_4_show:
+    bao_pops_unlocked:
+      action: stop
+    gi_fire:
+      key: bao_gi
+      loops: -1
+      speed: 30
   pop_1_shot_hit:
     blink_light:
       key: pop_bumpers_blink_1
@@ -106,7 +358,7 @@ show_player:
       speed: 20
       show_tokens:
         led: led_pop_2
-        color: FFFFFF
+        color: 'FFFFFF'
   pop_2_shot_hit:
     blink_light:
       key: pop_bumpers_blink_2
@@ -114,7 +366,7 @@ show_player:
       speed: 20
       show_tokens:
         led: led_pop_3
-        color: FFFFFF
+        color: 'FFFFFF'
   pop_3_shot_hit:
     blink_light:
       key: pop_bumpers_blink_3
@@ -122,25 +374,286 @@ show_player:
       speed: 20
       show_tokens:
         led: led_pop_1
-        color: FFFFFF
+        color: 'FFFFFF'
   bao_charged_scoop_shot_hit:
     bao_scoop_hit:
       loops: -1
       speed: 50
-    bao_scoop_critical:
+    bao_scoop_unlocked:
       loops: 0
       priority: 9000
       events_when_stopped: bao_critical_should_start
   bao_critical_should_start:
     bao_scoop_hit:
       action: stop
+  bao_final_shot_completed:
+    bao_explode:
+      priority: 200
+      loops: 3
+      speed: 60
+  ball_save_bao_multiball_save_grace_period:
+    ball_save_bao_multiball_save_blink:
+      action: stop
+  ball_save_bao_multiball_save_disabled:
+    ball_save_bao_multiball_save_blink:
+      action: stop
+  ball_save_bao_multiball_save_hurry_up:
+    blink_light:
+      key: ball_save_bao_multiball_save_blink
+      loops: -1
+      speed: 4
+      show_tokens:
+        led: led_ball_save
+        color: ff0000
+  ball_save_bao_multiball_save_enabled:
+    blink_light:
+      key: ball_save_bao_multiball_save_blink
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_ball_save
+        color: ff0000
+  bao_ball_1_locked:
+    bao_multiball_lock:
+      speed: 60
+      loops: 0
+  bao_ball_2_locked:
+    bao_multiball_lock:
+      speed: 60
+      loops: 0
+  mode_bao_base_started:
+    small_theater_chase:
+      key: bao_multiball_drop_show
+      loops: -1
+      speed: 6
+      show_tokens:
+        color: '00C000'
+        led_1: led_drop_1
+        led_2: led_drop_2
+        led_3: led_drop_3
+        led_4: led_drop_1
+        led_5: led_drop_2
+        led_6: led_drop_3
+  bao_multiball_ended:
+    small_theater_chase:
+      key: bao_multiball_drop_show
+      loops: -1
+      speed: 6
+      show_tokens:
+        color: '00C000'
+        led_1: led_drop_1
+        led_2: led_drop_2
+        led_3: led_drop_3
+        led_4: led_drop_1
+        led_5: led_drop_2
+        led_6: led_drop_3
+
+
+
+sounds:
+  bao_hit_1:
+    file: bao_hit_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_2:
+    file: bao_hit_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_3:
+    file: bao_hit_3.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_4:
+    file: bao_hit_4.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_5:
+    file: bao_hit_5.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_6:
+    file: bao_hit_6.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_7:
+    file: bao_hit_7.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_8:
+    file: bao_hit_8.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_9:
+    file: bao_hit_9.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_10:
+    file: bao_hit_10.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_11:
+    file: bao_hit_11.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_12:
+    file: bao_hit_12.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_13:
+    file: bao_hit_13.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_hit_14:
+    file: bao_hit_14.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bao_spinner:
+    file: bao_spinner.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+
+sound_pools:
+  bao_shot_sound_pool:
+    load: preload
+    type: random_force_all
+    track: sfx
+    sounds:
+      - bao_hit_1
+      - bao_hit_2
+      - bao_hit_3
+      - bao_hit_4
+      - bao_hit_5
+      - bao_hit_14
+  bao_rare_shot_sound_pool:
+    load: preload
+    type: random_force_all
+    track: sfx
+    sounds:
+      - bao_hit_6
+      - bao_hit_7
+      - bao_hit_8
+      - bao_hit_9
+      - bao_hit_10
+      - bao_hit_11
+      - bao_hit_12
+      - bao_hit_13
+
+sound_player:
+  bao_play_standard: bao_shot_sound_pool
+  bao_play_rare: bao_rare_shot_sound_pool
+  bao_spinner_shot_hit: bao_spinner
+  bao_enable_stage_2: shoot_the_scoop
+  bao_enable_stage_3: shoot_the_pops
+  bao_enable_stage_4: shoot_the_flashing_target
+  bao_ball_1_locked: ball_1_locked
+  bao_ball_2_locked: ball_2_locked
+  bao_multiball_started: multiball_alt_1
 
 event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 1}: bao_enable_stage_2
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 2}: bao_enable_stage_3
-  mode_bao_base_started{device.sequences.bao_progress_sequence.value == 3}: bao_enable_stage_4
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 3}: bao_enable_stage_4
+  mode_bao_base_started{current_player.number == 1 and current_player.ball == 1}: bao_base_initialize, cmd_drop_one_down, cmd_drop_two_down, cmd_drop_three_up
+  mode_bao_base_started: bao_play_main
+  bao_enable_stage_1: bao_stage_1_show
+  bao_enable_stage_2: bao_stage_2_show, scoop_autofire_should_disable
+  bao_enable_stage_3: bao_stage_3_show
+  bao_enable_stage_4: bao_stage_4_show
   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
   bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
   bao_critical_mass: bao_enable_stage_4
-  bao_enable_stage_2: scoop_autofire_should_disable
+  s_behind_drop_2_active{machine.bao_balls_locked == 0 and game.balls_in_play == 1}: cmd_drop_two_up, cmd_drop_three_up, bao_test_lock_1
+  s_behind_drop_1_active{machine.bao_balls_locked == 1 and game.balls_in_play == 1}: cmd_drop_one_up, bao_test_lock_2
+  timer_bao_test_ball_1_locked_complete{device.switches.s_behind_drop_2.state}: bao_base_lock_a_ball, bao_ball_1_locked
+  timer_bao_test_ball_2_locked_complete{device.switches.s_behind_drop_1.state}: bao_base_lock_a_ball, bao_ball_2_locked
+  drop_target_drop_one_down{machine.bao_balls_locked == 2}: bao_base_release_locked_balls, bao_multiball_started
+  drop_target_drop_two_down{machine.bao_balls_locked > 1 or device.timers.bao_test_ball_2_locked.running}: cmd_drop_two_up
+  drop_target_drop_three_down: cmd_drop_three_up
+  bao_base_release_locked_balls: cmd_drop_one_down, cmd_drop_two_down
+  ball_will_end{current_player.number == game.num_players and current_player.ball == game.balls_per_game}: cmd_drop_one_down, cmd_drop_two_down, bao_base_initialize
+  bao_final_shot_1_hit: bao_final_shot_completed
+  bao_final_shot_2_hit: bao_final_shot_completed
+  bao_final_shot_3_hit: bao_final_shot_completed
+  bao_final_shot_4_hit: bao_final_shot_completed
+  bao_final_shot_5_hit: bao_final_shot_completed
+  bao_final_shot_6_hit: bao_final_shot_completed
+  bao_final_shot_7_hit: bao_final_shot_completed
+  bao_final_shot_8_hit: bao_final_shot_completed
+  bao_final_shot_9_hit: bao_final_shot_completed
+  bao_final_shot_completed: bao_enable_stage_1
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 0}: bao_stage_1_show
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 1}: bao_stage_2_show
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 2}: bao_stage_3_show
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value >= 3}: bao_stage_4_show
+  bao_multiball_ended: bao_play_main
+  bao_multiball_started: bao_play_multiball
+
+variable_player:
+  bao_final_shot_completed:
+    score: 1
+  pop_1_shot_hit:
+    score: 500
+  pop_2_shot_hit:
+    score: 500
+  pop_3_shot_hit:
+    score: 500
+  bao_final_shot_1_hit:
+    score: 20000
+  bao_final_shot_2_hit:
+    score: 20000
+  bao_final_shot_3_hit:
+    score: 20000
+  bao_final_shot_4_hit:
+    score: 10000
+  bao_final_shot_5_hit:
+    score: 10000
+  bao_final_shot_6_hit:
+    score: 10000
+  bao_standard_shot_group_hit:
+    score: 230

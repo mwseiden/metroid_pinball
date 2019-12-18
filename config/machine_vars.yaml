@@ -1,6 +1,10 @@
 #config_version=5
 
 machine_vars:
+  bao_balls_locked:
+    initial_value: 0
+    value_type: int
+    persist: False
   metroid_game_booted:
     initial_value: 0
     value_type: int

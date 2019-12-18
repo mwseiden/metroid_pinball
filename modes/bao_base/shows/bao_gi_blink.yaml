@@ -1,0 +1,469 @@
+#show_version=5
+- time: 0
+  lights:
+    gi_back_center: 'B8B79F'
+    gi_behind_zero_suit: 'B8B79F'
+    gi_strip_7: 'B8B79F'
+    gi_strip_8: 'B8B79F'
+    gi_under_side_ramp: 'B8B79F'
+    gi_upgrade_bank: 'B8B79F'
+    gi_upper_flipper_top: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_back_center: stop
+    gi_behind_zero_suit: stop
+    gi_bomb_bank: 'B8B79F'
+    gi_left_ball_guide: 'B8B79F'
+    gi_left_sling_bottom: 'B8B79F'
+    gi_left_sling_top: 'B8B79F'
+    gi_missile_bank: 'B8B79F'
+    gi_right_ball_guide: 'B8B79F'
+    gi_right_sling_bottom: 'B8B79F'
+    gi_right_sling_top: 'B8B79F'
+    gi_side_bank: 'B8B79F'
+    gi_strip_1: '3B3B33'
+    gi_strip_10: 'B8B79F'
+    gi_strip_2: 'A2A18C'
+    gi_strip_7: stop
+    gi_strip_8: stop
+    gi_strip_9: 'B8B79F'
+    gi_under_side_ramp: stop
+    gi_upgrade_bank: stop
+    gi_upper_flipper_top: stop
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: stop
+    gi_left_ball_guide: stop
+    gi_left_sling_bottom: stop
+    gi_left_sling_top: stop
+    gi_middle_sling: 'B8B79F'
+    gi_missile_bank: stop
+    gi_right_ball_guide: stop
+    gi_right_sling_bottom: stop
+    gi_right_sling_top: stop
+    gi_side_bank: stop
+    gi_strip_1: stop
+    gi_strip_10: stop
+    gi_strip_2: stop
+    gi_strip_4: 'B8B79F'
+    gi_strip_9: stop
+    gi_upper_flipper_bottom: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: stop
+    gi_strip_4: stop
+    gi_strip_6: 'B2B199'
+    gi_upgrade_bank: 'B8B79F'
+    gi_upper_flipper_bottom: stop
+    
+- time: '+1'
+  lights:
+    gi_back_center: '3C3C34'
+    gi_behind_zero_suit: 'B8B79F'
+    gi_missile_bank: 'B8B79F'
+    gi_strip_6: stop
+    gi_strip_8: 'B8B79F'
+    gi_under_side_ramp: 'B8B79F'
+    gi_upper_flipper_top: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_back_center: stop
+    gi_behind_zero_suit: stop
+    gi_bomb_bank: 'B8B79F'
+    gi_left_ball_guide: 'B8B79F'
+    gi_left_sling_bottom: 'AAA993'
+    gi_left_sling_top: 'B8B79F'
+    gi_middle_sling: 'B8B79F'
+    gi_right_ball_guide: 'B8B79F'
+    gi_right_sling_bottom: 'B8B79F'
+    gi_right_sling_top: 'B8B79F'
+    gi_side_bank: 'B8B79F'
+    gi_strip_10: 'B8B79F'
+    gi_strip_2: 'B8B79F'
+    gi_strip_8: stop
+    gi_under_side_ramp: stop
+    gi_upgrade_bank: stop
+    gi_upper_flipper_top: stop
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: stop
+    gi_left_ball_guide: stop
+    gi_left_sling_bottom: stop
+    gi_left_sling_top: stop
+    gi_missile_bank: stop
+    gi_right_ball_guide: stop
+    gi_right_sling_bottom: stop
+    gi_right_sling_top: stop
+    gi_side_bank: stop
+    gi_strip_10: stop
+    gi_strip_2: stop
+    gi_strip_4: 'B8B79F'
+    gi_upper_flipper_bottom: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: stop
+    gi_strip_4: stop
+    gi_strip_6: 'B8B79F'
+    gi_upgrade_bank: 'B8B79F'
+    gi_upper_flipper_bottom: stop
+    
+- time: '+1'
+  lights:
+    gi_back_left: 'B8B79F'
+    gi_behind_zero_suit: '3A3A32'
+    gi_missile_bank: 'B8B79F'
+    gi_strip_6: stop
+    gi_strip_8: 'B8B79F'
+    gi_under_side_ramp: 'B8B79F'
+    gi_upper_flipper_top: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_back_left: stop
+    gi_behind_zero_suit: stop
+    gi_bomb_bank: 'B8B79F'
+    gi_left_ball_guide: 'B8B79F'
+    gi_left_sling_bottom: 'B8B79F'
+    gi_left_sling_top: 'B8B79F'
+    gi_middle_sling: 'B8B79F'
+    gi_missile_bank: '050504'
+    gi_right_ball_guide: 'B8B79F'
+    gi_right_sling_bottom: 'B8B79F'
+    gi_right_sling_top: 'B8B79F'
+    gi_side_bank: 'B8B79F'
+    gi_strip_10: 'B8B79F'
+    gi_strip_2: '6D6C5E'
+    gi_strip_3: '35352E'
+    gi_strip_8: stop
+    gi_under_side_ramp: stop
+    gi_upgrade_bank: stop
+    gi_upper_flipper_top: stop
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: stop
+    gi_left_ball_guide: stop
+    gi_left_sling_bottom: stop
+    gi_left_sling_top: stop
+    gi_middle_sling: stop
+    gi_missile_bank: stop
+    gi_right_ball_guide: stop
+    gi_right_sling_bottom: stop
+    gi_right_sling_top: stop
+    gi_side_bank: stop
+    gi_strip_10: stop
+    gi_strip_2: stop
+    gi_strip_3: stop
+    gi_strip_5: '757565'
+    gi_upgrade_bank: '8A8977'
+    gi_upper_flipper_bottom: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: '3E3D35'
+    gi_strip_5: stop
+    gi_strip_6: '717162'
+    gi_strip_7: '0F0F0D'
+    gi_under_side_ramp: 'B8B79F'
+    gi_upgrade_bank: 'B8B79F'
+    gi_upper_flipper_bottom: stop
+    
+- time: '+1'
+  lights:
+    gi_back_left: 'B8B79F'
+    gi_behind_zero_suit: 'B2B19A'
+    gi_missile_bank: 'B8B79F'
+    gi_strip_1: 'B8B79F'
+    gi_strip_6: stop
+    gi_strip_7: stop
+    gi_strip_8: '7C7C6B'
+    gi_strip_9: '1C1C18'
+    gi_under_side_ramp: '8C8B79'
+    gi_upgrade_bank: stop
+    gi_upper_flipper_top: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_back_left: stop
+    gi_back_right: 'B8B79F'
+    gi_behind_zero_suit: stop
+    gi_bomb_bank: 'B8B79F'
+    gi_left_ball_guide: 'B8B79F'
+    gi_left_sling_bottom: '706F61'
+    gi_left_sling_top: 'B8B79F'
+    gi_middle_sling: 'B8B79F'
+    gi_missile_bank: '9B9A86'
+    gi_right_ball_guide: 'B8B79F'
+    gi_right_sling_bottom: 'B8B79F'
+    gi_right_sling_top: 'B8B79F'
+    gi_strip_1: stop
+    gi_strip_3: 'B8B79F'
+    gi_strip_8: stop
+    gi_strip_9: stop
+    gi_under_side_ramp: stop
+    gi_upper_flipper_top: stop
+    
+- time: '+1'
+  lights:
+    gi_back_right: stop
+    gi_bomb_bank: stop
+    gi_left_ball_guide: stop
+    gi_left_sling_bottom: stop
+    gi_left_sling_top: stop
+    gi_middle_sling: '5B5A4E'
+    gi_missile_bank: stop
+    gi_right_ball_guide: stop
+    gi_right_sling_bottom: stop
+    gi_right_sling_top: stop
+    gi_strip_3: stop
+    gi_strip_5: 'B8B79F'
+    gi_upgrade_bank: 'B8B79F'
+    gi_upper_flipper_bottom: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'B8B79F'
+    gi_middle_sling: stop
+    gi_strip_5: stop
+    gi_strip_7: 'B8B79F'
+    gi_under_side_ramp: 'B8B79F'
+    gi_upper_flipper_bottom: stop
+    gi_upper_flipper_top: '1F1E1A'
+    
+- time: '+1'
+  lights:
+    gi_back_center: stop
+    gi_back_left: '141412'
+    gi_behind_zero_suit: '7F7E6D'
+    gi_missile_bank: 'B8B79F'
+    gi_side_bank: 'B8B79F'
+    gi_strip_1: 'B8B79F'
+    gi_strip_7: stop
+    gi_strip_9: 'B8B79F'
+    gi_under_side_ramp: stop
+    gi_upgrade_bank: stop
+    gi_upper_flipper_top: stop
+    
+- time: '+1'
+  lights:
+    gi_back_left: stop
+    gi_back_right: 'B8B79F'
+    gi_behind_zero_suit: stop
+    gi_bomb_bank: 'B8B79F'
+    gi_left_ball_guide: 'B8B79F'
+    gi_left_sling_bottom: 'B8B79F'
+    gi_left_sling_top: 'B8B79F'
+    gi_middle_sling: 'B5B49D'
+    gi_right_ball_guide: 'B8B79F'
+    gi_right_sling_bottom: 'B8B79F'
+    gi_right_sling_top: 'B8B79F'
+    gi_side_bank: '2F2E28'
+    gi_strip_1: stop
+    gi_strip_3: 'B8B79F'
+    gi_strip_9: stop
+    gi_upgrade_bank: '090907'
+    
+- time: '+1'
+  lights:
+    gi_back_right: stop
+    gi_bomb_bank: stop
+    gi_left_ball_guide: stop
+    gi_left_sling_bottom: stop
+    gi_left_sling_top: stop
+    gi_middle_sling: '57564B'
+    gi_missile_bank: stop
+    gi_right_ball_guide: stop
+    gi_right_sling_bottom: stop
+    gi_right_sling_top: stop
+    gi_side_bank: stop
+    gi_strip_3: stop
+    gi_strip_5: 'B8B79F'
+    gi_upgrade_bank: 'B8B79F'
+    gi_upper_flipper_bottom: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'B8B79F'
+    gi_middle_sling: stop
+    gi_strip_5: stop
+    gi_strip_7: 'B8B79F'
+    gi_under_side_ramp: 'B8B79F'
+    gi_upgrade_bank: stop
+    gi_upper_flipper_bottom: stop
+    gi_upper_flipper_top: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_back_center: stop
+    gi_behind_zero_suit: 'B8B79F'
+    gi_bomb_bank: 'B8B79F'
+    gi_missile_bank: 'B8B79F'
+    gi_strip_1: 'B8B79F'
+    gi_strip_2: '68685A'
+    gi_strip_7: stop
+    gi_strip_9: 'B8B79F'
+    gi_under_side_ramp: stop
+    gi_upper_flipper_top: stop
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: stop
+    gi_bomb_bank: stop
+    gi_left_ball_guide: '717162'
+    gi_left_sling_bottom: '2B2A25'
+    gi_left_sling_top: 'B8B79F'
+    gi_middle_sling: 'B8B79F'
+    gi_right_ball_guide: 'B8B79F'
+    gi_right_sling_bottom: 'B8B79F'
+    gi_right_sling_top: 'B8B79F'
+    gi_strip_1: stop
+    gi_strip_2: stop
+    gi_strip_3: 'B8B79F'
+    gi_strip_4: 'B8B79F'
+    gi_strip_9: stop
+    gi_upgrade_bank: '949380'
+    gi_upper_flipper_bottom: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: stop
+    gi_left_sling_bottom: stop
+    gi_left_sling_top: stop
+    gi_missile_bank: stop
+    gi_right_ball_guide: stop
+    gi_right_sling_bottom: stop
+    gi_right_sling_top: stop
+    gi_strip_3: stop
+    gi_strip_4: stop
+    gi_strip_5: 'B8B79F'
+    gi_strip_6: 'B8B79F'
+    gi_under_side_ramp: '0E0E0C'
+    gi_upgrade_bank: 'B8B79F'
+    gi_upper_flipper_bottom: stop
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'B8B79F'
+    gi_middle_sling: stop
+    gi_strip_5: stop
+    gi_strip_6: stop
+    gi_strip_7: 'B8B79F'
+    gi_strip_8: 'B8B79F'
+    gi_under_side_ramp: 'B8B79F'
+    gi_upgrade_bank: '5D5C50'
+    gi_upper_flipper_top: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_back_center: stop
+    gi_behind_zero_suit: 'A4A48E'
+    gi_bomb_bank: 'B8B79F'
+    gi_missile_bank: '3D3C34'
+    gi_strip_1: 'B8B79F'
+    gi_strip_10: 'B8B79F'
+    gi_strip_7: stop
+    gi_strip_8: stop
+    gi_strip_9: 'B8B79F'
+    gi_under_side_ramp: stop
+    gi_upgrade_bank: stop
+    gi_upper_flipper_top: stop
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: stop
+    gi_bomb_bank: stop
+    gi_left_sling_top: 'B8B79F'
+    gi_middle_sling: '252520'
+    gi_missile_bank: 'B8B79F'
+    gi_right_sling_bottom: '858473'
+    gi_side_bank: 'B8B79F'
+    gi_strip_1: stop
+    gi_strip_10: stop
+    gi_strip_3: '23231E'
+    gi_strip_4: '838271'
+    gi_strip_9: stop
+    gi_upper_flipper_bottom: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_top: stop
+    gi_middle_sling: 'B8B79F'
+    gi_missile_bank: stop
+    gi_right_sling_bottom: stop
+    gi_side_bank: stop
+    gi_strip_3: stop
+    gi_strip_4: stop
+    gi_strip_5: '10100E'
+    gi_strip_6: '030303'
+    gi_upgrade_bank: 'B8B79F'
+    gi_upper_flipper_bottom: stop
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'B8B79F'
+    gi_behind_zero_suit: 'B8B79F'
+    gi_middle_sling: stop
+    gi_strip_5: stop
+    gi_strip_6: stop
+    gi_strip_7: 'B8B79F'
+    gi_strip_8: '1D1D19'
+    gi_under_side_ramp: 'B8B79F'
+    gi_upgrade_bank: '9B9B86'
+    gi_upper_flipper_top: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_back_center: stop
+    gi_behind_zero_suit: '181815'
+    gi_bomb_bank: 'B8B79F'
+    gi_left_sling_bottom: 'B8B79F'
+    gi_missile_bank: 'B8B79F'
+    gi_right_ball_guide: 'B8B79F'
+    gi_right_sling_bottom: '22221E'
+    gi_right_sling_top: 'B8B79F'
+    gi_strip_1: 'B8B79F'
+    gi_strip_10: 'A4A38D'
+    gi_strip_2: '999884'
+    gi_strip_7: stop
+    gi_strip_8: stop
+    gi_strip_9: '10100E'
+    gi_under_side_ramp: stop
+    gi_upgrade_bank: stop
+    gi_upper_flipper_top: stop
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: stop
+    gi_bomb_bank: stop
+    gi_left_sling_bottom: stop
+    gi_middle_sling: 'B8B79F'
+    gi_right_ball_guide: stop
+    gi_right_sling_bottom: stop
+    gi_right_sling_top: stop
+    gi_side_bank: '4C4B41'
+    gi_strip_1: stop
+    gi_strip_10: stop
+    gi_strip_2: stop
+    gi_strip_3: 'B8B79F'
+    gi_strip_4: 'B8B79F'
+    gi_strip_9: stop
+    gi_upper_flipper_bottom: 'B8B79F'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'B2B199'
+    gi_missile_bank: stop
+    gi_side_bank: stop
+    gi_strip_3: stop
+    gi_strip_4: stop
+    gi_strip_5: 'B8B79F'
+    gi_strip_6: 'B8B79F'
+    gi_upgrade_bank: 'B8B79F'
+    gi_upper_flipper_bottom: stop
+    

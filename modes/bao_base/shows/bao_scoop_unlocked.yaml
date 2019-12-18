@@ -1,0 +1,16 @@
+#show_version=5
+
+- duration: 5s
+  slides:
+    bao_unlocked_slide:
+      widgets:
+      - type: text
+        text: REACTOR
+        color: red
+        style: dmd_big
+        y: 22
+      - type: text
+        text: UNLOCKED!
+        color: red
+        style: dmd_big
+        y: 11

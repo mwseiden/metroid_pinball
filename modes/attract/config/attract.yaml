@@ -17,10 +17,10 @@ show_player:
     attract_display_loop:
       action: advance
       manual_advance: false
-  s_left_flipper_active:
-    attract_display_loop:
-      action: step_back
-      manual_advance: false
+  # s_left_flipper_active:
+  #  attract_display_loop:
+  #    action: step_back
+  #    manual_advance: false
   flipper_cancel:
     attract_display_loop:
       priority: 100
@@ -33,6 +33,10 @@ show_player:
     flipper_code_bao:
       priority: 200
       loops: 0
+    lights_bao_flipper_code:
+      priority: 200
+      loops: 0
+      speed: 30
   flipper_code_no_music:
     flipper_code_no_music:
       priority: 200

@@ -1,0 +1,16 @@
+#show_version=5
+
+- duration: 1s
+  slides:
+    bao_lanes_complete_slide:
+      widgets:
+      - type: text
+        text: OUTLANE SAVE
+        style: dmd_big
+        color: green
+        y: 22
+      - type: text
+        text: COLLECTED
+        style: dmd_big
+        color: green
+        y: 11

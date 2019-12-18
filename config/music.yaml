@@ -84,3 +84,22 @@ sounds:
     loops: -1
     simultaneous_limit: 1
     stealing_method: skip
+  music_bao_main:
+    file: music_bao_main.wav
+    #streaming: True
+    track: music
+    priority: 50
+    #max_queue_time: 1s
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip
+  music_bao_multiball:
+    file: music_bao_multiball.wav
+    #streaming: True
+    volume: 0.7
+    track: music
+    priority: 50
+    #max_queue_time: 1s
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip

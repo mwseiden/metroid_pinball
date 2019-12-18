@@ -55,6 +55,17 @@ sound_player:
     music_maridia_snow:
       action: stop
       fade_out: 1s
+  bao_play_main:
+    music_bao_main:
+      action: play
+      fade_in: 2s
+    music_bao_multiball:
+      action: stop
+  bao_play_multiball:
+    music_bao_multiball:
+      action: play
+    music_bao_main:
+      action: stop
   mode_bonus_will_start:
     music_crateria:
       action: stop
@@ -75,6 +86,12 @@ sound_player:
       action: stop
       fade_out: 3s
     music_maridia_snow:
+      action: stop
+      fade_out: 3s
+    music_bao_main:
+      action: stop
+      fade_out: 3s
+    music_bao_multiball:
       action: stop
       fade_out: 3s
 

@@ -1,0 +1,134 @@
+#config_version=5
+mode:
+  code: bao_lanes.BaoLanes
+  start_events: mode_bao_base_started
+  stop_events: mode_bao_base_stopping
+  priority: 100
+
+shot_profiles:
+  bao_lanes:
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: led_color
+  bao_virtual_kickback:
+    states:
+      - name: lit
+        show: led_color
+
+shots:
+  bao_left_outlane_shot:
+    switch: s_left_outlane
+    profile: bao_lanes
+    show_tokens:
+      led: led_left_outlane
+      color: 8040FF
+  bao_left_inlane_shot:
+    switch: s_left_inlane
+    profile: bao_lanes
+    show_tokens:
+      led: led_left_inlane
+      color: 8040FF
+  bao_right_outlane_shot:
+    switch: s_right_outlane
+    profile: bao_lanes
+    show_tokens:
+      led: led_right_outlane
+      color: 8040FF
+  bao_right_inlane_shot:
+    switch: s_right_inlane
+    profile: bao_lanes
+    show_tokens:
+      led: led_right_inlane
+      color: 8040FF
+  bao_left_ballsave_shot:
+    hit_events: s_left_outlane_inactive
+    profile: bao_virtual_kickback
+    enable_events: bao_lanes_enable_left_ball_save, bao_lanes_enable_ball_save
+    disable_events: bao_lanes_disable_ball_save, bao_lanes_enable_right_ball_save
+    show_tokens:
+      led: led_left_kickback
+      color: 'FF8000'
+  bao_right_ballsave_shot:
+    hit_events: s_right_outlane_inactive
+    profile: bao_virtual_kickback
+    enable_events: bao_lanes_enable_right_ball_save
+    disable_events: bao_lanes_disable_ball_save, bao_lanes_enable_ball_save, bao_lanes_enable_left_ball_save
+    show_tokens:
+      led: led_right_kickback
+      color: 'FF8000'
+
+shot_groups:
+  bao_lanes_shot_group:
+    shots: bao_left_outlane_shot, bao_left_inlane_shot, bao_right_inlane_shot, bao_right_outlane_shot
+    rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+    reset_events: bao_lanes_shot_group_lit_complete
+    enable_events: mode_bao_lanes_started
+    disable_events: mode_bao_lanes_ending
+
+show_player:
+  bao_lanes_shot_group_lit_complete:
+    bao_lanes_complete:
+      loops: 0
+      priority: 300
+
+event_player:
+  mode_bao_lanes_starting: bao_lanes_disable_ball_save
+  bao_left_ballsave_shot_hit: bao_lanes_check_kickbacks
+  bao_right_ballsave_shot_hit: bao_lanes_check_kickbacks
+  bao_lanes_shot_group_lit_complete{current_player.lanes_last_shot > 0 and current_player.kickbacks == 0}: bao_lanes_collect_ball_save
+  bao_lanes_shot_group_lit_complete{current_player.lanes_last_shot > 0 and current_player.kickbacks > 0}: bao_lanes_check_kickbacks
+  bao_lanes_shot_group_lit_complete{current_player.lanes_last_shot == 0}: bao_lanes_check_kickbacks
+  bao_lanes_check_kickbacks{current_player.kickbacks < 1}: bao_lanes_disable_ball_save
+  bao_lanes_check_kickbacks{current_player.kickbacks > 0}: bao_lanes_enable_ball_save
+  s_left_flipper_active{current_player.kickbacks > 0 and current_player.kickback_active == 0}: bao_lanes_enable_right_ball_save
+  s_left_flipper_active{current_player.kickbacks > 0 and current_player.kickback_active == 1}: bao_lanes_enable_left_ball_save
+  s_right_flipper_active{current_player.kickbacks > 0 and current_player.kickback_active == 0}: bao_lanes_enable_left_ball_save
+  s_right_flipper_active{current_player.kickbacks > 0 and current_player.kickback_active == 1}: bao_lanes_enable_right_ball_save
+
+variable_player:
+  left_outlane_shot_hit:
+    lanes: 1
+    score: (100 + (10 * current_player.lanes)) * current_player.multiplier
+    lanes_last_shot:
+      action: set
+      int: 1
+  left_inlane_shot_hit:
+    lanes: 1
+    score: (100 + (10 * current_player.lanes)) * current_player.multiplier
+    lanes_last_shot:
+      action: set
+      int: 0
+  right_outlane_shot_hit:
+    lanes: 1
+    score: (100 + (10 * current_player.lanes)) * current_player.multiplier
+    lanes_last_shot:
+      action: set
+      int: 2
+  right_inlane_shot_hit:
+    lanes: 1
+    score: (100 + (10 * current_player.lanes)) * current_player.multiplier
+    lanes_last_shot:
+      action: set
+      int: 0
+  bao_lanes_shot_group_lit_complete:
+    kickbacks: 1
+    score: (1000 + (10 * current_player.lanes)) * current_player.multiplier
+  bao_lanes_enable_ball_save:
+    kickback_active:
+      action: set
+      int: 0
+  bao_lanes_enable_left_ball_save:
+    kickback_active:
+      action: set
+      int: 0
+  bao_lanes_enable_right_ball_save:
+    kickback_active:
+      action: set
+      int: 1
+  mode_bao_lanes_started:
+    lanes_last_shot:
+      action: set
+      int: 0
