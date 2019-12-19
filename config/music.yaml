@@ -103,3 +103,23 @@ sounds:
     loops: -1
     simultaneous_limit: 1
     stealing_method: skip
+  music_bao_reactor:
+    file: music_bao_reactor.wav
+    #streaming: True
+    volume: 0.7
+    track: music
+    priority: 50
+    #max_queue_time: 1s
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip
+  music_bao_critical:
+    file: music_bao_critical.wav
+    #streaming: True
+    volume: 0.7
+    track: music
+    priority: 50
+    #max_queue_time: 1s
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip
