@@ -5,6 +5,93 @@ mode:
   stop_events: bao_base_ended
   priority: 200
 
+achievements:
+  bao_reactor_1:
+    show_tokens:
+      led: led_goal_1
+    show_when_started: blink_light
+    show_when_completed: led_color
+    complete_events: bao_reactor_1_destroyed
+    enable_events: bao_reactor_1_started
+    start_events: bao_reactor_1_started
+  bao_reactor_2:
+    show_tokens:
+      led: led_goal_2
+    show_when_started: blink_light
+    show_when_completed: led_color
+    complete_events: bao_reactor_2_destroyed
+    enable_events: bao_reactor_2_started
+    start_events: bao_reactor_2_started
+  bao_reactor_3:
+    show_tokens:
+      led: led_goal_3
+    show_when_started: blink_light
+    show_when_completed: led_color
+    complete_events: bao_reactor_3_destroyed
+    enable_events: bao_reactor_3_started
+    start_events: bao_reactor_3_started
+  bao_reactor_4:
+    show_tokens:
+      led: led_goal_4
+    show_when_started: blink_light
+    show_when_completed: led_color
+    complete_events: bao_reactor_4_destroyed
+    enable_events: bao_reactor_4_started
+    start_events: bao_reactor_4_started
+  bao_reactor_5:
+    show_tokens:
+      led: led_boss_kraid
+    show_when_started: blink_light
+    show_when_completed: led_color
+    complete_events: bao_reactor_5_destroyed
+    enable_events: bao_reactor_5_started
+    start_events: bao_reactor_5_started
+  bao_reactor_6:
+    show_tokens:
+      led: led_boss_draygon
+    show_when_started: blink_light
+    show_when_completed: led_color
+    complete_events: bao_reactor_6_destroyed
+    enable_events: bao_reactor_6_started
+    start_events: bao_reactor_6_started
+  bao_reactor_7:
+    show_tokens:
+      led: led_boss_phantoon
+    show_when_started: blink_light
+    show_when_completed: led_color
+    complete_events: bao_reactor_7_destroyed
+    enable_events: bao_reactor_7_started
+    start_events: bao_reactor_7_started
+  bao_reactor_8:
+    show_tokens:
+      led: led_boss_ridley
+    show_when_started: blink_light
+    show_when_completed: led_color
+    complete_events: bao_reactor_8_destroyed
+    enable_events: bao_reactor_8_started
+    start_events: bao_reactor_8_started
+  bao_reactor_9:
+    show_tokens:
+      led: led_motherbrain_2
+      led_1: led_motherbrain_1
+      led_2: led_motherbrain_2
+      led_3: led_motherbrain_3
+      led_4: led_motherbrain_3
+      led_5: led_motherbrain_2
+      led_6: led_motherbrain_1
+    show_when_started: small_theater_chase
+    show_when_completed: led_color
+    complete_events: bao_reactor_9_destroyed
+    enable_events: bao_reactor_9_started
+    start_events: bao_reactor_9_started
+
+achievement_groups:
+  bao_reactor_achievements:
+    achievements: bao_reactor_1, bao_reactor_2, bao_reactor_3, bao_reactor_4, bao_reactor_5, bao_reactor_6, bao_reactor_7, bao_reactor_8, bao_reactor_9
+    enable_events: mode_bao_base_started
+    show_tokens:
+      color: 'FFC000'
+
 sequences:
    bao_progress_sequence:
       events:
@@ -615,7 +702,7 @@ event_player:
   bao_play_current_base_music{game.balls_in_play == 1}: bao_play_main
   bao_play_current_base_music{game.balls_in_play > 1}: bao_play_multiball
   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
-  bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
+  bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable, bao_reactor_(current_player.bao_reactors + 1)_started
   bao_critical_mass: bao_enable_stage_4
   s_behind_drop_2_active{machine.bao_balls_locked == 0 and game.balls_in_play == 1}: cmd_drop_two_up, cmd_drop_three_up, bao_test_lock_1
   s_behind_drop_1_active{machine.bao_balls_locked == 1 and game.balls_in_play == 1}: cmd_drop_one_up, bao_test_lock_2
@@ -635,7 +722,7 @@ event_player:
   bao_final_shot_7_hit: bao_final_shot_completed
   bao_final_shot_8_hit: bao_final_shot_completed
   bao_final_shot_9_hit: bao_final_shot_completed
-  bao_final_shot_completed: bao_enable_stage_1
+  bao_final_shot_completed: bao_enable_stage_1, bao_reactor_(current_player.bao_reactors + 1)_destroyed, bao_update_reactor_count
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 0}: bao_stage_1_show, bao_play_main
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 1}: bao_stage_2_show, bao_play_main
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 2}: bao_stage_3_show, bao_play_reactor
@@ -645,6 +732,8 @@ event_player:
 variable_player:
   bao_final_shot_completed:
     score: 1
+  bao_update_reactor_count:
+    bao_reactors: 1
   pop_1_shot_hit:
     score: 500
   pop_2_shot_hit:
