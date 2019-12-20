@@ -12,6 +12,7 @@ class BaoBase(Mode):
         self.add_mode_event_handler('bao_enable_stage_4', self.event_pick_shots)
         self.add_mode_event_handler('balldevice_bd_trough_ball_count_changed', self.event_check_for_end)
         self.add_mode_event_handler('bao_standard_shot_group_hit', self.event_play_rando_sound)
+        self.add_mode_event_handler('bao_final_shot_completed', self.event_update_reactor_destroyed)
 
         super().mode_start(**kwargs)
 
@@ -38,3 +39,12 @@ class BaoBase(Mode):
             self.machine.events.post('bao_play_rare')
         else:
             self.machine.events.post('bao_play_standard')
+
+    def event_update_reactor_destroyed(self, **kwargs):
+        player = self.machine.game.player
+        self.machine.events.post('bao_reactor_{}_started'.format(player['bao_reactors'] + 1))
+
+    def event_update_reactor_destroyed(self, **kwargs):
+        player = self.machine.game.player
+        self.machine.events.post('bao_reactor_{}_destroyed'.format(player['bao_reactors'] + 1))
+        self.machine.events.post('bao_update_reactor_count')

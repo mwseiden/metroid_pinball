@@ -702,10 +702,7 @@ event_player:
   bao_play_current_base_music{game.balls_in_play == 1}: bao_play_main
   bao_play_current_base_music{game.balls_in_play > 1}: bao_play_multiball
   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
-  bao_critical_should_start:
-    - bao_enable_stage_3
-    - scoop_autofire_should_enable
-    - bao_reactor_(current_player.bao_reactors + 1)_started
+  bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
   bao_critical_mass: bao_enable_stage_4
   s_behind_drop_2_active{machine.bao_balls_locked == 0 and game.balls_in_play == 1}: cmd_drop_two_up, cmd_drop_three_up, bao_test_lock_1
   s_behind_drop_1_active{machine.bao_balls_locked == 1 and game.balls_in_play == 1}: cmd_drop_one_up, bao_test_lock_2
@@ -725,10 +722,7 @@ event_player:
   bao_final_shot_7_hit: bao_final_shot_completed
   bao_final_shot_8_hit: bao_final_shot_completed
   bao_final_shot_9_hit: bao_final_shot_completed
-  bao_final_shot_completed:
-    - bao_enable_stage_1
-    - bao_reactor_(current_player.bao_reactors + 1)_destroyed
-    - bao_update_reactor_count
+  bao_final_shot_completed: bao_enable_stage_1
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 0}: bao_stage_1_show, bao_play_main
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 1}: bao_stage_2_show, bao_play_main
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 2}: bao_stage_3_show, bao_play_reactor
