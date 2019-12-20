@@ -3,10 +3,22 @@
 mode:
   code: attract.MyAttract
 
+sounds:
+  attract_bao:
+    file: attract_bao.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+
 sound_player:
   mode_attract_stopping:
     music_high_score:
       action: stop
+  flipper_code_bao:
+    attract_bao:
+      loops: 0
 
 show_player:
   mode_attract_started:

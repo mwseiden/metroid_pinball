@@ -549,6 +549,13 @@ sounds:
     priority: 50
     volume: 0.7
     max_queue_time: None
+  bao_hit_15:
+    file: bao_hit_15.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
   bao_spinner:
     file: bao_spinner.wav
     streaming: False
@@ -582,6 +589,7 @@ sound_pools:
       - bao_hit_11
       - bao_hit_12
       - bao_hit_13
+      - bao_hit_15
 
 sound_player:
   bao_play_standard: bao_shot_sound_pool
@@ -631,7 +639,7 @@ event_player:
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 0}: bao_stage_1_show, bao_play_main
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 1}: bao_stage_2_show, bao_play_main
   bao_multiball_ended{device.sequences.bao_progress_sequence.value == 2}: bao_stage_3_show, bao_play_reactor
-  bao_multiball_ended{device.sequences.bao_progress_sequence.value >= 3}: bao_stage_4_show, bao_play_reactor
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value >= 3}: bao_stage_4_show, bao_play_critical
   bao_multiball_started: bao_play_multiball
 
 variable_player:
