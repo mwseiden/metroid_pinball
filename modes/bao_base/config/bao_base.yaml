@@ -9,6 +9,7 @@ achievements:
   bao_reactor_1:
     show_tokens:
       led: led_goal_1
+      color: 'FFC000'
     show_when_started: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_1_destroyed
@@ -17,6 +18,7 @@ achievements:
   bao_reactor_2:
     show_tokens:
       led: led_goal_2
+      color: 'FFC000'
     show_when_started: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_2_destroyed
@@ -25,6 +27,7 @@ achievements:
   bao_reactor_3:
     show_tokens:
       led: led_goal_3
+      color: 'FFC000'
     show_when_started: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_3_destroyed
@@ -33,6 +36,7 @@ achievements:
   bao_reactor_4:
     show_tokens:
       led: led_goal_4
+      color: 'FFC000'
     show_when_started: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_4_destroyed
@@ -41,6 +45,7 @@ achievements:
   bao_reactor_5:
     show_tokens:
       led: led_boss_kraid
+      color: 'FFC000'
     show_when_started: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_5_destroyed
@@ -49,6 +54,7 @@ achievements:
   bao_reactor_6:
     show_tokens:
       led: led_boss_draygon
+      color: 'FFC000'
     show_when_started: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_6_destroyed
@@ -57,6 +63,7 @@ achievements:
   bao_reactor_7:
     show_tokens:
       led: led_boss_phantoon
+      color: 'FFC000'
     show_when_started: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_7_destroyed
@@ -65,6 +72,7 @@ achievements:
   bao_reactor_8:
     show_tokens:
       led: led_boss_ridley
+      color: 'FFC000'
     show_when_started: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_8_destroyed
@@ -79,6 +87,7 @@ achievements:
       led_4: led_motherbrain_3
       led_5: led_motherbrain_2
       led_6: led_motherbrain_1
+      color: 'FFC000'
     show_when_started: small_theater_chase
     show_when_completed: led_color
     complete_events: bao_reactor_9_destroyed
