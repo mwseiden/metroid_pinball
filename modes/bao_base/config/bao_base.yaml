@@ -98,6 +98,7 @@ achievement_groups:
   bao_reactor_achievements:
     achievements: bao_reactor_1, bao_reactor_2, bao_reactor_3, bao_reactor_4, bao_reactor_5, bao_reactor_6, bao_reactor_7, bao_reactor_8, bao_reactor_9
     enable_events: bao_base_initialize
+    events_when_all_completed: bao_win_all
 
 sequences:
    bao_progress_sequence:
@@ -143,7 +144,10 @@ shot_profiles:
   bao_charge_targets:
     states:
       - name: unlit
-        show: off
+        show: blink_light
+        speed: 2
+        show_tokens:
+          color: '0000FF'
       - name: level_1
         show: led_color
         show_tokens:
@@ -283,6 +287,9 @@ shots:
     enable_events: mode_bao_base_started
   bao_spinner_shot:
     switch: s_spinner
+    enable_events: mode_bao_base_started
+  bao_ramp_shot:
+    switch: s_ramp_enter
     enable_events: mode_bao_base_started
 
 
@@ -473,10 +480,14 @@ show_player:
     bao_scoop_hit:
       loops: -1
       speed: 50
-    bao_scoop_unlocked:
+    bao_scoop_activated:
       loops: 0
       priority: 9000
       events_when_stopped: bao_critical_should_start
+  bao_win_all:
+    bao_winner:
+      loops: 0
+      priority: 9000
   bao_critical_should_start:
     bao_scoop_hit:
       action: stop
@@ -657,6 +668,13 @@ sounds:
     priority: 50
     volume: 0.7
     max_queue_time: None
+  bao_ramp:
+    file: bao_ramp.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
 
 sound_pools:
   bao_shot_sound_pool:
@@ -695,6 +713,7 @@ sound_player:
   bao_ball_1_locked: ball_1_locked
   bao_ball_2_locked: ball_2_locked
   bao_multiball_started: multiball_alt_1
+  bao_ramp_shot_hit: bao_ramp
 
 event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1

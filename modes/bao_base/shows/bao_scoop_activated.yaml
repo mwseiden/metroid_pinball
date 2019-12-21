@@ -10,7 +10,7 @@
         style: dmd_big
         y: 22
       - type: text
-        text: UNLOCKED!
+        text: ACTIVATED!
         color: red
         style: dmd_big
         y: 11
