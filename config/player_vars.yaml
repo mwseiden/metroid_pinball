@@ -14,7 +14,7 @@ player_vars:
   area_bonus_w:
     initial_value: 0
   bao_reactors:
-    initial_value: 8
+    initial_value: 0
   bridge_bonus:
     initial_value: 0
   bridges:
