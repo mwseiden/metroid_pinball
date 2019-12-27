@@ -14,6 +14,7 @@ achievements:
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_1_destroyed
+    select_events: bao_reactor_1_started
     enable_events: bao_reactor_1_started
     start_events: bao_reactor_1_started
   bao_reactor_2:
@@ -24,6 +25,7 @@ achievements:
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_2_destroyed
+    select_events: bao_reactor_2_started
     enable_events: bao_reactor_2_started
     start_events: bao_reactor_2_started
   bao_reactor_3:
@@ -34,6 +36,7 @@ achievements:
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_3_destroyed
+    select_events: bao_reactor_3_started
     enable_events: bao_reactor_3_started
     start_events: bao_reactor_3_started
   bao_reactor_4:
@@ -44,6 +47,7 @@ achievements:
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_4_destroyed
+    select_events: bao_reactor_4_started
     enable_events: bao_reactor_4_started
     start_events: bao_reactor_4_started
   bao_reactor_5:
@@ -54,6 +58,7 @@ achievements:
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_5_destroyed
+    select_events: bao_reactor_5_started
     enable_events: bao_reactor_5_started
     start_events: bao_reactor_5_started
   bao_reactor_6:
@@ -64,6 +69,7 @@ achievements:
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_6_destroyed
+    select_events: bao_reactor_6_started
     enable_events: bao_reactor_6_started
     start_events: bao_reactor_6_started
   bao_reactor_7:
@@ -74,6 +80,7 @@ achievements:
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_7_destroyed
+    select_events: bao_reactor_7_started
     enable_events: bao_reactor_7_started
     start_events: bao_reactor_7_started
   bao_reactor_8:
@@ -84,6 +91,7 @@ achievements:
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_8_destroyed
+    select_events: bao_reactor_8_started
     enable_events: bao_reactor_8_started
     start_events: bao_reactor_8_started
   bao_reactor_9:
@@ -100,6 +108,7 @@ achievements:
     show_when_selected: small_theater_chase
     show_when_completed: led_color
     complete_events: bao_reactor_9_destroyed
+    select_events: bao_reactor_9_started
     enable_events: bao_reactor_9_started
     start_events: bao_reactor_9_started
 
