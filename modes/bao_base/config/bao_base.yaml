@@ -80,16 +80,18 @@ achievements:
     enable_events: bao_base_initialize
   bao_reactor_9:
     show_tokens:
-      # led: led_motherbrain_2
       led_1: led_motherbrain_1
       led_2: led_motherbrain_2
       led_3: led_motherbrain_3
       led_4: led_motherbrain_3
       led_5: led_motherbrain_2
       led_6: led_motherbrain_1
-      color: 'FF4000'
-    show_when_selected: small_theater_chase
-    show_when_completed: small_theater_chase
+      color_1: 'FF0000'
+      color_2: 'FF8000'
+      color_3: 'FFFF00'
+      color_4: '0000FF'
+    show_when_selected: bao_reactor_9
+    show_when_completed: bao_reactor_9
     complete_events: bao_reactor_9_destroyed
     select_events: bao_reactor_9_started
     enable_events: bao_base_initialize
