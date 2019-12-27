@@ -123,7 +123,7 @@ timers:
         action: restart
       - event: mode_skillshot_drops_started
         action: stop
-      - event: timer_skillshot_drops_test_capture_back_started
+      - event: skillshot_drops_test_capture_back
         action: stop
 
 event_player:
@@ -140,8 +140,8 @@ event_player:
   skillshot_drops_one_hit: skillshot_drops_made_1
   #skillshot_drops_two_hit: skillshot_drops_made_2
   #skillshot_drops_three_hit: skillshot_drops_made_3
-  s_behind_drop_1_active: cmd_drop_one_up, skillshot_drops_test_middle_locked
-  s_behind_drop_2_active: cmd_drop_two_up, skillshot_drops_test_back_locked
+  s_behind_drop_1_active: cmd_drop_one_up, skillshot_drops_test_capture_middle
+  s_behind_drop_2_active: cmd_drop_two_up, skillshot_drops_test_capture_back
   timer_skillshot_drops_test_back_locked_complete{device.switches.s_behind_drop_2.state}: skillshot_drops_made_3
   timer_skillshot_drops_test_middle_locked_complete{device.switches.s_behind_drop_1.state}: skillshot_drops_made_2
   timer_skillshot_drops_test_back_locked_complete{not device.switches.s_behind_drop_2.state}: skillshot_drops_failed
