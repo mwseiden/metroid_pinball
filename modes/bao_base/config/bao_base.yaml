@@ -10,98 +10,74 @@ achievements:
     show_tokens:
       led: led_goal_1
       color: 'FFC000'
-    show_when_started: blink_light
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_1_destroyed
-    reset_events: bao_reactor_1_started
     select_events: bao_reactor_1_started
-    enable_events: bao_reactor_1_started
-    start_events: bao_reactor_1_started
+    enable_events: mode_bao_base_started
   bao_reactor_2:
     show_tokens:
       led: led_goal_2
       color: 'FFC000'
-    show_when_started: blink_light
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_2_destroyed
-    reset_events: bao_reactor_2_started
     select_events: bao_reactor_2_started
-    enable_events: bao_reactor_2_started
-    start_events: bao_reactor_2_started
+    enable_events: mode_bao_base_started
   bao_reactor_3:
     show_tokens:
       led: led_goal_3
       color: 'FFC000'
-    show_when_started: blink_light
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_3_destroyed
-    reset_events: bao_reactor_3_started
     select_events: bao_reactor_3_started
-    enable_events: bao_reactor_3_started
-    start_events: bao_reactor_3_started
+    enable_events: mode_bao_base_started
   bao_reactor_4:
     show_tokens:
       led: led_goal_4
       color: 'FFC000'
-    show_when_started: blink_light
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_4_destroyed
-    reset_events: bao_reactor_4_started
     select_events: bao_reactor_4_started
-    enable_events: bao_reactor_4_started
-    start_events: bao_reactor_4_started
+    enable_events: mode_bao_base_started
   bao_reactor_5:
     show_tokens:
       led: led_boss_kraid
       color: 'FFC000'
-    show_when_started: blink_light
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_5_destroyed
-    reset_events: bao_reactor_5_started
     select_events: bao_reactor_5_started
-    enable_events: bao_reactor_5_started
-    start_events: bao_reactor_5_started
+    enable_events: mode_bao_base_started
   bao_reactor_6:
     show_tokens:
       led: led_boss_draygon
       color: 'FFC000'
-    show_when_started: blink_light
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_6_destroyed
-    reset_events: bao_reactor_6_started
     select_events: bao_reactor_6_started
-    enable_events: bao_reactor_6_started
-    start_events: bao_reactor_6_started
+    enable_events: mode_bao_base_started
   bao_reactor_7:
     show_tokens:
       led: led_boss_phantoon
       color: 'FFC000'
-    show_when_started: blink_light
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_7_destroyed
-    reset_events: bao_reactor_7_started
     select_events: bao_reactor_7_started
-    enable_events: bao_reactor_7_started
-    start_events: bao_reactor_7_started
+    enable_events: mode_bao_base_started
   bao_reactor_8:
     show_tokens:
       led: led_boss_ridley
       color: 'FFC000'
-    show_when_started: blink_light
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bao_reactor_8_destroyed
-    reset_events: bao_reactor_8_started
     select_events: bao_reactor_8_started
-    enable_events: bao_reactor_8_started
-    start_events: bao_reactor_8_started
+    enable_events: mode_bao_base_started
   bao_reactor_9:
     show_tokens:
       led: led_motherbrain_2
@@ -112,14 +88,11 @@ achievements:
       led_5: led_motherbrain_2
       led_6: led_motherbrain_1
       color: 'FF4000'
-    show_when_started: small_theater_chase
     show_when_selected: small_theater_chase
     show_when_completed: led_color
     complete_events: bao_reactor_9_destroyed
-    reset_events: bao_reactor_9_started
     select_events: bao_reactor_9_started
-    enable_events: bao_reactor_9_started
-    start_events: bao_reactor_9_started
+    enable_events: mode_bao_base_started
 
 achievement_groups:
   bao_reactor_achievements:
