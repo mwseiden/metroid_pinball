@@ -38,14 +38,23 @@ show_player:
     skillshot_drops_one_made:
       loops: 0
       events_when_completed: skillshot_monitor_should_end
+    skillshot_drops_hit:
+      loops: 0
+      speed: 30
   skillshot_drops_made_2:
     skillshot_drops_two_made:
       loops: 0
       events_when_completed: skillshot_drops_release_should_start
+    skillshot_drops_hit:
+      loops: 0
+      speed: 30
   skillshot_drops_made_3:
     skillshot_drops_three_made:
       loops: 0
       events_when_completed: skillshot_drops_release_should_start
+    skillshot_drops_hit:
+      loops: 0
+      speed: 30
   skillshot_purple_success:
     skillshot_purple_made:
       loops: 0
