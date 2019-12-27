@@ -730,6 +730,15 @@ event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 2}: bao_enable_stage_3
   mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 3}: bao_enable_stage_4
   mode_bao_base_started{current_player.number == 1 and current_player.ball == 1}: bao_base_initialize, cmd_drop_one_down, cmd_drop_two_down, cmd_drop_three_up
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 2 and bao_reactors == 0}: bao_reactor_1_started
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 2 and bao_reactors == 1}: bao_reactor_2_started
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 2 and bao_reactors == 2}: bao_reactor_3_started
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 2 and bao_reactors == 3}: bao_reactor_4_started
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 2 and bao_reactors == 4}: bao_reactor_5_started
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 2 and bao_reactors == 5}: bao_reactor_6_started
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 2 and bao_reactors == 6}: bao_reactor_7_started
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 2 and bao_reactors == 7}: bao_reactor_8_started
+  mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 2 and bao_reactors == 8}: bao_reactor_9_started
   bao_enable_stage_1: bao_stage_1_show, bao_play_current_base_music
   bao_enable_stage_2: scoop_autofire_should_disable, bao_stage_2_show, bao_play_current_base_music
   bao_enable_stage_3: bao_stage_3_show, bao_play_reactor
