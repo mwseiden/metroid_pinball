@@ -41,6 +41,7 @@ show_player:
     skillshot_drops_hit:
       loops: 0
       speed: 30
+      priority: 500
   skillshot_drops_made_2:
     skillshot_drops_two_made:
       loops: 0
@@ -48,6 +49,7 @@ show_player:
     skillshot_drops_hit:
       loops: 0
       speed: 30
+      priority: 500
   skillshot_drops_made_3:
     skillshot_drops_three_made:
       loops: 0
@@ -55,6 +57,7 @@ show_player:
     skillshot_drops_hit:
       loops: 0
       speed: 30
+      priority: 500
   skillshot_purple_success:
     skillshot_purple_made:
       loops: 0
