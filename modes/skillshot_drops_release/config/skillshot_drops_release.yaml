@@ -31,10 +31,10 @@ show_player:
         color: '2000C0'
         led_1: led_enter_side_ramp
         led_2: gi_under_side_ramp
-        led_3: led_pop_3
+        led_3: led_pop_2
         led_4: led_enter_side_ramp
         led_5: gi_under_side_ramp
-        led_6: led_pop_3
+        led_6: led_pop_2
   side_ramp_shot_hit:
     skillshot_drops_release_success:
       loops: 0

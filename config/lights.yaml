@@ -400,6 +400,7 @@ lights:
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
+  # Upper Left Pop Bumper
   led_pop_3:
     number: 396
     fade_ms: 40ms
