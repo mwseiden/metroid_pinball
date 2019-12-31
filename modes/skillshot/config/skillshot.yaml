@@ -108,9 +108,6 @@ event_player:
   skillshot_drops_made_2: skillshot_stage_one_end
   skillshot_drops_made_3: skillshot_stage_one_end
   skillshot_drops_failed: skillshot_stage_one_end
-  #skillshot_drops_one_behind_hit: skillshot_stage_one_end
-  #skillshot_drops_two_behind_hit: skillshot_stage_one_end
-  #skillshot_drops_three_behind_hit: skillshot_stage_one_end
   skillshot_purple_success: skillshot_stage_one_end
   skillshot_purple_failure: skillshot_stage_one_end
   skillshot_bombs_success: skillshot_stage_one_end

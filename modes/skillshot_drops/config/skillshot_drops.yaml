@@ -126,6 +126,11 @@ timers:
       - event: skillshot_drops_test_capture_back
         action: stop
 
+sound_player:
+  skillshot_drops_made_1: skillshot
+  skillshot_drops_made_2: skillshot
+  skillshot_drops_made_3: skillshot
+
 event_player:
   timer_skillshot_drops_reset_all_started: cmd_drop_all_drops
   timer_skillshot_drops_first_up_started: cmd_drop_one_up, skillshot_drops_1_should_enable
