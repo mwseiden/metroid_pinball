@@ -1,5 +1,6 @@
 #config_version=5
 mode:
+  code: room_2f_frozen_lake.Room2fFrozenLake
   start_events: room_2f_continue, room_2f_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2e_enter, room_2b_enter
   priority: 300
@@ -47,6 +48,76 @@ shots:
     disable_events: room_2f_disable_shots
     show_tokens:
       led: led_upgrade_bank_1
+  room_2f_miniboss_2_shot:
+    switch: s_purple_2
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_2
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_upgrade_bank_2
+  room_2f_miniboss_3_shot:
+    switch: s_purple_3
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_3
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_upgrade_bank_3
+  room_2f_missile_1_shot:
+    switch: s_missile_bank_1
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_4
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_missile_bank_1
+  room_2f_missile_2_shot:
+    switch: s_missile_bank_2
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_5
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_missile_bank_2
+  room_2f_missile_3_shot:
+    switch: s_missile_bank_3
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_6
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_missile_bank_3
+  room_2f_bomb_1_shot:
+    switch: s_lower_right_bank_1
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_7
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_bomb_bank_1
+  room_2f_bomb_2_shot:
+    switch: s_lower_right_bank_2
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_8
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_bomb_bank_2
+  room_2f_bomb_3_shot:
+    switch: s_lower_right_bank_3
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_9
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_bomb_bank_3
+  room_2f_zero_suit_shot:
+    switch: s_shatz
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_10
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_zero_suit
+  room_2f_orange_shot:
+    switch: s_thin_orange
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_11
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_thin_orange
 
 slides:
   room_2f_frozen_lake_backglass_slide:
@@ -101,7 +172,7 @@ event_player:
   room_2f_exit_north_shot_hit: room_2b_enter
   room_2f_exit_west_shot_hit: room_2e_enter
   mode_room_2f_frozen_lake_ending: drop_targets_save
-  room_2f_choose_first_shots: room_2f_enable_shot_1 # room_2f_choose_next_shots
+  room_2f_choose_first_shots: room_2f_choose_next_shots
 
 
 variable_player:
