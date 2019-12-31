@@ -172,7 +172,6 @@ event_player:
   room_2f_exit_north_shot_hit: room_2b_enter
   room_2f_exit_west_shot_hit: room_2e_enter
   mode_room_2f_frozen_lake_ending: drop_targets_save
-  room_2f_choose_first_shots: room_2f_choose_next_shots
 
 
 variable_player:
