@@ -47,17 +47,27 @@ show_player:
       loops: 0
       events_when_completed: skillshot_drops_release_should_start
     skillshot_drops_hit:
-      loops: 0
-      speed: 30
+      loops: 2
+      speed: 60
       priority: 500
+    gi_solid:
+      loops: -1
+      priority: 400
+      show_tokens:
+        color: '009000'
   skillshot_drops_made_3:
     skillshot_drops_three_made:
       loops: 0
       events_when_completed: skillshot_drops_release_should_start
     skillshot_drops_hit:
-      loops: 0
-      speed: 30
+      loops: 2
+      speed: 60
       priority: 500
+    gi_solid:
+      loops: -1
+      priority: 400
+      show_tokens:
+        color: '009000'
   skillshot_purple_success:
     skillshot_purple_made:
       loops: 0
