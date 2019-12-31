@@ -164,7 +164,6 @@ event_player:
       color2: "202040"
     drop_targets_continue:
     room_2f_disable_shots:
-    room_2f_choose_first_shots:
   mode_room_2f_frozen_lake_started{current_player.door_2e_2f == 0}: room_2f_enable_west_missile_door, room_2f_disable_west_door
   mode_room_2f_frozen_lake_started{current_player.door_2e_2f == 1}: room_2f_enable_west_door, room_2f_disable_west_missile_door
   room_2f_exit_west_closed_shot_hit{current_player.missiles > 0}: room_2f_open_west_door
@@ -172,6 +171,7 @@ event_player:
   room_2f_exit_north_shot_hit: room_2b_enter
   room_2f_exit_west_shot_hit: room_2e_enter
   mode_room_2f_frozen_lake_ending: drop_targets_save
+  room_2f_disable_shots: room_2f_choose_first_shots
 
 
 variable_player:
