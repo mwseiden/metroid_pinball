@@ -4,6 +4,14 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2e_enter, room_2b_enter
   priority: 300
 
+shot_profiles:
+  room_2f_sparkle:
+    states:
+      - name: lit
+        show: smooth_fade_one_light
+        show_tokens:
+          color: 'FFFFFF'
+
 shots:
   room_2f_exit_west_closed_shot:
     switch: s_left_passage
@@ -32,6 +40,13 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
+  room_2f_miniboss_1_shot:
+    switch: s_purple_1
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_1
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_upgrade_bank_1
 
 slides:
   room_2f_frozen_lake_backglass_slide:
@@ -60,6 +75,13 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+  show_mode_status_report:
+    room_2f_frozen_lake_status_report:
+      loops: 0
+      events_when_completed: room_2f_frozen_lake_status_over
+  flipper_cradle_release:
+    room_2f_frozen_lakes_status_report:
+      action: stop
 
 event_player:
   mode_room_2f_frozen_lake_started:
@@ -70,6 +92,8 @@ event_player:
       color1: "404020"
       color2: "202040"
     drop_targets_continue:
+    room_2f_disable_shots:
+    room_2f_choose_first_shots:
   mode_room_2f_frozen_lake_started{current_player.door_2e_2f == 0}: room_2f_enable_west_missile_door, room_2f_disable_west_door
   mode_room_2f_frozen_lake_started{current_player.door_2e_2f == 1}: room_2f_enable_west_door, room_2f_disable_west_missile_door
   room_2f_exit_west_closed_shot_hit{current_player.missiles > 0}: room_2f_open_west_door
@@ -77,6 +101,8 @@ event_player:
   room_2f_exit_north_shot_hit: room_2b_enter
   room_2f_exit_west_shot_hit: room_2e_enter
   mode_room_2f_frozen_lake_ending: drop_targets_save
+  room_2f_choose_first_shots: room_2f_enable_shot_1 # room_2f_choose_next_shots
+
 
 variable_player:
   mode_room_2f_frozen_lake_started:
