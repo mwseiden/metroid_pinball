@@ -118,6 +118,27 @@ shots:
     disable_events: room_2f_disable_shots
     show_tokens:
       led: led_thin_orange
+  room_2f_side_1_shot:
+    switch: s_left_target_1
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_12
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_side_1
+  room_2f_side_2_shot:
+    switch: s_left_target_2
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_13
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_side_2
+  room_2f_side_3_shot:
+    switch: s_left_target_3
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_14
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_side_3
 
 slides:
   room_2f_frozen_lake_backglass_slide:

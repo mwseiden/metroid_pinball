@@ -93,6 +93,9 @@ player_vars:
     initial_value: 0
   room_2a_alive_score:
     initial_value: 0
+  room_2f_target_order:
+    value_type: str
+    initial_value: 'ABCDEFGHIJKLMN'
   scoops:
     initial_value: 0
   skillshot_bombs_lit:
