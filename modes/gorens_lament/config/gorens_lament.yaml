@@ -1,0 +1,5 @@
+#config_version=5
+mode:
+  start_events: gorens_lament_should_start
+  stop_events: gorens_lament_should_end
+  priority: 100
