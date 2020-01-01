@@ -11,4 +11,4 @@ class Room2fFrozenLake(Mode):
         super().mode_start(**kwargs)
 
     def event_add_a_shot(self, **kwargs):
-        self.machine.events.post('room_2f_enable_shot_{}'.format(randint(1, 14))
+        self.machine.events.post('room_2f_enable_shot_{}').format(randint(1, 14))
