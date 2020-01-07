@@ -19,6 +19,7 @@ class Room2fFrozenLake(Mode):
         #    shuffle last 4
         if len(player['room_2f_target_order']) == 14:
             player['room_2f_target_order'] = self.shuffle_shots(player['room_2f_target_order'][:10]) + self.shuffle_shots(player['room_2f_target_order'][10:])
+            self.info_log("WTF " + player['room_2f_target_order'])
 
         super().mode_start(**kwargs)
 
@@ -35,4 +36,6 @@ class Room2fFrozenLake(Mode):
             self.machine.events.post('room_2f_enable_shot_{}'.format(next_shot))
 
     def shuffle_shots(self, s):
+        self.info_log("WTF " + s)
+        self.info_log("WTF " + ''.join(sample(s,len(s))))
         return ''.join(sample(s,len(s)))
