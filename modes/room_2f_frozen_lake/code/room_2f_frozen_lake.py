@@ -21,7 +21,7 @@ class Room2fFrozenLake(Mode):
             player['room_2f_target_order'] = player['room_2f_target_order'][1:]
             self.machine.events.post('room_2f_enable_shot_{}'.format(next_shot))
         else:
-            self.machine.events.post('room_2f_enable_scoop_shot'.format(next_shot))
+            self.machine.events.post('room_2f_enable_scoop_shot')
 
 
     def event_reset_shots(self, **kwargs):
