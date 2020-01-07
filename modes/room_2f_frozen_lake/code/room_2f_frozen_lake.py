@@ -8,7 +8,7 @@ class Room2fFrozenLake(Mode):
         self.add_mode_event_handler('room_2f_choose_next_shot', self.event_add_a_shot)
         self.add_mode_event_handler('room_2f_reset_shots', self.event_reset_shots)
 
-        if len(self.machine.game.player['room_2f_target_order']) == 14:
+        if len(self.machine.game.player['room_2f_target_order']) >= 13:
             self.event_reset_shots(**kwargs)
 
         super().mode_start(**kwargs)
