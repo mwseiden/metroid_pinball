@@ -6,7 +6,6 @@ class Room2fFrozenLake(Mode):
 
     def mode_start(self, **kwargs):
         self.add_mode_event_handler('room_2f_choose_next_shot', self.event_add_a_shot)
-        self.event_add_a_shot(**kwargs)
 
         player = self.machine.game.player
 
@@ -21,6 +20,8 @@ class Room2fFrozenLake(Mode):
         if len(player['room_2f_target_order']) == 14:
             player['room_2f_target_order'] = self.shuffle_shots(player['room_2f_target_order'][:10]) + self.shuffle_shots(player['room_2f_target_order'][10:])
             self.warning_log("WTF %s", player['room_2f_target_order'])
+
+        self.event_add_a_shot(**kwargs)
 
         super().mode_start(**kwargs)
 
