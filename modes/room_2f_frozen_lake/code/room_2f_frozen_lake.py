@@ -17,6 +17,7 @@ class Room2fFrozenLake(Mode):
         # if shot sequence is 14 characters long
         #    shuffle first 10
         #    shuffle last 4
+        self.warning_log("WTF %s", len(player['room_2f_target_order']))
         if len(player['room_2f_target_order']) == 14:
             player['room_2f_target_order'] = self.shuffle_shots(player['room_2f_target_order'][:10]) + self.shuffle_shots(player['room_2f_target_order'][10:])
             self.warning_log("WTF %s", player['room_2f_target_order'])
