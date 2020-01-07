@@ -23,11 +23,16 @@ class Room2fFrozenLake(Mode):
         super().mode_start(**kwargs)
 
     def event_add_a_shot(self, **kwargs):
+        player = self.machine.game.player
+
         # only if shots are left:
         #   pop off first character
-        #   subtract 65 and save as next shot
+        #   subtract 64 and save as next shot
         #   save abbreviated shot list
-        self.machine.events.post('room_2f_enable_shot_{}'.format(randint(1, 14)))
+        if len(player['room_2f_target_order']) > 0:
+            next_shot = ord(player['room_2f_target_order'][:1]) - 64
+            player['room_2f_target_order'] = player['room_2f_target_order'][1:]
+            self.machine.events.post('room_2f_enable_shot_{}'.format(next_shot))
 
     def shuffle_shots(self, s):
         return ''.join(sample(s,len(s)))
