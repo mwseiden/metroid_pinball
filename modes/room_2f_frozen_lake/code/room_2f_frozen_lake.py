@@ -9,7 +9,6 @@ class Room2fFrozenLake(Mode):
         self.add_mode_event_handler('room_2f_reset_shots', self.event_reset_shots)
 
         self.event_reset_shots(**kwargs)
-        self.event_add_a_shot(**kwargs)
 
         super().mode_start(**kwargs)
 
@@ -28,6 +27,7 @@ class Room2fFrozenLake(Mode):
         player = self.machine.game.player
         player['room_2f_target_order'] = 'ABCDEFGHIJKLMN'
         player['room_2f_target_order'] = self.shuffle_shots(player['room_2f_target_order'][:10]) + self.shuffle_shots(player['room_2f_target_order'][10:])
+        self.event_add_a_shot(**kwargs)
 
     def shuffle_shots(self, s):
         return ''.join(sample(s,len(s)))
