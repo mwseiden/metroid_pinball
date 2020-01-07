@@ -139,6 +139,13 @@ shots:
     disable_events: room_2f_disable_shots
     show_tokens:
       led: led_side_3
+  room_2f_scoop_shot:
+    switch: s_scoop
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_scoop_shot
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_enter_scoop
 
 slides:
   room_2f_frozen_lake_backglass_slide:
@@ -203,6 +210,8 @@ event_player:
   room_2f_bomb_3_shot_hit: room_2f_choose_next_shot
   room_2f_zero_suit_shot_hit: room_2f_choose_next_shot
   room_2f_orange_shot_hit: room_2f_choose_next_shot
+  room_2f_scoop_shot_hit: room_2f_reset_shots, room_2f_disable_shots
+  room_2f_reset_shots: room_2f_choose_next_shot
 
 
 variable_player:
