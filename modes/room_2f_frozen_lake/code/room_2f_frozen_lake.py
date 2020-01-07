@@ -1,5 +1,5 @@
 from random import randint
-from random import shuffle
+from random import sample
 from mpf.core.mode import Mode
 
 class Room2fFrozenLake(Mode):
@@ -17,6 +17,8 @@ class Room2fFrozenLake(Mode):
         # if shot sequence is 14 characters long
         #    shuffle first 10
         #    shuffle last 4
+        if len(player['room_2f_target_order']) == 14:
+            player['room_2f_target_order'] = self.shuffle_shots(player['room_2f_target_order'][:10]) + self.shuffle_shots(player['room_2f_target_order'][10:])
 
         super().mode_start(**kwargs)
 
@@ -26,3 +28,6 @@ class Room2fFrozenLake(Mode):
         #   subtract 65 and save as next shot
         #   save abbreviated shot list
         self.machine.events.post('room_2f_enable_shot_{}'.format(randint(1, 14)))
+
+    def shuffle_shots(self, s):
+        return ''.join(sample(s,len(s)))
