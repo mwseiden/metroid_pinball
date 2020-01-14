@@ -98,9 +98,10 @@ event_player:
   flipper_cradle_release:
     room_1b_victory_status_report:
       action: stop
-  room_1b_exit_east_shot_hit: room_1c_enter
-  room_1b_exit_west_shot_hit: room_1a_enter
-
+  room_1b_exit_east_shot_hit.1: drop_targets_save
+  room_1b_exit_east_shot_hit.2: room_1c_enter
+  room_1b_exit_west_shot_hit.1: drop_targets_save
+  room_1b_exit_west_shot_hit.2: room_1a_enter
 
 variable_player:
   logicblock_room_1b_victory_counter_updated:
