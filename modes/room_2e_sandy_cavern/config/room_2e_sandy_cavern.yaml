@@ -93,7 +93,7 @@ event_player:
   room_2e_open_east_door: room_2e_exit_east_shot_hit
   room_2e_exit_west_shot_hit.1: drop_targets_save
   room_2e_exit_west_shot_hit.2: room_2d_enter
-  room_2e_exit_east_shot_hit.1: drop_targets_saves
+  room_2e_exit_east_shot_hit.1: drop_targets_save
   room_2e_exit_east_shot_hit.2: room_2f_enter
 
 variable_player:
