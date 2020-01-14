@@ -28,6 +28,7 @@ show_player:
       key: chozo_multiball_drop_show
       loops: -1
       speed: 6
+      priority: 50
       show_tokens:
         color: door_blue
         led_1: led_drop_1
