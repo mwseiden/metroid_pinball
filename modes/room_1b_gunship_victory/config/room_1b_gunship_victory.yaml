@@ -92,6 +92,7 @@ event_player:
       max_cutoff: 8
       color1: "040404"
       color2: "04100C"
+    drop_targets_continue:
   show_mode_status_report:
     room_1b_victory_status_report:
       loops: 0
