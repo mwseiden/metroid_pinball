@@ -16,6 +16,7 @@ class DropTargets(Mode):
         player = self.machine.game.player
         pattern = player['drops_{}'.format(player['continue_room'])] or 'UUU'
 
+        self.machine.events.post('drop_targets_disable_shots')
         self.machine.events.post('drop_targets_start_one' if pattern[0] == 'U' else 'cmd_drop_one_down')
         self.machine.events.post('drop_targets_start_two' if pattern[1] == 'U' else 'cmd_drop_two_down')
         self.machine.events.post('drop_targets_start_three' if pattern[2] == 'U' else 'cmd_drop_three_down')
