@@ -78,10 +78,10 @@ event_player:
   mode_room_2d_abyss_started{current_player.door_2d_2e == 1}: room_2d_enable_east_door, room_2d_disable_east_missile_door
   room_2d_exit_east_closed_shot_hit{current_player.missiles > 0}: room_2d_open_east_door
   room_2d_open_east_door: room_2d_exit_east_shot_hit
-  room_2d_exit_north_shot_hit: room_1z_enter
-  room_2d_exit_east_shot_hit: room_2e_enter
-  mode_room_2d_abyss_ending: drop_targets_save
-
+  room_2d_exit_north_shot_hit.1: drop_targets_save
+  room_2d_exit_north_shot_hit.2: room_1z_enter
+  room_2d_exit_east_shot_hit.1: drop_targets_save
+  room_2d_exit_east_shot_hit.2: room_2e_enter
 
 variable_player:
   mode_room_2d_abyss_started:
