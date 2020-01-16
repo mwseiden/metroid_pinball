@@ -1,6 +1,6 @@
 #config_version=5
 mode:
-  start_events: room_1m_continue
+  start_events: room_1m_continue, room_1m_enter
   stop_events: game_ending, ball_ending, metroid_base_ended
   priority: 300
 
