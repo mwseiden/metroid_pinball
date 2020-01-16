@@ -42,6 +42,7 @@ show_player:
     pop_sneak_lights:
       loops: 0
       speed: 30
+      priority: 1000
 
 sounds:
   pop_1:
