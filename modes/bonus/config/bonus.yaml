@@ -5,15 +5,15 @@ mode_settings:
   hurry_up_delay_ms: 0
   bonus_entries:
     - event: bonus_ramps
-      score: 100 * current_player.ramps
+      score: 1000 * current_player.ramps
     - event: bonus_switches
       score: 100 * current_player.switches
     - event: bonus_capsides
-      score: 5000 * current_player.capsides
+      score: 10000 * current_player.capsides
     - event: bonus_missiles
-      score: 500 * current_player.missiles
+      score: 2000 * current_player.missiles
     - event: bonus_power_bombs
-      score: 1000 * current_player.power_bombs
+      score: 5000 * current_player.power_bombs
     - event: bonus_super_missiles
       score: 1000 * current_player.super_missiles
     - event: bonus_emergency_landing
