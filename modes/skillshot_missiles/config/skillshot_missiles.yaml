@@ -2,7 +2,7 @@
 mode:
   start_events: skillshot_should_start
   stop_events:
-#    - skillshot_stage_one_end
+    - skillshot_stage_one_end
 #    - skillshot_missiles_success
     - skillshot_missiles_success_super
     - skillshot_missiles_failure
