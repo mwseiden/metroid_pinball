@@ -55,6 +55,12 @@ show_player:
       show_tokens:
         color: 'FFC000'
         color2: '8080FF'
+  show_mode_status_report:
+    room_1z_underground_desert_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1z_underground_desert_status_report:
+      action: stop
 
 event_player:
   mode_room_1z_underground_desert_started:
