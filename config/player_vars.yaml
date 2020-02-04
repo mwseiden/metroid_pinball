@@ -53,6 +53,9 @@ player_vars:
   drops_2i:
     value_type: str
     initial_value: 'DDU'
+  drops_2m:
+    value_type: str
+    initial_value: 'DDD'
   emergency_landings:
     initial_value: 0
   has_chosen_landing_site:

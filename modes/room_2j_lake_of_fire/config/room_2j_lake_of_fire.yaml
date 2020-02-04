@@ -1,0 +1,54 @@
+#config_version=5
+mode:
+  start_events: room_2j_lake_of_fire_continue, room_2j_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter
+  priority: 300
+
+slides:
+  room_2j_lake_of_fire_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2j_lake_of_fire_backglass
+    transition: fade
+    transition_out: fade
+  room_2j_lake_of_fire_splash_slide:
+    widgets:
+      - type: image
+        image: room_2j_lake_of_fire_splash
+
+slide_player:
+  mode_room_2j_lake_of_fire_started:
+    room_2j_lake_of_fire_backglass_slide:
+      target: backglass
+    room_2j_lake_of_fire_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_2j_lake_of_fire_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: 'FF0000'
+        color2: 'FF0000'
+  show_mode_status_report:
+    room_2j_lake_of_fire_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_2j_lake_of_fire_status_report:
+      action: stop
+
+event_player:
+  mode_room_2j_lake_of_fire_started:
+    cmd_backbox_show:
+      show_type: fire
+    drop_targets_continue:
+
+variable_player:
+  mode_room_2j_lake_of_fire_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 2j
+      action: set
