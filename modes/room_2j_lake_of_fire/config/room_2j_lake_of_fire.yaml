@@ -1,6 +1,6 @@
 #config_version=5
 mode:
-  start_events: room_2j_lake_of_fire_continue, room_2j_enter
+  start_events: room_2j_lake_of_fire_continue, room_2j_continue, room_2j_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter
   priority: 300
 
@@ -55,8 +55,8 @@ event_player:
     cmd_backbox_show:
       show_type: fire
     drop_targets_continue:
-  room_2i_exit_west_shot_hit.1: drop_targets_save
-  room_2i_exit_west_shot_hit.2: room_2i_enter
+  room_2j_exit_west_shot_hit.1: drop_targets_save
+  room_2j_exit_west_shot_hit.2: room_2i_enter
 
 variable_player:
   mode_room_2j_lake_of_fire_started:
