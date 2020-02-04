@@ -4,6 +4,17 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter
   priority: 300
 
+shots:
+  room_2m_exit_north_shot:
+    switch: s_side_ramp_made
+    profile: exit_door
+    enable_events: mode_room_2m_geothermal_plant_started
+    disable_events: room_2m_exit_north_shot_hit
+    reset_events: room_2m_exit_north_shot_hit
+    show_tokens:
+      led: led_enter_side_ramp
+      color: door_blue
+
 slides:
   room_2m_geothermal_plant_backglass_slide:
     widgets:
@@ -43,6 +54,8 @@ event_player:
     cmd_backbox_show:
       show_type: fire
     drop_targets_continue:
+  room_2m_exit_north_shot_hit.1: drop_targets_save
+  room_2m_exit_north_shot_hit.2: room_2i_enter
 
 variable_player:
   mode_room_2m_geothermal_plant_started:
