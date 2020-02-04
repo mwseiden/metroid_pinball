@@ -388,6 +388,9 @@ Rooms (Modes)
 
             See Norfair Landing Site for rules
 
+        Lake of Fire [j]:
+
+        Geothermal Plant [m]:
 
     Tourian:
 
