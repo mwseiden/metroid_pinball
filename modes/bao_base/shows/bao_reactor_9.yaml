@@ -1,0 +1,122 @@
+#show_version=5
+
+- duration: 0.05s
+  lights:
+    (led_1): (color_1)
+    (led_6): stop
+
+- duration: 0.05s
+  lights:
+    (led_2): (color_1)
+    (led_1): stop
+
+- duration: 0.05s
+  lights:
+    (led_3): (color_1)
+    (led_2): stop
+
+- duration: 0.05s
+  lights:
+    (led_4): (color_1)
+    (led_3): stop
+
+- duration: 0.05s
+  lights:
+    (led_5): (color_1)
+    (led_4): stop
+
+- duration: 0.05s
+  lights:
+    (led_6): (color_1)
+    (led_5): stop
+
+- duration: 0.05s
+  lights:
+    (led_1): (color_2)
+    (led_6): stop
+
+- duration: 0.05s
+  lights:
+    (led_2): (color_2)
+    (led_1): stop
+
+- duration: 0.05s
+  lights:
+    (led_3): (color_2)
+    (led_2): stop
+
+- duration: 0.05s
+  lights:
+    (led_4): (color_2)
+    (led_3): stop
+
+- duration: 0.05s
+  lights:
+    (led_5): (color_2)
+    (led_4): stop
+
+- duration: 0.05s
+  lights:
+    (led_6): (color_2)
+    (led_5): stop
+
+- duration: 0.05s
+  lights:
+    (led_1): (color_3)
+    (led_6): stop
+
+- duration: 0.05s
+  lights:
+    (led_2): (color_3)
+    (led_1): stop
+
+- duration: 0.05s
+  lights:
+    (led_3): (color_3)
+    (led_2): stop
+
+- duration: 0.05s
+  lights:
+    (led_4): (color_3)
+    (led_3): stop
+
+- duration: 0.05s
+  lights:
+    (led_5): (color_3)
+    (led_4): stop
+
+- duration: 0.05s
+  lights:
+    (led_6): (color_4)
+    (led_5): stop
+
+- duration: 0.05s
+  lights:
+    (led_1): (color_4)
+    (led_6): stop
+
+- duration: 0.05s
+  lights:
+    (led_2): (color_4)
+    (led_1): stop
+
+- duration: 0.05s
+  lights:
+    (led_3): (color_4)
+    (led_2): stop
+
+- duration: 0.05s
+  lights:
+    (led_4): (color_4)
+    (led_3): stop
+
+- duration: 0.05s
+  lights:
+    (led_5): (color_4)
+    (led_4): stop
+
+- duration: 0.05s
+  lights:
+    (led_6): (color_4)
+    (led_5): stop
+

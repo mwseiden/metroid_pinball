@@ -24,7 +24,7 @@ shots:
   drop_1_shot:
     hit_events: drop_target_drop_one_down
     profile: drop_target_hit_me
-    disable_events: mode_drop_targets_started, drop_target_drop_one_down
+    disable_events: mode_drop_targets_started, drop_target_drop_one_down, drop_targets_disable_shots
     enable_events: drop_targets_enable_shot_1
     show_tokens:
       led: led_drop_1
@@ -36,7 +36,7 @@ shots:
   drop_2_shot:
     hit_events: drop_target_drop_two_down
     profile: drop_target_hit_me
-    disable_events: mode_drop_targets_started, drop_target_drop_two_down
+    disable_events: mode_drop_targets_started, drop_target_drop_two_down, drop_targets_disable_shots
     enable_events: drop_targets_enable_shot_2
     show_tokens:
       led: led_drop_2
@@ -48,7 +48,7 @@ shots:
   drop_3_shot:
     hit_events: drop_target_drop_three_down
     profile: drop_target_hit_me
-    disable_events: mode_drop_targets_started, drop_target_drop_three_down
+    disable_events: mode_drop_targets_started, drop_target_drop_three_down, drop_targets_disable_shots
     enable_events: drop_targets_enable_shot_3
     show_tokens:
       led: led_drop_3

@@ -80,8 +80,10 @@ event_player:
   mode_room_1a_lush_cavern_started{current_player.door_1a_1f == 1}: room_1a_enable_south_door, room_1a_disable_south_missile_door
   room_1a_exit_south_closed_shot_hit{current_player.missiles > 0}: room_1a_open_south_door
   room_1a_open_south_door: room_1a_exit_south_shot_hit
-  room_1a_exit_south_shot_hit: room_1f_enter
-  room_1a_exit_east_shot_hit: room_1b_enter
+  room_1a_exit_south_shot_hit.1: drop_targets_save
+  room_1a_exit_south_shot_hit.2: room_1f_enter
+  room_1a_exit_east_shot_hit.1: drop_targets_save
+  room_1a_exit_east_shot_hit.2: room_1b_enter
 
 
 variable_player:

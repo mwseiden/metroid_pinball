@@ -1,8 +1,17 @@
 #config_version=5
 mode:
+  code: room_2f_frozen_lake.Room2fFrozenLake
   start_events: room_2f_continue, room_2f_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2e_enter, room_2b_enter
   priority: 300
+
+shot_profiles:
+  room_2f_sparkle:
+    states:
+      - name: lit
+        show: smooth_fade_one_light
+        show_tokens:
+          color: 'FFFFFF'
 
 shots:
   room_2f_exit_west_closed_shot:
@@ -32,6 +41,111 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
+  room_2f_miniboss_1_shot:
+    switch: s_purple_1
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_1
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_upgrade_bank_1
+  room_2f_miniboss_2_shot:
+    switch: s_purple_2
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_2
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_upgrade_bank_2
+  room_2f_miniboss_3_shot:
+    switch: s_purple_3
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_3
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_upgrade_bank_3
+  room_2f_missile_1_shot:
+    switch: s_missile_bank_1
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_4
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_missile_bank_1
+  room_2f_missile_2_shot:
+    switch: s_missile_bank_2
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_5
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_missile_bank_2
+  room_2f_missile_3_shot:
+    switch: s_missile_bank_3
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_6
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_missile_bank_3
+  room_2f_bomb_1_shot:
+    switch: s_lower_right_bank_1
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_7
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_bomb_bank_1
+  room_2f_bomb_2_shot:
+    switch: s_lower_right_bank_2
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_8
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_bomb_bank_2
+  room_2f_zero_suit_shot:
+    switch: s_shatz
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_9
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_zero_suit
+  room_2f_orange_shot:
+    switch: s_thin_orange
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_10
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_thin_orange
+  room_2f_bomb_3_shot:
+    switch: s_lower_right_bank_3
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_11
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_bomb_bank_3
+  room_2f_side_1_shot:
+    switch: s_left_target_1
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_12
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_side_1
+  room_2f_side_2_shot:
+    switch: s_left_target_2
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_13
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_side_2
+  room_2f_side_3_shot:
+    switch: s_left_target_3
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_shot_14
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_side_3
+  room_2f_scoop_shot:
+    switch: s_scoop
+    profile: room_2f_sparkle
+    enable_events: room_2f_enable_scoop_shot
+    disable_events: room_2f_disable_shots
+    show_tokens:
+      led: led_enter_scoop
 
 slides:
   room_2f_frozen_lake_backglass_slide:
@@ -60,6 +174,13 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+  show_mode_status_report:
+    room_2f_frozen_lake_status_report:
+      loops: 0
+      events_when_completed: room_2f_frozen_lake_status_over
+  flipper_cradle_release:
+    room_2f_frozen_lakes_status_report:
+      action: stop
 
 event_player:
   mode_room_2f_frozen_lake_started:
@@ -74,9 +195,27 @@ event_player:
   mode_room_2f_frozen_lake_started{current_player.door_2e_2f == 1}: room_2f_enable_west_door, room_2f_disable_west_missile_door
   room_2f_exit_west_closed_shot_hit{current_player.missiles > 0}: room_2f_open_west_door
   room_2f_open_west_door: room_2f_exit_west_shot_hit
-  room_2f_exit_north_shot_hit: room_2b_enter
-  room_2f_exit_west_shot_hit: room_2e_enter
-  mode_room_2f_frozen_lake_ending: drop_targets_save
+  room_2f_exit_north_shot_hit.1: drop_targets_save
+  room_2f_exit_north_shot_hit.2: room_2b_enter
+  room_2f_exit_west_shot_hit.1: drop_targets_save
+  room_2f_exit_west_shot_hit.2: room_2e_enter
+  room_2f_miniboss_1_shot_hit: room_2f_choose_next_shot
+  room_2f_miniboss_2_shot_hit: room_2f_choose_next_shot
+  room_2f_miniboss_3_shot_hit: room_2f_choose_next_shot
+  room_2f_missile_1_shot_hit: room_2f_choose_next_shot
+  room_2f_missile_2_shot_hit: room_2f_choose_next_shot
+  room_2f_missile_3_shot_hit: room_2f_choose_next_shot
+  room_2f_bomb_1_shot_hit: room_2f_choose_next_shot
+  room_2f_bomb_2_shot_hit: room_2f_choose_next_shot
+  room_2f_bomb_3_shot_hit: room_2f_choose_next_shot
+  room_2f_zero_suit_shot_hit: room_2f_choose_next_shot
+  room_2f_orange_shot_hit: room_2f_choose_next_shot
+  room_2f_side_1_shot_hit: room_2f_choose_next_shot
+  room_2f_side_2_shot_hit: room_2f_choose_next_shot
+  room_2f_side_3_shot_hit: room_2f_choose_next_shot
+  room_2f_scoop_shot_hit: room_2f_disable_shots, room_2f_start_over
+  room_2f_start_over: room_2f_reset_shots
+
 
 variable_player:
   mode_room_2f_frozen_lake_started:
@@ -88,3 +227,33 @@ variable_player:
     door_2e_2f:
       int: 1
       action: set
+  room_2f_miniboss_1_shot_hit:
+    score: 10000 * current_player.multiplier
+  room_2f_miniboss_2_shot_hit:
+    score: 10000 * current_player.multiplier
+  room_2f_miniboss_3_shot_hit:
+    score: 20000 * current_player.multiplier
+  room_2f_missile_1_shot_hit:
+    score: 15000 * current_player.multiplier
+  room_2f_missile_2_shot_hit:
+    score: 15000 * current_player.multiplier
+  room_2f_missile_3_shot_hit:
+    score: 15000 * current_player.multiplier
+  room_2f_bomb_1_shot_hit:
+    score: 20000 * current_player.multiplier
+  room_2f_bomb_2_shot_hit:
+    score: 20000 * current_player.multiplier
+  room_2f_bomb_3_shot_hit:
+    score: 25000 * current_player.multiplier
+  room_2f_zero_suit_shot_hit:
+    score: 15000 * current_player.multiplier
+  room_2f_orange_shot_hit:
+    score: 15000 * current_player.multiplier
+  room_2f_side_1_shot_hit:
+    score: 30000 * current_player.multiplier
+  room_2f_side_2_shot_hit:
+    score: 30000 * current_player.multiplier
+  room_2f_side_3_shot_hit:
+    score: 30000 * current_player.multiplier
+  room_2f_scoop_shot_hit:
+    score: 200000 * current_player.multiplier

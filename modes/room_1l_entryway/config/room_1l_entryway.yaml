@@ -1,9 +1,21 @@
 #config_version=5
 mode:
     start_events: select_landing_site_wrecked_ship_selected, room_1l_continue
-    stop_events: game_ending, ball_ending, metroid_base_ended
+    stop_events: game_ending, ball_ending, metroid_base_ended, room_1m_enter
     # restart_on_next_ball: true
     priority: 300
+
+shots:
+  room_1l_exit_east_shot:
+    switches: s_vuk
+    profile: exit_door
+    enable_events: mode_room_1l_entryway_started
+    disable_events: room_1l_exit_east_shot_hit
+    reset_events: room_1l_exit_east_shot_hit
+    show_tokens:
+      led: gi_strip_9
+      color: door_blue
+
 
 show_player:
   mode_room_1l_entryway_started:
@@ -12,6 +24,19 @@ show_player:
       show_tokens:
         color: '808080'
         color2: "FF4040"
+    small_theater_chase:
+      key: chozo_multiball_drop_show
+      loops: -1
+      speed: 6
+      priority: 50
+      show_tokens:
+        color: door_blue
+        led_1: led_drop_1
+        led_2: gi_back_right
+        led_3: led_drop_2
+        led_4: gi_back_right
+        led_5: led_drop_3
+        led_6: gi_back_right
 
 slides:
   room_1l_backglass_slide:
@@ -41,3 +66,15 @@ variable_player:
     continue_room:
       string: 1l
       action: set
+
+event_player:
+  mode_room_1l_entryway_started:
+    # cmd_backbox_show:
+      # show_type: two_tone
+      # min_cutoff: 1
+      # max_cutoff: 9
+      # color1: "404020"
+      # color2: "202040"
+    drop_targets_continue:
+  room_1l_exit_east_shot_hit.1: drop_targets_save
+  room_1l_exit_east_shot_hit.2: room_1m_enter

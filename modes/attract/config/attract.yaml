@@ -11,6 +11,13 @@ sounds:
     priority: 50
     volume: 0.7
     max_queue_time: None
+  attract_goren:
+    file: attract_goren.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
 
 sound_player:
   mode_attract_stopping:
@@ -18,6 +25,9 @@ sound_player:
       action: stop
   flipper_code_bao:
     attract_bao:
+      loops: 0
+  flipper_code_goren:
+    attract_goren:
       loops: 0
 
 show_player:
@@ -213,11 +223,11 @@ animations:
       repeat: true
   special_thanks_scroll_up:
     - property: y
-      value: 150
+      value: 168
       relative: true
       duration: 8s
     - property: y
-      value: -150
+      value: -168
       relative: true
       duration: 0s
       repeat: true

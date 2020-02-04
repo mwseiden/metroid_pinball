@@ -1,0 +1,521 @@
+#config_version=5
+mode:
+  start_events: gorens_lament_should_start
+  stop_events: gorens_lament_should_end
+  priority: 100
+
+shots:
+  gorens_lament_shot:
+    switches:
+      - s_left_target_1
+      - s_left_target_2
+      - s_left_target_3
+      - s_purple_1
+      - s_purple_2
+      - s_purple_3
+      - s_shatz
+      - s_missile_bank_1
+      - s_missile_bank_2
+      - s_missile_bank_3
+      - s_rollover_button
+      - s_thin_orange
+      - s_left_passage
+      - s_top_lane_1
+      - s_top_lane_2
+      - s_top_lane_3
+      - s_pit
+      - s_lower_right_bank_1
+      - s_lower_right_bank_2
+      - s_lower_right_bank_3
+      - s_side_ramp_made
+
+sounds:
+  gorens_lament_01:
+    file: gorens_lament_01.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_02:
+    file: gorens_lament_02.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_03:
+    file: gorens_lament_03.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_04:
+    file: gorens_lament_04.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_05:
+    file: gorens_lament_05.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_06:
+    file: gorens_lament_06.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_07:
+    file: gorens_lament_07.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_08:
+    file: gorens_lament_08.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_09:
+    file: gorens_lament_09.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_10:
+    file: gorens_lament_10.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_11:
+    file: gorens_lament_11.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_12:
+    file: gorens_lament_12.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_13:
+    file: gorens_lament_13.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_14:
+    file: gorens_lament_14.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_15:
+    file: gorens_lament_15.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_16:
+    file: gorens_lament_16.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_17:
+    file: gorens_lament_17.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_18:
+    file: gorens_lament_18.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_19:
+    file: gorens_lament_19.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_20:
+    file: gorens_lament_20.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_21:
+    file: gorens_lament_21.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_22:
+    file: gorens_lament_22.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_23:
+    file: gorens_lament_23.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_24:
+    file: gorens_lament_24.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_25:
+    file: gorens_lament_25.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_intro_1:
+    file: gorens_lament_intro_1.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_intro_2:
+    file: gorens_lament_intro_2.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_intro_3:
+    file: gorens_lament_intro_3.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_intro_4:
+    file: gorens_lament_intro_4.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_outtro_1:
+    file: gorens_lament_outtro_1.wav
+    streaming: False
+    track: voice
+    priority: 50
+    volume: 0.9
+    max_queue_time: None
+    ducking:
+      target: sfx
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  gorens_lament_outtro_2:
+    file: gorens_lament_outtro_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.9
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+
+sound_pools:
+  gorens_lament_sound_pool:
+    load: preload
+    type: random_force_all
+    simultaneous_limit: 1
+    stealing_method: skip
+    track: voice
+    sounds:
+      - gorens_lament_01
+      - gorens_lament_02
+      - gorens_lament_03
+      - gorens_lament_04
+      - gorens_lament_05
+      - gorens_lament_06
+      - gorens_lament_07
+      - gorens_lament_08
+      - gorens_lament_09
+      - gorens_lament_10
+      - gorens_lament_11
+      - gorens_lament_12
+      - gorens_lament_13
+      - gorens_lament_14
+      - gorens_lament_15
+      - gorens_lament_16
+      - gorens_lament_17
+      - gorens_lament_18
+      - gorens_lament_19
+      - gorens_lament_20
+      - gorens_lament_21
+      - gorens_lament_22
+      - gorens_lament_23
+      - gorens_lament_24
+      - gorens_lament_25
+  gorens_lament_intro_sound_pool:
+    load: preload
+    type: random_force_all
+    track: voice
+    sounds:
+      - gorens_lament_intro_1
+      - gorens_lament_intro_2
+      - gorens_lament_intro_3
+      - gorens_lament_intro_4
+  gorens_lament_outtro_sound_pool:
+    load: preload
+    type: random_force_all
+    track: sfx
+    sounds:
+      - gorens_lament_outtro_1
+      - gorens_lament_outtro_2
+
+sound_player:
+  gorens_lament_shot_hit: gorens_lament_sound_pool
+  mode_select_landing_site_stopped: gorens_lament_intro_sound_pool
+  ball_drain: gorens_lament_outtro_sound_pool

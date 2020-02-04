@@ -16,6 +16,10 @@ machine_vars:
     initial_value: 0
     value_type: int
     persist: False
+  next_game_goren:
+    initial_value: 0
+    value_type: int
+    persist: False
   twitch_last_bits_user:
     initial_value: Goren1818
     value_type: str

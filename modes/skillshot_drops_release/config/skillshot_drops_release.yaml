@@ -12,6 +12,29 @@ show_player:
   skillshot_drops_release_ball:
     skillshot_drops_release_go:
       loops: 0
+    blink_2_lights:
+      key: skillshot_drops_release_flipper_show
+      loops: -1
+      priority: 500
+      speed: 2
+      show_tokens:
+        led_1: gi_upper_flipper_bottom
+        led_2: gi_upper_flipper_top
+        color_1: 'FFFFFF'
+        color_2: '000000'
+    small_theater_chase:
+      key: skillshot_drops_release_ramp_show
+      loops: -1
+      speed: 6
+      priority: 600
+      show_tokens:
+        color: '2000C0'
+        led_1: led_enter_side_ramp
+        led_2: gi_under_side_ramp
+        led_3: led_pop_2
+        led_4: led_enter_side_ramp
+        led_5: gi_under_side_ramp
+        led_6: led_pop_2
   side_ramp_shot_hit:
     skillshot_drops_release_success:
       loops: 0
@@ -37,4 +60,5 @@ variable_player:
     score: 250000
 
 sound_player:
+  skillshot_drops_release_ball: shoot_the_side_ramp
   side_ramp_shot_hit: super_skillshot

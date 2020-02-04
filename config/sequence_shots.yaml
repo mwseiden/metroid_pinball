@@ -1,15 +1,19 @@
 #config_version=5
 
 sequence_shots:
+  capside_combo:
+    switch_sequence: s_captive_ball, s_side_ramp_made
+    sequence_timeout: 3s
+  full_shatz:
+    switch_sequence: s_left_inlane, s_shatz
+    sequence_timeout: 2s
   left_orbit:
     switch_sequence: s_orbit_l, s_orbit_r
     sequence_timeout: 3s
   right_orbit:
     switch_sequence: s_orbit_r, s_orbit_l
     sequence_timeout: 3s
-  full_shatz:
-    switch_sequence: s_left_inlane, s_shatz
-    sequence_timeout: 2s
-  capside_combo:
-    switch_sequence: s_captive_ball, s_side_ramp_made
+  subway_sneak:
+    switch_sequence: s_orbit_r, s_pop_subway
     sequence_timeout: 3s
+    cancel_switches: s_pop_1, s_pop_2, s_pop_3, s_orbit_l

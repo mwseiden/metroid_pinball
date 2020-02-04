@@ -38,14 +38,36 @@ show_player:
     skillshot_drops_one_made:
       loops: 0
       events_when_completed: skillshot_monitor_should_end
+    skillshot_drops_hit:
+      loops: 0
+      speed: 30
+      priority: 500
   skillshot_drops_made_2:
     skillshot_drops_two_made:
       loops: 0
       events_when_completed: skillshot_drops_release_should_start
+    skillshot_drops_hit:
+      loops: 2
+      speed: 60
+      priority: 500
+    gi_solid:
+      loops: -1
+      priority: 400
+      show_tokens:
+        color: '009000'
   skillshot_drops_made_3:
     skillshot_drops_three_made:
       loops: 0
       events_when_completed: skillshot_drops_release_should_start
+    skillshot_drops_hit:
+      loops: 2
+      speed: 60
+      priority: 500
+    gi_solid:
+      loops: -1
+      priority: 400
+      show_tokens:
+        color: '009000'
   skillshot_purple_success:
     skillshot_purple_made:
       loops: 0
@@ -95,9 +117,7 @@ event_player:
   skillshot_drops_made_1: skillshot_stage_one_end
   skillshot_drops_made_2: skillshot_stage_one_end
   skillshot_drops_made_3: skillshot_stage_one_end
-  skillshot_drops_one_behind_hit: skillshot_stage_one_end
-  skillshot_drops_two_behind_hit: skillshot_stage_one_end
-  skillshot_drops_three_behind_hit: skillshot_stage_one_end
+  skillshot_drops_failed: skillshot_stage_one_end
   skillshot_purple_success: skillshot_stage_one_end
   skillshot_purple_failure: skillshot_stage_one_end
   skillshot_bombs_success: skillshot_stage_one_end

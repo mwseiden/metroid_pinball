@@ -53,6 +53,9 @@ player_vars:
   drops_2i:
     value_type: str
     initial_value: 'DDU'
+  drops_2m:
+    value_type: str
+    initial_value: 'DDD'
   emergency_landings:
     initial_value: 0
   has_chosen_landing_site:
@@ -93,6 +96,9 @@ player_vars:
     initial_value: 0
   room_2a_alive_score:
     initial_value: 0
+  room_2f_target_order:
+    value_type: str
+    initial_value: 'ABCDEFGHIJKLMN'
   scoops:
     initial_value: 0
   skillshot_bombs_lit:

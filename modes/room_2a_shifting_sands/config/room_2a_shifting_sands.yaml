@@ -244,8 +244,10 @@ event_player:
     drop_targets_continue:
   timer_room_2a_do_not_sink_complete:
     - room_2a_sink_into_sand
-  room_2a_exit_west_shot_hit: room_1z_enter
-  room_2a_exit_east_shot_hit: room_2b_enter
+  room_2a_exit_west_shot_hit.1: drop_targets_save
+  room_2a_exit_west_shot_hit.2: room_1z_enter
+  room_2a_exit_east_shot_hit.1: drop_targets_save
+  room_2a_exit_east_shot_hit.2: room_2b_enter
   mode_room_2a_shifting_sands_ending: drop_targets_save
 
 variable_player:

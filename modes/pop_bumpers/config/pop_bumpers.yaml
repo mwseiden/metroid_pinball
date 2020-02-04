@@ -38,10 +38,21 @@ show_player:
       show_tokens:
         led: led_pop_1
         color: A000FF
+  subway_sneak_hit:
+    pop_sneak_lights:
+      loops: 0
+      speed: 30
+      priority: 1000
 
 sounds:
   pop_1:
     file: pop_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  pop_sneak:
+    file: pop_sneak.wav
     streaming: False
     track: sfx
     priority: 50
@@ -51,6 +62,7 @@ sound_player:
   pop_1_shot_hit: pop_1
   pop_2_shot_hit: pop_1
   pop_3_shot_hit: pop_1
+  subway_sneak_hit: pop_sneak
 
 variable_player:
   pop_1_shot_hit:
@@ -65,3 +77,5 @@ variable_player:
     pops: 1
     score:
       int: (100 + (80 * current_player.pops)) * current_player.multiplier
+  subway_sneak_hit:
+    score: 50000 * current_player.multiplier

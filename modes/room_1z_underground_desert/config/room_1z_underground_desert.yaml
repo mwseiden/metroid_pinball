@@ -55,6 +55,12 @@ show_player:
       show_tokens:
         color: 'FFC000'
         color2: '8080FF'
+  show_mode_status_report:
+    room_1z_underground_desert_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1z_underground_desert_status_report:
+      action: stop
 
 event_player:
   mode_room_1z_underground_desert_started:
@@ -65,9 +71,10 @@ event_player:
       max_length: 12
       color: "200C00"
     drop_targets_continue:
-  room_1z_exit_east_shot_hit: room_2a_enter
-  room_1z_exit_south_shot_hit: room_2d_enter
-  mode_room_1z_underground_desert_ending: drop_targets_save
+  room_1z_exit_east_shot_hit.1: drop_targets_save
+  room_1z_exit_east_shot_hit.2: room_2a_enter
+  room_1z_exit_south_shot_hit.1: drop_targets_save
+  room_1z_exit_south_shot_hit.2: room_2d_enter
 
 variable_player:
   mode_room_1z_underground_desert_started:

@@ -1,0 +1,67 @@
+#config_version=5
+mode:
+  start_events: room_2m_continue, room_2m_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter
+  priority: 300
+
+shots:
+  room_2m_exit_north_shot:
+    switch: s_side_ramp_made
+    profile: exit_door
+    enable_events: mode_room_2m_geothermal_plant_started
+    disable_events: room_2m_exit_north_shot_hit
+    reset_events: room_2m_exit_north_shot_hit
+    show_tokens:
+      led: led_enter_side_ramp
+      color: door_blue
+
+slides:
+  room_2m_geothermal_plant_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2m_geothermal_plant_backglass
+    transition: fade
+    transition_out: fade
+  room_2m_geothermal_plant_splash_slide:
+    widgets:
+      - type: image
+        image: room_2m_geothermal_plant_splash
+
+slide_player:
+  mode_room_2m_geothermal_plant_started:
+    room_2m_geothermal_plant_backglass_slide:
+      target: backglass
+    room_2m_geothermal_plant_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_2m_geothermal_plant_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: '800000'
+        color2: 'FF8000'
+  show_mode_status_report:
+    room_2m_geothermal_plant_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_2m_geothermal_plant_status_report:
+      action: stop
+
+event_player:
+  mode_room_2m_geothermal_plant_started:
+    cmd_backbox_show:
+      show_type: fire
+    drop_targets_continue:
+  room_2m_exit_north_shot_hit.1: drop_targets_save
+  room_2m_exit_north_shot_hit.2: room_2i_enter
+
+variable_player:
+  mode_room_2m_geothermal_plant_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 2m
+      action: set

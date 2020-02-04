@@ -109,8 +109,9 @@ event_player:
       max_cutoff: 7
       color1: "404040"
       color2: "204020"
-  mode_room_1c_plains_ending: drop_targets_save
-  room_1c_exit_west_shot_hit: room_1b_enter
+    drop_targets_continue:
+  room_1c_exit_west_shot_hit.1: drop_targets_save
+  room_1c_exit_west_shot_hit.2: room_1b_enter
 
 variable_player:
   mode_room_1c_plains_started:
