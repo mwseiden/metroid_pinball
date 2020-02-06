@@ -264,9 +264,15 @@ Landing Sites
         Jump over the lava. Complete the 4 flashing shots to light the side
         ramp for the jackpot. This is repeatable.
 
+        Doors:
+            Mini Loop (Blue) -> Lake of Fire [j]
+            Scoop (Blue) -> Geothermal Plant [m]
+
     Wrecked Ship [L]:
         Does nothing extra except play calming music.
 
+        Doors:
+            VUK (Blue) -> Generator Room [M]
 
 Rooms (Modes)
 
@@ -390,7 +396,18 @@ Rooms (Modes)
 
         Lake of Fire [j]:
 
+            Rules Unimplemented
+
+            Doors:
+                Left Orbit (Blue) -> Lava Jump [i]
+
         Geothermal Plant [m]:
+
+            Rules Unimplemented
+
+            Doors:
+                Side Ramp (Blue) -> Lava Jump [i]
+
 
     Tourian:
 
@@ -415,4 +432,8 @@ Rooms (Modes)
         Entryway [L]:
 
             See Wrecked Ship Landing Site for rules
+
+        Generator Room [M]:
+
+            Rules Unimplemented
 
