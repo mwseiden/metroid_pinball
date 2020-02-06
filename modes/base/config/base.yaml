@@ -206,6 +206,11 @@ show_player:
       show_tokens:
         led: led_ball_save
         color: ff0000
+  ball_save_default_saving_ball:
+    base_default_ball_save:
+      loops: -1
+      speed: 30
+      priority: 10000
   left_sling_shot_hit:
     blink_2_lights:
       loops: 0
