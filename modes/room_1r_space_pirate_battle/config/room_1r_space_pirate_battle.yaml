@@ -259,8 +259,19 @@ slide_player:
     room_1r_super_kill_slide:
       expire: 3.4s
 
+sounds:
+  room_1r_pirate_defeated:
+    file: room_1r_pirate_defeated.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
 sound_player:
   multiball_room_1r_battle_started: multiball_alt_3
+  shoot_space_pirates_shot_group_lit_hit: room_1r_pirate_defeated
+  room_1r_kill_pirates: shoot_the_flashing_targets
 
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
@@ -284,7 +295,7 @@ event_player:
   room_1r_start_shot_7_hit: room_1r_kill_pirates
   room_1r_start_shot_8_hit: room_1r_kill_pirates
   room_1r_start_shot_9_hit: room_1r_super_kill, logicblock_room_1r_battle_sequence_complete
-
+  
 variable_player:
   mode_room_1r_space_pirate_battle_started:
     has_chosen_landing_site:

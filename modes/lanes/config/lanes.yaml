@@ -77,7 +77,7 @@ show_player:
     lanes_ball_save:
       loops: 0
       priority: 10000
-      speed: 2.0
+      speed: 30
 
 event_player:
   mode_lanes_starting: lanes_disable_ball_save
