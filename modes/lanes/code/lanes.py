@@ -20,4 +20,5 @@ class Lanes(Mode):
             self.machine.game.balls_in_play += 1
             self.machine.playfield.add_ball()
             self.player.kickbacks -= 1
+            self.machine.events.post('lanes_ball_was_saved')
 
