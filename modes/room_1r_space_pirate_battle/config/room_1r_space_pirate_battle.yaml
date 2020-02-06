@@ -331,4 +331,4 @@ variable_player:
   room_1r_start_shot_9_hit:
     score: ((current_player.area_bonus_nw + 1) * 300000) * current_player.multiplier
   shoot_space_pirates_shot_group_lit_hit:
-    score: (66600 * current_player.ball) * current_player.multiplier
+    score: (33300 * current_player.ball) * current_player.multiplier
