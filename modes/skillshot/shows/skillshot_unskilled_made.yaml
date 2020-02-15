@@ -6,11 +6,11 @@
       widgets:
       - type: text
         text: Emergency Landing
-        style: dmd_med
+        style: medium
         color: green
         y: 19
       - type: text
         text: Acquired
-        style: dmd_med
+        style: medium
         color: green
         y: 11

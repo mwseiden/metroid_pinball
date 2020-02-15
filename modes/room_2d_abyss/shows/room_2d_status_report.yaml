@@ -15,4 +15,4 @@
       - type: Text
         text: 2X Bridge Scoring
         color: '00ffff'
-        style: dmd_med
+        style: medium

@@ -7,5 +7,5 @@
       - type: text
         text: Targets Completed!
         color: red
-        style: dmd_med
+        style: medium
 

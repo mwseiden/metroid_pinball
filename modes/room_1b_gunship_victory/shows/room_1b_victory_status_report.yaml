@@ -15,17 +15,17 @@
       - type: Text
         text: Hit switches to
         color: dmd_blue
-        style: dmd_med
+        style: medium
         y: 25
       - type: Text
         text: scan planet
         color: dmd_blue
-        style: dmd_med
+        style: medium
         y: 17
       - type: text
         text: Planet (player|room_1b_victory_scan_percent)% Scanned
         color: yellow
-        style: dmd_med
+        style: medium
         y: 7
 
 - duration: 5s
@@ -35,10 +35,10 @@
       - type: text
         text: Crateria Shot Bonus
         color: blue
-        style: dmd_med
+        style: medium
         y: 21
       - type: text
         text: +(player|crateria_shot_bonus)
         color: white
-        style: dmd_med
+        style: medium
         y: 11

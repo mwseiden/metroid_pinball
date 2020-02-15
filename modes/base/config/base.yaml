@@ -351,7 +351,7 @@ slides:
       text: PLAYER (number)
       y: 0
       x: 10
-      style: dmd_med
+      style: medium
       anchor_x: left
       anchor_y: bottom
     - type: text
@@ -360,13 +360,13 @@ slides:
       x: right-10
       anchor_x: right
       anchor_y: bottom
-      style: dmd_med
+      style: medium
   new_player_slide:
     expire: 1s
     widgets:
       - type: text
         text: PLAYER (num) ADDED
-        style: dmd_med
+        style: medium
 
 event_player:
   twitch_bit_donation{bits < 25}: base_bits_small

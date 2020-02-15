@@ -7,7 +7,7 @@
       - type: text
         text: Missile Collected!
         color: red
-        style: dmd_med
+        style: medium
         y: 20
         x: 80
       - type: text

@@ -7,13 +7,13 @@
       - type: text
         text: Power Bomb
         color: red
-        style: dmd_med
+        style: medium
         y: 28
         x: 50
       - type: text
         text: Collected!
         color: red
-        style: dmd_med
+        style: medium
         y: 20
         x: 50
       - type: text

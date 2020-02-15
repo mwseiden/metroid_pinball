@@ -14,7 +14,7 @@
         text: PLAYER (number)
         y: 0
         x: 10
-        style: dmd_med
+        style: medium
         anchor_x: left
         anchor_y: bottom
       - type: text
@@ -23,7 +23,7 @@
         x: right-10
         anchor_x: right
         anchor_y: bottom
-        style: dmd_med
+        style: medium
 
 - duration: 5s
   slides:

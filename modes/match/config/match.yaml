@@ -83,7 +83,7 @@ shows:
               min_digits: 2
               y: 31
               x: 10
-              style: dmd_med
+              style: medium
               anchor_x: left
               anchor_y: top
             - type: text
@@ -94,14 +94,14 @@ shows:
               x: right-10
               anchor_x: right
               anchor_y: top
-              style: dmd_med
+              style: medium
             - type: text
               text: (match_number2)
               number_grouping: true
               min_digits: 2
               y: 0
               x: 10
-              style: dmd_med
+              style: medium
               anchor_x: left
               anchor_y: bottom
             - type: text
@@ -112,7 +112,7 @@ shows:
               x: right-10
               anchor_x: right
               anchor_y: bottom
-              style: dmd_med
+              style: medium
 
   has_match_show:
     - duration: 3.5s
@@ -162,7 +162,7 @@ shows:
               min_digits: 2
               y: 31
               x: 10
-              style: dmd_med
+              style: medium
               anchor_x: left
               anchor_y: top
             - type: text
@@ -173,14 +173,14 @@ shows:
               x: right-10
               anchor_x: right
               anchor_y: top
-              style: dmd_med
+              style: medium
             - type: text
               text: (match_number2)
               number_grouping: true
               min_digits: 2
               y: 0
               x: 10
-              style: dmd_med
+              style: medium
               anchor_x: left
               anchor_y: bottom
             - type: text
@@ -191,4 +191,4 @@ shows:
               x: right-10
               anchor_x: right
               anchor_y: bottom
-              style: dmd_med
+              style: medium

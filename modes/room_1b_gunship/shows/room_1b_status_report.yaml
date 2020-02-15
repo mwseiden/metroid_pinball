@@ -15,16 +15,16 @@
       - type: Text
         text: Shoot left
         color: '00ffff'
-        style: dmd_med
+        style: medium
         y: 24
       - type: Text
         text: and right orbits
         color: '00ffff'
-        style: dmd_med
+        style: medium
       - type: Text
         text: then shoot scoop
         color: 'ffff00'
-        style: dmd_med
+        style: medium
         y: 8
 
 - duration: 5s
@@ -34,10 +34,10 @@
       - type: text
         text: Crateria Shot Bonus
         color: blue
-        style: dmd_med
+        style: medium
         y: 21
       - type: text
         text: +(player|crateria_shot_bonus)
         color: white
-        style: dmd_med
+        style: medium
         y: 11

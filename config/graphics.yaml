@@ -79,7 +79,7 @@ slides:
   asset_status_slide:
     - type: text
       text: "LOADING ASSETS: (percent)%"
-      style: dmd_med
+      style: medium
 
 
 slide_player:

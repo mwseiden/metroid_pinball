@@ -13,7 +13,7 @@
       - type: text
         text: (player|captive_ball_counter_value) More For Multiball
         color: red
-        style: dmd_med
+        style: medium
         y: 10
         x: 80
       - type: image

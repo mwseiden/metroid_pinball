@@ -69,7 +69,7 @@ slides:
       - type: text
         text: Planet (value)% Scanned
         color: yellow
-        style: dmd_med
+        style: medium
     expire: 1s
   room_1b_victory_backglass_slide:
     widgets:

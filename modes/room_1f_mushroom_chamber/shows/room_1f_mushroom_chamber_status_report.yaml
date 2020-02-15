@@ -15,7 +15,7 @@
       - type: Text
         text: NO MODE RULES
         color: red
-        style: dmd_med
+        style: medium
 
 - duration: 5s
   slides:
@@ -24,10 +24,10 @@
       - type: text
         text: Crateria Shot Bonus
         color: blue
-        style: dmd_med
+        style: medium
         y: 21
       - type: text
         text: +(player|crateria_shot_bonus)
         color: white
-        style: dmd_med
+        style: medium
         y: 11

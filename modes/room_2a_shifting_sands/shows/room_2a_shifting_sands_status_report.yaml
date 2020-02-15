@@ -15,16 +15,16 @@
       - type: Text
         text: Hit Flashing Yellow
         color: yellow
-        style: dmd_med
+        style: medium
         y: 24
       - type: Text
         text: Target Banks to Stop
         color: yellow
-        style: dmd_med
+        style: medium
       - type: Text
         text: Sinking in Quicksand
         color: yellow
-        style: dmd_med
+        style: medium
         y: 8
 
 - duration: 5s
@@ -34,7 +34,7 @@
       - type: text
         text: EXITS
         color: red
-        style: dmd_med
+        style: medium
         y: 29
       - type: text
         text: "West: Secret Passage"

@@ -8,7 +8,7 @@
         text: (machine|player1_score)
         y: 31
         x: 10
-        style: dmd_med
+        style: medium
         anchor_x: left
         anchor_y: top
         number_grouping: true
@@ -18,13 +18,13 @@
         x: right-10
         anchor_x: right
         anchor_y: top
-        style: dmd_med
+        style: medium
         number_grouping: true
       - type: text
         text: (machine|player3_score)
         y: 0
         x: 10
-        style: dmd_med
+        style: medium
         anchor_x: left
         anchor_y: bottom
         number_grouping: true
@@ -34,7 +34,7 @@
         x: right-10
         anchor_x: right
         anchor_y: bottom
-        style: dmd_med
+        style: medium
         number_grouping: true
 
 - duration: 4s
@@ -66,7 +66,7 @@
       - type: text
         text: (machine|score2_label)
         y: 0
-        style: dmd_med
+        style: medium
         color: red
         anchor_y: top
         animations:
@@ -74,7 +74,7 @@
       - type: text
         text: (machine|score2_name)
         y: -8
-        style: dmd_med
+        style: medium
         color: dmd_blue
         anchor_y: top
         animations:
@@ -82,7 +82,7 @@
       - type: text
         text: (machine|score2_value)
         y: -16
-        style: dmd_med
+        style: medium
         color: dmd_orange
         number_grouping: true
         anchor_y: top
@@ -91,7 +91,7 @@
       - type: text
         text: (machine|score3_label)
         y: -28
-        style: dmd_med
+        style: medium
         color: red
         anchor_y: top
         animations:
@@ -99,7 +99,7 @@
       - type: text
         text: (machine|score3_name)
         y: -36
-        style: dmd_med
+        style: medium
         color: dmd_blue
         anchor_y: top
         animations:
@@ -107,7 +107,7 @@
       - type: text
         text: (machine|score3_value)
         y: -44
-        style: dmd_med
+        style: medium
         color: dmd_orange
         number_grouping: true
         anchor_y: top
@@ -116,7 +116,7 @@
       - type: text
         text: (machine|score4_label)
         y: -56
-        style: dmd_med
+        style: medium
         color: red
         anchor_y: top
         animations:
@@ -124,7 +124,7 @@
       - type: text
         text: (machine|score4_name)
         y: -64
-        style: dmd_med
+        style: medium
         color: dmd_blue
         anchor_y: top
         animations:
@@ -132,7 +132,7 @@
       - type: text
         text: (machine|score4_value)
         y: -72
-        style: dmd_med
+        style: medium
         color: dmd_orange
         number_grouping: true
         anchor_y: top
@@ -141,7 +141,7 @@
       - type: text
         text: (machine|score5_label)
         y: -84
-        style: dmd_med
+        style: medium
         color: red
         anchor_y: top
         animations:
@@ -149,7 +149,7 @@
       - type: text
         text: (machine|score5_name)
         y: -92
-        style: dmd_med
+        style: medium
         color: dmd_blue
         anchor_y: top
         animations:
@@ -157,7 +157,7 @@
       - type: text
         text: (machine|score5_value)
         y: -100
-        style: dmd_med
+        style: medium
         color: dmd_orange
         number_grouping: true
         anchor_y: top
@@ -701,7 +701,7 @@
       - type: text
         text: Special Thanks To...
         y: 0
-        style: dmd_med
+        style: medium
         color: dmd_blue
         anchor_y: top
         animations:
@@ -709,7 +709,7 @@
       - type: text
         text: Erin
         y: -8
-        style: dmd_med
+        style: medium
         color: dmd_orange
         anchor_y: top
         animations:
@@ -717,7 +717,7 @@
       - type: text
         text: Mark Incitti
         y: -16
-        style: dmd_med
+        style: medium
         color: dmd_orange
         number_grouping: true
         anchor_y: top
@@ -726,7 +726,7 @@
       - type: text
         text: John Marsh
         y: -24
-        style: dmd_med
+        style: medium
         color: dmd_orange
         anchor_y: top
         animations:
@@ -734,7 +734,7 @@
       - type: text
         text: Wilder Hamm
         y: -32
-        style: dmd_med
+        style: medium
         color: dmd_orange
         anchor_y: top
         animations:
@@ -742,7 +742,7 @@
       - type: text
         text: Victoria Shen
         y: -40
-        style: dmd_med
+        style: medium
         color: dmd_orange
         number_grouping: true
         anchor_y: top
@@ -751,7 +751,7 @@
       - type: text
         text: John Manuelian
         y: -48
-        style: dmd_med
+        style: medium
         color: dmd_orange
         anchor_y: top
         animations:
@@ -759,7 +759,7 @@
       - type: text
         text: Dave O'Neil
         y: -56
-        style: dmd_med
+        style: medium
         color: dmd_orange
         anchor_y: top
         animations:
@@ -767,7 +767,7 @@
       - type: text
         text: Jab_Doa
         y: -64
-        style: dmd_med
+        style: medium
         color: dmd_orange
         number_grouping: true
         anchor_y: top
@@ -776,7 +776,7 @@
       - type: text
         text: Mission Pinball
         y: -72
-        style: dmd_med
+        style: medium
         color: dmd_orange
         anchor_y: top
         animations:
@@ -784,7 +784,7 @@
       - type: text
         text: Grant Henry
         y: -80
-        style: dmd_med
+        style: medium
         color: dmd_orange
         anchor_y: top
         animations:
@@ -792,7 +792,7 @@
       - type: text
         text: Claire Henry
         y: -88
-        style: dmd_med
+        style: medium
         color: dmd_orange
         number_grouping: true
         anchor_y: top
@@ -801,7 +801,7 @@
       - type: text
         text: Aaron Davis
         y: -96
-        style: dmd_med
+        style: medium
         color: dmd_orange
         anchor_y: top
         animations:
@@ -809,7 +809,7 @@
       - type: text
         text: Fast Pinball
         y: -104
-        style: dmd_med
+        style: medium
         color: dmd_orange
         number_grouping: true
         anchor_y: top
@@ -818,7 +818,7 @@
       - type: text
         text: Joel De Guzman
         y: -112
-        style: dmd_med
+        style: medium
         color: dmd_orange
         number_grouping: true
         anchor_y: top
@@ -827,7 +827,7 @@
       - type: text
         text: Scott Danesi
         y: -120
-        style: dmd_med
+        style: medium
         color: dmd_orange
         number_grouping: true
         anchor_y: top
@@ -840,22 +840,22 @@
       widgets:
       - type: Text
         text: ...and thanks to
-        style: dmd_med
+        style: medium
         color: dmd_orange
         y: 25
       - type: Text
         text: everyone watching!
-        style: dmd_med
+        style: medium
         color: dmd_orange
         y: 13
       # - type: Text
         # text: And thanks to everyone
-        # style: dmd_med
+        # style: medium
         # color: dmd_orange
         # y: 25
       # - type: Text
         # text: at Pintastic!
-        # style: dmd_med
+        # style: medium
         # color: dmd_orange
         # y: 13
       transition:

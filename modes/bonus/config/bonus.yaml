@@ -38,65 +38,65 @@ slides:
   bonus_ramp_slide:
     - type: text
       text: Ramps (player|ramps)
-      style: dmd_med
+      style: medium
       y: 20
     - type: text
       text: (score)
-      style: dmd_med
+      style: medium
       y: 12
   bonus_switches_slide:
     - type: text
       text: Switches (player|switches)
-      style: dmd_med
+      style: medium
       y: 20
     - type: text
       text: (score)
-      style: dmd_med
+      style: medium
       y: 12
   bonus_capsides_slide:
     - type: text
       text: Cap-Side Combos (player|capsides)
-      style: dmd_med
+      style: medium
       y: 20
     - type: text
       text: (score)
-      style: dmd_med
+      style: medium
       y: 12
   bonus_missiles_slide:
     - type: text
       text: Missiles (player|missiles)
-      style: dmd_med
+      style: medium
       y: 20
     - type: text
       text: (score)
-      style: dmd_med
+      style: medium
       y: 12
   bonus_power_bombs_slide:
     - type: text
       text: Power Bombs (player|power_bombs)
-      style: dmd_med
+      style: medium
       y: 20
     - type: text
       text: (score)
-      style: dmd_med
+      style: medium
       y: 12
   bonus_super_missiles_slide:
     - type: text
       text: Super Missiles (player|super_missiles)
-      style: dmd_med
+      style: medium
       y: 20
     - type: text
       text: (score)
-      style: dmd_med
+      style: medium
       y: 12
   bonus_emergency_landing_slide:
     - type: text
       text: Emergency Landing
-      style: dmd_med
+      style: medium
       y: 20
     - type: text
       text: (score)
-      style: dmd_med
+      style: medium
       y: 12
 
 event_player:
