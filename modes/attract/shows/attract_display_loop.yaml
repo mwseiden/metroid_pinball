@@ -462,7 +462,7 @@
       widgets:
       - type: text
         text: TWITCH.TV/THEARRRRRCADE
-        style: dmd_small
+        style: small
       transition:
          type: push
          duration: 1s
@@ -531,7 +531,7 @@
         y: 13
       - type: Text
         text: ddpinball.com
-        style: dmd_small
+        style: small
         color: dmd_orange
         y: 3
       transition:

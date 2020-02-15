@@ -41,7 +41,7 @@
         min_digits: 2
         y: 31
         x: 1
-        style: dmd_small
+        style: small
         anchor_x: left
         anchor_y: top
       - type: text
@@ -53,14 +53,14 @@
         x: right-1
         anchor_x: right
         anchor_y: top
-        style: dmd_small
+        style: small
       - type: text
         text: (player3|score)
         number_grouping: true
         min_digits: 2
         y: 0
         x: 1
-        style: dmd_small
+        style: small
         anchor_x: left
         anchor_y: bottom
       - type: text
@@ -71,4 +71,4 @@
         x: right-1
         anchor_x: right
         anchor_y: bottom
-        style: dmd_small
+        style: small

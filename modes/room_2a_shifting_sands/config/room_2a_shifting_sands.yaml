@@ -153,7 +153,7 @@ slides:
     - type: text
       text: Time Remaining
       min_digits: 1
-      style: dmd_small
+      style: small
       color: 'FF40FF'
       anchor_x: right
       anchor_y: top

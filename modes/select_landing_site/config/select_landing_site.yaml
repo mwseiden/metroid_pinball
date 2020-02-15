@@ -64,7 +64,7 @@ slides:
       text: Player (player|number)
       color: "FF6030"
       y: 3
-      style: dmd_small
+      style: small
     - type: image
       image: landing_site_continue
       y: 18

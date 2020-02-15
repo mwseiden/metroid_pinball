@@ -13,19 +13,19 @@
       - type: text
         text: (machine|twitch_last_chat_message_line_1)
         color: dmd_blue
-        style: dmd_small
+        style: small
         anchor_y: top
         y: 20
       - type: text
         text: (machine|twitch_last_chat_message_line_2)
         color: dmd_blue
-        style: dmd_small
+        style: small
         anchor_y: top
         y: 14
       - type: text
         text: (machine|twitch_last_chat_message_line_3)
         color: dmd_blue
-        style: dmd_small
+        style: small
         anchor_y: top
         y: 8
 
@@ -42,18 +42,18 @@
       - type: text
         text: (machine|twitch_last_chat_message_line_4)
         color: dmd_blue
-        style: dmd_small
+        style: small
         anchor_y: top
         y: 20
       - type: text
         text: (machine|twitch_last_chat_message_line_5)
         color: dmd_blue
-        style: dmd_small
+        style: small
         anchor_y: top
         y: 14
       - type: text
         text: (machine|twitch_last_chat_message_line_6)
         color: dmd_blue
-        style: dmd_small
+        style: small
         anchor_y: top
         y: 8

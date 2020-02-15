@@ -39,10 +39,10 @@
       - type: text
         text: "West: Secret Passage"
         color: blue
-        style: dmd_small
+        style: small
         y: 22
       - type: text
         text: "East: Right Orbit"
         color: blue
-        style: dmd_small
+        style: small
         y: 16

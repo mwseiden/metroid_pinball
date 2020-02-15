@@ -7,7 +7,7 @@
       - type: text
         text: 500
         color: white
-        style: dmd_small
+        style: small
         y: 31
         x: 0
         anchor_x: left
