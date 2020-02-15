@@ -7,7 +7,7 @@
       - type: text
         text: DIRTY POOL!
         color: "3dbeff"
-        style: dmd_big
+        style: big
 
 - duration: 6s
   slides:

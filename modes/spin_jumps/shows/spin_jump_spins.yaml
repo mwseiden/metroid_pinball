@@ -13,7 +13,7 @@
       - type: text
         text: (player|spinners)
         color: red
-        style: dmd_big
+        style: big
         y: 10
         x: 81
       - type: image

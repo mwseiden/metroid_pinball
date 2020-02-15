@@ -6,5 +6,5 @@
       widgets:
       - type: text
         text: Hear No...
-        style: dmd_big
+        style: big
         color: '804000'

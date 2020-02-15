@@ -7,10 +7,10 @@
       - type: text
         text: BOWEN KERINS
         color: white
-        style: dmd_big
+        style: big
         y: 22
       - type: text
         text: IS THAT YOU?
         color: white
-        style: dmd_big
+        style: big
         y: 11

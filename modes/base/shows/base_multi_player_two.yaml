@@ -8,7 +8,7 @@
         text: (score)
         number_grouping: true
         min_digits: 2
-        style: dmd_big
+        style: big
         y: 18
       - type: text
         text: PLAYER (number)
@@ -33,7 +33,7 @@
         text: (score)
         number_grouping: true
         min_digits: 2
-        style: dmd_big
+        style: big
         y: 18
       - type: text
         text: (player1|score)

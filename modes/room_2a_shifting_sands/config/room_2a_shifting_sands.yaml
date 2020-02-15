@@ -162,7 +162,7 @@ slides:
     - type: text
       text: (player|room_2a_shifting_sands_room_2a_do_not_sink_tick)
       min_digits: 1
-      style: dmd_big
+      style: big
       color: 'FF0000'
       anchor_x: right
       anchor_y: top
@@ -186,19 +186,19 @@ slides:
     widgets:
     - type: text
       text: +2 Seconds
-      style: dmd_big
+      style: big
       color: 'FF1030'
   room_2a_time_plus_4:
     widgets:
     - type: text
       text: +4 Seconds
-      style: dmd_big
+      style: big
       color: 'FF1030'
   room_2a_time_plus_8:
     widgets:
     - type: text
       text: +8 Seconds
-      style: dmd_big
+      style: big
       color: 'FF1030'
 
 slide_player:

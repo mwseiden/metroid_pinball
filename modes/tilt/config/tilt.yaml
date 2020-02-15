@@ -34,7 +34,7 @@ slides:
     widgets:
     - type: text
       text: WARNING
-      style: dmd_big
+      style: big
       color: red
     expire: 1s
   tilt_metroid_warning_2:
@@ -43,19 +43,19 @@ slides:
       text: WARNING
       y: 17
       anchor_y: bottom
-      style: dmd_big
+      style: big
       color: red
     - type: text
       text: WARNING
       y: 15
       anchor_y: top
-      style: dmd_big
+      style: big
       color: red
     expire: 2s
   tilt_metroid:
   - type: text
     text: TILT
-    style: dmd_big
+    style: big
     color: red
     
 sounds:

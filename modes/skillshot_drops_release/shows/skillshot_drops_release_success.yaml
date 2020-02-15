@@ -6,10 +6,10 @@
       widgets:
       - type: text
         text: SUCCESS!
-        style: dmd_big
+        style: big
         color: green
         y: 19
       - type: text
         text: 100000
-        style: dmd_big
+        style: big
         y: 9

@@ -55,7 +55,7 @@ shows:
               min_digits: 2
               opacity: 0.0
               color: red
-              style: dmd_big
+              style: big
               animations:
                 show_slide:
                   - property: opacity
@@ -76,7 +76,7 @@ shows:
             - type: text
               text: NO MATCH
               color: dmd_blue
-              style: dmd_big
+              style: big
             - type: text
               text: (match_number0)
               number_grouping: true
@@ -126,7 +126,7 @@ shows:
               min_digits: 2
               opacity: 0.0
               color: red
-              style: dmd_big
+              style: big
               animations:
                 show_slide:
                   - property: opacity
@@ -147,14 +147,14 @@ shows:
             - type: text
               text: MATCH
               color: red
-              style: dmd_big
+              style: big
               y: 22
             - type: text
               text: (winner_number)
               number_grouping: true
               min_digits: 2
               color: red
-              style: dmd_big
+              style: big
               y: 11
             - type: text
               text: (match_number0)

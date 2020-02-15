@@ -7,5 +7,5 @@
       - type: text
         text: YOU DID IT!
         color: white
-        style: dmd_big
+        style: big
         y: 16

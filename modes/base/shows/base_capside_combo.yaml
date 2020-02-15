@@ -7,7 +7,7 @@
       - type: text
         text: WOW!
         color: red
-        style: dmd_big
+        style: big
         y: 15
         x: 91
       - type: image

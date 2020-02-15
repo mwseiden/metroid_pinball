@@ -6,5 +6,5 @@
       widgets:
       - type: text
         text: SHOOT SKILLSHOT
-        style: dmd_big
+        style: big
         color: red

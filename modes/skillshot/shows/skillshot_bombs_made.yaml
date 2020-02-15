@@ -6,7 +6,7 @@
       widgets:
       - type: text
         text: SKILLSHOT!
-        style: dmd_big
+        style: big
         color: "800040"
 
 - duration: 1s
@@ -15,10 +15,10 @@
       widgets:
       - type: text
         text: 10000
-        style: dmd_big
+        style: big
         y: 20
       - type: text
         text: +1 POWER BOMB
-        style: dmd_big
+        style: big
         color: red
         y: 10

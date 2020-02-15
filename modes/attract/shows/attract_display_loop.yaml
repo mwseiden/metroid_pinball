@@ -44,17 +44,17 @@
       - type: text
         text: (machine|score1_label)
         y: 32
-        style: dmd_big
+        style: big
         color: red
         anchor_y: top
       - type: text
         text: (machine|score1_name)
-        style: dmd_big
+        style: big
         color: dmd_blue
       - type: text
         text: (machine|score1_value)
         y: 0
-        style: dmd_big
+        style: big
         color: dmd_orange
         number_grouping: true
         anchor_y: bottom
@@ -171,17 +171,17 @@
       - type: text
         text: (machine|spinners1_label)
         y: 32
-        style: dmd_big
+        style: big
         color: red
         anchor_y: top
       - type: text
         text: (machine|spinners1_name)
-        style: dmd_big
+        style: big
         color: dmd_blue
       - type: text
         text: (machine|spinners1_value)
         y: 0
-        style: dmd_big
+        style: big
         color: dmd_orange
         number_grouping: true
         anchor_y: bottom
@@ -193,17 +193,17 @@
       - type: text
         text: (machine|ramps1_label)
         y: 32
-        style: dmd_big
+        style: big
         color: red
         anchor_y: top
       - type: text
         text: (machine|ramps1_name)
-        style: dmd_big
+        style: big
         color: dmd_blue
       - type: text
         text: (machine|ramps1_value)
         y: 0
-        style: dmd_big
+        style: big
         color: dmd_orange
         number_grouping: true
         anchor_y: bottom
@@ -215,17 +215,17 @@
       - type: text
         text: (machine|pops1_label)
         y: 32
-        style: dmd_big
+        style: big
         color: red
         anchor_y: top
       - type: text
         text: (machine|pops1_name)
-        style: dmd_big
+        style: big
         color: dmd_blue
       - type: text
         text: (machine|pops1_value)
         y: 0
-        style: dmd_big
+        style: big
         color: dmd_orange
         number_grouping: true
         anchor_y: bottom
@@ -237,17 +237,17 @@
       - type: text
         text: (machine|slingshots1_label)
         y: 32
-        style: dmd_big
+        style: big
         color: red
         anchor_y: top
       - type: text
         text: (machine|slingshots1_name)
-        style: dmd_big
+        style: big
         color: dmd_blue
       - type: text
         text: (machine|slingshots1_value)
         y: 0
-        style: dmd_big
+        style: big
         color: dmd_orange
         number_grouping: true
         anchor_y: bottom
@@ -259,17 +259,17 @@
       - type: text
         text: (machine|orbits1_label)
         y: 32
-        style: dmd_big
+        style: big
         color: red
         anchor_y: top
       - type: text
         text: (machine|orbits1_name)
-        style: dmd_big
+        style: big
         color: dmd_blue
       - type: text
         text: (machine|orbits1_value)
         y: 0
-        style: dmd_big
+        style: big
         color: dmd_orange
         number_grouping: true
         anchor_y: bottom
@@ -281,17 +281,17 @@
       - type: text
         text: (machine|lanes1_label)
         y: 32
-        style: dmd_big
+        style: big
         color: red
         anchor_y: top
       - type: text
         text: (machine|lanes1_name)
-        style: dmd_big
+        style: big
         color: dmd_blue
       - type: text
         text: (machine|lanes1_value)
         y: 0
-        style: dmd_big
+        style: big
         color: dmd_orange
         number_grouping: true
         anchor_y: bottom
@@ -303,17 +303,17 @@
       - type: text
         text: (machine|bridges1_label)
         y: 32
-        style: dmd_big
+        style: big
         color: red
         anchor_y: top
       - type: text
         text: (machine|bridges1_name)
-        style: dmd_big
+        style: big
         color: dmd_blue
       - type: text
         text: (machine|bridges1_value)
         y: 0
-        style: dmd_big
+        style: big
         color: dmd_orange
         number_grouping: true
         anchor_y: bottom
@@ -325,17 +325,17 @@
       - type: text
         text: (machine|drops1_label)
         y: 32
-        style: dmd_big
+        style: big
         color: red
         anchor_y: top
       - type: text
         text: (machine|drops1_name)
-        style: dmd_big
+        style: big
         color: dmd_blue
       - type: text
         text: (machine|drops1_value)
         y: 0
-        style: dmd_big
+        style: big
         color: dmd_orange
         number_grouping: true
         anchor_y: bottom
@@ -347,17 +347,17 @@
       - type: text
         text: (machine|missiles1_label)
         y: 32
-        style: dmd_big
+        style: big
         color: red
         anchor_y: top
       - type: text
         text: (machine|missiles1_name)
-        style: dmd_big
+        style: big
         color: dmd_blue
       - type: text
         text: (machine|missiles1_value)
         y: 0
-        style: dmd_big
+        style: big
         color: dmd_orange
         number_grouping: true
         anchor_y: bottom
@@ -369,17 +369,17 @@
       - type: text
         text: (machine|power_bombs1_label)
         y: 32
-        style: dmd_big
+        style: big
         color: red
         anchor_y: top
       - type: text
         text: (machine|power_bombs1_name)
-        style: dmd_big
+        style: big
         color: dmd_blue
       - type: text
         text: (machine|power_bombs1_value)
         y: 0
-        style: dmd_big
+        style: big
         color: dmd_orange
         number_grouping: true
         anchor_y: bottom
@@ -390,7 +390,7 @@
       widgets:
       - type: Text
         text: PRESS START
-        style: dmd_big
+        style: big
         y: 10
         animations:
           pre_show_slide:
@@ -404,7 +404,7 @@
       - type: Text
         text: (machine|credits_string)
         color: green
-        style: dmd_big
+        style: big
         y: 18
         anchor_y: bottom
       transition:
@@ -428,7 +428,7 @@
       widgets:
       - type: Text
         text: MISSION PINBALL
-        style: dmd_big
+        style: big
         color: red
       transition:
          type: move_in
@@ -521,12 +521,12 @@
       widgets:
       - type: Text
         text: DOUBLE
-        style: dmd_big
+        style: big
         color: dmd_orange
         y: 25
       - type: Text
         text: DANGER
-        style: dmd_big
+        style: big
         color: dmd_orange
         y: 13
       - type: Text

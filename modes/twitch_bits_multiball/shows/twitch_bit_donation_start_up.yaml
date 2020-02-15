@@ -15,12 +15,12 @@
       - type: text
         text: (machine|twitch_last_bits_user)
         color: red
-        style: dmd_big
+        style: big
         y: 20
       - type: text
         text: (machine|twitch_last_bits_amount) BITS!
         color: red
-        style: dmd_big
+        style: big
         y: 7
         animations:
           pre_show_slide:

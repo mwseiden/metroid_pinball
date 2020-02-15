@@ -45,7 +45,7 @@
         color: dmd_orange
         number_grouping: true
         min_digits: 2
-        style: dmd_big
+        style: big
       - type: text
         text: Ball (ball)
         color: "FF6030"

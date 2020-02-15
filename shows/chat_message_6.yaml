@@ -7,7 +7,7 @@
       - type: text
         text: (machine|twitch_last_chat_user)
         color: red
-        style: dmd_big
+        style: big
         anchor_y: top
         y: 32
       - type: text
@@ -36,7 +36,7 @@
       - type: text
         text: (machine|twitch_last_chat_user)
         color: red
-        style: dmd_big
+        style: big
         anchor_y: top
         y: 32
       - type: text

@@ -7,7 +7,7 @@
       - type: text
         text: CHARGING!
         color: red
-        style: dmd_big
+        style: big
         y: 20
         x: 80
       - type: text

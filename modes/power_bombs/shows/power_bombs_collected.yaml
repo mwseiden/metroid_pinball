@@ -19,7 +19,7 @@
       - type: text
         text: (player|power_bombs)
         color: red
-        style: dmd_big
+        style: big
         y: 9
         x: 50
       - type: image

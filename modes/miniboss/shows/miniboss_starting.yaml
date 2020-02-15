@@ -7,5 +7,5 @@
       - type: text
         text: MINIBOSS!
         color: red
-        style: dmd_big
+        style: big
 

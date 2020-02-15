@@ -6,5 +6,5 @@
       widgets:
       - type: text
         text: BAO
-        style: dmd_big
+        style: big
         color: '008000'

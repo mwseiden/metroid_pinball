@@ -34,7 +34,7 @@ slides:
     widgets:
       - type: text
         text: BONUS
-        style: dmd_big
+        style: big
   bonus_ramp_slide:
     - type: text
       text: Ramps (player|ramps)

@@ -13,7 +13,7 @@
       - type: text
         text: (player|missiles)
         color: red
-        style: dmd_big
+        style: big
         y: 10
         x: 80
       - type: image

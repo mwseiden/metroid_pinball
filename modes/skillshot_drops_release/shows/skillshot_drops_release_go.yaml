@@ -6,7 +6,7 @@
       widgets:
       - type: text
         text: GO!!
-        style: dmd_big
+        style: big
         color: red
         animations:
           pre_show_slide:

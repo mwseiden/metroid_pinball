@@ -7,10 +7,10 @@
       - type: text
         text: REACTOR
         color: red
-        style: dmd_big
+        style: big
         y: 22
       - type: text
         text: ACTIVATED!
         color: red
-        style: dmd_big
+        style: big
         y: 11

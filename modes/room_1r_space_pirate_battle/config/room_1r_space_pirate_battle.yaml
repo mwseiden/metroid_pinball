@@ -237,7 +237,7 @@ slides:
       - type: text
         text: SUPER KILL!!!
         color: 'FF00FF'
-        style: dmd_big
+        style: big
         animations:
           pre_show_slide:
             - property: opacity

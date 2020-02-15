@@ -32,7 +32,7 @@
       widgets:
       - type: text
         text: SKILLSHOT!
-        style: dmd_big
+        style: big
         color: red
         animations:
           pre_show_slide:
@@ -71,7 +71,7 @@
       widgets:
       - type: text
         text: 25000
-        style: dmd_big
+        style: big
         color: white
       transition:
          type: push

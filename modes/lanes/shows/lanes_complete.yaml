@@ -6,11 +6,11 @@
       widgets:
       - type: text
         text: OUTLANE SAVE
-        style: dmd_big
+        style: big
         color: green
         y: 22
       - type: text
         text: COLLECTED
-        style: dmd_big
+        style: big
         color: green
         y: 11

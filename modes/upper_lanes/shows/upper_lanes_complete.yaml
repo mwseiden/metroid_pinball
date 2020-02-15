@@ -6,5 +6,5 @@
       widgets:
       - type: text
         text: UPPER LANES!
-        style: dmd_big
+        style: big
         color: green
