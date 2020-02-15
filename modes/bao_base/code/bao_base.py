@@ -18,15 +18,15 @@ class BaoBase(Mode):
         super().mode_start(**kwargs)
 
     def event_add_a_ball(self, **kwargs):
-        self.machine.set_machine_var('bao_balls_locked', self.machine.get_machine_var('bao_balls_locked') + 1)
+        self.machine.variables.set_machine_var('bao_balls_locked', self.machine.get_machine_var('bao_balls_locked') + 1)
         self.machine.playfield.add_ball()
 
     def event_release_locked_balls(self, **kwargs):
-        self.machine.set_machine_var('bao_balls_locked', 0)
+        self.machine.variables.set_machine_var('bao_balls_locked', 0)
         self.machine.game.balls_in_play += 2
 
     def event_initialize(self, **kwargs):
-        self.machine.set_machine_var('bao_balls_locked', 0)
+        self.machine.variables.set_machine_var('bao_balls_locked', 0)
 
     def event_pick_shots(self, **kwargs):
         self.machine.events.post('bao_enable_final_shot_' + str(randint(1, 6)))
