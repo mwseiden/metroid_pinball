@@ -259,8 +259,19 @@ slide_player:
     room_1r_super_kill_slide:
       expire: 3.4s
 
+sounds:
+  room_1r_pirate_defeated:
+    file: room_1r_pirate_defeated.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
 sound_player:
   multiball_room_1r_battle_started: multiball_alt_3
+  shoot_space_pirates_shot_group_lit_hit: room_1r_pirate_defeated
+  room_1r_kill_pirates: shoot_the_flashing_targets
 
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
@@ -284,7 +295,7 @@ event_player:
   room_1r_start_shot_7_hit: room_1r_kill_pirates
   room_1r_start_shot_8_hit: room_1r_kill_pirates
   room_1r_start_shot_9_hit: room_1r_super_kill, logicblock_room_1r_battle_sequence_complete
-
+  
 variable_player:
   mode_room_1r_space_pirate_battle_started:
     has_chosen_landing_site:
@@ -302,20 +313,22 @@ variable_player:
       int: 1
       action: set
   room_1r_start_shot_1_hit:
-    score: 30000
+    score: ((current_player.area_bonus_e + 1) * 30000) * current_player.multiplier
   room_1r_start_shot_2_hit:
-    score: 50000
+    score: ((current_player.area_bonus_ne + 1) * 50000) * current_player.multiplier
   room_1r_start_shot_3_hit:
-    score: 10000
+    score: ((current_player.area_bonus_nw + 1) * 10000) * current_player.multiplier
   room_1r_start_shot_4_hit:
-    score: 15000
+    score: ((current_player.area_bonus_w + 1) * 15000) * current_player.multiplier
   room_1r_start_shot_5_hit:
-    score: 10000
+    score: ((current_player.area_bonus_ne + 1) * 10000) * current_player.multiplier
   room_1r_start_shot_6_hit:
-    score: 20000
+    score: ((current_player.area_bonus_nw + 1) * 20000) * current_player.multiplier
   room_1r_start_shot_7_hit:
-    score: 30000
+    score: ((current_player.area_bonus_nw + 1) * 30000) * current_player.multiplier
   room_1r_start_shot_8_hit:
-    score: 20000
+    score: ((current_player.area_bonus_w + 1) * 20000) * current_player.multiplier
   room_1r_start_shot_9_hit:
-    score: 300000
+    score: ((current_player.area_bonus_nw + 1) * 300000) * current_player.multiplier
+  shoot_space_pirates_shot_group_lit_hit:
+    score: (33300 * current_player.ball) * current_player.multiplier
