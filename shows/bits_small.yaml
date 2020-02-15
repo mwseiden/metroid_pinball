@@ -22,4 +22,4 @@
             - property: opacity
               value: 1
               duration: .2s
-              repeat: -1
+              repeat: false

@@ -42,7 +42,7 @@
             - property: opacity
               value: 1
               duration: .5s
-              repeat: -1
+              repeat: false
       - type: image
         image: pinball_26
         x: 21

@@ -246,7 +246,7 @@ slides:
             - property: opacity
               value: 1
               duration: .5s
-              repeat: -1
+              repeat: false
 
 slide_player:
   mode_room_1r_space_pirate_battle_started:
