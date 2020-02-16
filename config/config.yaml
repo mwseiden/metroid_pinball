@@ -9,6 +9,10 @@ fast:
   ports: /dev/ttyUSB1, /dev/ttyUSB2
   watchdog: 1500
   # net_buffer: 200
+  firmware_updates:
+    - type: net
+      version: "1.05"
+      file: "firmware/20180823_FP_Ver1_05.txt"
 
 fadecandy:
   dithering: True
