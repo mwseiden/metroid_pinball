@@ -18,7 +18,7 @@ class BaoBase(Mode):
         super().mode_start(**kwargs)
 
     def event_add_a_ball(self, **kwargs):
-        self.machine.variables.set_machine_var('bao_balls_locked', self.machine.get_machine_var('bao_balls_locked') + 1)
+        self.machine.variables.set_machine_var('bao_balls_locked', self.machine.variables.get_machine_var('bao_balls_locked') + 1)
         self.machine.playfield.add_ball()
 
     def event_release_locked_balls(self, **kwargs):
