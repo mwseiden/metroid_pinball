@@ -12,6 +12,8 @@ mode_settings:
       score: 5000 * current_player.power_bombs
     - event: bonus_ramps
       score: 1000 * current_player.ramps
+    - event: bonus_drop_targets
+      score: 1000 * current_player.drops
     - event: bonus_super_missiles
       score: 1000 * current_player.super_missiles
     - event: bonus_capsides
@@ -28,6 +30,7 @@ slide_player:
   bonus_power_bombs: bonus_power_bombs_slide
   bonus_super_missiles: bonus_super_missiles_slide
   bonus_emergency_landing: bonus_emergency_landing_slide
+  bonus_drop_targets: bonus_drops_slide
 
 slides:
   bonus_start_slide:
@@ -98,6 +101,15 @@ slides:
       text: (score)
       style: dmd_med
       y: 12
+  bonus_drops_slide:
+    - type: text
+      text: Drop Targets (player|drops)
+      style: dmd_med
+      y: 20
+    - type: text
+      text: (score)
+      style: dmd_med
+      y: 12
 
 sounds:
   bonus_award:
@@ -148,6 +160,12 @@ show_player:
       speed: 20
       loops: 0
       priority: 2000
+  bonus_drop_targets:
+    bonus_lights_drops:
+      key: bonus_lights
+      speed: 20
+      loops: 0
+      priority: 2000
   bonus_emergency_landing:
     bonus_lights_emergency_landing:
       key: bonus_lights
@@ -167,6 +185,7 @@ event_player:
   bonus_power_bombs: bonus_sound_awarded
   bonus_capsides: bonus_sound_awarded
   bonus_emergency_landing: bonus_sound_awarded
+  bonus_drop_targets: bonus_sound_awarded
 
 sound_player:
   bonus_sound_start: bonus
