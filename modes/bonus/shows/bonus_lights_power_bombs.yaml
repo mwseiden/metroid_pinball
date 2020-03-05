@@ -1,0 +1,337 @@
+#show_version=5
+- time: 0
+  lights:
+    gi_bomb_bank: '00F900'
+    led_bomb_bank_1: '00F900'
+    led_bomb_bank_2: '00F900'
+    led_bomb_bank_3: '00F900'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00F400'
+    led_bomb_bank_1: '00F400'
+    led_bomb_bank_2: '00F400'
+    led_bomb_bank_3: '00F400'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00EF00'
+    led_bomb_bank_1: '00EF00'
+    led_bomb_bank_2: '00EF00'
+    led_bomb_bank_3: '00EF00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00E900'
+    led_bomb_bank_1: '00E900'
+    led_bomb_bank_2: '00E900'
+    led_bomb_bank_3: '00E900'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00E400'
+    led_bomb_bank_1: '00E400'
+    led_bomb_bank_2: '00E400'
+    led_bomb_bank_3: '00E400'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00DF00'
+    led_bomb_bank_1: '00DF00'
+    led_bomb_bank_2: '00DF00'
+    led_bomb_bank_3: '00DF00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00D900'
+    led_bomb_bank_1: '00D900'
+    led_bomb_bank_2: '00D900'
+    led_bomb_bank_3: '00D900'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00D400'
+    led_bomb_bank_1: '00D400'
+    led_bomb_bank_2: '00D400'
+    led_bomb_bank_3: '00D400'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00CF00'
+    led_bomb_bank_1: '00CF00'
+    led_bomb_bank_2: '00CF00'
+    led_bomb_bank_3: '00CF00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00C900'
+    led_bomb_bank_1: '00C900'
+    led_bomb_bank_2: '00C900'
+    led_bomb_bank_3: '00C900'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00C400'
+    led_bomb_bank_1: '00C400'
+    led_bomb_bank_2: '00C400'
+    led_bomb_bank_3: '00C400'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00BF00'
+    led_bomb_bank_1: '00BF00'
+    led_bomb_bank_2: '00BF00'
+    led_bomb_bank_3: '00BF00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00B900'
+    led_bomb_bank_1: '00B900'
+    led_bomb_bank_2: '00B900'
+    led_bomb_bank_3: '00B900'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00B400'
+    led_bomb_bank_1: '00B400'
+    led_bomb_bank_2: '00B400'
+    led_bomb_bank_3: '00B400'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00AF00'
+    led_bomb_bank_1: '00AF00'
+    led_bomb_bank_2: '00AF00'
+    led_bomb_bank_3: '00AF00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00AA00'
+    led_bomb_bank_1: '00AA00'
+    led_bomb_bank_2: '00AA00'
+    led_bomb_bank_3: '00AA00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '00A400'
+    led_bomb_bank_1: '00A400'
+    led_bomb_bank_2: '00A400'
+    led_bomb_bank_3: '00A400'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '009F00'
+    led_bomb_bank_1: '009F00'
+    led_bomb_bank_2: '009F00'
+    led_bomb_bank_3: '009F00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '009A00'
+    led_bomb_bank_1: '009A00'
+    led_bomb_bank_2: '009A00'
+    led_bomb_bank_3: '009A00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '009400'
+    led_bomb_bank_1: '009400'
+    led_bomb_bank_2: '009400'
+    led_bomb_bank_3: '009400'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '008F00'
+    led_bomb_bank_1: '008F00'
+    led_bomb_bank_2: '008F00'
+    led_bomb_bank_3: '008F00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '008A00'
+    led_bomb_bank_1: '008A00'
+    led_bomb_bank_2: '008A00'
+    led_bomb_bank_3: '008A00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '008400'
+    led_bomb_bank_1: '008400'
+    led_bomb_bank_2: '008400'
+    led_bomb_bank_3: '008400'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '007F00'
+    led_bomb_bank_1: '007F00'
+    led_bomb_bank_2: '007F00'
+    led_bomb_bank_3: '007F00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '007A00'
+    led_bomb_bank_1: '007A00'
+    led_bomb_bank_2: '007A00'
+    led_bomb_bank_3: '007A00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '007400'
+    led_bomb_bank_1: '007400'
+    led_bomb_bank_2: '007400'
+    led_bomb_bank_3: '007400'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '006F00'
+    led_bomb_bank_1: '006F00'
+    led_bomb_bank_2: '006F00'
+    led_bomb_bank_3: '006F00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '006A00'
+    led_bomb_bank_1: '006A00'
+    led_bomb_bank_2: '006A00'
+    led_bomb_bank_3: '006A00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '006400'
+    led_bomb_bank_1: '006400'
+    led_bomb_bank_2: '006400'
+    led_bomb_bank_3: '006400'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '005F00'
+    led_bomb_bank_1: '005F00'
+    led_bomb_bank_2: '005F00'
+    led_bomb_bank_3: '005F00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '005A00'
+    led_bomb_bank_1: '005A00'
+    led_bomb_bank_2: '005A00'
+    led_bomb_bank_3: '005A00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '005500'
+    led_bomb_bank_1: '005500'
+    led_bomb_bank_2: '005500'
+    led_bomb_bank_3: '005500'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '004F00'
+    led_bomb_bank_1: '004F00'
+    led_bomb_bank_2: '004F00'
+    led_bomb_bank_3: '004F00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '004A00'
+    led_bomb_bank_1: '004A00'
+    led_bomb_bank_2: '004A00'
+    led_bomb_bank_3: '004A00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '004500'
+    led_bomb_bank_1: '004500'
+    led_bomb_bank_2: '004500'
+    led_bomb_bank_3: '004500'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '003F00'
+    led_bomb_bank_1: '003F00'
+    led_bomb_bank_2: '003F00'
+    led_bomb_bank_3: '003F00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '003A00'
+    led_bomb_bank_1: '003A00'
+    led_bomb_bank_2: '003A00'
+    led_bomb_bank_3: '003A00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '003500'
+    led_bomb_bank_1: '003500'
+    led_bomb_bank_2: '003500'
+    led_bomb_bank_3: '003500'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '002F00'
+    led_bomb_bank_1: '002F00'
+    led_bomb_bank_2: '002F00'
+    led_bomb_bank_3: '002F00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '002A00'
+    led_bomb_bank_1: '002A00'
+    led_bomb_bank_2: '002A00'
+    led_bomb_bank_3: '002A00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '002500'
+    led_bomb_bank_1: '002500'
+    led_bomb_bank_2: '002500'
+    led_bomb_bank_3: '002500'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '001F00'
+    led_bomb_bank_1: '001F00'
+    led_bomb_bank_2: '001F00'
+    led_bomb_bank_3: '001F00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '001A00'
+    led_bomb_bank_1: '001A00'
+    led_bomb_bank_2: '001A00'
+    led_bomb_bank_3: '001A00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '001500'
+    led_bomb_bank_1: '001500'
+    led_bomb_bank_2: '001500'
+    led_bomb_bank_3: '001500'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '000F00'
+    led_bomb_bank_1: '000F00'
+    led_bomb_bank_2: '000F00'
+    led_bomb_bank_3: '000F00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '000A00'
+    led_bomb_bank_1: '000A00'
+    led_bomb_bank_2: '000A00'
+    led_bomb_bank_3: '000A00'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '000500'
+    led_bomb_bank_1: '000500'
+    led_bomb_bank_2: '000500'
+    led_bomb_bank_3: '000500'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '000000'
+    led_bomb_bank_1: '000000'
+    led_bomb_bank_2: '000000'
+    led_bomb_bank_3: '000000'
+    

@@ -1,0 +1,385 @@
+#show_version=5
+- time: 0
+  lights:
+    gi_middle_sling: 'F90000'
+    gi_missile_bank: 'F90000'
+    led_missile_bank_1: 'F90000'
+    led_missile_bank_2: 'F90000'
+    led_missile_bank_3: 'F90000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'F40000'
+    gi_missile_bank: 'F40000'
+    led_missile_bank_1: 'F40000'
+    led_missile_bank_2: 'F40000'
+    led_missile_bank_3: 'F40000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'EF0000'
+    gi_missile_bank: 'EF0000'
+    led_missile_bank_1: 'EF0000'
+    led_missile_bank_2: 'EF0000'
+    led_missile_bank_3: 'EF0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'E90000'
+    gi_missile_bank: 'E90000'
+    led_missile_bank_1: 'E90000'
+    led_missile_bank_2: 'E90000'
+    led_missile_bank_3: 'E90000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'E40000'
+    gi_missile_bank: 'E40000'
+    led_missile_bank_1: 'E40000'
+    led_missile_bank_2: 'E40000'
+    led_missile_bank_3: 'E40000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'DF0000'
+    gi_missile_bank: 'DF0000'
+    led_missile_bank_1: 'DF0000'
+    led_missile_bank_2: 'DF0000'
+    led_missile_bank_3: 'DF0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'D90000'
+    gi_missile_bank: 'D90000'
+    led_missile_bank_1: 'D90000'
+    led_missile_bank_2: 'D90000'
+    led_missile_bank_3: 'D90000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'D40000'
+    gi_missile_bank: 'D40000'
+    led_missile_bank_1: 'D40000'
+    led_missile_bank_2: 'D40000'
+    led_missile_bank_3: 'D40000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'CF0000'
+    gi_missile_bank: 'CF0000'
+    led_missile_bank_1: 'CF0000'
+    led_missile_bank_2: 'CF0000'
+    led_missile_bank_3: 'CF0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'C90000'
+    gi_missile_bank: 'C90000'
+    led_missile_bank_1: 'C90000'
+    led_missile_bank_2: 'C90000'
+    led_missile_bank_3: 'C90000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'C40000'
+    gi_missile_bank: 'C40000'
+    led_missile_bank_1: 'C40000'
+    led_missile_bank_2: 'C40000'
+    led_missile_bank_3: 'C40000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'BF0000'
+    gi_missile_bank: 'BF0000'
+    led_missile_bank_1: 'BF0000'
+    led_missile_bank_2: 'BF0000'
+    led_missile_bank_3: 'BF0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'B90000'
+    gi_missile_bank: 'B90000'
+    led_missile_bank_1: 'B90000'
+    led_missile_bank_2: 'B90000'
+    led_missile_bank_3: 'B90000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'B40000'
+    gi_missile_bank: 'B40000'
+    led_missile_bank_1: 'B40000'
+    led_missile_bank_2: 'B40000'
+    led_missile_bank_3: 'B40000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'AF0000'
+    gi_missile_bank: 'AF0000'
+    led_missile_bank_1: 'AF0000'
+    led_missile_bank_2: 'AF0000'
+    led_missile_bank_3: 'AF0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'AA0000'
+    gi_missile_bank: 'AA0000'
+    led_missile_bank_1: 'AA0000'
+    led_missile_bank_2: 'AA0000'
+    led_missile_bank_3: 'AA0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'A40000'
+    gi_missile_bank: 'A40000'
+    led_missile_bank_1: 'A40000'
+    led_missile_bank_2: 'A40000'
+    led_missile_bank_3: 'A40000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '9F0000'
+    gi_missile_bank: '9F0000'
+    led_missile_bank_1: '9F0000'
+    led_missile_bank_2: '9F0000'
+    led_missile_bank_3: '9F0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '9A0000'
+    gi_missile_bank: '9A0000'
+    led_missile_bank_1: '9A0000'
+    led_missile_bank_2: '9A0000'
+    led_missile_bank_3: '9A0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '940000'
+    gi_missile_bank: '940000'
+    led_missile_bank_1: '940000'
+    led_missile_bank_2: '940000'
+    led_missile_bank_3: '940000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '8F0000'
+    gi_missile_bank: '8F0000'
+    led_missile_bank_1: '8F0000'
+    led_missile_bank_2: '8F0000'
+    led_missile_bank_3: '8F0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '8A0000'
+    gi_missile_bank: '8A0000'
+    led_missile_bank_1: '8A0000'
+    led_missile_bank_2: '8A0000'
+    led_missile_bank_3: '8A0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '840000'
+    gi_missile_bank: '840000'
+    led_missile_bank_1: '840000'
+    led_missile_bank_2: '840000'
+    led_missile_bank_3: '840000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '7F0000'
+    gi_missile_bank: '7F0000'
+    led_missile_bank_1: '7F0000'
+    led_missile_bank_2: '7F0000'
+    led_missile_bank_3: '7F0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '7A0000'
+    gi_missile_bank: '7A0000'
+    led_missile_bank_1: '7A0000'
+    led_missile_bank_2: '7A0000'
+    led_missile_bank_3: '7A0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '740000'
+    gi_missile_bank: '740000'
+    led_missile_bank_1: '740000'
+    led_missile_bank_2: '740000'
+    led_missile_bank_3: '740000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '6F0000'
+    gi_missile_bank: '6F0000'
+    led_missile_bank_1: '6F0000'
+    led_missile_bank_2: '6F0000'
+    led_missile_bank_3: '6F0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '6A0000'
+    gi_missile_bank: '6A0000'
+    led_missile_bank_1: '6A0000'
+    led_missile_bank_2: '6A0000'
+    led_missile_bank_3: '6A0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '640000'
+    gi_missile_bank: '640000'
+    led_missile_bank_1: '640000'
+    led_missile_bank_2: '640000'
+    led_missile_bank_3: '640000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '5F0000'
+    gi_missile_bank: '5F0000'
+    led_missile_bank_1: '5F0000'
+    led_missile_bank_2: '5F0000'
+    led_missile_bank_3: '5F0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '5A0000'
+    gi_missile_bank: '5A0000'
+    led_missile_bank_1: '5A0000'
+    led_missile_bank_2: '5A0000'
+    led_missile_bank_3: '5A0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '550000'
+    gi_missile_bank: '550000'
+    led_missile_bank_1: '550000'
+    led_missile_bank_2: '550000'
+    led_missile_bank_3: '550000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '4F0000'
+    gi_missile_bank: '4F0000'
+    led_missile_bank_1: '4F0000'
+    led_missile_bank_2: '4F0000'
+    led_missile_bank_3: '4F0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '4A0000'
+    gi_missile_bank: '4A0000'
+    led_missile_bank_1: '4A0000'
+    led_missile_bank_2: '4A0000'
+    led_missile_bank_3: '4A0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '450000'
+    gi_missile_bank: '450000'
+    led_missile_bank_1: '450000'
+    led_missile_bank_2: '450000'
+    led_missile_bank_3: '450000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '3F0000'
+    gi_missile_bank: '3F0000'
+    led_missile_bank_1: '3F0000'
+    led_missile_bank_2: '3F0000'
+    led_missile_bank_3: '3F0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '3A0000'
+    gi_missile_bank: '3A0000'
+    led_missile_bank_1: '3A0000'
+    led_missile_bank_2: '3A0000'
+    led_missile_bank_3: '3A0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '350000'
+    gi_missile_bank: '350000'
+    led_missile_bank_1: '350000'
+    led_missile_bank_2: '350000'
+    led_missile_bank_3: '350000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '2F0000'
+    gi_missile_bank: '2F0000'
+    led_missile_bank_1: '2F0000'
+    led_missile_bank_2: '2F0000'
+    led_missile_bank_3: '2F0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '2A0000'
+    gi_missile_bank: '2A0000'
+    led_missile_bank_1: '2A0000'
+    led_missile_bank_2: '2A0000'
+    led_missile_bank_3: '2A0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '250000'
+    gi_missile_bank: '250000'
+    led_missile_bank_1: '250000'
+    led_missile_bank_2: '250000'
+    led_missile_bank_3: '250000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '1F0000'
+    gi_missile_bank: '1F0000'
+    led_missile_bank_1: '1F0000'
+    led_missile_bank_2: '1F0000'
+    led_missile_bank_3: '1F0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '1A0000'
+    gi_missile_bank: '1A0000'
+    led_missile_bank_1: '1A0000'
+    led_missile_bank_2: '1A0000'
+    led_missile_bank_3: '1A0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '150000'
+    gi_missile_bank: '150000'
+    led_missile_bank_1: '150000'
+    led_missile_bank_2: '150000'
+    led_missile_bank_3: '150000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '0F0000'
+    gi_missile_bank: '0F0000'
+    led_missile_bank_1: '0F0000'
+    led_missile_bank_2: '0F0000'
+    led_missile_bank_3: '0F0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '0A0000'
+    gi_missile_bank: '0A0000'
+    led_missile_bank_1: '0A0000'
+    led_missile_bank_2: '0A0000'
+    led_missile_bank_3: '0A0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '050000'
+    gi_missile_bank: '050000'
+    led_missile_bank_1: '050000'
+    led_missile_bank_2: '050000'
+    led_missile_bank_3: '050000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '000000'
+    gi_missile_bank: '000000'
+    led_missile_bank_1: '000000'
+    led_missile_bank_2: '000000'
+    led_missile_bank_3: '000000'
+    
