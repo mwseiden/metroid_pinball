@@ -101,9 +101,16 @@ slides:
 
 show_player:
   # bonus_ramps: bonus_ramp_slide
+  mode_bonus_started:
+    bonus_lights_introduction:
+      key: bonus_lights
+      speed: 60
+      loops: 0
+      priority: 2000
   bonus_switches:
     bonus_lights_switches:
-      speed: 30
+      key: bonus_lights
+      speed: 60
       loops: 0
       priority: 2000
   # bonus_capsides: bonus_capsides_slide
