@@ -99,6 +99,15 @@ slides:
       style: dmd_med
       y: 12
 
+sounds:
+  bonus_award:
+    file: bonus_award.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+
 show_player:
   mode_bonus_started:
     solid_black:
@@ -142,6 +151,12 @@ event_player:
   mode_bonus_started:
     cmd_backbox_show:
       show_type: none
+  bonus_start{machine.next_game_goren == 0}: bonus_sound_start
+  bonus_switches: bonus_sound_awarded
+  bonus_ramps: bonus_sound_awarded
+  bonus_missiles: bonus_sound_awarded
+  bonus_power_bombs: bonus_sound_awarded
 
 sound_player:
-  bonus_start: bonus
+  bonus_sound_start: bonus
+  bonus_sound_awarded: bonus_award
