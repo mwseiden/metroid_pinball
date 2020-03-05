@@ -176,11 +176,11 @@ show_player:
   twitch_new_chat_message{line_count <= 3}:
     chat_message_3:
       loops: 0
-      priority: 200
+      priority: 20000
   twitch_new_chat_message{line_count > 3 and line_count <= 1000}:
     chat_message_6:
       loops: 0
-      priority: 200
+      priority: 20000
   base_bits_small:
     bits_small:
       loops: 0
