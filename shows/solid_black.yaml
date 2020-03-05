@@ -1,122 +1,92 @@
 #show_version=5
 - time: 0
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
+  lights:
+    gi_back_center: '000000'
+    gi_back_left: '000000'
+    gi_back_right: '000000'
+    gi_behind_zero_suit: '000000'
+    gi_bomb_bank: '000000'
+    gi_left_ball_guide: '000000'
+    gi_left_sling_bottom: '000000'
+    gi_left_sling_top: '000000'
+    gi_middle_sling: '000000'
+    gi_missile_bank: '000000'
+    gi_right_ball_guide: '000000'
+    gi_right_sling_bottom: '000000'
+    gi_right_sling_top: '000000'
+    gi_side_bank: '000000'
+    gi_strip_1: '000000'
+    gi_strip_10: '000000'
+    gi_strip_2: '000000'
+    gi_strip_3: '000000'
+    gi_strip_4: '000000'
+    gi_strip_5: '000000'
+    gi_strip_6: '000000'
+    gi_strip_7: '000000'
+    gi_strip_8: '000000'
+    gi_strip_9: '000000'
+    gi_under_side_ramp: '000000'
+    gi_upgrade_bank: '000000'
+    gi_upper_flipper_bottom: '000000'
+    gi_upper_flipper_top: '000000'
+    led_2x: '000000'
+    led_3x: '000000'
+    led_ball_save: '000000'
+    led_bomb_bank_1: '000000'
+    led_bomb_bank_2: '000000'
+    led_bomb_bank_3: '000000'
+    led_boss_draygon: '000000'
+    led_boss_kraid: '000000'
+    led_boss_phantoon: '000000'
+    led_boss_ridley: '000000'
+    led_captive_ball: '000000'
+    led_drop_1: '000000'
+    led_drop_2: '000000'
+    led_drop_3: '000000'
+    led_enter_left_orbit: '000000'
+    led_enter_ramp: '000000'
+    led_enter_right_orbit: '000000'
+    led_enter_scoop: '000000'
+    led_enter_secret_passage: '000000'
+    led_enter_side_ramp: '000000'
+    led_goal_1: '000000'
+    led_goal_2: '000000'
+    led_goal_3: '000000'
+    led_goal_4: '000000'
+    led_left_inlane: '000000'
+    led_left_kickback: '000000'
+    led_left_outlane: '000000'
+    led_missile_bank_1: '000000'
+    led_missile_bank_2: '000000'
+    led_missile_bank_3: '000000'
+    led_motherbrain_1: '000000'
+    led_motherbrain_2: '000000'
+    led_motherbrain_3: '000000'
+    led_pit: '000000'
+    led_pop_1: '000000'
+    led_pop_2: '000000'
+    led_pop_3: '000000'
+    led_right_inlane: '000000'
+    led_right_kickback: '000000'
+    led_right_outlane: '000000'
+    led_rollover: '000000'
+    led_scanner_center: '000000'
+    led_scanner_e: '000000'
+    led_scanner_ne: '000000'
+    led_scanner_nw: '000000'
+    led_scanner_se: '000000'
+    led_scanner_sw: '000000'
+    led_scanner_w: '000000'
+    led_side_1: '000000'
+    led_side_2: '000000'
+    led_side_3: '000000'
+    led_thin_orange: '000000'
+    led_upgrade_bank_1: '000000'
+    led_upgrade_bank_2: '000000'
+    led_upgrade_bank_3: '000000'
+    led_upper_playfield_1: '000000'
+    led_upper_playfield_2: '000000'
+    led_upper_playfield_3: '000000'
+    led_wall_jump: '000000'
+    led_zero_suit: '000000'
     
