@@ -112,13 +112,61 @@ slides:
       y: 12
 
 sounds:
-  bonus_award:
-    file: bonus_award.wav
+  bonus_chord_1:
+    file: bonus_chord_1.wav
     streaming: False
     track: sfx
     priority: 50
     volume: 0.7
     max_queue_time: None
+  bonus_chord_2:
+    file: bonus_chord_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bonus_chord_3:
+    file: bonus_chord_3.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bonus_chord_4:
+    file: bonus_chord_4.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bonus_chord_5:
+    file: bonus_chord_5.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bonus_chord_6:
+    file: bonus_chord_6.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+
+sound_pools:
+  bonus_award:
+    load: preload
+    type: random_force_all
+    track: sfx
+    sounds:
+      - bonus_chord_1
+      - bonus_chord_2
+      - bonus_chord_3
+      - bonus_chord_4
+      - bonus_chord_5
+      - bonus_chord_6
 
 show_player:
   mode_bonus_started:
