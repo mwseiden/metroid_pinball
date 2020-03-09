@@ -211,7 +211,7 @@ show_player:
   bonus_drop_targets:
     bonus_lights_drops:
       key: bonus_lights
-      speed: 30
+      speed: 50
       loops: 0
       priority: 2000
   bonus_emergency_landing:
