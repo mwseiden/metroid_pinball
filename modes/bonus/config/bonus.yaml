@@ -217,7 +217,7 @@ show_player:
   bonus_emergency_landing:
     bonus_lights_emergency_landing:
       key: bonus_lights
-      speed: 20
+      speed: 50
       loops: 0
       priority: 2000
 
