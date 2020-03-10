@@ -243,12 +243,11 @@ event_player:
   mode_bonus_started:
     cmd_backbox_show:
       show_type: none
-  bonus_start{machine.next_game_goren == 0}: bonus_sound_start
-  bonus_start:
     cmd_backbox_show_overlay:
       show_type: heat_up
       color: "FF4000"
       add_percentage: 1
+  bonus_start{machine.next_game_goren == 0}: bonus_sound_start
   bonus_switches:
     bonus_sound_awarded:
     cmd_backbox_show_overlay:
