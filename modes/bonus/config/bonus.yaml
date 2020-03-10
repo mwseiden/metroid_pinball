@@ -31,6 +31,7 @@ slide_player:
   bonus_super_missiles: bonus_super_missiles_slide
   bonus_emergency_landing: bonus_emergency_landing_slide
   bonus_drop_targets: bonus_drops_slide
+  bonus_total: bonus_total_slide
 
 slides:
   bonus_start_slide:
@@ -110,6 +111,15 @@ slides:
       text: (score)
       style: dmd_med
       y: 12
+  bonus_total_slide:
+    - type: text
+      text: TOTAL
+      style: dmd_big
+      y: 24
+    - type: text
+      text: (score)
+      style: dmd_big
+      y: 8
 
 sounds:
   bonus_chord_1:
@@ -233,12 +243,25 @@ event_player:
       show_type: sweep_vertical
       color: "FFFFFF"
       speed: 1
-      repeat: 4
+      repeat: 0
       direction: left
-
   bonus_ramps: bonus_sound_awarded
-  bonus_missiles: bonus_sound_awarded
-  bonus_power_bombs: bonus_sound_awarded
+  bonus_missiles:
+    bonus_sound_awarded:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "FF0000"
+      speed: 1
+      repeat: 1
+      direction: right
+  bonus_power_bombs:
+    bonus_sound_awarded:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "FFFF00"
+      speed: 1
+      repeat: 1
+      direction: left
   bonus_capsides: bonus_sound_awarded
   bonus_emergency_landing: bonus_sound_awarded
   bonus_drop_targets: bonus_sound_awarded
