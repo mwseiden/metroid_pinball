@@ -115,11 +115,11 @@ slides:
     - type: text
       text: TOTAL
       style: dmd_big
-      y: 24
+      y: 23
     - type: text
       text: (score)
       style: dmd_big
-      y: 8
+      y: 9
 
 sounds:
   bonus_chord_1:
@@ -159,6 +159,13 @@ sounds:
     max_queue_time: None
   bonus_chord_6:
     file: bonus_chord_6.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bonus_final:
+    file: bonus_final.wav
     streaming: False
     track: sfx
     priority: 50
@@ -281,8 +288,10 @@ event_player:
       show_type: sparkle
       color: "FFFFFF"
       count: 5
-      repeat: 30
+      repeat: 20
 
 sound_player:
   bonus_sound_start: bonus
   bonus_sound_awarded: bonus_award
+  bonus_total: bonus_final
+
