@@ -15,10 +15,10 @@ class HeatUp(DynamicBackBoxShow):
     def animate(self):
         super().animate()
 
-        if self.frame % 5 == 0:
+        if self.frame % 1 == 0:
             for strip_number in range(self.strip_count):
                 for index in range(10):
-                    value = (self.add_percentage * 10) - ((index + 1) * self.add_percentage) + (self.current_step * self.add_percentage)
+                    value = (self.add_percentage * index) - ((index + 1) * self.add_percentage) + (self.current_step * self.add_percentage)
      
                     if value > 100:
                         value = 100
