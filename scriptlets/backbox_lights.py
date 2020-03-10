@@ -128,7 +128,7 @@ class BackBoxLights(Scriptlet):
             self.machine,
             RGBColor(kwargs.get('background_color', '000000')),
             RGBColor(kwargs.get('color', '404040')),
-            int(kwargs.get('count', 10),
+            int(kwargs.get('count', 10)),
             int(kwargs.get('repeat', 0))
         )
 

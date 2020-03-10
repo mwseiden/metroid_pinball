@@ -20,12 +20,12 @@ class Sparkle(DynamicBackBoxShow):
     def animate(self):
         super().animate()
 
-        for sparkle_number in range(self.sparkle_count):
-            self.strips[self.sparkle_strips[sparkle_number]].set_color(self.sparkle_indexes[sparkle_number], self.sparkle_color)
+        for strip_number in range(self.strip_count):
+            self.strips[strip_number].set_all_colors(self.background_color)
 
         if not self.done:
-            for strip_number in range(self.strip_count):
-                self.strips[strip_number].set_all_colors(self.background_color)
+            for sparkle_number in range(self.sparkle_count):
+                self.strips[self.sparkle_strips[sparkle_number]].set_color(self.sparkle_indexes[sparkle_number], self.sparkle_color)
 
             if self.repeat > 0:
                 self.repeat = self.repeat - 1
