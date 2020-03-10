@@ -29,8 +29,8 @@ class HeatUp(DynamicBackBoxShow):
                     b = b * value / 100
 
                     self.strips[strip_number].set_color(index, RGBColor([r,g,b]))
-       
-                    self.current_step = self.current_step + 1 
+
+            self.current_step = self.current_step + 1 
 
 
     def is_finished(self):
