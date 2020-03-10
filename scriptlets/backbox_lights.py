@@ -9,6 +9,7 @@ from .lights.backbox.solid import Solid
 from .lights.backbox.sweep_horizontal import SweepHorizontal
 from .lights.backbox.sweep_vertical import SweepVertical
 from .lights.backbox.twinkle import Twinkle
+from .lights.backbox.sparkle import Sparkle
 
 class BackBoxLights(Scriptlet):
 
@@ -25,6 +26,7 @@ class BackBoxLights(Scriptlet):
             'sweep_horizontal': self.show_sweep_horizontal,
             'sweep_vertical': self.show_sweep_vertical,
             'twinkle': self.show_twinkle,
+            'sparkle': self.show_sparkle,
         }
 
         self.set_effects_to_default()
@@ -119,6 +121,15 @@ class BackBoxLights(Scriptlet):
             RGBColor(kwargs.get('background_color', '000000')),
             RGBColor(kwargs.get('twinkle_color', '404040')),
             int(kwargs.get('twinkle_count', 4))
+        )
+
+    def show_sparkle(self, **kwargs):
+        return Sparkle(
+            self.machine,
+            RGBColor(kwargs.get('background_color', '000000')),
+            RGBColor(kwargs.get('color', '404040')),
+            int(kwargs.get('count', 10),
+            int(kwargs.get('repeat', 0))
         )
 
     # private ----------------------------------------------------------------
