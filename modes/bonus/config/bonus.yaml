@@ -251,16 +251,16 @@ event_player:
     cmd_backbox_show_overlay:
       show_type: sweep_horizontal
       color: "FF0000"
-      speed: 2
-      repeat: 1
+      speed: 3
+      repeat: 0
       direction: left
   bonus_power_bombs:
     bonus_sound_awarded:
     cmd_backbox_show_overlay:
       show_type: sweep_horizontal
       color: "FFFF00"
-      speed: 2
-      repeat: 1
+      speed: 3
+      repeat: 0
       direction: right
   bonus_capsides: bonus_sound_awarded
   bonus_emergency_landing: bonus_sound_awarded
@@ -269,7 +269,8 @@ event_player:
     cmd_backbox_show_overlay:
       show_type: sparkle
       color: "FFFFFF"
-      repeat: 60
+      count: 5
+      repeat: 30
 
 sound_player:
   bonus_sound_start: bonus
