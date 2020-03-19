@@ -114,7 +114,7 @@ class BackBoxLights(Scriptlet):
             RGBColor(kwargs.get('color', '400000')),
             int(kwargs.get('speed', 4)),
             int(kwargs.get('repeat', 0)),
-            0 if kwargs.get('direction', 'left').lower() == 'left' else 1
+            0 if kwargs.get('direction', 'down').lower() == 'down' else 1
         )
 
     def show_twinkle(self, **kwargs):

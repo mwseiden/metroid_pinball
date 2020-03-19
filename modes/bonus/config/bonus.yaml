@@ -255,7 +255,7 @@ event_player:
       color: "FFFFFF"
       speed: 1
       repeat: 0
-      direction: left
+      direction: down
   bonus_ramps:
     bonus_sound_awarded:
     cmd_backbox_show_overlay:

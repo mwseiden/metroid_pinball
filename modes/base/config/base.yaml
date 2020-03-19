@@ -385,21 +385,21 @@ event_player:
       color: "A00000"
       speed: 1
       repeat: 4
-      direction: left
+      direction: down
   base_bits_medium:
     cmd_backbox_show_overlay:
       show_type: sweep_vertical
       color: "A00000"
       speed: 1
       repeat: 9
-      direction: left
+      direction: down
   base_bits_large:
     cmd_backbox_show_overlay:
       show_type: sweep_vertical
       color: "A00000"
       speed: 1
       repeat: 20
-      direction: left
+      direction: down
   twitch_flip_left:
     cmd_backbox_show_overlay:
       show_type: sweep_horizontal
@@ -431,6 +431,14 @@ event_player:
   mode_base_started{machine.next_game_bao == 1}: bao_base_started
   mode_base_started{machine.next_game_goren == 1}: gorens_lament_should_start
   base_skillshot_should_start: skillshot_should_start
+  ball_save_default_saving_ball:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: "FFFF00"
+      speed: 1
+      repeat: 1
+      direction: up
+
 
 variable_player:
   left_orbit_hit:
