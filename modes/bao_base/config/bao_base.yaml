@@ -718,6 +718,11 @@ sound_player:
   bao_ramp_shot_hit: bao_ramp
 
 event_player:
+  mode_bao_base_started:
+    cmd_backbox_show:
+      show_type: gradient
+      color_start: "FF00FF"
+      color_end: "00FF00"
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 0}: bao_enable_stage_1
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 1}: bao_enable_stage_2
   mode_bao_base_started{device.sequences.bao_progress_sequence.value == 2}: bao_enable_stage_3

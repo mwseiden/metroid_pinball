@@ -11,6 +11,7 @@ from .lights.backbox.sweep_vertical import SweepVertical
 from .lights.backbox.twinkle import Twinkle
 from .lights.backbox.sparkle import Sparkle
 from .lights.backbox.heat_up import HeatUp
+from .lights.backbox.gradient import Gradient
 
 class BackBoxLights(Scriptlet):
 
@@ -29,6 +30,7 @@ class BackBoxLights(Scriptlet):
             'twinkle': self.show_twinkle,
             'sparkle': self.show_sparkle,
             'heat_up': self.show_heat_up,
+            'gradient': self.show_gradient,
         }
 
         self.set_effects_to_default()
@@ -140,6 +142,13 @@ class BackBoxLights(Scriptlet):
             RGBColor(kwargs.get('color', 'FF0000')),
             int(kwargs.get('add_percentage', 5)),
             int(kwargs.get('steps', 20))
+        )
+
+    def show_gradient(self, **kwargs):
+        return Gradient(
+            self.machine,
+            RGBColor(kwargs.get('color', '000000')),
+            RGBColor(kwargs.get('color', '0000FF'))
         )
 
     # private ----------------------------------------------------------------
