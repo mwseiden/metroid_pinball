@@ -22,4 +22,4 @@ class Gradient(DynamicBackBoxShow):
                 g = ((g1 - g2) * (index + 1)) / 10
                 b = ((b1 - b2) * (index + 1)) / 10
 
-                strip.set_color(index, RGBColor([r1 + r, g1 + g, b1 + b]))
+                strip.set_color(index, RGBColor([abs(r), abs(g), abs(b)]))

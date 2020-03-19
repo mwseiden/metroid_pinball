@@ -147,8 +147,8 @@ class BackBoxLights(Scriptlet):
     def show_gradient(self, **kwargs):
         return Gradient(
             self.machine,
-            RGBColor(kwargs.get('color', '000000')),
-            RGBColor(kwargs.get('color', '0000FF'))
+            RGBColor(kwargs.get('color_start', '000000')),
+            RGBColor(kwargs.get('color_end', '0000FF'))
         )
 
     # private ----------------------------------------------------------------
