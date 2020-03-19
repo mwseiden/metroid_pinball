@@ -13,11 +13,13 @@ class Gradient(DynamicBackBoxShow):
     def animate(self):
         super().animate()
 
+        r1, g1, b1 = self.color_start.rgb
+        r2, g2, b2 = self.color_end.rgb
 
         for strip in self.strips:
             for index in range(10):
-                r = ((self.color_start.r - self.color_end.r) * (index + 1)) / 10
-                g = ((self.color_start.g - self.color_end.g) * (index + 1)) / 10
-                b = ((self.color_start.b - self.color_end.b) * (index + 1)) / 10
+                r = ((r1 - r2) * (index + 1)) / 10
+                g = ((g1 - g2) * (index + 1)) / 10
+                b = ((b1 - b2) * (index + 1)) / 10
 
-                strip.set_color(index, RGBColor([r,g,b]))
+                strip.set_color(index, RGBColor([r1 + r, g1 + g, b1 + b]))
