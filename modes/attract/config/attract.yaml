@@ -278,6 +278,9 @@ event_player:
       max_cutoff: 8
       color1: "404040"
       color2: "000040"
+  slide_claire_samus_active:
+    cmd_backbox_show:
+      show_type: fire
   slide_double_danger_slide_active:
     cmd_backbox_show:
       show_type: drop
@@ -312,8 +315,6 @@ event_player:
       min_length: 3
       max_length: 10
       color: "000040"
-
-
   mode_attract_stopping:
     cmd_backbox_show:
       show_type: none
