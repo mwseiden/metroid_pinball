@@ -1,7 +1,7 @@
 from random import randint
 from random import choice
 from mpf.core.rgb_color import RGBColor
-from .dynamic_backbox_show import Plasma
+from .plasma import Plasma
 
 class Fire(Plasma):
     FIRE_COLORS = [
