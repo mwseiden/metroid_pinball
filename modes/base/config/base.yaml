@@ -177,6 +177,7 @@ show_player:
     base_recharge_combo_lights:
       loops: 0
       priority: 9000
+      speed: 60
   twitch_new_chat_message{line_count <= 3}:
     chat_message_3:
       loops: 0
