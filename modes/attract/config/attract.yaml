@@ -297,6 +297,7 @@ event_player:
   slide_pbu_slide_active:
     cmd_backbox_show:
       show_type: plasma
+      decay_b: 1.2
   slide_erin_slide_active:
     cmd_backbox_show:
       show_type: two_tone
