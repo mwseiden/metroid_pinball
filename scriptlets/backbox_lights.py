@@ -12,6 +12,7 @@ from .lights.backbox.twinkle import Twinkle
 from .lights.backbox.sparkle import Sparkle
 from .lights.backbox.heat_up import HeatUp
 from .lights.backbox.gradient import Gradient
+from .lights.backbox.plasma import Plasma
 
 class BackBoxLights(Scriptlet):
 
