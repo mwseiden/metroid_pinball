@@ -173,6 +173,10 @@ show_player:
   capside_combo_hit:
     base_capside_combo:
       loops: 0
+  reload_combo_hit:
+    base_recharge_combo_lights:
+      loops: 0
+      priority: 9000
   twitch_new_chat_message{line_count <= 3}:
     chat_message_3:
       loops: 0
@@ -487,6 +491,8 @@ variable_player:
     capsides: 1
     score:
       int: (10000 + (2000 * current_player.capsides)) * current_player.multiplier
+  reload_combo_hit:
+    score: 250000 * current_player.multiplier
   scoop_shot_hit:
     scoops: 1
     score:

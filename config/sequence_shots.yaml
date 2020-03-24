@@ -17,3 +17,6 @@ sequence_shots:
     switch_sequence: s_orbit_r, s_pop_subway
     sequence_timeout: 3s
     cancel_switches: s_pop_1, s_pop_2, s_pop_3, s_orbit_l
+  reload_combo:
+    event_sequence: wall_jump_used, s_upper_right_flipper_active, s_side_ramp_made_active
+    sequence_timeout: 4s
