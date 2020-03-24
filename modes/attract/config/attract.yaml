@@ -178,7 +178,7 @@ show_player:
       action: stop
     lights_purple_fire:
       loops: -1
-      speed: 15
+      speed: 18
   slide_rudy_slide_active:
     lights_purple_fire:
       action: stop
@@ -297,7 +297,7 @@ event_player:
   slide_pbu_slide_active:
     cmd_backbox_show:
       show_type: plasma
-      decay_b: 1.2
+      decay_b: 1.9
   slide_erin_slide_active:
     cmd_backbox_show:
       show_type: two_tone
