@@ -173,8 +173,14 @@ show_player:
     lights_fire:
       loops: -1
       speed: 15
-  slide_rudy_slide_active:
+  slide_pbu_slide_active:
     lights_fire:
+      action: stop
+    lights_purple_fire:
+      loops: -1
+      speed: 15
+  slide_rudy_slide_active:
+    lights_purple_fire:
       action: stop
     rudy_tas:
       loops: -1
