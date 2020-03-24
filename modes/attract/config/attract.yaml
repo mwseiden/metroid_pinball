@@ -290,7 +290,7 @@ event_player:
       drop_color: "100C00"
   slide_pbu_slide_active:
     cmd_backbox_show:
-      show_type: fire
+      show_type: plasma
   slide_erin_slide_active:
     cmd_backbox_show:
       show_type: two_tone

@@ -31,6 +31,7 @@ class BackBoxLights(Scriptlet):
             'sparkle': self.show_sparkle,
             'heat_up': self.show_heat_up,
             'gradient': self.show_gradient,
+            'plasma': self.show_plasma,
         }
 
         self.set_effects_to_default()
@@ -70,6 +71,24 @@ class BackBoxLights(Scriptlet):
 
     def show_fire(self, **kwargs):
         return Fire(self.machine)
+
+    def show_plasma(self, **kwargs):
+        return Plasma(
+            self.machine,
+            [
+                RGBColor(kwargs.get('color1', '000010')),
+                RGBColor(kwargs.get('color2', '000020')),
+                RGBColor(kwargs.get('color3', '000030')),
+                RGBColor(kwargs.get('color4', '000040')),
+                RGBColor(kwargs.get('color5', '000050')),
+                RGBColor(kwargs.get('color6', '000060')),
+                RGBColor(kwargs.get('color7', '000070')),
+                RGBColor(kwargs.get('color8', '000080'))
+            ],
+            float(kwargs.get('decay_r', '1.8')),
+            float(kwargs.get('decay_g', '2.6')),
+            float(kwargs.get('decay_b', '3.2'))
+        )
 
     def show_pour(self, **kwargs):
         return Pour(

@@ -38,6 +38,9 @@ timers:
         action: stop
       - event: timer_room_1r_shoot_space_pirates_timer_complete
         action: reset
+      - event: room_1r_pirate_defeated
+        action: add
+        value: 5
 
 shot_groups:
   shoot_space_pirates_shot_group:
