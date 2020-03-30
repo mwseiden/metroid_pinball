@@ -43,7 +43,7 @@ event_player:
     cmd_backbox_show:
       show_type: gradient
       color_start: "000080"
-      color_end: "004000"
+      color_end: "004040"
     drop_targets_continue:
 
 variable_player:
