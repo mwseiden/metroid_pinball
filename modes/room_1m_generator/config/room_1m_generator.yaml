@@ -42,8 +42,8 @@ event_player:
   mode_room_1m_generator_started:
     cmd_backbox_show:
       show_type: gradient
-      color_start: "000080"
-      color_end: "004040"
+      color_start: "100080"
+      color_end: "005020"
     drop_targets_continue:
 
 variable_player:
