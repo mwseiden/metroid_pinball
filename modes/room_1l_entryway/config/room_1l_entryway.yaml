@@ -69,12 +69,10 @@ variable_player:
 
 event_player:
   mode_room_1l_entryway_started:
-    # cmd_backbox_show:
-      # show_type: two_tone
-      # min_cutoff: 1
-      # max_cutoff: 9
-      # color1: "404020"
-      # color2: "202040"
+    cmd_backbox_show:
+      show_type: gradient
+      color_start: "101010"
+      color_end: "000000"
     drop_targets_continue:
   room_1l_exit_east_shot_hit.1: drop_targets_save
   room_1l_exit_east_shot_hit.2: room_1m_enter
