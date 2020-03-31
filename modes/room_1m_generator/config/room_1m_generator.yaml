@@ -4,6 +4,22 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended
   priority: 300
 
+shot_profiles:
+  room_1m_start_multiball:
+    states:
+      - name: lit
+        show: fade_one_light
+
+shots:
+  room_1m_generator_start_multiball_shot:
+    switch: s_thin_orange
+    profile: room_1m_start_multiball
+    disable_events: room_1m_generator_start_multiball_shot_hit
+    enable_events: mode_room_1m_generator_started
+    show_tokens:
+      led: led_thin_orange
+      color: 'FF8000'
+
 slides:
   room_1m_generator_backglass_slide:
     widgets:
@@ -35,6 +51,9 @@ show_player:
   flipper_cradle_release:
     room_1m_generator_status_report:
       action: stop
+
+sound_player:
+  room_1m_generator_start_multiball_shot_hit: multiball
 
 event_player:
   mode_room_1m_generator_started:
