@@ -933,7 +933,7 @@
     gi_right_sling_bottom: '46737F'
     gi_upper_flipper_bottom: '0D5793'
     
-- time: 0
+- time: '+1'
   lights:
     gi_back_center: 'FFFFFF'
     gi_back_left: '0D3453'
