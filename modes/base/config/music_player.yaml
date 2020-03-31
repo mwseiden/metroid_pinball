@@ -116,6 +116,9 @@ sound_player:
     music_wrecked_ship:
       action: stop
       fade_out: 3s
+    music_wrecked_ship_generator:
+      action: stop
+      fade_out: 3s
     music_maridia_intro:
       action: stop
       fade_out: 3s
