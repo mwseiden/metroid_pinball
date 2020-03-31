@@ -514,6 +514,12 @@ variable_player:
     score: 66600 * current_player.multiplier
 
 sounds:
+  energy_target:
+    file: energy_target.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
   left_sling:
     file: left_sling.wav
     streaming: False
@@ -577,3 +583,4 @@ sound_player:
   secret_passage_shot_hit: ramp_sound_2
   rollover_shot_hit: mini_loop
   scoop_shot_hit: scoop_eject
+  thin_orange_shot_hit: energy_target
