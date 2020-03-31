@@ -9,7 +9,7 @@ sound_player:
   mode_room_1l_entryway_started{machine.next_game_acapella == 0}: music_wrecked_ship
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0}: music_brinstar
   mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia_intro
-  mode_room_1m_generator_started{machine.next_game_acapella == 0}: music_wrecked_ship
+  mode_room_1m_generator_started{machine.next_game_acapella == 0}: music_wrecked_ship_generator
   mode_room_2b_crevasse_started{machine.next_game_acapella == 0}:
     music_maridia_snow:
       action: play
@@ -32,6 +32,10 @@ sound_player:
   mode_room_2m_geothermal_plant_started{machine.next_game_acapella == 0}: music_norfair
   room_2a_sink_into_sand:
     music_maridia_intro:
+      action: stop
+      fade_out: 1s
+  room_1m_enter:
+    music_wrecked_ship:
       action: stop
       fade_out: 1s
   room_1z_enter:
