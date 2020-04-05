@@ -108,9 +108,10 @@ event_player:
   mode_drop_targets_stopped: cmd_drop_three_up
   s_behind_drop_1_active{device.multiballs.room_1m_generator_multiball.balls_added_live > 0}: cmd_drop_one_up, room_1m_test_lock
   timer_room_1m_test_ball_locked_complete{device.switches.s_behind_drop_1.state}: room_1m_ball_locked, cmd_drop_three_down
-  timer_room_1m_test_ball_locked_complete{not device.switches.s_behind_drop_1.state}: cmd_drop_three_up, cmd_drop_one_down
+  timer_room_1m_test_ball_locked_complete{not device.switches.s_behind_drop_1.state}: room_1m_ball_released, cmd_drop_three_up, cmd_drop_one_down
   multiball_room_1m_generator_multiball_ended: cmd_drop_one_down
-  drop_target_drop_one_down{device.multiballs.room_1m_generator_multiball.balls_added_live > 0}: cmd_drop_one_up
+  drop_target_drop_one_down{device.multiballs.room_1m_generator_multiball.balls_added_live > 0 and player.room_1m_captured > 0}: cmd_drop_one_up
+  s_vuk_active: room_1m_ball_released, cmd_drop_one_down, cmd_drop_three_up
 
 variable_player:
   mode_room_1m_generator_started:
@@ -119,4 +120,15 @@ variable_player:
       action: set
     continue_room:
       string: 1m
+      action: set
+    room_1m_captured:
+      int: 0
+      action: set
+  room_1m_ball_locked:
+    room_1m_captured:
+      int: 1
+      action: set
+  room_1m_ball_released:
+    room_1m_captured:
+      int: 0
       action: set
