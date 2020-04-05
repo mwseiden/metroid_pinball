@@ -9,6 +9,10 @@ shot_profiles:
     states:
       - name: lit
         show: fade_one_light
+  room_1m_captive:
+    states:
+      - name: lit
+        show: led_color
 
 shots:
   room_1m_generator_start_multiball_shot:
@@ -19,6 +23,21 @@ shots:
     show_tokens:
       led: led_thin_orange
       color: 'FF8000'
+  room_1m_generator_captive_shot:
+    switch: s_captive_ball
+    profile: room_1m_captive
+    enable_events: multiball_room_1m_generator_multiball_started
+    disable_events: multiball_room_1m_generator_multiball_ended
+    show_tokens:
+      led: led_captive_ball
+      color: '004040'
+
+multiballs:
+  room_1m_generator_multiball:
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 30s
+    start_events: room_1m_generator_start_multiball_shot_hit
 
 slides:
   room_1m_generator_backglass_slide:
@@ -51,8 +70,20 @@ show_player:
   flipper_cradle_release:
     room_1m_generator_status_report:
       action: stop
+  multiball_room_1m_generator_multiball_started:
+    blink_light:
+      key: room_1m_ball_save_blink
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_ball_save
+        color: ff4700
+  multiball_room_1m_generator_multiball_shoot_again_ended:
+    room_1m_ball_save_blink:
+      action: stop
 
 sound_player:
+  mode_room_1m_generator_started: shoot_the_flashing_target
   room_1m_generator_start_multiball_shot_hit: multiball
 
 event_player:
@@ -62,6 +93,8 @@ event_player:
       color_start: "100080"
       color_end: "005020"
     drop_targets_continue:
+    chozo_multiball_disable:
+  multiball_room_1m_generator_multiball_started: drop_target_mode_should_end
 
 variable_player:
   mode_room_1m_generator_started:
