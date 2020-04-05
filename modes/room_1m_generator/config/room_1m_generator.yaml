@@ -32,6 +32,15 @@ shots:
       led: led_captive_ball
       color: '004040'
 
+timers:
+  room_1m_test_ball_locked:
+    start_value: 1
+    end_value: 2
+    tick_interval: 1.0s
+    control_events:
+      - event: room_1m_test_lock
+        action: restart
+
 multiballs:
   room_1m_generator_multiball:
     ball_count: 2
@@ -85,6 +94,7 @@ show_player:
 sound_player:
   mode_room_1m_generator_started: shoot_the_flashing_target
   room_1m_generator_start_multiball_shot_hit: multiball
+  room_1m_ball_locked: shoot_the_drop_target
 
 event_player:
   mode_room_1m_generator_started:
@@ -95,6 +105,11 @@ event_player:
     drop_targets_continue:
     chozo_multiball_disable:
   multiball_room_1m_generator_multiball_started: drop_target_mode_should_end
+  mode_drop_targets_stopped: cmd_drop_three_up
+  s_behind_drop_1_active: cmd_drop_one_up, room_1m_test_lock
+  timer_room_1m_test_ball_locked_complete{device.switches.s_behind_drop_1.state}: room_1m_ball_locked, cmd_drop_three_down
+  timer_room_1m_test_ball_locked_complete{not device.switches.s_behind_drop_1.state}: cmd_drop_three_up, cmd_drop_one_down
+  multiball_room_1m_generator_multiball_ended: cmd_drop_one_down
 
 variable_player:
   mode_room_1m_generator_started:
