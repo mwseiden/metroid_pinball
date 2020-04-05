@@ -12,7 +12,7 @@ shot_profiles:
   room_1m_captive:
     states:
       - name: lit
-        show: led_color
+        show: fade_one_light
 
 shots:
   room_1m_generator_start_multiball_shot:
@@ -30,7 +30,7 @@ shots:
     disable_events: multiball_room_1m_generator_multiball_ended
     show_tokens:
       led: led_captive_ball
-      color: '004040'
+      color: '00FFFF'
 
 timers:
   room_1m_test_ball_locked:
@@ -136,6 +136,13 @@ event_player:
   s_vuk_active{current_player.room_1m_captured > 0}: room_1m_add_big_charge
   s_behind_drop_2_active{current_player.room_1m_captured > 0}: room_1m_add_charge
   s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_charge
+  room_1m_generator_captive_shot_hit: room_1m_add_charge
+  room_1m_add_charge:
+    cmd_backbox_show_overlay:
+      show_type: sparkle
+      color: "FFFF00"
+      count: 5
+      repeat: 20
 
 variable_player:
   mode_room_1m_generator_started:
