@@ -90,11 +90,32 @@ show_player:
   multiball_room_1m_generator_multiball_shoot_again_ended:
     room_1m_ball_save_blink:
       action: stop
+  room_1m_add_charge:
+    blink_3_lights:
+      loops: 0
+      priority: 500
+      speed: 8
+      show_tokens:
+        led_1: led_drop_1
+        led_2: led_drop_2
+        led_3: led_drop_3
+        color_1: 'FFFF00'
+        color_2: '000000'
+
+sounds:
+  room_1m_charge:
+    file: room_1m_charge.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
 
 sound_player:
   mode_room_1m_generator_started: shoot_the_flashing_target
   room_1m_generator_start_multiball_shot_hit: multiball
   room_1m_ball_locked: shoot_the_drop_target
+  room_1m_add_charge: room_1m_charge
 
 event_player:
   mode_room_1m_generator_started:
