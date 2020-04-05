@@ -106,12 +106,11 @@ event_player:
     chozo_multiball_disable:
   multiball_room_1m_generator_multiball_started: drop_target_mode_should_end
   mode_drop_targets_stopped: cmd_drop_three_up
-  s_behind_drop_1_active{device.multiballs.room_1m_generator_multiball.balls_added_live > 0}.1: cmd_drop_one_up
-  s_behind_drop_1_active{device.multiballs.room_1m_generator_multiball.balls_added_live > 0}.2: room_1m_test_lock
+  s_behind_drop_1_active{device.multiballs.room_1m_generator_multiball.enabled}: cmd_drop_one_up, room_1m_test_lock
   timer_room_1m_test_ball_locked_complete{device.switches.s_behind_drop_1.state}: room_1m_ball_locked, cmd_drop_three_down
   timer_room_1m_test_ball_locked_complete{not device.switches.s_behind_drop_1.state}: cmd_drop_three_up, cmd_drop_one_down
   multiball_room_1m_generator_multiball_ended: cmd_drop_one_down
-  drop_target_drop_one_down{device.multiballs.room_1m_generator_multiball.balls_added_live > 0}: cmd_drop_one_up
+  drop_target_drop_one_down{device.multiballs.room_1m_generator_multiball.enabled}: cmd_drop_one_up
 
 variable_player:
   mode_room_1m_generator_started:
