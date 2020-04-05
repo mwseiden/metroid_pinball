@@ -13,6 +13,6 @@
     room_1m_generator_status_slide_help:
       widgets:
       - type: Text
-        text: NO MODE RULES
+        text: CHARGE (player|room_1m_charge)
         color: red
         style: dmd_med

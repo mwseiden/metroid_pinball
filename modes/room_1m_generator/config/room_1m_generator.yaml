@@ -112,6 +112,9 @@ event_player:
   multiball_room_1m_generator_multiball_ended: cmd_drop_one_down
   drop_target_drop_one_down{device.multiballs.room_1m_generator_multiball.balls_added_live > 0 and player.room_1m_captured > 0}: cmd_drop_one_up
   s_vuk_active: room_1m_ball_released, cmd_drop_one_down, cmd_drop_three_up
+  s_vuk_active{player.room_1m_captured > 0}: room_1m_add_big_charge
+  s_behind_drop_2_active{player.room_1m_captured > 0}: room_1m_add_charge
+  s_behind_drop_3_active{player.room_1m_captured > 0}: room_1m_add_charge
 
 variable_player:
   mode_room_1m_generator_started:
@@ -132,3 +135,7 @@ variable_player:
     room_1m_captured:
       int: 0
       action: set
+  room_1m_add_charge:
+    room_1m_charge: 1
+  room_1m_add_big_charge:
+    room_1m_charge: 5
