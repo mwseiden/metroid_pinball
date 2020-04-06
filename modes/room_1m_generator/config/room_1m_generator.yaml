@@ -87,6 +87,16 @@ show_player:
       show_tokens:
         led: led_ball_save
         color: ff4700
+    single_rainbow:
+      key: room_1m_ball_lock_rainbow
+      loops: -1
+      speed: 45
+      priority: 400
+      show_tokens:
+        led: led_drop_1
+  multiball_room_1m_generator_multiball_ended:
+    room_1m_ball_lock_rainbow:
+      action: stop
   multiball_room_1m_generator_multiball_shoot_again_ended:
     room_1m_ball_save_blink:
       action: stop
