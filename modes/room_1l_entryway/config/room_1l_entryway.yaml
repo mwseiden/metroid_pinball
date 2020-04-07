@@ -28,8 +28,8 @@ show_player:
     gi_solid_with_overhead:
       loops: -1
       show_tokens:
-        color: 'FFFF20'
-        color2: "800000"
+        color: 'FFC060'
+        color2: "C00020"
   mode_room_1l_entryway_started:
     small_theater_chase:
       key: chozo_multiball_drop_show
