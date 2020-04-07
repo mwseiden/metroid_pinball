@@ -1,7 +1,7 @@
 #config_version=5
 mode:
   start_events: room_1m_continue, room_1m_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1l_enter
   priority: 300
 
 sequences:
@@ -55,6 +55,14 @@ shots:
     disable_events: mode_room_1m_generator_started, room_1m_start_generator_shot_hit
     show_tokens:
       led: led_enter_scoop
+  room_1m_exit_west_shot:
+    switch: s_ramp_enter
+    profile: exit_door
+    enable_events: room_1m_stage_3
+    disable_events: mode_room_1m_generator_started, room_1m_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
 
 timers:
   room_1m_test_ball_locked:
@@ -162,6 +170,7 @@ event_player:
     chozo_multiball_disable:
   mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value == 0}: room_1m_stage_1
   mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value == 1}: room_1m_stage_2
+  mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value > 1}: room_1m_stage_3
   multiball_room_1m_generator_multiball_started: drop_target_mode_should_end
   mode_drop_targets_stopped: cmd_drop_three_up
   s_behind_drop_1_active{device.multiballs.room_1m_generator_multiball.balls_added_live > 0}: cmd_drop_one_up, room_1m_test_lock
@@ -175,12 +184,15 @@ event_player:
   s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_charge
   room_1m_generator_captive_shot_hit: room_1m_add_charge
   room_1m_start_generator_shot_hit: room_1m_generator_bootup
+  room_1m_generator_started: room_1m_stage_3
   room_1m_add_charge:
     cmd_backbox_show_overlay:
       show_type: sparkle
       color: "FFFF00"
       count: 5
       repeat: 20
+  room_1m_exit_west_shot_hit.1: drop_targets_save
+  room_1m_exit_west_shot_hit.2: room_1l_enter
 
 variable_player:
   mode_room_1m_generator_started:
