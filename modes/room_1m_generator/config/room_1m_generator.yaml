@@ -29,6 +29,7 @@ shot_profiles:
     states:
       - name: lit
         show: single_rainbow
+        speed: 45
 
 shots:
   room_1m_generator_start_multiball_shot:
