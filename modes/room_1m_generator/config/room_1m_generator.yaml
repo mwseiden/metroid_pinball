@@ -51,7 +51,7 @@ shots:
     switch: s_scoop
     profile: room_1m_bootup
     enable_events: room_1m_stage_2
-    disable_events: mode_room_1m_generator_started
+    disable_events: mode_room_1m_generator_started, room_1m_start_generator_shot_hit
     show_tokens:
       led: led_enter_scoop
 
@@ -145,7 +145,8 @@ sounds:
     max_queue_time: None
 
 sound_player:
-  mode_room_1m_generator_started: shoot_the_flashing_target
+  room_1m_stage_1: shoot_the_flashing_target
+  room_1m_stage_2: shoot_the_scoop
   room_1m_generator_start_multiball_shot_hit: multiball
   room_1m_ball_locked: shoot_the_drop_target
   room_1m_add_charge: room_1m_charge
