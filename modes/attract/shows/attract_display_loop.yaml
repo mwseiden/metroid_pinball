@@ -694,7 +694,7 @@
          duration: 1s
          direction: down
 
-- duration: 8s
+- duration: 9s
   slides:
     attract_special_thanks_slide:
       widgets:
@@ -827,6 +827,15 @@
       - type: text
         text: Scott Danesi
         y: -120
+        style: dmd_med
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: top
+        animations:
+          show_slide: special_thanks_scroll_up
+      - type: text
+        text: Taylor Reese
+        y: -128
         style: dmd_med
         color: dmd_orange
         number_grouping: true
