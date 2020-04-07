@@ -158,8 +158,8 @@ event_player:
       color_end: "005020"
     drop_targets_continue:
     chozo_multiball_disable:
-  mode_room_1m_generator_started{device.sequences.bao_progress_sequence.value == 0}: room_1m_stage_1
-  mode_room_1m_generator_started{device.sequences.bao_progress_sequence.value == 1}: room_1m_stage_2
+  mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value == 0}: room_1m_stage_1
+  mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value == 1}: room_1m_stage_2
   multiball_room_1m_generator_multiball_started: drop_target_mode_should_end
   mode_drop_targets_stopped: cmd_drop_three_up
   s_behind_drop_1_active{device.multiballs.room_1m_generator_multiball.balls_added_live > 0}: cmd_drop_one_up, room_1m_test_lock
