@@ -26,6 +26,7 @@ shot_profiles:
     states:
       - name: lit
         show: fade_one_light
+        speed: 45
 
 shots:
   miniboss_level_1_1_shot:
