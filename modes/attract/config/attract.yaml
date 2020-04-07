@@ -229,11 +229,11 @@ animations:
       repeat: true
   special_thanks_scroll_up:
     - property: y
-      value: 180
+      value: 188
       relative: true
       duration: 9s
     - property: y
-      value: -180
+      value: -188
       relative: true
       duration: 0s
       repeat: true
