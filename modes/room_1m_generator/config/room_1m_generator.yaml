@@ -201,6 +201,10 @@ variable_player:
     room_1m_captured:
       int: 0
       action: set
+  room_1m_generator_started:
+    wrecked_ship_powered_up:
+      int: 1
+      action: set
   room_1m_add_charge:
     room_1m_charge: 1
   room_1m_add_big_charge:

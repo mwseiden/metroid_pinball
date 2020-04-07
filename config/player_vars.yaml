@@ -122,3 +122,5 @@ player_vars:
     initial_value: 0
   switches:
     initial_value: 0
+  wrecked_ship_powered_up:
+    initial_value: 0
