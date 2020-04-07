@@ -4,6 +4,18 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended
   priority: 300
 
+sequences:
+  room_1m_generator_sequence:
+    events:
+      - multiball_room_1m_generator_multiball_ended
+      - room_1m_start_generator_shot_hit
+      - room_1m_generator_bootup
+    events_when_complete: room_1m_generator_started
+    persist_state: True
+    reset_on_complete: False
+    disable_on_complete: True
+
+
 shot_profiles:
   room_1m_start_multiball:
     states:
@@ -13,13 +25,17 @@ shot_profiles:
     states:
       - name: lit
         show: fade_one_light
+  room_1m_bootup:
+    states:
+      - name: lit
+        show: single_rainbow
 
 shots:
   room_1m_generator_start_multiball_shot:
     switch: s_thin_orange
     profile: room_1m_start_multiball
     disable_events: room_1m_generator_start_multiball_shot_hit
-    enable_events: mode_room_1m_generator_started
+    enable_events: room_1m_stage_1
     show_tokens:
       led: led_thin_orange
       color: 'FF8000'
@@ -31,6 +47,13 @@ shots:
     show_tokens:
       led: led_captive_ball
       color: '00FFFF'
+  room_1m_start_generator_shot:
+    switch: s_scoop
+    profile: room_1m_bootup
+    enable_events: room_1m_stage_2
+    disable_events: mode_room_1m_generator_started
+    show_tokens:
+      led: led_enter_scoop
 
 timers:
   room_1m_test_ball_locked:
@@ -135,18 +158,21 @@ event_player:
       color_end: "005020"
     drop_targets_continue:
     chozo_multiball_disable:
+  mode_room_1m_generator_started{device.sequences.bao_progress_sequence.value == 0}: room_1m_stage_1
+  mode_room_1m_generator_started{device.sequences.bao_progress_sequence.value == 1}: room_1m_stage_2
   multiball_room_1m_generator_multiball_started: drop_target_mode_should_end
   mode_drop_targets_stopped: cmd_drop_three_up
   s_behind_drop_1_active{device.multiballs.room_1m_generator_multiball.balls_added_live > 0}: cmd_drop_one_up, room_1m_test_lock
   timer_room_1m_test_ball_locked_complete{device.switches.s_behind_drop_1.state}: room_1m_ball_locked, cmd_drop_three_down
   timer_room_1m_test_ball_locked_complete{not device.switches.s_behind_drop_1.state}: room_1m_ball_released, cmd_drop_three_up, cmd_drop_one_down
-  multiball_room_1m_generator_multiball_ended: cmd_drop_one_down
+  multiball_room_1m_generator_multiball_ended: cmd_drop_one_down, room_1m_stage_2
   drop_target_drop_one_down{device.multiballs.room_1m_generator_multiball.balls_added_live > 0 and player.room_1m_captured > 0}: cmd_drop_one_up
   s_vuk_active: room_1m_ball_released, cmd_drop_one_down, cmd_drop_three_up
   s_vuk_active{current_player.room_1m_captured > 0}: room_1m_add_big_charge
   s_behind_drop_2_active{current_player.room_1m_captured > 0}: room_1m_add_charge
   s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_charge
   room_1m_generator_captive_shot_hit: room_1m_add_charge
+  room_1m_start_generator_shot_hit: room_1m_generator_bootup
   room_1m_add_charge:
     cmd_backbox_show_overlay:
       show_type: sparkle
