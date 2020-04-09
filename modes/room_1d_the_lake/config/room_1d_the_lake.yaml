@@ -4,6 +4,27 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1c_enter, room_1l_enter
   priority: 300
 
+shots:
+  room_1d_exit_west_shot:
+    switches: s_ramp_enter
+    profile: exit_door
+    enable_events: mode_room_1d_the_lake_started
+    disable_events: room_1d_exit_west_shot_hit
+    reset_events: room_1d_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
+  room_1d_exit_east_shot:
+    hit_events: right_orbit_hit
+    profile: exit_door
+    enable_events: mode_room_1d_the_lake_started
+    disable_events: room_1d_exit_east_shot_hit
+    reset_events: room_1d_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_right_orbit
+      color: door_blue
+
+
 slides:
   room_1d_the_lake_backglass_slide:
     widgets:
@@ -43,6 +64,10 @@ event_player:
       color_start: "0000FF"
       color_end: "00FF00"
     drop_targets_continue:
+  room_1d_exit_west_shot_hit.1: drop_targets_save
+  room_1d_exit_west_shot_hit.2: room_1c_enter
+  room_1d_exit_east_shot_hit.1: drop_targets_save
+  room_1d_exit_east_shot_hit.2: room_1l_enter
 
 variable_player:
   mode_room_1d_the_lake_started:
