@@ -38,6 +38,9 @@ player_vars:
     initial_value: 0
   drops:
     initial_value: 0
+  drops_1d:
+    value_type: str
+    initial_value: 'DDD'
   drops_1m:
     value_type: str
     initial_value: 'DDD'
