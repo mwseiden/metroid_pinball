@@ -9,6 +9,7 @@ shot_profiles:
     states:
       - name: lit
         show: room_1d_swamp
+        speed: 60
 
 shots:
   room_1d_exit_west_shot:
