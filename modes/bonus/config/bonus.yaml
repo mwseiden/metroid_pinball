@@ -222,7 +222,7 @@ show_player:
   bonus_capsides:
     bonus_lights_capside:
       key: bonus_lights
-      speed: 20
+      speed: 30
       loops: 0
       priority: 2000
   bonus_drop_targets:
