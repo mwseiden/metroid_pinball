@@ -11,7 +11,7 @@ modes:
   - drop_targets
   - emergency_landing
   - gorens_lament
-  - high_jump
+#  - high_jump
   - high_score
   - lanes
   - match
@@ -23,6 +23,7 @@ modes:
   - room_1b_gunship
   - room_1b_gunship_victory
   - room_1c_plains
+  - room_1d_the_lake
   - room_1f_mushroom_chamber
   - room_1l_entryway
   - room_1m_generator
