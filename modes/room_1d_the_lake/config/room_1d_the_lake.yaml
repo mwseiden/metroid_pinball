@@ -5,7 +5,7 @@ mode:
   priority: 300
 
 shot_profiles:
-  room_1d_sink:
+  room_1d_swamp:
     states:
       - name: lit
         show: room_1d_swamp
