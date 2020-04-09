@@ -4,6 +4,12 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1c_enter, room_1l_enter
   priority: 300
 
+shot_profiles:
+  room_1d_sink:
+    states:
+      - name: lit
+        show: room_1d_swamp
+
 shots:
   room_1d_exit_west_shot:
     switches: s_ramp_enter
@@ -23,6 +29,30 @@ shots:
     show_tokens:
       led: led_enter_right_orbit
       color: door_blue
+  room_1d_underwater_1_shot:
+    switches: s_pit
+    profile: room_1d_swamp
+    enable_events: mode_room_1d_the_lake_started
+    show_tokens:
+      led: led_pit
+  room_1d_underwater_2_shot:
+    switches: s_scoop
+    profile: room_1d_swamp
+    enable_events: mode_room_1d_the_lake_started
+    show_tokens:
+      led: led_enter_scoop
+  room_1d_underwater_3_shot:
+    switches: s_pop_subway
+    profile: room_1d_swamp
+    enable_events: mode_room_1d_the_lake_started
+    show_tokens:
+      led: gi_strip_4
+  room_1d_underwater_4_shot:
+    switches: s_vuk
+    profile: room_1d_swamp
+    enable_events: mode_room_1d_the_lake_started
+    show_tokens:
+      led: gi_back_right
 
 
 slides:
@@ -77,3 +107,11 @@ variable_player:
     continue_room:
       string: 1d
       action: set
+  room_1d_underwater_1_shot_hit:
+    score: 10000 * current_player.multiplier
+  room_1d_underwater_2_shot_hit:
+    score: 30000 * current_player.multiplier
+  room_1d_underwater_3_shot_hit:
+    score: 40000 * current_player.multiplier
+  room_1d_underwater_4_shot_hit:
+    score: 20000 * current_player.multiplier

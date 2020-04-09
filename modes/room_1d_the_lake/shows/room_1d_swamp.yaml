@@ -1,0 +1,257 @@
+#show_version=5
+- time: 0
+  lights:
+    (led): '57210A'
+    
+- time: '+1'
+  lights:
+    (led): '570B03'
+    
+- time: '+1'
+  lights:
+    (led): '570101'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    (led): '56010A'
+    
+- time: '+1'
+  lights:
+    (led): '56032D'
+    
+- time: '+1'
+  lights:
+    (led): '550451'
+    
+- time: '+1'
+  lights:
+    (led): '550674'
+    
+- time: '+1'
+  lights:
+    (led): '540898'
+    
+- time: '+1'
+  lights:
+    (led): '530ABC'
+    
+- time: '+1'
+  lights:
+    (led): '530BCC'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    (led): '5010CE'
+    
+- time: '+1'
+  lights:
+    (led): '4B1CD3'
+    
+- time: '+1'
+  lights:
+    (led): '4629D9'
+    
+- time: '+1'
+  lights:
+    (led): '4136DE'
+    
+- time: '+1'
+  lights:
+    (led): '3B43E4'
+    
+- time: '+1'
+  lights:
+    (led): '364FEA'
+    
+- time: '+1'
+  lights:
+    (led): '3553EC'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    (led): '304AED'
+    
+- time: '+1'
+  lights:
+    (led): '263CF1'
+    
+- time: '+1'
+  lights:
+    (led): '1D2DF4'
+    
+- time: '+1'
+  lights:
+    (led): '141FF7'
+    
+- time: '+1'
+  lights:
+    (led): '0A10FB'
+    
+- time: '+1'
+  lights:
+    (led): '0101FE'
+    
+- time: '+1'
+  lights:
+    (led): '0000FF'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    (led): '000EFC'
+    
+- time: '+1'
+  lights:
+    (led): '002BF8'
+    
+- time: '+1'
+  lights:
+    (led): '0047F4'
+    
+- time: '+1'
+  lights:
+    (led): '0064F0'
+    
+- time: '+1'
+  lights:
+    (led): '0080EC'
+    
+- time: '+1'
+  lights:
+    (led): '009CE8'
+    
+- time: '+1'
+  lights:
+    (led): '00A2E8'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    (led): '01A3DB'
+    
+- time: '+1'
+  lights:
+    (led): '03A5BF'
+    
+- time: '+1'
+  lights:
+    (led): '05A8A4'
+    
+- time: '+1'
+  lights:
+    (led): '07AA89'
+    
+- time: '+1'
+  lights:
+    (led): '09AD6D'
+    
+- time: '+1'
+  lights:
+    (led): '0BB051'
+    
+- time: '+1'
+  lights:
+    (led): '0CB14C'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    (led): '0FB348'
+    
+- time: '+1'
+  lights:
+    (led): '1CBE3B'
+    
+- time: '+1'
+  lights:
+    (led): '29CA2D'
+    
+- time: '+1'
+  lights:
+    (led): '36D520'
+    
+- time: '+1'
+  lights:
+    (led): '44E113'
+    
+- time: '+1'
+  lights:
+    (led): '51EC05'
+    
+- time: '+1'
+  lights:
+    (led): '57F200'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    (led): '57EE01'
+    
+- time: '+1'
+  lights:
+    (led): '57DA07'
+    
+- time: '+1'
+  lights:
+    (led): '57C50E'
+    
+- time: '+1'
+  lights:
+    (led): '57B115'
+    
+- time: '+1'
+  lights:
+    (led): '579D1C'
+    
+- time: '+1'
+  lights:
+    (led): '578923'
+    
+- time: '+1'
+  lights:
+    (led): '577F27'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    (led): '577A25'
+    
+- time: '+1'
+  lights:
+    (led): '57641E'
+    
+- time: '+1'
+  lights:
+    (led): '574D17'
+    
+- time: '+1'
+  lights:
+    (led): '573711'
+    
