@@ -87,6 +87,22 @@ show_player:
   flipper_cradle_release:
     room_1d_the_lake_status_report:
       action: stop
+  room_1d_underwater_1_shot_hit:
+    room_1d_swamp_hit:
+      loops: 0
+      speed: 30
+  room_1d_underwater_2_shot_hit:
+    room_1d_swamp_hit:
+      loops: 0
+      speed: 30
+  room_1d_underwater_3_shot_hit:
+    room_1d_swamp_hit:
+      loops: 0
+      speed: 30
+  room_1d_underwater_4_shot_hit:
+    room_1d_swamp_hit:
+      loops: 0
+      speed: 30
 
 event_player:
   mode_room_1d_the_lake_started:
