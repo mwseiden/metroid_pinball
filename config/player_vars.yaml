@@ -32,6 +32,8 @@ player_vars:
     initial_value: 1b
   crateria_shot_bonus:
     initial_value: 0
+  crateria_landed:
+    initial_value: 0
   door_2d_2e:
     initial_value: 0
   door_2e_2f:
