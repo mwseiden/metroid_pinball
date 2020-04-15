@@ -14,6 +14,7 @@ modes:
 #  - high_jump
   - high_score
   - lanes
+  - map
   - match
   - miniboss
   - missiles

@@ -34,6 +34,8 @@ player_vars:
     initial_value: 0
   crateria_landed:
     initial_value: 0
+  door_1a_1f:
+    initial_value: 0
   door_2d_2e:
     initial_value: 0
   door_2e_2f:
@@ -89,8 +91,6 @@ player_vars:
   power_bombs:
     initial_value: 0
   ramps:
-    initial_value: 0
-  door_1a_1f:
     initial_value: 0
   room_1b_step_1a:
     initial_value: 0
