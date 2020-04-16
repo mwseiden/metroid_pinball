@@ -24,7 +24,7 @@ class Map(Mode):
           'map_tile_1': {
             'action': 'add',
             'key': 'map_room_1',
-            'widget_settings' {
+            'widget_settings': {
               'x': self.ORIGIN_X,
               'y': self.ORIGIN_Y
               'z': 1001
