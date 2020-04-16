@@ -35,7 +35,7 @@ class Map(Mode):
           }
         }
 
-        self.mc.widget_player.play(settings, 'map', None)
+        self.machine.widget_player.play(settings, 'map', None)
 
     def remove_room(self, room_number):
         settings = {
@@ -45,4 +45,4 @@ class Map(Mode):
           }
         }
 
-        self.mc.widget_player.play(settings, 'map', None)
+        self.machine.widget_player.play(settings, 'map', None)
