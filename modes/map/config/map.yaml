@@ -4,7 +4,7 @@ mode:
   code: map.Map
   start_events: metroid_base_started
   stop_events: mode_bonus_started
-  priority: 100
+  priority: 10000
 
 widgets:
   map_background_widget:
