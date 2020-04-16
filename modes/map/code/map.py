@@ -25,6 +25,7 @@ class Map(Mode):
         settings = {
           'map_tile_1': {
             'action': 'add',
+            'target': 'window',
             'key': 'map_room_1',
             'widget_settings': {
               'x': self.ORIGIN_X,
@@ -43,6 +44,7 @@ class Map(Mode):
         settings = {
           'map_tile_1': {
             'action': 'remove',
+            'target': 'window',
             'key': 'map_room_1'
           }
         }
