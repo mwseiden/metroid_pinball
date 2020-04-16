@@ -3,7 +3,7 @@
 mode:
   code: map.Map
   start_events: metroid_base_started
-  stop_events: mode_bonus_starting
+  stop_events: mode_bonus_started
   priority: 100
 
 widgets:
@@ -21,6 +21,7 @@ widget_player:
       widget_settings:
         x: 496
         y: 1000
+        z: 1000
         anchor_x: left
         anchor_y: top
 
