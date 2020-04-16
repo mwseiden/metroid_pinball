@@ -12,11 +12,7 @@ widgets:
     width: 192
     height: 128
     color: black
-    x: 496
-    y: 1000
     z: 1000
-    anchor_x: left
-    anchor_y: top
 
 widget_player:
   mode_map_started:
