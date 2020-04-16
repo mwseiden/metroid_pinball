@@ -12,13 +12,15 @@ widgets:
     width: 192
     height: 128
     color: black
+    x: 592
+    y: 1000
     z: 1000
 
 widget_player:
   mode_map_started:
     map_background_widget:
       key: map_background
-      target: backglass
+      target: window
 
 # widgets map_room_1 to map_room_10
 # widgets map_room_X_exit_n, e, w, s
