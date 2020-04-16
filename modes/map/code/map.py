@@ -35,7 +35,9 @@ class Map(Mode):
           }
         }
 
+        self.info_log('WTF 1')
         self.machine.widget_player.play(settings, 'map', None)
+        self.info_log('WTF 2')
 
     def remove_room(self, room_number):
         settings = {
@@ -45,4 +47,6 @@ class Map(Mode):
           }
         }
 
+        self.info_log('WTF 3')
         self.machine.widget_player.play(settings, 'map', None)
+        self.info_log('WTF 4')
