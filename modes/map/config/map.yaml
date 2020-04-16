@@ -26,7 +26,8 @@ widget_player:
       target: window
 
 event_player:
-  mode_map_started: cmd_map_position
+  mode_map_started: map_show_dummy
+  map_show_dummy: cmd_map_position
 
 # widgets map_room_1 to map_room_10
 # widgets map_room_X_exit_n, e, w, s
