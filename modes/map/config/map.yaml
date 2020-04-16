@@ -11,9 +11,9 @@ widgets:
     type: rectangle
     width: 192
     height: 128
-    color: black
+    color: '000000C0'
     x: 592
-    y: 1000
+    y: 900
     z: 1000
 
 widget_player:
