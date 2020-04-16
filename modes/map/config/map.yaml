@@ -17,6 +17,7 @@ widgets:
     z: 1000
   map_tile_1:
     type: image
+    image: map_tile_undiscovered
 
 widget_player:
   mode_map_started:
