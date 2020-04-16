@@ -26,8 +26,8 @@ class Map(Mode):
             'key': 'map_room_1',
             'widget_settings': {
               'x': self.ORIGIN_X,
-              'y': self.ORIGIN_Y
-              'z': 1001
+              'y': self.ORIGIN_Y,
+              'z': 1001,
               'image': 'map_tile_undiscovered'
             }
           }
