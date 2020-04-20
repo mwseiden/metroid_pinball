@@ -32,12 +32,22 @@ player_vars:
     initial_value: 1b
   crateria_shot_bonus:
     initial_value: 0
+  crateria_landed:
+    initial_value: 0
+  door_1a_1f:
+    initial_value: 0
   door_2d_2e:
     initial_value: 0
   door_2e_2f:
     initial_value: 0
   drops:
     initial_value: 0
+  drops_1d:
+    value_type: str
+    initial_value: 'DDD'
+  drops_1m:
+    value_type: str
+    initial_value: 'DDD'
   drops_1z:
     value_type: str
     initial_value: 'UDU'
@@ -82,8 +92,6 @@ player_vars:
     initial_value: 0
   ramps:
     initial_value: 0
-  door_1a_1f:
-    initial_value: 0
   room_1b_step_1a:
     initial_value: 0
   room_1b_step_1b:
@@ -93,6 +101,10 @@ player_vars:
   room_1b_victory_scan_percent:
     initial_value: 0
   room_1b_victory_step_1:
+    initial_value: 0
+  room_1m_captured:
+    initial_value: 0
+  room_1m_charge:
     initial_value: 0
   room_2a_alive_score:
     initial_value: 0
@@ -114,4 +126,6 @@ player_vars:
   super_missiles:
     initial_value: 0
   switches:
+    initial_value: 0
+  wrecked_ship_powered_up:
     initial_value: 0

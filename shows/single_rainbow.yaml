@@ -1,0 +1,225 @@
+#show_version=5
+- time: 0
+  lights:
+    (led): 'FE210A'
+    
+- time: '+1'
+  lights:
+    (led): 'FE0B03'
+    
+- time: '+1'
+  lights:
+    (led): 'FE0101'
+    
+- time: '+1'
+  lights:
+    (led): 'FD010A'
+    
+- time: '+1'
+  lights:
+    (led): 'FB032D'
+    
+- time: '+1'
+  lights:
+    (led): 'F90451'
+    
+- time: '+1'
+  lights:
+    (led): 'F80674'
+    
+- time: '+1'
+  lights:
+    (led): 'F60898'
+    
+- time: '+1'
+  lights:
+    (led): 'F40ABC'
+    
+- time: '+1'
+  lights:
+    (led): 'F40BCC'
+    
+- time: '+1'
+  lights:
+    (led): 'EC10CE'
+    
+- time: '+1'
+  lights:
+    (led): 'DD1CD3'
+    
+- time: '+1'
+  lights:
+    (led): 'CD29D9'
+    
+- time: '+1'
+  lights:
+    (led): 'BE36DE'
+    
+- time: '+1'
+  lights:
+    (led): 'AE43E4'
+    
+- time: '+1'
+  lights:
+    (led): '9E4FEA'
+    
+- time: '+1'
+  lights:
+    (led): '9B53EC'
+    
+- time: '+1'
+  lights:
+    (led): '8B4AED'
+    
+- time: '+1'
+  lights:
+    (led): '703CF1'
+    
+- time: '+1'
+  lights:
+    (led): '552DF4'
+    
+- time: '+1'
+  lights:
+    (led): '3A1FF7'
+    
+- time: '+1'
+  lights:
+    (led): '1E10FB'
+    
+- time: '+1'
+  lights:
+    (led): '0301FE'
+    
+- time: '+1'
+  lights:
+    (led): '0000FF'
+        
+- time: '+1'
+  lights:
+    (led): '000EFC'
+    
+- time: '+1'
+  lights:
+    (led): '002BF8'
+    
+- time: '+1'
+  lights:
+    (led): '0047F4'
+    
+- time: '+1'
+  lights:
+    (led): '0064F0'
+    
+- time: '+1'
+  lights:
+    (led): '0080EC'
+    
+- time: '+1'
+  lights:
+    (led): '009CE8'
+    
+- time: '+1'
+  lights:
+    (led): '00A2E8'
+    
+- time: '+1'
+  lights:
+    (led): '02A3DB'
+    
+- time: '+1'
+  lights:
+    (led): '08A5BF'
+    
+- time: '+1'
+  lights:
+    (led): '0EA8A4'
+    
+- time: '+1'
+  lights:
+    (led): '13AA89'
+    
+- time: '+1'
+  lights:
+    (led): '1AAD6D'
+    
+- time: '+1'
+  lights:
+    (led): '20B051'
+    
+- time: '+1'
+  lights:
+    (led): '22B14C'
+    
+- time: '+1'
+  lights:
+    (led): '2BB348'
+    
+- time: '+1'
+  lights:
+    (led): '52BE3B'
+    
+- time: '+1'
+  lights:
+    (led): '79CA2D'
+    
+- time: '+1'
+  lights:
+    (led): '9FD520'
+    
+- time: '+1'
+  lights:
+    (led): 'C7E113'
+    
+- time: '+1'
+  lights:
+    (led): 'EDEC05'
+    
+- time: '+1'
+  lights:
+    (led): 'FFF200'
+        
+- time: '+1'
+  lights:
+    (led): 'FFEE01'
+    
+- time: '+1'
+  lights:
+    (led): 'FFDA07'
+    
+- time: '+1'
+  lights:
+    (led): 'FFC50E'
+    
+- time: '+1'
+  lights:
+    (led): 'FFB115'
+    
+- time: '+1'
+  lights:
+    (led): 'FF9D1C'
+    
+- time: '+1'
+  lights:
+    (led): 'FF8923'
+    
+- time: '+1'
+  lights:
+    (led): 'FF7F27'
+        
+- time: '+1'
+  lights:
+    (led): 'FE7A25'
+    
+- time: '+1'
+  lights:
+    (led): 'FE641E'
+    
+- time: '+1'
+  lights:
+    (led): 'FE4D17'
+    
+- time: '+1'
+  lights:
+    (led): 'FE3711'
+    

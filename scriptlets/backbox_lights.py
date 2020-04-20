@@ -9,6 +9,10 @@ from .lights.backbox.solid import Solid
 from .lights.backbox.sweep_horizontal import SweepHorizontal
 from .lights.backbox.sweep_vertical import SweepVertical
 from .lights.backbox.twinkle import Twinkle
+from .lights.backbox.sparkle import Sparkle
+from .lights.backbox.heat_up import HeatUp
+from .lights.backbox.gradient import Gradient
+from .lights.backbox.plasma import Plasma
 
 class BackBoxLights(Scriptlet):
 
@@ -25,6 +29,10 @@ class BackBoxLights(Scriptlet):
             'sweep_horizontal': self.show_sweep_horizontal,
             'sweep_vertical': self.show_sweep_vertical,
             'twinkle': self.show_twinkle,
+            'sparkle': self.show_sparkle,
+            'heat_up': self.show_heat_up,
+            'gradient': self.show_gradient,
+            'plasma': self.show_plasma,
         }
 
         self.set_effects_to_default()
@@ -64,6 +72,24 @@ class BackBoxLights(Scriptlet):
 
     def show_fire(self, **kwargs):
         return Fire(self.machine)
+
+    def show_plasma(self, **kwargs):
+        return Plasma(
+            self.machine,
+            [
+                RGBColor(kwargs.get('color1', '000010')),
+                RGBColor(kwargs.get('color2', '000020')),
+                RGBColor(kwargs.get('color3', '000030')),
+                RGBColor(kwargs.get('color4', '000040')),
+                RGBColor(kwargs.get('color5', '000050')),
+                RGBColor(kwargs.get('color6', '000060')),
+                RGBColor(kwargs.get('color7', '000070')),
+                RGBColor(kwargs.get('color8', '000080'))
+            ],
+            float(kwargs.get('decay_r', '1.8')),
+            float(kwargs.get('decay_g', '2.6')),
+            float(kwargs.get('decay_b', '3.2'))
+        )
 
     def show_pour(self, **kwargs):
         return Pour(
@@ -110,7 +136,7 @@ class BackBoxLights(Scriptlet):
             RGBColor(kwargs.get('color', '400000')),
             int(kwargs.get('speed', 4)),
             int(kwargs.get('repeat', 0)),
-            0 if kwargs.get('direction', 'left').lower() == 'left' else 1
+            0 if kwargs.get('direction', 'down').lower() == 'down' else 1
         )
 
     def show_twinkle(self, **kwargs):
@@ -119,6 +145,30 @@ class BackBoxLights(Scriptlet):
             RGBColor(kwargs.get('background_color', '000000')),
             RGBColor(kwargs.get('twinkle_color', '404040')),
             int(kwargs.get('twinkle_count', 4))
+        )
+
+    def show_sparkle(self, **kwargs):
+        return Sparkle(
+            self.machine,
+            RGBColor(kwargs.get('background_color', '000000')),
+            RGBColor(kwargs.get('color', '404040')),
+            int(kwargs.get('count', 10)),
+            int(kwargs.get('repeat', 0))
+        )
+
+    def show_heat_up(self, **kwargs):
+        return HeatUp(
+            self.machine,
+            RGBColor(kwargs.get('color', 'FF0000')),
+            int(kwargs.get('add_percentage', 5)),
+            int(kwargs.get('steps', 20))
+        )
+
+    def show_gradient(self, **kwargs):
+        return Gradient(
+            self.machine,
+            RGBColor(kwargs.get('color_start', '000000')),
+            RGBColor(kwargs.get('color_end', '0000FF'))
         )
 
     # private ----------------------------------------------------------------

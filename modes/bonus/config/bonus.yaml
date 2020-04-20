@@ -4,18 +4,20 @@ mode_settings:
   display_delay_ms: 1s
   hurry_up_delay_ms: 0
   bonus_entries:
-    - event: bonus_ramps
-      score: 1000 * current_player.ramps
     - event: bonus_switches
       score: 100 * current_player.switches
-    - event: bonus_capsides
-      score: 10000 * current_player.capsides
     - event: bonus_missiles
       score: 2000 * current_player.missiles
     - event: bonus_power_bombs
       score: 5000 * current_player.power_bombs
+    - event: bonus_ramps
+      score: 1000 * current_player.ramps
+    - event: bonus_drop_targets
+      score: 1000 * current_player.drops
     - event: bonus_super_missiles
       score: 1000 * current_player.super_missiles
+    - event: bonus_capsides
+      score: 10000 * current_player.capsides
     - event: bonus_emergency_landing
       score: 100000 * current_player.emergency_landings
 
@@ -28,6 +30,8 @@ slide_player:
   bonus_power_bombs: bonus_power_bombs_slide
   bonus_super_missiles: bonus_super_missiles_slide
   bonus_emergency_landing: bonus_emergency_landing_slide
+  bonus_drop_targets: bonus_drops_slide
+  bonus_total: bonus_total_slide
 
 slides:
   bonus_start_slide:
@@ -98,11 +102,201 @@ slides:
       text: (score)
       style: dmd_med
       y: 12
+  bonus_drops_slide:
+    - type: text
+      text: Drop Targets (player|drops)
+      style: dmd_med
+      y: 20
+    - type: text
+      text: (score)
+      style: dmd_med
+      y: 12
+  bonus_total_slide:
+    - type: text
+      text: TOTAL
+      style: dmd_big
+      y: 23
+    - type: text
+      text: (score)
+      style: dmd_big
+      y: 9
+
+sounds:
+  bonus_chord_1:
+    file: bonus_chord_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bonus_chord_2:
+    file: bonus_chord_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bonus_chord_3:
+    file: bonus_chord_3.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bonus_chord_4:
+    file: bonus_chord_4.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bonus_chord_5:
+    file: bonus_chord_5.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bonus_chord_6:
+    file: bonus_chord_6.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  bonus_final:
+    file: bonus_final.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+
+sound_pools:
+  bonus_award:
+    load: preload
+    type: random_force_all
+    track: sfx
+    sounds:
+      - bonus_chord_1
+      - bonus_chord_2
+      - bonus_chord_3
+      - bonus_chord_4
+      - bonus_chord_5
+      - bonus_chord_6
+
+show_player:
+  mode_bonus_started:
+    solid_black:
+       loops: -1
+       priority: 1900
+    bonus_lights_introduction:
+      key: bonus_lights
+      speed: 40
+      loops: 0
+      priority: 2000
+  bonus_switches:
+    bonus_lights_switches:
+      key: bonus_lights
+      speed: 50
+      loops: 0
+      priority: 2000
+  bonus_ramps:
+    bonus_lights_ramps:
+      key: bonus_lights
+      speed: 20
+      loops: 0
+      priority: 2000
+  bonus_missiles:
+    bonus_lights_missiles:
+      key: bonus_lights
+      speed: 20
+      loops: 0
+      priority: 2000
+  bonus_power_bombs:
+    bonus_lights_power_bombs:
+      key: bonus_lights
+      speed: 20
+      loops: 0
+      priority: 2000
+  bonus_capsides:
+    bonus_lights_capside:
+      key: bonus_lights
+      speed: 30
+      loops: 0
+      priority: 2000
+  bonus_drop_targets:
+    bonus_lights_drops:
+      key: bonus_lights
+      speed: 50
+      loops: 0
+      priority: 2000
+  bonus_emergency_landing:
+    bonus_lights_emergency_landing:
+      key: bonus_lights
+      speed: 50
+      loops: 0
+      priority: 2000
+
 
 event_player:
   mode_bonus_started:
     cmd_backbox_show:
       show_type: none
+    cmd_backbox_show_overlay:
+      show_type: heat_up
+      color: "FF4000"
+      add_percentage: 1
+  bonus_start{machine.next_game_goren == 0}: bonus_sound_start
+  bonus_switches:
+    bonus_sound_awarded:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: "FFFFFF"
+      speed: 1
+      repeat: 0
+      direction: down
+  bonus_ramps:
+    bonus_sound_awarded:
+    cmd_backbox_show_overlay:
+      show_type: heat_up
+      color: "0000FF"
+      add_percentage: 1
+  bonus_missiles:
+    bonus_sound_awarded:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "FF0000"
+      speed: 1
+      repeat: 1
+      direction: left
+  bonus_power_bombs:
+    bonus_sound_awarded:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "FFFF00"
+      speed: 1
+      repeat: 1
+      direction: right
+  bonus_capsides: bonus_sound_awarded
+  bonus_emergency_landing: bonus_sound_awarded
+  bonus_drop_targets:
+    bonus_sound_awarded:
+    cmd_backbox_show_overlay:
+      show_type: sparkle
+      background_color: "FF0000"
+      color: "FFFF00"
+      count: 15
+      repeat: 15
+  bonus_total:
+    cmd_backbox_show_overlay:
+      show_type: sparkle
+      color: "FFFFFF"
+      count: 5
+      repeat: 20
 
 sound_player:
-  bonus_start: bonus
+  bonus_sound_start: bonus
+  bonus_sound_awarded: bonus_award
+  bonus_total: bonus_final
+

@@ -47,3 +47,4 @@ event_player:
   timer_wall_jump_activation_timer_tick{ticks == 79}: left_sling_flipper_should_disable
   timer_wall_jump_activation_timer_complete: wall_jump_deactivated
   wall_jump_deactivated: upper_slingshot_should_enable
+  s_left_flipper_active{device.timers.wall_jump_activation_timer.running}: wall_jump_used

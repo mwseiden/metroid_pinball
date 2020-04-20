@@ -1,8 +1,84 @@
 #config_version=5
 mode:
   start_events: room_1m_continue, room_1m_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1l_enter
   priority: 300
+
+sequences:
+  room_1m_generator_sequence:
+    events:
+      - multiball_room_1m_generator_multiball_ended
+      - room_1m_start_generator_shot_hit
+      - room_1m_generator_bootup
+    events_when_complete: room_1m_generator_started
+    persist_state: True
+    reset_on_complete: False
+    disable_on_complete: True
+
+
+shot_profiles:
+  room_1m_start_multiball:
+    states:
+      - name: lit
+        show: fade_one_light
+  room_1m_captive:
+    states:
+      - name: lit
+        show: fade_one_light
+  room_1m_bootup:
+    states:
+      - name: lit
+        show: single_rainbow
+        speed: 45
+
+shots:
+  room_1m_generator_start_multiball_shot:
+    switch: s_thin_orange
+    profile: room_1m_start_multiball
+    disable_events: room_1m_generator_start_multiball_shot_hit
+    enable_events: room_1m_stage_1
+    show_tokens:
+      led: led_thin_orange
+      color: 'FF8000'
+  room_1m_generator_captive_shot:
+    switch: s_captive_ball
+    profile: room_1m_captive
+    enable_events: multiball_room_1m_generator_multiball_started
+    disable_events: multiball_room_1m_generator_multiball_ended
+    show_tokens:
+      led: led_captive_ball
+      color: '00FFFF'
+  room_1m_start_generator_shot:
+    switch: s_scoop
+    profile: room_1m_bootup
+    enable_events: room_1m_stage_2
+    disable_events: mode_room_1m_generator_started, room_1m_start_generator_shot_hit
+    show_tokens:
+      led: led_enter_scoop
+  room_1m_exit_west_shot:
+    switch: s_ramp_enter
+    profile: exit_door
+    enable_events: room_1m_stage_3
+    disable_events: mode_room_1m_generator_started, room_1m_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
+
+timers:
+  room_1m_test_ball_locked:
+    start_value: 1
+    end_value: 3
+    tick_interval: 1.0s
+    control_events:
+      - event: room_1m_test_lock
+        action: restart
+
+multiballs:
+  room_1m_generator_multiball:
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 30s
+    start_events: room_1m_generator_start_multiball_shot_hit
 
 slides:
   room_1m_generator_backglass_slide:
@@ -26,23 +102,97 @@ slide_player:
 
 show_player:
   mode_room_1m_generator_started:
-    gi_solid_with_overhead:
+    room_1m_generator_gi:
       loops: -1
-      show_tokens:
-        color: '808080'
-        color2: '808080'
+      speed: 30
   show_mode_status_report:
     room_1m_generator_status_report:
       loops: 0
   flipper_cradle_release:
     room_1m_generator_status_report:
       action: stop
+  multiball_room_1m_generator_multiball_started:
+    blink_light:
+      key: room_1m_ball_save_blink
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_ball_save
+        color: ff4700
+    single_rainbow:
+      key: room_1m_ball_lock_rainbow
+      loops: -1
+      speed: 45
+      priority: 400
+      show_tokens:
+        led: led_drop_1
+  multiball_room_1m_generator_multiball_ended:
+    room_1m_ball_lock_rainbow:
+      action: stop
+  multiball_room_1m_generator_multiball_shoot_again_ended:
+    room_1m_ball_save_blink:
+      action: stop
+  room_1m_add_charge:
+    blink_3_lights:
+      loops: 0
+      priority: 500
+      speed: 8
+      show_tokens:
+        led_1: led_drop_1
+        led_2: led_drop_2
+        led_3: led_drop_3
+        color_1: 'FFFF00'
+        color_2: '000000'
+
+sounds:
+  room_1m_charge:
+    file: room_1m_charge.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+
+sound_player:
+  room_1m_stage_1: shoot_the_flashing_target
+  room_1m_stage_2: shoot_the_scoop
+  room_1m_generator_start_multiball_shot_hit: multiball
+  room_1m_ball_locked: shoot_the_drop_target
+  room_1m_add_charge: room_1m_charge
 
 event_player:
   mode_room_1m_generator_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: gradient
+      color_start: "100080"
+      color_end: "005020"
     drop_targets_continue:
+    chozo_multiball_disable:
+  mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value == 0}: room_1m_stage_1
+  mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value == 1}: room_1m_stage_2
+  mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value > 1}: room_1m_stage_3
+  multiball_room_1m_generator_multiball_started: drop_target_mode_should_end
+  mode_drop_targets_stopped: cmd_drop_three_up
+  s_behind_drop_1_active{device.multiballs.room_1m_generator_multiball.balls_added_live > 0}: cmd_drop_one_up, room_1m_test_lock
+  timer_room_1m_test_ball_locked_complete{device.switches.s_behind_drop_1.state}: room_1m_ball_locked, cmd_drop_three_down
+  timer_room_1m_test_ball_locked_complete{not device.switches.s_behind_drop_1.state}: room_1m_ball_released, cmd_drop_three_up, cmd_drop_one_down
+  multiball_room_1m_generator_multiball_ended: cmd_drop_one_down, room_1m_stage_2
+  drop_target_drop_one_down{device.multiballs.room_1m_generator_multiball.balls_added_live > 0 and player.room_1m_captured > 0}: cmd_drop_one_up
+  s_vuk_active: room_1m_ball_released, cmd_drop_one_down, cmd_drop_three_up
+  s_vuk_active{current_player.room_1m_captured > 0}: room_1m_add_big_charge
+  s_behind_drop_2_active{current_player.room_1m_captured > 0}: room_1m_add_charge
+  s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_charge
+  room_1m_generator_captive_shot_hit: room_1m_add_charge
+  room_1m_start_generator_shot_hit: room_1m_generator_bootup
+  room_1m_generator_started: room_1m_stage_3
+  room_1m_add_charge:
+    cmd_backbox_show_overlay:
+      show_type: sparkle
+      color: "FFFF00"
+      count: 5
+      repeat: 20
+  room_1m_exit_west_shot_hit.1: drop_targets_save
+  room_1m_exit_west_shot_hit.2: room_1l_enter
 
 variable_player:
   mode_room_1m_generator_started:
@@ -52,3 +202,22 @@ variable_player:
     continue_room:
       string: 1m
       action: set
+    room_1m_captured:
+      int: 0
+      action: set
+  room_1m_ball_locked:
+    room_1m_captured:
+      int: 1
+      action: set
+  room_1m_ball_released:
+    room_1m_captured:
+      int: 0
+      action: set
+  room_1m_generator_started:
+    wrecked_ship_powered_up:
+      int: 1
+      action: set
+  room_1m_add_charge:
+    room_1m_charge: 1
+  room_1m_add_big_charge:
+    room_1m_charge: 5

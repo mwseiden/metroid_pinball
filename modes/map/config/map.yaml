@@ -1,0 +1,40 @@
+#config_version=5
+
+mode:
+  code: map.Map
+  start_events: metroid_base_started
+  stop_events: mode_bonus_started
+  priority: 10000
+
+widgets:
+  map_background_widget:
+    type: rectangle
+    width: 192
+    height: 128
+    color: '00000040'
+    x: 592
+    y: 960
+    z: 1000
+  map_tile_1:
+    type: image
+    image: map_tile_undiscovered
+
+widget_player:
+  mode_map_started:
+    map_background_widget:
+      key: map_background
+      target: window
+
+# widgets map_room_1 to map_room_10
+# widgets map_room_X_exit_n, e, w, s
+
+# event cmd_map_position
+#   - area: M,B,N,C,W,T
+#   - room: (numletter code)
+
+
+# layout = {
+#   "C": {
+#     "1a": [1, x, y, 1, None, 2, "door_1a_1f", ... and the rest]
+#   }
+# }

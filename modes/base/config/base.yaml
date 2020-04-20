@@ -173,14 +173,19 @@ show_player:
   capside_combo_hit:
     base_capside_combo:
       loops: 0
+  reload_combo_hit:
+    base_recharge_combo_lights:
+      loops: 0
+      priority: 9000
+      speed: 60
   twitch_new_chat_message{line_count <= 3}:
     chat_message_3:
       loops: 0
-      priority: 200
+      priority: 20000
   twitch_new_chat_message{line_count > 3 and line_count <= 1000}:
     chat_message_6:
       loops: 0
-      priority: 200
+      priority: 20000
   base_bits_small:
     bits_small:
       loops: 0
@@ -385,21 +390,21 @@ event_player:
       color: "A00000"
       speed: 1
       repeat: 4
-      direction: left
+      direction: down
   base_bits_medium:
     cmd_backbox_show_overlay:
       show_type: sweep_vertical
       color: "A00000"
       speed: 1
       repeat: 9
-      direction: left
+      direction: down
   base_bits_large:
     cmd_backbox_show_overlay:
       show_type: sweep_vertical
       color: "A00000"
       speed: 1
       repeat: 20
-      direction: left
+      direction: down
   twitch_flip_left:
     cmd_backbox_show_overlay:
       show_type: sweep_horizontal
@@ -431,6 +436,14 @@ event_player:
   mode_base_started{machine.next_game_bao == 1}: bao_base_started
   mode_base_started{machine.next_game_goren == 1}: gorens_lament_should_start
   base_skillshot_should_start: skillshot_should_start
+  ball_save_default_saving_ball:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: "FF2000"
+      speed: 1
+      repeat: 0
+      direction: up
+
 
 variable_player:
   left_orbit_hit:
@@ -479,6 +492,8 @@ variable_player:
     capsides: 1
     score:
       int: (10000 + (2000 * current_player.capsides)) * current_player.multiplier
+  reload_combo_hit:
+    score: 250000 * current_player.multiplier
   scoop_shot_hit:
     scoops: 1
     score:
@@ -499,6 +514,12 @@ variable_player:
     score: 66600 * current_player.multiplier
 
 sounds:
+  energy_target:
+    file: energy_target.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
   left_sling:
     file: left_sling.wav
     streaming: False
@@ -562,3 +583,4 @@ sound_player:
   secret_passage_shot_hit: ramp_sound_2
   rollover_shot_hit: mini_loop
   scoop_shot_hit: scoop_eject
+  thin_orange_shot_hit: energy_target

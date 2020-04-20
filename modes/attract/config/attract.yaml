@@ -66,15 +66,15 @@ show_player:
   twitch_new_chat_message{line_count <= 3}:
     chat_message_3:
       loops: 0
-      priority: 200
+      priority: 20000
   twitch_new_chat_message{line_count > 3 and line_count <= 1000}:
     chat_message_6:
       loops: 0
-      priority: 200
+      priority: 20000
   twitch_bit_donation:
     bits_small:
       loops: 0
-      priority: 300
+      priority: 20000
   slide_last_game_high_scores_active:
     attract_water:
       action: stop
@@ -173,8 +173,14 @@ show_player:
     lights_fire:
       loops: -1
       speed: 15
-  slide_rudy_slide_active:
+  slide_pbu_slide_active:
     lights_fire:
+      action: stop
+    lights_purple_fire:
+      loops: -1
+      speed: 18
+  slide_rudy_slide_active:
+    lights_purple_fire:
       action: stop
     rudy_tas:
       loops: -1
@@ -223,11 +229,11 @@ animations:
       repeat: true
   special_thanks_scroll_up:
     - property: y
-      value: 168
+      value: 180
       relative: true
-      duration: 8s
+      duration: 9s
     - property: y
-      value: -168
+      value: -180
       relative: true
       duration: 0s
       repeat: true
@@ -278,6 +284,9 @@ event_player:
       max_cutoff: 8
       color1: "404040"
       color2: "000040"
+  slide_claire_samus_active:
+    cmd_backbox_show:
+      show_type: fire
   slide_double_danger_slide_active:
     cmd_backbox_show:
       show_type: drop
@@ -287,7 +296,8 @@ event_player:
       drop_color: "100C00"
   slide_pbu_slide_active:
     cmd_backbox_show:
-      show_type: fire
+      show_type: plasma
+      decay_b: 1.9
   slide_erin_slide_active:
     cmd_backbox_show:
       show_type: two_tone
@@ -312,8 +322,6 @@ event_player:
       min_length: 3
       max_length: 10
       color: "000040"
-
-
   mode_attract_stopping:
     cmd_backbox_show:
       show_type: none

@@ -1,7 +1,7 @@
 #config_version=5
 mode:
   start_events: room_1c_continue, room_1c_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1b_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1b_enter, room_1d_enter
   priority: 300
 
 shots:
@@ -13,6 +13,15 @@ shots:
     reset_events: room_1c_exit_west_shot_hit
     show_tokens:
       led: led_enter_secret_passage
+      color: door_blue
+  room_1c_exit_east_shot:
+    hit_events: left_orbit_hit
+    profile: exit_door
+    enable_events: mode_room_1c_plains_started
+    disable_events: room_1c_exit_east_shot_hit
+    reset_events: room_1c_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_left_orbit
       color: door_blue
   room_1c_bank_1_shot:
     switch: s_missile_bank_1, s_missile_bank_2, s_missile_bank_3
@@ -112,6 +121,8 @@ event_player:
     drop_targets_continue:
   room_1c_exit_west_shot_hit.1: drop_targets_save
   room_1c_exit_west_shot_hit.2: room_1b_enter
+  room_1c_exit_east_shot_hit.1: drop_targets_save
+  room_1c_exit_east_shot_hit.2: room_1d_enter
 
 variable_player:
   mode_room_1c_plains_started:

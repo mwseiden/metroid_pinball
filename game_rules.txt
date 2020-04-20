@@ -269,9 +269,10 @@ Landing Sites
             Scoop (Blue) -> Geothermal Plant [m]
 
     Wrecked Ship [L]:
-        Does nothing extra except play calming music.
+        Break down the drop targets to reach the generator.
 
         Doors:
+            Secret Passage (Blue) -> The Lake [D]
             VUK (Blue) -> Generator Room [M]
 
 Rooms (Modes)
@@ -318,6 +319,18 @@ Rooms (Modes)
 
             Doors:
                  Secret Passage (Blue) -> Landing Site [B]
+                 Left Orbit (Blue) -> The Lake [D]
+
+        The Lake [D]:
+
+            Hit the scoop, pit, pop bumper subway, or upkicker for points.
+            
+            Entering Crateria from the Wrecked Ship cancels Land the Gunship
+            and room [B] will then skip to its Landing Site phase.
+
+            Doors:
+                 Back Ramp (Blue) -> Plains [C]
+                 Right Orbit (Blue) -> Entryway [L] (Wrecked Ship)
 
         Mushroom Chamber [F]:
 
@@ -366,7 +379,7 @@ Rooms (Modes)
 
         Sandy Cavern [e]:
 
-            Rules Unimplemented
+            Leave the room via either exit. Both doors are locked by missles.
 
             Doors:
                 Left Orbit (Red) -> The Abyss [d]
@@ -374,7 +387,9 @@ Rooms (Modes)
 
         Frozen Lake [f]:
 
-            Rules Unimplemented
+            Hitting a white strobing shot will light another white strobing
+            shot. Once all standups are lit, shoot the scoop to crack the
+            ice.
 
             Doors:
                 Secret Passage (Red) -> Sandy Cavern [e]
@@ -435,5 +450,17 @@ Rooms (Modes)
 
         Generator Room [M]:
 
-            Rules Unimplemented
+            Hit the energy target to start a 2 ball multiball.
 
+            Lock a ball behind the drop target.
+
+            Bash drop target to charge the generator based on how far back
+            the captured ball travels.
+
+            You can also bash the captive ball to add generator charge.
+
+            When one ball drains (and is not saved) then hit the scoop to
+            power up the generator and open the door.
+
+            Doors:
+                Back Ramp (Blue) -> Entryway [L]

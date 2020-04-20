@@ -1,0 +1,141 @@
+#config_version=5
+
+# Backglass
+# By Dietmar Rabich, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=85388725
+
+mode:
+  start_events: room_1d_continue, room_1d_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1c_enter, room_1l_enter
+  priority: 300
+
+shot_profiles:
+  room_1d_swamp:
+    states:
+      - name: lit
+        show: room_1d_swamp
+        speed: 60
+
+shots:
+  room_1d_exit_west_shot:
+    switches: s_ramp_enter
+    profile: exit_door
+    enable_events: mode_room_1d_the_lake_started
+    disable_events: room_1d_exit_west_shot_hit
+    reset_events: room_1d_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
+  room_1d_exit_east_shot:
+    hit_events: right_orbit_hit
+    profile: exit_door
+    enable_events: mode_room_1d_the_lake_started
+    disable_events: room_1d_exit_east_shot_hit
+    reset_events: room_1d_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_right_orbit
+      color: door_blue
+  room_1d_underwater_1_shot:
+    switches: s_pit
+    profile: room_1d_swamp
+    enable_events: mode_room_1d_the_lake_started
+    show_tokens:
+      led: led_pit
+  room_1d_underwater_2_shot:
+    switches: s_scoop
+    profile: room_1d_swamp
+    enable_events: mode_room_1d_the_lake_started
+    show_tokens:
+      led: led_enter_scoop
+  room_1d_underwater_3_shot:
+    switches: s_pop_subway
+    profile: room_1d_swamp
+    enable_events: mode_room_1d_the_lake_started
+    show_tokens:
+      led: gi_strip_4
+  room_1d_underwater_4_shot:
+    switches: s_vuk
+    profile: room_1d_swamp
+    enable_events: mode_room_1d_the_lake_started
+    show_tokens:
+      led: gi_back_right
+
+
+slides:
+  room_1d_the_lake_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1d_the_lake_backglass
+    transition: fade
+    transition_out: fade
+  room_1d_the_lake_splash_slide:
+    widgets:
+      - type: image
+        image: room_1d_the_lake_splash
+
+slide_player:
+  mode_room_1d_the_lake_started:
+    room_1d_the_lake_backglass_slide:
+      target: backglass
+    room_1d_the_lake_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_1d_the_lake_started:
+    room_2d_underwater:
+      loops: -1
+      speed: 10
+  show_mode_status_report:
+    room_1d_the_lake_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1d_the_lake_status_report:
+      action: stop
+  room_1d_underwater_1_shot_hit:
+    room_1d_swamp_hit:
+      loops: 0
+      speed: 30
+  room_1d_underwater_2_shot_hit:
+    room_1d_swamp_hit:
+      loops: 0
+      speed: 30
+  room_1d_underwater_3_shot_hit:
+    room_1d_swamp_hit:
+      loops: 0
+      speed: 30
+  room_1d_underwater_4_shot_hit:
+    room_1d_swamp_hit:
+      loops: 0
+      speed: 30
+
+event_player:
+  mode_room_1d_the_lake_started:
+    cmd_backbox_show:
+      show_type: gradient
+      color_start: "0000FF"
+      color_end: "00FF00"
+    drop_targets_continue:
+  room_1d_exit_west_shot_hit.1: drop_targets_save
+  room_1d_exit_west_shot_hit.2: room_1c_enter
+  room_1d_exit_east_shot_hit.1: drop_targets_save
+  room_1d_exit_east_shot_hit.2: room_1l_enter
+
+variable_player:
+  mode_room_1d_the_lake_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 1d
+      action: set
+    crateria_landed:
+      int: 1
+      action: set
+  room_1d_underwater_1_shot_hit:
+    score: 10000 * current_player.multiplier
+  room_1d_underwater_2_shot_hit:
+    score: 30000 * current_player.multiplier
+  room_1d_underwater_3_shot_hit:
+    score: 40000 * current_player.multiplier
+  room_1d_underwater_4_shot_hit:
+    score: 20000 * current_player.multiplier

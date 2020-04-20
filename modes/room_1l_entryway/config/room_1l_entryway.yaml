@@ -1,7 +1,7 @@
 #config_version=5
 mode:
-    start_events: select_landing_site_wrecked_ship_selected, room_1l_continue
-    stop_events: game_ending, ball_ending, metroid_base_ended, room_1m_enter
+    start_events: select_landing_site_wrecked_ship_selected, room_1l_continue, room_1l_enter
+    stop_events: game_ending, ball_ending, metroid_base_ended, room_1m_enter, room_1d_enter
     # restart_on_next_ball: true
     priority: 300
 
@@ -15,15 +15,31 @@ shots:
     show_tokens:
       led: gi_strip_9
       color: door_blue
+  room_1l_exit_west_shot:
+    switches: s_left_passage
+    profile: exit_door
+    enable_events: mode_room_1l_entryway_started
+    disable_events: room_1l_exit_west_shot_hit
+    reset_events: room_1l_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_secret_passage
+      color: door_blue
 
 
 show_player:
-  mode_room_1l_entryway_started:
+  mode_room_1l_entryway_started_no_charge:
     gi_solid_with_overhead:
       loops: -1
       show_tokens:
         color: '808080'
         color2: "FF4040"
+  mode_room_1l_entryway_started_charge:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: 'FFC060'
+        color2: "C00020"
+  mode_room_1l_entryway_started:
     small_theater_chase:
       key: chozo_multiball_drop_show
       loops: -1
@@ -45,15 +61,25 @@ slides:
         image: room_1l_entryway_backglass
     transition: fade
     transition_out: fade
+  room_1l_backglass_power_slide:
+    widgets:
+      - type: image
+        image: room_1l_entryway_power_backglass
+    transition: fade
+    transition_out: fade
   room_1l_splash_slide:
     widgets:
       - type: image
         image: room_1l_splash
 
 slide_player:
-  mode_room_1l_entryway_started:
+  mode_room_1l_entryway_started_no_charge:
     room_1l_backglass_slide:
       target: backglass
+  mode_room_1l_entryway_started_charge:
+    room_1l_backglass_power_slide:
+      target: backglass
+  mode_room_1l_entryway_started:
     room_1l_splash_slide:
       target: dmd
       expire: 1.5s
@@ -68,13 +94,20 @@ variable_player:
       action: set
 
 event_player:
-  mode_room_1l_entryway_started:
-    # cmd_backbox_show:
-      # show_type: two_tone
-      # min_cutoff: 1
-      # max_cutoff: 9
-      # color1: "404020"
-      # color2: "202040"
-    drop_targets_continue:
+  mode_room_1l_entryway_started_no_charge:
+    cmd_backbox_show:
+      show_type: gradient
+      color_start: "080606"
+      color_end: "000000"
+  mode_room_1l_entryway_started_charge:
+    cmd_backbox_show:
+      show_type: gradient
+      color_start: "FF0000"
+      color_end: "E0C020"
+  mode_room_1l_entryway_started: drop_targets_continue, cmd_map_position
+  mode_room_1l_entryway_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1l_entryway_started_no_charge
+  mode_room_1l_entryway_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1l_entryway_started_charge
   room_1l_exit_east_shot_hit.1: drop_targets_save
   room_1l_exit_east_shot_hit.2: room_1m_enter
+  room_1l_exit_west_shot_hit.1: drop_targets_save
+  room_1l_exit_west_shot_hit.2: room_1d_enter
