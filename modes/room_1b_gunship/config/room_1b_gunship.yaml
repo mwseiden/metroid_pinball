@@ -104,6 +104,7 @@ show_player:
 event_player:
   room_1b_gunship_landing_animated:
     - room_1b_success
+  mode_room_1b_gunship_started: cmd_map_position
   mode_room_1b_gunship_started{current_player.room_1b_step_2 == 0}:
     - room_1b_show_backglass
   mode_room_1b_gunship_started{current_player.room_1b_step_2 != 0}:
