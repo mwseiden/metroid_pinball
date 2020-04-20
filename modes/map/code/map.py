@@ -43,18 +43,7 @@ class Map(Mode):
         # self.draw_map_tile(room_code, visit)
 
     def draw_map_tile(self, room_code, visit):
-        area,
-          room_number,
-          x,
-          y,
-          exit_n_type,
-          exit_n_var,
-          exit_e_type,
-          exit_e_var,
-          exit_w_type,
-          exit_w_var,
-          exit_s_type,
-          exit_s_var = self.LAYOUT.get(room_code)
+        area, room_number, x, y, exit_n_type, exit_n_var, exit_e_type, exit_e_var, exit_w_type, exit_w_var, exit_s_type, exit_s_var = self.LAYOUT.get(room_code)
 
         x = self.ORIGIN_X + (x * 32)
         y = self.ORIGIN_Y - (y * 32)
