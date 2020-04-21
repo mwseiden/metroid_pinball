@@ -80,6 +80,9 @@ player_vars:
     initial_value: 0
   lanes_last_shot:
     initial_value: 0
+  map_location:
+    value_type: str
+    initial_value: '1b'
   missiles:
     initial_value: 0
   multiplier:

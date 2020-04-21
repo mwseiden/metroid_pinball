@@ -75,6 +75,9 @@ event_player:
       twinkle_color: "604000"
       twinkle_count: 20
     drop_targets_continue:
+    cmd_map_position:
+      room: '1a'
+      visit: True
   mode_room_1a_lush_cavern_ending: drop_targets_save
   mode_room_1a_lush_cavern_started{current_player.door_1a_1f == 0}: room_1a_enable_south_missile_door, room_1a_disable_south_door
   mode_room_1a_lush_cavern_started{current_player.door_1a_1f == 1}: room_1a_enable_south_door, room_1a_disable_south_missile_door

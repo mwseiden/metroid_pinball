@@ -165,6 +165,9 @@ widgets:
   map_exit_10_s:
     type: image
     image: map_exit_blue_v
+  map_player:
+    type: image
+    image: map_player
 
 widget_player:
   mode_map_started:

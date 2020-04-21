@@ -63,6 +63,9 @@ event_player:
     cmd_backbox_show:
       show_type: fire
     drop_targets_continue:
+    cmd_map_position:
+      room: '1f'
+      visit: True
   mode_room_1f_mushroom_chamber_started{current_player.door_1a_1f == 0}: room_1f_enable_north_missile_door, room_1f_disable_north_door
   mode_room_1f_mushroom_chamber_started{current_player.door_1a_1f == 1}: room_1f_enable_north_door, room_1f_disable_north_missile_door
   room_1f_exit_north_closed_shot_hit{current_player.missiles > 0}: room_1f_open_north_door

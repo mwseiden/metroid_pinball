@@ -119,6 +119,9 @@ event_player:
       color1: "404040"
       color2: "204020"
     drop_targets_continue:
+    cmd_map_position:
+      room: '1c'
+      visit: True
   room_1c_exit_west_shot_hit.1: drop_targets_save
   room_1c_exit_west_shot_hit.2: room_1b_enter
   room_1c_exit_east_shot_hit.1: drop_targets_save

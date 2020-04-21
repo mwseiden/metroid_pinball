@@ -46,7 +46,6 @@ class Map(Mode):
     def mode_start(self, **kwargs):
         super().mode_start(**kwargs)
         self.add_mode_event_handler('cmd_map_position', self.event_set_location)
-        # self.draw_map()
 
     def mode_stop(self, **kwargs):
         super().mode_stop(**kwargs)
@@ -54,10 +53,20 @@ class Map(Mode):
     def event_set_location(self, **kwargs):
         room_code = kwargs.get('room', '1b')
         visit = kwargs.get('visit', 'false').lower() in ['true', '1', 't', 'y', 'yes']
-        self.draw_map()
-        # self.draw_map_tile(room_code, visit)
 
-    def draw_map_tile(self, room_code, visit):
+        self.player.map_location = room_code
+        self.draw_map()
+
+    def draw_map(self):
+        self.remove_background()
+        self.draw_background('C')
+
+        self.remove_player()
+
+        for room_code in self.AREAS['C'][2]:
+            self.draw_map_tile(room_code)
+
+    def draw_map_tile(self, room_code):
         area_code, room_number, x, y, exit_n_type, exit_n_var, exit_e_type, exit_e_var, exit_w_type, exit_w_var, exit_s_type, exit_s_var = self.LAYOUT.get(room_code)
 
         x = self.ORIGIN_X - self.AREAS[area_code][0] + 24 + (x * 32)
@@ -75,12 +84,8 @@ class Map(Mode):
         self.draw_exit(room_number, 'w', x - 14, y, exit_w_type, exit_w_var)
         self.draw_exit(room_number, 's', x, y - 18, exit_s_type, exit_s_var)
 
-    def draw_map(self):
-        self.remove_background()
-        self.draw_background('C')
-
-        for room_code in self.AREAS['C'][2]:
-            self.draw_map_tile(room_code, False)
+        if self.player.map_location == room_code:
+            self.draw_player(x, y)
 
     def draw_background(self, area_code):
         settings = {
@@ -170,3 +175,30 @@ class Map(Mode):
 
         self.machine.widget_player.play(settings, 'map', None)
 
+    def draw_player(self, x, y):
+        settings = {
+          'map_player': {
+            'action': 'add',
+            'target': 'window',
+            'key': 'map_player',
+            'widget_settings': {
+              'x': x,
+              'y': y,
+              'z': 1002,
+              'image': 'map_player'
+            }
+          }
+        }
+
+        self.machine.widget_player.play(settings, 'map', None)
+
+    def remove_player(self):
+        settings = {
+          'map_player': {
+            'action': 'remove',
+            'target': 'window',
+            'key': 'map_player'
+          }
+        }
+
+        self.machine.widget_player.play(settings, 'map', None)
