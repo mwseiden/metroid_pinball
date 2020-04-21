@@ -165,3 +165,10 @@ widgets:
   map_exit_10_s:
     type: image
     image: map_exit_blue_v
+
+widget_player:
+  mode_map_started:
+    map_background_widget:
+      key: map_background_widget
+      target: window
+
