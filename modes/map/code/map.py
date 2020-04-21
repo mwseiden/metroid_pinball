@@ -46,7 +46,7 @@ class Map(Mode):
         area_code, room_number, x, y, exit_n_type, exit_n_var, exit_e_type, exit_e_var, exit_w_type, exit_w_var, exit_s_type, exit_s_var = self.LAYOUT.get(room_code)
 
         x = self.ORIGIN_X - self.AREAS[area_code][0] + 16 + (x * 32)
-        y = self.ORIGIN_Y - self.AREAS[area_code][1] - 16 - (y * 32)
+        y = self.ORIGIN_Y + self.AREAS[area_code][1] - 16 - (y * 32)
 
         self.remove_room(room_number)
         self.remove_exit(room_number, 'n')
