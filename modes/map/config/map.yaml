@@ -165,23 +165,3 @@ widgets:
   map_exit_10_s:
     type: image
     image: map_exit_blue_v
-
-widget_player:
-  mode_map_started:
-    map_background_widget:
-      key: map_background
-      target: window
-
-# widgets map_room_1 to map_room_10
-# widgets map_room_X_exit_n, e, w, s
-
-# event cmd_map_position
-#   - area: M,B,N,C,W,T
-#   - room: (numletter code)
-
-
-# layout = {
-#   "C": {
-#     "1a": [1, x, y, 1, None, 2, "door_1a_1f", ... and the rest]
-#   }
-# }
