@@ -20,12 +20,27 @@ class Map(Mode):
       '1c': ['C', 3, 3, 0, 0, None, 1, None, 0, None, 4, None],
       '1d': ['C', 4, 4, 0, 0, None, 4, None, 0, None, 0, None],
       '1e': ['C', 5, 0, 1, 0, None, 1, None, 4, None, 0, None],
-      '1f': ['C', 6, 1, 1, 0, None, 1, None, 1, None, 0, None],
-      '1g': ['C', 7, 2, 1, 0, None, 1, None, 1, None, 0, None]
+      '1f': ['C', 6, 1, 1, 0, None, 1, None, 1, None, 4, None],
+      '1g': ['C', 7, 2, 1, 0, None, 1, None, 0, None, 0, None]
     }
 
     AREAS = {
       'C': [192, 96, ['1a', '1b', '1c', '1d', '1e', '1f', '1g']]
+    }
+
+    DOOR_TYPES = {
+      0: 'none',
+      1: 'blue',
+      2: 'red',
+      3: 'green',
+      4: 'area'
+    }
+
+    DOOR_DIRECTIONS = {
+      'n': 'v',
+      'e': 'h',
+      'w': 'h',
+      's': 'v'
     }
 
     def mode_start(self, **kwargs):
@@ -137,7 +152,7 @@ class Map(Mode):
               'x': x,
               'y': y,
               'z': 1001,
-              'image': 'map_exit_blue_h' if exit_direction in ['e', 'w'] else 'map_exit_blue_v'
+              'image': 'map_exit_{}_{}'.format(DOOR_TYPES[exit_type], DOOR_DIRECTIONS[exit_direction])
             }
           }
         }
@@ -154,3 +169,4 @@ class Map(Mode):
         }
 
         self.machine.widget_player.play(settings, 'map', None)
+
