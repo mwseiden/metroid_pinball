@@ -52,7 +52,7 @@ class Map(Mode):
 
     def event_set_location(self, **kwargs):
         room_code = kwargs.get('room', '1b')
-        visit = kwargs.get('visit', 'false').lower() in ['true', '1', 't', 'y', 'yes']
+        visit = kwargs.get('visit', False)
 
         self.player.map_location = room_code
         self.draw_map()
