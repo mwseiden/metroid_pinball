@@ -54,7 +54,7 @@ class Map(Mode):
         self.remove_exit(room_number, 'w')
         self.remove_exit(room_number, 's')
 
-        self.draw_room(room_number, x, y, room_type)
+        self.draw_room(room_number, x, y, 'x')
         self.draw_exit(room_number, 'n', x, y + 14, exit_n_type, exit_n_var)
         self.draw_exit(room_number, 'e', x + 18, y, exit_e_type, exit_e_var)
         self.draw_exit(room_number, 'w', x - 14, y, exit_w_type, exit_w_var)
