@@ -18,6 +18,153 @@ widgets:
   map_tile_1:
     type: image
     image: map_tile_undiscovered
+  map_exit_1_n:
+    type: image
+    image: map_exit_blue_v
+  map_exit_1_e:
+    type: image
+    image: map_exit_blue_h
+  map_exit_1_w:
+    type: image
+    image: map_exit_blue_h
+  map_exit_1_s:
+    type: image
+    image: map_exit_blue_v
+  map_tile_2:
+    type: image
+    image: map_tile_undiscovered
+  map_exit_2_n:
+    type: image
+    image: map_exit_blue_v
+  map_exit_2_e:
+    type: image
+    image: map_exit_blue_h
+  map_exit_2_w:
+    type: image
+    image: map_exit_blue_h
+  map_exit_2_s:
+    type: image
+    image: map_exit_blue_v
+  map_tile_3:
+    type: image
+    image: map_tile_undiscovered
+  map_exit_3_n:
+    type: image
+    image: map_exit_blue_v
+  map_exit_3_e:
+    type: image
+    image: map_exit_blue_h
+  map_exit_3_w:
+    type: image
+    image: map_exit_blue_h
+  map_exit_3_s:
+    type: image
+    image: map_exit_blue_v
+  map_tile_4:
+    type: image
+    image: map_tile_undiscovered
+  map_exit_4_n:
+    type: image
+    image: map_exit_blue_v
+  map_exit_4_e:
+    type: image
+    image: map_exit_blue_h
+  map_exit_4_w:
+    type: image
+    image: map_exit_blue_h
+  map_exit_4_s:
+    type: image
+    image: map_exit_blue_v
+  map_tile_5:
+    type: image
+    image: map_tile_undiscovered
+  map_exit_5_n:
+    type: image
+    image: map_exit_blue_v
+  map_exit_5_e:
+    type: image
+    image: map_exit_blue_h
+  map_exit_5_w:
+    type: image
+    image: map_exit_blue_h
+  map_exit_5_s:
+    type: image
+    image: map_exit_blue_v
+  map_tile_6:
+    type: image
+    image: map_tile_undiscovered
+  map_exit_6_n:
+    type: image
+    image: map_exit_blue_v
+  map_exit_6_e:
+    type: image
+    image: map_exit_blue_h
+  map_exit_6_w:
+    type: image
+    image: map_exit_blue_h
+  map_exit_6_s:
+    type: image
+    image: map_exit_blue_v
+  map_tile_7:
+    type: image
+    image: map_tile_undiscovered
+  map_exit_7_n:
+    type: image
+    image: map_exit_blue_v
+  map_exit_7_e:
+    type: image
+    image: map_exit_blue_h
+  map_exit_7_w:
+    type: image
+    image: map_exit_blue_h
+  map_exit_7_s:
+    type: image
+    image: map_exit_blue_v
+  map_tile_8:
+    type: image
+    image: map_tile_undiscovered
+  map_exit_8_n:
+    type: image
+    image: map_exit_blue_v
+  map_exit_8_e:
+    type: image
+    image: map_exit_blue_h
+  map_exit_8_w:
+    type: image
+    image: map_exit_blue_h
+  map_exit_8_s:
+    type: image
+    image: map_exit_blue_v
+  map_tile_9:
+    type: image
+    image: map_tile_undiscovered
+  map_exit_9_n:
+    type: image
+    image: map_exit_blue_v
+  map_exit_9_e:
+    type: image
+    image: map_exit_blue_h
+  map_exit_9_w:
+    type: image
+    image: map_exit_blue_h
+  map_exit_9_s:
+    type: image
+    image: map_exit_blue_v
+  map_tile_10:
+    type: image
+    image: map_tile_undiscovered
+  map_exit_10_n:
+    type: image
+    image: map_exit_blue_v
+  map_exit_10_e:
+    type: image
+    image: map_exit_blue_h
+  map_exit_10_w:
+    type: image
+    image: map_exit_blue_h
+  map_exit_10_s:
+    type: image
+    image: map_exit_blue_v
 
 widget_player:
   mode_map_started:
