@@ -43,7 +43,7 @@ class Map(Mode):
         # self.draw_map_tile(room_code, visit)
 
     def draw_map_tile(self, room_code, visit):
-        area, room_number, x, y, exit_n_type, exit_n_var, exit_e_type, exit_e_var, exit_w_type, exit_w_var, exit_s_type, exit_s_var = self.LAYOUT.get(room_code)
+        area_code, room_number, x, y, exit_n_type, exit_n_var, exit_e_type, exit_e_var, exit_w_type, exit_w_var, exit_s_type, exit_s_var = self.LAYOUT.get(room_code)
 
         x = self.ORIGIN_X - self.AREAS[area_code][0] + 16 + (x * 32)
         y = self.ORIGIN_Y - self.AREAS[area_code][1] - 16 - (y * 32)
@@ -76,7 +76,7 @@ class Map(Mode):
             'widget_settings': {
               'x': self.ORIGIN_X - (self.AREAS[area_code][0] / 2),
               'y': self.ORIGIN_Y - (self.AREAS[area_code][1] / 2),
-              'z': 1001,
+              'z': 1000,
               'image': 'map_tile_undiscovered'
             }
           }
