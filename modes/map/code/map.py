@@ -25,7 +25,7 @@ class Map(Mode):
     }
 
     AREAS = {
-      'C': [192, 128, ['1a', '1b', '1c', '1d', '1e', '1f', '1g']]
+      'C': [192, 96, ['1a', '1b', '1c', '1d', '1e', '1f', '1g']]
     }
 
     def mode_start(self, **kwargs):
