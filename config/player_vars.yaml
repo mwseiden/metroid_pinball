@@ -83,6 +83,9 @@ player_vars:
   map_location:
     value_type: str
     initial_value: '1b'
+  map_visited_c:
+    value_type: str
+    initial_value: 'NNNNNNNNNN'
   missiles:
     initial_value: 0
   multiplier:
