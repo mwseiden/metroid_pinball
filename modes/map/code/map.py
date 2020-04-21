@@ -77,7 +77,8 @@ class Map(Mode):
               'x': self.ORIGIN_X - (self.AREAS[area_code][0] / 2),
               'y': self.ORIGIN_Y - (self.AREAS[area_code][1] / 2),
               'z': 1000,
-              'image': 'map_tile_undiscovered'
+              'width': self.AREAS[area_code][0],
+              'height': self.AREAS[area_code][1]
             }
           }
         }
