@@ -2,8 +2,8 @@ from mpf.core.mode import Mode
 
 class Map(Mode):
 
-    ORIGIN_X = 505
-    ORIGIN_Y = 1015
+    ORIGIN_X = 688
+    ORIGIN_Y = 1024
 
     # door types:
     # 0: None
@@ -45,8 +45,8 @@ class Map(Mode):
     def draw_map_tile(self, room_code, visit):
         area, room_number, x, y, exit_n_type, exit_n_var, exit_e_type, exit_e_var, exit_w_type, exit_w_var, exit_s_type, exit_s_var = self.LAYOUT.get(room_code)
 
-        x = self.ORIGIN_X + (x * 32)
-        y = self.ORIGIN_Y - (y * 32)
+        x = self.ORIGIN_X - self.AREAS[area_code][0] + 16 + (x * 32)
+        y = self.ORIGIN_Y - self.AREAS[area_code][1] - 16 - (y * 32)
 
         self.remove_room(room_number)
         self.remove_exit(room_number, 'n')
@@ -61,8 +61,39 @@ class Map(Mode):
         self.draw_exit(room_number, 's', x, y - 18, exit_s_type, exit_s_var)
 
     def draw_map(self):
+        self.remove_background()
+        self.draw_background('C')
+
         for room_code in self.AREAS['C'][2]:
             self.draw_map_tile(room_code, False)
+
+    def draw_background(self, area_code):
+        settings = {
+          'map_background_widget': {
+            'action': 'add',
+            'target': 'window',
+            'key': 'map_background_widget',
+            'widget_settings': {
+              'x': self.ORIGIN_X - (self.AREAS[area_code][0] / 2),
+              'y': self.ORIGIN_Y - (self.AREAS[area_code][1] / 2),
+              'z': 1001,
+              'image': 'map_tile_undiscovered'
+            }
+          }
+        }
+
+        self.machine.widget_player.play(settings, 'map', None)
+
+    def remove_background(self):
+        settings = {
+          'map_background_widget': {
+            'action': 'remove',
+            'target': 'window',
+            'key': 'map_background_widget'
+          }
+        }
+
+        self.machine.widget_player.play(settings, 'map', None)
 
     def draw_room(self, room_number, x, y, room_type):
         settings = {
