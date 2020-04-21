@@ -152,7 +152,7 @@ class Map(Mode):
               'x': x,
               'y': y,
               'z': 1001,
-              'image': 'map_exit_{}_{}'.format(DOOR_TYPES[exit_type], DOOR_DIRECTIONS[exit_direction])
+              'image': 'map_exit_{}_{}'.format(self.DOOR_TYPES[exit_type], self.DOOR_DIRECTIONS[exit_direction])
             }
           }
         }
