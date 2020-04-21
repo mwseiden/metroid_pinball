@@ -85,9 +85,9 @@ class Map(Mode):
 
         self.draw_room(room_number, x, y, list(self.player['map_visited_{}'.format(self.LAYOUT[room_code][0])])[room_number - 1] == 'Y')
         self.draw_exit(room_number, 'n', x, y + 14, exit_n_type, exit_n_var)
-        self.draw_exit(room_number, 'e', x + 18, y, exit_e_type, exit_e_var)
+        self.draw_exit(room_number, 'e', x + 14, y, exit_e_type, exit_e_var)
         self.draw_exit(room_number, 'w', x - 14, y, exit_w_type, exit_w_var)
-        self.draw_exit(room_number, 's', x, y - 18, exit_s_type, exit_s_var)
+        self.draw_exit(room_number, 's', x, y - 14, exit_s_type, exit_s_var)
 
         if self.player.map_location == room_code:
             self.draw_player(x, y)
