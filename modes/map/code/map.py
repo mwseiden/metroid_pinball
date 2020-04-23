@@ -53,15 +53,15 @@ class Map(Mode):
       '2g': ['m', 8, 0, 2, 0, None, 1, None, 0, None, 0, None],
       '2h': ['m', 9, 1, 2, 0, None, 0, None, 0, None, 0, None],
 
-      '2i': ['n', 1, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2j': ['n', 2, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2k': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2l': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2m': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2n': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2o': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2p': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2q': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2i': ['n', 1, 1, 0, 0, None, 1, None, 0, None, 1, None],
+      '2j': ['n', 2, 2, 0, 0, None, 0, None, 0, None, 0, None],
+      '2k': ['n', 3, 3, 0, 0, None, 0, None, 0, None, 1, None],
+      '2l': ['n', 3, 0, 1, 0, None, 1, None, 0, None, 0, None],
+      '2m': ['n', 3, 1, 1, 0, None, 1, None, 0, None, 0, None],
+      '2n': ['n', 3, 2, 1, 0, None, 1, None, 0, None, 1, None],
+      '2o': ['n', 3, 3, 1, 0, None, 1, None, 0, None, 0, None],
+      '2p': ['n', 3, 4, 1, 0, None, 0, None, 0, None, 0, None],
+      '2q': ['n', 3, 2, 2, 0, None, 0, None, 0, None, 0, None],
 
       '2r': ['t', 1, 0, 0, 0, None, 1, None, 0, None, 0, None],
       '2s': ['t', 2, 1, 0, 0, None, 1, None, 0, None, 0, None],
@@ -72,8 +72,8 @@ class Map(Mode):
     AREAS = {
       'b': [144, 96, ['1r', '1s', '1t', '1u', '1v', '1w', '1x', '1y']],
       'c': [176, 88, ['1a', '1b', '1c', '1d', '1e', '1f', '1g']],
-      'm': [176, 96, ['1z', '2a', '2b', '2c', '2d', '2e', '2f', '2g', '2h']],
-      'n': [1, 1, []],
+      'm': [176, 100, ['1z', '2a', '2b', '2c', '2d', '2e', '2f', '2g', '2h']],
+      'n': [176, 100, ['2i', '2j', '2k', '2l', '2m', '2n', '2o', '2p', '2q']],
       't': [128, 32, ['2r', '2s', '2t', '2u']],
       'w': [120, 184, ['1h', '1i', '1j', '1k', '1l', '1m', '1n', '1o', '1p', '1q']]
     }
