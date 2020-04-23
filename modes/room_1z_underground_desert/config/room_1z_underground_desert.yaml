@@ -71,6 +71,9 @@ event_player:
       max_length: 12
       color: "200C00"
     drop_targets_continue:
+    cmd_map_position:
+      room: '1z'
+      visit: True
   room_1z_exit_east_shot_hit.1: drop_targets_save
   room_1z_exit_east_shot_hit.2: room_2a_enter
   room_1z_exit_south_shot_hit.1: drop_targets_save

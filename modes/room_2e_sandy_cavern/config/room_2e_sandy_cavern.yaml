@@ -83,6 +83,9 @@ event_player:
       max_length: 12
       color: "200C00"
     drop_targets_continue:
+    cmd_map_position:
+      room: '2e'
+      visit: True
   mode_room_2e_sandy_cavern_started{current_player.door_2d_2e == 0}: room_2e_enable_west_missile_door, room_2e_disable_west_door
   mode_room_2e_sandy_cavern_started{current_player.door_2e_2f == 0}: room_2e_enable_east_missile_door, room_2e_disable_east_door
   mode_room_2e_sandy_cavern_started{current_player.door_2d_2e == 1}: room_2e_enable_west_door, room_2e_disable_west_missile_door

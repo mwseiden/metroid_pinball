@@ -43,15 +43,15 @@ class Map(Mode):
       '1x': ['b', 7, 2, 2, 0, None, 1, None, 0, None, 0, None],
       '1y': ['b', 8, 3, 2, 0, None, 4, None, 0, None, 0, None],
 
-      '1z': ['m', 1, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2a': ['m', 2, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2b': ['m', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2c': ['m', 4, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2d': ['m', 5, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2e': ['m', 6, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2f': ['m', 7, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2g': ['m', 8, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2h': ['m', 9, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '1z': ['m', 1, 1, 0, 0, None, 1, None, 0, None, 1, None],
+      '2a': ['m', 2, 2, 0, 0, None, 1, None, 0, None, 0, None],
+      '2b': ['m', 3, 3, 0, 0, None, 0, None, 0, None, 1, None],
+      '2c': ['m', 4, 0, 1, 0, None, 1, None, 0, None, 1, None],
+      '2d': ['m', 5, 1, 1, 0, None, 1, None, 0, None, 1, None],
+      '2e': ['m', 6, 2, 1, 0, None, 1, None, 0, None, 0, None],
+      '2f': ['m', 7, 3, 1, 0, None, 0, None, 0, None, 0, None],
+      '2g': ['m', 8, 0, 2, 0, None, 1, None, 0, None, 0, None],
+      '2h': ['m', 9, 1, 2, 0, None, 0, None, 0, None, 0, None],
 
       '2i': ['n', 1, 0, 0, 0, None, 0, None, 0, None, 0, None],
       '2j': ['n', 2, 0, 0, 0, None, 0, None, 0, None, 0, None],
@@ -70,11 +70,11 @@ class Map(Mode):
     }
 
     AREAS = {
-      'b': [128, 96, ['1r', '1s', '1t', '1u', '1v', '1w', '1x', '1y']],
+      'b': [144, 96, ['1r', '1s', '1t', '1u', '1v', '1w', '1x', '1y']],
       'c': [176, 88, ['1a', '1b', '1c', '1d', '1e', '1f', '1g']],
-      'm': [192, 96, []],
-      'n': [192, 96, []],
-      't': [192, 96, []],
+      'm': [1, 1, []],
+      'n': [1, 1, []],
+      't': [1, 1, []],
       'w': [120, 184, ['1h', '1i', '1j', '1k', '1l', '1m', '1n', '1o', '1p', '1q']]
     }
 
