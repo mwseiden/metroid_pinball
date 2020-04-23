@@ -120,6 +120,13 @@ class Map(Mode):
 
         self.remove_player()
 
+        for room_number in range(1, 11):
+            self.remove_room(room_number)
+            self.remove_exit(room_number, 'n')
+            self.remove_exit(room_number, 'e')
+            self.remove_exit(room_number, 'w')
+            self.remove_exit(room_number, 's')
+
         for room_code in self.AREAS[area_code][2]:
             self.draw_map_tile(room_code)
 
@@ -128,12 +135,6 @@ class Map(Mode):
 
         x = self.ORIGIN_X - self.AREAS[area_code][0] + 24 + (x * 32)
         y = self.ORIGIN_Y - 24 - (y * 32)
-
-        self.remove_room(room_number)
-        self.remove_exit(room_number, 'n')
-        self.remove_exit(room_number, 'e')
-        self.remove_exit(room_number, 'w')
-        self.remove_exit(room_number, 's')
 
         self.draw_room(room_number, x, y, list(self.player['map_visited_{}'.format(self.LAYOUT[room_code][0])])[room_number - 1] == 'Y')
         self.draw_exit(room_number, 'n', x, y + 14, exit_n_type, exit_n_var)
