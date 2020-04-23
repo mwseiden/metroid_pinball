@@ -27,7 +27,7 @@ class Map(Mode):
       '1i': ['w', 2, 1, 0, 0, None, 1, None, 1, None, 0, None],
       '1j': ['w', 3, 2, 0, 0, None, 0, None, 0, None, 0, None],
       '1k': ['w', 4, 1, 1, 0, None, 0, None, 0, None, 1, None],
-      '1l': ['w', 5, 2, 1, 0, None, 1, None, 0, None, 1, None],
+      '1l': ['w', 5, 1, 2, 0, None, 1, None, 4, None, 1, None],
       '1m': ['w', 6, 2, 2, 0, None, 0, None, 0, None, 0, None],
       '1n': ['w', 7, 1, 3, 0, None, 0, None, 0, None, 1, None],
       '1o': ['w', 8, 0, 4, 0, None, 1, None, 0, None, 0, None],
