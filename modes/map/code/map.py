@@ -21,11 +21,27 @@ class Map(Mode):
       '1d': ['c', 4, 4, 0, 0, None, 4, None, 0, None, 0, None],
       '1e': ['c', 5, 0, 1, 0, None, 1, None, 4, None, 0, None],
       '1f': ['c', 6, 1, 1, 0, None, 1, None, 1, None, 4, None],
-      '1g': ['c', 7, 2, 1, 0, None, 1, None, 0, None, 0, None]
+      '1g': ['c', 7, 2, 1, 0, None, 0, None, 0, None, 0, None],
+
+      '1h': ['w', 1, 0, 0, 0, None, 1, None, 0, None, 0, None],
+      '1i': ['w', 2, 1, 0, 0, None, 1, None, 1, None, 0, None],
+      '1j': ['w', 3, 2, 0, 0, None, 0, None, 0, None, 0, None],
+      '1k': ['w', 4, 1, 1, 0, None, 0, None, 0, None, 1, None],
+      '1l': ['w', 5, 2, 1, 0, None, 1, None, 0, None, 1, None],
+      '1m': ['w', 6, 2, 2, 0, None, 0, None, 0, None, 0, None],
+      '1n': ['w', 7, 1, 3, 0, None, 0, None, 0, None, 1, None],
+      '1o': ['w', 8, 0, 4, 0, None, 1, None, 0, None, 0, None],
+      '1p': ['w', 9, 1, 4, 0, None, 1, None, 0, None, 4, None],
+      '1q': ['w', 10, 2, 4, 0, None, 0, None, 0, None, 0, None]
     }
 
     AREAS = {
-      'c': [192, 96, ['1a', '1b', '1c', '1d', '1e', '1f', '1g']]
+      'b': [192, 96, []],
+      'c': [192, 96, ['1a', '1b', '1c', '1d', '1e', '1f', '1g']],
+      'm': [192, 96, []],
+      'n': [192, 96, []],
+      't': [192, 96, []],
+      'w': [128, 192, ['1h', '1i', '1j', '1k', '1l', '1m', '1n', '1o', '1p', '1q']]
     }
 
     DOOR_TYPES = {
@@ -52,15 +68,16 @@ class Map(Mode):
 
     def event_set_location(self, **kwargs):
         room_code = kwargs.get('room', '1b')
+        area_code = self.LAYOUT[room_code][0]
 
         if kwargs.get('visit', False):
-            player_var = 'map_visited_{}'.format(self.LAYOUT[room_code][0])
+            player_var = 'map_visited_{}'.format(area_code)
             current_visits = list(self.player[player_var])
             current_visits[self.LAYOUT[room_code][1] - 1] = 'Y'
             self.player[player_var] = "".join(current_visits)
 
         self.player.map_location = room_code
-        self.draw_map('c')
+        self.draw_map(area_code)
 
     def draw_map(self, area_code):
         self.remove_background()

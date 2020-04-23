@@ -1,6 +1,10 @@
 #config_version=5
+
+# replace xx with room code
+# replace room_template with mode name
+
 mode:
-  start_events: room_template_continue
+  start_events: room_xx_continue, room_xx_enter
   stop_events: game_ending, ball_ending, metroid_base_ended
   priority: 300
 
@@ -43,6 +47,9 @@ event_player:
     cmd_backbox_show:
       show_type: fire
     drop_targets_continue:
+    cmd_map_position:
+      room: 'xx'
+      visit: True
 
 variable_player:
   mode_room_template_started:

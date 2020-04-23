@@ -168,6 +168,9 @@ event_player:
       color_end: "005020"
     drop_targets_continue:
     chozo_multiball_disable:
+    cmd_map_position:
+      room: '1m'
+      visit: True
   mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value == 0}: room_1m_stage_1
   mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value == 1}: room_1m_stage_2
   mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value > 1}: room_1m_stage_3
