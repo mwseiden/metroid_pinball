@@ -6,7 +6,7 @@ class SelectLandingSite(Carousel):
         super().mode_start(**kwargs)
 
         self.add_mode_event_handler('select_landing_site_continue_selected', self._continue_from_last_room)
-        self.add_mode_event_handler('select_landing_site_continue_highlighted, self._show_continue_map)
+        self.add_mode_event_handler('select_landing_site_continue_highlighted', self._show_continue_map)
 
     def _update_highlighted_item(self, direction):
         player = self.machine.game.player
