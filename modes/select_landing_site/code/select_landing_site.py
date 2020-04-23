@@ -22,4 +22,5 @@ class SelectLandingSite(Carousel):
         self.machine.events.post('room_{}_continue'.format(player['continue_room']))
 
     def _show_continue_map(self, **kwargs):
-        self.machine.events.post('cmd_map_position', room=self.machine.game.player['continue_room'])
+        # self.machine.events.post('cmd_map_position', room=self.machine.game.player['continue_room'])
+        self.machine.modes.map.event_set_location(room=self.machine.game.player['continue_room'])
