@@ -63,18 +63,18 @@ class Map(Mode):
       '2p': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
       '2q': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
 
-      '2r': ['t', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2s': ['t', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2t': ['t', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '2u': ['t', 3, 0, 0, 0, None, 0, None, 0, None, 0, None]
+      '2r': ['t', 1, 0, 0, 0, None, 1, None, 0, None, 0, None],
+      '2s': ['t', 2, 1, 0, 0, None, 1, None, 0, None, 0, None],
+      '2t': ['t', 3, 2, 0, 0, None, 1, None, 0, None, 0, None],
+      '2u': ['t', 4, 3, 0, 0, None, 4, None, 0, None, 0, None]
     }
 
     AREAS = {
       'b': [144, 96, ['1r', '1s', '1t', '1u', '1v', '1w', '1x', '1y']],
       'c': [176, 88, ['1a', '1b', '1c', '1d', '1e', '1f', '1g']],
-      'm': [1, 1, []],
+      'm': [176, 96, ['1z', '2a', '2b', '2c', '2d', '2e', '2f', '2g', '2h']],
       'n': [1, 1, []],
-      't': [1, 1, []],
+      't': [128, 32, ['2r', '2s', '2t', '2u']],
       'w': [120, 184, ['1h', '1i', '1j', '1k', '1l', '1m', '1n', '1o', '1p', '1q']]
     }
 
