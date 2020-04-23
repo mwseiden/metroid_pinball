@@ -24,7 +24,7 @@ class Map(Mode):
       '1g': ['c', 7, 2, 1, 0, None, 0, None, 0, None, 0, None],
 
       '1h': ['w', 1, 0, 0, 0, None, 1, None, 0, None, 0, None],
-      '1i': ['w', 2, 1, 0, 0, None, 1, None, 1, None, 0, None],
+      '1i': ['w', 2, 1, 0, 0, None, 1, None, 0, None, 1, None],
       '1j': ['w', 3, 2, 0, 0, None, 0, None, 0, None, 0, None],
       '1k': ['w', 4, 1, 1, 0, None, 0, None, 0, None, 1, None],
       '1l': ['w', 5, 1, 2, 0, None, 1, None, 4, None, 1, None],
@@ -34,14 +34,14 @@ class Map(Mode):
       '1p': ['w', 9, 1, 4, 0, None, 1, None, 0, None, 4, None],
       '1q': ['w', 10, 2, 4, 0, None, 0, None, 0, None, 0, None],
 
-      '1r': ['b', 1, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '1s': ['b', 2, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '1t': ['b', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '1u': ['b', 4, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '1v': ['b', 5, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '1w': ['b', 6, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '1x': ['b', 7, 0, 0, 0, None, 0, None, 0, None, 0, None],
-      '1y': ['b', 8, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '1r': ['b', 1, 1, 0, 4, None, 1, None, 0, None, 1, None],
+      '1s': ['b', 2, 2, 0, 0, None, 1, None, 0, None, 0, None],
+      '1t': ['b', 3, 3, 0, 4, None, 0, None, 0, None, 1, None],
+      '1u': ['b', 4, 1, 1, 0, None, 0, None, 0, None, 1, None],
+      '1v': ['b', 5, 3, 1, 0, None, 0, None, 0, None, 1, None],
+      '1w': ['b', 6, 1, 2, 0, None, 1, None, 0, None, 0, None],
+      '1x': ['b', 7, 2, 2, 0, None, 1, None, 0, None, 0, None],
+      '1y': ['b', 8, 3, 2, 0, None, 4, None, 0, None, 0, None],
 
       '1z': ['m', 1, 0, 0, 0, None, 0, None, 0, None, 0, None],
       '2a': ['m', 2, 0, 0, 0, None, 0, None, 0, None, 0, None],
@@ -70,7 +70,7 @@ class Map(Mode):
     }
 
     AREAS = {
-      'b': [192, 96, []],
+      'b': [192, 192, ['1r', '1s', '1t', '1u', '1v', '1w', '1x', '1y']],
       'c': [192, 96, ['1a', '1b', '1c', '1d', '1e', '1f', '1g']],
       'm': [192, 96, []],
       'n': [192, 96, []],
