@@ -32,7 +32,41 @@ class Map(Mode):
       '1n': ['w', 7, 1, 3, 0, None, 0, None, 0, None, 1, None],
       '1o': ['w', 8, 0, 4, 0, None, 1, None, 0, None, 0, None],
       '1p': ['w', 9, 1, 4, 0, None, 1, None, 0, None, 4, None],
-      '1q': ['w', 10, 2, 4, 0, None, 0, None, 0, None, 0, None]
+      '1q': ['w', 10, 2, 4, 0, None, 0, None, 0, None, 0, None],
+
+      '1r': ['b', 1, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '1s': ['b', 2, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '1t': ['b', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '1u': ['b', 4, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '1v': ['b', 5, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '1w': ['b', 6, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '1x': ['b', 7, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '1y': ['b', 8, 0, 0, 0, None, 0, None, 0, None, 0, None],
+
+      '1z': ['m', 1, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2a': ['m', 2, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2b': ['m', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2c': ['m', 4, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2d': ['m', 5, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2e': ['m', 6, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2f': ['m', 7, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2g': ['m', 8, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2h': ['m', 9, 0, 0, 0, None, 0, None, 0, None, 0, None],
+
+      '2i': ['n', 1, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2j': ['n', 2, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2k': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2l': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2m': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2n': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2o': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2p': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2q': ['n', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+
+      '2r': ['t', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2s': ['t', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2t': ['t', 3, 0, 0, 0, None, 0, None, 0, None, 0, None],
+      '2u': ['t', 3, 0, 0, 0, None, 0, None, 0, None, 0, None]
     }
 
     AREAS = {
