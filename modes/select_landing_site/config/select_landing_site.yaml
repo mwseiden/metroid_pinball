@@ -160,6 +160,8 @@ event_player:
   select_landing_site_continue_highlighted:
     cmd_backbox_show:
       show_type: none
+    cmd_map_position:
+      room: '1l'
   select_landing_site_crateria_highlighted{current_player.room_1b_step_2 == 0}:
     cmd_backbox_show:
       show_type: drop
@@ -174,6 +176,8 @@ event_player:
       max_cutoff: 8
       color1: "040404"
       color2: "04100C"
+    cmd_map_position:
+      room: '1b'
   select_landing_site_brinstar_highlighted:
     cmd_backbox_show:
       show_type: solid

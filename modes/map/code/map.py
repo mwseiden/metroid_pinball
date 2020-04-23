@@ -61,6 +61,7 @@ class Map(Mode):
 
     def mode_start(self, **kwargs):
         super().mode_start(**kwargs)
+        self.remove_background()
         self.add_mode_event_handler('cmd_map_position', self.event_set_location)
 
     def mode_stop(self, **kwargs):
