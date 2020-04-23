@@ -86,6 +86,9 @@ player_vars:
   map_visited_c:
     value_type: str
     initial_value: 'NNNNNNNNNN'
+  map_visited_w:
+    value_type: str
+    initial_value: 'NNNNNNNNNN'
   missiles:
     initial_value: 0
   multiplier:
