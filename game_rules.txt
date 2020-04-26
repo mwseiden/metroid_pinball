@@ -214,7 +214,7 @@ World Map
                                  |   |
                                 [g]-[h]
                                      =
-                                    [i]-[j] [k]
+                                    [i]-[j]-[k]
                         Norfair      |       |
                                 [l]-[m]-[n]-[o]-[p]
                                          |       ~
@@ -399,7 +399,7 @@ Rooms (Modes)
 
         Map:
              =
-            [i]-[j] [k]
+            [i]-[j]-[k]
              |       |
         [l]-[m]-[n]-[o]-[p]
                  |       ~

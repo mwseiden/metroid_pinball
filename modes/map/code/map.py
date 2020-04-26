@@ -4,6 +4,7 @@ class Map(Mode):
 
     ORIGIN_X = 688
     ORIGIN_Y = 1024
+    OFFSET = 16
 
     # door types:
     # 0: None
@@ -25,7 +26,7 @@ class Map(Mode):
 
       '1h': ['w', 1, 0, 0, 0, 0, None, 1, None, 0, None, 0, None],
       '1i': ['w', 2, 0, 1, 0, 0, None, 1, None, 0, None, 1, None],
-      '1j': ['w', 3, 0, 2, 0, 0, None, 0, None, 0, None, 0, None],
+      '1j': ['w', 3, 1, 2, 0, 0, None, 0, None, 0, None, 0, None],
       '1k': ['w', 4, 0, 1, 1, 0, None, 0, None, 0, None, 1, None],
       '1l': ['w', 5, 0, 1, 2, 0, None, 1, None, 4, None, 1, None],
       '1m': ['w', 6, 0, 2, 2, 0, None, 0, None, 0, None, 0, None],
@@ -40,7 +41,7 @@ class Map(Mode):
       '1u': ['b', 4, 0, 1, 1, 0, None, 0, None, 0, None, 1, None],
       '1v': ['b', 5, 0, 3, 1, 0, None, 0, None, 0, None, 1, None],
       '1w': ['b', 6, 0, 1, 2, 0, None, 1, None, 0, None, 0, None],
-      '1x': ['b', 7, 0, 2, 2, 0, None, 1, None, 0, None, 0, None],
+      '1x': ['b', 7, 1, 2, 2, 0, None, 1, None, 0, None, 0, None],
       '1y': ['b', 8, 0, 3, 2, 0, None, 4, None, 0, None, 0, None],
 
       '1z': ['m', 1, 0, 1, 0, 0, None, 1, None, 0, None, 1, None],
@@ -50,20 +51,20 @@ class Map(Mode):
       '2d': ['m', 5, 0, 1, 1, 0, None, 2, 'door_2d_2e', 0, None, 1, None],
       '2e': ['m', 6, 0, 2, 1, 0, None, 2, 'door_2e_2f', 0, None, 0, None],
       '2f': ['m', 7, 0, 3, 1, 0, None, 0, None, 0, None, 0, None],
-      '2g': ['m', 8, 0, 0, 2, 0, None, 1, None, 0, None, 0, None],
+      '2g': ['m', 8, 1, 0, 2, 0, None, 1, None, 0, None, 0, None],
       '2h': ['m', 9, 0, 1, 2, 0, None, 0, None, 0, None, 0, None],
 
       '2i': ['n', 1, 0, 1, 0, 4, None, 1, None, 0, None, 1, None],
-      '2j': ['n', 2, 0, 2, 0, 0, None, 0, None, 0, None, 0, None],
+      '2j': ['n', 2, 0, 2, 0, 0, None, 1, None, 0, None, 0, None],
       '2k': ['n', 3, 0, 3, 0, 0, None, 0, None, 0, None, 1, None],
       '2l': ['n', 4, 0, 0, 1, 0, None, 1, None, 0, None, 0, None],
       '2m': ['n', 5, 0, 1, 1, 0, None, 1, None, 0, None, 0, None],
       '2n': ['n', 6, 0, 2, 1, 0, None, 1, None, 0, None, 1, None],
       '2o': ['n', 7, 0, 3, 1, 0, None, 1, None, 0, None, 0, None],
       '2p': ['n', 8, 0, 4, 1, 0, None, 0, None, 0, None, 0, None],
-      '2q': ['n', 9, 0, 2, 2, 0, None, 0, None, 0, None, 0, None],
+      '2q': ['n', 9, 1, 2, 2, 0, None, 0, None, 0, None, 0, None],
 
-      '2r': ['t', 1, 0, 0, 0, 0, None, 1, None, 0, None, 0, None],
+      '2r': ['t', 1, 1, 0, 0, 0, None, 1, None, 0, None, 0, None],
       '2s': ['t', 2, 0, 1, 0, 0, None, 1, None, 0, None, 0, None],
       '2t': ['t', 3, 0, 2, 0, 0, None, 1, None, 0, None, 0, None],
       '2u': ['t', 4, 0, 3, 0, 0, None, 4, None, 0, None, 0, None]
@@ -145,8 +146,8 @@ class Map(Mode):
     def draw_map_tile(self, room_code):
         area_code, room_number, room_type, x, y, exit_n_type, exit_n_var, exit_e_type, exit_e_var, exit_w_type, exit_w_var, exit_s_type, exit_s_var = self.LAYOUT.get(room_code)
 
-        x = self.ORIGIN_X - self.AREAS[area_code][0] + 24 + (x * 32)
-        y = self.ORIGIN_Y - 24 - (y * 32)
+        x = self.ORIGIN_X - self.AREAS[area_code][0] + self.OFFSET + (x * 32)
+        y = self.ORIGIN_Y - self.OFFSET - (y * 32)
 
         self.draw_room(room_number, x, y, room_type, list(self.player['map_visited_{}'.format(self.LAYOUT[room_code][0])])[room_number - 1])
         self.draw_exit(room_number, 'n', x, y + 14, exit_n_type, exit_n_var)
