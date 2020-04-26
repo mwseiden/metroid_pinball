@@ -93,6 +93,15 @@ sounds:
     loops: -1
     simultaneous_limit: 1
     stealing_method: skip
+  music_metal_item_room:
+    file: music_metal_item_room.wav
+    #streaming: True
+    track: music
+    priority: 50
+    #max_queue_time: 1s
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip
   music_bao_main:
     file: music_bao_main.wav
     #streaming: True
