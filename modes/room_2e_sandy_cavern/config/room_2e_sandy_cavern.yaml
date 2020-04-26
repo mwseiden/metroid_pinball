@@ -90,8 +90,14 @@ event_player:
   mode_room_2e_sandy_cavern_started{current_player.door_2e_2f == 0}: room_2e_enable_east_missile_door, room_2e_disable_east_door
   mode_room_2e_sandy_cavern_started{current_player.door_2d_2e == 1}: room_2e_enable_west_door, room_2e_disable_west_missile_door
   mode_room_2e_sandy_cavern_started{current_player.door_2e_2f == 1}: room_2e_enable_east_door, room_2e_disable_east_missile_door
-  room_2e_exit_west_closed_shot_hit{current_player.missiles > 0}: room_2e_open_west_door
-  room_2e_exit_east_closed_shot_hit{current_player.missiles > 0}: room_2e_open_east_door
+  room_2e_exit_west_closed_shot_hit{current_player.missiles > 0}:
+    room_2e_open_west_door:
+    cmd_map_complete:
+      room: '2e'
+  room_2e_exit_east_closed_shot_hit{current_player.missiles > 0}:
+    room_2e_open_east_door:
+    cmd_map_complete:
+      room: '2e'
   room_2e_open_west_door: room_2e_exit_west_shot_hit
   room_2e_open_east_door: room_2e_exit_east_shot_hit
   room_2e_exit_west_shot_hit.1: drop_targets_save

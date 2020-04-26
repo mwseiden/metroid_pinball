@@ -109,6 +109,7 @@ class Map(Mode):
         super().mode_start(**kwargs)
         self.remove_background()
         self.add_mode_event_handler('cmd_map_position', self.event_set_location)
+        self.add_mode_event_handler('cmd_map_complete', self.event_complete_location)
 
     def mode_stop(self, **kwargs):
         super().mode_stop(**kwargs)
@@ -120,10 +121,21 @@ class Map(Mode):
         if kwargs.get('visit', False):
             player_var = 'map_visited_{}'.format(area_code)
             current_visits = list(self.player[player_var])
-            current_visits[self.LAYOUT[room_code][1] - 1] = 'Y'
+
+            if current_visits[self.LAYOUT[room_code][1] - 1] == 'N':
+                current_visits[self.LAYOUT[room_code][1] - 1] = 'Y'
+
             self.player[player_var] = "".join(current_visits)
 
         self.player.map_location = room_code
+        self.draw_map(area_code)
+
+    def event_complete_location(self, **kwargs):
+        room_code = kwargs.get('room', '1b')
+        area_code = self.LAYOUT[room_code][0]
+
+        current_visits[self.LAYOUT[room_code][1] - 1] = 'C'
+
         self.draw_map(area_code)
 
     def draw_map(self, area_code):
