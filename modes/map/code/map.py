@@ -4,7 +4,6 @@ class Map(Mode):
 
     ORIGIN_X = 688
     ORIGIN_Y = 1024
-    OFFSET = 16
 
     # door types:
     # 0: None
@@ -71,12 +70,12 @@ class Map(Mode):
     }
 
     AREAS = {
-      'b': [144, 96, ['1r', '1s', '1t', '1u', '1v', '1w', '1x', '1y']],
-      'c': [176, 88, ['1a', '1b', '1c', '1d', '1e', '1f', '1g']],
-      'm': [176, 100, ['1z', '2a', '2b', '2c', '2d', '2e', '2f', '2g', '2h']],
-      'n': [176, 100, ['2i', '2j', '2k', '2l', '2m', '2n', '2o', '2p', '2q']],
-      't': [128, 32, ['2r', '2s', '2t', '2u']],
-      'w': [120, 184, ['1h', '1i', '1j', '1k', '1l', '1m', '1n', '1o', '1p', '1q']]
+      'b': [144, 96, 24, 24, ['1r', '1s', '1t', '1u', '1v', '1w', '1x', '1y']],
+      'c': [176, 88, 24, 24, ['1a', '1b', '1c', '1d', '1e', '1f', '1g']],
+      'm': [176, 100, 24, 24, ['1z', '2a', '2b', '2c', '2d', '2e', '2f', '2g', '2h']],
+      'n': [176, 100, 24, 24, ['2i', '2j', '2k', '2l', '2m', '2n', '2o', '2p', '2q']],
+      't': [128, 32, 24, 24, ['2r', '2s', '2t', '2u']],
+      'w': [100, 184, 16, 16, ['1h', '1i', '1j', '1k', '1l', '1m', '1n', '1o', '1p', '1q']]
     }
 
     DOOR_TYPES = {
@@ -140,14 +139,14 @@ class Map(Mode):
             self.remove_exit(room_number, 'w')
             self.remove_exit(room_number, 's')
 
-        for room_code in self.AREAS[area_code][2]:
+        for room_code in self.AREAS[area_code][4]:
             self.draw_map_tile(room_code)
 
     def draw_map_tile(self, room_code):
         area_code, room_number, room_type, x, y, exit_n_type, exit_n_var, exit_e_type, exit_e_var, exit_w_type, exit_w_var, exit_s_type, exit_s_var = self.LAYOUT.get(room_code)
 
-        x = self.ORIGIN_X - self.AREAS[area_code][0] + self.OFFSET + (x * 32)
-        y = self.ORIGIN_Y - self.OFFSET - (y * 32)
+        x = self.ORIGIN_X - self.AREAS[area_code][0] + self.AREAS[area_code][2] + (x * 32)
+        y = self.ORIGIN_Y - self.AREAS[area_code][3] - (y * 32)
 
         self.draw_room(room_number, x, y, room_type, list(self.player['map_visited_{}'.format(self.LAYOUT[room_code][0])])[room_number - 1])
         self.draw_exit(room_number, 'n', x, y + 14, exit_n_type, exit_n_var)
