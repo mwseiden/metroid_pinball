@@ -134,7 +134,12 @@ class Map(Mode):
         room_code = kwargs.get('room', '1b')
         area_code = self.LAYOUT[room_code][0]
 
+        player_var = 'map_visited_{}'.format(area_code)
+        current_visits = list(self.player[player_var])
+
         current_visits[self.LAYOUT[room_code][1] - 1] = 'C'
+
+        self.player[player_var] = "".join(current_visits)
 
         self.draw_map(area_code)
 
