@@ -1,0 +1,58 @@
+#config_version=5
+
+mode:
+  start_events: room_1e_continue, room_1e_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1f_enter
+  priority: 300
+
+slides:
+  room_1e_statue_room_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1e_statue_room_backglass
+    transition: fade
+    transition_out: fade
+  room_1e_statue_room_splash_slide:
+    widgets:
+      - type: image
+        image: room_1e_statue_room_splash
+
+slide_player:
+  mode_room_1e_statue_room_started:
+    room_1e_statue_room_backglass_slide:
+      target: backglass
+    room_1e_statue_room_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_1e_statue_room_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: '808080'
+        color2: '808080'
+  show_mode_status_report:
+    room_1e_statue_room_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1e_statue_room_status_report:
+      action: stop
+
+event_player:
+  mode_room_1e_statue_room_started:
+    cmd_backbox_show:
+      show_type: fire
+    drop_targets_continue:
+    cmd_map_position:
+      room: '1e'
+      visit: True
+
+variable_player:
+  mode_room_1e_statue_room_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 1e
+      action: set
