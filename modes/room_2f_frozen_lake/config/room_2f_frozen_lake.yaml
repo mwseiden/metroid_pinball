@@ -217,7 +217,11 @@ event_player:
   room_2f_side_2_shot_hit: room_2f_choose_next_shot
   room_2f_side_3_shot_hit: room_2f_choose_next_shot
   room_2f_scoop_shot_hit: room_2f_disable_shots, room_2f_start_over
-  room_2f_start_over: room_2f_reset_shots
+  room_2f_start_over:
+    room_2f_reset_shots:
+    cmd_map_complete:
+      room: '2f'
+
 
 
 variable_player:

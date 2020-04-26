@@ -187,7 +187,10 @@ event_player:
   s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_charge
   room_1m_generator_captive_shot_hit: room_1m_add_charge
   room_1m_start_generator_shot_hit: room_1m_generator_bootup
-  room_1m_generator_started: room_1m_stage_3
+  room_1m_generator_started:
+    room_1m_stage_3:
+    cmd_map_complete:
+      room: '1m'
   room_1m_add_charge:
     cmd_backbox_show_overlay:
       show_type: sparkle

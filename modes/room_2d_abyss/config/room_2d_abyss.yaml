@@ -77,6 +77,9 @@ event_player:
     cmd_map_position:
       room: '2d'
       visit: True
+  bridge_should_explode:
+    cmd_map_complete:
+      room: '2d'
   mode_room_2d_abyss_started{current_player.door_2d_2e == 0}: room_2d_enable_east_missile_door, room_2d_disable_east_door
   mode_room_2d_abyss_started{current_player.door_2d_2e == 1}: room_2d_enable_east_door, room_2d_disable_east_missile_door
   room_2d_exit_east_closed_shot_hit{current_player.missiles > 0}: room_2d_open_east_door
