@@ -5,6 +5,17 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1f_enter
   priority: 300
 
+shots:
+  room_1e_exit_east_shot:
+    switch: s_ramp_enter
+    profile: exit_door
+    enable_events: mode_room_1e_statue_room_started
+    disable_events: room_1e_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
+
+
 slides:
   room_1e_statue_room_backglass_slide:
     widgets:
@@ -27,11 +38,9 @@ slide_player:
 
 show_player:
   mode_room_1e_statue_room_started:
-    gi_solid_with_overhead:
+    room_1e_statue_room_gi:
       loops: -1
-      show_tokens:
-        color: '808080'
-        color2: '808080'
+      speed: 25
   show_mode_status_report:
     room_1e_statue_room_status_report:
       loops: 0
@@ -47,6 +56,8 @@ event_player:
     cmd_map_position:
       room: '1e'
       visit: True
+  room_1e_exit_east_shot_hit.1: drop_targets_save
+  room_1e_exit_east_shot_hit.2: room_1f_enter
 
 variable_player:
   mode_room_1e_statue_room_started:
