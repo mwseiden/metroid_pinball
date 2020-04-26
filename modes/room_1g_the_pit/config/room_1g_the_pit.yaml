@@ -7,13 +7,13 @@ mode:
 
 shots:
   room_1g_exit_west_shot:
-    switch: s_scoop
+    switch: s_vuk
     profile: exit_door
     enable_events: mode_room_1g_the_pit_started
     disable_events: room_1g_exit_west_shot_hit
     reset_events: room_1g_exit_west_shot_hit
     show_tokens:
-      led: led_enter_scoop
+      led: gi_strip_9
       color: door_blue
 
 slides:
@@ -43,6 +43,19 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+    small_theater_chase:
+      key: room_1g_drop_show
+      loops: -1
+      speed: 6
+      priority: 50
+      show_tokens:
+        color: door_blue
+        led_1: led_drop_1
+        led_2: gi_back_right
+        led_3: led_drop_2
+        led_4: gi_back_right
+        led_5: led_drop_3
+        led_6: gi_back_right
   show_mode_status_report:
     room_1g_the_pit_status_report:
       loops: 0
