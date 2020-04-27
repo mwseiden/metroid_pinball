@@ -69,7 +69,7 @@ event_player:
   mode_room_1g_the_pit_started:
     cmd_backbox_show:
       show_type: gradient
-      color_start: "20200"
+      color_start: "101000"
       color_end: "000000"
     drop_targets_continue:
     cmd_map_position:
