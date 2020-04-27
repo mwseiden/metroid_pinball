@@ -5,7 +5,7 @@
     room_1e_statue_room_status_slide_splash:
       widgets:
       - type: image
-        image: room_template_splash
+        image: room_1e_statue_room_splash
 
 
 - duration: 5s
