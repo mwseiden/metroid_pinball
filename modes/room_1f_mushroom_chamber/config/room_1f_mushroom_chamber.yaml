@@ -80,8 +80,8 @@ event_player:
   mode_room_1f_mushroom_chamber_started:
     cmd_backbox_show:
       show_type: two_tone
-      min_cutoff: 8
-      max_cutoff: 16
+      min_cutoff: 7
+      max_cutoff: 14
       color1: "080014"
       color2: "004000"
     drop_targets_continue:
