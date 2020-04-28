@@ -1,5 +1,7 @@
 #config_version=5
 
+# https://commons.wikimedia.org/wiki/File:C_Station_Pump_House.jpg
+
 mode:
   start_events: room_2c_continue, room_2c_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2d_enter
@@ -38,11 +40,9 @@ slide_player:
 
 show_player:
   mode_room_2c_central_pumping_started:
-    gi_solid_with_overhead:
+    room_2c_central_pumping_gi:
       loops: -1
-      show_tokens:
-        color: '808080'
-        color2: '808080'
+      speed: 20
   show_mode_status_report:
     room_2c_central_pumping_status_report:
       loops: 0
