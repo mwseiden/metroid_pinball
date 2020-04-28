@@ -59,7 +59,7 @@ event_player:
       room: '2h'
       visit: True
   room_2h_exit_north_shot_hit.1: drop_targets_save
-  room_2d_exit_north_shot_hit.2: room_2d_enter
+  room_2h_exit_north_shot_hit.2: room_2d_enter
 
 variable_player:
   mode_room_2h_crystalline_seabed_started:
