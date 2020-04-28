@@ -1,5 +1,9 @@
 #config_version=5
 
+# https://commons.wikimedia.org/wiki/File:Quartz_var._citrine_and_amethyst.jpg
+# https://commons.wikimedia.org/wiki/File:Rhodonite_et_quartz_(P%C3%A9rou).JPG
+# https://commons.wikimedia.org/wiki/File:SCUBA_Silfra.jpg
+
 mode:
   start_events: room_2h_continue, room_2h_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2d_enter
@@ -53,7 +57,9 @@ show_player:
 event_player:
   mode_room_2h_crystalline_seabed_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: gradient
+      color_start: "000020"
+      color_end: "002000"
     drop_targets_continue:
     cmd_map_position:
       room: '2h'
