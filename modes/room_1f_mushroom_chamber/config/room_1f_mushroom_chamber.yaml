@@ -81,7 +81,7 @@ event_player:
     cmd_backbox_show:
       show_type: two_tone
       min_cutoff: 7
-      max_cutoff: 14
+      max_cutoff: 12
       color1: "080014"
       color2: "004000"
     drop_targets_continue:
