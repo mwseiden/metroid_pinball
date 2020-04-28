@@ -82,7 +82,7 @@ event_player:
       show_type: two_tone
       min_cutoff: 8
       max_cutoff: 16
-      color1: "08000C"
+      color1: "080014"
       color2: "004000"
     drop_targets_continue:
     cmd_map_position:
