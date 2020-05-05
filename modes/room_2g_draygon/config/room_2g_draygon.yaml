@@ -12,38 +12,38 @@ animations:
     - property: x
       value: 100
       relative: true
-      duration: 0.5s
+      duration: 1.0s
     - property: y
       value: 100
       relative: true
-      duration: 0.5s
+      duration: 1.0s
       timing: with_previous
     - property: x
       value: 100
       relative: true
-      duration: 0.5s
+      duration: 1.0s
     - property: y
       value: -100
       relative: true
-      duration: 0.5s
+      duration: 1.0s
       timing: with_previous
     - property: x
       value: -100
       relative: true
-      duration: 0.5s
+      duration: 1.0s
     - property: y
       value: -100
       relative: true
-      duration: 0.5s
+      duration: 1.0s
       timing: with_previous
     - property: x
       value: -100
       relative: true
-      duration: 0.5s
+      duration: 1.0s
     - property: y
       value: 100
       relative: true
-      duration: 0.5s
+      duration: 1.0s
       timing: with_previous
       repeat: true
 
