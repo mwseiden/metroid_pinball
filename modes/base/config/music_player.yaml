@@ -32,7 +32,8 @@ sound_player:
     music_maridia_snow:
       action: play
       fade_in: 2s
-  mode_room_2h_crystalline_seabed_started: music_maridia
+  mode_room_2g_draygon_started{machine.next_game_acapella == 0}: music_boss
+  mode_room_2h_crystalline_seabed_started{machine.next_game_acapella == 0}: music_maridia
   mode_room_2i_lava_jump_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2j_lake_of_fire_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2m_geothermal_plant_started{machine.next_game_acapella == 0}: music_norfair
@@ -128,6 +129,9 @@ sound_player:
       action: stop
   mode_bonus_will_start:
     music_crateria:
+      action: stop
+      fade_out: 3s
+    music_boss:
       action: stop
       fade_out: 3s
     music_brinstar:
