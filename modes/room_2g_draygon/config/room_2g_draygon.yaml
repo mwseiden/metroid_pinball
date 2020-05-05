@@ -12,38 +12,38 @@ animations:
     - property: x
       value: 100
       relative: true
-      duration: 1s
+      duration: 0.5s
     - property: y
       value: 100
       relative: true
-      duration: 1s
+      duration: 0.5s
       timing: with_previous
     - property: x
       value: 100
       relative: true
-      duration: 1s
+      duration: 0.5s
     - property: y
       value: -100
       relative: true
-      duration: 1s
+      duration: 0.5s
       timing: with_previous
     - property: x
       value: -100
       relative: true
-      duration: 1s
+      duration: 0.5s
     - property: y
       value: -100
       relative: true
-      duration: 1s
+      duration: 0.5s
       timing: with_previous
     - property: x
       value: -100
       relative: true
-      duration: 1s
+      duration: 0.5s
     - property: y
       value: 100
       relative: true
-      duration: 1s
+      duration: 0.5s
       timing: with_previous
       repeat: true
 
@@ -52,6 +52,8 @@ slides:
     widgets:
       - type: image
         image: room_2g_draygon_backglass
+        x: 310
+        y: 590
         animations:
           show_slide: room_2g_draygon_standard
     transition: fade
