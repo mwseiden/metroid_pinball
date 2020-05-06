@@ -6,6 +6,7 @@ modes:
   - bao_lanes
   - base
   - bonus
+  - boss
   - bridge
   - chozo_multiball
   - drop_targets

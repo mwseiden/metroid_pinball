@@ -1,0 +1,53 @@
+#config_version=5
+
+mode:
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
+  priority: 800
+
+achievements:
+  boss_phantoon:
+    show_tokens:
+      led: led_boss_phantoon
+      color: 'FFFF00'
+    show_when_selected: blink_light
+    show_when_completed: led_color
+    complete_events: xxxx_i_dont_work
+    select_events: xxxx_i_dont_work
+    enable_events: boss_achievement_initialize
+  boss_ridley:
+    show_tokens:
+      led: led_boss_ridley
+      color: 'FF0000'
+    show_when_selected: blink_light
+    show_when_completed: led_color
+    complete_events: xxxx_i_dont_work
+    select_events: xxxx_i_dont_work
+    enable_events: boss_achievement_initialize
+  boss_kraid:
+    show_tokens:
+      led: led_boss_kraid
+      color: '00FF00'
+    show_when_selected: blink_light
+    show_when_completed: led_color
+    complete_events: xxxx_i_dont_work
+    select_events: xxxx_i_dont_work
+    enable_events: boss_achievement_initialize
+  boss_draygoon:
+    show_tokens:
+      led: led_boss_draygon
+      color: '00FFFF'
+    show_when_selected: blink_light
+    show_when_completed: led_color
+    complete_events: xxxx_i_dont_work
+    select_events: room_2g_enter
+    enable_events: boss_achievement_initialize
+
+achievement_groups:
+  boss_achievements:
+    achievements: boss_phantoon, boss_ridley, boss_kraid, boss_draygoon
+    enable_events: boss_achievement_initialize
+    events_when_all_completed: metroid_win_all
+
+event_player:
+  mode_boss_started{current_player.ball == 1}: boss_achievement_initialize
