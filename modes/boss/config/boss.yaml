@@ -6,19 +6,28 @@ mode:
   priority: 800
 
 achievements:
-  boss_phantoon:
+  boss_ridley:
     show_tokens:
-      led: led_boss_4
-      color: 'FFFF00'
+      led: led_boss_1
+      color: 'FF0000'
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: xxxx_i_dont_work
     select_events: xxxx_i_dont_work
     enable_events: boss_achievement_initialize
-  boss_ridley:
+  boss_draygon:
+    show_tokens:
+      led: led_boss_2
+      color: '00FFFF'
+    show_when_selected: blink_light
+    show_when_completed: led_color
+    complete_events: xxxx_i_dont_work
+    select_events: room_2g_enter
+    enable_events: boss_achievement_initialize
+  boss_phantoon:
     show_tokens:
       led: led_boss_3
-      color: 'FF0000'
+      color: 'FFFF00'
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: xxxx_i_dont_work
@@ -26,26 +35,17 @@ achievements:
     enable_events: boss_achievement_initialize
   boss_kraid:
     show_tokens:
-      led: led_boss_2
+      led: led_boss_4
       color: '00FF00'
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: xxxx_i_dont_work
     select_events: xxxx_i_dont_work
     enable_events: boss_achievement_initialize
-  boss_draygoon:
-    show_tokens:
-      led: led_boss_1
-      color: '00FFFF'
-    show_when_selected: blink_light
-    show_when_completed: led_color
-    complete_events: xxxx_i_dont_work
-    select_events: room_2g_enter
-    enable_events: boss_achievement_initialize
 
 achievement_groups:
   boss_achievements:
-    achievements: boss_phantoon, boss_ridley, boss_kraid, boss_draygoon
+    achievements: boss_ridley, boss_draygon, boss_phantoon, boss_kraid
     enable_events: boss_achievement_initialize
     events_when_all_completed: metroid_win_all
 
