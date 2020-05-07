@@ -1,0 +1,71 @@
+#config_version=5
+
+# https://commons.wikimedia.org/wiki/File:C_Station_Pump_House.jpg
+
+mode:
+  start_events: room_2c_continue, room_2c_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2d_enter
+  priority: 300
+
+shots:
+  room_2c_exit_east_shot:
+    hit_events: rollover_shot_hit
+    profile: exit_door
+    enable_events: mode_room_2c_central_pumping_started
+    disable_events: room_2c_exit_east_shot_hit
+    reset_events: room_2c_exit_east_shot_hit
+    show_tokens:
+      led: led_rollover
+      color: door_blue
+
+slides:
+  room_2c_central_pumping_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2c_central_pumping_backglass
+    transition: fade
+    transition_out: fade
+  room_2c_central_pumping_splash_slide:
+    widgets:
+      - type: image
+        image: room_2c_central_pumping_splash
+
+slide_player:
+  mode_room_2c_central_pumping_started:
+    room_2c_central_pumping_backglass_slide:
+      target: backglass
+    room_2c_central_pumping_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_2c_central_pumping_started:
+    room_2c_central_pumping_gi:
+      loops: -1
+      speed: 20
+  show_mode_status_report:
+    room_2c_central_pumping_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_2c_central_pumping_status_report:
+      action: stop
+
+event_player:
+  mode_room_2c_central_pumping_started:
+    cmd_backbox_show:
+      show_type: fire
+    drop_targets_continue:
+    cmd_map_position:
+      room: '2c'
+      visit: True
+  room_2c_exit_east_shot_hit.1: drop_targets_save
+  room_2c_exit_east_shot_hit.2: room_2d_enter
+
+variable_player:
+  mode_room_2c_central_pumping_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 2c
+      action: set

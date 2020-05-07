@@ -6,6 +6,7 @@ modes:
   - bao_lanes
   - base
   - bonus
+  - boss
   - bridge
   - chozo_multiball
   - drop_targets
@@ -25,16 +26,21 @@ modes:
   - room_1b_gunship_victory
   - room_1c_plains
   - room_1d_the_lake
+  - room_1e_statue_room
   - room_1f_mushroom_chamber
+  - room_1g_the_pit
   - room_1l_entryway
   - room_1m_generator
   - room_1r_space_pirate_battle
   - room_1z_underground_desert
   - room_2a_shifting_sands
   - room_2b_crevasse
+  - room_2c_central_pumping
   - room_2d_abyss
   - room_2e_sandy_cavern
   - room_2f_frozen_lake
+  - room_2g_draygon
+  - room_2h_crystalline_seabed
   - room_2i_lava_jump
   - room_2j_lake_of_fire
   - room_2m_geothermal_plant

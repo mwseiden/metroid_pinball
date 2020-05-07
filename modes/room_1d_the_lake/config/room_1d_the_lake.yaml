@@ -115,6 +115,9 @@ event_player:
       color_start: "0000FF"
       color_end: "00FF00"
     drop_targets_continue:
+    cmd_map_position:
+      room: '1d'
+      visit: True
   room_1d_exit_west_shot_hit.1: drop_targets_save
   room_1d_exit_west_shot_hit.2: room_1c_enter
   room_1d_exit_east_shot_hit.1: drop_targets_save

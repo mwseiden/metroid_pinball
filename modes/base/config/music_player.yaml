@@ -1,37 +1,43 @@
 #config_version=5
 
 sound_player:
+  mode_room_1a_lush_cavern_started{machine.next_game_acapella == 0}: music_crateria
   mode_room_1b_gunship_started{machine.next_game_acapella == 0}: music_crateria
   mode_room_1b_gunship_victory_started{machine.next_game_acapella == 0}: music_crateria
-  mode_room_1a_lush_cavern_started{machine.next_game_acapella == 0}: music_crateria
   mode_room_1c_plains_started{machine.next_game_acapella == 0}: music_crateria
   mode_room_1d_the_lake_started{machine.next_game_acapella == 0}: music_crateria
+  mode_room_1e_statue_room_started{machine.next_game_acapella == 0}: music_metal_item_room
   mode_room_1f_mushroom_chamber_started{machine.next_game_acapella == 0}: music_crateria
+  mode_room_1g_the_pit_started{machine.next_game_acapella == 0}: music_crateria
   mode_room_1l_entryway_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
   mode_room_1l_entryway_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
-  mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0}: music_brinstar
-  mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia_intro
   mode_room_1m_generator_started{machine.next_game_acapella == 0}: music_wrecked_ship_generator
+  mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0}: music_brinstar
+  mode_room_1z_underground_desert_started{machine.next_game_acapella == 0}: music_maridia_intro
+  mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia_intro
   mode_room_2b_crevasse_started{machine.next_game_acapella == 0}:
     music_maridia_snow:
+      action: play
+      fade_in: 2s
+  mode_room_2d_abyss_started{machine.next_game_acapella == 0}:
+    music_maridia:
+      action: play
+      fade_in: 2s
+  mode_room_2c_central_pumping_started{machine.next_game_acapella == 0}: music_maridia
+  mode_room_2e_sandy_cavern_started{machine.next_game_acapella == 0}:
+    music_maridia:
       action: play
       fade_in: 2s
   mode_room_2f_frozen_lake_started{machine.next_game_acapella == 0}:
     music_maridia_snow:
       action: play
       fade_in: 2s
-  mode_room_1z_underground_desert_started{machine.next_game_acapella == 0}: music_maridia_intro
-  mode_room_2d_abyss_started{machine.next_game_acapella == 0}:
-    music_maridia:
-      action: play
-      fade_in: 2s
-  mode_room_2e_sandy_cavern_started{machine.next_game_acapella == 0}:
-    music_maridia:
-      action: play
-      fade_in: 2s
+  mode_room_2g_draygon_started{machine.next_game_acapella == 0}: music_boss
+  mode_room_2h_crystalline_seabed_started{machine.next_game_acapella == 0}: music_maridia
   mode_room_2i_lava_jump_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2j_lake_of_fire_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2m_geothermal_plant_started{machine.next_game_acapella == 0}: music_norfair
+
   room_2a_sink_into_sand:
     music_maridia_intro:
       action: stop
@@ -41,6 +47,14 @@ sound_player:
       action: stop
       fade_out: 1s
     music_wrecked_ship_generator:
+      action: stop
+      fade_out: 1s
+  room_1e_enter:
+    music_crateria:
+      action: stop
+      fade_out: 1s
+  room_1f_enter:
+    music_metal_item_room:
       action: stop
       fade_out: 1s
   room_1l_enter:
@@ -73,6 +87,10 @@ sound_player:
       fade_out: 1s
   room_2e_enter:
     music_maridia_snow:
+      action: stop
+      fade_out: 1s
+  room_2g_enter:
+    music_maridia:
       action: stop
       fade_out: 1s
   bao_play_main:
@@ -117,6 +135,9 @@ sound_player:
     music_crateria:
       action: stop
       fade_out: 3s
+    music_boss:
+      action: stop
+      fade_out: 3s
     music_brinstar:
       action: stop
       fade_out: 3s
@@ -136,6 +157,9 @@ sound_player:
       action: stop
       fade_out: 3s
     music_maridia_snow:
+      action: stop
+      fade_out: 3s
+    music_metal_item_room:
       action: stop
       fade_out: 3s
     music_bao_main:

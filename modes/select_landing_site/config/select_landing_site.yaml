@@ -157,6 +157,9 @@ event_player:
   mode_select_landing_site_started:
     cmd_backbox_show:
       show_type: none
+  mode_select_landing_site_started{current_player.ball == 1}:
+    cmd_map_position:
+      room: '1b'
   select_landing_site_continue_highlighted:
     cmd_backbox_show:
       show_type: none
@@ -174,13 +177,20 @@ event_player:
       max_cutoff: 8
       color1: "040404"
       color2: "04100C"
+  select_landing_site_crateria_highlighted:
+    cmd_map_position:
+      room: '1b'
   select_landing_site_brinstar_highlighted:
     cmd_backbox_show:
       show_type: solid
       color: "200010"
+    cmd_map_position:
+      room: '1r'
   select_landing_site_wrecked_ship_highlighted:
     cmd_backbox_show:
       show_type: none
+    cmd_map_position:
+      room: '1l'
   select_landing_site_maridia_highlighted:
     cmd_backbox_show:
       show_type: pour
@@ -188,9 +198,13 @@ event_player:
       min_length: 4
       max_length: 12
       color: "200C00"
+    cmd_map_position:
+      room: '2a'
   select_landing_site_norfair_highlighted:
     cmd_backbox_show:
       show_type: fire
+    cmd_map_position:
+      room: '2i'
 
 show_player:
   mode_select_landing_site_started:

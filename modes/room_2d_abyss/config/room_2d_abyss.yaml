@@ -1,7 +1,7 @@
 #config_version=5
 mode:
   start_events: room_2d_continue, room_2d_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1z_enter, room_2e_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1z_enter, room_2e_enter, room_2h_enter, room_2c_enter
   priority: 300
 
 shots:
@@ -15,11 +15,20 @@ shots:
       led: led_enter_right_orbit
       color: door_red
   room_2d_exit_north_shot:
-    hit_events: left_orbit_hit
+    switches: s_ramp_enter
     profile: exit_door
     enable_events: mode_room_2d_abyss_started
     disable_events: room_2d_exit_north_shot_hit
     reset_events: room_2d_exit_north_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
+  room_2d_exit_west_shot:
+    hit_events: left_orbit_hit
+    profile: exit_door
+    enable_events: mode_room_2d_abyss_started
+    disable_events: room_2d_exit_west_shot_hit
+    reset_events: room_2d_exit_west_shot_hit
     show_tokens:
       led: led_enter_left_orbit
       color: door_blue
@@ -31,6 +40,15 @@ shots:
     reset_events: room_2d_disable_east_door
     show_tokens:
       led: led_enter_right_orbit
+      color: door_blue
+  room_2d_exit_south_shot:
+    switch: s_scoop
+    profile: exit_door
+    enable_events: mode_room_2d_abyss_started
+    disable_events: room_2d_exit_south_shot_hit
+    reset_events: room_2d_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_scoop
       color: door_blue
 
 slides:
@@ -74,6 +92,12 @@ event_player:
       color1: "404080"
       color2: "000040"
     drop_targets_continue:
+    cmd_map_position:
+      room: '2d'
+      visit: True
+  bridge_should_explode:
+    cmd_map_complete:
+      room: '2d'
   mode_room_2d_abyss_started{current_player.door_2d_2e == 0}: room_2d_enable_east_missile_door, room_2d_disable_east_door
   mode_room_2d_abyss_started{current_player.door_2d_2e == 1}: room_2d_enable_east_door, room_2d_disable_east_missile_door
   room_2d_exit_east_closed_shot_hit{current_player.missiles > 0}: room_2d_open_east_door
@@ -82,6 +106,10 @@ event_player:
   room_2d_exit_north_shot_hit.2: room_1z_enter
   room_2d_exit_east_shot_hit.1: drop_targets_save
   room_2d_exit_east_shot_hit.2: room_2e_enter
+  room_2d_exit_west_shot_hit.1: drop_targets_save
+  room_2d_exit_west_shot_hit.2: room_2c_enter
+  room_2d_exit_south_shot_hit.1: drop_targets_save
+  room_2d_exit_south_shot_hit.2: room_2h_enter
 
 variable_player:
   mode_room_2d_abyss_started:

@@ -214,7 +214,7 @@ World Map
                                  |   |
                                 [g]-[h]
                                      =
-                                    [i]-[j] [k]
+                                    [i]-[j]-[k]
                         Norfair      |       |
                                 [l]-[m]-[n]-[o]-[p]
                                          |       ~
@@ -395,11 +395,17 @@ Rooms (Modes)
                 Secret Passage (Red) -> Sandy Cavern [e]
                 Side Ramp (Blue) -> Crevasse [b]
 
+        Crystalline Seabed [h]:
+
+            Rules Unimplemented
+
+            Doors:
+
     Norfair:
 
         Map:
              =
-            [i]-[j] [k]
+            [i]-[j]-[k]
              |       |
         [l]-[m]-[n]-[o]-[p]
                  |       ~

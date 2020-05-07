@@ -1,7 +1,7 @@
 #config_version=5
 mode:
   start_events: room_1f_continue, room_1f_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1a_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1a_enter, room_1e_enter, room_1g_enter
   priority: 300
 
 shots:
@@ -22,6 +22,24 @@ shots:
     reset_events: room_1f_disable_north_door
     show_tokens:
       led: led_enter_left_orbit
+      color: door_blue
+  room_1f_exit_west_shot:
+    switch: s_left_passage
+    profile: exit_door
+    enable_events: mode_room_1f_mushroom_chamber_started
+    disable_events: room_1f_exit_west_shot_hit
+    reset_events: room_1f_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_secret_passage
+      color: door_blue
+  room_1f_exit_east_shot:
+    switch: s_pit
+    profile: exit_door
+    enable_events: mode_room_1f_mushroom_chamber_started
+    disable_events: room_1f_exit_east_shot_hit
+    reset_events: room_1f_exit_east_shot_hit
+    show_tokens:
+      led: led_pit
       color: door_blue
 
 slides:
@@ -61,14 +79,25 @@ show_player:
 event_player:
   mode_room_1f_mushroom_chamber_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: two_tone
+      min_cutoff: 7
+      max_cutoff: 12
+      color1: "080014"
+      color2: "004000"
     drop_targets_continue:
+    cmd_map_position:
+      room: '1f'
+      visit: True
   mode_room_1f_mushroom_chamber_started{current_player.door_1a_1f == 0}: room_1f_enable_north_missile_door, room_1f_disable_north_door
   mode_room_1f_mushroom_chamber_started{current_player.door_1a_1f == 1}: room_1f_enable_north_door, room_1f_disable_north_missile_door
   room_1f_exit_north_closed_shot_hit{current_player.missiles > 0}: room_1f_open_north_door
   room_1f_open_north_door: room_1f_exit_north_shot_hit
   room_1f_exit_north_shot_hit.1: drop_targets_save
   room_1f_exit_north_shot_hit.2: room_1a_enter
+  room_1f_exit_west_shot_hit.1: drop_targets_save
+  room_1f_exit_west_shot_hit.2: room_1e_enter
+  room_1f_exit_east_shot_hit.1: drop_targets_save
+  room_1f_exit_east_shot_hit.2: room_1g_enter
 
 variable_player:
   mode_room_1f_mushroom_chamber_started:

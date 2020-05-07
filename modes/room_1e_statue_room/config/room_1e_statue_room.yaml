@@ -1,0 +1,73 @@
+#config_version=5
+
+# https://upload.wikimedia.org/wikipedia/commons/3/3c/Heracles_with_the_dragon_-_Castle_square_Karlsruhe.jpg
+
+mode:
+  start_events: room_1e_continue, room_1e_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1f_enter
+  priority: 300
+
+shots:
+  room_1e_exit_east_shot:
+    switch: s_ramp_enter
+    profile: exit_door
+    enable_events: mode_room_1e_statue_room_started
+    disable_events: room_1e_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
+
+
+slides:
+  room_1e_statue_room_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1e_statue_room_backglass
+    transition: fade
+    transition_out: fade
+  room_1e_statue_room_splash_slide:
+    widgets:
+      - type: image
+        image: room_1e_statue_room_splash
+
+slide_player:
+  mode_room_1e_statue_room_started:
+    room_1e_statue_room_backglass_slide:
+      target: backglass
+    room_1e_statue_room_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_1e_statue_room_started:
+    room_1e_statue_room_gi:
+      loops: -1
+      speed: 25
+  show_mode_status_report:
+    room_1e_statue_room_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1e_statue_room_status_report:
+      action: stop
+
+event_player:
+  mode_room_1e_statue_room_started:
+    cmd_backbox_show:
+      show_type: gradient
+      color_start: "000000"
+      color_end: "100020"
+    drop_targets_continue:
+    cmd_map_position:
+      room: '1e'
+      visit: True
+  room_1e_exit_east_shot_hit.1: drop_targets_save
+  room_1e_exit_east_shot_hit.2: room_1f_enter
+
+variable_player:
+  mode_room_1e_statue_room_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 1e
+      action: set

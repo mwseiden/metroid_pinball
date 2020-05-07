@@ -2,15 +2,15 @@
 
 - duration: 2s
   slides:
-    room_template_status_slide_splash:
+    room_template_status_slide_splash: #check
       widgets:
       - type: image
-        image: room_template_splash
+        image: room_template_splash #check
 
 
 - duration: 5s
   slides:
-    room_template_status_slide_help:
+    room_template_status_slide_help: #check
       widgets:
       - type: Text
         text: NO MODE RULES

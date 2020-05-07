@@ -93,6 +93,9 @@ event_player:
       color1: "040404"
       color2: "04100C"
     drop_targets_continue:
+    cmd_map_position:
+      room: '1b'
+      visit: True
   show_mode_status_report:
     room_1b_victory_status_report:
       loops: 0
