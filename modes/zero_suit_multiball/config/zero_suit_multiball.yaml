@@ -9,7 +9,7 @@ achievements:
   zero_suit_bridge:
     show_tokens:
       led: led_goal_1
-      color: 'C00000'
+      color: 'C02000'
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: bridge_should_explode
@@ -36,7 +36,7 @@ achievements:
   zero_suit_room:
     show_tokens:
       led: led_goal_4
-      color: '808000'
+      color: 'B0C000'
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: cmd_map_complete
