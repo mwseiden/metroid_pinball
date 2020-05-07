@@ -8,7 +8,7 @@ mode:
 achievements:
   boss_phantoon:
     show_tokens:
-      led: led_boss_phantoon
+      led: led_boss_4
       color: 'FFFF00'
     show_when_selected: blink_light
     show_when_completed: led_color
@@ -17,7 +17,7 @@ achievements:
     enable_events: boss_achievement_initialize
   boss_ridley:
     show_tokens:
-      led: led_boss_ridley
+      led: led_boss_3
       color: 'FF0000'
     show_when_selected: blink_light
     show_when_completed: led_color
@@ -26,7 +26,7 @@ achievements:
     enable_events: boss_achievement_initialize
   boss_kraid:
     show_tokens:
-      led: led_boss_kraid
+      led: led_boss_2
       color: '00FF00'
     show_when_selected: blink_light
     show_when_completed: led_color
@@ -35,7 +35,7 @@ achievements:
     enable_events: boss_achievement_initialize
   boss_draygoon:
     show_tokens:
-      led: led_boss_draygon
+      led: led_boss_1
       color: '00FFFF'
     show_when_selected: blink_light
     show_when_completed: led_color

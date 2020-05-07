@@ -57,10 +57,10 @@
     led_2x: 'FF0000'
     led_3x: 'FF0000'
     led_ball_save: 'FF0000'
-    led_boss_draygon: 'FF0000'
-    led_boss_kraid: 'FF0000'
-    led_boss_phantoon: 'FF0000'
-    led_boss_ridley: 'FF0000'
+    led_boss_1: 'FF0000'
+    led_boss_2: 'FF0000'
+    led_boss_4: 'FF0000'
+    led_boss_3: 'FF0000'
     led_captive_ball: '700000'
     led_drop_1: '330000'
     led_goal_1: 'FF0000'
@@ -149,10 +149,10 @@
     led_2x: stop
     led_3x: stop
     led_ball_save: stop
-    led_boss_draygon: stop
-    led_boss_kraid: stop
-    led_boss_phantoon: stop
-    led_boss_ridley: stop
+    led_boss_1: stop
+    led_boss_2: stop
+    led_boss_4: stop
+    led_boss_3: stop
     led_captive_ball: '8F0000'
     led_goal_1: stop
     led_goal_2: stop
@@ -332,10 +332,10 @@
     led_2x: '00FD00'
     led_3x: '00FD00'
     led_ball_save: '00FD00'
-    led_boss_draygon: '00FD00'
-    led_boss_kraid: '00FD00'
-    led_boss_phantoon: '00FD00'
-    led_boss_ridley: '00FD00'
+    led_boss_1: '00FD00'
+    led_boss_2: '00FD00'
+    led_boss_4: '00FD00'
+    led_boss_3: '00FD00'
     led_captive_ball: '006F00'
     led_drop_1: '003300'
     led_goal_1: '00FD00'
@@ -424,10 +424,10 @@
     led_2x: stop
     led_3x: stop
     led_ball_save: stop
-    led_boss_draygon: stop
-    led_boss_kraid: stop
-    led_boss_phantoon: stop
-    led_boss_ridley: stop
+    led_boss_1: stop
+    led_boss_2: stop
+    led_boss_4: stop
+    led_boss_3: stop
     led_captive_ball: '008E00'
     led_goal_1: stop
     led_goal_2: stop
@@ -607,10 +607,10 @@
     led_2x: '0000FD'
     led_3x: '0000FD'
     led_ball_save: '0000FD'
-    led_boss_draygon: '0000FD'
-    led_boss_kraid: '0000FD'
-    led_boss_phantoon: '0000FD'
-    led_boss_ridley: '0000FD'
+    led_boss_1: '0000FD'
+    led_boss_2: '0000FD'
+    led_boss_4: '0000FD'
+    led_boss_3: '0000FD'
     led_captive_ball: '00006F'
     led_drop_1: '000033'
     led_goal_1: '0000FD'
@@ -699,10 +699,10 @@
     led_2x: stop
     led_3x: stop
     led_ball_save: stop
-    led_boss_draygon: stop
-    led_boss_kraid: stop
-    led_boss_phantoon: stop
-    led_boss_ridley: stop
+    led_boss_1: stop
+    led_boss_2: stop
+    led_boss_4: stop
+    led_boss_3: stop
     led_captive_ball: '00008E'
     led_goal_1: stop
     led_goal_2: stop
