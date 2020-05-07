@@ -151,7 +151,7 @@ lights:
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_boss_phantoon:
+  led_boss_4:
     number: 131
     fade_ms: 40ms
     platform: fadecandy
@@ -166,7 +166,7 @@ lights:
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_boss_ridley:
+  led_boss_3:
     number: 134
     fade_ms: 40ms
     platform: fadecandy
@@ -186,7 +186,7 @@ lights:
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_boss_kraid:
+  led_boss_2:
     number: 138
     fade_ms: 40ms
     platform: fadecandy
@@ -206,7 +206,7 @@ lights:
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_boss_draygon:
+  led_boss_1:
     number: 142
     fade_ms: 40ms
     platform: fadecandy
