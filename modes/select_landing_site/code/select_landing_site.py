@@ -8,9 +8,6 @@ class SelectLandingSite(Carousel):
         self.add_mode_event_handler('select_landing_site_continue_selected', self._continue_from_last_room)
         self.add_mode_event_handler('select_landing_site_continue_highlighted', self._show_continue_map)
 
-        if self.machine.game.player.ball == 1:
-            self.machine.events.post('cmd_map_position')
-
     def _update_highlighted_item(self, direction):
         player = self.machine.game.player
         items = self._get_available_items()
