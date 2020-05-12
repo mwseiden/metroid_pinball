@@ -74,7 +74,7 @@ event_player:
       background_color: "000800"
       twinkle_color: "604000"
       twinkle_count: 20
-      steps: 10
+      steps: 50
     drop_targets_continue:
     cmd_map_position:
       room: '1a'

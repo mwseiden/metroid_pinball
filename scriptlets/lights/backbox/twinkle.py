@@ -35,6 +35,8 @@ class Twinkle(DynamicBackBoxShow):
             else:
                 twinkle[2] = twinkle[2] - 1
                 if twinkle[2] < 1:
+                    twinkle[0] = randint(0, self.strip_count - 1)
+                    twinkle[1] = randint(0, 9)
                     twinkle[2] = 1
                     twinkle[3] = 0
 
