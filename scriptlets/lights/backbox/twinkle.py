@@ -49,4 +49,4 @@ class Twinkle(DynamicBackBoxShow):
             self.strips[strip_number].set_all_colors(self.background_color)
 
         for twinkle_number in range(self.twinkle_count):
-            self.twinkles[twinkle_number] = [randint(0, self.strip_count - 1), randint(0, 9), randint(1, 100), randint(0, 1)]
+            self.twinkles[twinkle_number] = [randint(0, self.strip_count - 1), randint(0, 9), randint(1, self.steps + 1), randint(0, 1)]
