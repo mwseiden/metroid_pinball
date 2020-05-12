@@ -19,17 +19,23 @@ class Twinkle(DynamicBackBoxShow):
         for twinkle in self.twinkles:
             r1, g1, b1 = self.twinkle_color.rgb
             r2, g2, b2 = self.background_color.rgb
- 
+
             color = RGBColor([
-                int((r1 + r2) / (1 + 100 / twinkle[2])),
-                int((g1 + g2) / (1 + 100 / twinkle[2])),
-                int((b1 + b2) / (1 + 100 / twinkle[2])),
+                r1 + (r2 - r1) * (twinkle[2] % 100) / 99,
+                g1 + (g2 - g1) * (twinkle[2] % 100) / 99,
+                b1 + (b2 - b1) * (twinkle[2] % 100) / 99,
             ])
+
+            # color = RGBColor([
+            #     int((r1 + r2) / (1 + 100 / twinkle[2])),
+            #     int((g1 + g2) / (1 + 100 / twinkle[2])),
+            #     int((b1 + b2) / (1 + 100 / twinkle[2])),
+            # ])
             
             if twinkle[3] == 0:
                 twinkle[2] = twinkle[2] + 1
-                if twinkle[2] > 100:
-                    twinkle[2] = 100
+                if twinkle[2] > 99:
+                    twinkle[2] = 99
                     twinkle[3] = 1
             else:
                 twinkle[2] = twinkle[2] - 1
