@@ -4,12 +4,13 @@ from mpf.core.rgb_color import RGBColor
 from .dynamic_backbox_show import DynamicBackBoxShow
 
 class Twinkle(DynamicBackBoxShow):
-    def __init__(self, machine, background_color, twinkle_color, twinkle_count):
+    def __init__(self, machine, background_color, twinkle_color, twinkle_count, steps):
        super().__init__(machine)
 
        self.background_color = background_color
        self.twinkle_color = twinkle_color
        self.twinkle_count = twinkle_count
+       self.steps = steps
 
        self.generate_twinkles()
 
@@ -21,21 +22,15 @@ class Twinkle(DynamicBackBoxShow):
             r2, g2, b2 = self.background_color.rgb
 
             color = RGBColor([
-                r1 + (r2 - r1) * (twinkle[2] % 100) / 99,
-                g1 + (g2 - g1) * (twinkle[2] % 100) / 99,
-                b1 + (b2 - b1) * (twinkle[2] % 100) / 99,
+                r1 + (r2 - r1) * (twinkle[2] % (self.steps + 1)) / self.steps,
+                g1 + (g2 - g1) * (twinkle[2] % (self.steps + 1)) / self.steps,
+                b1 + (b2 - b1) * (twinkle[2] % (self.steps + 1)) / self.steps
             ])
 
-            # color = RGBColor([
-            #     int((r1 + r2) / (1 + 100 / twinkle[2])),
-            #     int((g1 + g2) / (1 + 100 / twinkle[2])),
-            #     int((b1 + b2) / (1 + 100 / twinkle[2])),
-            # ])
-            
             if twinkle[3] == 0:
                 twinkle[2] = twinkle[2] + 1
-                if twinkle[2] > 99:
-                    twinkle[2] = 99
+                if twinkle[2] > self.steps:
+                    twinkle[2] = self.steps
                     twinkle[3] = 1
             else:
                 twinkle[2] = twinkle[2] - 1

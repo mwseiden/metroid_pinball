@@ -144,7 +144,8 @@ class BackBoxLights(Scriptlet):
             self.machine,
             RGBColor(kwargs.get('background_color', '000000')),
             RGBColor(kwargs.get('twinkle_color', '404040')),
-            int(kwargs.get('twinkle_count', 4))
+            int(kwargs.get('twinkle_count', 4)),
+            int(kwargs.get('steps', 100))
         )
 
     def show_sparkle(self, **kwargs):
