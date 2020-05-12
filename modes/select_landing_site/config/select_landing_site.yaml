@@ -180,6 +180,9 @@ event_player:
   select_landing_site_crateria_highlighted:
     cmd_map_position:
       room: '1b'
+  mode_select_landing_site_started{current_player.ball == 1}:
+    cmd_map_position:
+      room: '1b'
   select_landing_site_brinstar_highlighted:
     cmd_backbox_show:
       show_type: solid
