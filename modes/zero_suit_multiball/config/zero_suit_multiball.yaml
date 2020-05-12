@@ -15,6 +15,7 @@ achievements:
     complete_events: bridge_should_explode
     select_events: power_bomb_collected
     enable_events: zero_suit_initialize
+    sync_ms: 1000
   zero_suit_chozo:
     show_tokens:
       led: led_goal_2
@@ -24,6 +25,7 @@ achievements:
     complete_events: chozo_multiball_bashed
     select_events: captive_shot_hit
     enable_events: zero_suit_initialize
+    sync_ms: 1000
   zero_suit_miniboss:
     show_tokens:
       led: led_goal_3
@@ -33,6 +35,7 @@ achievements:
     complete_events: miniboss_battle_mode_should_start
     select_events: miniboss_enable_level_3
     enable_events: zero_suit_initialize
+    sync_ms: 1000
   zero_suit_room:
     show_tokens:
       led: led_goal_4
@@ -42,6 +45,7 @@ achievements:
     complete_events: cmd_map_complete
     select_events: cmd_map_position
     enable_events: zero_suit_initialize
+    sync_ms: 1000
 
 achievement_groups:
   zero_suit_achievements:
