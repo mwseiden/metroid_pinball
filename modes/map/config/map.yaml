@@ -175,3 +175,5 @@ widget_player:
       key: map_background_widget
       target: window
 
+event_player:
+  mode_map_started: map_is_initialized
