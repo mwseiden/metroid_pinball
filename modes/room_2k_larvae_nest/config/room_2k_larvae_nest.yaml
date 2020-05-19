@@ -16,12 +16,33 @@ shots:
       led: led_enter_left_orbit
       color: door_blue
 
+animations:
+  room_2k_backglass_scroll_up:
+    - property: y
+      value: 1280
+      relative: true
+      duration: 5s
+    - property: y
+      value: -1280
+      relative: true
+      duration: 0s
+      repeat: true
 
 slides:
   room_2k_larvae_nest_backglass_slide:
     widgets:
       - type: image
         image: room_2k_larvae_nest_backglass
+        y: -1
+        anchor_y: top
+        animations:
+          show_slide: room_2k_backglass_scroll_up
+      - type: image
+        image: room_2k_larvae_nest_backglass
+        y: 1279
+        anchor_y: top
+        animations:
+          show_slide: room_2k_backglass_scroll_up
     transition: fade
     transition_out: fade
   room_2k_larvae_nest_splash_slide:
