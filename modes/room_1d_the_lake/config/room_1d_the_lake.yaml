@@ -41,7 +41,7 @@ shots:
     show_tokens:
       led: led_pit
   room_1d_underwater_2_shot:
-    switches: s_scoop
+    switch: s_scoop
     profile: room_1d_swamp
     enable_events: mode_room_1d_the_lake_started
     show_tokens:

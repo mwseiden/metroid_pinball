@@ -2,7 +2,7 @@
 
 mode:
   start_events: room_2k_continue, room_2k_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2j_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2j_enter, room_2o_enter
   priority: 300
 
 shots:
@@ -14,6 +14,15 @@ shots:
     reset_events: room_2k_exit_west_shot_hit
     show_tokens:
       led: led_enter_left_orbit
+      color: door_blue
+  room_2k_exit_south_shot:
+    switch: s_scoop
+    profile: exit_door
+    enable_events: mode_room_2k_larvae_nest_started
+    disable_events: room_2k_exit_south_shot_hit
+    reset_events: room_2k_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_scoop
       color: door_blue
 
 animations:
