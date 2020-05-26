@@ -89,6 +89,8 @@ event_player:
       visit: True
   room_2k_exit_west_shot_hit.1: drop_targets_save
   room_2k_exit_west_shot_hit.2: room_2j_enter
+  room_2k_exit_south_shot_hit.1: drop_targets_save
+  room_2k_exit_south_shot_hit.2: room_2o_enter
 
 variable_player:
   mode_room_2k_larvae_nest_started:
