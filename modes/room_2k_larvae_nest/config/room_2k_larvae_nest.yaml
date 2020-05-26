@@ -8,7 +8,7 @@ mode:
 timers:
   room_2k_shot_timer:
     start_value: 1
-    end_value: 4
+    end_value: 5
     restart_on_complete: true
     tick_interval: 10s
     control_events:
