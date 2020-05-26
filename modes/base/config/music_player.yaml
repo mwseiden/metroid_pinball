@@ -95,6 +95,10 @@ sound_player:
     music_maridia:
       action: stop
       fade_out: 1s
+  room_2j_enter:
+    music_norfair_calm:
+      action: stop
+      fade_out: 1s
   room_2k_enter:
     music_norfair:
       action: stop
