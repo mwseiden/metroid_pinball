@@ -38,6 +38,7 @@ sound_player:
   mode_room_2j_lake_of_fire_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2k_larvae_nest_started{machine.next_game_acapella == 0}: music_norfair_calm
   mode_room_2m_geothermal_plant_started{machine.next_game_acapella == 0}: music_norfair
+  mode_room_2o_strange_ruins_started{machine.next_game_acapella == 0}: music_norfair_deep_intro
 
   room_2a_sink_into_sand:
     music_maridia_intro:
@@ -98,6 +99,10 @@ sound_player:
     music_norfair:
       action: stop
       fade_out: 1s
+  mode_room_2o_strange_ruins_started:
+    music_norfair_calm:
+      action: stop
+      fade_out: 1s
   bao_play_main:
     music_bao_main:
       action: play
@@ -150,6 +155,9 @@ sound_player:
       action: stop
       fade_out: 3s
     music_norfair_calm:
+      action: stop
+      fade_out: 3s
+    music_norfair_deep_intro:
       action: stop
       fade_out: 3s
     music_maridia:
