@@ -1,5 +1,7 @@
 #config_version=5
 
+# https://commons.wikimedia.org/wiki/File:Ruins_at_Watadagaya,_Madirigiriya.jpg
+
 mode:
   start_events: room_2o_continue, room_2o_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2k_enter
