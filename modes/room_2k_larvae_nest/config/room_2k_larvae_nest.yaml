@@ -152,6 +152,12 @@ event_player:
     cmd_map_position:
       room: '2k'
       visit: True
+  room_2k_exit_west_shot_hit{current_player.room_2k_insects > 9}:
+    cmd_map_complete:
+      room: '2k'
+  room_2k_exit_south_shot_hit{current_player.room_2k_insects > 9}:
+    cmd_map_complete:
+      room: '2k'
   room_2k_exit_west_shot_hit.1: drop_targets_save
   room_2k_exit_west_shot_hit.2: room_2j_enter
   room_2k_exit_south_shot_hit.1: drop_targets_save
@@ -169,3 +175,18 @@ variable_player:
     continue_room:
       string: 2k
       action: set
+    room_2k_insects:
+      int: 0
+      action: set
+  room_2k_bank_1_shot_hit:
+    room_2k_insects: 1
+  room_2k_bank_2_shot_hit:
+    room_2k_insects: 2
+  room_2k_bank_3_shot_hit:
+    room_2k_insects: 1
+  room_2k_bank_4_shot_hit:
+    room_2k_insects: 5
+  room_2k_exit_west_shot_hit:
+    score: (5000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
+  room_2k_exit_south_shot_hit:
+    score: (5000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier

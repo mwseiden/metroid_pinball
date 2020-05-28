@@ -135,6 +135,8 @@ player_vars:
   room_2f_target_order:
     value_type: str
     initial_value: 'ABCDEFGHIJKLMN'
+  room_2k_insects:
+    initial_value: 0
   scoops:
     initial_value: 0
   skillshot_bombs_lit:

@@ -13,6 +13,6 @@
     room_2k_larvae_nest_status_slide_help:
       widgets:
       - type: Text
-        text: NO MODE RULES
+        text: Insects (player|room_2k_insects)
         color: red
         style: dmd_med
