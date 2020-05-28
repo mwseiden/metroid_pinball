@@ -438,6 +438,9 @@ Rooms (Modes)
             Doors:
                 Side Ramp (Blue) -> Lava Jump [i]
 
+        Magma Chamber [n]:
+
+            Rules Unimplemented
 
     Tourian:
 
