@@ -51,7 +51,7 @@ show_player:
   mode_room_2o_strange_ruins_started:
     room_2o_strange_ruins_gi:
       loops: -1
-      speed: 50
+      speed: 10
   show_mode_status_report:
     room_2o_strange_ruins_status_report:
       loops: 0
