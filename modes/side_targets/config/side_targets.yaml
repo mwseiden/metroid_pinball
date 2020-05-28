@@ -48,15 +48,15 @@ show_player:
       loops: 0
 
 sounds:
-  side_targets_shot_group_unlit_hit:
-    file: side_targets_shot_group_unlit_hit.wav
+  side_targets_unlit_hit:
+    file: side_targets_unlit_hit.wav
     streaming: False
     track: sfx
     priority: 50
     volume: 0.9
     max_queue_time: None
-  side_targets_shot_group_unlit_hit:
-    file: side_targets_shot_group_unlit_hit.wav
+  side_targets_lit_hit:
+    file: side_targets_lit_hit.wav
     streaming: False
     track: sfx
     priority: 50
