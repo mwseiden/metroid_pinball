@@ -108,6 +108,8 @@ event_player:
     cmd_map_position:
       room: '1b'
       visit: True
+    cmd_play_music:
+      music: crateria
   mode_room_1b_gunship_started{current_player.room_1b_step_2 == 0}:
     - room_1b_show_backglass
   mode_room_1b_gunship_started{current_player.room_1b_step_2 != 0}:

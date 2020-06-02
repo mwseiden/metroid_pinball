@@ -12,6 +12,9 @@ class MusicPlayer(Mode):
         super().mode_stop(**kwargs)
 
     def event_play_music(self, **kwargs):
+        if self.machine.get_machine_var('next_game_acapella') != 0:
+            return None
+
         music = kwargs.get('music', 'item_room')
 
         if music != self.music:

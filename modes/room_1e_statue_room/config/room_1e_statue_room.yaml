@@ -60,6 +60,8 @@ event_player:
     cmd_map_position:
       room: '1e'
       visit: True
+    cmd_play_music:
+      music: metal_item_room
   room_1e_exit_east_shot_hit.1: drop_targets_save
   room_1e_exit_east_shot_hit.2: room_1f_enter
 

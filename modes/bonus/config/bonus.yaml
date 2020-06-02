@@ -247,6 +247,7 @@ event_player:
       show_type: heat_up
       color: "FF4000"
       add_percentage: 1
+    cmd_stop_music:
   bonus_start{machine.next_game_goren == 0}: bonus_sound_start
   bonus_switches:
     bonus_sound_awarded:

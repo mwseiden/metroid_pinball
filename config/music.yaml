@@ -129,6 +129,7 @@ sounds:
     loops: -1
     simultaneous_limit: 1
     stealing_method: skip
+    volume: 0.15
   music_metal_item_room:
     file: music_metal_item_room.wav
     #streaming: True

@@ -19,6 +19,7 @@ modes:
   - match
   - miniboss
   - missiles
+  - music_player
   - pop_bumpers
   - power_bombs
   - room_1a_lush_cavern
