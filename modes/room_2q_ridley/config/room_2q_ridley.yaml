@@ -51,7 +51,7 @@ slides:
       - type: image
         image: room_2q_ridley_backglass
         x: 210
-        y: 590
+        y: 690
         animations:
           show_slide: room_2g_draygon_standard
     transition: fade
