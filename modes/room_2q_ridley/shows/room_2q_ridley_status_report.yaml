@@ -1,0 +1,18 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_2q_ridley_status_slide_splash:
+      widgets:
+      - type: image
+        image: room_2q_ridley_splash
+
+
+- duration: 5s
+  slides:
+    room_2q_ridley_status_slide_help:
+      widgets:
+      - type: Text
+        text: NO MODE RULES
+        color: red
+        style: dmd_med

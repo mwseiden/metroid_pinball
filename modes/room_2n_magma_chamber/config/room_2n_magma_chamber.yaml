@@ -2,7 +2,7 @@
 
 mode:
   start_events: room_2n_continue, room_2n_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2m_enter, room_2o_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2m_enter, room_2o_enter, room_2q_enter
   priority: 300
 
 shots:
@@ -23,6 +23,15 @@ shots:
     reset_events: room_2n_exit_east_shot_hit
     show_tokens:
       led: led_enter_right_orbit
+      color: door_blue
+  room_2k_exit_south_shot:
+    switch: s_scoop
+    profile: exit_door
+    enable_events: mode_room_2n_magma_chamber_started
+    disable_events: room_2n_exit_south_shot_hit
+    reset_events: room_2n_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_scoop
       color: door_blue
 
 slides:
@@ -71,6 +80,8 @@ event_player:
   room_2n_exit_west_shot_hit.2: room_2m_enter
   room_2n_exit_east_shot_hit.1: drop_targets_save
   room_2n_exit_east_shot_hit.2: room_2o_enter
+  room_2n_exit_south_shot_hit.1: drop_targets_save
+  room_2n_exit_south_shot_hit.2: room_2q_enter
 
 variable_player:
   mode_room_2n_magma_chamber_started:
