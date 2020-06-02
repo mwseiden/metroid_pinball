@@ -50,7 +50,7 @@ slides:
     widgets:
       - type: image
         image: room_2q_ridley_backglass
-        x: 210
+        x: 280
         y: 690
         animations:
           show_slide: room_2g_draygon_standard
