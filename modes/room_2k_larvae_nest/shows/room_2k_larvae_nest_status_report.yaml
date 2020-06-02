@@ -1,0 +1,18 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_2k_larvae_nest_status_slide_splash:
+      widgets:
+      - type: image
+        image: room_2k_larvae_nest_splash
+
+
+- duration: 5s
+  slides:
+    room_2k_larvae_nest_status_slide_help:
+      widgets:
+      - type: Text
+        text: Insects (player|room_2k_insects)
+        color: red
+        style: dmd_med

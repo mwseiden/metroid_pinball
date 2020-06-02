@@ -174,4 +174,3 @@ widget_player:
     map_background_widget:
       key: map_background_widget
       target: window
-

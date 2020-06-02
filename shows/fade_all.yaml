@@ -33,18 +33,18 @@
     led_right_outlane: (start_color)
     led_right_kickback: (start_color)
     led_right_inlane: (start_color)
-    led_boss_phantoon: (start_color)
+    led_boss_4: (start_color)
     led_goal_4: (start_color)
     led_goal_3: (start_color)
-    led_boss_kraid: (start_color)
+    led_boss_2: (start_color)
     led_motherbrain_3: (start_color)
     led_motherbrain_2: (start_color)
     led_motherbrain_1: (start_color)
-    led_boss_ridley: (start_color)
+    led_boss_3: (start_color)
     led_goal_2: (start_color)
     led_ball_save: (start_color)
     led_goal_1: (start_color)
-    led_boss_draygon: (start_color)
+    led_boss_1: (start_color)
     led_left_inlane: (start_color)
     led_left_outlane: (start_color)
     led_left_kickback: (start_color)
@@ -186,7 +186,7 @@
     led_right_inlane:
       color: (color)
       fade: (fade)
-    led_boss_phantoon:
+    led_boss_4:
       color: (color)
       fade: (fade)
     led_goal_4:
@@ -195,7 +195,7 @@
     led_goal_3:
       color: (color)
       fade: (fade)
-    led_boss_kraid:
+    led_boss_2:
       color: (color)
       fade: (fade)
     led_motherbrain_3:
@@ -207,7 +207,7 @@
     led_motherbrain_1:
       color: (color)
       fade: (fade)
-    led_boss_ridley:
+    led_boss_3:
       color: (color)
       fade: (fade)
     led_goal_2:
@@ -219,7 +219,7 @@
     led_goal_1:
       color: (color)
       fade: (fade)
-    led_boss_draygon:
+    led_boss_1:
       color: (color)
       fade: (fade)
     led_left_inlane:
@@ -453,7 +453,7 @@
     led_right_inlane:
       color: (end_color)
       fade: (fade)
-    led_boss_phantoon:
+    led_boss_4:
       color: (end_color)
       fade: (fade)
     led_goal_4:
@@ -462,7 +462,7 @@
     led_goal_3:
       color: (end_color)
       fade: (fade)
-    led_boss_kraid:
+    led_boss_2:
       color: (end_color)
       fade: (fade)
     led_motherbrain_3:
@@ -474,7 +474,7 @@
     led_motherbrain_1:
       color: (end_color)
       fade: (fade)
-    led_boss_ridley:
+    led_boss_3:
       color: (end_color)
       fade: (fade)
     led_goal_2:
@@ -486,7 +486,7 @@
     led_goal_1:
       color: (end_color)
       fade: (fade)
-    led_boss_draygon:
+    led_boss_1:
       color: (end_color)
       fade: (fade)
     led_left_inlane:

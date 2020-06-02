@@ -1,0 +1,239 @@
+#config_version=5
+
+mode:
+  start_events: room_2k_continue, room_2k_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2j_enter, room_2o_enter
+  priority: 300
+
+timers:
+  room_2k_shot_timer:
+    start_value: 1
+    end_value: 5
+    restart_on_complete: true
+    tick_interval: 7.7s
+    control_events:
+      - event: mode_room_2k_larvae_nest_started
+        action: start
+
+shot_profiles:
+  room_2k_strobe:
+    states:
+    - name: lit
+      show: blink_3_lights
+      loops: -1
+
+shots:
+  room_2k_exit_west_shot:
+    hit_events: left_orbit_hit
+    profile: exit_door
+    enable_events: mode_room_2k_larvae_nest_started
+    disable_events: room_2k_exit_west_shot_hit
+    reset_events: room_2k_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_left_orbit
+      color: door_blue
+  room_2k_exit_south_shot:
+    switch: s_scoop
+    profile: exit_door
+    enable_events: mode_room_2k_larvae_nest_started
+    disable_events: room_2k_exit_south_shot_hit
+    reset_events: room_2k_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_scoop
+      color: door_blue
+  room_2k_bank_1_shot:
+    switch: s_missile_bank_1, s_missile_bank_2, s_missile_bank_3
+    profile: room_2k_strobe
+    enable_events: room_2k_enable_1
+    disable_events: room_2k_enable_2, room_2k_enable_3, room_2k_enable_4
+    reset_events: room_2k_enable_2, room_2k_enable_3, room_2k_enable_4
+    show_tokens:
+      led_1: led_missile_bank_1
+      led_2: led_missile_bank_2
+      led_3: led_missile_bank_3
+      color_1: 'FF00B0'
+      color_2: stop
+  room_2k_bank_2_shot:
+    switch: s_lower_right_bank_1, s_lower_right_bank_2, s_lower_right_bank_3
+    profile: room_2k_strobe
+    enable_events: room_2k_enable_2
+    disable_events: room_2k_enable_1, room_2k_enable_3, room_2k_enable_4
+    reset_events: room_2k_enable_1, room_2k_enable_3, room_2k_enable_4
+    show_tokens:
+      led_1: led_bomb_bank_1
+      led_2: led_bomb_bank_2
+      led_3: led_bomb_bank_3
+      color_1: 'FF00B0'
+      color_2: stop
+  room_2k_bank_3_shot:
+    switch: s_purple_1, s_purple_2, s_purple_3
+    profile: room_2k_strobe
+    enable_events: room_2k_enable_3
+    disable_events: room_2k_enable_1, room_2k_enable_2, room_2k_enable_4
+    reset_events: room_2k_enable_1, room_2k_enable_2, room_2k_enable_4
+    show_tokens:
+      led_1: led_upgrade_bank_1
+      led_2: led_upgrade_bank_2
+      led_3: led_upgrade_bank_3
+      color_1: 'FF00B0'
+      color_2: stop
+  room_2k_bank_4_shot:
+    switch: s_left_target_1, s_left_target_2, s_left_target_3
+    profile: room_2k_strobe
+    enable_events: room_2k_enable_4
+    disable_events: room_2k_enable_1, room_2k_enable_2, room_2k_enable_3
+    reset_events: room_2k_enable_1, room_2k_enable_2, room_2k_enable_3
+    show_tokens:
+      led_1: led_side_1
+      led_2: led_side_2
+      led_3: led_side_3
+      color_1: 'FF00B0'
+      color_2: stop
+
+animations:
+  room_2k_backglass_scroll_up:
+    - property: y
+      value: 1280
+      relative: true
+      duration: 5s
+    - property: y
+      value: -1280
+      relative: true
+      duration: 0s
+      repeat: true
+
+slides:
+  room_2k_larvae_nest_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2k_larvae_nest_backglass
+        y: -1
+        anchor_y: top
+        animations:
+          show_slide: room_2k_backglass_scroll_up
+      - type: image
+        image: room_2k_larvae_nest_backglass
+        y: 1279
+        anchor_y: top
+        animations:
+          show_slide: room_2k_backglass_scroll_up
+    transition: fade
+    transition_out: fade
+  room_2k_larvae_nest_splash_slide:
+    widgets:
+      - type: image
+        image: room_2k_larvae_nest_splash
+
+slide_player:
+  mode_room_2k_larvae_nest_started:
+    room_2k_larvae_nest_backglass_slide:
+      target: backglass
+    room_2k_larvae_nest_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_2k_larvae_nest_started:
+    room_2k_larvae_nest_gi:
+      loops: -1
+      speed: 30
+  show_mode_status_report:
+    room_2k_larvae_nest_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_2k_larvae_nest_status_report:
+      action: stop
+
+sounds:
+  room_2k_insects_1:
+    file: room_2k_insects_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  room_2k_insects_2:
+    file: room_2k_insects_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  room_2k_insects_3:
+    file: room_2k_insects_3.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+  room_2k_insects_4:
+    file: room_2k_insects_4.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+
+sound_pools:
+  room_2k_insect_sound_pool:
+    load: preload
+    type: random_force_all
+    track: sfx
+    sounds:
+      - room_2k_insects_1
+      - room_2k_insects_2
+      - room_2k_insects_3
+      - room_2k_insects_4
+
+sound_player:
+  room_2k_bank_1_shot_hit: room_2k_insect_sound_pool
+  room_2k_bank_2_shot_hit: room_2k_insect_sound_pool
+  room_2k_bank_3_shot_hit: room_2k_insect_sound_pool
+  room_2k_bank_4_shot_hit: room_2k_insect_sound_pool
+
+event_player:
+  mode_room_2k_larvae_nest_started:
+    cmd_backbox_show:
+      show_type: fire
+    drop_targets_continue:
+    cmd_map_position:
+      room: '2k'
+      visit: True
+  room_2k_exit_west_shot_hit{current_player.room_2k_insects > 9}:
+    cmd_map_complete:
+      room: '2k'
+  room_2k_exit_south_shot_hit{current_player.room_2k_insects > 9}:
+    cmd_map_complete:
+      room: '2k'
+  room_2k_exit_west_shot_hit.1: drop_targets_save
+  room_2k_exit_west_shot_hit.2: room_2j_enter
+  room_2k_exit_south_shot_hit.1: drop_targets_save
+  room_2k_exit_south_shot_hit.2: room_2o_enter
+  timer_room_2k_shot_timer_tick{ticks == 1}: room_2k_enable_1
+  timer_room_2k_shot_timer_tick{ticks == 2}: room_2k_enable_2
+  timer_room_2k_shot_timer_tick{ticks == 3}: room_2k_enable_3
+  timer_room_2k_shot_timer_tick{ticks == 4}: room_2k_enable_4
+
+variable_player:
+  mode_room_2k_larvae_nest_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 2k
+      action: set
+    room_2k_insects:
+      int: 0
+      action: set
+  room_2k_bank_1_shot_hit:
+    room_2k_insects: 1
+  room_2k_bank_2_shot_hit:
+    room_2k_insects: 2
+  room_2k_bank_3_shot_hit:
+    room_2k_insects: 1
+  room_2k_bank_4_shot_hit:
+    room_2k_insects: 5
+  room_2k_exit_west_shot_hit:
+    score: (5000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
+  room_2k_exit_south_shot_hit:
+    score: (5000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier

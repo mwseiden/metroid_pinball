@@ -1,0 +1,100 @@
+#config_version=5
+
+mode:
+  start_events: room_2q_continue, room_2q_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2n_enter
+  priority: 300
+
+animations:
+  room_2q_ridley_standard:
+    - property: x
+      value: 100
+      relative: true
+      duration: 1.0s
+    - property: y
+      value: 100
+      relative: true
+      duration: 1.0s
+      timing: with_previous
+    - property: x
+      value: 100
+      relative: true
+      duration: 1.0s
+    - property: y
+      value: -100
+      relative: true
+      duration: 1.0s
+      timing: with_previous
+    - property: x
+      value: -100
+      relative: true
+      duration: 1.0s
+    - property: y
+      value: -100
+      relative: true
+      duration: 1.0s
+      timing: with_previous
+    - property: x
+      value: -100
+      relative: true
+      duration: 1.0s
+    - property: y
+      value: 100
+      relative: true
+      duration: 1.0s
+      timing: with_previous
+      repeat: true
+
+slides:
+  room_2q_ridley_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2q_ridley_backglass
+        x: 280
+        y: 690
+        animations:
+          show_slide: room_2g_draygon_standard
+    transition: fade
+    transition_out: fade
+  room_2q_ridley_splash_slide:
+    widgets:
+      - type: image
+        image: room_2q_ridley_splash
+
+slide_player:
+  mode_room_2q_ridley_started:
+    room_2q_ridley_backglass_slide:
+      target: backglass
+    room_2q_ridley_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_2q_ridley_started:
+    room_2q_gi:
+      loops: -1
+      speed: 30
+  show_mode_status_report:
+    room_2q_ridley_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_2q_ridley_status_report:
+      action: stop
+
+event_player:
+  mode_room_2q_ridley_started:
+    cmd_backbox_show:
+      show_type: fire
+    drop_targets_continue:
+    cmd_map_position:
+      room: '2q'
+      visit: True
+
+variable_player:
+  mode_room_2q_ridley_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 2q
+      action: set

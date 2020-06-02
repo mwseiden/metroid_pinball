@@ -421,6 +421,15 @@ Rooms (Modes)
 
             Doors:
                 Left Orbit (Blue) -> Lava Jump [i]
+                Back Ramp (Blue) -> Larvae Nest [k]
+
+        Larvae Nest [k]:
+
+            Rules Unimplemented
+
+            Doors:
+                Left Orbit (Blue) -> Lake of Fire [j]
+
 
         Geothermal Plant [m]:
 
@@ -429,6 +438,9 @@ Rooms (Modes)
             Doors:
                 Side Ramp (Blue) -> Lava Jump [i]
 
+        Magma Chamber [n]:
+
+            Rules Unimplemented
 
     Tourian:
 

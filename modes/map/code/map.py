@@ -110,6 +110,7 @@ class Map(Mode):
         self.remove_background()
         self.add_mode_event_handler('cmd_map_position', self.event_set_location)
         self.add_mode_event_handler('cmd_map_complete', self.event_complete_location)
+        self.machine.events.post('map_is_initialized')
 
     def mode_stop(self, **kwargs):
         super().mode_stop(**kwargs)

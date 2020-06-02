@@ -16,7 +16,7 @@
     gi_left_sling_bottom: (color)
     gi_left_sling_top: stop
     gi_strip_1: (color)
-    led_boss_phantoon: (color)
+    led_boss_4: (color)
     led_enter_secret_passage: stop
     led_pop_1: stop
     led_right_outlane: (color)
@@ -31,7 +31,7 @@
     gi_strip_1: stop
     gi_strip_8: (color)
     gi_upgrade_bank: stop
-    led_boss_phantoon: stop
+    led_boss_4: stop
     led_goal_4: (color)
     led_right_outlane: (color)
     led_upgrade_bank_3: (color)
@@ -174,7 +174,7 @@
   lights:
     gi_right_ball_guide: stop
     led_bomb_bank_3: stop
-    led_boss_draygon: (color)
+    led_boss_1: (color)
     led_left_outlane: stop
     led_motherbrain_3: (color)
     led_rollover: stop
@@ -184,8 +184,8 @@
 - time: '+1'
   lights:
     gi_under_side_ramp: stop
-    led_boss_draygon: stop
-    led_boss_ridley: (color)
+    led_boss_1: stop
+    led_boss_3: (color)
     led_drop_1: (color)
     led_enter_left_orbit: (color)
     led_motherbrain_3: stop
@@ -193,7 +193,7 @@
     
 - time: '+1'
   lights:
-    led_boss_ridley: stop
+    led_boss_3: stop
     led_drop_1: stop
     led_enter_left_orbit: stop
     led_goal_3: (color)
@@ -220,7 +220,7 @@
 - time: '+1'
   lights:
     gi_strip_4: (color)
-    led_boss_phantoon: (color)
+    led_boss_4: (color)
     led_enter_scoop: (color)
     led_left_inlane: (color)
     led_upper_playfield_1: (color)
@@ -231,7 +231,7 @@
     gi_strip_1: (color)
     gi_strip_4: stop
     gi_strip_6: (color)
-    led_boss_phantoon: stop
+    led_boss_4: stop
     led_enter_scoop: stop
     led_left_inlane: stop
     led_upper_playfield_1: stop
@@ -257,7 +257,7 @@
   lights:
     gi_back_left: stop
     gi_missile_bank: stop
-    led_boss_draygon: (color)
+    led_boss_1: (color)
     led_upgrade_bank_2: stop
     led_upper_playfield_2: stop
     
@@ -265,7 +265,7 @@
   lights:
     gi_back_center: (color)
     gi_strip_7: (color)
-    led_boss_draygon: stop
+    led_boss_1: stop
     led_enter_right_orbit: (color)
     led_goal_1: (color)
     led_wall_jump: (color)
@@ -287,7 +287,7 @@
     gi_right_sling_top: (color)
     gi_side_bank: stop
     gi_upper_flipper_bottom: (color)
-    led_boss_kraid: (color)
+    led_boss_2: (color)
     led_drop_3: stop
     led_enter_ramp: (color)
     led_enter_secret_passage: stop
@@ -298,7 +298,7 @@
   lights:
     gi_right_sling_top: stop
     gi_upper_flipper_bottom: stop
-    led_boss_kraid: stop
+    led_boss_2: stop
     led_enter_ramp: stop
     led_rollover: (color)
     led_scanner_center: (color)

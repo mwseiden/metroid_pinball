@@ -44,7 +44,7 @@ achievements:
     enable_events: bao_base_achievement_initialize
   bao_reactor_5:
     show_tokens:
-      led: led_boss_phantoon
+      led: led_boss_4
       color: 'FFC000'
     show_when_selected: blink_light
     show_when_completed: led_color
@@ -53,7 +53,7 @@ achievements:
     enable_events: bao_base_achievement_initialize
   bao_reactor_6:
     show_tokens:
-      led: led_boss_ridley
+      led: led_boss_3
       color: 'FFC000'
     show_when_selected: blink_light
     show_when_completed: led_color
@@ -62,7 +62,7 @@ achievements:
     enable_events: bao_base_achievement_initialize
   bao_reactor_7:
     show_tokens:
-      led: led_boss_kraid
+      led: led_boss_2
       color: 'FFC000'
     show_when_selected: blink_light
     show_when_completed: led_color
@@ -71,7 +71,7 @@ achievements:
     enable_events: bao_base_achievement_initialize
   bao_reactor_8:
     show_tokens:
-      led: led_boss_draygon
+      led: led_boss_1
       color: 'FFC000'
     show_when_selected: blink_light
     show_when_completed: led_color

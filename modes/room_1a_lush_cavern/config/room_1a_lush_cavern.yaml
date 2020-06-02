@@ -71,9 +71,10 @@ event_player:
   mode_room_1a_lush_cavern_started:
     cmd_backbox_show:
       show_type: twinkle
-      background_color: "001000"
+      background_color: "000800"
       twinkle_color: "604000"
       twinkle_count: 20
+      steps: 50
     drop_targets_continue:
     cmd_map_position:
       room: '1a'

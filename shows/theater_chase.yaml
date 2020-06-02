@@ -5,18 +5,18 @@
     led_right_outlane: (color)
     led_right_kickback: stop
     led_right_inlane: stop
-    led_boss_phantoon: stop
+    led_boss_4: stop
     led_goal_4: stop
     led_goal_3: stop
-    led_boss_kraid: (color)
+    led_boss_2: (color)
     led_motherbrain_3: stop
     led_motherbrain_2: stop
     led_motherbrain_1: stop
-    led_boss_ridley: stop
+    led_boss_3: stop
     led_goal_2: stop
     led_ball_save: (color)
     led_goal_1: stop
-    led_boss_draygon: stop
+    led_boss_1: stop
     led_left_inlane: stop
     led_left_outlane: stop
     led_left_kickback: stop
@@ -67,7 +67,7 @@
   lights:
     led_right_outlane: stop
     led_right_kickback: (color)
-    led_boss_kraid: stop
+    led_boss_2: stop
     led_motherbrain_3: (color)
     led_ball_save: stop
     led_goal_1: (color)
@@ -93,7 +93,7 @@
     led_motherbrain_3: stop
     led_motherbrain_2: (color)
     led_goal_1: stop
-    led_boss_draygon: (color)
+    led_boss_1: (color)
     led_bomb_bank_2: stop
     led_bomb_bank_1: (color)
     led_scanner_nw: stop
@@ -112,10 +112,10 @@
 - time: '+1'
   lights:
     led_right_inlane: stop
-    led_boss_phantoon: (color)
+    led_boss_4: (color)
     led_motherbrain_2: stop
     led_motherbrain_1: (color)
-    led_boss_draygon: stop
+    led_boss_1: stop
     led_left_inlane: (color)
     led_bomb_bank_1: stop
     led_rollover: (color)
@@ -134,10 +134,10 @@
 
 - time: '+1'
   lights:
-    led_boss_phantoon: stop
+    led_boss_4: stop
     led_goal_4: (color)
     led_motherbrain_1: stop
-    led_boss_ridley: (color)
+    led_boss_3: (color)
     led_left_inlane: stop
     led_left_outlane: (color)
     led_rollover: stop
@@ -159,7 +159,7 @@
   lights:
     led_goal_4: stop
     led_goal_3: (color)
-    led_boss_ridley: stop
+    led_boss_3: stop
     led_goal_2: (color)
     led_left_outlane: stop
     led_left_kickback: (color)

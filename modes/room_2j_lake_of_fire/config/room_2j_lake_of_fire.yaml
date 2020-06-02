@@ -1,7 +1,7 @@
 #config_version=5
 mode:
   start_events: room_2j_lake_of_fire_continue, room_2j_continue, room_2j_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter, room_2k_enter
   priority: 300
 
 shots:
@@ -13,6 +13,15 @@ shots:
     reset_events: room_2j_exit_west_shot_hit
     show_tokens:
       led: led_enter_left_orbit
+      color: door_blue
+  room_2j_exit_east_shot:
+    switch: s_ramp_enter
+    profile: exit_door
+    enable_events: mode_room_2j_lake_of_fire_started
+    disable_events: room_2j_exit_east_shot_hit
+    reset_events: room_2j_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_ramp
       color: door_blue
 
 
@@ -60,6 +69,8 @@ event_player:
       visit: True
   room_2j_exit_west_shot_hit.1: drop_targets_save
   room_2j_exit_west_shot_hit.2: room_2i_enter
+  room_2j_exit_east_shot_hit.1: drop_targets_save
+  room_2j_exit_east_shot_hit.2: room_2k_enter
 
 variable_player:
   mode_room_2j_lake_of_fire_started:

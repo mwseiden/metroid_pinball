@@ -43,7 +43,11 @@ modes:
   - room_2h_crystalline_seabed
   - room_2i_lava_jump
   - room_2j_lake_of_fire
+  - room_2k_larvae_nest
   - room_2m_geothermal_plant
+  - room_2n_magma_chamber
+  - room_2o_strange_ruins
+  - room_2q_ridley
   - select_landing_site
   - side_targets
   - skillshot
@@ -60,4 +64,4 @@ modes:
   - twitch_bits_multiball
   - upper_lanes
   - wall_jump
-
+  - zero_suit_multiball

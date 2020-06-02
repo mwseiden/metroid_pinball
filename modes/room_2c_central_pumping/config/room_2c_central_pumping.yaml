@@ -4,7 +4,7 @@
 
 mode:
   start_events: room_2c_continue, room_2c_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2d_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2d_enter, room_2g_enter
   priority: 300
 
 shots:
@@ -16,6 +16,15 @@ shots:
     reset_events: room_2c_exit_east_shot_hit
     show_tokens:
       led: led_rollover
+      color: door_blue
+  room_2c_exit_south_shot:
+    switch: s_scoop
+    profile: exit_door
+    enable_events: mode_room_2c_central_pumping_started
+    disable_events: room_2c_exit_south_shot_hit
+    reset_events: room_2c_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_scoop
       color: door_blue
 
 slides:
@@ -60,6 +69,8 @@ event_player:
       visit: True
   room_2c_exit_east_shot_hit.1: drop_targets_save
   room_2c_exit_east_shot_hit.2: room_2d_enter
+  room_2c_exit_south_shot_hit.1: drop_targets_save
+  room_2c_exit_south_shot_hit.2: room_2g_enter
 
 variable_player:
   mode_room_2c_central_pumping_started:
