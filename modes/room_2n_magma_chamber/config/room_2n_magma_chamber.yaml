@@ -24,7 +24,7 @@ shots:
     show_tokens:
       led: led_enter_right_orbit
       color: door_blue
-  room_2k_exit_south_shot:
+  room_2n_exit_south_shot:
     switch: s_scoop
     profile: exit_door
     enable_events: mode_room_2n_magma_chamber_started
