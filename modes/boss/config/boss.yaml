@@ -13,7 +13,7 @@ achievements:
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: xxxx_i_dont_work
-    select_events: xxxx_i_dont_work
+    select_events: room_2q_enter
     enable_events: boss_achievement_initialize
     sync_ms: 1000
   boss_draygon:
