@@ -9,7 +9,7 @@ achievements:
   boss_ridley:
     show_tokens:
       led: led_boss_1
-      color: '800000'
+      color: 'C00000'
     show_when_selected: blink_light
     show_when_completed: led_color
     complete_events: xxxx_i_dont_work
