@@ -731,10 +731,20 @@ event_player:
   mode_bao_base_started{current_player.ball == 1}: bao_base_achievement_initialize
   bao_enable_stage_1: bao_stage_1_show, bao_play_current_base_music
   bao_enable_stage_2: scoop_autofire_should_disable, bao_stage_2_show, bao_play_current_base_music
-  bao_enable_stage_3: bao_stage_3_show, bao_play_reactor
-  bao_enable_stage_4: bao_stage_4_show, bao_play_critical
-  bao_play_current_base_music{game.balls_in_play == 1}: bao_play_main
-  bao_play_current_base_music{game.balls_in_play > 1}: bao_play_multiball
+  bao_enable_stage_3:
+    bao_stage_3_show:
+    cmd_play_music:
+      music: bao_reactor
+  bao_enable_stage_4:
+    bao_stage_4_show:
+    cmd_play_music:
+      music: bao_critical
+  bao_play_current_base_music{game.balls_in_play == 1}:
+    cmd_play_music:
+      music: bao_main
+  bao_play_current_base_music{game.balls_in_play > 1}:
+    cmd_play_music:
+      music: bao_multiball
   bao_charge_shot_group_level_3_complete: bao_enable_stage_2
   bao_critical_should_start: bao_enable_stage_3, scoop_autofire_should_enable
   bao_critical_mass: bao_enable_stage_4
@@ -757,11 +767,25 @@ event_player:
   bao_final_shot_8_hit: bao_final_shot_completed
   bao_final_shot_9_hit: bao_final_shot_completed
   bao_final_shot_completed: bao_enable_stage_1
-  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 0}: bao_stage_1_show, bao_play_main
-  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 1}: bao_stage_2_show, bao_play_main
-  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 2}: bao_stage_3_show, bao_play_reactor
-  bao_multiball_ended{device.sequences.bao_progress_sequence.value >= 3}: bao_stage_4_show, bao_play_critical
-  bao_multiball_started: bao_play_multiball
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 0}:
+    bao_stage_1_show:
+    cmd_play_music:
+      music: bao_main
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 1}:
+    bao_stage_2_show:
+    cmd_play_music:
+      music: bao_main
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value == 2}:
+    bao_stage_3_show:
+    cmd_play_music:
+      music: bao_reactor
+  bao_multiball_ended{device.sequences.bao_progress_sequence.value >= 3}:
+    bao_stage_4_show:
+    cmd_play_music:
+      music: bao_critical
+  bao_multiball_started:
+    cmd_play_music:
+      music: bao_multiball
 
 variable_player:
   bao_final_shot_completed:

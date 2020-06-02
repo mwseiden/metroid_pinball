@@ -1,0 +1,6 @@
+#config_version=5
+mode:
+  code: music_player.MusicPlayer
+  start_events: ball_starting
+  stop_events: game_ending, ball_ending
+  priority: 1000
