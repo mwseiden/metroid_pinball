@@ -29,14 +29,14 @@ class MusicPlayer(Mode):
 
         self.machine.sound_player.play(settings, 'music_player', None)
 
-        self.music = new_music
+        self.current_music = new_music
 
     def event_stop_music(self, **kwargs):
         self.stop_music('3s')
 
     def stop_music(self, fade_out):
         settings = {
-          'music_{}'.format(self.music): {
+          'music_{}'.format(self.current_music): {
             'action': 'stop',
             'fade_out': fade_out
           }
