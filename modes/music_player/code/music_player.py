@@ -17,7 +17,7 @@ class MusicPlayer(Mode):
 
         new_music = kwargs.get('music', 'item_room')
 
-        if new_music != self.music:
+        if new_music != self.current_music:
             self.stop_music('1s')
 
         settings = {
