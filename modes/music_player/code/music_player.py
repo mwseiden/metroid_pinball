@@ -15,13 +15,13 @@ class MusicPlayer(Mode):
         if self.machine.get_machine_var('next_game_acapella') != 0:
             return None
 
-        music = kwargs.get('music', 'item_room')
+        new_music = kwargs.get('music', 'item_room')
 
-        if music != self.music:
+        if new_music != self.music:
             self.stop_music('1s')
 
         settings = {
-          'music_{}'.format(music): {
+          'music_{}'.format(new_music): {
             'action': 'play',
             'loops': -1
           }
@@ -29,7 +29,7 @@ class MusicPlayer(Mode):
 
         self.machine.sound_player.play(settings, 'music_player', None)
 
-        self.music = music
+        self.music = new_music
 
     def event_stop_music(self, **kwargs):
         self.stop_music('3s')
