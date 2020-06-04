@@ -41,6 +41,7 @@ sound_player:
   mode_room_2m_geothermal_plant_started{machine.next_game_acapella == 0}: music_norfair_deep_intro
   mode_room_2n_magma_chamber_started{machine.next_game_acapella == 0}: music_norfair_deep
   mode_room_2o_strange_ruins_started{machine.next_game_acapella == 0}: music_norfair_deep_intro
+  mode_room_2p_east_hot_springs{machine.next_game_acapella == 0}: music_norfair_deep
   mode_room_2q_ridley_started{machine.next_game_acapella == 0}: music_boss
 
   room_2a_sink_into_sand:
@@ -133,6 +134,10 @@ sound_player:
       action: stop
       fade_out: 1s
     music_norfair_deep:
+      action: stop
+      fade_out: 1s
+  room_2p_enter:
+    music_norfair_deep_intro:
       action: stop
       fade_out: 1s
   room_2q_enter:
