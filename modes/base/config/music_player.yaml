@@ -37,7 +37,7 @@ sound_player:
   mode_room_2i_lava_jump_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2j_lake_of_fire_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2k_larvae_nest_started{machine.next_game_acapella == 0}: music_norfair_calm
-  mode_room_2l_west_hot_springs{machine.next_game_acapella == 0}: music_norfair_deep
+  mode_room_2l_west_hot_springs_started{machine.next_game_acapella == 0}: music_norfair_deep
   mode_room_2m_geothermal_plant_started{machine.next_game_acapella == 0}: music_norfair_deep_intro
   mode_room_2n_magma_chamber_started{machine.next_game_acapella == 0}: music_norfair_deep
   mode_room_2o_strange_ruins_started{machine.next_game_acapella == 0}: music_norfair_deep_intro
