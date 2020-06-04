@@ -6,7 +6,7 @@ mode:
   priority: 300
 
 shots:
-  room_2op_exit_west_shot:
+  room_2p_exit_west_shot:
     switch: s_ramp_enter
     profile: exit_door
     enable_events: mode_room_2p_east_hot_springs_started
