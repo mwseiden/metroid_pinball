@@ -191,7 +191,7 @@ sound_player:
     music_crateria:
       action: stop
       fade_out: 3s
-    music_crateria_side_entrance:
+    music_brinstar_side_entrance:
       action: stop
       fade_out: 3s
     music_boss:

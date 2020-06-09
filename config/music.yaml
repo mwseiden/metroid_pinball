@@ -10,8 +10,8 @@ sounds:
     loops: -1
     simultaneous_limit: 1
     stealing_method: skip
-  music_crateria_side_entrance:
-    file: music_crateria_side_entrance.wav
+  music_brinstar_side_entrance:
+    file: music_brinstar_side_entrance.wav
     #streaming: True
     track: music
     priority: 50
