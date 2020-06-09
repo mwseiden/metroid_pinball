@@ -51,6 +51,9 @@ player_vars:
   drops_1m:
     value_type: str
     initial_value: 'DDD'
+  drops_1t:
+    value_type: str
+    initial_value: 'DDD'
   drops_1z:
     value_type: str
     initial_value: 'UDU'

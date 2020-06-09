@@ -49,6 +49,10 @@ sound_player:
     music_maridia_intro:
       action: stop
       fade_out: 1s
+  room_1c_enter:
+    music_brinstar_side_entrance:
+      action: stop
+      fade_out: 1s
   room_1d_enter:
     music_wrecked_ship:
       action: stop

@@ -45,6 +45,19 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+    small_theater_chase:
+      key: room_1t_exit_north
+      loops: -1
+      speed: 6
+      priority: 50
+      show_tokens:
+        color: door_blue
+        led_1: led_drop_1
+        led_2: gi_back_right
+        led_3: led_drop_2
+        led_4: gi_back_right
+        led_5: led_drop_3
+        led_6: gi_back_right
   show_mode_status_report:
     room_1t_spiny_corridor_status_report:
       loops: 0
