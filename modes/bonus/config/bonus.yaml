@@ -309,6 +309,10 @@ event_player:
       repeat: 20
 
 sound_player:
+  mode_bonus_started:
+    music_bao_main:
+      action: stop
+      fade_out: 3s
   bonus_sound_start: bonus
   bonus_sound_awarded: bonus_award
   bonus_total: bonus_final
