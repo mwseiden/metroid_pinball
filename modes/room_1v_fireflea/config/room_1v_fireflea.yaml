@@ -15,6 +15,13 @@ shot_profiles:
       loops: -1
       speed: 60
       priority: 10
+  room_1v_fireflea_2:
+    states:
+    - name: lit
+      show: room_1v_miniboss_bank_flea
+      loops: -1
+      speed: 60
+      priority: 10
 
 shots:
   room_1v_exit_north_shot:
@@ -32,6 +39,12 @@ shots:
     enable_events: mode_room_1v_fireflea_started
     reset_events: room_1v_flea_1_shot_hit
     disable_events: room_1v_flea_1_shot_hit
+  room_1v_flea_2_shot:
+    switch: s_purple_1, s_purple_2, s_purple_3
+    profile: room_1v_fireflea_2
+    enable_events: mode_room_1v_fireflea_started
+    reset_events: room_1v_flea_2_shot_hit
+    disable_events: room_1v_flea_2_shot_hit
 
 slides:
   room_1v_fireflea_backglass_slide:
