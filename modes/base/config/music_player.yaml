@@ -14,6 +14,7 @@ sound_player:
   mode_room_1m_generator_started{machine.next_game_acapella == 0}: music_wrecked_ship_generator
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0}: music_brinstar
   mode_room_1t_spiny_corridor_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
+  mode_room_1v_fireflea_started{machine.next_game_acapella == 0}: music_brinstar_calm
   mode_room_1z_underground_desert_started{machine.next_game_acapella == 0}: music_maridia_intro
   mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia_intro
   mode_room_2b_crevasse_started{machine.next_game_acapella == 0}:
@@ -78,6 +79,13 @@ sound_player:
       fade_out: 1s
   room_1t_enter:
     music_crateria:
+      action: stop
+      fade_out: 1s
+    music_brinstar_calm:
+      action: stop
+      fade_out: 1s
+  room_1v_enter:
+    music_brinstar_side_entrance:
       action: stop
       fade_out: 1s
   room_1z_enter:
@@ -195,13 +203,16 @@ sound_player:
     music_crateria:
       action: stop
       fade_out: 3s
-    music_brinstar_side_entrance:
-      action: stop
-      fade_out: 3s
     music_boss:
       action: stop
       fade_out: 3s
     music_brinstar:
+      action: stop
+      fade_out: 3s
+    music_brinstar_calm:
+      action: stop
+      fade_out: 3s
+    music_brinstar_side_entrance:
       action: stop
       fade_out: 3s
     music_norfair:
