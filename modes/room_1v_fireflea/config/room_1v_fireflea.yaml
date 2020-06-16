@@ -7,6 +7,13 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1t_enter
   priority: 300
 
+shot_profiles:
+  room_1v_fireflea_1:
+    states:
+    - name: lit
+      show: room_1v_missile_bank_flea
+      loops: -1
+
 shots:
   room_1v_exit_north_shot:
     switches: s_vuk
@@ -17,6 +24,12 @@ shots:
     show_tokens:
       led: gi_strip_9
       color: door_blue
+  room_1v_flea_1_shot:
+    switch: s_missile_bank_1, s_missile_bank_2, s_missile_bank_3
+    profile: room_1v_fireflea_1
+    enable_events: mode_room_1v_fireflea_started
+    reset_events: room_1v_flea_1_shot_hit
+    disable_events: room_1v_flea_1_shot_hit
 
 slides:
   room_1v_fireflea_backglass_slide:
