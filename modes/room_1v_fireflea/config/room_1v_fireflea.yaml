@@ -14,6 +14,7 @@ shot_profiles:
       show: room_1v_missile_bank_flea
       loops: -1
       speed: 60
+      priority: 10
 
 shots:
   room_1v_exit_north_shot:
