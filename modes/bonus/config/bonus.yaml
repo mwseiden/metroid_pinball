@@ -12,14 +12,16 @@ mode_settings:
       score: 5000 * current_player.power_bombs
     - event: bonus_ramps
       score: 1000 * current_player.ramps
-    - event: bonus_drop_targets
-      score: 1000 * current_player.drops
     - event: bonus_super_missiles
       score: 1000 * current_player.super_missiles
     - event: bonus_capsides
       score: 10000 * current_player.capsides
     - event: bonus_emergency_landing
       score: 100000 * current_player.emergency_landings
+    - event: bonus_rooms_visited
+      score: 10000 * current_player.rooms_visited
+    - event: bonus_drop_targets
+      score: 1000 * current_player.drops
 
 slide_player:
   mode_bonus_started: bonus_start_slide
@@ -29,6 +31,7 @@ slide_player:
   bonus_missiles: bonus_missiles_slide
   bonus_power_bombs: bonus_power_bombs_slide
   bonus_super_missiles: bonus_super_missiles_slide
+  bonus_rooms_visited: bonus_rooms_visited_slide
   bonus_emergency_landing: bonus_emergency_landing_slide
   bonus_drop_targets: bonus_drops_slide
   bonus_total: bonus_total_slide
@@ -87,6 +90,15 @@ slides:
   bonus_super_missiles_slide:
     - type: text
       text: Super Missiles (player|super_missiles)
+      style: dmd_med
+      y: 20
+    - type: text
+      text: (score)
+      style: dmd_med
+      y: 12
+  bonus_rooms_visited_slide:
+    - type: text
+      text: Rooms Visited (player|rooms_visited)
       style: dmd_med
       y: 20
     - type: text
@@ -280,6 +292,7 @@ event_player:
       direction: right
   bonus_capsides: bonus_sound_awarded
   bonus_emergency_landing: bonus_sound_awarded
+  bonus_rooms_visited: bonus_sound_awarded
   bonus_drop_targets:
     bonus_sound_awarded:
     cmd_backbox_show_overlay:

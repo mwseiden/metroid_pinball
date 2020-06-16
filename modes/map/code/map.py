@@ -125,6 +125,7 @@ class Map(Mode):
 
             if current_visits[self.LAYOUT[room_code][1] - 1] == 'N':
                 current_visits[self.LAYOUT[room_code][1] - 1] = 'Y'
+                self.player['rooms_visited'] = self.player['rooms_visited'] + 1
 
             self.player[player_var] = "".join(current_visits)
 
