@@ -237,14 +237,20 @@ show_player:
       speed: 30
       loops: 0
       priority: 2000
-  bonus_drop_targets:
-    bonus_lights_drops:
+  bonus_emergency_landing:
+    bonus_lights_emergency_landing:
       key: bonus_lights
       speed: 50
       loops: 0
       priority: 2000
-  bonus_emergency_landing:
-    bonus_lights_emergency_landing:
+  bonus_rooms_visited:
+    bonus_lights_rooms_visited:
+      key: bonus_lights
+      speed: 50
+      loops: 1
+      priority: 2000
+  bonus_drop_targets:
+    bonus_lights_drops:
       key: bonus_lights
       speed: 50
       loops: 0
