@@ -283,6 +283,10 @@ event_player:
     cmd_map_position:
       room: '1r'
       visit: True
+    cmd_backbox_show:
+      show_type: gradient
+      color_start: "FF00FF"
+      color_end: "000000"
   timer_room_1r_shoot_space_pirates_timer_complete{current_player.room_1r_finished == 0}: room_1r_start_timer
   timer_room_1r_light_shot_timer_tick{ticks == 1}: room_1r_shot_1_activate
   timer_room_1r_light_shot_timer_tick{ticks == 2}: room_1r_shot_2_activate

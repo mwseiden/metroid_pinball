@@ -86,7 +86,9 @@ show_player:
 event_player:
   mode_room_1t_spiny_corridor_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: gradient
+      color_start: "802020"
+      color_end: "208020"
     drop_targets_continue:
     cmd_map_position:
       room: '1t'
