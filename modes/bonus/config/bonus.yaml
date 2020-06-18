@@ -310,6 +310,7 @@ event_player:
       color6: "006000"
       color7: "007000"
       color8: "008000"
+      decay_g: 2.0
       repeat: 4
   bonus_drop_targets:
     bonus_sound_awarded:
