@@ -71,8 +71,8 @@ event_player:
       color6: "006030"
       color7: "007020"
       color8: "008010"
-      decay_g: 1.0
-      decay_b: 1.0
+      decay_g: 2.0
+      decay_b: 1.7
     drop_targets_continue:
     cmd_map_position:
       room: '1s'
