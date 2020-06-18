@@ -13,6 +13,7 @@ sound_player:
   mode_room_1l_entryway_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
   mode_room_1m_generator_started{machine.next_game_acapella == 0}: music_wrecked_ship_generator
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0}: music_brinstar
+  mode_room_1s_blighted_canopy_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
   mode_room_1t_spiny_corridor_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
   mode_room_1v_fireflea_started{machine.next_game_acapella == 0}: music_brinstar_calm
   mode_room_1z_underground_desert_started{machine.next_game_acapella == 0}: music_maridia_intro
@@ -75,6 +76,14 @@ sound_player:
       fade_out: 1s
   room_1m_enter:
     music_wrecked_ship:
+      action: stop
+      fade_out: 1s
+  room_1r_enter:
+    music_brinstar_side_entrance:
+      action: stop
+      fade_out: 1s
+  room_1s_enter:
+    music_brinstar:
       action: stop
       fade_out: 1s
   room_1t_enter:
