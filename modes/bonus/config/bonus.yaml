@@ -298,7 +298,19 @@ event_player:
       direction: right
   bonus_capsides: bonus_sound_awarded
   bonus_emergency_landing: bonus_sound_awarded
-  bonus_rooms_visited: bonus_sound_awarded
+  bonus_rooms_visited:
+    bonus_sound_awarded:
+    cmd_backbox_show_overlay:
+      show_type: plasma
+      color1: "001000"
+      color2: "002000"
+      color3: "003000"
+      color4: "004000"
+      color5: "005000"
+      color6: "006000"
+      color7: "007000"
+      color8: "008000"
+      repeat: 4
   bonus_drop_targets:
     bonus_sound_awarded:
     cmd_backbox_show_overlay:

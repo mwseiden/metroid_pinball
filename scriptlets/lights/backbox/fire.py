@@ -16,4 +16,4 @@ class Fire(Plasma):
     ]
 
     def __init__(self, machine):
-        super().__init__(machine, self.FIRE_COLORS, 1.8, 2.6, 3.2)
+        super().__init__(machine, self.FIRE_COLORS, 1.8, 2.6, 3.2, None)
