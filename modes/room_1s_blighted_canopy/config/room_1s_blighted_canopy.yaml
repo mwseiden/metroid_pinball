@@ -51,7 +51,7 @@ show_player:
       loops: -1
       show_tokens:
         color: '00FF00'
-        color2: '008080'
+        color2: '00FFFF'
   show_mode_status_report:
     room_1s_blighted_canopy_status_report:
       loops: 0
@@ -62,7 +62,17 @@ show_player:
 event_player:
   mode_room_1s_blighted_canopy_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: plasma
+      color1: "001080"
+      color2: "002070"
+      color3: "003060"
+      color4: "004050"
+      color5: "005040"
+      color6: "006030"
+      color7: "007020"
+      color8: "008010"
+      decay_g: 1.0
+      decay_b: 1.0
     drop_targets_continue:
     cmd_map_position:
       room: '1s'
