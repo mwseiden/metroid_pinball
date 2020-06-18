@@ -89,7 +89,7 @@ class BackBoxLights(Scriptlet):
             float(kwargs.get('decay_r', '1.8')),
             float(kwargs.get('decay_g', '2.6')),
             float(kwargs.get('decay_b', '3.2')),
-            int(kwargs.get('repeat', None))
+            int(kwargs.get('repeat', -1))
         )
 
     def show_pour(self, **kwargs):

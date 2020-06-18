@@ -12,7 +12,10 @@ class Plasma(DynamicBackBoxShow):
         self.decay_g = decay_g
         self.decay_b = decay_b
 
-        self.repeat = repeat
+        if repeat == -1:
+            self.repeat = None
+        else:
+            self.repeat = repeat
 
     def animate(self):
         super().animate()
