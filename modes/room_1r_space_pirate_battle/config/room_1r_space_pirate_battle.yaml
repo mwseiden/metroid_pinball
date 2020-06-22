@@ -7,10 +7,10 @@ mode:
 sequences:
    room_1r_battle_sequence:
       events:
-         - shoot_space_pirates_shot_group_lit_hit
-         - shoot_space_pirates_shot_group_lit_hit
-         - shoot_space_pirates_shot_group_lit_hit
-         - shoot_space_pirates_shot_group_lit_hit
+         - room_1r_kill_pirate_duck
+         - room_1r_kill_pirate_duck
+         - room_1r_kill_pirate_duck
+         - room_1r_kill_pirate_duck
       persist_state: True
       disable_on_complete: True
 
@@ -224,6 +224,70 @@ show_player:
         color: '8000C0'
         color2: "8080C0"
 
+widgets:
+  room_1r_space_pirate_duck:
+    - type: image
+      image: room_1r_space_pirate
+
+widget_player:
+  room_1r_show_pirate_1:
+    room_1r_space_pirate_duck:
+      action: add
+      target: window
+      key: room_1r_pirate_1
+      widget_settings:
+        x: 160
+        y: 300
+        z: 1000
+  room_1r_remove_pirate_1:
+    room_1r_space_pirate_duck:
+      action: remove
+      target: window
+      key: room_1r_pirate_1
+  room_1r_show_pirate_2:
+    room_1r_space_pirate_duck:
+      action: add
+      target: window
+      key: room_1r_pirate_2
+      widget_settings:
+        x: 260
+        y: 300
+        z: 1000
+  room_1r_remove_pirate_2:
+    room_1r_space_pirate_duck:
+      action: remove
+      target: window
+      key: room_1r_pirate_2
+  room_1r_show_pirate_3:
+    room_1r_space_pirate_duck:
+      action: add
+      target: window
+      key: room_1r_pirate_3
+      widget_settings:
+        x: 360
+        y: 300
+        z: 1000
+  room_1r_remove_pirate_3:
+    room_1r_space_pirate_duck:
+      action: remove
+      target: window
+      key: room_1r_pirate_3
+  room_1r_show_pirate_4:
+    room_1r_space_pirate_duck:
+      action: add
+      target: window
+      key: room_1r_pirate_4
+      widget_settings:
+        x: 460
+        y: 300
+        z: 1000
+  room_1r_remove_pirate_4:
+    room_1r_space_pirate_duck:
+      action: remove
+      target: window
+      key: room_1r_pirate_4
+
+
 slides:
   room_1r_backglass_slide:
     widgets:
@@ -273,12 +337,16 @@ sounds:
 
 sound_player:
   multiball_room_1r_battle_started: multiball_alt_3
-  shoot_space_pirates_shot_group_lit_hit: room_1r_pirate_defeated
+  room_1r_kill_pirate_duck: room_1r_pirate_defeated
   room_1r_kill_pirates: shoot_the_flashing_targets
 
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 0}: room_1r_start_timer
+  room_1r_start_timer{device.sequences.room_1m_generator_sequence.value == 0}: room_1r_show_pirate_1, room_1r_show_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
+  room_1r_start_timer{device.sequences.room_1m_generator_sequence.value == 1}: room_1r_show_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
+  room_1r_start_timer{device.sequences.room_1m_generator_sequence.value == 2}: room_1r_show_pirate_3, room_1r_show_pirate_4
+  room_1r_start_timer{device.sequences.room_1m_generator_sequence.value == 3}: room_1r_show_pirate_4
   mode_room_1r_space_pirate_battle_started:
     cmd_map_position:
       room: '1r'
@@ -308,7 +376,12 @@ event_player:
   room_1r_kill_pirates: room_1r_disable_shots
   room_1r_super_kill: room_1r_disable_shots
   room_1r_start_shot_9_hit: room_1r_super_kill, logicblock_room_1r_battle_sequence_complete
-  
+  shoot_space_pirates_shot_group_lit_hit: room_1r_kill_pirate_duck
+  shoot_space_pirates_shot_group_lit_hit{device.sequences.room_1m_generator_sequence.value == 0}: room_1r_remove_pirate_1
+  shoot_space_pirates_shot_group_lit_hit{device.sequences.room_1m_generator_sequence.value == 1}: room_1r_remove_pirate_2
+  shoot_space_pirates_shot_group_lit_hit{device.sequences.room_1m_generator_sequence.value == 2}: room_1r_remove_pirate_3
+  shoot_space_pirates_shot_group_lit_hit{device.sequences.room_1m_generator_sequence.value == 3}: room_1r_remove_pirate_4
+
 variable_player:
   mode_room_1r_space_pirate_battle_started:
     has_chosen_landing_site:
@@ -343,5 +416,5 @@ variable_player:
     score: ((current_player.area_bonus_w + 1) * 20000) * current_player.multiplier
   room_1r_start_shot_9_hit:
     score: ((current_player.area_bonus_nw + 1) * 300000) * current_player.multiplier
-  shoot_space_pirates_shot_group_lit_hit:
+  room_1r_kill_pirate_duck:
     score: (33300 * current_player.ball) * current_player.multiplier

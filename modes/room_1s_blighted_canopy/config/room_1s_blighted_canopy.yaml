@@ -1,5 +1,7 @@
 #config_version=5
 
+# https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BB%D0%B5%D1%81%D0%B5%D0%BD%D1%8C_%D0%BD%D0%B0_%D1%82%D1%80%D1%83%D0%BF%D0%B5_%D0%BC%D1%83%D1%85%D0%B8.jpg
+
 mode:
   start_events: room_1s_continue, room_1s_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1r_enter, room_1t_enter
