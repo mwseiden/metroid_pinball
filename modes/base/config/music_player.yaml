@@ -14,6 +14,7 @@ sound_player:
   mode_room_1m_generator_started{machine.next_game_acapella == 0}: music_wrecked_ship_generator
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 0}: music_brinstar
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 1}: music_metal_item_room
+  room_1r_switch_music{machine.next_game_acapella == 0}: music_metal_item_room
   mode_room_1s_blighted_canopy_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
   mode_room_1t_spiny_corridor_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
   mode_room_1v_fireflea_started{machine.next_game_acapella == 0}: music_brinstar_calm
@@ -83,7 +84,6 @@ sound_player:
     music_brinstar:
       action: stop
       fade_out: 1s
-    music_metal_item_room:
   room_1r_enter:
     music_brinstar_side_entrance:
       action: stop
