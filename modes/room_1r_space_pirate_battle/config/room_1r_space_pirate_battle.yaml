@@ -4,7 +4,7 @@
 
 mode:
     start_events: select_landing_site_brinstar_selected, room_1r_continue, room_1r_enter
-    stop_events: game_ending, ball_ending, metroid_base_ended
+    stop_events: game_ending, ball_ending, metroid_base_ended, room_1s_enter, room_1f_enter, room_1u_enter
     priority: 300
 
 sequences:
@@ -53,6 +53,24 @@ shot_groups:
     disable_events: shoot_space_pirates_shot_group_lit_complete, timer_room_1r_shoot_space_pirates_timer_complete, logicblock_room_1r_battle_sequence_complete
 
 shots:
+  room_1r_exit_east_shot:
+    hit_events: right_orbit_hit
+    profile: exit_door
+    enable_events: room_1r_open_exits
+    disable_events: mode_room_1r_space_pirate_battle_started, room_1b_exit_east_shot_hit
+    reset_events: mode_room_1r_space_pirate_battle_started, room_1b_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_right_orbit
+      color: door_blue
+  room_1r_exit_north_shot:
+    hit_events: left_orbit_hit
+    profile: exit_door
+    enable_events: room_1r_open_exits
+    disable_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_north_shot_hit
+    reset_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_north_shot_hit
+    show_tokens:
+      led: led_enter_left_orbit
+      color: door_blue
   room_1r_start_shot_1:
     switch: s_rollover_button
     profile: room_1r_blink
@@ -346,6 +364,7 @@ sound_player:
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 0}: room_1r_start_timer
+  mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 1}: room_1r_open_exits
   room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 0}: room_1r_show_pirate_1, room_1r_show_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
   room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 1}: room_1r_remove_pirate_1, room_1r_show_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
   room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 2}: room_1r_remove_pirate_1, room_1r_remove_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
@@ -391,8 +410,15 @@ event_player:
     room_1r_remove_pirate_3:
     room_1r_remove_pirate_4:
     room_1r_switch_music:
+    room_1r_open_exits:
     cmd_map_complete:
       room: '1r'
+  room_1r_exit_east_shot_hit.1: drop_targets_save
+  room_1r_exit_east_shot_hit.2: room_1s_enter
+  room_1r_exit_north_shot_hit.1: drop_targets_save
+  room_1r_exit_north_shot_hit.2: room_1f_enter
+  room_1r_exit_south_shot_hit.1: drop_targets_save
+  room_1r_exit_south_shot_hit.2: room_1u_enter
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:
