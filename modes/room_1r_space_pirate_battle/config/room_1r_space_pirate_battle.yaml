@@ -347,6 +347,7 @@ event_player:
   room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 1}: room_1r_remove_pirate_1, room_1r_show_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
   room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 2}: room_1r_remove_pirate_1, room_1r_remove_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
   room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 3}: room_1r_remove_pirate_1, room_1r_remove_pirate_2, room_1r_remove_pirate_3, room_1r_show_pirate_4
+  room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value > 3}: room_1r_remove_pirate_1, room_1r_remove_pirate_2, room_1r_remove_pirate_3, room_1r_remove_pirate_4
   mode_room_1r_space_pirate_battle_started:
     cmd_map_position:
       room: '1r'
