@@ -12,8 +12,8 @@ shots:
     hit_events: right_orbit_hit
     profile: exit_door
     enable_events: room_1s_open_doors
-    disable_events: room_1s_exit_east_shot_hit
-    reset_events: room_1s_exit_east_shot_hit
+    disable_events: mode_room_1s_blighted_canopy_started, room_1s_exit_east_shot_hit
+    reset_events: mode_room_1s_blighted_canopy_started, room_1s_exit_east_shot_hit
     show_tokens:
       led: led_enter_right_orbit
       color: door_blue
