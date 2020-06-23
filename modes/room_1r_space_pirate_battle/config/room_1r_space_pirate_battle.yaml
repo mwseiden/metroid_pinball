@@ -1,4 +1,7 @@
 #config_version=5
+
+# https://commons.wikimedia.org/wiki/File:Stanley_Kubrick_The_Exhibition_-_LACMA_-_Dr._Strangelove_-_War_Room_model_(8999727414).jpg
+
 mode:
     start_events: select_landing_site_brinstar_selected, room_1r_continue, room_1r_enter
     stop_events: game_ending, ball_ending, metroid_base_ended
@@ -382,7 +385,14 @@ event_player:
   room_1r_start_shot_9_hit: room_1r_super_kill, logicblock_room_1r_battle_sequence_complete
   shoot_space_pirates_shot_group_lit_hit: room_1r_kill_pirate_duck
   logicblock_room_1r_battle_sequence_hit: room_1r_reset_ducks
-  logicblock_room_1r_battle_sequence_complete: room_1r_remove_pirate_1, room_1r_remove_pirate_2, room_1r_remove_pirate_3, room_1r_remove_pirate_4
+  logicblock_room_1r_battle_sequence_complete:
+    room_1r_remove_pirate_1:
+    room_1r_remove_pirate_2:
+    room_1r_remove_pirate_3:
+    room_1r_remove_pirate_4:
+    room_1r_switch_music:
+    cmd_map_complete:
+      room: '1r'
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:
