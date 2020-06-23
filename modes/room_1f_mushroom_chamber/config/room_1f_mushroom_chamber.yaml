@@ -119,6 +119,9 @@ variable_player:
     continue_room:
       string: 1f
       action: set
+    crateria_landed:
+      int: 1
+      action: set
   room_1f_open_north_door:
     missiles: -1
     door_1a_1f:

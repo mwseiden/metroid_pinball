@@ -143,6 +143,9 @@ variable_player:
     continue_room:
       string: 1c
       action: set
+    crateria_landed:
+      int: 1
+      action: set
   room_1c_bank_1_shot:
     score: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
   room_1c_bank_2_shot:
