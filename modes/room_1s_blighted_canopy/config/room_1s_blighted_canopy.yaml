@@ -76,7 +76,7 @@ event_player:
       decay_g: 2.0
       decay_b: 1.7
     drop_targets_continue:
-    mode_room_1s_blighted_canopy_started: room_1s_open_doors
+    room_1s_open_doors:
     cmd_map_position:
       room: '1s'
       visit: True
