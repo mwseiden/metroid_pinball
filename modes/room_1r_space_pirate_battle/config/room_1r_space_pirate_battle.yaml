@@ -382,6 +382,7 @@ event_player:
   room_1r_start_shot_9_hit: room_1r_super_kill, logicblock_room_1r_battle_sequence_complete
   shoot_space_pirates_shot_group_lit_hit: room_1r_kill_pirate_duck
   logicblock_room_1r_battle_sequence_hit: room_1r_reset_ducks
+  logicblock_room_1r_battle_sequence_complete: room_1r_remove_pirate_1, room_1r_remove_pirate_2, room_1r_remove_pirate_3, room_1r_remove_pirate_4
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:
