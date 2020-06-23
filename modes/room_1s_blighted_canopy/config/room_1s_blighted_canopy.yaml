@@ -11,7 +11,7 @@ shots:
   room_1s_exit_east_shot:
     hit_events: right_orbit_hit
     profile: exit_door
-    enable_events: mode_room_1s_blighted_canopy_started
+    enable_events: room_1s_open_doors
     disable_events: room_1s_exit_east_shot_hit
     reset_events: room_1s_exit_east_shot_hit
     show_tokens:
@@ -20,7 +20,7 @@ shots:
   room_1s_exit_west_shot:
     switch: s_left_passage
     profile: exit_door
-    enable_events: mode_room_1s_blighted_canopy_started
+    enable_events: room_1s_open_doors
     disable_events: room_1s_exit_west_shot_hit
     reset_events: room_1s_exit_west_shot_hit
     show_tokens:
@@ -76,6 +76,7 @@ event_player:
       decay_g: 2.0
       decay_b: 1.7
     drop_targets_continue:
+    mode_room_1s_blighted_canopy_started: room_1s_open_doors
     cmd_map_position:
       room: '1s'
       visit: True
