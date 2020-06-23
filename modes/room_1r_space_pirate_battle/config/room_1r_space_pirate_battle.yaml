@@ -380,7 +380,7 @@ event_player:
   room_1r_super_kill: room_1r_disable_shots
   room_1r_start_shot_9_hit: room_1r_super_kill, logicblock_room_1r_battle_sequence_complete
   shoot_space_pirates_shot_group_lit_hit: room_1r_kill_pirate_duck
-  logicblock_room_1r_battle_sequence_updated: room_1r_reset_ducks
+  logicblock_room_1r_battle_sequence_updated{enabled}: room_1r_reset_ducks
 
 variable_player:
   mode_room_1r_space_pirate_battle_started:
