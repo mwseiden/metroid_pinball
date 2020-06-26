@@ -4,7 +4,7 @@
 
 mode:
   start_events: room_1v_continue, room_1v_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1t_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1t_enter, room_1y_enter
   priority: 300
 
 shot_profiles:
@@ -32,6 +32,15 @@ shots:
     reset_events: room_1v_exit_north_shot_hit
     show_tokens:
       led: gi_strip_9
+      color: door_blue
+  room_1v_exit_south_shot:
+    switch: s_left_passage
+    profile: exit_door
+    enable_events: mode_room_1v_fireflea_started
+    disable_events: room_1v_exit_south_shot_hit
+    reset_events: room_1v_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_secret_passage
       color: door_blue
   room_1v_flea_1_shot:
     switch: s_missile_bank_1, s_missile_bank_2, s_missile_bank_3
@@ -107,6 +116,8 @@ event_player:
       visit: True
   room_1v_exit_north_shot_hit.1: drop_targets_save
   room_1v_exit_north_shot_hit.2: room_1t_enter
+  room_1v_exit_south_shot_hit.1: drop_targets_save
+  room_1v_exit_south_shot_hit.2: room_1y_enter
 
 variable_player:
   mode_room_1v_fireflea_started:
