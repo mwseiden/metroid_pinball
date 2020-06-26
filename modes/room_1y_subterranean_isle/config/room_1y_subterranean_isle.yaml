@@ -1,5 +1,8 @@
 #config_version=5
 
+# Probably NOT ACCEPTABLE
+# https://commons.wikimedia.org/wiki/File:Lanzarote_5_Luc_Viatour.jpg
+
 mode:
   start_events: room_1y_continue, room_1y_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1v_enter, room_2c_enter

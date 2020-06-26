@@ -258,7 +258,7 @@ widget_player:
       key: room_1r_pirate_1
       widget_settings:
         x: 160
-        y: 300
+        y: 450
         z: 1000
   room_1r_remove_pirate_1:
     room_1r_space_pirate_duck:
@@ -271,8 +271,8 @@ widget_player:
       target: window
       key: room_1r_pirate_2
       widget_settings:
-        x: 260
-        y: 300
+        x: 560
+        y: 700
         z: 1000
   room_1r_remove_pirate_2:
     room_1r_space_pirate_duck:
@@ -286,7 +286,7 @@ widget_player:
       key: room_1r_pirate_3
       widget_settings:
         x: 360
-        y: 300
+        y: 450
         z: 1000
   room_1r_remove_pirate_3:
     room_1r_space_pirate_duck:
@@ -299,8 +299,8 @@ widget_player:
       target: window
       key: room_1r_pirate_4
       widget_settings:
-        x: 460
-        y: 300
+        x: 560
+        y: 400
         z: 1000
   room_1r_remove_pirate_4:
     room_1r_space_pirate_duck:
