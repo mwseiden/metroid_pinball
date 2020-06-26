@@ -66,8 +66,8 @@ event_player:
   mode_room_1y_subterranean_isle_started:
     cmd_backbox_show:
       show_type: gradient
-      color_start: "404040"
-      color_end: "101000"
+      color_start: "604060"
+      color_end: "182400"
     drop_targets_continue:
     cmd_map_position:
       room: '1y'
