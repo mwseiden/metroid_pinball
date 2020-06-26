@@ -68,7 +68,7 @@ event_player:
       room: '1y'
       visit: True
   room_1y_exit_north_shot_hit.1: drop_targets_save
-  room_1y_exit_north_shot_hit.2: room_1y_enter
+  room_1y_exit_north_shot_hit.2: room_1v_enter
   room_1y_exit_east_shot_hit.1: drop_targets_save
   room_1y_exit_east_shot_hit.2: room_2c_enter
 
