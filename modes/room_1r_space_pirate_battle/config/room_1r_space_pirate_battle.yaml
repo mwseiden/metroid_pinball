@@ -285,8 +285,8 @@ widget_player:
       target: window
       key: room_1r_pirate_3
       widget_settings:
-        x: 360
-        y: 450
+        x: 260
+        y: 569
         z: 1000
   room_1r_remove_pirate_3:
     room_1r_space_pirate_duck:
@@ -299,8 +299,8 @@ widget_player:
       target: window
       key: room_1r_pirate_4
       widget_settings:
-        x: 560
-        y: 400
+        x: 600
+        y: 490
         z: 1000
   room_1r_remove_pirate_4:
     room_1r_space_pirate_duck:
