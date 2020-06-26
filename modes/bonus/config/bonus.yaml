@@ -296,7 +296,22 @@ event_player:
       speed: 1
       repeat: 1
       direction: right
-  bonus_capsides: bonus_sound_awarded
+  bonus_capsides:
+    bonus_sound_awarded:
+    cmd_backbox_show_overlay:
+      show_type: plasma
+      color1: "800000"
+      color2: "008000"
+      color3: "000080"
+      color4: "808000"
+      color5: "800080"
+      color6: "008080"
+      color7: "808080"
+      color8: "000000"
+      decay_r: 2.0
+      decay_g: 2.0
+      decay_b: 2.0
+      repeat: 4
   bonus_emergency_landing: bonus_sound_awarded
   bonus_rooms_visited:
     bonus_sound_awarded:
