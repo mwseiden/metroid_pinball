@@ -205,10 +205,12 @@ event_player:
   room_2k_exit_south_shot_hit{current_player.room_2k_insects > 9}:
     cmd_map_complete:
       room: '2k'
-  room_2k_exit_west_shot_hit.1: drop_targets_save
-  room_2k_exit_west_shot_hit.2: room_2j_enter
-  room_2k_exit_south_shot_hit.1: drop_targets_save
-  room_2k_exit_south_shot_hit.2: room_2o_enter
+  room_2k_exit_west_shot_hit.1: room_2k_collect_score
+  room_2k_exit_west_shot_hit.2: drop_targets_save
+  room_2k_exit_west_shot_hit.3: room_2j_enter
+  room_2k_exit_south_shot_hit.1: room_2k_collect_score
+  room_2k_exit_south_shot_hit.2: drop_targets_save
+  room_2k_exit_south_shot_hit.3: room_2o_enter
   timer_room_2k_shot_timer_tick{ticks == 1}: room_2k_enable_1
   timer_room_2k_shot_timer_tick{ticks == 2}: room_2k_enable_2
   timer_room_2k_shot_timer_tick{ticks == 3}: room_2k_enable_3
@@ -234,7 +236,5 @@ variable_player:
     room_2k_insects: 1
   room_2k_bank_4_shot_hit:
     room_2k_insects: 5
-  room_2k_exit_west_shot_hit:
-    score: (5000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
-  room_2k_exit_south_shot_hit:
+  room_2k_collect_score:
     score: (5000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier

@@ -84,15 +84,7 @@ show_player:
 event_player:
   mode_room_2q_ridley_started:
     cmd_backbox_show:
-      show_type: plasma
-      color1: "801000"
-      color2: "802000"
-      color3: "803000"
-      color4: "804000"
-      color5: "805020"
-      color6: "806040"
-      color7: "807060"
-      color8: "808080"
+      show_type: fire
     drop_targets_continue:
     cmd_map_position:
       room: '2q'
