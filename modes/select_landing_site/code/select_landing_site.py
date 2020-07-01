@@ -19,6 +19,7 @@ class SelectLandingSite(Carousel):
 
     def _continue_from_last_room(self, **kwargs):
         player = self.machine.game.player
+        player['last_continue_room'] = player['continue_room']
         self.machine.events.post('room_{}_continue'.format(player['continue_room']))
 
     def _show_continue_map(self, **kwargs):
