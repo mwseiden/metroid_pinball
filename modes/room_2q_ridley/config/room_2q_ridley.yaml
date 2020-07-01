@@ -90,8 +90,8 @@ event_player:
       color3: "803000"
       color4: "804000"
       color5: "805020"
-      color7: "806040"
-      color8: "807060"
+      color6: "806040"
+      color7: "807060"
       color8: "808080"
     drop_targets_continue:
     cmd_map_position:

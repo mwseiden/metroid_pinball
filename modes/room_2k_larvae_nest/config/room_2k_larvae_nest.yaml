@@ -222,6 +222,7 @@ variable_player:
     continue_room:
       string: 2k
       action: set
+  mode_room_2k_larvae_nest_started{current_player.last_continue_room != '2k'}:
     room_2k_insects:
       int: 0
       action: set
