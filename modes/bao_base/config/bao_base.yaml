@@ -663,6 +663,13 @@ sounds:
     priority: 50
     volume: 0.7
     max_queue_time: None
+  bao_roy:
+    file: bao_roy.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
   bao_spinner:
     file: bao_spinner.wav
     streaming: False
@@ -704,6 +711,7 @@ sound_pools:
       - bao_hit_12
       - bao_hit_13
       - bao_hit_15
+      - bao_roy
 
 sound_player:
   bao_play_standard: bao_shot_sound_pool
