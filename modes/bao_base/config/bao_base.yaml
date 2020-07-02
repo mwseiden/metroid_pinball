@@ -302,7 +302,7 @@ shot_groups:
     enable_events: bao_enable_stage_1
     disable_events: bao_enable_stage_2
   bao_critical_shot_group:
-    shots: pop_1_shot, pop_2_shot, pop_3_shot
+    shots: pop_1_shot, pop_2_shot, pop_3_shot, upper_right_sling_shot
     reset_events: bao_enable_stage_4
     enable_events: bao_enable_stage_3
     disable_events: bao_enable_stage_4
