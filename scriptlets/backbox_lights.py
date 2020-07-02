@@ -71,7 +71,7 @@ class BackBoxLights(Scriptlet):
         )
 
     def show_fire(self, **kwargs):
-        return Fire(self.machine)
+        return Fire(self.machine, kwargs.get('invert', False))
 
     def show_plasma(self, **kwargs):
         return Plasma(
@@ -89,7 +89,8 @@ class BackBoxLights(Scriptlet):
             float(kwargs.get('decay_r', '1.8')),
             float(kwargs.get('decay_g', '2.6')),
             float(kwargs.get('decay_b', '3.2')),
-            int(kwargs.get('repeat', -1))
+            int(kwargs.get('repeat', -1),
+            kwargs.get('invert', False))
         )
 
     def show_pour(self, **kwargs):

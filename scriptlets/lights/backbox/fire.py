@@ -15,5 +15,5 @@ class Fire(Plasma):
         RGBColor([80, 10, 0])
     ]
 
-    def __init__(self, machine):
-        super().__init__(machine, self.FIRE_COLORS, 1.8, 2.6, 3.2, -1)
+    def __init__(self, machine, invert):
+        super().__init__(machine, self.FIRE_COLORS, 1.8, 2.6, 3.2, -1, invert)

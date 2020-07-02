@@ -85,6 +85,7 @@ event_player:
   mode_room_2q_ridley_started:
     cmd_backbox_show:
       show_type: fire
+      invert: True
     drop_targets_continue:
     cmd_map_position:
       room: '2q'
