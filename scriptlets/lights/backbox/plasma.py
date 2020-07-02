@@ -26,12 +26,14 @@ class Plasma(DynamicBackBoxShow):
             self.repeat = self.repeat - 1
 
         for strip in self.strips:
-            strip.set_color(strip.size - 1, choice(self.colors))
-
             if self.invert:
+                strip.set_color(0, choice(self.colors))
+
                 for light_index in reversed(range(0, strip.size - 1)):
                     strip.set_color(light_index + 1, self._decay_colors(strip.get_color(light_index), strip.get_color(light_index + 1)))
             else:
+                strip.set_color(strip.size - 1, choice(self.colors))
+
                 for light_index in reversed(range(1, strip.size)):
                     strip.set_color(light_index - 1, self._decay_colors(strip.get_color(light_index), strip.get_color(light_index - 1)))
 
