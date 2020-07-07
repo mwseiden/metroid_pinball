@@ -8,7 +8,7 @@ class Spectrum(DynamicBackBoxShow):
     def __init__(self, machine, color1, color2, color3):
         super().__init__(machine)
 
-        self.colors = [color1, color2, color3, color1]
+        self.colors = [color1, color2, color3, color1, color2]
 
         self.primary_color = 0
         self.position = 0
@@ -21,7 +21,8 @@ class Spectrum(DynamicBackBoxShow):
 
         for strip in self.strips:
             for index in range(10):
-                strip.set_color(index, RGBColor.blend(self.colors[self.primary_color], self.colors[self.primary_color + 1], self.position * 0.1))
+                strip.set_color(index, RGBColor.blend(self.colors[self.primary_color], self.colors[self.primary_color + 1], (index + self.position) * 0.1))
+                strip.set_color(index, RGBColor.blend(self.colors[self.primary_color + 1], self.colors[self.primary_color + 2], ((index + self.position + 10) % 10) * 0.1))
 
         self.position += 1
 
