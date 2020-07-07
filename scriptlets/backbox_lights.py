@@ -80,7 +80,7 @@ class BackBoxLights(Scriptlet):
             self.machine,
             RGBColor(kwargs.get('color1', '400000'),
             RGBColor(kwargs.get('color2', '004000'),
-            RGBColor(kwargs.get('color3', '000040')
+            RGBColor(kwargs.get('color3', '000040'))
         )
 
     def show_plasma(self, **kwargs):
