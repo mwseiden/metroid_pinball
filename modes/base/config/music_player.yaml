@@ -91,6 +91,9 @@ sound_player:
     music_brinstar_side_entrance:
       action: stop
       fade_out: 1s
+    music_crateria:
+      action: stop
+      fade_out: 1s
   room_1s_enter:
     music_brinstar:
       action: stop

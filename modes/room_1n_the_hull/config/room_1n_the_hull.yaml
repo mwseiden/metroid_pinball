@@ -1,5 +1,7 @@
 #config_version=5
 
+# https://commons.wikimedia.org/wiki/File:World_War_II_Oil_Storage_Tunnels_in_Darwin,_Northern_Territory,_Australia.jpg
+
 mode:
   start_events: room_1n_continue, room_1n_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1l_enter
@@ -23,15 +25,25 @@ slides:
         image: room_1n_the_hull_backglass
     transition: fade
     transition_out: fade
+  room_1n_the_hull_powered_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1n_the_hull_powered_backglass
+    transition: fade
+    transition_out: fade
   room_1n_the_hull_splash_slide:
     widgets:
       - type: image
         image: room_1n_the_hull_splash
 
 slide_player:
-  mode_room_1n_the_hull_started:
+  mode_room_1n_the_hull_started_no_charge:
     room_1n_the_hull_backglass_slide:
       target: backglass
+  mode_room_1n_the_hull_started_charge:
+    room_1n_the_hull_powered_backglass_slide:
+      target: backglass
+  mode_room_1n_the_hull_started:
     room_1n_the_hull_splash_slide:
       target: dmd
       expire: 1.5s
@@ -58,6 +70,8 @@ event_player:
     cmd_map_position:
       room: '1n'
       visit: True
+  mode_room_1n_the_hull_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1n_the_hull_started_no_charge
+  mode_room_1n_the_hull_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1n_the_hull_started_charge
   room_1n_exit_north_shot_hit.1: drop_targets_save
   room_1n_exit_north_shot_hit.2: room_1l_enter
 
