@@ -29,5 +29,5 @@ class Spectrum(DynamicBackBoxShow):
            self.position = 0
            self.primary_color += 1
 
-           if self.position > 2:
-             self.position = 0
+           if self.primary_color > 2:
+             self.primary_color = 0
