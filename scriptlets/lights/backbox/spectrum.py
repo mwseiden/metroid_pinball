@@ -8,27 +8,26 @@ class Spectrum(DynamicBackBoxShow):
     def __init__(self, machine, color1, color2, color3):
         super().__init__(machine)
 
-        self.colors = [color1, color2, color3, color1, color2]
+        self.colors = self.blend(color1, color2) + self.blend(color3, color3) + self.blend(color3, color1)
 
-        self.primary_color = 0
         self.position = 0
-
-        # for strip_number in range(self.strip_count):
-        #     self.column_positions[strip_number] = randint(0, self.strips[strip_number].size)
 
     def animate(self):
         super().animate()
 
         for strip in self.strips:
             for index in range(10):
-                strip.set_color(index, RGBColor.blend(self.colors[self.primary_color], self.colors[self.primary_color + 1], (index + self.position - 10) * 0.1))
-                strip.set_color(index, RGBColor.blend(self.colors[self.primary_color + 1], self.colors[self.primary_color + 2], (index + self.position) * 0.1))
+                strip.set_color(index, self.colors[(self.position + index + 30) % 30])
 
         self.position += 1
 
-        if self.position == 10:
+        if self.position == 30:
            self.position = 0
-           self.primary_color += 1
 
-           if self.primary_color > 2:
-             self.primary_color = 0
+    def blend(self, c1, c2):
+        colors = []
+
+        for index in range(10):
+            colors.append(RGBColor.blend(c1, c2, 0.1 * index))
+
+        return colors
