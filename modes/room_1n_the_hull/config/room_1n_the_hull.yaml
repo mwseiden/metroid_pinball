@@ -66,6 +66,9 @@ event_player:
   mode_room_1n_the_hull_started:
     cmd_backbox_show:
       show_type: spectrum
+      color1: '400000'
+      color2: '000000'
+      color3: '402000'
     drop_targets_continue:
     cmd_map_position:
       room: '1n'
