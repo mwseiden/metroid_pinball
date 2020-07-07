@@ -21,8 +21,8 @@ class Spectrum(DynamicBackBoxShow):
 
         for strip in self.strips:
             for index in range(10):
-                strip.set_color(index, RGBColor.blend(self.colors[self.primary_color], self.colors[self.primary_color + 1], (index + self.position) * 0.1))
-                strip.set_color(index, RGBColor.blend(self.colors[self.primary_color + 1], self.colors[self.primary_color + 2], ((index + self.position + 10) % 10) * 0.1))
+                strip.set_color(index, RGBColor.blend(self.colors[self.primary_color], self.colors[self.primary_color + 1], (index + self.position - 10) * 0.1))
+                strip.set_color(index, RGBColor.blend(self.colors[self.primary_color + 1], self.colors[self.primary_color + 2], (index + self.position) * 0.1))
 
         self.position += 1
 
