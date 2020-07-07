@@ -13,6 +13,7 @@ from .lights.backbox.sparkle import Sparkle
 from .lights.backbox.heat_up import HeatUp
 from .lights.backbox.gradient import Gradient
 from .lights.backbox.plasma import Plasma
+from .lights.backbox.spectrum import Spectrum
 
 class BackBoxLights(Scriptlet):
 
@@ -33,6 +34,7 @@ class BackBoxLights(Scriptlet):
             'heat_up': self.show_heat_up,
             'gradient': self.show_gradient,
             'plasma': self.show_plasma,
+            'spectrum': self.show_spectrum,
         }
 
         self.set_effects_to_default()
@@ -72,6 +74,14 @@ class BackBoxLights(Scriptlet):
 
     def show_fire(self, **kwargs):
         return Fire(self.machine, kwargs.get('invert', False))
+
+    def show_spectrum(self, **kwargs):
+        return Spectrum(
+            self.machine,
+            RGBColor(kwargs.get('color1', '400000'),
+            RGBColor(kwargs.get('color2', '004000'),
+            RGBColor(kwargs.get('color3', '000040')
+        )
 
     def show_plasma(self, **kwargs):
         return Plasma(
