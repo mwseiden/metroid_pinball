@@ -8,7 +8,7 @@ class Spectrum(DynamicBackBoxShow):
     def __init__(self, machine, color1, color2, color3):
         super().__init__(machine)
 
-        self.colors = self.blend(color1, color2) + self.blend(color3, color3) + self.blend(color3, color1)
+        self.colors = self.blend(color1, color2) + self.blend(color2, color3) + self.blend(color3, color1)
 
         self.position = 0
 
