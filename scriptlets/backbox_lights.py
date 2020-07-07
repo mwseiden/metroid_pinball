@@ -78,8 +78,8 @@ class BackBoxLights(Scriptlet):
     def show_spectrum(self, **kwargs):
         return Spectrum(
             self.machine,
-            RGBColor(kwargs.get('color1', '400000'),
-            RGBColor(kwargs.get('color2', '004000'),
+            RGBColor(kwargs.get('color1', '400000')),
+            RGBColor(kwargs.get('color2', '004000')),
             RGBColor(kwargs.get('color3', '000040'))
         )
 
