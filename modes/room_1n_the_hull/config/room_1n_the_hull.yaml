@@ -4,7 +4,7 @@
 
 mode:
   start_events: room_1n_continue, room_1n_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1l_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1l_enter, room_1p_enter
   priority: 300
 
 shots:
@@ -17,7 +17,15 @@ shots:
     show_tokens:
       led: led_enter_ramp
       color: door_blue
-
+  room_1n_exit_south_shot:
+    switch: s_scoop
+    profile: exit_door
+    enable_events: mode_room_1n_the_hull_started
+    disable_events: room_1n_exit_south_shot_hit
+    reset_events: room_1n_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_scoop
+      color: door_blue
 slides:
   room_1n_the_hull_backglass_slide:
     widgets:
@@ -77,6 +85,8 @@ event_player:
   mode_room_1n_the_hull_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1n_the_hull_started_charge
   room_1n_exit_north_shot_hit.1: drop_targets_save
   room_1n_exit_north_shot_hit.2: room_1l_enter
+  room_1n_exit_south_shot_hit.1: drop_targets_save
+  room_1n_exit_south_shot_hit.2: room_1p_enter
 
 variable_player:
   mode_room_1n_the_hull_started:
