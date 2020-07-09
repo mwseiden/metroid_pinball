@@ -1,5 +1,7 @@
 #config_version=5
 
+# https://commons.wikimedia.org/wiki/File:Cargo_bay_A300-600ST_Beluga.jpg
+
 mode:
   start_events: room_1p_continue, room_1p_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1n_enter, room_1q_enter
@@ -32,15 +34,25 @@ slides:
         image: room_1p_cargo_bay_backglass
     transition: fade
     transition_out: fade
+  room_1p_cargo_bay_backglass_unpowered_slide:
+    widgets:
+      - type: image
+        image: room_1p_cargo_bay_backglass_unpowered
+    transition: fade
+    transition_out: fade
   room_1p_cargo_bay_splash_slide:
     widgets:
       - type: image
         image: room_1p_cargo_bay_splash
 
 slide_player:
-  mode_room_1p_cargo_bay_started:
+  mode_room_1p_cargo_bay_started_no_charge:
+    room_1p_cargo_bay_backglass_unpowered_slide:
+      target: backglass
+  mode_room_1p_cargo_bay_started_charge:
     room_1p_cargo_bay_backglass_slide:
       target: backglass
+  mode_room_1p_cargo_bay_started:
     room_1p_cargo_bay_splash_slide:
       target: dmd
       expire: 1.5s
@@ -67,6 +79,8 @@ event_player:
     cmd_map_position:
       room: '1p'
       visit: True
+  mode_room_1p_cargo_bay_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1p_cargo_bay_started_no_charge
+  mode_room_1p_cargo_bay_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1p_cargo_bay_started_charge
   room_1p_exit_north_shot_hit.1: drop_targets_save
   room_1p_exit_north_shot_hit.2: room_1n_enter
   room_1p_exit_east_shot_hit.1: drop_targets_save
