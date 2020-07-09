@@ -18,6 +18,8 @@ sound_player:
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 1}: music_metal_item_room
   mode_room_1p_cargo_bay_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
   mode_room_1p_cargo_bay_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
+  mode_room_1q_impact_zone_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
+  mode_room_1q_impact_zone_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
   room_1r_switch_music{machine.next_game_acapella == 0}: music_metal_item_room
   mode_room_1s_blighted_canopy_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
   mode_room_1t_spiny_corridor_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
@@ -85,6 +87,10 @@ sound_player:
     music_wrecked_ship:
       action: stop
       fade_out: 1s
+  room_1q_enter:
+    music_maridia_intro:
+      action: stop
+      fade_out: 1s
   room_1r_switch_music:
     music_brinstar:
       action: stop
@@ -127,6 +133,12 @@ sound_player:
       fade_out: 1s
   room_2a_enter:
     music_maridia_snow:
+      action: stop
+      fade_out: 1s
+    music_wrecked_ship:
+      action: stop
+      fade_out: 1s
+    music_wrecked_ship_generator:
       action: stop
       fade_out: 1s
   room_2b_enter:

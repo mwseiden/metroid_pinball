@@ -31,8 +31,8 @@ class Map(Mode):
       '1m': ['w', 6, 0, 2, 2, 0, None, 0, None, 0, None, 0, None],
       '1n': ['w', 7, 0, 1, 3, 0, None, 0, None, 0, None, 1, None],
       '1o': ['w', 8, 0, 0, 4, 0, None, 1, None, 0, None, 0, None],
-      '1p': ['w', 9, 0, 1, 4, 0, None, 1, None, 0, None, 4, None],
-      '1q': ['w', 10, 0, 2, 4, 0, None, 0, None, 0, None, 0, None],
+      '1p': ['w', 9, 0, 1, 4, 0, None, 1, None, 0, None, 0, None],
+      '1q': ['w', 10, 0, 2, 4, 0, None, 0, None, 0, None, 4, None],
 
       '1r': ['b', 1, 0, 1, 0, 4, None, 1, None, 0, None, 1, None],
       '1s': ['b', 2, 0, 2, 0, 0, None, 1, None, 0, None, 0, None],
