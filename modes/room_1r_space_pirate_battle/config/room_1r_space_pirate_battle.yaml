@@ -260,7 +260,7 @@ widget_player:
         x: 160
         y: 450
         z: 1000
-        fps: 3
+        fps: 1
   room_1r_remove_pirate_1:
     room_1r_space_pirate_duck:
       action: remove
@@ -275,7 +275,7 @@ widget_player:
         x: 560
         y: 700
         z: 1000
-        fps: 5
+        fps: 2
   room_1r_remove_pirate_2:
     room_1r_space_pirate_duck:
       action: remove
@@ -290,7 +290,7 @@ widget_player:
         x: 200
         y: 769
         z: 1000
-        fps: 7
+        fps: 3
   room_1r_remove_pirate_3:
     room_1r_space_pirate_duck:
       action: remove
