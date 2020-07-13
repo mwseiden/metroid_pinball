@@ -260,6 +260,7 @@ widget_player:
         x: 160
         y: 450
         z: 1000
+        fps: 3
   room_1r_remove_pirate_1:
     room_1r_space_pirate_duck:
       action: remove
@@ -274,6 +275,7 @@ widget_player:
         x: 560
         y: 700
         z: 1000
+        fps: 5
   room_1r_remove_pirate_2:
     room_1r_space_pirate_duck:
       action: remove
@@ -285,9 +287,10 @@ widget_player:
       target: window
       key: room_1r_pirate_3
       widget_settings:
-        x: 260
+        x: 200
         y: 569
         z: 1000
+        fps: 7
   room_1r_remove_pirate_3:
     room_1r_space_pirate_duck:
       action: remove
@@ -300,8 +303,9 @@ widget_player:
       key: room_1r_pirate_4
       widget_settings:
         x: 600
-        y: 490
+        y: 382
         z: 1000
+        fps: 4
   room_1r_remove_pirate_4:
     room_1r_space_pirate_duck:
       action: remove
