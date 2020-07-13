@@ -288,7 +288,7 @@ widget_player:
       key: room_1r_pirate_3
       widget_settings:
         x: 200
-        y: 569
+        y: 769
         z: 1000
         fps: 7
   room_1r_remove_pirate_3:
