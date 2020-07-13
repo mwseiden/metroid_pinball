@@ -1,0 +1,12 @@
+#show_version=5
+
+- duration: 8s
+  slides:
+    macho_flipper_slide:
+      target: backglass
+      widgets:
+      - type: image
+        image: backglass_macho
+      transition:
+         type: fade
+         duration: 1s

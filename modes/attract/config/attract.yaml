@@ -59,6 +59,10 @@ show_player:
       priority: 200
       loops: 0
       speed: 30
+  flipper_code_macho:
+    flipper_code_macho:
+      priority: 200
+      loops: 0
   flipper_code_no_music:
     flipper_code_no_music:
       priority: 200
