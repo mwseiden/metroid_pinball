@@ -75,7 +75,7 @@ event_player:
     cmd_backbox_show:
       show_type: spectrum
       color1: '000000'
-      color2: '402000'
+      color2: '501800'
       color3: '000000'
     drop_targets_continue:
     cmd_map_position:
