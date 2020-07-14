@@ -1,5 +1,7 @@
 #config_version=5
 
+# https://commons.wikimedia.org/wiki/File:HN002Teguci_MtchSclptr.jpg
+
 mode:
   start_events: room_1q_continue, room_1q_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1p_enter, room_2a_enter
@@ -32,14 +34,23 @@ slides:
         image: room_1q_impact_zone_backglass
     transition: fade
     transition_out: fade
+  room_1q_impact_zone_backglass_powered_slide:
+    widgets:
+      - type: image
+        image: room_1q_impact_zone_backglass_powered
+    transition: fade
+    transition_out: fade
   room_1q_impact_zone_splash_slide:
     widgets:
       - type: image
         image: room_1q_impact_zone_splash
 
 slide_player:
-  mode_room_1q_impact_zone_started:
+  mode_room_1q_impact_zone_started_no_charge:
     room_1q_impact_zone_backglass_slide:
+      target: backglass
+  mode_room_1q_impact_zone_started_charge:
+    room_1q_impact_zone_backglass_powered_slide:
       target: backglass
     room_1q_impact_zone_splash_slide:
       target: dmd
@@ -64,12 +75,14 @@ event_player:
     cmd_backbox_show:
       show_type: spectrum
       color1: '000000'
-      color2: '400090'
+      color2: '402000'
       color3: '000000'
     drop_targets_continue:
     cmd_map_position:
       room: '1q'
       visit: True
+  mode_room_1q_impact_zone_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1q_impact_zone_started_no_charge
+  mode_room_1q_impact_zone_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1q_impact_zone_started_charge
   room_1q_exit_south_shot_hit.1: drop_targets_save
   room_1q_exit_south_shot_hit.2: room_2a_enter
   room_1q_exit_west_shot_hit.1: drop_targets_save
