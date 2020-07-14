@@ -48,7 +48,7 @@ show_player:
     bridge_explode:
       priority: 1000
       speed: 1.5
-      loops: 1
+      loops: 0
       show_tokens:
         led_1: gi_bomb_bank
         led_2: gi_upper_flipper_bottom
@@ -66,7 +66,7 @@ show_player:
       priority: 1000
   ball_hold_bridge_skillshot_held_ball:
     bridge_skillshot_earned:
-      loops: -1
+      loops: 0
   s_shooter_lane_inactive:
     bridge_skillshot_earned:
       action: stop
