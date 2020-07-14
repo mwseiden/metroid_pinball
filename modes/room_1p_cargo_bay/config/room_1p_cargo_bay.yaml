@@ -73,12 +73,22 @@ show_player:
 
 event_player:
   mode_room_1p_cargo_bay_started:
-    cmd_backbox_show:
-      show_type: fire
     drop_targets_continue:
     cmd_map_position:
       room: '1p'
       visit: True
+  mode_room_1p_cargo_bay_started_charge:
+    cmd_backbox_show:
+      show_type: gradient
+      color_start: '808000'
+      color_end: '808080'
+  mode_room_1p_cargo_bay_started_no_charge:
+    cmd_backbox_show:
+      show_type: two_tone
+      min_cutoff: 7
+      max_cutoff: 12
+      color1: '200800'
+      color2: '000004'
   mode_room_1p_cargo_bay_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1p_cargo_bay_started_no_charge
   mode_room_1p_cargo_bay_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1p_cargo_bay_started_charge
   room_1p_exit_north_shot_hit.1: drop_targets_save
