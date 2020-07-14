@@ -87,8 +87,8 @@ event_player:
       show_type: two_tone
       min_cutoff: 7
       max_cutoff: 12
-      color1: '200800'
-      color2: '000004'
+      color1: '000004'
+      color2: '200800'
   mode_room_1p_cargo_bay_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1p_cargo_bay_started_no_charge
   mode_room_1p_cargo_bay_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1p_cargo_bay_started_charge
   room_1p_exit_north_shot_hit.1: drop_targets_save
