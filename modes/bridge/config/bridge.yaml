@@ -164,7 +164,9 @@ sound_player:
 
 event_player:
   bridge_rail_shot_hit{current_player.power_bombs > 0}: bridge_should_explode
-  ball_hold_bridge_skillshot_held_ball: skillshot_should_start
+  bridge_should_explode: drop_targets_save
+  ball_hold_bridge_skillshot_held_ball.1: cmd_drop_all_drops
+  ball_hold_bridge_skillshot_held_ball.2: skillshot_should_start
   timer_bridge_disable_coil_timer_started{device.multiballs.chozo.balls_added_live == 0 and device.multiballs.room_1r_battle.balls_added_live == 0 and device.multiballs.twitch_bit_donation_multiball.balls_added_live == 0}: bridge_enable_skillshot
 
 variable_player:
