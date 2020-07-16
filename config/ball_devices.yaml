@@ -14,7 +14,7 @@ ball_devices:
         eject_coil: c_ball_launch
         mechanical_eject: true
         eject_timeouts: 3s
-        eject_all_events: tilt
+        eject_all_events: tilt, ball_hold_bridge_skillshot_balls_released
     bd_scoop:
         ball_switches: s_scoop
         eject_coil: c_scoop
