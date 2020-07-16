@@ -263,6 +263,9 @@ event_player:
   room_2a_exit_north_shot_hit.1: drop_targets_save
   room_2a_exit_north_shot_hit.2: room_1q_enter
   mode_room_2a_shifting_sands_ending: drop_targets_save
+  timer_room_2a_do_not_sink_tick{current_player.room_2a_seconds_survived > 29}:
+    cmd_map_complete:
+      room: '2a'
 
 variable_player:
   mode_room_2a_shifting_sands_started:
@@ -285,5 +288,6 @@ variable_player:
     score: (15000 + (current_player.area_bonus_nw * 15000)) * current_player.multiplier
   timer_room_2a_do_not_sink_tick:
     room_2a_alive_score: 250
+    room_2a_seconds_survived: 1
     score: current_player.room_2a_alive_score * current_player.multiplier
 
