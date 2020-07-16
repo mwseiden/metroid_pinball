@@ -17,7 +17,6 @@ ball_devices:
         eject_all_events: tilt
         confirm_eject_type: event
         confirm_eject_event: s_shooter_lane_inactive
-        request_ball_events: skillshot_should_start
     bd_scoop:
         ball_switches: s_scoop
         eject_coil: c_scoop

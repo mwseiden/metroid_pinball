@@ -1,5 +1,6 @@
 #config_version=5
 mode:
+  # code: bridge.Bridge
   start_events: metroid_base_started
   stop_events: metroid_base_ended
   priority: 200
@@ -8,13 +9,13 @@ shots:
   bridge_rail_shot:
     switch: s_top_lane_2
 
-# ball_holds:
-#   bridge_skillshot:
-#      balls_to_hold: 1
-#      hold_devices: bd_plunger
-#      reset_events: mode_bridge_starting, whole_playfield_shot_group_hit, bridge_enable_skillshot
-#      disable_events: mode_bridge_starting, whole_playfield_shot_group_hit, bridge_disable_ball_hold
-#      enable_events: bridge_enable_skillshot
+ball_holds:
+  bridge_skillshot:
+     balls_to_hold: 1
+     hold_devices: bd_plunger
+     reset_events: mode_bridge_started, whole_playfield_shot_group_hit, s_shooter_lane_inactive
+     disable_events: mode_bridge_started, whole_playfield_shot_group_hit, s_shooter_lane_inactive
+     enable_events: bridge_enable_skillshot
 
 timers:
   bridge_enable_coil_timer:
@@ -167,12 +168,13 @@ sound_player:
   bridge_should_explode: bridge_destroyed
 
 event_player:
+  mode_bridge_started: bridge_enable_autofire
   bridge_rail_shot_hit{current_player.power_bombs > 0}: bridge_should_explode
   bridge_should_explode: drop_targets_save
-  # ball_hold_bridge_skillshot_held_ball.1: cmd_drop_all_drops
-  # ball_hold_bridge_skillshot_held_ball.2: skillshot_should_start
-  bridge_enable_skillshot.1: cmd_drop_all_drops
-  bridge_enable_skillshot.2: skillshot_should_start
+  ball_hold_bridge_skillshot_held_ball.1: cmd_drop_all_drops
+  ball_hold_bridge_skillshot_held_ball.2: skillshot_should_start
+  # bridge_enable_skillshot.1: cmd_drop_all_drops, bridge_disable_autofire
+  # bridge_enable_skillshot.2: skillshot_should_start
   timer_bridge_disable_coil_timer_started{device.multiballs.chozo.balls_added_live == 0 and device.multiballs.room_1r_battle.balls_added_live == 0 and device.multiballs.twitch_bit_donation_multiball.balls_added_live == 0}: bridge_enable_skillshot
 
 variable_player:
