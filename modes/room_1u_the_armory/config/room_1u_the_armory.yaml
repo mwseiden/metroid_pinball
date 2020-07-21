@@ -1,5 +1,8 @@
 #config_version=5
 
+# https://commons.wikimedia.org/wiki/File:Laser_module.jpg
+# https://commons.wikimedia.org/wiki/File:Duluth_Armory_6.jpg
+
 mode:
   start_events: room_1u_continue, room_1u_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1r_enter, room_1w_enter

@@ -1,5 +1,7 @@
 #config_version=5
 
+# https://commons.wikimedia.org/wiki/File:Biosphere_2_-_1998_b.jpg
+
 mode:
   start_events: room_1w_continue, room_1w_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1u_enter, room_1x_enter
