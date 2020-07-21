@@ -15,6 +15,15 @@ shots:
     show_tokens:
       led: led_enter_ramp
       color: door_blue
+  room_1u_exit_south_shot:
+    switch: s_left_passage
+    profile: exit_door
+    enable_events: mode_room_1u_the_armory_started
+    disable_events: room_1u_exit_south_shot_hit
+    reset_events: room_1u_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_secret_passage
+      color: door_blue
 
 slides:
   room_1u_the_armory_backglass_slide:
@@ -60,6 +69,8 @@ event_player:
       visit: True
   room_1u_exit_north_shot_hit.1: drop_targets_save
   room_1u_exit_north_shot_hit.2: room_1r_enter
+  room_1u_exit_south_shot_hit.1: drop_targets_save
+  room_1u_exit_south_shot_hit.2: room_1w_enter
 
 variable_player:
   mode_room_1u_the_armory_started:

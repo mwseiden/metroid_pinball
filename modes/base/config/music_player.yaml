@@ -25,6 +25,7 @@ sound_player:
   mode_room_1t_spiny_corridor_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
   mode_room_1u_the_armory_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
   mode_room_1v_fireflea_started{machine.next_game_acapella == 0}: music_brinstar_calm
+  mode_room_1w_biosphere{machine.next_game_acapella == 0}: music_brinstar_calm
   mode_room_1y_subterranean_isle_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
   mode_room_1z_underground_desert_started{machine.next_game_acapella == 0}: music_maridia_intro
   mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia_intro
@@ -121,7 +122,14 @@ sound_player:
     music_metal_item_room:
       action: stop
       fade_out: 1s
+    music_brinstar_calm:
+      action: stop
+      fade_out: 1s
   room_1v_enter:
+    music_brinstar_side_entrance:
+      action: stop
+      fade_out: 1s
+  room_1w_enter:
     music_brinstar_side_entrance:
       action: stop
       fade_out: 1s
