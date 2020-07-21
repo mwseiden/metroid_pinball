@@ -1,0 +1,750 @@
+#show_version=5
+- time: 0
+  lights:
+    gi_left_ball_guide: '140000'
+    gi_right_ball_guide: '160000'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: '3A0000'
+    gi_right_ball_guide: '3C0000'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: '660000'
+    gi_right_ball_guide: '680000'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: '950000'
+    gi_right_ball_guide: '980000'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: 'C30000'
+    gi_right_ball_guide: 'C50000'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: 'EE0000'
+    gi_right_ball_guide: 'EF0000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_bottom: '0F0000'
+    gi_right_sling_bottom: '100000'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: 'CB0000'
+    gi_left_sling_bottom: '320000'
+    gi_right_ball_guide: 'CD0000'
+    gi_right_sling_bottom: '330000'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: '9F0000'
+    gi_left_sling_bottom: '5D0000'
+    gi_right_ball_guide: 'A10000'
+    gi_right_sling_bottom: '5F0000'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: '6F0000'
+    gi_left_sling_bottom: '8C0000'
+    gi_right_ball_guide: '720000'
+    gi_right_sling_bottom: '8E0000'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: '3A0000'
+    gi_left_sling_bottom: 'C30000'
+    gi_left_sling_top: '140000'
+    gi_right_ball_guide: '3C0000'
+    gi_right_sling_bottom: 'C50000'
+    gi_right_sling_top: '1C0000'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: '140000'
+    gi_left_sling_bottom: 'E80000'
+    gi_left_sling_top: '3A0000'
+    gi_right_ball_guide: '160000'
+    gi_right_sling_bottom: 'E90000'
+    gi_right_sling_top: '440000'
+    
+- time: '+1'
+  lights:
+    gi_left_ball_guide: '000000'
+    gi_left_sling_bottom: 'F30000'
+    gi_left_sling_top: '660000'
+    gi_right_ball_guide: '000000'
+    gi_right_sling_bottom: 'F50000'
+    gi_right_sling_top: '720000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_bottom: 'D30000'
+    gi_left_sling_top: '960000'
+    gi_right_sling_bottom: 'D40000'
+    gi_right_sling_top: 'A10000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_bottom: 'A80000'
+    gi_left_sling_top: 'C30000'
+    gi_right_sling_bottom: 'AA0000'
+    gi_right_sling_top: 'CD0000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_bottom: '700000'
+    gi_left_sling_top: 'EE0000'
+    gi_right_sling_bottom: '720000'
+    gi_right_sling_top: 'F50000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_bottom: '420000'
+    gi_right_sling_bottom: '440000'
+    gi_right_sling_top: 'E90000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_bottom: '1B0000'
+    gi_left_sling_top: 'CB0000'
+    gi_right_sling_bottom: '1C0000'
+    gi_right_sling_top: 'C50000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_bottom: '000000'
+    gi_left_sling_top: '9F0000'
+    gi_right_sling_bottom: '000000'
+    gi_right_sling_top: '980000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_top: '700000'
+    gi_right_sling_top: '680000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_top: '3A0000'
+    gi_right_sling_top: '340000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_top: '140000'
+    gi_right_sling_top: '100000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_top: '000000'
+    gi_right_sling_top: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: '140000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: '390000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: '660000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: '950000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: 'C20000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: 'EE0000'
+    gi_bomb_bank: '0B0000'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '2C0000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: 'CB0000'
+    gi_bomb_bank: '570000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: '9E0000'
+    gi_bomb_bank: '860000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: '6F0000'
+    gi_bomb_bank: 'B40000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: '390000'
+    gi_bomb_bank: 'E30000'
+    gi_missile_bank: '1B0000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: '140000'
+    gi_bomb_bank: 'FA0000'
+    gi_missile_bank: '420000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: '000000'
+    gi_bomb_bank: 'DC0000'
+    gi_missile_bank: '700000'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: 'B40000'
+    gi_missile_bank: '9F0000'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '860000'
+    gi_middle_sling: '1B0000'
+    gi_missile_bank: 'CB0000'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '4E0000'
+    gi_middle_sling: '4B0000'
+    gi_missile_bank: 'F30000'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '250000'
+    gi_middle_sling: '790000'
+    gi_missile_bank: 'E80000'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '050000'
+    gi_middle_sling: 'A80000'
+    gi_missile_bank: 'C30000'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '000000'
+    gi_middle_sling: 'D20000'
+    gi_missile_bank: '960000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'F30000'
+    gi_missile_bank: '660000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'E80000'
+    gi_missile_bank: '3A0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'BA0000'
+    gi_missile_bank: '0F0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '8C0000'
+    gi_missile_bank: '000000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '5D0000'
+    gi_upper_flipper_bottom: '1D0000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '320000'
+    gi_upper_flipper_bottom: '450000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '0D0000'
+    gi_upper_flipper_bottom: '730000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '000000'
+    gi_upper_flipper_bottom: 'AB0000'
+    
+- time: '+1'
+  lights:
+    gi_upper_flipper_bottom: 'D50000'
+    
+- time: '+1'
+  lights:
+    gi_upper_flipper_bottom: 'F50000'
+    
+- time: '+1'
+  lights:
+    gi_upper_flipper_bottom: 'EA0000'
+    
+- time: '+1'
+  lights:
+    gi_upper_flipper_bottom: 'C60000'
+    
+- time: '+1'
+  lights:
+    gi_upper_flipper_bottom: '8F0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: '040000'
+    gi_upper_flipper_bottom: '600000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: '220000'
+    gi_upper_flipper_bottom: '340000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: '4A0000'
+    gi_upper_flipper_bottom: '100000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: '790000'
+    gi_upper_flipper_bottom: '000000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'B10000'
+    gi_upgrade_bank: '1B0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'D90000'
+    gi_upgrade_bank: '430000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'F90000'
+    gi_upgrade_bank: '710000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'E00000'
+    gi_upgrade_bank: 'A00000'
+    gi_upper_flipper_top: '100000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'BA0000'
+    gi_upgrade_bank: 'CC0000'
+    gi_upper_flipper_top: '330000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: '8C0000'
+    gi_upgrade_bank: 'EF0000'
+    gi_upper_flipper_top: '600000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: '530000'
+    gi_under_side_ramp: '050000'
+    gi_upgrade_bank: 'E90000'
+    gi_upper_flipper_top: '990000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: '290000'
+    gi_under_side_ramp: '230000'
+    gi_upgrade_bank: 'C40000'
+    gi_upper_flipper_top: 'C60000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: '090000'
+    gi_under_side_ramp: '4C0000'
+    gi_upgrade_bank: '970000'
+    gi_upper_flipper_top: 'EA0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: '000000'
+    gi_under_side_ramp: '7B0000'
+    gi_upgrade_bank: '670000'
+    gi_upper_flipper_top: 'F50000'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: 'AA0000'
+    gi_upgrade_bank: '3B0000'
+    gi_upper_flipper_top: 'D50000'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: 'DB0000'
+    gi_upgrade_bank: '0F0000'
+    gi_upper_flipper_top: 'A20000'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: 'F90000'
+    gi_upgrade_bank: '000000'
+    gi_upper_flipper_top: '730000'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: 'E20000'
+    gi_upper_flipper_top: '450000'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: 'BC0000'
+    gi_upper_flipper_top: '1D0000'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: '8E0000'
+    gi_upper_flipper_top: '000000'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: '550000'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: '2B0000'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: '0A0000'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    gi_back_left: '1A0000'
+    gi_back_right: '1D0000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: '090000'
+    gi_back_left: '4A0000'
+    gi_back_right: '4E0000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: '2B0000'
+    gi_back_left: '790000'
+    gi_back_right: '7C0000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: '550000'
+    gi_back_left: 'A80000'
+    gi_back_right: 'AB0000'
+    gi_strip_1: '0D0000'
+    gi_strip_10: '100000'
+    gi_strip_2: '0E0000'
+    gi_strip_3: '0F0000'
+    gi_strip_4: '0F0000'
+    gi_strip_5: '0F0000'
+    gi_strip_6: '0F0000'
+    gi_strip_7: '100000'
+    gi_strip_8: '100000'
+    gi_strip_9: '100000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: '840000'
+    gi_back_left: 'D20000'
+    gi_back_right: 'D50000'
+    gi_strip_1: '310000'
+    gi_strip_10: '340000'
+    gi_strip_2: '320000'
+    gi_strip_3: '320000'
+    gi_strip_4: '320000'
+    gi_strip_5: '330000'
+    gi_strip_6: '330000'
+    gi_strip_7: '330000'
+    gi_strip_8: '340000'
+    gi_strip_9: '340000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'B30000'
+    gi_back_left: 'F30000'
+    gi_back_right: 'F50000'
+    gi_strip_1: '5D0000'
+    gi_strip_10: '600000'
+    gi_strip_2: '5D0000'
+    gi_strip_3: '5D0000'
+    gi_strip_4: '5E0000'
+    gi_strip_5: '5E0000'
+    gi_strip_6: '5E0000'
+    gi_strip_7: '5F0000'
+    gi_strip_8: '5F0000'
+    gi_strip_9: '5F0000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'E20000'
+    gi_back_left: 'E10000'
+    gi_back_right: 'E30000'
+    gi_strip_1: '950000'
+    gi_strip_10: '980000'
+    gi_strip_2: '950000'
+    gi_strip_3: '960000'
+    gi_strip_4: '960000'
+    gi_strip_5: '970000'
+    gi_strip_6: '970000'
+    gi_strip_7: '970000'
+    gi_strip_8: '980000'
+    gi_strip_9: '980000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'F90000'
+    gi_back_left: 'BA0000'
+    gi_back_right: 'BD0000'
+    gi_strip_1: 'C20000'
+    gi_strip_10: 'C50000'
+    gi_strip_2: 'C30000'
+    gi_strip_3: 'C30000'
+    gi_strip_4: 'C30000'
+    gi_strip_5: 'C40000'
+    gi_strip_6: 'C40000'
+    gi_strip_7: 'C40000'
+    gi_strip_8: 'C50000'
+    gi_strip_9: 'C50000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'DB0000'
+    gi_back_left: '8C0000'
+    gi_back_right: '8F0000'
+    gi_strip_1: 'E70000'
+    gi_strip_10: 'EA0000'
+    gi_strip_2: 'E80000'
+    gi_strip_3: 'E80000'
+    gi_strip_4: 'E80000'
+    gi_strip_5: 'E80000'
+    gi_strip_6: 'E90000'
+    gi_strip_7: 'E90000'
+    gi_strip_8: 'E90000'
+    gi_strip_9: 'E90000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'B30000'
+    gi_back_left: '5C0000'
+    gi_back_right: '600000'
+    gi_strip_1: 'F30000'
+    gi_strip_10: 'F50000'
+    gi_strip_2: 'F30000'
+    gi_strip_3: 'F40000'
+    gi_strip_4: 'F40000'
+    gi_strip_5: 'F40000'
+    gi_strip_6: 'F40000'
+    gi_strip_7: 'F50000'
+    gi_strip_8: 'F50000'
+    gi_strip_9: 'F50000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: '840000'
+    gi_back_left: '310000'
+    gi_back_right: '340000'
+    gi_strip_1: 'D20000'
+    gi_strip_10: 'D50000'
+    gi_strip_2: 'D30000'
+    gi_strip_3: 'D30000'
+    gi_strip_4: 'D30000'
+    gi_strip_5: 'D40000'
+    gi_strip_6: 'D40000'
+    gi_strip_7: 'D40000'
+    gi_strip_8: 'D40000'
+    gi_strip_9: 'D50000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: '4D0000'
+    gi_back_left: '090000'
+    gi_back_right: '0B0000'
+    gi_strip_1: '9F0000'
+    gi_strip_10: 'A20000'
+    gi_strip_2: '9F0000'
+    gi_strip_3: '9F0000'
+    gi_strip_4: 'A00000'
+    gi_strip_5: 'A00000'
+    gi_strip_6: 'A00000'
+    gi_strip_7: 'A10000'
+    gi_strip_8: 'A10000'
+    gi_strip_9: 'A10000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: '230000'
+    gi_back_left: '000000'
+    gi_back_right: '000000'
+    gi_strip_1: '6F0000'
+    gi_strip_10: '730000'
+    gi_strip_2: '700000'
+    gi_strip_3: '700000'
+    gi_strip_4: '700000'
+    gi_strip_5: '710000'
+    gi_strip_6: '710000'
+    gi_strip_7: '710000'
+    gi_strip_8: '720000'
+    gi_strip_9: '720000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: '050000'
+    gi_strip_1: '420000'
+    gi_strip_10: '450000'
+    gi_strip_2: '420000'
+    gi_strip_3: '430000'
+    gi_strip_4: '430000'
+    gi_strip_5: '430000'
+    gi_strip_6: '430000'
+    gi_strip_7: '440000'
+    gi_strip_8: '440000'
+    gi_strip_9: '440000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: '000000'
+    gi_strip_1: '1B0000'
+    gi_strip_10: '1D0000'
+    gi_strip_2: '1B0000'
+    gi_strip_3: '1B0000'
+    gi_strip_4: '1B0000'
+    gi_strip_5: '1C0000'
+    gi_strip_6: '1C0000'
+    gi_strip_7: '1C0000'
+    gi_strip_8: '1C0000'
+    gi_strip_9: '1D0000'
+    
+- time: '+1'
+  lights:
+    gi_strip_1: '000000'
+    gi_strip_10: '000000'
+    gi_strip_2: '000000'
+    gi_strip_3: '000000'
+    gi_strip_4: '000000'
+    gi_strip_5: '000000'
+    gi_strip_6: '000000'
+    gi_strip_7: '000000'
+    gi_strip_8: '000000'
+    gi_strip_9: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
