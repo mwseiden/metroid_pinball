@@ -55,7 +55,19 @@ show_player:
 event_player:
   mode_room_1w_biosphere_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: plasma
+      color1: "002020"
+      color2: "001010"
+      color3: "000808"
+      color4: "000404"
+      color5: "000000"
+      color6: "000000"
+      color7: "000000"
+      color8: "000000"
+      decay_r: 2.0
+      decay_g: 2.0
+      decay_b: 2.0
+      invert: True
     drop_targets_continue:
     cmd_map_position:
       room: '1w'
