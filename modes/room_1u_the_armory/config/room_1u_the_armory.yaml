@@ -66,9 +66,9 @@ event_player:
   mode_room_1u_the_armory_started:
     cmd_backbox_show:
       show_type: spectrum
-      color1: '200000'
-      color2: '002000'
-      color3: '200030'
+      color1: '000000'
+      color2: '200000'
+      color3: '000000'
     drop_targets_continue:
     cmd_map_position:
       room: '1u'
