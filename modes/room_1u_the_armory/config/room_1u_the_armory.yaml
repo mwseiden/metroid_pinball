@@ -65,7 +65,10 @@ show_player:
 event_player:
   mode_room_1u_the_armory_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: spectrum
+      color1: '200000'
+      color2: '002000'
+      color3: '200030'
     drop_targets_continue:
     cmd_map_position:
       room: '1u'
