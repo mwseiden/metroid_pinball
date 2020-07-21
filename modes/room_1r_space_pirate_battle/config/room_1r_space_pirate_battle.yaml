@@ -71,6 +71,15 @@ shots:
     show_tokens:
       led: led_enter_left_orbit
       color: door_blue
+  room_1r_exit_south_shot:
+    switch: s_scoop
+    profile: exit_door
+    enable_events: room_1r_open_exits
+    disable_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_south_shot_hit
+    reset_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_scoop
+      color: door_blue
   room_1r_start_shot_1:
     switch: s_rollover_button
     profile: room_1r_blink

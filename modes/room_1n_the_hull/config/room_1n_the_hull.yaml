@@ -26,6 +26,7 @@ shots:
     show_tokens:
       led: led_enter_scoop
       color: door_blue
+
 slides:
   room_1n_the_hull_backglass_slide:
     widgets:
