@@ -192,8 +192,15 @@ sound_player:
     music_norfair_calm:
       action: stop
       fade_out: 1s
+  room_2h_enter:
+    music_norfair:
+      action: stop
+      fade_out: 1s
   room_2i_enter:
     music_norfair_deep_intro:
+      action: stop
+      fade_out: 1s
+    music_maridia:
       action: stop
       fade_out: 1s
   room_2k_enter:
