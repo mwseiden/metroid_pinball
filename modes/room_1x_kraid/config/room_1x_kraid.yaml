@@ -5,11 +5,24 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended
   priority: 300
 
+animations:
+  room_1x_kraid_standard:
+    - property: x
+      value: 150
+      relative: true
+      duration: 3.0s
+    - property: x
+      value: -150
+      relative: true
+      duration: 3.0s
+
 slides:
   room_1x_kraid_backglass_slide:
     widgets:
       - type: image
         image: room_1x_kraid_backglass
+        animations:
+          show_slide: room_1x_kraid_standard
     transition: fade
     transition_out: fade
   room_1x_kraid_splash_slide:
