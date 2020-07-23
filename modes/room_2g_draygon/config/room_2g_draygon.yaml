@@ -76,8 +76,8 @@ show_player:
     gi_solid_with_overhead:
       loops: -1
       show_tokens:
-        color: '808080'
-        color2: '808080'
+        color: '4080FF'
+        color2: '4080C0'
   show_mode_status_report:
     room_2g_draygon_status_report:
       loops: 0
@@ -88,7 +88,11 @@ show_player:
 event_player:
   mode_room_2g_draygon_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: pour
+      count: 8
+      min_length: 3
+      max_length: 10
+      color: "000040"
     drop_targets_continue:
     cmd_map_position:
       room: '2g'
