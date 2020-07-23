@@ -4,7 +4,7 @@
 
 mode:
   start_events: room_1p_continue, room_1p_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1n_enter, room_1q_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1n_enter, room_1o_enter, room_1q_enter
   priority: 300
 
 shots:
@@ -25,6 +25,15 @@ shots:
     reset_events: room_1p_exit_east_shot_hit
     show_tokens:
       led: led_enter_right_orbit
+      color: door_blue
+  room_1p_exit_west_shot:
+    switch: s_left_passage
+    profile: exit_door
+    enable_events: mode_room_1p_cargo_bay_started
+    disable_events: room_1p_exit_west_shot_hit
+    reset_events: room_1p_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_secret_passage
       color: door_blue
 
 slides:
@@ -95,6 +104,8 @@ event_player:
   room_1p_exit_north_shot_hit.2: room_1n_enter
   room_1p_exit_east_shot_hit.1: drop_targets_save
   room_1p_exit_east_shot_hit.2: room_1q_enter
+  room_1p_exit_west_shot_hit.1: drop_targets_save
+  room_1p_exit_west_shot_hit.2: room_1o_enter
 
 variable_player:
   mode_room_1p_cargo_bay_started:

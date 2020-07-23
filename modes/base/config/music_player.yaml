@@ -16,6 +16,8 @@ sound_player:
   mode_room_1m_generator_started{machine.next_game_acapella == 0}: music_wrecked_ship_generator
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 0}: music_brinstar
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 1}: music_metal_item_room
+  mode_room_1o_artillery_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
+  mode_room_1o_artillery_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
   mode_room_1p_cargo_bay_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
   mode_room_1p_cargo_bay_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
   mode_room_1q_impact_zone_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
