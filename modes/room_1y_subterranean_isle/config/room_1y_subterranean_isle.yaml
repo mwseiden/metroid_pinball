@@ -5,7 +5,7 @@
 
 mode:
   start_events: room_1y_continue, room_1y_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1v_enter, room_2c_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1v_enter, room_2c_enter, room_1x_enter
   priority: 300
 
 shots:
@@ -27,6 +27,16 @@ shots:
     show_tokens:
       led: led_rollover
       color: door_blue
+  room_1y_exit_west_shot:
+    switch: s_left_passage
+    profile: exit_door
+    enable_events: mode_room_1y_subterranean_isle_started
+    disable_events: room_1y_exit_west_shot_hit
+    reset_events: room_1y_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_secret_passage
+      color: door_blue
+
 
 slides:
   room_1y_subterranean_isle_backglass_slide:
@@ -76,6 +86,8 @@ event_player:
   room_1y_exit_north_shot_hit.2: room_1v_enter
   room_1y_exit_east_shot_hit.1: drop_targets_save
   room_1y_exit_east_shot_hit.2: room_2c_enter
+  room_1y_exit_west_shot_hit.1: drop_targets_save
+  room_1y_exit_west_shot_hit.2: room_1x_enter
 
 variable_player:
   mode_room_1y_subterranean_isle_started:
