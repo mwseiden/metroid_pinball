@@ -9,6 +9,8 @@ sound_player:
   mode_room_1e_statue_room_started{machine.next_game_acapella == 0}: music_metal_item_room
   mode_room_1f_mushroom_chamber_started{machine.next_game_acapella == 0}: music_crateria
   mode_room_1g_the_pit_started{machine.next_game_acapella == 0}: music_crateria
+  mode_room_1k_crew_quarters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
+  mode_room_1k_crew_quarters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
   mode_room_1l_entryway_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
   mode_room_1l_entryway_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
   mode_room_1n_the_hull_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship

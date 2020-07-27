@@ -320,6 +320,7 @@ Rooms (Modes)
             Doors:
                  Secret Passage (Blue) -> Landing Site [B]
                  Left Orbit (Blue) -> The Lake [D]
+                 Scoop (Blue) -> Spiny Corridor [T] (Brinstar)
 
         The Lake [D]:
 
@@ -332,12 +333,29 @@ Rooms (Modes)
                  Back Ramp (Blue) -> Plains [C]
                  Right Orbit (Blue) -> Entryway [L] (Wrecked Ship)
 
+        Statue Room [E]:
+
+            The entrance to Tourian. Defeat all the bosses to enter.
+            
+            Doors:
+                 Back Ramp (Blue) -> Mushroom Chamber [F]
+
         Mushroom Chamber [F]:
 
             Rules unimplemented
 
             Doors:
                  Left Orbit (Red) -> Lush Cavern [A]
+                 Secret Passage (Blue) -> Statue Room [E]
+                 The Pit (Blue) -> The Pit [G]
+                 Scoop (Blue) -> Space Pirate Battle/Communication Center [R]
+
+        The Pit [G]:
+
+            Rules unimplemented
+
+            Doors:
+                 VUK (Blue) -> Mushroom Chamber [F]
 
     Maridia:
 
@@ -362,6 +380,14 @@ Rooms (Modes)
             See Maridia Landing Site for rules
 
         Crevasse [b]:
+
+            Rules Unimplemented
+
+            Doors:
+                Left Orbit (Blue) -> Shifting Sands [a]
+                Star Rollover (Blue) -> Frozen Lake [f]
+
+        Central Pumping [c]:
 
             Rules Unimplemented
 
