@@ -9,7 +9,7 @@ shots:
   room_1k_exit_south_shot:
     switch: s_scoop
     profile: exit_door
-    enable_events:mode_room_1k_crew_quarters_started
+    enable_events: mode_room_1k_crew_quarters_started
     disable_events: room_1k_exit_south_shot_hit
     reset_events: room_1k_exit_south_shot_hit
     show_tokens:
