@@ -18,6 +18,15 @@ shots:
     show_tokens:
       led: led_enter_scoop
       color: door_blue
+  room_1i_exit_west_shot:
+    hit_events: left_orbit_hit
+    profile: exit_door
+    enable_events: mode_room_1i_computing_started
+    disable_events: room_1i_exit_west_shot_hit
+    reset_events: room_1i_exit_west_shot_hit
+    show_tokens:
+      led: led_enter_left_orbit
+      color: door_blue
 
 slides:
   room_1i_computing_backglass_slide:
@@ -86,6 +95,10 @@ event_player:
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1i_computing_started_charge
   room_1i_exit_south_shot_hit.1: drop_targets_save
   room_1i_exit_south_shot_hit.2: room_1k_enter
+  room_1i_exit_west_shot_hit.1: drop_targets_save
+  room_1i_exit_west_shot_hit.2: room_1h_enter
+  room_1i_exit_east_shot_hit.1: drop_targets_save
+  room_1i_exit_east_shot_hit.2: room_1j_enter
 
 variable_player:
   mode_room_1i_computing_started:
