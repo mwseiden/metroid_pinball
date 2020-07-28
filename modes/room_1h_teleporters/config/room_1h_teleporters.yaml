@@ -1,5 +1,7 @@
 #config_version=5
 
+# https://commons.wikimedia.org/wiki/File:2019-07-16_Plasma_ball.jpg
+
 mode:
   start_events: room_1h_continue, room_1h_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1i_enter
@@ -82,7 +84,18 @@ event_player:
       decay_b: 1.4
   mode_room_1h_teleporters_started_charge:
     cmd_backbox_show:
-      show_type: fire
+      show_type: plasma
+      color1: "800000"
+      color2: "282800"
+      color3: "202000"
+      color4: "181800"
+      color5: "101000"
+      color6: "080800"
+      color7: "000800"
+      color8: "001010"
+      decay_r: 1.4
+      decay_g: 1.8
+      decay_b: 1.8
   mode_room_1h_teleporters_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1h_teleporters_started_no_charge
   mode_room_1h_teleporters_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1h_teleporters_started_charge
   room_1h_exit_east_shot_hit.1: drop_targets_save
