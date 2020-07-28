@@ -1,5 +1,8 @@
 #config_version=5
 
+# https://commons.wikimedia.org/wiki/File:Museum_of_Science,_Boston,_MA_-_IMG_3166.JPG
+# Most likely OK
+
 mode:
   start_events: room_1i_continue, room_1i_enter
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1h_enter, room_1j_enter, room_1k_enter
@@ -23,15 +26,25 @@ slides:
         image: room_1i_computing_backglass
     transition: fade
     transition_out: fade
+  room_1i_computing_backglass_powered_slide:
+    widgets:
+      - type: image
+        image: room_1i_computing_backglass_powered
+    transition: fade
+    transition_out: fade
   room_1i_computing_splash_slide:
     widgets:
       - type: image
         image: room_1i_computing_splash
 
 slide_player:
-  mode_room_1i_computing_started:
+  mode_room_1i_computing_started_no_charge:
     room_1i_computing_backglass_slide:
       target: backglass
+  mode_room_1i_computing_started_charge:
+    room_1i_computing_backglass_powered_slide:
+      target: backglass
+  mode_room_1i_computing_started:
     room_1i_computing_splash_slide:
       target: dmd
       expire: 1.5s
@@ -52,12 +65,23 @@ show_player:
 
 event_player:
   mode_room_1i_computing_started:
-    cmd_backbox_show:
-      show_type: fire
     drop_targets_continue:
     cmd_map_position:
       room: '1i'
       visit: True
+  mode_room_1i_computing_started_no_charge:
+    cmd_backbox_show:
+      show_type: twinkle
+      background_color: '000000'
+      twinkle_color: '100808'
+      twinkle_count: 10
+      steps: 30
+  mode_room_1i_computing_started_charge:
+    cmd_backbox_show:
+      show_type: spectrum
+      color1: '400000'
+      color2: '101010'
+      color3: '004000'
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1i_computing_started_no_charge
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1i_computing_started_charge
   room_1i_exit_south_shot_hit.1: drop_targets_save
