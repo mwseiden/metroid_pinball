@@ -71,14 +71,14 @@ event_player:
   mode_room_1k_crew_quarters_started_charge:
     cmd_backbox_show:
       show_type: gradient
-      color_start: '4040FF'
-      color_end: '100010'
+      color_start: '4040E0'
+      color_end: '300040'
   mode_room_1k_crew_quarters_started_no_charge:
     cmd_backbox_show:
       show_type: twinkle
       background_color: '000000'
       twinkle_color: '000010'
-      twinkle_count: 20
+      twinkle_count: 50
       steps: 50
   mode_room_1k_crew_quarters_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1k_crew_quarters_started_no_charge
   mode_room_1k_crew_quarters_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1k_crew_quarters_started_charge
