@@ -13,6 +13,7 @@ sound_player:
   mode_room_1h_teleporters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
   mode_room_1i_computing_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
   mode_room_1i_computing_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
+  mode_room_1j_phantoon_started{machine.next_game_acapella == 0}: music_boss
   mode_room_1k_crew_quarters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
   mode_room_1k_crew_quarters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
   mode_room_1l_entryway_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
@@ -88,6 +89,13 @@ sound_player:
       fade_out: 1s
   room_1f_enter:
     music_metal_item_room:
+      action: stop
+      fade_out: 1s
+  room_1j_enter:
+    music_wrecked_ship:
+      action: stop
+      fade_out: 1s
+    music_wrecked_ship_generator:
       action: stop
       fade_out: 1s
   room_1l_enter:
