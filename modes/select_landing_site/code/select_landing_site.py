@@ -21,7 +21,6 @@ class SelectLandingSite(Carousel):
 
         if player.ball == 1:
             self._highlighted_item_index = self.machine.get_machine_var('current_game_default_mode')
-            self._update_highlighted_item(None)
 
         super()._update_highlighted_item(direction)
 
