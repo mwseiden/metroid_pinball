@@ -17,7 +17,7 @@ class SelectLandingSite(Carousel):
             items.insert(0, 'continue')
 
         if player.number == 1 and player.ball == 1:
-            self.machine.set_machine_var('current_game_default_mode', randint(0, len(items))
+            self.machine.set_machine_var('current_game_default_mode', randint(0, len(items)))
 
         if player.ball == 1:
             self._highlighted_item_index = self.machine.get_machine_var('current_game_default_mode')
