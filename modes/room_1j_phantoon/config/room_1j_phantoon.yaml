@@ -85,7 +85,18 @@ show_player:
 event_player:
   mode_room_1j_phantoon_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: plasma
+      color1: "008080"
+      color2: "007070"
+      color3: "006070"
+      color4: "005070"
+      color5: "004060"
+      color6: "003060"
+      color7: "002040"
+      color8: "808080"
+      decay_r: 2.0
+      decay_g: 1.7
+      decay_b: 1.5
     drop_targets_continue:
     cmd_map_position:
       room: '1j'
