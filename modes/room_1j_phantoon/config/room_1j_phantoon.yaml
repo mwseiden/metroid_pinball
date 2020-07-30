@@ -72,11 +72,9 @@ slide_player:
 
 show_player:
   mode_room_1j_phantoon_started:
-    gi_solid_with_overhead:
+    room_1j_phantoon_gi:
       loops: -1
-      show_tokens:
-        color: '808080'
-        color2: '808080'
+      speed: 70
   show_mode_status_report:
     room_1j_phantoon_status_report:
       loops: 0
