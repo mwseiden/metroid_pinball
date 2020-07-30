@@ -16,11 +16,12 @@ class SelectLandingSite(Carousel):
         if player['has_chosen_landing_site'] != 0 and 'continue' not in items:
             items.insert(0, 'continue')
 
-        if player.number == 1 and player.ball == 1:
-            self.machine.set_machine_var('current_game_default_mode', randint(0, len(items) - 1))
+        if direction != None:
+            if player.number == 1 and player.ball == 1:
+                self.machine.set_machine_var('current_game_default_mode', randint(0, len(items) - 1))
 
-        if player.ball == 1:
-            self._highlighted_item_index = self.machine.get_machine_var('current_game_default_mode')
+            if player.ball == 1:
+                self._highlighted_item_index = self.machine.get_machine_var('current_game_default_mode')
 
         super()._update_highlighted_item(direction)
 
