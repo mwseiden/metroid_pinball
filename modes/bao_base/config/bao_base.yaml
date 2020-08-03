@@ -724,6 +724,7 @@ sound_player:
   bao_ball_2_locked: ball_2_locked
   bao_multiball_started: multiball_alt_1
   bao_ramp_shot_hit: bao_ramp
+  bao_final_shot_completed: jackpot_mother_fuckers
 
 event_player:
   mode_bao_base_started:
