@@ -42,7 +42,7 @@ timers:
         action: stop
       - event: timer_room_1r_shoot_space_pirates_timer_complete
         action: reset
-      - event: room_1r_pirate_defeated
+      - event: room_1r_kill_pirate_duck
         action: add
         value: 10
 
