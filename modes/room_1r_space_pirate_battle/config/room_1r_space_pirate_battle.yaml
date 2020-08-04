@@ -31,8 +31,9 @@ timers:
       - event: logicblock_room_1r_battle_sequence_complete
         action: stop
   room_1r_shoot_space_pirates_timer:
-    start_value: 1
-    end_value: 20
+    direction: down
+    start_value: 20
+    end_value: 0
     tick_interval: 1s
     control_events:
       - event: room_1r_kill_pirates
