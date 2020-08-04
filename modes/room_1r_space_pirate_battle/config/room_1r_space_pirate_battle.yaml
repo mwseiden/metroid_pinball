@@ -43,7 +43,7 @@ timers:
         action: reset
       - event: room_1r_pirate_defeated
         action: add
-        value: 5
+        value: 10
 
 shot_groups:
   shoot_space_pirates_shot_group:
@@ -348,6 +348,67 @@ slides:
               value: 1
               duration: .5s
               repeat: -1
+  room_1r_score_slide:
+    widgets:
+    - type: text
+      text: (score)
+      number_grouping: true
+      min_digits: 2
+      style: dmd_med
+      anchor_x: left
+      anchor_y: top
+      x: 1
+      y: 30
+    - type: text
+      text: Time Remaining
+      min_digits: 1
+      style: dmd_small
+      color: '8040FF'
+      anchor_x: right
+      anchor_y: top
+      x: 126
+      y: 30
+    - type: text
+      text: (player|room_1r_space_pirate_battle_room_1r_shoot_space_pirates_timer_tick)
+      min_digits: 1
+      style: dmd_big
+      color: 'FF00FF'
+      anchor_x: right
+      anchor_y: top
+      x: 126
+      y: 22
+    - type: text
+      text: PLAYER (number)
+      y: 0
+      x: 10
+      style: dmd_med
+      anchor_x: left
+      anchor_y: bottom
+    - type: text
+      text: BALL (ball)
+      y: 0
+      x: right-10
+      anchor_x: right
+      anchor_y: bottom
+      style: dmd_med
+  room_2a_time_plus_2:
+    widgets:
+    - type: text
+      text: +2 Seconds
+      style: dmd_big
+      color: 'FF1030'
+  room_2a_time_plus_4:
+    widgets:
+    - type: text
+      text: +4 Seconds
+      style: dmd_big
+      color: 'FF1030'
+  room_2a_time_plus_8:
+    widgets:
+    - type: text
+      text: +8 Seconds
+      style: dmd_big
+      color: 'FF1030'
 
 slide_player:
   mode_room_1r_space_pirate_battle_started:
@@ -359,6 +420,13 @@ slide_player:
   room_1r_super_kill:
     room_1r_super_kill_slide:
       expire: 3.4s
+  room_1r_kill_pirates:
+    room_1r_score_slide:
+      target: dmd
+  room_1r_kill_pirates:
+    room_1r_score_slide:
+      target: dmd
+      action: remove
 
 sounds:
   room_1r_pirate_defeated:
