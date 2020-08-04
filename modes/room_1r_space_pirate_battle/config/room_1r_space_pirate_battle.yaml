@@ -423,7 +423,7 @@ slide_player:
   room_1r_kill_pirates:
     room_1r_score_slide:
       target: dmd
-  room_1r_kill_pirates:
+  room_1r_start_timer:
     room_1r_score_slide:
       target: dmd
       action: remove
