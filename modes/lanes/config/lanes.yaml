@@ -85,14 +85,14 @@ sounds:
     streaming: False
     track: sfx
     priority: 50
-    volume: 0.7
+    volume: 0.85
     max_queue_time: None
   lanes_collected:
     file: lanes_collected.wav
     streaming: False
     track: sfx
     priority: 50
-    volume: 0.7
+    volume: 0.85
     max_queue_time: None
 
 sound_player:
