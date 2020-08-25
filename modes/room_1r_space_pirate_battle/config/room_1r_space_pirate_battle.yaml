@@ -1,16 +1,19 @@
 #config_version=5
+
+# https://commons.wikimedia.org/wiki/File:Stanley_Kubrick_The_Exhibition_-_LACMA_-_Dr._Strangelove_-_War_Room_model_(8999727414).jpg
+
 mode:
-    start_events: select_landing_site_brinstar_selected, room_1r_continue
-    stop_events: game_ending, ball_ending, metroid_base_ended
+    start_events: select_landing_site_brinstar_selected, room_1r_continue, room_1r_enter
+    stop_events: game_ending, ball_ending, metroid_base_ended, room_1s_enter, room_1f_enter, room_1u_enter
     priority: 300
 
 sequences:
    room_1r_battle_sequence:
       events:
-         - shoot_space_pirates_shot_group_lit_hit
-         - shoot_space_pirates_shot_group_lit_hit
-         - shoot_space_pirates_shot_group_lit_hit
-         - shoot_space_pirates_shot_group_lit_hit
+         - room_1r_kill_pirate_duck
+         - room_1r_kill_pirate_duck
+         - room_1r_kill_pirate_duck
+         - room_1r_kill_pirate_duck
       persist_state: True
       disable_on_complete: True
 
@@ -28,8 +31,9 @@ timers:
       - event: logicblock_room_1r_battle_sequence_complete
         action: stop
   room_1r_shoot_space_pirates_timer:
-    start_value: 1
-    end_value: 20
+    direction: down
+    start_value: 20
+    end_value: 0
     tick_interval: 1s
     control_events:
       - event: room_1r_kill_pirates
@@ -38,9 +42,9 @@ timers:
         action: stop
       - event: timer_room_1r_shoot_space_pirates_timer_complete
         action: reset
-      - event: room_1r_pirate_defeated
+      - event: room_1r_kill_pirate_duck
         action: add
-        value: 5
+        value: 10
 
 shot_groups:
   shoot_space_pirates_shot_group:
@@ -50,6 +54,33 @@ shot_groups:
     disable_events: shoot_space_pirates_shot_group_lit_complete, timer_room_1r_shoot_space_pirates_timer_complete, logicblock_room_1r_battle_sequence_complete
 
 shots:
+  room_1r_exit_east_shot:
+    hit_events: right_orbit_hit
+    profile: exit_door
+    enable_events: room_1r_open_exits
+    disable_events: mode_room_1r_space_pirate_battle_started, room_1b_exit_east_shot_hit
+    reset_events: mode_room_1r_space_pirate_battle_started, room_1b_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_right_orbit
+      color: door_blue
+  room_1r_exit_north_shot:
+    hit_events: left_orbit_hit
+    profile: exit_door
+    enable_events: room_1r_open_exits
+    disable_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_north_shot_hit
+    reset_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_north_shot_hit
+    show_tokens:
+      led: led_enter_left_orbit
+      color: door_blue
+  room_1r_exit_south_shot:
+    switch: s_scoop
+    profile: exit_door
+    enable_events: room_1r_open_exits
+    disable_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_south_shot_hit
+    reset_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_scoop
+      color: door_blue
   room_1r_start_shot_1:
     switch: s_rollover_button
     profile: room_1r_blink
@@ -224,6 +255,74 @@ show_player:
         color: '8000C0'
         color2: "8080C0"
 
+widgets:
+  room_1r_space_pirate_duck:
+    - type: image
+      image: room_1r_space_pirate
+
+widget_player:
+  room_1r_show_pirate_1:
+    room_1r_space_pirate_duck:
+      action: add
+      target: window
+      key: room_1r_pirate_1
+      widget_settings:
+        x: 160
+        y: 450
+        z: 1000
+        fps: 1
+  room_1r_remove_pirate_1:
+    room_1r_space_pirate_duck:
+      action: remove
+      target: window
+      key: room_1r_pirate_1
+  room_1r_show_pirate_2:
+    room_1r_space_pirate_duck:
+      action: add
+      target: window
+      key: room_1r_pirate_2
+      widget_settings:
+        x: 560
+        y: 700
+        z: 1000
+        fps: 2
+  room_1r_remove_pirate_2:
+    room_1r_space_pirate_duck:
+      action: remove
+      target: window
+      key: room_1r_pirate_2
+  room_1r_show_pirate_3:
+    room_1r_space_pirate_duck:
+      action: add
+      target: window
+      key: room_1r_pirate_3
+      widget_settings:
+        x: 200
+        y: 769
+        z: 1000
+        fps: 3
+  room_1r_remove_pirate_3:
+    room_1r_space_pirate_duck:
+      action: remove
+      target: window
+      key: room_1r_pirate_3
+  room_1r_show_pirate_4:
+    room_1r_space_pirate_duck:
+      action: add
+      target: window
+      key: room_1r_pirate_4
+      widget_settings:
+        x: 600
+        y: 382
+        z: 1000
+        fps: 4
+  room_1r_remove_pirate_4:
+    room_1r_space_pirate_duck:
+      action: remove
+      target: window
+      key: room_1r_pirate_4
+
+
 slides:
   room_1r_backglass_slide:
     widgets:
@@ -250,6 +349,67 @@ slides:
               value: 1
               duration: .5s
               repeat: -1
+  room_1r_score_slide:
+    widgets:
+    - type: text
+      text: (score)
+      number_grouping: true
+      min_digits: 2
+      style: dmd_med
+      anchor_x: left
+      anchor_y: top
+      x: 1
+      y: 30
+    - type: text
+      text: Time Remaining
+      min_digits: 1
+      style: dmd_small
+      color: '8040FF'
+      anchor_x: right
+      anchor_y: top
+      x: 126
+      y: 30
+    - type: text
+      text: (player|room_1r_space_pirate_battle_room_1r_shoot_space_pirates_timer_tick)
+      min_digits: 1
+      style: dmd_big
+      color: 'FF00FF'
+      anchor_x: right
+      anchor_y: top
+      x: 126
+      y: 22
+    - type: text
+      text: PLAYER (number)
+      y: 0
+      x: 10
+      style: dmd_med
+      anchor_x: left
+      anchor_y: bottom
+    - type: text
+      text: BALL (ball)
+      y: 0
+      x: right-10
+      anchor_x: right
+      anchor_y: bottom
+      style: dmd_med
+  room_2a_time_plus_2:
+    widgets:
+    - type: text
+      text: +2 Seconds
+      style: dmd_big
+      color: 'FF1030'
+  room_2a_time_plus_4:
+    widgets:
+    - type: text
+      text: +4 Seconds
+      style: dmd_big
+      color: 'FF1030'
+  room_2a_time_plus_8:
+    widgets:
+    - type: text
+      text: +8 Seconds
+      style: dmd_big
+      color: 'FF1030'
 
 slide_player:
   mode_room_1r_space_pirate_battle_started:
@@ -261,6 +421,13 @@ slide_player:
   room_1r_super_kill:
     room_1r_super_kill_slide:
       expire: 3.4s
+  room_1r_kill_pirates:
+    room_1r_score_slide:
+      target: dmd
+  room_1r_start_timer:
+    room_1r_score_slide:
+      target: dmd
+      action: remove
 
 sounds:
   room_1r_pirate_defeated:
@@ -273,16 +440,29 @@ sounds:
 
 sound_player:
   multiball_room_1r_battle_started: multiball_alt_3
-  shoot_space_pirates_shot_group_lit_hit: room_1r_pirate_defeated
+  room_1r_kill_pirate_duck: room_1r_pirate_defeated
   room_1r_kill_pirates: shoot_the_flashing_targets
 
 event_player:
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 0}: room_1r_start_timer
+  mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 1}: room_1r_open_exits
+  room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 0}: room_1r_show_pirate_1, room_1r_show_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
+  room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 1}: room_1r_remove_pirate_1, room_1r_show_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
+  room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 2}: room_1r_remove_pirate_1, room_1r_remove_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
+  room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 3}: room_1r_remove_pirate_1, room_1r_remove_pirate_2, room_1r_remove_pirate_3, room_1r_show_pirate_4
+  room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value > 3}: room_1r_remove_pirate_1, room_1r_remove_pirate_2, room_1r_remove_pirate_3, room_1r_remove_pirate_4
   mode_room_1r_space_pirate_battle_started:
     cmd_map_position:
       room: '1r'
       visit: True
+    cmd_backbox_show:
+      show_type: twinkle
+      background_color: "200010"
+      twinkle_color: "FF00FF"
+      twinkle_count: 10
+      steps: 10
+  room_1r_start_timer: room_1r_remove_pirate_1, room_1r_remove_pirate_2, room_1r_remove_pirate_3, room_1r_remove_pirate_4
   timer_room_1r_shoot_space_pirates_timer_complete{current_player.room_1r_finished == 0}: room_1r_start_timer
   timer_room_1r_light_shot_timer_tick{ticks == 1}: room_1r_shot_1_activate
   timer_room_1r_light_shot_timer_tick{ticks == 2}: room_1r_shot_2_activate
@@ -301,10 +481,27 @@ event_player:
   room_1r_start_shot_6_hit: room_1r_kill_pirates
   room_1r_start_shot_7_hit: room_1r_kill_pirates
   room_1r_start_shot_8_hit: room_1r_kill_pirates
-  room_1r_kill_pirates: room_1r_disable_shots
+  room_1r_kill_pirates: room_1r_disable_shots, room_1r_reset_ducks
   room_1r_super_kill: room_1r_disable_shots
   room_1r_start_shot_9_hit: room_1r_super_kill, logicblock_room_1r_battle_sequence_complete
-  
+  shoot_space_pirates_shot_group_lit_hit: room_1r_kill_pirate_duck
+  logicblock_room_1r_battle_sequence_hit: room_1r_reset_ducks
+  logicblock_room_1r_battle_sequence_complete:
+    room_1r_remove_pirate_1:
+    room_1r_remove_pirate_2:
+    room_1r_remove_pirate_3:
+    room_1r_remove_pirate_4:
+    room_1r_switch_music:
+    room_1r_open_exits:
+    cmd_map_complete:
+      room: '1r'
+  room_1r_exit_east_shot_hit.1: drop_targets_save
+  room_1r_exit_east_shot_hit.2: room_1s_enter
+  room_1r_exit_north_shot_hit.1: drop_targets_save
+  room_1r_exit_north_shot_hit.2: room_1f_enter
+  room_1r_exit_south_shot_hit.1: drop_targets_save
+  room_1r_exit_south_shot_hit.2: room_1u_enter
+
 variable_player:
   mode_room_1r_space_pirate_battle_started:
     has_chosen_landing_site:
@@ -339,5 +536,5 @@ variable_player:
     score: ((current_player.area_bonus_w + 1) * 20000) * current_player.multiplier
   room_1r_start_shot_9_hit:
     score: ((current_player.area_bonus_nw + 1) * 300000) * current_player.multiplier
-  shoot_space_pirates_shot_group_lit_hit:
+  room_1r_kill_pirate_duck:
     score: (33300 * current_player.ball) * current_player.multiplier

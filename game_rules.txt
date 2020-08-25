@@ -10,8 +10,10 @@
 Starting The Game
 
     When you first start a ball you will be asked to choose your landing site.
-    Use the flipper buttons to change modes. You can begin your turn at one of
-    5 different regions of the map. Each site is a different mode.
+    The default selection will be randomly selected per game and will be the
+    same initial selection for each player. Use the flipper buttons to change
+    modes. You can begin your turn at one of 5 different regions of the map.
+    Each site is a different mode.
 
         Crateria
         Brinstar
@@ -20,9 +22,8 @@ Starting The Game
         Norfair
 
     On every ball except the first, you will have the opportunity to choose to
-    continue playing in the room where you left off. This currently does not
-    have much use for any area except Maridia and Crateria (after landing the
-    gunship.)
+    continue playing in the room where you left off. This allows you to keep
+    your progress towards deeper rooms in the map.
 
 
 Skillshots
@@ -229,6 +230,11 @@ Landing Sites
         multiball. First you must hit the roving purple shot. Then most of the
         playfield will light up. Hit 4 lit shots to complete the mode.
 
+        Doors (After Defeating the Space Pirates):
+            Left Orbit (Blue) -> Mushroom Chamber [F]
+            Right Orbit (Blue) -> Blighted Canopy [S]
+            Scoop (Blue) -> The Armory [U]
+
     Crateria [B]:
         You must land the ship. First shoot the left and right orbits to
         steer. Then shoot the scoop to land.
@@ -241,8 +247,8 @@ Landing Sites
         switches to scan to 100%
 
         Doors (After Landing):
-             Secret Passage (Blue) -> Lush Cavern [A]
-             Right Orbit (Blue) -> Plains [C]
+            Secret Passage (Blue) -> Lush Cavern [A]
+            Right Orbit (Blue) -> Plains [C]
 
     Maridia [a]:
         Don't sink in the quicksand! Hit blinking standup target banks to add
@@ -256,6 +262,7 @@ Landing Sites
         Sinking puts you in the Sandy Cavern [e].
 
         Doors:
+            Back Ramp (Blue) -> Impact Zone [Q]
             Secret Passage (Blue) -> Underground Desert [Z]
             Right Orbit (Blue) -> Crevasse [b]
             Run Out of Time (One-Way) -> Sandy Cavern [e]
@@ -263,6 +270,9 @@ Landing Sites
     Norfair [i]:
         Jump over the lava. Complete the 4 flashing shots to light the side
         ramp for the jackpot. This is repeatable.
+
+        Completion:
+            Collect a jackpot
 
         Doors:
             Mini Loop (Blue) -> Lake of Fire [j]
@@ -291,6 +301,58 @@ Rooms (Modes)
 
             See Brinstar Landing Site for rules
 
+        Blighted Canopy [S]:
+
+            Rules unimplemented
+
+            Doors:
+                Right Orbit (Blue) -> Spiny Corridor [T]
+                Secret Passage (Blue) -> Space Pirate Battle /
+                                          Communication Center [R]
+
+        Spiny Corridor [T]:
+
+            Rules unimplemented
+
+            Doors:
+
+        The Armory [U]:
+
+            Rules unimplemented
+
+            Doors:
+
+        Fireflea [V]:
+
+            Firefleas fly around the target banks and illuminate the room.
+
+            Hitting a target bank kills the light in that area.
+
+            Firefleas hide the status of the target banks. This is revealed
+            when they are killed.
+
+            When all firefleas are defeated you will be playing in the dark.
+
+            Doors:
+
+        Biosphere [W]:
+
+            Rules unimplemented
+
+            Doors:
+
+        Kraid [X]:
+
+            Boss. Rules unimplemented
+
+            Doors:
+
+        Subterranean Isle [Y]:
+
+            Rules unimplemented
+
+            Doors:
+
 
     Crateria:
 
@@ -305,8 +367,8 @@ Rooms (Modes)
             Rules unimplemented
 
             Doors:
-                 Back Ramp (Blue) -> Landing Site [B]
-                 Scoop (Red) -> Mushroom Chamber [F]
+                Back Ramp (Blue) -> Landing Site [B]
+                Scoop (Red) -> Mushroom Chamber [F]
 
         Land The Gunship/Landing Site [B]:
 
@@ -318,26 +380,47 @@ Rooms (Modes)
             than the center targets.
 
             Doors:
-                 Secret Passage (Blue) -> Landing Site [B]
-                 Left Orbit (Blue) -> The Lake [D]
+                Secret Passage (Blue) -> Landing Site [B]
+                Left Orbit (Blue) -> The Lake [D]
+                Scoop (Blue) -> Spiny Corridor [T] (Brinstar)
 
         The Lake [D]:
 
             Hit the scoop, pit, pop bumper subway, or upkicker for points.
-            
+
             Entering Crateria from the Wrecked Ship cancels Land the Gunship
             and room [B] will then skip to its Landing Site phase.
 
             Doors:
-                 Back Ramp (Blue) -> Plains [C]
-                 Right Orbit (Blue) -> Entryway [L] (Wrecked Ship)
+                Back Ramp (Blue) -> Plains [C]
+                Right Orbit (Blue) -> Entryway [L] (Wrecked Ship)
+
+        Statue Room [E]:
+
+            The entrance to Tourian. Defeat all the bosses to enter.
+            
+            Doors:
+                Back Ramp (Blue) -> Mushroom Chamber [F]
 
         Mushroom Chamber [F]:
 
             Rules unimplemented
 
+            Entering Crateria from Brinstar cancels Land the Gunship and room
+            [B] will then skip to its Landing Site phase.
+
             Doors:
-                 Left Orbit (Red) -> Lush Cavern [A]
+                Left Orbit (Red) -> Lush Cavern [A]
+                Secret Passage (Blue) -> Statue Room [E]
+                The Pit (Blue) -> The Pit [G]
+                Scoop (Blue) -> Space Pirate Battle/Communication Center [R]
+
+        The Pit [G]:
+
+            Rules unimplemented
+
+            Doors:
+                VUK (Blue) -> Mushroom Chamber [F]
 
     Maridia:
 
@@ -354,14 +437,22 @@ Rooms (Modes)
             Rules unimplemented
 
             Doors:
-                 Secret Passage (Blue) -> The Abyss [d]
-                 Right Orbit (Blue) -> Shifting Sands [a]
+                Secret Passage (Blue) -> The Abyss [d]
+                Right Orbit (Blue) -> Shifting Sands [a]
 
         Shifting Sands [a]:
 
             See Maridia Landing Site for rules
 
         Crevasse [b]:
+
+            Rules Unimplemented
+
+            Doors:
+                Left Orbit (Blue) -> Shifting Sands [a]
+                Star Rollover (Blue) -> Frozen Lake [f]
+
+        Central Pumping [c]:
 
             Rules Unimplemented
 
@@ -381,6 +472,9 @@ Rooms (Modes)
 
             Leave the room via either exit. Both doors are locked by missles.
 
+            Completion:
+                Exit the room
+
             Doors:
                 Left Orbit (Red) -> The Abyss [d]
                 Star Rollover (Red) -> Frozen Lake [f]
@@ -394,6 +488,12 @@ Rooms (Modes)
             Doors:
                 Secret Passage (Red) -> Sandy Cavern [e]
                 Side Ramp (Blue) -> Crevasse [b]
+
+        Draygon [g]:
+
+            Boss. Rules unimplemented.
+
+            Doors:
 
         Crystalline Seabed [h]:
 
@@ -425,11 +525,27 @@ Rooms (Modes)
 
         Larvae Nest [k]:
 
-            Rules Unimplemented
+            Shoot the lit target bank to squish insects. Every few seconds the
+            lit bank will move. Points are collected based on number of
+            insects squished when you leave the room via one of the two doors.
+
+            Miniboss Bank: 1 insect
+            Missile Bank: 1 insect
+            Power Bomb Bank: 2 insects
+            Side Bank: 5 insects
+
+            Completion:
+                Squish and collect 10 insects
 
             Doors:
                 Left Orbit (Blue) -> Lake of Fire [j]
+                Scoop (Blue) -> Strange Ruins [o]
 
+        West Hot Springs [l]:
+
+            Rules unimplemented
+
+            Doors:
 
         Geothermal Plant [m]:
 
@@ -441,6 +557,25 @@ Rooms (Modes)
         Magma Chamber [n]:
 
             Rules Unimplemented
+
+        Strange Ruins [o]:
+
+            Rules unimplemented
+
+            Doors:
+
+        East Hot Springs [p]:
+
+            Rules unimplemented
+
+            Doors:
+
+        Ridley [q]:
+
+            Boss. Rules unimplemented.
+
+            Doors:
+
 
     Tourian:
 
@@ -460,7 +595,31 @@ Rooms (Modes)
             [N]
              |
         [O]-[P]-[Q]
-             =
+                 =
+
+        Teleporters [H]:
+
+            Rules unimplemented
+
+            Doors:
+
+        Computing [I]:
+
+            Rules unimplemented
+
+            Doors:
+
+        Phantoon [J]:
+
+            Boss. Rules unimplemented
+
+            Doors:
+
+        Crew Quarters [K]:
+
+            Rules unimplemented
+
+            Doors:
 
         Entryway [L]:
 
@@ -482,3 +641,29 @@ Rooms (Modes)
 
             Doors:
                 Back Ramp (Blue) -> Entryway [L]
+
+        The Hull [N]:
+
+            Rules unimplemented
+
+            Doors:
+
+        Artillery [O]:
+
+            Rules unimplemented
+
+            Doors:
+
+        Cargo Bay [P]:
+
+            Rules unimplemented
+
+            Doors:
+
+        Impact Zone [Q]:
+
+            Rules unimplemented
+
+            Doors:
+
+

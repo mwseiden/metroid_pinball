@@ -15,6 +15,8 @@ ball_devices:
         mechanical_eject: true
         eject_timeouts: 3s
         eject_all_events: tilt
+        confirm_eject_type: event
+        confirm_eject_event: s_shooter_lane_inactive
     bd_scoop:
         ball_switches: s_scoop
         eject_coil: c_scoop

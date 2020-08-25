@@ -1,0 +1,112 @@
+#config_version=5
+
+# replace 1j with room code
+# replace room_1j_phantoon with mode name
+
+mode:
+  start_events: room_1j_continue, room_1j_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1i_enter
+  priority: 300
+
+animations:
+  room_1j_phantoon_standard:
+    - property: x
+      value: 100
+      relative: true
+      duration: 1.0s
+    - property: y
+      value: 100
+      relative: true
+      duration: 1.0s
+      timing: with_previous
+    - property: x
+      value: 100
+      relative: true
+      duration: 1.0s
+    - property: y
+      value: -100
+      relative: true
+      duration: 1.0s
+      timing: with_previous
+    - property: x
+      value: -100
+      relative: true
+      duration: 1.0s
+    - property: y
+      value: -100
+      relative: true
+      duration: 1.0s
+      timing: with_previous
+    - property: x
+      value: -100
+      relative: true
+      duration: 1.0s
+    - property: y
+      value: 100
+      relative: true
+      duration: 1.0s
+      timing: with_previous
+      repeat: true
+
+slides:
+  room_1j_phantoon_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1j_phantoon_backglass
+        animations:
+          show_slide: room_1j_phantoon_standard
+    transition: fade
+    transition_out: fade
+  room_1j_phantoon_splash_slide:
+    widgets:
+      - type: image
+        image: room_1j_phantoon_splash
+
+slide_player:
+  mode_room_1j_phantoon_started:
+    room_1j_phantoon_backglass_slide:
+      target: backglass
+    room_1j_phantoon_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_1j_phantoon_started:
+    room_1j_phantoon_gi:
+      loops: -1
+      speed: 70
+  show_mode_status_report:
+    room_1j_phantoon_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1j_phantoon_status_report:
+      action: stop
+
+event_player:
+  mode_room_1j_phantoon_started:
+    cmd_backbox_show:
+      show_type: plasma
+      color1: "008080"
+      color2: "007070"
+      color3: "006070"
+      color4: "005070"
+      color5: "004060"
+      color6: "003060"
+      color7: "002040"
+      color8: "808080"
+      decay_r: 2.0
+      decay_g: 1.7
+      decay_b: 1.5
+    drop_targets_continue:
+    cmd_map_position:
+      room: '1j'
+      visit: True
+
+variable_player:
+  mode_room_1j_phantoon_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 1j
+      action: set

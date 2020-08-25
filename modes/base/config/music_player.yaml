@@ -9,10 +9,34 @@ sound_player:
   mode_room_1e_statue_room_started{machine.next_game_acapella == 0}: music_metal_item_room
   mode_room_1f_mushroom_chamber_started{machine.next_game_acapella == 0}: music_crateria
   mode_room_1g_the_pit_started{machine.next_game_acapella == 0}: music_crateria
+  mode_room_1h_teleporters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
+  mode_room_1h_teleporters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
+  mode_room_1i_computing_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
+  mode_room_1i_computing_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
+  mode_room_1j_phantoon_started{machine.next_game_acapella == 0}: music_boss
+  mode_room_1k_crew_quarters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
+  mode_room_1k_crew_quarters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
   mode_room_1l_entryway_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
   mode_room_1l_entryway_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
+  mode_room_1n_the_hull_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
+  mode_room_1n_the_hull_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
   mode_room_1m_generator_started{machine.next_game_acapella == 0}: music_wrecked_ship_generator
-  mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0}: music_brinstar
+  mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 0}: music_brinstar
+  mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 1}: music_metal_item_room
+  mode_room_1o_artillery_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
+  mode_room_1o_artillery_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
+  mode_room_1p_cargo_bay_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
+  mode_room_1p_cargo_bay_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
+  mode_room_1q_impact_zone_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
+  mode_room_1q_impact_zone_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
+  room_1r_switch_music{machine.next_game_acapella == 0}: music_metal_item_room
+  mode_room_1s_blighted_canopy_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
+  mode_room_1t_spiny_corridor_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
+  mode_room_1u_the_armory_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
+  mode_room_1v_fireflea_started{machine.next_game_acapella == 0}: music_brinstar_calm
+  mode_room_1w_biosphere_started{machine.next_game_acapella == 0}: music_brinstar_calm
+  mode_room_1x_kraid_started{machine.next_game_acapella == 0}: music_boss
+  mode_room_1y_subterranean_isle_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
   mode_room_1z_underground_desert_started{machine.next_game_acapella == 0}: music_maridia_intro
   mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia_intro
   mode_room_2b_crevasse_started{machine.next_game_acapella == 0}:
@@ -37,13 +61,19 @@ sound_player:
   mode_room_2i_lava_jump_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2j_lake_of_fire_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2k_larvae_nest_started{machine.next_game_acapella == 0}: music_norfair_calm
+  mode_room_2l_west_hot_springs_started{machine.next_game_acapella == 0}: music_norfair_deep
   mode_room_2m_geothermal_plant_started{machine.next_game_acapella == 0}: music_norfair_deep_intro
   mode_room_2n_magma_chamber_started{machine.next_game_acapella == 0}: music_norfair_deep
   mode_room_2o_strange_ruins_started{machine.next_game_acapella == 0}: music_norfair_deep_intro
+  mode_room_2p_east_hot_springs_started{machine.next_game_acapella == 0}: music_norfair_deep
   mode_room_2q_ridley_started{machine.next_game_acapella == 0}: music_boss
 
   room_2a_sink_into_sand:
     music_maridia_intro:
+      action: stop
+      fade_out: 1s
+  room_1c_enter:
+    music_brinstar_side_entrance:
       action: stop
       fade_out: 1s
   room_1d_enter:
@@ -61,12 +91,77 @@ sound_player:
     music_metal_item_room:
       action: stop
       fade_out: 1s
+  room_1j_enter:
+    music_wrecked_ship:
+      action: stop
+      fade_out: 1s
+    music_wrecked_ship_generator:
+      action: stop
+      fade_out: 1s
   room_1l_enter:
     music_crateria:
       action: stop
       fade_out: 1s
   room_1m_enter:
     music_wrecked_ship:
+      action: stop
+      fade_out: 1s
+  room_1q_enter:
+    music_maridia_intro:
+      action: stop
+      fade_out: 1s
+  room_1r_switch_music:
+    music_brinstar:
+      action: stop
+      fade_out: 1s
+  room_1r_enter:
+    music_brinstar_side_entrance:
+      action: stop
+      fade_out: 1s
+    music_crateria:
+      action: stop
+      fade_out: 1s
+  room_1s_enter:
+    music_brinstar:
+      action: stop
+      fade_out: 1s
+    music_metal_item_room:
+      action: stop
+      fade_out: 1s
+  room_1t_enter:
+    music_crateria:
+      action: stop
+      fade_out: 1s
+    music_brinstar_calm:
+      action: stop
+      fade_out: 1s
+  room_1u_enter:
+    music_metal_item_room:
+      action: stop
+      fade_out: 1s
+    music_brinstar_calm:
+      action: stop
+      fade_out: 1s
+  room_1v_enter:
+    music_brinstar_side_entrance:
+      action: stop
+      fade_out: 1s
+  room_1w_enter:
+    music_brinstar_side_entrance:
+      action: stop
+      fade_out: 1s
+  room_1x_enter:
+    music_brinstar_side_entrance:
+      action: stop
+      fade_out: 1s
+    music_brinstar_calm:
+      action: stop
+      fade_out: 1s
+  room_1y_enter:
+    music_maridia:
+      action: stop
+      fade_out: 1s
+    music_brinstar_calm:
       action: stop
       fade_out: 1s
   room_1z_enter:
@@ -77,8 +172,18 @@ sound_player:
     music_maridia_snow:
       action: stop
       fade_out: 1s
+    music_wrecked_ship:
+      action: stop
+      fade_out: 1s
+    music_wrecked_ship_generator:
+      action: stop
+      fade_out: 1s
   room_2b_enter:
     music_maridia_intro:
+      action: stop
+      fade_out: 1s
+  room_2c_enter:
+    music_brinstar_side_entrance:
       action: stop
       fade_out: 1s
   room_2d_enter:
@@ -101,14 +206,25 @@ sound_player:
     music_norfair_calm:
       action: stop
       fade_out: 1s
+  room_2h_enter:
+    music_norfair:
+      action: stop
+      fade_out: 1s
   room_2i_enter:
     music_norfair_deep_intro:
+      action: stop
+      fade_out: 1s
+    music_maridia:
       action: stop
       fade_out: 1s
   room_2k_enter:
     music_norfair:
       action: stop
       fade_out: 1s
+    music_norfair_deep_intro:
+      action: stop
+      fade_out: 1s
+  room_2l_enter:
     music_norfair_deep_intro:
       action: stop
       fade_out: 1s
@@ -128,6 +244,10 @@ sound_player:
       action: stop
       fade_out: 1s
     music_norfair_deep:
+      action: stop
+      fade_out: 1s
+  room_2p_enter:
+    music_norfair_deep_intro:
       action: stop
       fade_out: 1s
   room_2q_enter:
@@ -180,6 +300,12 @@ sound_player:
       action: stop
       fade_out: 3s
     music_brinstar:
+      action: stop
+      fade_out: 3s
+    music_brinstar_calm:
+      action: stop
+      fade_out: 3s
+    music_brinstar_side_entrance:
       action: stop
       fade_out: 3s
     music_norfair:

@@ -1,13 +1,13 @@
 #config_version=5
 mode:
     start_events: select_landing_site_maridia_selected, room_2a_continue, room_2a_enter
-    stop_events: game_ending, ball_ending, metroid_base_ended, room_2a_sink_into_sand, room_1z_enter, room_2b_enter
+    stop_events: game_ending, ball_ending, metroid_base_ended, room_2a_sink_into_sand, room_1z_enter, room_2b_enter, room_1q_enter
     priority: 300
 
 timers:
   room_2a_do_not_sink:
     direction: down
-    start_value: 10
+    start_value: 15
     end_value: 0
     tick_interval: 1s
     control_events:
@@ -104,6 +104,15 @@ shots:
     reset_events: room_2a_exit_east_shot_hit
     show_tokens:
       led: led_enter_right_orbit
+      color: door_blue
+  room_2a_exit_north_shot:
+    switches: s_ramp_enter
+    profile: exit_door
+    enable_events: mode_room_2a_shifting_sands_started
+    disable_events: room_2a_exit_north_shot_hit
+    reset_events: room_2a_exit_north_shot_hit
+    show_tokens:
+      led: led_enter_ramp
       color: door_blue
 
 shot_profiles:
@@ -251,7 +260,12 @@ event_player:
   room_2a_exit_west_shot_hit.2: room_1z_enter
   room_2a_exit_east_shot_hit.1: drop_targets_save
   room_2a_exit_east_shot_hit.2: room_2b_enter
+  room_2a_exit_north_shot_hit.1: drop_targets_save
+  room_2a_exit_north_shot_hit.2: room_1q_enter
   mode_room_2a_shifting_sands_ending: drop_targets_save
+  timer_room_2a_do_not_sink_tick{current_player.room_2a_seconds_survived > 29}:
+    cmd_map_complete:
+      room: '2a'
 
 variable_player:
   mode_room_2a_shifting_sands_started:
@@ -274,5 +288,6 @@ variable_player:
     score: (15000 + (current_player.area_bonus_nw * 15000)) * current_player.multiplier
   timer_room_2a_do_not_sink_tick:
     room_2a_alive_score: 250
+    room_2a_seconds_survived: 1
     score: current_player.room_2a_alive_score * current_player.multiplier
 

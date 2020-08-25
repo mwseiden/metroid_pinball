@@ -302,7 +302,7 @@ shot_groups:
     enable_events: bao_enable_stage_1
     disable_events: bao_enable_stage_2
   bao_critical_shot_group:
-    shots: pop_1_shot, pop_2_shot, pop_3_shot
+    shots: pop_1_shot, pop_2_shot, pop_3_shot, upper_right_sling_shot
     reset_events: bao_enable_stage_4
     enable_events: bao_enable_stage_3
     disable_events: bao_enable_stage_4
@@ -663,6 +663,13 @@ sounds:
     priority: 50
     volume: 0.7
     max_queue_time: None
+  bao_roy:
+    file: bao_roy.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
   bao_spinner:
     file: bao_spinner.wav
     streaming: False
@@ -704,6 +711,7 @@ sound_pools:
       - bao_hit_12
       - bao_hit_13
       - bao_hit_15
+      - bao_roy
 
 sound_player:
   bao_play_standard: bao_shot_sound_pool
@@ -716,6 +724,7 @@ sound_player:
   bao_ball_2_locked: ball_2_locked
   bao_multiball_started: multiball_alt_1
   bao_ramp_shot_hit: bao_ramp
+  bao_final_shot_completed: jackpot_mother_fuckers
 
 event_player:
   mode_bao_base_started:

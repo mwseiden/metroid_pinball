@@ -520,6 +520,18 @@ sounds:
     track: sfx
     priority: 50
     max_queue_time: None
+  left_orbit:
+    file: left_orbit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  right_orbit:
+    file: right_orbit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
   left_sling:
     file: left_sling.wav
     streaming: False
@@ -568,6 +580,12 @@ sounds:
     track: sfx
     priority: 50
     max_queue_time: None
+  zero_suit_target:
+    file: zero_suit_target.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
 
 sound_player:
   twitch_bit_donation{bits < 100}: jackpot
@@ -584,3 +602,6 @@ sound_player:
   rollover_shot_hit: mini_loop
   scoop_shot_hit: scoop_eject
   thin_orange_shot_hit: energy_target
+  shatz_shot_hit: zero_suit_target
+  left_orbit_hit: left_orbit
+  right_orbit_hit: right_orbit

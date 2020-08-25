@@ -30,6 +30,7 @@ class Twinkle(DynamicBackBoxShow):
             if twinkle[3] == 0:
                 twinkle[2] = twinkle[2] + 1
                 if twinkle[2] > self.steps:
+                    self.strips[twinkle[0]].set_color(twinkle[1], self.background_color)
                     twinkle[0] = randint(0, self.strip_count - 1)
                     twinkle[1] = randint(0, 9)
                     twinkle[2] = self.steps

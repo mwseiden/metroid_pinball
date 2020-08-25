@@ -5,6 +5,9 @@ machine_vars:
     initial_value: 0
     value_type: int
     persist: False
+  current_game_default_mode:
+    initial_value: 0
+    value_type: int
   metroid_game_booted:
     initial_value: 0
     value_type: int
@@ -17,6 +20,10 @@ machine_vars:
     value_type: int
     persist: False
   next_game_goren:
+    initial_value: 0
+    value_type: int
+    persist: False
+  next_game_macho:
     initial_value: 0
     value_type: int
     persist: False

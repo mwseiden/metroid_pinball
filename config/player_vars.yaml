@@ -51,6 +51,12 @@ player_vars:
   drops_1m:
     value_type: str
     initial_value: 'DDD'
+  drops_1t:
+    value_type: str
+    initial_value: 'DDD'
+  drops_1v:
+    value_type: str
+    initial_value: 'DDU'
   drops_1z:
     value_type: str
     initial_value: 'UDU'
@@ -83,6 +89,9 @@ player_vars:
     initial_value: 0
   lanes_last_shot:
     initial_value: 0
+  last_continue_room:
+    value_type: str
+    initial_value: ''
   map_location:
     value_type: str
     initial_value: '1b'
@@ -130,12 +139,18 @@ player_vars:
     initial_value: 0
   room_1m_charge:
     initial_value: 0
+  room_1r_finished:
+    initial_value: 0
   room_2a_alive_score:
+    initial_value: 0
+  room_2a_seconds_survived:
     initial_value: 0
   room_2f_target_order:
     value_type: str
     initial_value: 'ABCDEFGHIJKLMN'
   room_2k_insects:
+    initial_value: 0
+  rooms_visited:
     initial_value: 0
   scoops:
     initial_value: 0

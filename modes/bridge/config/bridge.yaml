@@ -1,5 +1,6 @@
 #config_version=5
 mode:
+  code: bridge.Bridge
   start_events: metroid_base_started
   stop_events: metroid_base_ended
   priority: 200
@@ -8,19 +9,21 @@ shots:
   bridge_rail_shot:
     switch: s_top_lane_2
 
-ball_holds:
-   bridge_skillshot:
-      balls_to_hold: 1
-      hold_devices: bd_plunger
-      reset_events: mode_bridge_starting, whole_playfield_shot_group_hit, s_shooter_lane_inactive
-      disable_events: mode_bridge_starting, whole_playfield_shot_group_hit, s_shooter_lane_inactive
-      enable_events: bridge_enable_skillshot
+#ball_holds:
+#  bridge_skillshot:
+#     balls_to_hold: 1
+#     hold_devices: bd_plunger
+#     reset_events: mode_bridge_started, whole_playfield_shot_group_hit, s_shooter_lane_inactive
+#     disable_events: mode_bridge_started, whole_playfield_shot_group_hit, s_shooter_lane_inactive
+#     enable_events: bridge_enable_skillshot
 
 timers:
   bridge_enable_coil_timer:
     start_value: 1
     end_value: 2
     tick_interval: .5s
+    restart_on_complete: False
+    start_running: False
     control_events:
       - event: bridge_should_explode
         action: restart
@@ -28,6 +31,8 @@ timers:
     start_value: 1
     end_value: 2
     tick_interval: 1s
+    restart_on_complete: False
+    start_running: False
     control_events:
       - event: timer_bridge_enable_coil_timer_complete
         action: restart
@@ -48,7 +53,7 @@ show_player:
     bridge_explode:
       priority: 1000
       speed: 1.5
-      loops: 1
+      loops: 0
       show_tokens:
         led_1: gi_bomb_bank
         led_2: gi_upper_flipper_bottom
@@ -66,7 +71,7 @@ show_player:
       priority: 1000
   ball_hold_bridge_skillshot_held_ball:
     bridge_skillshot_earned:
-      loops: -1
+      loops: 0
   s_shooter_lane_inactive:
     bridge_skillshot_earned:
       action: stop
@@ -163,8 +168,14 @@ sound_player:
   bridge_should_explode: bridge_destroyed
 
 event_player:
+  mode_bridge_started: bridge_enable_autofire
+  s_shooter_lane_inactive: bridge_enable_autofire
   bridge_rail_shot_hit{current_player.power_bombs > 0}: bridge_should_explode
-  ball_hold_bridge_skillshot_held_ball: skillshot_should_start
+  bridge_should_explode: drop_targets_save
+  # ball_hold_bridge_skillshot_held_ball.1: cmd_drop_all_drops
+  # ball_hold_bridge_skillshot_held_ball.2: skillshot_should_start
+  bridge_enable_skillshot.1: cmd_drop_all_drops, bridge_disable_autofire
+  bridge_enable_skillshot.2: skillshot_should_start
   timer_bridge_disable_coil_timer_started{device.multiballs.chozo.balls_added_live == 0 and device.multiballs.room_1r_battle.balls_added_live == 0 and device.multiballs.twitch_bit_donation_multiball.balls_added_live == 0}: bridge_enable_skillshot
 
 variable_player:

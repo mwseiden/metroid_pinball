@@ -72,6 +72,15 @@ timers:
     control_events:
       - event: room_1m_test_lock
         action: restart
+  room_1m_keep_ball_locked:
+    start_value: 1
+    end_value: 10
+    tick_interval: 0.1s
+    control_events:
+      - event: room_1m_keep_ball_captured
+        action: restart
+      - event: room_1m_generator_started
+        action: stop
 
 multiballs:
   room_1m_generator_multiball:
@@ -160,6 +169,17 @@ sound_player:
   room_1m_ball_locked: shoot_the_drop_target
   room_1m_add_charge: room_1m_charge
 
+coil_player:
+  room_1m_keep_ball_captured:
+    c_vuk:
+      action: enable
+  timer_room_1m_keep_ball_locked_complete:
+    c_vuk:
+      action: disable
+  ball_ending:
+    c_vuk:
+      action: disable
+
 event_player:
   mode_room_1m_generator_started:
     cmd_backbox_show:
@@ -180,11 +200,11 @@ event_player:
   timer_room_1m_test_ball_locked_complete{device.switches.s_behind_drop_1.state}: room_1m_ball_locked, cmd_drop_three_down
   timer_room_1m_test_ball_locked_complete{not device.switches.s_behind_drop_1.state}: room_1m_ball_released, cmd_drop_three_up, cmd_drop_one_down
   multiball_room_1m_generator_multiball_ended: cmd_drop_one_down, room_1m_stage_2
-  drop_target_drop_one_down{device.multiballs.room_1m_generator_multiball.balls_added_live > 0 and player.room_1m_captured > 0}: cmd_drop_one_up
+  drop_target_drop_one_down{device.multiballs.room_1m_generator_multiball.balls_added_live > 0 and current_player.room_1m_captured > 0}: cmd_drop_one_up
   s_vuk_active: room_1m_ball_released, cmd_drop_one_down, cmd_drop_three_up
   s_vuk_active{current_player.room_1m_captured > 0}: room_1m_add_big_charge
-  s_behind_drop_2_active{current_player.room_1m_captured > 0}: room_1m_add_charge
-  s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_charge
+  s_behind_drop_2_active{current_player.room_1m_captured > 0}: room_1m_add_charge, room_1m_keep_ball_captured
+  s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_charge, room_1m_keep_ball_captured
   room_1m_generator_captive_shot_hit: room_1m_add_charge
   room_1m_start_generator_shot_hit: room_1m_generator_bootup
   room_1m_generator_started:

@@ -1,0 +1,129 @@
+#config_version=5
+
+#https://commons.wikimedia.org/wiki/File:Firefly_bioluminescence.gif
+
+mode:
+  start_events: room_1v_continue, room_1v_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1t_enter, room_1y_enter
+  priority: 300
+
+shot_profiles:
+  room_1v_fireflea_1:
+    states:
+    - name: lit
+      show: room_1v_missile_bank_flea
+      loops: -1
+      speed: 60
+      priority: 10
+  room_1v_fireflea_2:
+    states:
+    - name: lit
+      show: room_1v_miniboss_bank_flea
+      loops: -1
+      speed: 60
+      priority: 10
+
+shots:
+  room_1v_exit_north_shot:
+    switches: s_vuk
+    profile: exit_door
+    enable_events: mode_room_1v_fireflea_started
+    disable_events: room_1v_exit_north_shot_hit
+    reset_events: room_1v_exit_north_shot_hit
+    show_tokens:
+      led: gi_strip_9
+      color: door_blue
+  room_1v_exit_south_shot:
+    switch: s_left_passage
+    profile: exit_door
+    enable_events: mode_room_1v_fireflea_started
+    disable_events: room_1v_exit_south_shot_hit
+    reset_events: room_1v_exit_south_shot_hit
+    show_tokens:
+      led: led_enter_secret_passage
+      color: door_blue
+  room_1v_flea_1_shot:
+    switch: s_missile_bank_1, s_missile_bank_2, s_missile_bank_3
+    profile: room_1v_fireflea_1
+    enable_events: mode_room_1v_fireflea_started
+    reset_events: room_1v_flea_1_shot_hit
+    disable_events: room_1v_flea_1_shot_hit
+  room_1v_flea_2_shot:
+    switch: s_purple_1, s_purple_2, s_purple_3
+    profile: room_1v_fireflea_2
+    enable_events: mode_room_1v_fireflea_started
+    reset_events: room_1v_flea_2_shot_hit
+    disable_events: room_1v_flea_2_shot_hit
+
+slides:
+  room_1v_fireflea_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1v_fireflea_backglass
+    transition: fade
+    transition_out: fade
+  room_1v_fireflea_splash_slide:
+    widgets:
+      - type: image
+        image: room_1v_fireflea_splash
+
+slide_player:
+  mode_room_1v_fireflea_started:
+    room_1v_fireflea_backglass_slide:
+      target: backglass
+    room_1v_fireflea_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_1v_fireflea_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: off
+        color2: 'FFFFFF'
+    small_theater_chase:
+      key: room_1v_exit_north_show
+      loops: -1
+      speed: 6
+      priority: 50
+      show_tokens:
+        color: door_blue
+        led_1: led_drop_1
+        led_2: gi_back_right
+        led_3: led_drop_2
+        led_4: gi_back_right
+        led_5: led_drop_3
+        led_6: gi_back_right
+  show_mode_status_report:
+    room_1v_fireflea_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1v_fireflea_status_report:
+      action: stop
+
+event_player:
+  mode_room_1v_fireflea_started:
+    cmd_backbox_show:
+      show_type: twinkle
+      background_color: "000000"
+      twinkle_color: "FFFF00"
+      twinkle_count: 4
+      steps: 25
+    drop_targets_continue:
+    cmd_map_position:
+      room: '1v'
+      visit: True
+  room_1v_exit_north_shot_hit.1: drop_targets_save
+  room_1v_exit_north_shot_hit.2: room_1t_enter
+  room_1v_exit_south_shot_hit.1: drop_targets_save
+  room_1v_exit_south_shot_hit.2: room_1y_enter
+
+variable_player:
+  mode_room_1v_fireflea_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 1v
+      action: set

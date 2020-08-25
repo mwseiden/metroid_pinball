@@ -1,0 +1,75 @@
+#config_version=5
+
+mode:
+  start_events: room_1x_continue, room_1x_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended
+  priority: 300
+
+animations:
+  room_1x_kraid_standard:
+    - property: x
+      value: 150
+      relative: true
+      duration: 3.0s
+    - property: x
+      value: -150
+      relative: true
+      duration: 3.0s
+      repeat: true
+
+slides:
+  room_1x_kraid_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1x_kraid_backglass
+        animations:
+          show_slide: room_1x_kraid_standard
+    transition: fade
+    transition_out: fade
+  room_1x_kraid_splash_slide:
+    widgets:
+      - type: image
+        image: room_1x_kraid_splash
+
+slide_player:
+  mode_room_1x_kraid_started:
+    room_1x_kraid_backglass_slide:
+      target: backglass
+    room_1x_kraid_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_1x_kraid_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: '00C0FF'
+        color2: '808080'
+  show_mode_status_report:
+    room_1x_kraid_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1x_kraid_status_report:
+      action: stop
+
+event_player:
+  mode_room_1x_kraid_started:
+    cmd_backbox_show:
+      show_type: spectrum
+      color1: '000000'
+      color2: '001820'
+      color3: '000000'
+    drop_targets_continue:
+    cmd_map_position:
+      room: '1x'
+      visit: True
+
+variable_player:
+  mode_room_1x_kraid_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 1x
+      action: set

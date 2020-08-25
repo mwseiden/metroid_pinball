@@ -1,0 +1,82 @@
+#config_version=5
+
+mode:
+  start_events: room_1o_continue, room_1o_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1p_enter
+  priority: 300
+
+shots:
+  room_1o_exit_east_shot:
+    hit_events: right_orbit_hit
+    profile: exit_door
+    enable_events: mode_room_1o_artillery_started
+    disable_events: room_1o_exit_east_shot_hit
+    reset_events: room_1o_exit_east_shot_hit
+    show_tokens:
+      led: led_enter_right_orbit
+      color: door_blue
+
+slides:
+  room_1o_artillery_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1o_artillery_backglass
+    transition: fade
+    transition_out: fade
+  room_1o_artillery_backglass_powered_slide:
+    widgets:
+      - type: image
+        image: room_1o_artillery_backglass_powered
+    transition: fade
+    transition_out: fade
+  room_1o_artillery_splash_slide:
+    widgets:
+      - type: image
+        image: room_1o_artillery_splash
+
+slide_player:
+  mode_room_1o_artillery_started_no_charge:
+    room_1o_artillery_backglass_slide:
+      target: backglass
+  mode_room_1o_artillery_started_charge:
+    room_1o_artillery_backglass_powered_slide:
+      target: backglass
+    room_1o_artillery_splash_slide:
+      target: dmd
+      expire: 1.5s
+
+show_player:
+  mode_room_1o_artillery_started:
+    gi_solid_with_overhead:
+      loops: -1
+      show_tokens:
+        color: '808080'
+        color2: '808080'
+  show_mode_status_report:
+    room_1o_artillery_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1o_artillery_status_report:
+      action: stop
+
+event_player:
+  mode_room_1o_artillery_started:
+    cmd_backbox_show:
+      show_type: fire
+    drop_targets_continue:
+    cmd_map_position:
+      room: '1o'
+      visit: True
+  mode_room_1o_artillery_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1o_artillery_started_no_charge
+  mode_room_1o_artillery_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1o_artillery_started_charge
+  room_1o_exit_east_shot_hit.1: drop_targets_save
+  room_1o_exit_east_shot_hit.2: room_1p_enter
+
+variable_player:
+  mode_room_1o_artillery_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 1o
+      action: set

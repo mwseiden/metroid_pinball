@@ -79,6 +79,26 @@ show_player:
       priority: 10000
       speed: 30
 
+sounds:
+  lanes_already_collected:
+    file: lanes_already_collected.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.85
+    max_queue_time: None
+  lanes_collected:
+    file: lanes_collected.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.85
+    max_queue_time: None
+
+sound_player:
+  lanes_shot_group_lit_hit: lanes_already_collected
+  lanes_shot_group_unlit_hit: lanes_collected
+
 event_player:
   mode_lanes_starting: lanes_disable_ball_save
   left_ballsave_shot_hit: lanes_check_kickbacks

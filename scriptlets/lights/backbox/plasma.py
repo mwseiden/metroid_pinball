@@ -4,7 +4,7 @@ from mpf.core.rgb_color import RGBColor
 from .dynamic_backbox_show import DynamicBackBoxShow
 
 class Plasma(DynamicBackBoxShow):
-    def __init__(self, machine, colors, decay_r, decay_g, decay_b):
+    def __init__(self, machine, colors, decay_r, decay_g, decay_b, repeat, invert):
         super().__init__(machine)
         self.colors = colors
 
@@ -12,16 +12,35 @@ class Plasma(DynamicBackBoxShow):
         self.decay_g = decay_g
         self.decay_b = decay_b
 
+        self.invert = invert
+
+        if repeat == -1:
+            self.repeat = None
+        else:
+            self.repeat = repeat
+
     def animate(self):
         super().animate()
 
-        for strip in self.strips:
-            strip.set_color(strip.size - 1, choice(self.colors))
+        if self.repeat != None and self.frame % 30 == 0:
+            self.repeat = self.repeat - 1
 
-            for light_index in reversed(range(1, strip.size)):
-                strip.set_color(light_index - 1, self._decay_colors(strip.get_color(light_index), strip.get_color(light_index - 1)))
+        for strip in self.strips:
+            if self.invert:
+                strip.set_color(0, choice(self.colors))
+
+                for light_index in reversed(range(0, strip.size - 1)):
+                    strip.set_color(light_index + 1, self._decay_colors(strip.get_color(light_index), strip.get_color(light_index + 1)))
+            else:
+                strip.set_color(strip.size - 1, choice(self.colors))
+
+                for light_index in reversed(range(1, strip.size)):
+                    strip.set_color(light_index - 1, self._decay_colors(strip.get_color(light_index), strip.get_color(light_index - 1)))
 
             strip.set_color(0, self._decay_colors(strip.get_color(0), self.OFF_COLOR))
+
+    def is_finished(self):
+        return self.repeat != None and self.repeat < 0
 
     def _decay_colors(self, a, b):
         r1, g1, b1 = a.rgb
