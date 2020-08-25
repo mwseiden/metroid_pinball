@@ -27,6 +27,9 @@ switches:
       debounce_open: 10
   s_drop_target_1:
     number: 0-6
+    platform_settings:
+      debounce_close: 20
+      debounce_open: 20
   s_thin_orange:
     number: 0-7
     tags: playfield_active
@@ -59,8 +62,14 @@ switches:
     type: NC
   s_drop_target_2:
     number: 0-14
+    platform_settings:
+      debounce_close: 20
+      debounce_open: 20
   s_drop_target_3:
     number: 0-15
+    platform_settings:
+      debounce_close: 20
+      debounce_open: 20
   s_lower_right_bank_1:
     number: 1-0
     ignore_window_ms: 100
