@@ -113,6 +113,9 @@ show_player:
       events_when_completed: skillshot_monitor_should_end
 
 event_player:
+  mode_skillshot_started.1: drop_target_mode_should_end
+  mode_skillshot_started.2: cmd_drop_all_drops
+  mode_skillshot_started.3: skillshot_drops_should_start
   skillshot_unused_shot_group_hit: skillshot_stage_one_end
   skillshot_drops_made_1: skillshot_stage_one_end
   skillshot_drops_made_2: skillshot_stage_one_end
