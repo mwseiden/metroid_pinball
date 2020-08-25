@@ -29,6 +29,8 @@ timers:
     end_value: 2
     tick_interval: .25s
     control_events:
+      - event: mode_skillshot_drops_stopping
+        action: reset
       - event: mode_skillshot_drops_started
         action: restart
   skillshot_drops_first_up:
