@@ -35,7 +35,7 @@ timers:
     end_value: 2
     tick_interval: 1s
     control_events:
-      - event: timer_skillshot_drops_reset_all_stopped
+      - event: timer_skillshot_drops_reset_all_complete
         action: restart
       - event: timer_skillshot_drops_third_down_stopped
         action: restart
