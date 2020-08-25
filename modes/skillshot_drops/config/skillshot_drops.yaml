@@ -11,7 +11,6 @@ shots:
     disable_events:
       - timer_skillshot_drops_first_up_stopped
       - mode_skillshot_drops_started
-      - timer_skillshot_drops_reset_all_started
   skillshot_drops_two:
     switch: s_drop_target_2
     enable_events: skillshot_drops_enable_2
@@ -30,10 +29,8 @@ timers:
     end_value: 2
     tick_interval: .25s
     control_events:
-      - event: skillshot_drops_start_initial_timer
+      - event: mode_skillshot_drops_started
         action: restart
-      - event: mode_skillshot_drops_stopping
-        action: reset
   skillshot_drops_first_up:
     end_value: 2
     tick_interval: 1s
@@ -135,9 +132,8 @@ sound_player:
   skillshot_drops_made_3: skillshot
 
 event_player:
-  mode_skillshot_drops_started.1: drop_target_mode_should_end, cmd_drop_all_drops
-  mode_skillshot_drops_started.2: skillshot_drops_start_initial_timer
-  # timer_skillshot_drops_reset_all_started: cmd_drop_all_drops
+  mode_skillshot_drops_started: drop_target_mode_should_end
+  timer_skillshot_drops_reset_all_started: cmd_drop_all_drops
   timer_skillshot_drops_first_up_started: cmd_drop_one_up, skillshot_drops_1_should_enable
   timer_skillshot_drops_first_down_started: cmd_drop_one_down
   timer_skillshot_drops_second_up_started: cmd_drop_two_up, skillshot_drops_2_should_enable
