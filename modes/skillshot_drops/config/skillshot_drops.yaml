@@ -1,6 +1,6 @@
 #config_version=5
 mode:
-  start_events: skillshot_drops_should_start
+  start_events: skillshot_should_start
   stop_events: skillshot_stage_one_end
   priority: 500
 
@@ -132,8 +132,8 @@ sound_player:
   skillshot_drops_made_3: skillshot
 
 event_player:
-  #mode_skillshot_drops_started: drop_target_mode_should_end
-  #timer_skillshot_drops_reset_all_started: cmd_drop_all_drops
+  mode_skillshot_drops_started: drop_target_mode_should_end
+  timer_skillshot_drops_reset_all_started: cmd_drop_all_drops
   timer_skillshot_drops_first_up_started: cmd_drop_one_up, skillshot_drops_1_should_enable
   timer_skillshot_drops_first_down_started: cmd_drop_one_down
   timer_skillshot_drops_second_up_started: cmd_drop_two_up, skillshot_drops_2_should_enable
