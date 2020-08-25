@@ -26,11 +26,13 @@ shots:
 
 timers:
   skillshot_drops_reset_all:
-    end_value: 2
+    end_value: 3
     tick_interval: .25s
     control_events:
-      - event: mode_skillshot_drops_started
+      - event: skillshot_drops_start_reset
         action: restart
+      - event: mode_skillshot_drops_started
+        action: stop
   skillshot_drops_first_up:
     end_value: 2
     tick_interval: 1s
@@ -132,7 +134,9 @@ sound_player:
   skillshot_drops_made_3: skillshot
 
 event_player:
-  mode_skillshot_drops_started: drop_target_mode_should_end
+  mode_skillshot_drops_started:
+    - drop_target_mode_should_end
+    - skillshot_drops_start_reset
   timer_skillshot_drops_reset_all_started: cmd_drop_all_drops
   timer_skillshot_drops_first_up_started: cmd_drop_one_up, skillshot_drops_1_should_enable
   timer_skillshot_drops_first_down_started: cmd_drop_one_down
