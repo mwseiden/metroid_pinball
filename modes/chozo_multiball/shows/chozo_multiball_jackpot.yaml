@@ -15,7 +15,7 @@
         style: dmd_big
         y: 16
       - type: text
-        text: Super Jackpot Value: (player|chozo_multiball_jackpot_progress)
+        text: Super Jackpot Value Now (player|chozo_multiball_jackpot_progress)
         color: orange
         style: dmd_small
         y: 4
