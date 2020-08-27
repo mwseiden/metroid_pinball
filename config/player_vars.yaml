@@ -27,6 +27,8 @@ player_vars:
     initial_value: 0
   chozo_multiballs:
     initial_value: 0
+  chozo_multiball_last_jackpot_score:
+    initial_value: 0
   continue_room:
     value_type: str
     initial_value: 1b
