@@ -149,7 +149,9 @@ show_player:
       show_tokens:
         led: led_captive_ball
         color: 'ff0000'
-  chozo_multiball_show_jackpot_slide: chozo_multiball_jackpot
+  chozo_multiball_show_jackpot_slide:
+    chozo_multiball_jackpot:
+      loops: 0
 
 variable_player:
   logicblock_captive_ball_counter_updated:
