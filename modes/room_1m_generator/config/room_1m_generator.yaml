@@ -209,6 +209,8 @@ event_player:
   room_1m_start_generator_shot_hit: room_1m_generator_bootup
   room_1m_generator_started:
     room_1m_stage_3:
+    chozo_multiball_enable:
+    drop_target_mode_should_start:
     cmd_map_complete:
       room: '1m'
   room_1m_add_charge:
