@@ -61,7 +61,7 @@ slides:
       anchor_x: right
       x: 128
     - type: text
-      text: Player (player|number)
+      text: Player (player|number)   Ball (player|ball)
       color: "FF6030"
       y: 3
       style: dmd_small
