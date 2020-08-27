@@ -428,7 +428,11 @@ slide_player:
     room_1r_score_slide:
       target: dmd
       action: remove
-
+  logicblock_room_1r_battle_sequence_complete:
+    room_1r_score_slide:
+      target: dmd
+      action: remove
+  
 sounds:
   room_1r_pirate_defeated:
     file: room_1r_pirate_defeated.wav
