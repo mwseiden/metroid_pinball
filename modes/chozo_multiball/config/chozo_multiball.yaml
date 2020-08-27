@@ -152,6 +152,10 @@ show_player:
   chozo_multiball_show_jackpot_slide:
     chozo_multiball_jackpot:
       loops: 0
+  chozo_multiball_show_super_jackpot_slide:
+    chozo_multiball_super_jackpot_lights:
+      loops: 0
+      speed: 47
 
 variable_player:
   logicblock_captive_ball_counter_updated:
@@ -207,7 +211,7 @@ event_player:
   mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 1}: chozo_multiball_light_stage_4
   multiball_chozo_ended: chozo_multiball_light_stage_1, drop_target_mode_should_start
   chozo_multiball_bashed: chozo_multiball_light_stage_0
-  chozo_multiball_jackpot_collect_shot_hit: chozo_multiball_reset_jackpot
+  chozo_multiball_jackpot_collect_shot_hit: chozo_multiball_reset_jackpot, chozo_multiball_show_super_jackpot_slide
   logicblock_captive_ball_counter_updated{value > 3 and not completed and enabled}: chozo_multiball_light_stage_1
   logicblock_captive_ball_counter_updated{value == 3}: chozo_multiball_light_stage_2
   logicblock_captive_ball_counter_updated{value == 2}: chozo_multiball_light_stage_3

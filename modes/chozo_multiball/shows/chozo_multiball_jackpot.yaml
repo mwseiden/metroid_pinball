@@ -13,7 +13,7 @@
         text: (player|chozo_multiball_last_jackpot_score)
         color: white
         style: dmd_big
-        y: 17
+        y: 15
       - type: text
         text: Super Now (player|chozo_multiball_jackpot_progress)
         color: orange
