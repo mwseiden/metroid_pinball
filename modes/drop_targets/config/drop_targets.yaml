@@ -13,6 +13,12 @@ event_player:
   drop_targets_start_one: cmd_drop_one_up, drop_targets_enable_shot_1
   drop_targets_start_two: cmd_drop_two_up, drop_targets_enable_shot_2
   drop_targets_start_three: cmd_drop_three_up, drop_targets_enable_shot_3
+  drop_1_shot_hit: drop_targets_1_is_down
+  drop_targets_start_down_show_1: drop_targets_1_is_down
+  drop_2_shot_hit: drop_targets_2_is_down
+  drop_targets_start_down_show_2: drop_targets_2_is_down
+  drop_3_shot_hit: drop_targets_3_is_down
+  drop_targets_start_down_show_3: drop_targets_3_is_down
 
 shot_profiles:
   drop_target_hit_me:
@@ -148,7 +154,7 @@ show_player:
       show_tokens:
         led: led_drop_3
         color: "0000FF"
-  drop_targets_start_down_show_1:
+  drop_targets_1_is_down:
     fade_one_light:
       key: drop_target_1_down_show
       loops: -1
@@ -159,7 +165,7 @@ show_player:
     fade_one_light:
       key: drop_target_1_down_show
       action: stop
-  drop_targets_start_down_show_2:
+  drop_targets_2_is_down:
     fade_one_light:
       key: drop_target_2_down_show
       loops: -1
@@ -170,7 +176,7 @@ show_player:
     fade_one_light:
       key: drop_target_2_down_show
       action: stop
-  drop_targets_start_down_show_3:
+  drop_targets_3_is_down:
     fade_one_light:
       key: drop_target_3_down_show
       loops: -1
