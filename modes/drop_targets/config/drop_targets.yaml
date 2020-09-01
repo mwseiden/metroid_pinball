@@ -126,6 +126,7 @@ show_player:
       key: drop_targets_1_down_blinking
       loops: 5
       speed: 10
+      priority: 10
       show_tokens:
         led: led_drop_1
         color: "0000FF"
@@ -134,6 +135,7 @@ show_player:
       key: drop_targets_2_down_blinking
       loops: 5
       speed: 10
+      priority: 10
       show_tokens:
         led: led_drop_2
         color: "0000FF"
@@ -142,6 +144,7 @@ show_player:
       key: drop_targets_3_down_blinking
       loops: 5
       speed: 10
+      priority: 10
       show_tokens:
         led: led_drop_3
         color: "0000FF"
@@ -152,7 +155,7 @@ show_player:
       show_tokens:
         led: led_drop_1
         color: drop_target_cannot_hit
-  drop_targets_start_one:
+  drop_targets_enable_shot_1:
     fade_one_light:
       key: drop_target_1_down_show
       action: stop
@@ -163,7 +166,7 @@ show_player:
       show_tokens:
         led: led_drop_2
         color: drop_target_cannot_hit
-  drop_targets_start_two:
+  drop_targets_enable_shot_2:
     fade_one_light:
       key: drop_target_2_down_show
       action: stop
@@ -174,7 +177,7 @@ show_player:
       show_tokens:
         led: led_drop_3
         color: drop_target_cannot_hit
-  drop_targets_start_three:
+  drop_targets_enable_shot_3:
     fade_one_light:
       key: drop_target_3_down_show
       action: stop
