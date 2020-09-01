@@ -158,21 +158,21 @@ show_player:
   drop_1_shot_hit:
     single_fire:
       speed: 40
-      loops: 1
+      loops: 0
       priority: 300
       show_tokens:
         led: led_drop_1
   drop_2_shot_hit:
     single_fire:
       speed: 40
-      loops: 1
+      loops: 0
       priority: 300
       show_tokens:
         led: led_drop_2
   drop_3_shot_hit:
     single_fire:
       speed: 40
-      loops: 1
+      loops: 0
       priority: 300
       show_tokens:
         led: led_drop_3
