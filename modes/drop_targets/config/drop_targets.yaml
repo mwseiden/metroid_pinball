@@ -27,7 +27,6 @@ shot_profiles:
         show: fade_one_light
         sync_ms: 4000
 
-
 shots:
   drop_1_shot:
     hit_events: drop_target_drop_one_down
@@ -156,6 +155,27 @@ show_player:
       show_tokens:
         led: led_drop_3
         color: "0000FF"
+  drop_1_shot_hit:
+    single_fire:
+      speed: 40
+      loops: 1
+      priority: 300
+      show_tokens:
+        led: led_drop_1
+  drop_2_shot_hit:
+    single_fire:
+      speed: 40
+      loops: 1
+      priority: 300
+      show_tokens:
+        led: led_drop_2
+  drop_3_shot_hit:
+    single_fire:
+      speed: 40
+      loops: 1
+      priority: 300
+      show_tokens:
+        led: led_drop_3
   drop_targets_1_is_down:
     fade_one_light:
       key: drop_target_1_down_show
