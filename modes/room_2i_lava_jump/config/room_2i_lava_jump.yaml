@@ -20,21 +20,25 @@ shots:
     profile: lava_jump_blink
     show_tokens:
       led: led_enter_secret_passage
+      color: '8F0000'
   lava_jump_second_shot:
     switch: s_orbit_l
     profile: lava_jump_blink
     show_tokens:
       led: led_enter_left_orbit
+      color: '8F0000'
   lava_jump_third_shot:
     switch: s_ramp_enter
     profile: lava_jump_blink
     show_tokens:
       led: led_enter_ramp
+      color: '8F0000'
   lava_jump_fourth_shot:
     switch: s_orbit_r
     profile: lava_jump_blink
     show_tokens:
       led: led_enter_right_orbit
+      color: '8F0000'
   lava_jump_jackpot_shot:
     switch: s_side_ramp_made
     profile: lava_jump_blink
@@ -43,6 +47,7 @@ shots:
     reset_events: lava_jump_jackpot_shot_hit
     show_tokens:
       led: led_enter_side_ramp
+      color: '8F0000'
   room_2i_exit_east_shot:
     hit_events: rollover_shot_hit
     profile: exit_door
@@ -76,11 +81,13 @@ shot_profiles:
     rotation_pattern: r, r, r, r
     states:
     - name: unlit
+      show: blink_light
+      loops: -1
+      speed: 10
+    - name: lit
       show: single_fire
       loops: -1
-      speed: 40
-    - name: lit
-      show: led_color
+      speed: 20
 
 shot_groups:
   lava_jump_initial_shots:
