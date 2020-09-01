@@ -25,6 +25,8 @@ shot_profiles:
     states:
       - name: lit
         show: fade_one_light
+        sync_ms: 4000
+
 
 shots:
   drop_1_shot:
@@ -158,6 +160,7 @@ show_player:
     fade_one_light:
       key: drop_target_1_down_show
       loops: -1
+      sync_ms: 4000
       show_tokens:
         led: led_drop_1
         color: drop_target_cannot_hit
@@ -169,6 +172,7 @@ show_player:
     fade_one_light:
       key: drop_target_2_down_show
       loops: -1
+      sync_ms: 4000
       show_tokens:
         led: led_drop_2
         color: drop_target_cannot_hit
@@ -180,6 +184,7 @@ show_player:
     fade_one_light:
       key: drop_target_3_down_show
       loops: -1
+      sync_ms: 4000
       show_tokens:
         led: led_drop_3
         color: drop_target_cannot_hit

@@ -9,5 +9,5 @@ named_colors:
   dmd_orange: 'E67300'
   dmd_blue: '009cff'
   drop_target_can_hit: '96ff00'
-  drop_target_cannot_hit: '80FF80'
+  drop_target_cannot_hit: 'c70073'
 
