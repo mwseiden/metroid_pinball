@@ -145,6 +145,39 @@ show_player:
       show_tokens:
         led: led_drop_3
         color: "0000FF"
+  drop_target_drop_one_down:
+    fade_one_light:
+      key: drop_target_1_down_show
+      loops: -1
+      show_tokens:
+        led: led_drop_1
+        color: drop_target_cannot_hit
+  drop_targets_start_one:
+    fade_one_light:
+      key: drop_target_1_down_show
+      action: stop
+  drop_target_drop_two_down:
+    fade_one_light:
+      key: drop_target_2_down_show
+      loops: -1
+      show_tokens:
+        led: led_drop_2
+        color: drop_target_cannot_hit
+  drop_targets_start_two:
+    fade_one_light:
+      key: drop_target_2_down_show
+      action: stop
+  drop_target_drop_three_down:
+    fade_one_light:
+      key: drop_target_3_down_show
+      loops: -1
+      show_tokens:
+        led: led_drop_3
+        color: drop_target_cannot_hit
+  drop_targets_start_three:
+    fade_one_light:
+      key: drop_target_3_down_show
+      action: stop
 
 variable_player:
   drop_1_shot_hit:
