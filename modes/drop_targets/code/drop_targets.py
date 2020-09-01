@@ -21,6 +21,15 @@ class DropTargets(Mode):
         self.machine.events.post('drop_targets_start_two' if pattern[1] == 'U' else 'cmd_drop_two_down')
         self.machine.events.post('drop_targets_start_three' if pattern[2] == 'U' else 'cmd_drop_three_down')
 
+        if pattern[0] == 'D':
+            self.machine.events.post('drop_targets_start_down_show_1')
+
+        if pattern[1] == 'D':
+            self.machine.events.post('drop_targets_start_down_show_2')
+
+        if pattern[2] == 'D':
+            self.machine.events.post('drop_targets_start_down_show_3')
+
     def event_save_drop_state(self, **kwargs):
         player = self.machine.game.player
         player['drops_{}'.format(player['continue_room'])] = self.drop_status('drop_one') + self.drop_status('drop_two') + self.drop_status('drop_three')

@@ -148,7 +148,7 @@ show_player:
       show_tokens:
         led: led_drop_3
         color: "0000FF"
-  drop_target_drop_one_down:
+  drop_targets_start_down_show_1:
     fade_one_light:
       key: drop_target_1_down_show
       loops: -1
@@ -159,7 +159,7 @@ show_player:
     fade_one_light:
       key: drop_target_1_down_show
       action: stop
-  drop_target_drop_two_down:
+  drop_targets_start_down_show_2:
     fade_one_light:
       key: drop_target_2_down_show
       loops: -1
@@ -170,7 +170,7 @@ show_player:
     fade_one_light:
       key: drop_target_2_down_show
       action: stop
-  drop_target_drop_three_down:
+  drop_targets_start_down_show_3:
     fade_one_light:
       key: drop_target_3_down_show
       loops: -1
