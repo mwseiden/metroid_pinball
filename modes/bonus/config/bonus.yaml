@@ -346,6 +346,20 @@ event_player:
       color8: "008000"
       decay_g: 2.0
       repeat: 4
+  bonus_rooms_completed:
+    bonus_sound_awarded:
+    cmd_backbox_show_overlay:
+      show_type: plasma
+      color1: "100000"
+      color2: "200000"
+      color3: "300000"
+      color4: "400000"
+      color5: "500000"
+      color6: "600000"
+      color7: "700000"
+      color8: "800000"
+      decay_r: 2.0
+      repeat: 4
   bonus_drop_targets:
     bonus_sound_awarded:
     cmd_backbox_show_overlay:
