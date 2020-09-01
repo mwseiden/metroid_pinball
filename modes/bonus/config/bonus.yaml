@@ -263,8 +263,9 @@ show_player:
       priority: 2000
   bonus_rooms_completed:
     gi_solid_with_overhead:
-      loops: -1
       key: bonus_lights
+      loops: -1
+      priority: 2000
       show_tokens:
         color: '00FF00'
         color2: '00FF00'
