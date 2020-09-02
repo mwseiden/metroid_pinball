@@ -1,21 +1,13 @@
 #config_version=5
 mode:
   code: bridge.Bridge
-  start_events: metroid_base_started
-  stop_events: metroid_base_ended
+  start_events: metroid_base_started, metroid_exclusive_ended
+  stop_events: metroid_base_ended, metroid_exclusive_started
   priority: 200
 
 shots:
   bridge_rail_shot:
     switch: s_top_lane_2
-
-#ball_holds:
-#  bridge_skillshot:
-#     balls_to_hold: 1
-#     hold_devices: bd_plunger
-#     reset_events: mode_bridge_started, whole_playfield_shot_group_hit, s_shooter_lane_inactive
-#     disable_events: mode_bridge_started, whole_playfield_shot_group_hit, s_shooter_lane_inactive
-#     enable_events: bridge_enable_skillshot
 
 timers:
   bridge_enable_coil_timer:

@@ -87,6 +87,7 @@ event_player:
       show_type: fire
       invert: True
     drop_targets_continue:
+    metroid_exclusive_started:
     cmd_map_position:
       room: '2q'
       visit: True
