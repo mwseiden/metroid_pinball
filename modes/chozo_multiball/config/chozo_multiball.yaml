@@ -155,7 +155,7 @@ show_player:
   chozo_multiball_show_super_jackpot_slide:
     chozo_multiball_super_jackpot_lights:
       loops: 0
-      speed: 47
+      speed: 20
 
 variable_player:
   logicblock_captive_ball_counter_updated:
