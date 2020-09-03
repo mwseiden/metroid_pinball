@@ -248,6 +248,9 @@ sound_player:
     music_norfair_deep_intro:
       action: stop
       fade_out: 1s
+    music_metal_item_room:
+      action: stop
+      fade_out: 1s
   room_2o_enter:
     music_norfair_calm:
       action: stop
