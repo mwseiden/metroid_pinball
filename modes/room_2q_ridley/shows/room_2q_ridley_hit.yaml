@@ -2,7 +2,7 @@
 
 - duration: 3s
   slides:
-    room_2q_ridley_status_slide_help:
+    room_2q_ridley_status_slide_hp:
       widgets:
       - type: Text
         text: Ridley HP: (player|boss_ridley_hp)
