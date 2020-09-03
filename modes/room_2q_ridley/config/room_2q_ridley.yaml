@@ -47,7 +47,7 @@ shots:
     profile: room_2q_strong_spot
     enable_events: mode_room_2q_ridley_battle
     disable_events: mode_room_2q_ridley_over
-s    show_tokens:
+    show_tokens:
       led: led_enter_scoop
       color: blue
   room_2q_boss_strong_secret_shot:
