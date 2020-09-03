@@ -18,6 +18,14 @@ shot_profiles:
         show: fade_one_light
 
 shots:
+  room_2q_exit_north_shot:
+    switch: s_ramp_enter
+    profile: exit_door
+    enable_events: mode_room_2q_ridley_over
+    disable_events: mode_room_1m_generator_started, mode_room_2q_ridley_battle
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
   room_2q_boss_weak_back_ramp_shot:
     switch: s_ramp_enter
     profile: room_2q_weak_spot
@@ -254,6 +262,8 @@ event_player:
   ridley_hit_weak{current_player.boss_ridley_hp <= 5}: room_2q_ridley_should_die
   room_2q_ridley_should_die: ridley_defeated
   ridley_defeated: mode_room_2q_ridley_over, metroid_exclusive_ended
+  room_2q_exit_north_shot_hit.1: drop_targets_save
+  room_2q_exit_north_shot_hit.2: room_2n_enter
 
 variable_player:
   mode_room_2q_ridley_started:
