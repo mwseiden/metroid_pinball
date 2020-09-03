@@ -5,6 +5,109 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2n_enter
   priority: 300
 
+shot_profiles:
+  room_2q_weak_spot:
+    states:
+      - name: lit
+        sync_ms: 4000
+        show: fade_one_light
+  room_2q_strong_spot:
+    states:
+      - name: lit
+        sync_ms: 4000
+        show: fade_one_light
+
+shots:
+  room_2q_boss_weak_back_ramp_shot:
+    switch: s_ramp_enter
+    profile: room_2q_weak_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_enter_ramp
+      color: red
+  room_2q_boss_weak_side_ramp_shot:
+    switch: s_side_ramp_made
+    profile: room_2q_weak_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_enter_side_ramp
+      color: red
+  room_2q_boss_strong_rollover_shot:
+    switch: s_rollover_button
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_rollover
+      color: blue
+  room_2q_boss_strong_scoop_shot:
+    switch: s_scoop
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+s    show_tokens:
+      led: led_enter_scoop
+      color: blue
+  room_2q_boss_strong_secret_shot:
+    switch: s_left_passage
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_enter_secret_passage
+      color: blue
+  room_2q_boss_strong_right_orbit_shot:
+    hit_events: right_orbit_hit
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_enter_right_orbit
+      color: blue
+  room_2q_boss_strong_left_orbit_shot:
+    hit_events: left_orbit_hit
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_enter_left_orbit
+      color: blue
+  room_2q_boss_strong_captive_shot:
+    switch: s_captive_ball
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_captive_ball
+      color: blue
+  room_2q_boss_strong_center_1_shot:
+    switch: s_purple_1
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_upgrade_bank_1
+      color: blue
+  room_2q_boss_weak_center_2_shot:
+    switch: s_purple_2
+    profile: room_2q_weak_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_upgrade_bank_2
+      color: red
+  room_2q_boss_strong_center_3_shot:
+    switch: s_purple_3
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_upgrade_bank_3
+      color: blue
+
+
 animations:
   room_2q_ridley_standard:
     - property: x
@@ -88,6 +191,7 @@ event_player:
       invert: True
     drop_targets_continue:
     metroid_exclusive_started:
+    mode_room_2q_ridley_battle:
     cmd_map_position:
       room: '2q'
       visit: True
