@@ -187,6 +187,10 @@ show_player:
     room_2q_ridley_hit_strong_lights:
       loops: 0
       speed: 40
+  ridley_hit_weak:
+    room_2q_ridley_hit_weak_lights:
+      loops: 0
+      speed: 40
 
 sounds:
   ridley_hit_strong:
@@ -195,9 +199,16 @@ sounds:
     track: sfx
     priority: 50
     max_queue_time: None
+  ridley_hit_weak:
+    file: ridley_hit_weak.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
 
 sound_player:
   ridley_hit_strong: ridley_hit_strong
+  ridley_hit_weak: ridley_hit_weak
 
 event_player:
   mode_room_2q_ridley_started:
@@ -213,6 +224,14 @@ event_player:
   room_2q_boss_weak_back_ramp_shot_hit: ridley_hit_strong
   room_2q_boss_weak_side_ramp_shot_hit: ridley_hit_strong
   room_2q_boss_weak_center_2_shot_hit: ridley_hit_strong
+  room_2q_boss_strong_rollover_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_scoop_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_secret_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_right_orbit_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_left_orbit_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_captive_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_center_1_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_center_3_shot_hit: ridley_hit_weak
 
 variable_player:
   mode_room_2q_ridley_started:
