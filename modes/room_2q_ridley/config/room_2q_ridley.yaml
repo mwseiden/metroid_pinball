@@ -232,6 +232,9 @@ event_player:
   room_2q_boss_strong_captive_shot_hit: ridley_hit_weak
   room_2q_boss_strong_center_1_shot_hit: ridley_hit_weak
   room_2q_boss_strong_center_3_shot_hit: ridley_hit_weak
+  ridley_hit_strong{current_player.boss_ridley_hp <= 10}: ridley_defeated
+  ridley_hit_weak{current_player.boss_ridley_hp <= 5}: ridley_defeated
+  ridley_defeated: mode_room_2q_ridley_over
 
 variable_player:
   mode_room_2q_ridley_started:
@@ -241,3 +244,7 @@ variable_player:
     continue_room:
       string: 2q
       action: set
+  ridley_hit_strong:
+    boss_ridley_hp: -10
+  ridley_hit_weak:
+    boss_ridley_hp: -5
