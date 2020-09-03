@@ -250,8 +250,9 @@ event_player:
   room_2q_boss_strong_captive_shot_hit: ridley_hit_weak
   room_2q_boss_strong_center_1_shot_hit: ridley_hit_weak
   room_2q_boss_strong_center_3_shot_hit: ridley_hit_weak
-  ridley_hit_strong{current_player.boss_ridley_hp <= 10}: ridley_defeated
-  ridley_hit_weak{current_player.boss_ridley_hp <= 5}: ridley_defeated
+  ridley_hit_strong{current_player.boss_ridley_hp <= 10}: room_2q_ridley_should_die
+  ridley_hit_weak{current_player.boss_ridley_hp <= 5}: room_2q_ridley_should_die
+  room_2q_ridley_should_die: ridley_defeated
   ridley_defeated: mode_room_2q_ridley_over, metroid_exclusive_ended
 
 variable_player:
