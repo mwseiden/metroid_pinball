@@ -187,10 +187,14 @@ show_player:
     room_2q_ridley_hit_strong_lights:
       loops: 0
       speed: 40
+    room_2q_ridley_hit:
+      loops: 0
   ridley_hit_weak:
     room_2q_ridley_hit_weak_lights:
       loops: 0
       speed: 40
+    room_2q_ridley_hit:
+      loops: 0
 
 sounds:
   ridley_hit_strong:
