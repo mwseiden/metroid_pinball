@@ -211,8 +211,8 @@ event_player:
       room: '2q'
       visit: True
   room_2q_boss_weak_back_ramp_shot_hit: ridley_hit_strong
-  room_2q_boss_weak_side_ramp_shot: ridley_hit_strong
-  room_2q_boss_weak_center_2_shot: ridley_hit_strong
+  room_2q_boss_weak_side_ramp_shot_hit: ridley_hit_strong
+  room_2q_boss_weak_center_2_shot_hit: ridley_hit_strong
 
 variable_player:
   mode_room_2q_ridley_started:
