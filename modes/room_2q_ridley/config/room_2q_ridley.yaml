@@ -183,6 +183,21 @@ show_player:
   flipper_cradle_release:
     room_2q_ridley_status_report:
       action: stop
+  ridley_hit_strong:
+    room_2q_ridley_hit_strong_lights:
+      loops: 0
+      speed: 40
+
+sounds:
+  ridley_hit_strong:
+    file: ridley_hit_strong.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_player:
+  ridley_hit_strong: ridley_hit_strong
 
 event_player:
   mode_room_2q_ridley_started:
@@ -195,6 +210,9 @@ event_player:
     cmd_map_position:
       room: '2q'
       visit: True
+  room_2q_boss_weak_back_ramp_shot_hit: ridley_hit_strong
+  room_2q_boss_weak_side_ramp_shot: ridley_hit_strong
+  room_2q_boss_weak_center_2_shot: ridley_hit_strong
 
 variable_player:
   mode_room_2q_ridley_started:
