@@ -66,7 +66,8 @@ sound_player:
   mode_room_2n_magma_chamber_started{machine.next_game_acapella == 0}: music_norfair_deep
   mode_room_2o_strange_ruins_started{machine.next_game_acapella == 0}: music_norfair_deep_intro
   mode_room_2p_east_hot_springs_started{machine.next_game_acapella == 0}: music_norfair_deep
-  mode_room_2q_ridley_started{machine.next_game_acapella == 0}: music_boss
+  mode_room_2q_ridley_started{machine.next_game_acapella == 0 and current_player.boss_ridley_hp > 0}: music_boss
+  mode_room_2q_ridley_started{machine.next_game_acapella == 0 and current_player.boss_ridley_hp < 1}: music_metal_item_room
 
   ridley_defeated:
     music_boss:

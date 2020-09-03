@@ -234,11 +234,11 @@ event_player:
       show_type: fire
       invert: True
     drop_targets_continue:
-    metroid_exclusive_started:
-    mode_room_2q_ridley_battle:
     cmd_map_position:
       room: '2q'
       visit: True
+  mode_room_2q_ridley_started{current_player.boss_ridley_hp < 1}: mode_room_2q_ridley_over
+  mode_room_2q_ridley_started{current_player.boss_ridley_hp > 0}: mode_room_2q_ridley_battle, metroid_exclusive_started
   room_2q_boss_weak_back_ramp_shot_hit: ridley_hit_strong
   room_2q_boss_weak_side_ramp_shot_hit: ridley_hit_strong
   room_2q_boss_weak_center_2_shot_hit: ridley_hit_strong
@@ -252,7 +252,7 @@ event_player:
   room_2q_boss_strong_center_3_shot_hit: ridley_hit_weak
   ridley_hit_strong{current_player.boss_ridley_hp <= 10}: ridley_defeated
   ridley_hit_weak{current_player.boss_ridley_hp <= 5}: ridley_defeated
-  ridley_defeated: mode_room_2q_ridley_over
+  ridley_defeated: mode_room_2q_ridley_over, metroid_exclusive_ended
 
 variable_player:
   mode_room_2q_ridley_started:
