@@ -159,18 +159,32 @@ slides:
           show_slide: room_2g_draygon_standard
     transition: fade
     transition_out: fade
+  room_2q_ridley_backglass_defeated_slide:
+    widgets:
+      - type: image
+        image: room_2q_ridley_backglass
+        x: 280
+        y: 690
+    transition: fade
+    transition_out: fade
   room_2q_ridley_splash_slide:
     widgets:
       - type: image
         image: room_2q_ridley_splash
 
 slide_player:
-  mode_room_2q_ridley_started:
+  mode_room_2q_ridley_battle:
     room_2q_ridley_backglass_slide:
       target: backglass
     room_2q_ridley_splash_slide:
       target: dmd
       expire: 1.5s
+  mode_room_2q_ridley_over:
+    room_2q_ridley_backglass_slide:
+      target: backglass
+      action: remove
+    room_2q_ridley_backglass_defeated_slide:
+      target: backglass
 
 show_player:
   mode_room_2q_ridley_started:

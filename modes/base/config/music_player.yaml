@@ -68,6 +68,14 @@ sound_player:
   mode_room_2p_east_hot_springs_started{machine.next_game_acapella == 0}: music_norfair_deep
   mode_room_2q_ridley_started{machine.next_game_acapella == 0}: music_boss
 
+  ridley_defeated:
+    music_boss:
+      action: stop
+      fade_out: 1s
+    music_metal_item_room:
+      action: play
+      fade_in: 2s
+
   room_2a_sink_into_sand:
     music_maridia_intro:
       action: stop
