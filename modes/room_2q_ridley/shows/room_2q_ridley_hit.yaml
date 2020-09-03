@@ -5,6 +5,6 @@
     room_2q_ridley_status_slide_hp:
       widgets:
       - type: Text
-        text: Ridley HP: (player|boss_ridley_hp)
+        text: Ridley HP - (player|boss_ridley_hp)
         color: red
         style: dmd_med
