@@ -5,7 +5,7 @@
 
 mode:
   start_events: room_1j_continue, room_1j_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1i_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1i_enter, room_1j_exit
   priority: 300
 
 animations:

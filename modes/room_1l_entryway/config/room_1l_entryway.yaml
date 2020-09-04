@@ -1,7 +1,7 @@
 #config_version=5
 mode:
     start_events: select_landing_site_wrecked_ship_selected, room_1l_continue, room_1l_enter
-    stop_events: game_ending, ball_ending, metroid_base_ended, room_1m_enter, room_1d_enter, room_1n_enter, room_1k_enter
+    stop_events: game_ending, ball_ending, metroid_base_ended, room_1m_enter, room_1d_enter, room_1n_enter, room_1k_enter, room_1l_exit
     # restart_on_next_ball: true
     priority: 300
 

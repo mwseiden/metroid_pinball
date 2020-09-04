@@ -5,7 +5,7 @@
 
 mode:
   start_events: room_1i_continue, room_1i_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1h_enter, room_1j_enter, room_1k_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1h_enter, room_1j_enter, room_1k_enter, room_1i_exit
   priority: 300
 
 shots:
