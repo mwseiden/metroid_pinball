@@ -4,7 +4,7 @@
 
 mode:
     start_events: select_landing_site_brinstar_selected, room_1r_continue, room_1r_enter
-    stop_events: game_ending, ball_ending, metroid_base_ended, room_1s_enter, room_1f_enter, room_1u_enter
+    stop_events: game_ending, ball_ending, metroid_base_ended, room_1s_enter, room_1f_enter, room_1u_enter, room_1r_exit
     priority: 300
 
 sequences:
