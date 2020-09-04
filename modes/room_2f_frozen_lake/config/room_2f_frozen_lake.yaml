@@ -2,7 +2,7 @@
 mode:
   code: room_2f_frozen_lake.Room2fFrozenLake
   start_events: room_2f_continue, room_2f_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2e_enter, room_2b_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2e_enter, room_2b_enter, room_2f_exit
   priority: 300
 
 shot_profiles:

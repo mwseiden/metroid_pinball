@@ -1,7 +1,7 @@
 #config_version=5
 mode:
     start_events: select_landing_site_maridia_selected, room_2a_continue, room_2a_enter
-    stop_events: game_ending, ball_ending, metroid_base_ended, room_2a_sink_into_sand, room_1z_enter, room_2b_enter, room_1q_enter
+    stop_events: game_ending, ball_ending, metroid_base_ended, room_2a_sink_into_sand, room_1z_enter, room_2b_enter, room_1q_enter, room_2a_exit
     priority: 300
 
 timers:
