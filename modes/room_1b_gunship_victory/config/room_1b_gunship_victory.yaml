@@ -1,7 +1,7 @@
 #config_version=5
 mode:
     start_events: room_1b_achieved, room_1b_already_complete
-    stop_events: game_ending, ball_ending, metroid_base_ended, room_1c_enter, room_1a_enter
+    stop_events: game_ending, ball_ending, metroid_base_ended, room_1c_enter, room_1a_enter, room_1b_exit
     priority: 300
 
 multiballs:
