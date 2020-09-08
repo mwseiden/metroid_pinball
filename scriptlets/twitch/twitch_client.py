@@ -36,7 +36,7 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
             self.do_command(e, cmd.lower())
         else:
             user = e.source.split('!')[0]
-            message = 'Chat: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
+            message = 'PubMsg: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
             self.log.info(message.replace(self.password, 'XXXXX'))
             tags = self.build_tag_dict(e.tags)
             bits = tags.get('bits')
@@ -75,14 +75,14 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
                 )
 
     def on_usernotice(self, c, e):
+        user = e.source.split('!')[0]
+        message = 'User Notice: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
+        self.log.info(message.replace(self.password, 'XXXXX'))
         self.on_pubmsg(c, e)
-        #user = e.source.split('!')[0]
-        #message = 'Chat: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
-        #self.log.info(message.replace(self.password, 'XXXXX'))
 
     def on_privmsg(self, c, e):
         user = e.source.split('!')[0]
-        self.log.info('Private chat: [' + user + '] ' + e.arguments[0])
+        self.log.info('Private Chat: [' + user + '] ' + e.arguments[0])
 
     def on_all_events(self, c, e):
         message = 'All Events: ' + e
