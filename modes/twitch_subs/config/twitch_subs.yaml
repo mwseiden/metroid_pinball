@@ -85,6 +85,13 @@ slide_player:
     twitch_sub_teleport_slide:
       target: dmd
 
+sounds:
+  twitch_subs_teleport:
+    file: twitch_subs_teleport.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
 
 event_player:
   twitch_subs_reverse_flip: reverse_flippers_started
