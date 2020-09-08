@@ -22,7 +22,7 @@ class TwitchSubs(Mode):
 
     def _teleport_player(self, player):
         room_index = randint(0, 42)
-        room_prefix = (room_index / 26) + 1
+        room_prefix = int(room_index / 26) + 1
         room_letter = chr((room_index % 26) + ord('a'))
         self.info_log('Teleporting player to room number {}'.format(room_index))
 
