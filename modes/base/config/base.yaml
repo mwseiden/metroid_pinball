@@ -443,7 +443,7 @@ event_player:
       speed: 1
       repeat: 0
       direction: up
-
+  mode_bonus_will_start: stop_current_music
 
 variable_player:
   left_orbit_hit:
