@@ -12,10 +12,11 @@ class TwitchSubs(Mode):
     def event_subscription(self, **kwargs):
         player = self.machine.game.player
 
-        if randint(0, 1) == 0 and self.machine.game.balls_in_play == 1:
-            self._teleport_player(player)
-        else:
-            self._reverse_flippers()
+        self._teleport_player(player)
+        #if randint(0, 1) == 0 and self.machine.game.balls_in_play == 1:
+        #    self._teleport_player(player)
+        #else:
+        #    self._reverse_flippers()
 
         # self.machine.game.balls_in_play
         # self.info_log('Initializing BAO Base')
