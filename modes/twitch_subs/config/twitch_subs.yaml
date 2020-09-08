@@ -8,8 +8,9 @@ mode:
 
 timers:
   twitch_subs_reverse_flipper:
-    start_value: 1
-    end_value: 20
+    start_value: 20
+    end_value: 0
+    direction: down
     tick_interval: 1.0s
     control_events:
       - event: twitch_subs_reverse_flip
