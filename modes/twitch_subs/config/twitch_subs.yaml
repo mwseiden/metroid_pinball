@@ -6,6 +6,16 @@ mode:
   stop_events: metroid_base_ended
   priority: 400
 
+ball_saves:
+  twitch_reverse_flippers_ball_save:
+    active_time: 4s
+    # hurry_up_time: 2s
+    grace_period: 2s
+    enable_events: twitch_subs_reverse_flip
+    auto_launch: yes
+    balls_to_save: -1
+    debug: yes
+
 timers:
   twitch_subs_reverse_flipper:
     start_value: 20
