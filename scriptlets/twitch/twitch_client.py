@@ -74,6 +74,11 @@ class TwitchClient(irc.bot.SingleServerIRCBot):
                     line_6=lines[5]
                 )
 
+    def on_usernotice(self, c, e):
+        user = e.source.split('!')[0]
+        message = 'Chat: [' + user + '] ' + e.arguments[0] + ' : ' + str(e)
+        self.log.info(message.replace(self.password, 'XXXXX'))
+
     def on_privmsg(self, c, e):
         user = e.source.split('!')[0]
         self.log.info('Private chat: [' + user + '] ' + e.arguments[0])

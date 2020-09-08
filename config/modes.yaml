@@ -79,6 +79,7 @@ modes:
   - spin_jumps
   - tilt
   - twitch_bits_multiball
+  - twitch_subs
   - upper_lanes
   - wall_jump
   - zero_suit_multiball

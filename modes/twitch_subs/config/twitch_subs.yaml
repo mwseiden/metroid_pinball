@@ -1,0 +1,91 @@
+#config_version=5
+
+mode:
+  code: twitch_subs.TwitchSubs
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
+  priority: 400
+
+timers:
+  twitch_subs_reverse_flipper:
+    start_value: 1
+    end_value: 20
+    tick_interval: 1.0s
+    control_events:
+      - event: twitch_subs_reverse_flip
+        action: restart
+      - event: ball_will_end
+        action: stop
+
+slides:
+  twitch_sub_reverse_flipper_slide:
+    widgets:
+    - type: text
+      text: (score)
+      number_grouping: true
+      min_digits: 2
+      style: dmd_med
+      anchor_x: left
+      anchor_y: top
+      x: 1
+      y: 30
+    - type: text
+      text: Reverse Flippers!
+      min_digits: 1
+      style: dmd_small
+      color: 'FF40FF'
+      anchor_x: right
+      anchor_y: top
+      x: 126
+      y: 30
+    - type: text
+      text: (player|twitch_subs_twitch_subs_reverse_flipper_tick)
+      min_digits: 1
+      style: dmd_big
+      color: 'FF0000'
+      anchor_x: right
+      anchor_y: top
+      x: 126
+      y: 22
+    - type: text
+      text: PLAYER (number)
+      y: 0
+      x: 10
+      style: dmd_med
+      anchor_x: left
+      anchor_y: bottom
+    - type: text
+      text: BALL (ball)
+      y: 0
+      x: right-10
+      anchor_x: right
+      anchor_y: bottom
+      style: dmd_med
+  twitch_sub_teleport_slide:
+    widgets:
+    - type: text
+      text: TELEPORTED!
+      style: dmd_big
+      expire: 2s
+
+
+slide_player:
+  twitch_subs_reverse_flip:
+    twitch_sub_reverse_flipper_slide:
+      target: dmd
+  timer_twitch_subs_reverse_flipper_complete:
+    twitch_sub_reverse_flipper_slide:
+      target: dmd
+      action: remove
+  ball_will_end:
+    twitch_sub_reverse_flipper_slide:
+      target: dmd
+      action: remove
+  twitch_subs_teleport:
+    twitch_sub_teleport_slide:
+      target: dmd
+
+
+event_player:
+  twitch_subs_reverse_flip: reverse_flippers_started
+  timer_twitch_subs_reverse_flipper_complete: reverse_flippers_ended

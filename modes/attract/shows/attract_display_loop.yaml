@@ -765,7 +765,7 @@
         animations:
           show_slide: special_thanks_scroll_up
       - type: text
-        text: Jab_Doa
+        text: Jan Kantert
         y: -64
         style: dmd_med
         color: dmd_orange
