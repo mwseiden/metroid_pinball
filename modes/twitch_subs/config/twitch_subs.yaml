@@ -93,6 +93,9 @@ sounds:
     priority: 50
     max_queue_time: None
 
+sound_player:
+  twitch_subs_teleport: twitch_subs_teleport
+
 event_player:
   twitch_subs_reverse_flip: reverse_flippers_started
   timer_twitch_subs_reverse_flipper_complete: reverse_flippers_ended
