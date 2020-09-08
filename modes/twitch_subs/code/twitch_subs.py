@@ -20,7 +20,7 @@ class TwitchSubs(Mode):
         # self.machine.game.balls_in_play
         # self.info_log('Initializing BAO Base')
 
-    def _teleport_player(self, player)
+    def _teleport_player(self, player):
         room_index = randint(0, 42)
         room_prefix = (room_index / 26) + 1
         room_letter = chr((room_index % 26) + ord('a'))
@@ -30,5 +30,5 @@ class TwitchSubs(Mode):
         self.machine.events.post('room_{}_exit'.format(player['continue_room']))
         self.machine.events.post('room_{}{}_enter'.format(room_prefix, room_letter))
 
-    def _reverse_flippers(self)
+    def _reverse_flippers(self):
         self.machine.events.post('twitch_subs_reverse_flip')
