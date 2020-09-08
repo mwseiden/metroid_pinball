@@ -67,7 +67,6 @@ slides:
     - type: text
       text: TELEPORTED!
       style: dmd_big
-      expire: 2s
 
 
 slide_player:
@@ -85,6 +84,7 @@ slide_player:
   twitch_subs_teleport:
     twitch_sub_teleport_slide:
       target: dmd
+      expire: 2s
 
 sounds:
   twitch_subs_teleport:
