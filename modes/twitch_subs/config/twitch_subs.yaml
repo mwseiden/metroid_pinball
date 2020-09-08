@@ -96,6 +96,20 @@ slide_player:
       target: dmd
       expire: 2s
 
+show_player:
+  ball_save_twitch_reverse_flippers_ball_save_disabled:
+    ball_save_twitch_reverse_flippers_ball_save_blink:
+      action: stop
+  ball_save_twitch_reverse_flippers_ball_save_enabled:
+    blink_light:
+      key: ball_save_twitch_reverse_flippers_ball_save_blink
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_ball_save
+        color: ff8000
+
+
 sounds:
   twitch_subs_teleport:
     file: twitch_subs_teleport.wav
