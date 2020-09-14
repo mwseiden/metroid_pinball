@@ -67,11 +67,11 @@ show_player:
     flipper_code_no_music:
       priority: 200
       loops: 0
-  twitch_new_chat_message{line_count <= 3}:
+  twitch_chat_message{line_count <= 3}:
     chat_message_3:
       loops: 0
       priority: 20000
-  twitch_new_chat_message{line_count > 3 and line_count <= 1000}:
+  twitch_chat_message{line_count > 3 and line_count <= 1000}:
     chat_message_6:
       loops: 0
       priority: 20000
@@ -243,7 +243,7 @@ animations:
       repeat: true
 
 event_player:
-  twitch_new_chat_message:
+  twitch_chat_message:
     cmd_backbox_show_overlay:
       show_type: sweep_horizontal
       color: "400080"

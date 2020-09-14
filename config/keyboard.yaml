@@ -3,10 +3,3 @@
 keyboard:
   d:
     event: debug_dump_stats
-  s:
-    event: twitch_subscription
-    params:
-      user: 'FakeGuy'
-      months: 69
-      subscriber_message: 'Fake Twitch Sub!'
-      message: 'Normal Message'
