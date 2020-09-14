@@ -17,6 +17,8 @@ player_vars:
     initial_value: 0
   boss_ridley_hp:
     initial_value: 100
+  boss_ridley_multiball_played:
+    initial_value: 0
   bridge_bonus:
     initial_value: 0
   bridges:
