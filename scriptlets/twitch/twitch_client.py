@@ -98,7 +98,7 @@ class TwitchClient(SingleServerIRCBot):
 
     def set_machine_variable_in_mpf(self, name, value):
         """Set machine var in MPF via async loop to prevent race conditions."""
-        self.loop.call_soon_threadsafe(self.machine.variables.set_machine_var, name, value)
+        self.loop.call_soon_threadsafe(self.machine.set_machine_var, name, value)
 
     def is_connected(self):
         """Return true if the server is connected."""
