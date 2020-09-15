@@ -5,6 +5,20 @@ mode:
   stop_events: metroid_base_ended
   priority: 800
 
+sounds:
+  boss_hit_power_bomb:
+    file: boss_hit_power_bomb.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  boss_hit_missile:
+    file: boss_hit_missile.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
 achievements:
   boss_ridley:
     show_tokens:

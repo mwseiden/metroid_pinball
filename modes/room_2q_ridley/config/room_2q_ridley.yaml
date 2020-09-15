@@ -253,7 +253,7 @@ sound_player:
   ridley_hit_strong: ridley_hit_strong
   ridley_hit_normal: ridley_hit_strong
   ridley_hit_weak: ridley_hit_weak
-  ridley_hit_missile: ridley_hit_strong
+  ridley_hit_missile: boss_hit_missile
 
 event_player:
   mode_room_2q_ridley_started:
