@@ -224,6 +224,16 @@ show_player:
       speed: 40
     room_2q_ridley_hit:
       loops: 0
+  multiball_room_2q_ridley_boss_multiball_started:
+    single_fire:
+      key: room_2q_ball_save_fire
+      loops: -1
+      speed: 20
+      show_tokens:
+        led: led_ball_save
+  multiball_room_2q_ridley_boss_multiball_shoot_again_ended:
+    room_2q_ball_save_fire:
+      action: stop
 
 sounds:
   ridley_hit_strong:
