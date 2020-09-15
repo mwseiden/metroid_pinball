@@ -254,6 +254,7 @@ sound_player:
   ridley_hit_normal: ridley_hit_strong
   ridley_hit_weak: ridley_hit_weak
   ridley_hit_missile: boss_hit_missile
+  ridley_hit_power_bomb: boss_hit_power_bomb
 
 event_player:
   mode_room_2q_ridley_started:
@@ -279,10 +280,12 @@ event_player:
   room_2q_boss_strong_center_1_shot_hit: ridley_hit_weak
   room_2q_boss_strong_center_3_shot_hit: ridley_hit_weak
   missile_collected: ridley_hit_missile
+  power_bomb_collected: ridley_hit_power_bomb
   ridley_hit_strong{current_player.boss_ridley_hp <= 8}: room_2q_ridley_should_die
   ridley_hit_normal{current_player.boss_ridley_hp <= 4}: room_2q_ridley_should_die
   ridley_hit_weak{current_player.boss_ridley_hp <= 2}: room_2q_ridley_should_die
   ridley_hit_missile{current_player.boss_ridley_hp <= 20}: room_2q_ridley_should_die
+  ridley_hit_power_bomb{current_player.boss_ridley_hp <= 40}: room_2q_ridley_should_die
   room_2q_ridley_should_die: ridley_defeated
   ridley_defeated{device.multiballs.room_2q_ridley_boss_multiball.balls_added_live == 0}: mode_room_2q_ridley_open_door
   ridley_defeated: mode_room_2q_ridley_over, metroid_exclusive_ended
@@ -311,3 +314,6 @@ variable_player:
   ridley_hit_missile:
     boss_ridley_hp: -20
     missiles: -1
+  ridley_hit_power_bomb:
+    boss_ridley_hp: -40
+    power_bombs: -1
