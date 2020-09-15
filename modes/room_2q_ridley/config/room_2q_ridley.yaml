@@ -9,7 +9,7 @@ multiballs:
   room_2q_ridley_boss_multiball:
     ball_count: 4
     ball_count_type: total
-    shoot_again: 15s
+    shoot_again: 20s
     start_events: mode_room_2q_ridley_start_multiball
 
 shot_profiles:
@@ -251,7 +251,9 @@ sounds:
 
 sound_player:
   ridley_hit_strong: ridley_hit_strong
+  ridley_hit_normal: ridley_hit_strong
   ridley_hit_weak: ridley_hit_weak
+  ridley_hit_missile: ridley_hit_strong
 
 event_player:
   mode_room_2q_ridley_started:
@@ -267,7 +269,7 @@ event_player:
   mode_room_2q_ridley_battle{current_player.boss_ridley_multiball_played == 0}: mode_room_2q_ridley_start_multiball
   room_2q_boss_weak_back_ramp_shot_hit: ridley_hit_strong
   room_2q_boss_weak_side_ramp_shot_hit: ridley_hit_strong
-  room_2q_boss_weak_center_2_shot_hit: ridley_hit_strong
+  room_2q_boss_weak_center_2_shot_hit: ridley_hit_normal
   room_2q_boss_strong_rollover_shot_hit: ridley_hit_weak
   room_2q_boss_strong_scoop_shot_hit: ridley_hit_weak
   room_2q_boss_strong_secret_shot_hit: ridley_hit_weak
@@ -276,8 +278,11 @@ event_player:
   room_2q_boss_strong_captive_shot_hit: ridley_hit_weak
   room_2q_boss_strong_center_1_shot_hit: ridley_hit_weak
   room_2q_boss_strong_center_3_shot_hit: ridley_hit_weak
-  ridley_hit_strong{current_player.boss_ridley_hp <= 10}: room_2q_ridley_should_die
-  ridley_hit_weak{current_player.boss_ridley_hp <= 5}: room_2q_ridley_should_die
+  missile_collected: ridley_hit_missile
+  ridley_hit_strong{current_player.boss_ridley_hp <= 8}: room_2q_ridley_should_die
+  ridley_hit_normal{current_player.boss_ridley_hp <= 4}: room_2q_ridley_should_die
+  ridley_hit_weak{current_player.boss_ridley_hp <= 2}: room_2q_ridley_should_die
+  ridley_hit_missile{current_player.boss_ridley_hp <= 20}: room_2q_ridley_should_die
   room_2q_ridley_should_die: ridley_defeated
   ridley_defeated{device.multiballs.room_2q_ridley_boss_multiball.balls_added_live == 0}: mode_room_2q_ridley_open_door
   ridley_defeated: mode_room_2q_ridley_over, metroid_exclusive_ended
@@ -298,6 +303,11 @@ variable_player:
       int: 1
       action: set
   ridley_hit_strong:
-    boss_ridley_hp: -10
+    boss_ridley_hp: -8
+  ridley_hit_normal:
+    boss_ridley_hp: -4
   ridley_hit_weak:
-    boss_ridley_hp: -5
+    boss_ridley_hp: -2
+  ridley_hit_missile:
+    boss_ridley_hp: -20
+    missiles: -1

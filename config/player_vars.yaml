@@ -16,7 +16,7 @@ player_vars:
   bao_reactors:
     initial_value: 0
   boss_ridley_hp:
-    initial_value: 100
+    initial_value: 200
   boss_ridley_multiball_played:
     initial_value: 0
   bridge_bonus:
