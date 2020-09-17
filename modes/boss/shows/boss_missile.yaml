@@ -1,0 +1,197 @@
+#show_version=5
+- time: 0
+  lights:
+    gi_missile_bank: 'FF0000'
+    led_missile_bank_1: 'FF0000'
+    led_missile_bank_2: 'FF0000'
+    led_missile_bank_3: 'FF0000'
+    
+- time: '+1'
+  lights:
+    led_scanner_sw: 'FE0000'
+    led_scanner_w: 'FF0000'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'FF0000'
+    led_scanner_nw: 'FF0000'
+    led_scanner_se: 'FE0000'
+    led_scanner_sw: 'FF0000'
+    
+- time: '+1'
+  lights:
+    led_scanner_e: 'FF0000'
+    led_scanner_ne: 'FF0000'
+    led_scanner_se: 'FF0000'
+    led_wall_jump: 'FF0000'
+    
+- time: '+1'
+  lights:
+    led_side_1: 'FF0000'
+    
+- time: '+1'
+  lights:
+    led_side_2: 'FF0000'
+    
+- time: '+1'
+  lights:
+    led_side_3: 'FF0000'
+    
+- time: '+1'
+  lights:
+    led_2x: 'FF0000'
+    led_3x: '3B0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'FE0000'
+    led_3x: 'FF0000'
+    led_upgrade_bank_1: 'FF0000'
+    led_upgrade_bank_2: 'FF0000'
+    led_upgrade_bank_3: 'FF0000'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FF0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'F60000'
+    gi_upgrade_bank: 'FF0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'FF0000'
+    led_enter_scoop: 'FF0000'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: 'FF0000'
+    led_side_1: 'FC0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'E60000'
+    gi_under_side_ramp: 'FF0000'
+    led_enter_side_ramp: 'FF0000'
+    led_side_1: 'FF0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'F10000'
+    led_side_1: 'F60000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'E00000'
+    gi_upper_flipper_bottom: 'F60000'
+    led_pop_2: 'FA0000'
+    led_side_1: 'FA0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'DD0000'
+    gi_upper_flipper_bottom: 'FF0000'
+    led_pop_2: 'FF0000'
+    led_side_1: 'F00000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'D90000'
+    led_side_1: 'EA0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'F20000'
+    led_captive_ball: 'FF0000'
+    led_enter_right_orbit: 'FF0000'
+    led_side_1: 'FF0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'F10000'
+    gi_upper_flipper_top: 'FF0000'
+    led_side_1: 'DE0000'
+    led_thin_orange: 'FF0000'
+    led_upper_playfield_1: 'FF0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'D40000'
+    led_drop_1: 'FF0000'
+    led_pit: 'FF0000'
+    led_pop_1: 'FF0000'
+    led_pop_3: 'FF0000'
+    led_side_1: 'FF0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'BA0000'
+    led_side_1: 'F10000'
+    led_upper_playfield_2: 'FF0000'
+    
+- time: '+1'
+  lights:
+    gi_back_left: '7B0000'
+    gi_side_bank: 'D90000'
+    led_side_1: 'D60000'
+    led_upper_playfield_3: 'FF0000'
+    
+- time: '+1'
+  lights:
+    gi_back_left: 'FF0000'
+    gi_side_bank: 'B40000'
+    gi_strip_2: '100000'
+    gi_strip_3: 'C20000'
+    led_drop_2: 'FF0000'
+    led_side_1: 'CC0000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'DC0000'
+    gi_strip_1: 'FF0000'
+    gi_strip_2: 'FF0000'
+    gi_strip_3: 'FF0000'
+    gi_strip_4: 'FF0000'
+    gi_strip_5: 'FF0000'
+    gi_strip_6: '890000'
+    led_side_1: 'C80000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'FF0000'
+    gi_side_bank: 'B20000'
+    gi_strip_6: 'FF0000'
+    gi_strip_7: 'FF0000'
+    led_drop_3: 'FF0000'
+    led_side_1: 'C50000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'A40000'
+    gi_strip_8: 'FF0000'
+    led_side_1: 'C60000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'A60000'
+    gi_strip_9: 'FF0000'
+    led_side_1: 'D50000'
+    
+- time: '+1'
+  lights:
+    gi_back_right: 'FF0000'
+    gi_side_bank: 'AB0000'
+    gi_strip_10: 'FF0000'
+    led_side_1: 'F00000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'A90000'
+    led_side_1: 'C00000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'A10000'
+    led_side_1: 'B10000'
+    
