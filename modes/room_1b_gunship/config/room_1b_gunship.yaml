@@ -16,7 +16,8 @@ shot_profiles:
   room_1b_increase:
     states:
       - name: lit
-        show: fade_one_light
+        show: blink_light
+        speed: 4
 
 accruals:
   room_1b_complete_left_orbit:
