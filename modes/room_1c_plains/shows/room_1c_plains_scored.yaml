@@ -1,10 +1,19 @@
 #show_version=5
 
-- duration: .5s
+- duration: 1.5s
   slides:
     room_1c_plains_status_slide_help:
       widgets:
       - type: text
         text: (text)
-        color: green
+        color: '20FF20'
         style: dmd_big
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0
+              duration: .1s
+            - property: opacity
+              value: 1
+              duration: .1s
+              repeat: -1
