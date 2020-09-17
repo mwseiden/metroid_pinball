@@ -128,6 +128,16 @@ show_player:
       loops: 0
       show_tokens:
         text: (player|room_1c_scored)
+  room_1c_bank_3_shot_hit:
+    room_1c_plains_scored:
+      loops: 0
+      show_tokens:
+        text: (player|room_1c_scored)
+  room_1c_bank_4_shot_hit:
+    room_1c_plains_scored:
+      loops: 0
+      show_tokens:
+        text: (player|room_1c_scored)
 
 event_player:
   mode_room_1c_plains_started:
