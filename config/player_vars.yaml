@@ -141,6 +141,8 @@ player_vars:
     initial_value: 0
   room_1b_victory_step_1:
     initial_value: 0
+  room_1c_scored:
+    initial_value: 0
   room_1m_captured:
     initial_value: 0
   room_1m_charge:

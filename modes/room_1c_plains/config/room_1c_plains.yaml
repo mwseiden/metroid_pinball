@@ -120,14 +120,14 @@ show_player:
       action: stop
   room_1c_bank_1_shot_hit:
     room_1c_plains_scored:
-      loops: -1
+      loops: 0
       show_tokens:
-        text: ((5000 + current_player.crateria_shot_bonus) * current_player.multiplier)
+        text: (player|room_1c_scored)
   room_1c_bank_2_shot_hit:
     room_1c_plains_scored:
-      loops: -1
+      loops: 0
       show_tokens:
-        text: ((5000 + current_player.crateria_shot_bonus) * current_player.multiplier)
+        text: (player|room_1c_scored)
 
 event_player:
   mode_room_1c_plains_started:
@@ -158,9 +158,13 @@ variable_player:
       action: set
   room_1c_bank_1_shot_hit:
     score: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
+    room_1c_scored: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
   room_1c_bank_2_shot_hit:
     score: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
+    room_1c_scored: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
   room_1c_bank_3_shot_hit:
     score: (1000 + current_player.crateria_shot_bonus) * current_player.multiplier
+    room_1c_scored: (1000 + current_player.crateria_shot_bonus) * current_player.multiplier
   room_1c_bank_4_shot_hit:
     score: (10000 + current_player.crateria_shot_bonus) * current_player.multiplier
+    room_1c_scored: (10000 + current_player.crateria_shot_bonus) * current_player.multiplier
