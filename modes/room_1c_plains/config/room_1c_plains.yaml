@@ -122,12 +122,12 @@ show_player:
     room_1c_plains_scored:
       loops: -1
       show_tokens:
-        text: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
+        text: ((5000 + current_player.crateria_shot_bonus) * current_player.multiplier)
   room_1c_bank_2_shot_hit:
     room_1c_plains_scored:
       loops: -1
       show_tokens:
-        text: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
+        text: ((5000 + current_player.crateria_shot_bonus) * current_player.multiplier)
 
 event_player:
   mode_room_1c_plains_started:
