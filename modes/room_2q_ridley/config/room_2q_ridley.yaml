@@ -233,13 +233,13 @@ show_player:
   ridley_hit_missile:
     boss_missile:
       loops: 0
-      speed: 40
+      speed: 50
     room_2q_ridley_hit:
       loops: 0
   ridley_hit_power_bomb:
     boss_power_bomb:
       loops: 0
-      speed: 40
+      speed: 50
     room_2q_ridley_hit:
       loops: 0
   multiball_room_2q_ridley_boss_multiball_started:
