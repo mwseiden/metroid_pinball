@@ -1,0 +1,10 @@
+#show_version=5
+
+- duration: .5s
+  slides:
+    room_1c_plains_status_slide_help:
+      widgets:
+      - type: text
+        text: (text)
+        color: green
+        style: dmd_big
