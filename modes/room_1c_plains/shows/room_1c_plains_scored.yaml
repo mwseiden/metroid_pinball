@@ -1,6 +1,6 @@
 #show_version=5
 
-- duration: 1.5s
+- duration: 1s
   slides:
     room_1c_plains_status_slide_help:
       widgets:
