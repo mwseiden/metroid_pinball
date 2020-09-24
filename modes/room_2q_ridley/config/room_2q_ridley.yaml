@@ -168,7 +168,7 @@ animations:
       relative: true
       duration: 0.1s
     - property: y
-      value: -20
+      value: -40
       relative: true
       duration: 0.1s
       timing: with_previous
@@ -177,7 +177,7 @@ animations:
       relative: true
       duration: 0.1s
     - property: y
-      value: -20
+      value: -40
       relative: true
       duration: 0.1s
       timing: with_previous
@@ -186,7 +186,7 @@ animations:
       relative: true
       duration: 0.1s
     - property: y
-      value: -20
+      value: -40
       relative: true
       duration: 0.1s
       timing: with_previous
@@ -195,7 +195,7 @@ animations:
       relative: true
       duration: 0.1s
     - property: y
-      value: -20
+      value: -40
       relative: true
       duration: 0.1s
       timing: with_previous
