@@ -23,6 +23,7 @@ class MyAttract(Attract):
         self.machine.set_machine_var('next_game_bao', 0)
         self.machine.set_machine_var('next_game_goren', 0)
         self.machine.set_machine_var('next_game_macho', 0)
+        self.machine.set_machine_var('bao_balls_locked', 0)
 
     def event_right_flipper_down(self, **kwargs):
         self.right_flipper_down = True
