@@ -162,6 +162,44 @@ animations:
       duration: 1.0s
       timing: with_previous
       repeat: true
+  room_2q_ridley_death:
+    - property: x
+      value: 20
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -20
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -20
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: 20
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+      repeat: true
 
 slides:
   room_2q_ridley_backglass_slide:
@@ -171,7 +209,7 @@ slides:
         x: 280
         y: 690
         animations:
-          show_slide: room_2g_draygon_standard
+          show_slide: room_2q_ridley_standard
     transition: fade
     transition_out: fade
   room_2q_ridley_backglass_defeated_slide:
@@ -186,6 +224,16 @@ slides:
     widgets:
       - type: image
         image: room_2q_ridley_splash
+  room_2q_ridley_dying_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2q_ridley_backglass
+        x: 280
+        y: 690
+        animations:
+          show_slide: room_2q_ridley_death
+    transition: fade
+    transition_out: fade
 
 slide_player:
   mode_room_2q_ridley_battle:
@@ -198,7 +246,7 @@ slide_player:
     room_2q_ridley_backglass_slide:
       target: backglass
       action: remove
-    room_2q_ridley_backglass_defeated_slide:
+    room_2q_ridley_dying_backglass_slide:
       target: backglass
 
 show_player:
