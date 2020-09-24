@@ -79,13 +79,13 @@ show_player:
     bits_small:
       loops: 0
       priority: 20000
-  slide_last_game_high_scores_active:
+  slide_last_game_high_scores_created:
     attract_water:
       action: stop
     lights_rainbow_blurred:
       loops: -1
       speed: 10
-  slide_press_start_active:
+  slide_press_start_created:
     lights_rainbow_blurred:
       action: stop
     gi_solid:
@@ -100,7 +100,7 @@ show_player:
       speed: 10
       show_tokens:
         color: '009000'
-  slide_fast_logo_active:
+  slide_fast_logo_created:
     attract_lights_press_start:
       action: stop
     attract_lights_press_start_gi:
@@ -117,7 +117,7 @@ show_player:
       speed: 10
       show_tokens:
         color: '900000'
-  slide_mission_pinball_active:
+  slide_mission_pinball_created:
     attract_lights_fast_logo:
       action: stop
     attract_lights_fast_logo_gi:
@@ -134,7 +134,7 @@ show_player:
       speed: 10
       show_tokens:
         color: '000090'
-  slide_arrrrrcade_active:
+  slide_arrrrrcade_created:
     attract_lights_mission_pinball:
       action: stop
     attract_lights_mission_pinball_gi:
@@ -145,25 +145,25 @@ show_player:
       speed: 10
       show_tokens:
         color: '900000'
-  slide_metroid_logo_active:
+  slide_metroid_logo_created:
     attract_lights_arrrrrcade:
       action: stop
     lights_samus_logo:
       loops: -1
       speed: 10
-  slide_claire_samus_active:
+  slide_claire_samus_created:
     lights_samus_logo:
       action: stop
     lights_fire:
       loops: -1
       speed: 15
-  slide_stemage_slide_active:
+  slide_stemage_slide_created:
     lights_fire:
       action: stop
     lights_asterix_spin:
       loops: -1
       speed: 14
-  slide_joel_slide_active:
+  slide_joel_slide_created:
     lights_asterix_spin:
       action: stop
     gi_solid:
@@ -171,49 +171,49 @@ show_player:
       loops: -1
       show_tokens:
         color: 'c1a24d'
-  slide_double_danger_slide_active:
+  slide_double_danger_slide_created:
     attract_lights_joel_gi:
       action: stop
     lights_fire:
       loops: -1
       speed: 15
-  slide_pbu_slide_active:
+  slide_pbu_slide_created:
     lights_fire:
       action: stop
     lights_purple_fire:
       loops: -1
       speed: 18
-  slide_rudy_slide_active:
+  slide_rudy_slide_created:
     lights_purple_fire:
       action: stop
     rudy_tas:
       loops: -1
       speed: 19
-  slide_erin_slide_active:
+  slide_erin_slide_created:
     rudy_tas:
       action: stop
     attract_pinball_monkey:
       loops: -1
       speed: 15
-  slide_rubber_ducks_slide_active:
+  slide_rubber_ducks_slide_created:
     attract_pinball_monkey:
       action: stop
     lights_fire:
       loops: -1
       speed: 15
-  slide_berz_slide_active:
+  slide_berz_slide_created:
     lights_fire:
       action: stop
     lights_sweep_rgb:
       loops: -1
       speed: 20
-  slide_owl_slide_active:
+  slide_owl_slide_created:
     lights_sweep_rgb:
       action: stop
     lights_purple_spotlight:
       loops: -1
       speed: 20
-  slide_attract_special_thanks_slide_active:
+  slide_attract_special_thanks_slide_created:
     lights_purple_spotlight:
       action: stop
     attract_water:
@@ -257,69 +257,69 @@ event_player:
       speed: 2
       repeat: 9
       direction: left
-  slide_last_game_high_scores_active:
+  slide_last_game_high_scores_created:
     cmd_backbox_show:
       show_type: rainbow
-  slide_fast_logo_active:
+  slide_fast_logo_created:
     cmd_backbox_show:
       show_type: two_tone
       min_cutoff: 5
       max_cutoff: 5
       color1: "400000"
       color2: "000040"
-  slide_press_start_active:
+  slide_press_start_created:
     cmd_backbox_show:
       show_type: two_tone
       min_cutoff: 5
       max_cutoff: 5
       color1: "404040"
       color2: "004000"
-  slide_arrrrrcade_active:
+  slide_arrrrrcade_created:
     cmd_backbox_show:
       show_type: pour
       count: 7
       min_length: 2
       max_length: 16
       color: "400000"
-  slide_metroid_logo_active:
+  slide_metroid_logo_created:
     cmd_backbox_show:
       show_type: two_tone
       min_cutoff: 2
       max_cutoff: 8
       color1: "404040"
       color2: "000040"
-  slide_claire_samus_active:
+  slide_claire_samus_created:
     cmd_backbox_show:
       show_type: fire
-  slide_double_danger_slide_active:
+  slide_double_danger_slide_created:
     cmd_backbox_show:
       show_type: drop
       min_delay: 4
       max_delay: 6
       background_color: "040000"
       drop_color: "100C00"
-  slide_pbu_slide_active:
+  slide_pbu_slide_created:
     cmd_backbox_show:
       show_type: plasma
       decay_b: 1.9
-  slide_erin_slide_active:
+  slide_erin_slide_created:
     cmd_backbox_show:
       show_type: two_tone
       min_cutoff: 8
       max_cutoff: 8
       color1: "000040"
       color2: "401800"
-  slide_rubber_ducks_slide_active:
+  slide_rubber_ducks_slide_created:
     cmd_backbox_show:
       show_type: fire
-  slide_owl_slide_active:
+  slide_owl_slide_created:
     cmd_backbox_show:
       show_type: pour
       count: 4
       min_length: 2
       max_length: 16
       color: "401040"
-  slide_attract_special_thanks_slide_active:
+  slide_attract_special_thanks_slide_created:
     cmd_backbox_show:
       show_type: pour
       count: 6
@@ -329,3 +329,5 @@ event_player:
   mode_attract_stopping:
     cmd_backbox_show:
       show_type: none
+  mode_attract_started{device.switches.s_behind_drop_1.state}: cmd_drop_one_down
+  mode_attract_started{device.switches.s_behind_drop_2.state}: cmd_drop_one_down, cmd_drop_two_down
