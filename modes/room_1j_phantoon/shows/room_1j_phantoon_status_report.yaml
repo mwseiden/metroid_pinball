@@ -1,18 +1,16 @@
 #show_version=5
 
-# replace room_template with mode name
-
 - duration: 2s
   slides:
-    room_template_status_slide_splash:
+    room_1j_phantoon_status_slide_splash:
       widgets:
       - type: image
-        image: room_template_splash
+        image: room_1j_phantoon_splash
 
 
 - duration: 5s
   slides:
-    room_template_status_slide_help:
+    room_1j_phantoon_status_slide_help:
       widgets:
       - type: Text
         text: NO MODE RULES
