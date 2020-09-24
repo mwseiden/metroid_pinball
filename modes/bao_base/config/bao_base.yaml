@@ -755,7 +755,7 @@ event_player:
   drop_target_drop_two_down{machine.bao_balls_locked > 1 or device.timers.bao_test_ball_2_locked.running}: cmd_drop_two_up
   drop_target_drop_three_down: cmd_drop_three_up
   bao_base_release_locked_balls: cmd_drop_one_down, cmd_drop_two_down
-  ball_will_end{current_player.number == game.num_players and current_player.ball == game.balls_per_game}: cmd_drop_one_down, cmd_drop_two_down, bao_base_initialize
+  # ball_will_end{current_player.number == game.num_players and current_player.ball == game.balls_per_game}: cmd_drop_one_down, cmd_drop_two_down, bao_base_initialize
   bao_final_shot_1_hit: bao_final_shot_completed
   bao_final_shot_2_hit: bao_final_shot_completed
   bao_final_shot_3_hit: bao_final_shot_completed
