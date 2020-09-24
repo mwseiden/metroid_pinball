@@ -164,38 +164,38 @@ animations:
       repeat: true
   room_2q_ridley_death:
     - property: x
-      value: 20
+      value: 80
       relative: true
       duration: 0.1s
     - property: y
-      value: -40
-      relative: true
-      duration: 0.1s
-      timing: with_previous
-    - property: x
       value: -20
       relative: true
       duration: 0.1s
-    - property: y
-      value: -40
-      relative: true
-      duration: 0.1s
       timing: with_previous
     - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
       value: -20
       relative: true
       duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
     - property: y
-      value: -40
+      value: -20
       relative: true
       duration: 0.1s
       timing: with_previous
     - property: x
-      value: 20
+      value: 80
       relative: true
       duration: 0.1s
     - property: y
-      value: -40
+      value: -20
       relative: true
       duration: 0.1s
       timing: with_previous
