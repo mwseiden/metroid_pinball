@@ -39,10 +39,10 @@ show_player:
     attract_display_loop:
       action: advance
       manual_advance: false
-  # s_left_flipper_active:
-  #  attract_display_loop:
-  #    action: step_back
-  #    manual_advance: false
+  s_left_flipper_active:
+    attract_display_loop:
+       action: step_back
+       manual_advance: false
   flipper_cancel:
     attract_display_loop:
       priority: 100
@@ -82,11 +82,19 @@ show_player:
   slide_last_game_high_scores_created:
     attract_water:
       action: stop
+    attract_lights_press_start_gi:
+      action: stop
+    attract_lights_press_start:
+      action: stop
     lights_rainbow_blurred:
       loops: -1
       speed: 10
   slide_press_start_created:
     lights_rainbow_blurred:
+      action: stop
+    attract_lights_fast_logo_gi:
+      action: stop
+    attract_lights_fast_logo:
       action: stop
     gi_solid:
       key: attract_lights_press_start_gi
@@ -105,6 +113,10 @@ show_player:
       action: stop
     attract_lights_press_start_gi:
       action: stop
+    attract_lights_mission_pinball_gi:
+      action: stop
+    attract_lights_mission_pinball:
+      action: stop
     gi_solid:
       key: attract_lights_fast_logo_gi
       loops: -1
@@ -121,6 +133,8 @@ show_player:
     attract_lights_fast_logo:
       action: stop
     attract_lights_fast_logo_gi:
+      action: stop
+    attract_lights_arrrrrcade:
       action: stop
     gi_solid:
       key: attract_lights_mission_pinball_gi
@@ -139,6 +153,8 @@ show_player:
       action: stop
     attract_lights_mission_pinball_gi:
       action: stop
+    lights_samus_logo:
+      action: stop
     drizzle:
       key: attract_lights_arrrrrcade
       loops: -1
@@ -148,11 +164,15 @@ show_player:
   slide_metroid_logo_created:
     attract_lights_arrrrrcade:
       action: stop
+    lights_fire:
+      action: stop
     lights_samus_logo:
       loops: -1
       speed: 10
   slide_claire_samus_created:
     lights_samus_logo:
+      action: stop
+    lights_asterix_spin:
       action: stop
     lights_fire:
       loops: -1
@@ -160,11 +180,15 @@ show_player:
   slide_stemage_slide_created:
     lights_fire:
       action: stop
+    attract_lights_joel_gi:
+      action: stop
     lights_asterix_spin:
       loops: -1
       speed: 14
   slide_joel_slide_created:
     lights_asterix_spin:
+      action: stop
+    lights_fire:
       action: stop
     gi_solid:
       key: attract_lights_joel_gi
@@ -174,11 +198,15 @@ show_player:
   slide_double_danger_slide_created:
     attract_lights_joel_gi:
       action: stop
+    lights_purple_fire:
+      action: stop
     lights_fire:
       loops: -1
       speed: 15
   slide_pbu_slide_created:
     lights_fire:
+      action: stop
+    rudy_tas:
       action: stop
     lights_purple_fire:
       loops: -1
@@ -186,17 +214,23 @@ show_player:
   slide_rudy_slide_created:
     lights_purple_fire:
       action: stop
+    attract_pinball_monkey:
+      action: stop
     rudy_tas:
       loops: -1
       speed: 19
   slide_erin_slide_created:
     rudy_tas:
       action: stop
+    lights_fire:
+      action: stop
     attract_pinball_monkey:
       loops: -1
       speed: 15
   slide_rubber_ducks_slide_created:
     attract_pinball_monkey:
+      action: stop
+    lights_sweep_rgb:
       action: stop
     lights_fire:
       loops: -1
@@ -210,11 +244,15 @@ show_player:
   slide_owl_slide_created:
     lights_sweep_rgb:
       action: stop
+    attract_water:
+      action: stop
     lights_purple_spotlight:
       loops: -1
       speed: 20
   slide_attract_special_thanks_slide_created:
     lights_purple_spotlight:
+      action: stop
+    lights_rainbow_blurred:
       action: stop
     attract_water:
       loops: -1
