@@ -44,6 +44,42 @@ show_player:
        action: step_back
        manual_advance: false
   flipper_cancel:
+    attract_lights_arrrrrcade:
+      action: stop
+    attract_lights_fast_logo:
+      action: stop
+    attract_lights_fast_logo_gi:
+      action: stop
+    attract_lights_joel_gi:
+      action: stop
+    attract_lights_mission_pinball_gi:
+      action: stop
+    attract_lights_mission_pinball:
+      action: stop
+    attract_lights_press_start:
+      action: stop
+    attract_lights_press_start_gi:
+      action: stop
+    attract_pinball_monkey:
+      action: stop
+    attract_water:
+      action: stop
+    lights_asterix_spin:
+      action: stop
+    lights_fire:
+      action: stop
+    lights_purple_fire:
+      action: stop
+    lights_purple_spotlight:
+      action: stop
+    lights_rainbow_blurred:
+      action: stop
+    lights_samus_logo:
+      action: stop
+    lights_sweep_rgb:
+      action: stop
+    rudy_tas:
+      action: stop
     attract_display_loop:
       priority: 100
       manual_advance: false
