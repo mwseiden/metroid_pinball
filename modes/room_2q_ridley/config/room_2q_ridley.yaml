@@ -369,13 +369,17 @@ variable_player:
       action: set
   ridley_hit_strong:
     boss_ridley_hp: -8
+    score: (150000 + (current_player.area_bonus_nw * 100000) + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
   ridley_hit_normal:
     boss_ridley_hp: -4
+    score: (24200 + (current_player.area_bonus_w * 10000) + (current_player.area_bonus_e * 10000)) * current_player.multiplier
   ridley_hit_weak:
     boss_ridley_hp: -2
+    score: (20000 + (current_player.area_bonus_sw * 10000) + (current_player.area_bonus_se * 10000)) * current_player.multiplier
   ridley_hit_missile:
     boss_ridley_hp: -20
     missiles: -1
+    score: (50000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
   ridley_hit_power_bomb:
     boss_ridley_hp: -40
     power_bombs: -1
