@@ -405,9 +405,7 @@ variable_player:
   ridley_hit_power_bomb:
     boss_ridley_hp: -40
     power_bombs: -1
-    room_special_score:
-      int: (50000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
-      action: set
+    score: (50000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
     room_special_score:
       int: (50000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
       action: set
