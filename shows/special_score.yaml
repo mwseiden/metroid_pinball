@@ -6,7 +6,7 @@
       widgets:
       - type: text
         text: (text)
-        color: '20FF20'
+        color: (score_color)
         style: dmd_big
         animations:
           pre_show_slide:

@@ -123,25 +123,25 @@ show_player:
       loops: 0
       show_tokens:
         text: (player|room_special_score)
-        color: '20FF20'
+        score_color: '20FF20'
   room_1c_bank_2_shot_hit:
     special_score:
       loops: 0
       show_tokens:
         text: (player|room_special_score)
-        color: '20FF20'
+        score_color: '20FF20'
   room_1c_bank_3_shot_hit:
     special_score:
       loops: 0
       show_tokens:
         text: (player|room_special_score)
-        color: '20FF20'
+        score_color: '20FF20'
   room_1c_bank_4_shot_hit:
     special_score:
       loops: 0
       show_tokens:
         text: (player|room_special_score)
-        color: '20FF20'
+        score_color: '20FF20'
 
 event_player:
   mode_room_1c_plains_started:
