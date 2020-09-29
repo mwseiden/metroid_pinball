@@ -5,7 +5,7 @@
     special_score_green_highlight_slide:
       widgets:
       - type: text
-        text: (text)
+        text: (player|room_special_score)
         color: '20FF20'
         style: dmd_big
         animations:
