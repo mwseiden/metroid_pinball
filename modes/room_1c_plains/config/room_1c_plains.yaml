@@ -121,23 +121,15 @@ show_player:
   room_1c_bank_1_shot_hit:
     special_score_green:
       loops: 0
-      show_tokens:
-        text: (player|room_special_score)
   room_1c_bank_2_shot_hit:
     special_score_green:
       loops: 0
-      show_tokens:
-        text: (player|room_special_score)
   room_1c_bank_3_shot_hit:
     special_score_green:
       loops: 0
-      show_tokens:
-        text: (player|room_special_score)
   room_1c_bank_4_shot_hit:
     special_score_green:
       loops: 0
-      show_tokens:
-        text: (player|room_special_score)
  
 event_player:
   mode_room_1c_plains_started:
