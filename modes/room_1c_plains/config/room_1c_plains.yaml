@@ -119,30 +119,26 @@ show_player:
     room_1c_plains_status_report:
       action: stop
   room_1c_bank_1_shot_hit:
-    special_score:
+    special_score_green:
       loops: 0
       show_tokens:
         text: (player|room_special_score)
-        score_color: 20FF20
   room_1c_bank_2_shot_hit:
-    special_score:
+    special_score_green:
       loops: 0
       show_tokens:
         text: (player|room_special_score)
-        score_color: 20FF20
   room_1c_bank_3_shot_hit:
-    special_score:
+    special_score_green:
       loops: 0
       show_tokens:
         text: (player|room_special_score)
-        score_color: 20FF20
   room_1c_bank_4_shot_hit:
-    special_score:
+    special_score_green:
       loops: 0
       show_tokens:
         text: (player|room_special_score)
-        score_color: 20FF20
-
+ 
 event_player:
   mode_room_1c_plains_started:
     cmd_backbox_show:
