@@ -274,6 +274,8 @@ show_player:
   slide_berz_slide_created:
     lights_fire:
       action: stop
+    lights_purple_spotlight:
+      action: stop
     lights_sweep_rgb:
       loops: -1
       speed: 20
