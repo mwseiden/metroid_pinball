@@ -162,44 +162,6 @@ animations:
       duration: 1.0s
       timing: with_previous
       repeat: true
-  room_2q_ridley_death:
-    - property: x
-      value: 80
-      relative: true
-      duration: 0.1s
-    - property: y
-      value: -40
-      relative: true
-      duration: 0.1s
-      timing: with_previous
-    - property: x
-      value: -80
-      relative: true
-      duration: 0.1s
-    - property: y
-      value: -40
-      relative: true
-      duration: 0.1s
-      timing: with_previous
-    - property: x
-      value: -80
-      relative: true
-      duration: 0.1s
-    - property: y
-      value: -40
-      relative: true
-      duration: 0.1s
-      timing: with_previous
-    - property: x
-      value: 80
-      relative: true
-      duration: 0.1s
-    - property: y
-      value: -40
-      relative: true
-      duration: 0.1s
-      timing: with_previous
-      repeat: true
 
 widgets:
   room_2q_ridley_dies:
@@ -209,7 +171,44 @@ widgets:
     y: 690
     z: 5
     animations:
-      show_slide: room_2q_ridley_death
+      show_slide:
+        - property: x
+          value: 80
+          relative: true
+          duration: 0.1s
+        - property: y
+          value: -40
+          relative: true
+          duration: 0.1s
+          timing: with_previous
+        - property: x
+          value: -80
+          relative: true
+          duration: 0.1s
+        - property: y
+          value: -40
+          relative: true
+          duration: 0.1s
+          timing: with_previous
+        - property: x
+          value: -80
+          relative: true
+          duration: 0.1s
+        - property: y
+          value: -40
+          relative: true
+          duration: 0.1s
+          timing: with_previous
+        - property: x
+          value: 80
+          relative: true
+          duration: 0.1s
+        - property: y
+          value: -40
+          relative: true
+          duration: 0.1s
+          timing: with_previous
+          repeat: true
 
 widget_player:
   room_2q_show_ridley_dying:
