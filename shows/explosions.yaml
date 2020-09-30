@@ -1,0 +1,64 @@
+#show_version=5
+
+- duration: 0.8s
+  slides:
+    explosion_slide_1:
+      widgets:
+      - type: image
+        image: boss_explosion
+        x: 144
+        y: 763
+
+- duration: 0.8s
+  slides:
+    explosion_slide_2:
+      widgets:
+      - type: image
+        image: boss_explosion
+        x: 512
+        y: 358
+
+- duration: 0.8s
+  slides:
+    explosion_slide_3:
+      widgets:
+      - type: image
+        image: boss_explosion
+        x: 247
+        y: 629
+
+- duration: 0.8s
+  slides:
+    explosion_slide_4:
+      widgets:
+      - type: image
+        image: boss_explosion
+        x: 432
+        y: 532
+
+- duration: 0.8s
+  slides:
+    explosion_slide_5:
+      widgets:
+      - type: image
+        image: boss_explosion
+        x: 150
+        y: 346
+
+- duration: 0.8s
+  slides:
+    explosion_slide_6:
+      widgets:
+      - type: image
+        image: boss_explosion
+        x: 273
+        y: 835
+
+- duration: 0.8s
+  slides:
+    explosion_slide_7:
+      widgets:
+      - type: image
+        image: boss_explosion
+        x: 317
+        y: 628
