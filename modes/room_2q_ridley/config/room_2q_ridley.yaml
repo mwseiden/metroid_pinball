@@ -313,7 +313,6 @@ show_player:
   ridley_defeated:
     explosions:
       loops: 3
-      target: backglass
       priority: 10
 
 sounds:

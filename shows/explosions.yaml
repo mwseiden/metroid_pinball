@@ -3,6 +3,7 @@
 - duration: 0.8s
   slides:
     explosion_slide_1:
+      target: backglass
       widgets:
       - type: image
         image: boss_explosion
@@ -12,6 +13,7 @@
 - duration: 0.8s
   slides:
     explosion_slide_2:
+      target: backglass
       widgets:
       - type: image
         image: boss_explosion
@@ -21,6 +23,7 @@
 - duration: 0.8s
   slides:
     explosion_slide_3:
+      target: backglass
       widgets:
       - type: image
         image: boss_explosion
@@ -30,6 +33,7 @@
 - duration: 0.8s
   slides:
     explosion_slide_4:
+      target: backglass
       widgets:
       - type: image
         image: boss_explosion
@@ -39,6 +43,7 @@
 - duration: 0.8s
   slides:
     explosion_slide_5:
+      target: backglass
       widgets:
       - type: image
         image: boss_explosion
@@ -48,6 +53,7 @@
 - duration: 0.8s
   slides:
     explosion_slide_6:
+      target: backglass
       widgets:
       - type: image
         image: boss_explosion
@@ -57,6 +63,7 @@
 - duration: 0.8s
   slides:
     explosion_slide_7:
+      target: backglass
       widgets:
       - type: image
         image: boss_explosion
