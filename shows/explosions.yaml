@@ -9,6 +9,7 @@
         image: boss_explosion
         x: 144
         y: 763
+        z: 10
 
 - duration: 0.8s
   slides:
@@ -19,6 +20,7 @@
         image: boss_explosion
         x: 512
         y: 358
+        z: 10
 
 - duration: 0.8s
   slides:
@@ -29,6 +31,7 @@
         image: boss_explosion
         x: 247
         y: 629
+        z: 10
 
 - duration: 0.8s
   slides:
@@ -39,6 +42,7 @@
         image: boss_explosion
         x: 432
         y: 532
+        z: 10
 
 - duration: 0.8s
   slides:
@@ -49,6 +53,7 @@
         image: boss_explosion
         x: 150
         y: 346
+        z: 10
 
 - duration: 0.8s
   slides:
@@ -59,6 +64,7 @@
         image: boss_explosion
         x: 273
         y: 835
+        z: 10
 
 - duration: 0.8s
   slides:
@@ -69,3 +75,4 @@
         image: boss_explosion
         x: 317
         y: 628
+        z: 10
