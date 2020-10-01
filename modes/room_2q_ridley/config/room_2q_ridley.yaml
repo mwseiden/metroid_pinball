@@ -214,7 +214,7 @@ widget_player:
   room_2q_show_ridley_dying:
     room_2q_ridley_dies:
       action: add
-      target: window
+      target: backglass
 
 slides:
   room_2q_ridley_backglass_slide:
