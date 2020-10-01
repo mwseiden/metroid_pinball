@@ -171,7 +171,7 @@ widgets:
     y: 690
     z: 5
     animations:
-      show_slide:
+      add_to_slide:
         - property: x
           value: 80
           relative: true
