@@ -8,9 +8,9 @@ mode:
 
 timers:
   boss_exploder_timer:
-    start_value: 1
+    start_value: 0
     end_value: 9
-    tick_interval: 0.4s
+    tick_interval: 0.5s
     control_events:
       - event: boss_explode
         action: restart
@@ -33,6 +33,16 @@ sounds:
     track: sfx
     priority: 50
     max_queue_time: None
+  boss_explode:
+    file: boss_explode.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
+sound_player:
+  timer_boss_exploder_timer_tick: boss_explode
 
 achievements:
   boss_ridley:

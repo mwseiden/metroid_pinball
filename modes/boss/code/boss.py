@@ -22,7 +22,7 @@ class Boss(Mode):
             'action': 'add',
             'target': 'backglass',
             'key': 'boss_explosion_widget',
-            'fps': 25,
+            'fps': 18,
             'widget_settings': {
               'x': randint(128, 592),
               'y': randint(256, 900),
