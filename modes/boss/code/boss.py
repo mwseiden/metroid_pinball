@@ -11,12 +11,12 @@ class Boss(Mode):
 
     def event_boss_explode(self, **kwargs):
         self._remove_explode()
-        self._show_explode(randint(128, 592), randint(256, 900))
+        self._show_explode()
 
     def event_boss_explode_done(self, **kwargs):
         self._remove_explode()
 
-    def _show_explode(self, x, y):
+    def _show_explode(self):
         settings = {
           'boss_explosion_widget': {
             'action': 'add',
@@ -24,8 +24,8 @@ class Boss(Mode):
             'key': 'boss_explosion_widget',
             'fps': 25,
             'widget_settings': {
-              'x': x,
-              'y': y,
+              'x': randint(128, 592),
+              'y': randint(256, 900),
               'z': 1000,
             }
           }
