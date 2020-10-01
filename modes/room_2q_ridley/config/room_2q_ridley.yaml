@@ -242,7 +242,7 @@ slide_player:
     room_2q_ridley_splash_slide:
       target: dmd
       expire: 1.5s
-  mode_room_2q_ridley_over:
+  room_2q_show_defeated_backglass:
     room_2q_ridley_backglass_defeated_slide:
       target: backglass
   ridley_defeated:
@@ -348,7 +348,7 @@ event_player:
     cmd_map_position:
       room: '2q'
       visit: True
-  mode_room_2q_ridley_started{current_player.boss_ridley_hp < 1}: mode_room_2q_ridley_over, mode_room_2q_ridley_open_door
+  mode_room_2q_ridley_started{current_player.boss_ridley_hp < 1}: mode_room_2q_ridley_over, mode_room_2q_ridley_open_door, room_2q_show_defeated_backglass
   mode_room_2q_ridley_started{current_player.boss_ridley_hp > 0}: mode_room_2q_ridley_battle, metroid_exclusive_started
   mode_room_2q_ridley_battle{current_player.boss_ridley_multiball_played == 0}: mode_room_2q_ridley_start_multiball
   room_2q_boss_weak_back_ramp_shot_hit: ridley_hit_strong
