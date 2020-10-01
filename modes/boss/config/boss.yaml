@@ -14,7 +14,7 @@ widgets:
 show_player:
   boss_start_explosions:
     boss_explosion:
-      loops: 0
+      loops: 9
       priority: 300
 
 sounds:
