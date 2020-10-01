@@ -1,3 +1,4 @@
+from random import randint
 from mpf.core.mode import Mode
 
 class Boss(Mode):
@@ -6,10 +7,14 @@ class Boss(Mode):
         super().mode_start(**kwargs)
 
         self.add_mode_event_handler('boss_explode', self.event_boss_explode)
+        self.add_mode_event_handler('boss_explode_done', self.event_boss_explode)
 
     def event_boss_explode(self, **kwargs):
         self._remove_explode()
-        self._show_explode(0, 0)
+        self._show_explode(randint(128, 592), randint(256, 900))
+
+    def event_boss_explode_done(self, **kwargs):
+        self._remove_explode()
 
     def _show_explode(self, x, y):
         settings = {
@@ -17,6 +22,7 @@ class Boss(Mode):
             'action': 'add',
             'target': 'backglass',
             'key': 'boss_explosion_widget',
+            'fps': 25
             'widget_settings': {
               'x': x,
               'y': y,

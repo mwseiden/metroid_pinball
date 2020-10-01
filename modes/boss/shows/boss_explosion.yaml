@@ -1,6 +1,38 @@
 #show_version=5
 
-- duration: 0.8
+- duration: 0.4
   events:
     boss_explode:
+
+- duration: 0.4
+  events:
+    boss_explode:
+
+- duration: 0.4
+  events:
+    boss_explode:
+
+- duration: 0.4
+  events:
+    boss_explode:
+
+- duration: 0.4
+  events:
+    boss_explode:
+
+- duration: 0.4
+  events:
+    boss_explode:
+
+- duration: 0.4
+  events:
+    boss_explode:
+
+- duration: 0.4
+  events:
+    boss_explode:
+
+- duration: 0.4
+  events:
+    boss_explode_done:
 
