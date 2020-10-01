@@ -6,16 +6,19 @@ mode:
   stop_events: metroid_base_ended
   priority: 800
 
+timers:
+  boss_exploder_timer:
+    start_value: 1
+    end_value: 9
+    tick_interval: 0.4s
+    control_events:
+      - event: boss_explode
+        action: restart
+
 widgets:
   boss_explosion_widget:
     type: image
     image: boss_explosion
-
-show_player:
-  boss_start_explosions:
-    boss_explosion:
-      loops: 9
-      priority: 300
 
 sounds:
   boss_hit_power_bomb:

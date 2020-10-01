@@ -6,8 +6,8 @@ class Boss(Mode):
     def mode_start(self, **kwargs):
         super().mode_start(**kwargs)
 
-        self.add_mode_event_handler('boss_explode', self.event_boss_explode)
-        self.add_mode_event_handler('boss_explode_done', self.event_boss_explode_done)
+        self.add_mode_event_handler('timer_boss_exploder_timer_tick', self.event_boss_explode)
+        self.add_mode_event_handler('timer_boss_exploder_timer_complete', self.event_boss_explode_done)
 
     def event_boss_explode(self, **kwargs):
         self._remove_explode()
