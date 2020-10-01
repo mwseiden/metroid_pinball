@@ -215,7 +215,7 @@ slides:
   room_2q_ridley_backglass_defeated_slide:
     widgets:
       - type: image
-        image: room_2q_ridley_backglass
+        image: room_2q_ridley_backglass_defeated
         x: 280
         y: 690
     transition: fade
@@ -243,12 +243,18 @@ slide_player:
       target: dmd
       expire: 1.5s
   mode_room_2q_ridley_over:
+    room_2q_ridley_backglass_defeated_slide:
+      target: backglass
+  ridley_defeated:
     room_2q_ridley_backglass_slide:
       target: backglass
       action: remove
     room_2q_ridley_dying_backglass_slide:
       target: backglass
       expire: 9.0s
+  timer_boss_exploder_timer_complete:
+    room_2q_ridley_backglass_defeated_slide:
+      target: backglass
 
 show_player:
   mode_room_2q_ridley_started:
