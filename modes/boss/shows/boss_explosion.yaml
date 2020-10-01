@@ -1,0 +1,6 @@
+#show_version=5
+
+- duration: 0.8
+  events:
+    boss_explode:
+
