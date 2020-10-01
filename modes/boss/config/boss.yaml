@@ -5,6 +5,11 @@ mode:
   stop_events: metroid_base_ended
   priority: 800
 
+widgets:
+  boss_explosion_widget:
+    type: image
+    image: boss_explosion
+
 sounds:
   boss_hit_power_bomb:
     file: boss_hit_power_bomb.wav

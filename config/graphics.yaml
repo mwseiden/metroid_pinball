@@ -22,7 +22,7 @@ window:
   no_window: false
   resizable: false
   show_cursor: false
-  
+
 slides:
   window_slide:
     - type: display

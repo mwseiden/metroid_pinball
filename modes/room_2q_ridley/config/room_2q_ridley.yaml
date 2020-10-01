@@ -162,59 +162,44 @@ animations:
       duration: 1.0s
       timing: with_previous
       repeat: true
-
-widgets:
-  room_2q_ridley_dies:
-    type: image
-    image: room_2q_ridley_backglass
-    x: 280
-    y: 690
-    z: 5
-    animations:
-      add_to_slide:
-        - property: x
-          value: 80
-          relative: true
-          duration: 0.1s
-        - property: y
-          value: -40
-          relative: true
-          duration: 0.1s
-          timing: with_previous
-        - property: x
-          value: -80
-          relative: true
-          duration: 0.1s
-        - property: y
-          value: -40
-          relative: true
-          duration: 0.1s
-          timing: with_previous
-        - property: x
-          value: -80
-          relative: true
-          duration: 0.1s
-        - property: y
-          value: -40
-          relative: true
-          duration: 0.1s
-          timing: with_previous
-        - property: x
-          value: 80
-          relative: true
-          duration: 0.1s
-        - property: y
-          value: -40
-          relative: true
-          duration: 0.1s
-          timing: with_previous
-          repeat: true
-
-widget_player:
-  room_2q_show_ridley_dying:
-    room_2q_ridley_dies:
-      action: add
-      target: backglass
+  room_2q_ridley_death:
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+      repeat: true
 
 slides:
   room_2q_ridley_backglass_slide:
@@ -239,6 +224,16 @@ slides:
     widgets:
       - type: image
         image: room_2q_ridley_splash
+  room_2q_ridley_dying_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2q_ridley_backglass
+        x: 280
+        y: 690
+        animations:
+          show_slide: room_2q_ridley_death
+    transition: fade
+    transition_out: fade
 
 slide_player:
   mode_room_2q_ridley_battle:
@@ -251,6 +246,8 @@ slide_player:
     room_2q_ridley_backglass_slide:
       target: backglass
       action: remove
+    room_2q_ridley_dying_backglass_slide:
+      target: backglass
 
 show_player:
   mode_room_2q_ridley_started:
@@ -313,10 +310,6 @@ show_player:
   multiball_room_2q_ridley_boss_multiball_shoot_again_ended:
     room_2q_ball_save_fire:
       action: stop
-  ridley_defeated:
-    explosions:
-      loops: 0
-      priority: 10
 
 sounds:
   ridley_hit_strong:
@@ -367,7 +360,7 @@ event_player:
   player_boss_ridley_hp{value <= 0}: room_2q_ridley_should_die
   room_2q_ridley_should_die: ridley_defeated
   ridley_defeated{device.multiballs.room_2q_ridley_boss_multiball.balls_added_live == 0}: mode_room_2q_ridley_open_door
-  ridley_defeated: mode_room_2q_ridley_over, metroid_exclusive_ended, room_2q_show_ridley_dying
+  ridley_defeated: mode_room_2q_ridley_over, metroid_exclusive_ended
   room_2q_exit_north_shot_hit.1: drop_targets_save
   room_2q_exit_north_shot_hit.2: room_2n_enter
   multiball_room_2q_ridley_boss_multiball_ended{current_player.boss_ridley_hp < 1}: mode_room_2q_ridley_open_door
