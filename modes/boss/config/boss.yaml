@@ -9,8 +9,8 @@ mode:
 timers:
   boss_exploder_timer:
     start_value: 0
-    end_value: 9
-    tick_interval: 0.5s
+    end_value: 12
+    tick_interval: 0.4s
     control_events:
       - event: boss_explode
         action: restart
