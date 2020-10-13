@@ -376,21 +376,21 @@ event_player:
       show_type: sweep_vertical
       color: 'FF0000'
       speed: 1
-      repeat: 4
+      repeat: 2
       direction: up
   ridley_hit_normal:
     cmd_backbox_show_overlay:
       show_type: sweep_vertical
       color: 'FF8000'
       speed: 1
-      repeat: 3
+      repeat: 1
       direction: up
   ridley_hit_weak:
     cmd_backbox_show_overlay:
       show_type: sweep_vertical
       color: '0000FF'
       speed: 1
-      repeat: 2
+#      repeat: 2
       direction: up
 
 variable_player:
