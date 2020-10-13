@@ -69,7 +69,7 @@ sound_player:
   mode_room_2q_ridley_started{machine.next_game_acapella == 0 and current_player.boss_ridley_hp > 0}: music_boss
   mode_room_2q_ridley_started{machine.next_game_acapella == 0 and current_player.boss_ridley_hp < 1}: music_metal_item_room
 
-  ridley_defeated:
+  ridley_defeated_music:
     music_boss:
       action: stop
       fade_out: 1s
