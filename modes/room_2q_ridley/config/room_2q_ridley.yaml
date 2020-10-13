@@ -41,7 +41,7 @@ shots:
     show_tokens:
       led: led_enter_ramp
       color: white
-  room_2q_victoy_side_ramp_shot:
+  room_2q_boss_victory_side_ramp_shot:
     switch: s_side_ramp_made
     profile: room_2q_weak_spot
     enable_events: ridley_enable_victory_laps
@@ -333,6 +333,12 @@ show_player:
   multiball_room_2q_ridley_boss_multiball_shoot_again_ended:
     room_2q_ball_save_fire:
       action: stop
+  room_2q_collect_victory_nw:
+    special_score_red:
+      loops: 0
+  room_2q_collect_victory_ne:
+    special_score_red:
+      loops: 0
 
 sounds:
   ridley_hit_strong:
@@ -409,6 +415,8 @@ event_player:
       speed: 1
 #      repeat: 2
       direction: up
+  room_2q_boss_victory_back_ramp_shot_hit: room_2q_collect_victory_nw
+  room_2q_boss_victory_side_ramp_shot_hit: room_2q_collect_victory_ne
 
 variable_player:
   mode_room_2q_ridley_started:
@@ -453,4 +461,14 @@ variable_player:
     score: (50000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
     room_special_score:
       int: (50000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+      action: set
+  room_2q_collect_victory_ne:
+    score: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+      action: set
+  room_2q_collect_victory_nw:
+    score: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
       action: set
