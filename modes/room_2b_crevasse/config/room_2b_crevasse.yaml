@@ -4,6 +4,19 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2a_enter, room_2f_enter, room_2b_exit
   priority: 300
 
+sequences:
+   room_2b_hurry_up_sequence:
+      events:
+         - room_2b_bank_1_shot_hit
+         - room_2b_bank_2_shot_hit
+         - room_2b_bank_3_shot_hit
+         - room_2b_hurry_up_shot_hit
+      persist_state: True
+      disable_on_complete: True
+      enable_events: room_2b_enable_shot_1, room_2b_enable_shot_2, room_2b_enable_shot_3, room_2b_enable_shot_4
+      disable_events: mode_room_2b_crevasse_started
+      reset_events: room_2b_hurry_up_over
+
 slides:
   room_2b_crevasse_backglass_slide:
     widgets:
@@ -24,6 +37,13 @@ slide_player:
       target: dmd
       expire: 1.5s
 
+shot_profiles:
+  room_2b_strobe:
+    states:
+    - name: lit
+      show: blink_3_lights
+      loops: -1
+
 shots:
   room_2b_exit_west_shot:
     hit_events: left_orbit_hit
@@ -43,7 +63,42 @@ shots:
     show_tokens:
       led: led_rollover
       color: door_blue
-
+  room_2b_bank_1_shot:
+    switch: s_missile_bank_1, s_missile_bank_2, s_missile_bank_3
+    profile: room_2b_strobe
+    enable_events: room_2b_enable_shot_1
+    reset_events: room_2b_enable_shot_1
+    disable_events: room_2b_enable_shot_2, mode_room_2b_crevasse_started
+    show_tokens:
+      led_1: led_missile_bank_1
+      led_2: led_missile_bank_2
+      led_3: led_missile_bank_3
+      color_1: '404040'
+      color_2: stop
+  room_2b_bank_2_shot:
+    switch: s_purple_1, s_purple_2, s_purple_3
+    profile: room_2b_strobe
+    enable_events: room_2b_enable_shot_2
+    reset_events: room_2b_enable_shot_2
+    disable_events: room_2b_enable_shot_3, mode_room_2b_crevasse_started
+    show_tokens:
+      led_1: led_upgrade_bank_1
+      led_2: led_upgrade_bank_2
+      led_3: led_upgrade_bank_3
+      color_1: '404040'
+      color_2: stop
+  room_2b_bank_3_shot:
+    switch: s_lower_right_bank_1, s_lower_right_bank_2, s_lower_right_bank_3
+    profile: room_2b_strobe
+    enable_events: room_2b_enable_shot_3
+    reset_events: room_2b_enable_shot_3
+    disable_events: room_2b_enable_shot_4, mode_room_2b_crevasse_started
+    show_tokens:
+      led_1: led_bomb_bank_1
+      led_2: led_bomb_bank_2
+      led_3: led_bomb_bank_3
+      color_1: '404040'
+      color_2: stop
 show_player:
   mode_room_2b_crevasse_started:
     gi_solid_with_overhead:
@@ -64,6 +119,16 @@ event_player:
     cmd_map_position:
       room: '2b'
       visit: True
+  mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 0}: room_2b_enable_shot_1
+  mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 1}: room_2b_enable_shot_2
+  mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 2}: room_2b_enable_shot_3
+  mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 3}: room_2b_hurry_up_over
+  logicblock_room_2b_hurry_up_sequence_updated{value == 0}: room_2b_enable_shot_1
+  logicblock_room_2b_hurry_up_sequence_updated{value == 1}: room_2b_enable_shot_2
+  logicblock_room_2b_hurry_up_sequence_updated{value == 2}: room_2b_enable_shot_3
+  logicblock_room_2b_hurry_up_sequence_updated{value == 3}: room_2b_enable_shot_4
+  # temp logic
+  room_2b_enable_shot_4: room_2b_hurry_up_over
   room_2b_exit_west_shot_hit.1: drop_targets_save
   room_2b_exit_west_shot_hit.2: room_2a_enter
   room_2b_exit_south_shot_hit.1: drop_targets_save
