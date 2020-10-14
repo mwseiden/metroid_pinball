@@ -123,7 +123,6 @@ event_player:
   mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 1}: room_2b_enable_shot_2
   mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 2}: room_2b_enable_shot_3
   mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 3}: room_2b_hurry_up_over
-  logicblock_room_2b_hurry_up_sequence_updated{value == 0}: room_2b_enable_shot_1
   logicblock_room_2b_hurry_up_sequence_updated{value == 1}: room_2b_enable_shot_2
   logicblock_room_2b_hurry_up_sequence_updated{value == 2}: room_2b_enable_shot_3
   logicblock_room_2b_hurry_up_sequence_updated{value == 3}: room_2b_enable_shot_4
