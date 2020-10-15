@@ -130,6 +130,7 @@ shots:
 
 sound_player:
   room_2b_hurry_up_start: shoot_the_drop_target
+  room_2b_hurry_up_shot_hit: jackpot
 
 show_player:
   mode_room_2b_crevasse_started:
@@ -159,6 +160,7 @@ event_player:
   room_2b_bank_1_shot_hit: room_2b_enable_shot_2
   room_2b_bank_2_shot_hit: room_2b_enable_shot_3
   room_2b_bank_3_shot_hit: room_2b_enable_shot_4
+  room_2b_hurry_up_shot_hit: room_2b_hurry_up_over
   room_2b_enable_shot_4: drop_target_mode_should_end
   timer_room_2b_hurry_up_timer_tick{ticks == 1}: cmd_drop_one_up
   timer_room_2b_hurry_up_timer_tick{ticks == 3}: room_2b_hurry_up_start
