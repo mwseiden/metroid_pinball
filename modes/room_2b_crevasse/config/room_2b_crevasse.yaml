@@ -28,7 +28,7 @@ sequences:
       disable_on_complete: True
       enable_events: room_2b_enable_shot_1, room_2b_enable_shot_2, room_2b_enable_shot_3, room_2b_enable_shot_4
       disable_events: mode_room_2b_crevasse_started
-      reset_events: room_2b_hurry_up_over
+      restart_events: room_2b_hurry_up_over
 
 slides:
   room_2b_crevasse_backglass_slide:
@@ -128,6 +128,8 @@ shots:
       led: led_drop_1
       color: 'FFFFFF'
 
+sound_player:
+  room_2b_hurry_up_start: shoot_the_drop_target
 
 show_player:
   mode_room_2b_crevasse_started:
@@ -153,6 +155,7 @@ event_player:
   mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 1}: room_2b_enable_shot_2
   mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 2}: room_2b_enable_shot_3
   mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 3}: room_2b_hurry_up_over
+  room_2b_hurry_up_over: room_2b_enable_shot_1
   room_2b_bank_1_shot_hit: room_2b_enable_shot_2
   room_2b_bank_2_shot_hit: room_2b_enable_shot_3
   room_2b_bank_3_shot_hit: room_2b_enable_shot_4
