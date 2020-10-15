@@ -4,6 +4,19 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2a_enter, room_2f_enter, room_2b_exit
   priority: 300
 
+timers:
+  room_2b_hurry_up_timer:
+    start_value: 0
+    end_value: 40
+    tick_interval: .25s
+    restart_on_complete: False
+    start_running: False
+    control_events:
+      - event: room_2b_enable_shot_4
+        action: restart
+      - event: room_2b_hurry_up_over
+        action: stop
+
 sequences:
    room_2b_hurry_up_sequence:
       events:
@@ -43,6 +56,12 @@ shot_profiles:
     - name: lit
       show: blink_3_lights
       loops: -1
+  room_2b_hurry_up:
+    states:
+    - name: lit
+      show: room_2b_crevasse_hurry_up
+      loops: -1
+      speed: 60
 
 shots:
   room_2b_exit_west_shot:
@@ -99,6 +118,20 @@ shots:
       led_3: led_bomb_bank_3
       color_1: '404040'
       color_2: stop
+  room_2b_hurry_up_shot:
+    switch: s_drop_target_1, s_behind_drop_1
+    profile: room_2b_hurry_up
+    enable_events: room_2b_hurry_up_start
+    reset_events: room_2b_hurry_up_start
+    disable_events: room_2b_hurry_up_over, mode_room_2b_crevasse_started
+    show_tokens:
+      led_1: led_bomb_bank_1
+      led_2: led_bomb_bank_2
+      led_3: led_bomb_bank_3
+      color_1: '404040'
+      color_2: stop
+
+
 show_player:
   mode_room_2b_crevasse_started:
     gi_solid_with_overhead:
@@ -126,12 +159,17 @@ event_player:
   room_2b_bank_1_shot_hit: room_2b_enable_shot_2
   room_2b_bank_2_shot_hit: room_2b_enable_shot_3
   room_2b_bank_3_shot_hit: room_2b_enable_shot_4
-  # temp logic
-  room_2b_enable_shot_4: room_2b_hurry_up_over
-  room_2b_exit_west_shot_hit.1: drop_targets_save
-  room_2b_exit_west_shot_hit.2: room_2a_enter
-  room_2b_exit_south_shot_hit.1: drop_targets_save
-  room_2b_exit_south_shot_hit.2: room_2f_enter
+  room_2b_enable_shot_4: drop_target_mode_should_end
+  timer_room_2b_hurry_up_timer_tick{ticks == 1}: cmd_drop_one_up
+  timer_room_2b_hurry_up_timer_tick{ticks == 3}: room_2b_hurry_up_start
+  timer_room_2b_hurry_up_timer_tick{ticks == 35}: cmd_drop_one_down
+  timer_room_2b_hurry_up_timer_tick{ticks == 37}: room_2b_hurry_up_over, drop_target_mode_should_start
+  room_2b_exit_west_shot_hit.1: drop_target_mode_should_start
+  room_2b_exit_west_shot_hit.2: drop_targets_save
+  room_2b_exit_west_shot_hit.3: room_2a_enter
+  room_2b_exit_south_shot_hit.1: drop_target_mode_should_start
+  room_2b_exit_south_shot_hit.2: drop_targets_save
+  room_2b_exit_south_shot_hit.3: room_2f_enter
 
 variable_player:
   mode_room_2b_crevasse_started:
