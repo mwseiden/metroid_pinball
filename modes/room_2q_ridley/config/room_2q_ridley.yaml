@@ -360,6 +360,8 @@ sound_player:
   ridley_hit_weak: ridley_hit_weak
   ridley_hit_missile: boss_hit_missile
   ridley_hit_power_bomb: boss_hit_power_bomb
+  room_2q_collect_victory_nw: jackpot
+  room_2q_collect_victory_ne: jackpot
 
 event_player:
   mode_room_2q_ridley_started:
