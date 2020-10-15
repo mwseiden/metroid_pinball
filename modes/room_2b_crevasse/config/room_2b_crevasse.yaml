@@ -60,8 +60,6 @@ shot_profiles:
     states:
     - name: lit
       show: blink_light
-      show_tokens:
-        color: '0000FF'
       loops: -1
       speed: 60
 
@@ -94,7 +92,7 @@ shots:
       led_1: led_missile_bank_1
       led_2: led_missile_bank_2
       led_3: led_missile_bank_3
-      color_1: '404040'
+      color_1: '808080'
       color_2: stop
   room_2b_bank_2_shot:
     switch: s_purple_1, s_purple_2, s_purple_3
@@ -106,7 +104,7 @@ shots:
       led_1: led_upgrade_bank_1
       led_2: led_upgrade_bank_2
       led_3: led_upgrade_bank_3
-      color_1: '404040'
+      color_1: '808080'
       color_2: stop
   room_2b_bank_3_shot:
     switch: s_lower_right_bank_1, s_lower_right_bank_2, s_lower_right_bank_3
@@ -118,7 +116,7 @@ shots:
       led_1: led_bomb_bank_1
       led_2: led_bomb_bank_2
       led_3: led_bomb_bank_3
-      color_1: '404040'
+      color_1: '808080'
       color_2: stop
   room_2b_hurry_up_shot:
     switch: s_drop_target_1, s_behind_drop_1
@@ -127,11 +125,8 @@ shots:
     reset_events: room_2b_hurry_up_start
     disable_events: room_2b_hurry_up_over, mode_room_2b_crevasse_started
     show_tokens:
-      led_1: led_bomb_bank_1
-      led_2: led_bomb_bank_2
-      led_3: led_bomb_bank_3
-      color_1: '404040'
-      color_2: stop
+      led: led_drop_1
+      color: 'FFFFFF'
 
 
 show_player:
