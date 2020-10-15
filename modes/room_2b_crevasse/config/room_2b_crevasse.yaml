@@ -139,6 +139,18 @@ show_player:
       show_tokens:
         color: 'C0C0FF'
         color2: '404080'
+  room_2b_bank_1_shot_hit:
+    special_score_red:
+      loops: 0
+  room_2b_bank_2_shot_hit:
+    special_score_red:
+      loops: 0
+  room_2b_bank_3_shot_hit:
+    special_score_red:
+      loops: 0
+  room_2b_hurry_up_shot_hit:
+    special_score_red:
+      loops: 0
 
 event_player:
   mode_room_2b_crevasse_started:
@@ -180,4 +192,24 @@ variable_player:
       action: set
     continue_room:
       string: 2b
+      action: set
+  room_2b_bank_1_shot_hit:
+    score: (100000 + (current_player.area_bonus_w * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_w * 50000)) * current_player.multiplier
+      action: set
+  room_2b_bank_2_shot_hit:
+    score: (150000 + ((current_player.area_bonus_ne + current_player.area_bonus_nw) * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (150000 + ((current_player.area_bonus_ne + current_player.area_bonus_nw) * 50000)) * current_player.multiplier
+      action: set
+  room_2b_bank_3_shot_hit:
+    score: (200000 + (current_player.area_bonus_e * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (200000 + (current_player.area_bonus_e * 50000)) * current_player.multiplier
+      action: set
+  room_2b_hurry_up_shot_hit:
+    score: (300000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (300000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
       action: set
