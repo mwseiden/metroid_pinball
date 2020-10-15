@@ -59,11 +59,11 @@ shot_profiles:
   room_2b_hurry_up:
     states:
     - name: lit
-        show: blink_light
-        show_tokens:
-          color: '0000FF'
-        loops: -1
-        speed: 60
+      show: blink_light
+      show_tokens:
+        color: '0000FF'
+      loops: -1
+      speed: 60
 
 shots:
   room_2b_exit_west_shot:
