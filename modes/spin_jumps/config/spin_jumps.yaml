@@ -195,44 +195,116 @@ variable_player:
     score:
       int: (50 + (10 * current_player.spinners)) * current_player.multiplier
   logicblock_spin_jump_sequence_updated{value == 0}:
-    area_bonus_nw: 0
-    area_bonus_ne: 1
-    area_bonus_e: 0
-    area_bonus_se: 0
-    area_bonus_sw: 0
-    area_bonus_w: 0
+    area_bonus_nw:
+      int: 0
+      action: set
+    area_bonus_ne:
+      int: 1
+      action: set
+    area_bonus_e:
+      int: 0
+      action: set
+    area_bonus_se:
+      int: 0
+      action: set
+    area_bonus_sw:
+      int: 0
+      action: set
+    area_bonus_w:
+      int: 0
+      action: set
   logicblock_spin_jump_sequence_updated{value == 1}:
-    area_bonus_nw: 0
-    area_bonus_ne: 0
-    area_bonus_e: 1
-    area_bonus_se: 0
-    area_bonus_sw: 0
-    area_bonus_w: 0
+    area_bonus_nw:
+      int: 0
+      action: set
+    area_bonus_ne:
+      int: 0
+      action: set
+    area_bonus_e:
+      int: 1
+      action: set
+    area_bonus_se:
+      int: 0
+      action: set
+    area_bonus_sw:
+      int: 0
+      action: set
+    area_bonus_w:
+      int: 0
+      action: set
   logicblock_spin_jump_sequence_updated{value == 2}:
-    area_bonus_nw: 0
-    area_bonus_ne: 0
-    area_bonus_e: 0
-    area_bonus_se: 1
-    area_bonus_sw: 0
-    area_bonus_w: 0
+    area_bonus_nw:
+      int: 0
+      action: set
+    area_bonus_ne:
+      int: 0
+      action: set
+    area_bonus_e:
+      int: 0
+      action: set
+    area_bonus_se:
+      int: 1
+      action: set
+    area_bonus_sw:
+      int: 0
+      action: set
+    area_bonus_w:
+      int: 0
+      action: set
   logicblock_spin_jump_sequence_updated{value == 3}:
-    area_bonus_nw: 0
-    area_bonus_ne: 0
-    area_bonus_e: 0
-    area_bonus_se: 0
-    area_bonus_sw: 1
-    area_bonus_w: 0
+    area_bonus_nw:
+      int: 0
+      action: set
+    area_bonus_ne:
+      int: 0
+      action: set
+    area_bonus_e:
+      int: 0
+      action: set
+    area_bonus_se:
+      int: 0
+      action: set
+    area_bonus_sw:
+      int: 1
+      action: set
+    area_bonus_w:
+      int: 0
+      action: set
   logicblock_spin_jump_sequence_updated{value == 4}:
-    area_bonus_nw: 0
-    area_bonus_ne: 0
-    area_bonus_e: 0
-    area_bonus_se: 0
-    area_bonus_sw: 0
-    area_bonus_w: 1
+    area_bonus_nw:
+      int: 0
+      action: set
+    area_bonus_ne:
+      int: 0
+      action: set
+    area_bonus_e:
+      int: 0
+      action: set
+    area_bonus_se:
+      int: 0
+      action: set
+    area_bonus_sw:
+      int: 0
+      action: set
+    area_bonus_w:
+      int: 1
+      action: set
   logicblock_spin_jump_sequence_updated{value == 5}:
-    area_bonus_nw: 1
-    area_bonus_ne: 0
-    area_bonus_e: 0
-    area_bonus_se: 0
-    area_bonus_sw: 0
-    area_bonus_w: 0
+    area_bonus_nw:
+      int: 1
+      action: set
+    area_bonus_ne:
+      int: 0
+      action: set
+    area_bonus_e:
+      int: 0
+      action: set
+    area_bonus_se:
+      int: 0
+      action: set
+    area_bonus_sw:
+      int: 0
+      action: set
+    area_bonus_w:
+      int: 0
+      action: set
