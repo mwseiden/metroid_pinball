@@ -47,6 +47,10 @@ high_score:
       - MISSILE COLLECTOR
   - power_bombs:
       - POWER BOMBER
+  - rooms_visited:
+      - EXPLORER
+  - rooms_completed:
+      - CONQUEROR
 
   # set the defaults
   defaults:
@@ -76,5 +80,9 @@ high_score:
       - DAD: 5
     power_bombs:
       - DPF: 5
+    rooms_visited:
+      - TNA: 5
+    rooms_completed:
+      - CNK: 1
 
 
