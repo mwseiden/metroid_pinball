@@ -1,0 +1,19 @@
+#show_version=5
+
+- duration: 1s
+  slides:
+    special_score_purple_highlight_slide:
+      widgets:
+      - type: text
+        text: (player|room_special_score)
+        color: 'BF00FF'
+        style: dmd_big
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0
+              duration: .3s
+            - property: opacity
+              value: 1
+              duration: .3s
+              repeat: -1
