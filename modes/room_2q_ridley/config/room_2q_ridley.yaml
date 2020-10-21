@@ -440,29 +440,29 @@ variable_player:
       action: set
   ridley_hit_normal:
     boss_ridley_hp: -4
-    score: (24200 + (current_player.area_bonus_w * 10000) + (current_player.area_bonus_e * 10000)) * current_player.multiplier
+    score: (75000 + (current_player.area_bonus_w * 50000) + (current_player.area_bonus_e * 50000)) * current_player.multiplier
     room_special_score:
-      int: (24200 + (current_player.area_bonus_w * 10000) + (current_player.area_bonus_e * 10000)) * current_player.multiplier
+      int: (75000 + (current_player.area_bonus_w * 50000) + (current_player.area_bonus_e * 50000)) * current_player.multiplier
       action: set
   ridley_hit_weak:
     boss_ridley_hp: -2
-    score: (20000 + (current_player.area_bonus_sw * 10000) + (current_player.area_bonus_se * 10000)) * current_player.multiplier
+    score: (25000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
     room_special_score:
-      int: (20000 + (current_player.area_bonus_sw * 10000) + (current_player.area_bonus_se * 10000)) * current_player.multiplier
+      int: (25000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
       action: set
   ridley_hit_missile:
     boss_ridley_hp: -20
     missiles: -1
-    score: (50000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+    score: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
     room_special_score:
-      int: (50000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+      int: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
       action: set
   ridley_hit_power_bomb:
     boss_ridley_hp: -40
     power_bombs: -1
-    score: (50000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
+    score: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
     room_special_score:
-      int: (50000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+      int: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
       action: set
   room_2q_collect_victory_ne:
     score: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier

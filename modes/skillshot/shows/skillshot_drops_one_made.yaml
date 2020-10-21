@@ -70,7 +70,7 @@
     skillshot_drops_one_made_score_slide:
       widgets:
       - type: text
-        text: 10000
+        text: (player|room_special_score)
         style: dmd_big
         color: white
       transition:
