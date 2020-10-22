@@ -10,6 +10,8 @@ shot_profiles:
       - name: lit
         speed: 30
         show: blink_light
+        show_tokens:
+          color: 'BFFF00'
       - name: unlit
         show: led_color
         show_tokens:
@@ -48,25 +50,21 @@ shots:
     profile: room_1a_lanes
     show_tokens:
       led: led_left_outlane
-      color: 'BFFF00'
   room_1a_left_inlane_shot:
     switch: s_left_inlane
     profile: room_1a_lanes
     show_tokens:
       led: led_left_inlane
-      color: 'BFFF00'
   room_1a_right_outlane_shot:
     switch: s_right_outlane
     profile: room_1a_lanes
     show_tokens:
       led: led_right_outlane
-      color: 'BFFF00'
   room_1a_right_inlane_shot:
     switch: s_right_inlane
     profile: room_1a_lanes
     show_tokens:
       led: led_right_inlane
-      color: 'BFFF00'
 
 slides:
   room_1a_lush_cavern_backglass_slide:
