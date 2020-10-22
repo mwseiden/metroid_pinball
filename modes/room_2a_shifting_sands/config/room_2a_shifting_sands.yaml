@@ -136,6 +136,18 @@ show_player:
   flipper_cradle_release:
     room_2a_shifting_sands_status_report:
       action: stop
+  room_2a_bank_1_shot_hit:
+    special_score_yellow:
+      loops: 1
+  room_2a_bank_2_shot_hit:
+    special_score_yellow:
+      loops: 1
+  room_2a_bank_3_shot_hit:
+    special_score_yellow:
+      loops: 1
+  room_2a_bank_4_shot_hit:
+    special_score_yellow:
+      loops: 1
 
 slides:
   room_2a_backglass_slide:
@@ -197,18 +209,63 @@ slides:
       text: +2 Seconds
       style: dmd_big
       color: 'FF1030'
+      y: 22
+    - type: text
+      text: (player|room_special_score)
+      color: 'FFFF00'
+      style: dmd_big
+      y: 10
+      animations:
+        pre_show_slide:
+          - property: opacity
+            value: 0
+            duration: .1s
+          - property: opacity
+            value: 1
+            duration: .1s
+            repeat: -1
   room_2a_time_plus_4:
     widgets:
     - type: text
       text: +4 Seconds
       style: dmd_big
       color: 'FF1030'
+      y: 22
+    - type: text
+      text: (player|room_special_score)
+      color: 'FFFF00'
+      style: dmd_big
+      y: 10
+      animations:
+        pre_show_slide:
+          - property: opacity
+            value: 0
+            duration: .1s
+          - property: opacity
+            value: 1
+            duration: .1s
+            repeat: -1
   room_2a_time_plus_8:
     widgets:
     - type: text
       text: +8 Seconds
       style: dmd_big
       color: 'FF1030'
+      y: 22
+    - type: text
+      text: (player|room_special_score)
+      color: 'FFFF00'
+      style: dmd_big
+      y: 10
+      animations:
+        pre_show_slide:
+          - property: opacity
+            value: 0
+            duration: .1s
+          - property: opacity
+            value: 1
+            duration: .1s
+            repeat: -1
 
 slide_player:
   mode_room_2a_shifting_sands_started:
@@ -228,7 +285,7 @@ slide_player:
   room_2a_bank_2_shot_hit:
     room_2a_time_plus_4:
       target: dmd
-      expire: 1.5s
+      expire: 1s
       priority: 310
   room_2a_bank_3_shot_hit:
     room_2a_time_plus_2:
@@ -279,15 +336,27 @@ variable_player:
       action: set
       int: 0
   room_2a_bank_1_shot_hit:
-    score: (5000 + (current_player.area_bonus_w * 5000)) * current_player.multiplier
+    score: (25000 + (current_player.area_bonus_w * 10000)) * current_player.multiplier
+    room_special_score:
+      int: (25000 + (current_player.area_bonus_w * 10000)) * current_player.multiplier
+      action: set
   room_2a_bank_2_shot_hit:
-    score: (5000 + (current_player.area_bonus_e * 5000)) * current_player.multiplier
+    score: (50000 + (current_player.area_bonus_e * 10000)) * current_player.multiplier
+    room_special_score:
+      int: (50000 + (current_player.area_bonus_e * 10000)) * current_player.multiplier
+      action: set
   room_2a_bank_3_shot_hit:
-    score: (3000) * current_player.multiplier
+    score: (10000) * current_player.multiplier
+    room_special_score:
+      int: (10000) * current_player.multiplier
+      action: set
   room_2a_bank_4_shot_hit:
-    score: (15000 + (current_player.area_bonus_nw * 15000)) * current_player.multiplier
+    score: (150000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (150000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+      action: set
   timer_room_2a_do_not_sink_tick:
-    room_2a_alive_score: 250
+    room_2a_alive_score: 280
     room_2a_seconds_survived: 1
     score: current_player.room_2a_alive_score * current_player.multiplier
 
