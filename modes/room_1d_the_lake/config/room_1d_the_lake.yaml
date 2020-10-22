@@ -126,6 +126,7 @@ event_player:
     cmd_map_position:
       room: '1d'
       visit: True
+  player_room_1d_shots_hit{value == 4}: room_1d_complete
   room_1d_exit_west_shot_hit.1: drop_targets_save
   room_1d_exit_west_shot_hit.2: room_1c_enter
   room_1d_exit_east_shot_hit.1: drop_targets_save
@@ -142,23 +143,30 @@ variable_player:
     crateria_landed:
       int: 1
       action: set
+  room_1d_complete:
+    cmd_map_complete:
+      room: '1d'
   room_1d_underwater_1_shot_hit:
-    score: (200000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+    score: (200000 + (5000 * current_player.room_1d_shots_hit) + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
     room_special_score:
-      int: (200000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+      int: (200000 + (5000 * current_player.room_1d_shots_hit) + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
       action: set
+    room_1d_shots_hit: 1
   room_1d_underwater_2_shot_hit:
-    score: (50000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+    score: (50000 + (5000 * current_player.room_1d_shots_hit) + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
     room_special_score:
-      int: (50000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+      int: (50000 + (5000 * current_player.room_1d_shots_hit) + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
       action: set
+    room_1d_shots_hit: 1
   room_1d_underwater_3_shot_hit:
-    score: 250000 * current_player.multiplier
+    score: (250000 + (5000 * current_player.room_1d_shots_hit)) * current_player.multiplier
     room_special_score:
-      int: 250000 * current_player.multiplier
+      int: (250000 + (5000 * current_player.room_1d_shots_hit)) * current_player.multiplier
       action: set
+    room_1d_shots_hit: 1
   room_1d_underwater_4_shot_hit:
-    score: (100000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    score: (100000 + (5000 * current_player.room_1d_shots_hit) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
     room_special_score:
-      int: (100000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+      int: (100000 + (5000 * current_player.room_1d_shots_hit) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
       action: set
+    room_1d_shots_hit: 1
