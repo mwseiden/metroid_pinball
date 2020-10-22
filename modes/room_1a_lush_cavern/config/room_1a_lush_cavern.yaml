@@ -4,6 +4,15 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1b_enter, room_1f_enter, room_1a_exit
   priority: 300
 
+shot_profiles:
+  room_1a_lanes:
+    states:
+      - name: lit
+        speed: 30
+        show: blink_light
+      - name: unlit
+        show: off
+
 shots:
   room_1a_exit_east_shot:
     switch: s_ramp_enter
@@ -32,6 +41,30 @@ shots:
     show_tokens:
       led: led_enter_scoop
       color: door_blue
+  room_1a_left_outlane_shot:
+    switch: s_left_outlane
+    profile: room_1a_lanes
+    show_tokens:
+      led: led_left_outlane
+      color: 'BFFF00'
+  room_1a_left_inlane_shot:
+    switch: s_left_inlane
+    profile: room_1a_lanes
+    show_tokens:
+      led: led_left_inlane
+      color: 'BFFF00'
+  room_1a_right_outlane_shot:
+    switch: s_right_outlane
+    profile: room_1a_lanes
+    show_tokens:
+      led: led_right_outlane
+      color: 'BFFF00'
+  room_1a_right_inlane_shot:
+    switch: s_right_inlane
+    profile: room_1a_lanes
+    show_tokens:
+      led: led_right_inlane
+      color: 'BFFF00'
 
 slides:
   room_1a_lush_cavern_backglass_slide:
