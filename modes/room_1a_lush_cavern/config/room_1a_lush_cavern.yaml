@@ -11,7 +11,9 @@ shot_profiles:
         speed: 30
         show: blink_light
       - name: unlit
-        show: off
+        show: led_color
+        show_tokens:
+          color: stop
 
 shots:
   room_1a_exit_east_shot:
