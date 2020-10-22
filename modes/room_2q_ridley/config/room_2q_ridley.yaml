@@ -339,6 +339,10 @@ show_player:
   room_2q_collect_victory_ne:
     special_score_red:
       loops: 0
+  room_2q_ridley_should_die:
+    special_score_red:
+      loops: 0
+
 
 sounds:
   ridley_hit_strong:
@@ -473,4 +477,9 @@ variable_player:
     score: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
     room_special_score:
       int: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+      action: set
+  room_2q_ridley_should_die:
+    score: 1000000 * current_player.multiplier
+    room_special_score:
+      int: 1000000 * current_player.multiplier
       action: set
