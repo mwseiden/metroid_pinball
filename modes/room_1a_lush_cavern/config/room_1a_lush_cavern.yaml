@@ -8,10 +8,10 @@ shot_profiles:
   room_1a_lanes:
     states:
       - name: lit
-        speed: 30
+        speed: 5
         show: blink_light
         show_tokens:
-          color: 'BFFF00'
+          color: 'BFBF00'
       - name: unlit
         show: led_color
         show_tokens:
@@ -19,7 +19,7 @@ shot_profiles:
   room_1a_collect:
     states:
       - name: lit
-        speed: 10
+        speed: 2
         show: blink_light
         show_tokens:
           color: '00FF00'
@@ -59,49 +59,49 @@ shots:
   room_1a_left_outlane_shot:
     switch: s_left_outlane
     profile: room_1a_lanes
-    reset_events: room_1a_collect_shot_group_unlit_complete
+    reset_events: room_1a_reset_mode_shots
     show_tokens:
       led: led_left_outlane
   room_1a_left_inlane_shot:
     switch: s_left_inlane
     profile: room_1a_lanes
-    reset_events: room_1a_collect_shot_group_unlit_complete
+    reset_events: room_1a_reset_mode_shots
     show_tokens:
       led: led_left_inlane
   room_1a_right_outlane_shot:
     switch: s_right_outlane
     profile: room_1a_lanes
-    reset_events: room_1a_collect_shot_group_unlit_complete
+    reset_events: room_1a_reset_mode_shots
     show_tokens:
       led: led_right_outlane
   room_1a_right_inlane_shot:
     switch: s_right_inlane
     profile: room_1a_lanes
-    reset_events: room_1a_collect_shot_group_unlit_complete
+    reset_events: room_1a_reset_mode_shots
     show_tokens:
       led: led_right_inlane
   room_1a_collect_1_shot:
     switch: s_left_passage
     profile: room_1a_collect
-    reset_events: room_1a_collect_shot_group_unlit_complete
+    reset_events: room_1a_reset_mode_shots
     show_tokens:
       led: led_enter_secret_passage
   room_1a_collect_2_shot:
     hit_events: left_orbit_hit
     profile: room_1a_collect
-    reset_events: room_1a_collect_shot_group_unlit_complete
+    reset_events: room_1a_reset_mode_shots
     show_tokens:
       led: led_enter_left_orbit
   room_1a_collect_3_shot:
     switch: s_side_ramp_made
     profile: room_1a_collect
-    reset_events: room_1a_collect_shot_group_unlit_complete
+    reset_events: room_1a_reset_mode_shots
     show_tokens:
       led: led_enter_side_ramp
   room_1a_collect_4_shot:
     hit_events: right_orbit_hit
     profile: room_1a_collect
-    reset_events: room_1a_collect_shot_group_unlit_complete
+    reset_events: room_1a_reset_mode_shots
     show_tokens:
       led: led_enter_right_orbit
 
@@ -182,6 +182,7 @@ event_player:
   room_1a_collect_shot_group_unlit_complete:
     cmd_map_complete:
       room: '1a'
+    room_1a_reset_mode_shots:
 
 variable_player:
   mode_room_1a_lush_cavern_started:
