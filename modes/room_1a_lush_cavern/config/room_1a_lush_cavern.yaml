@@ -19,7 +19,7 @@ shot_profiles:
   room_1a_collect:
     states:
       - name: lit
-        speed: 30
+        speed: 10
         show: blink_light
         show_tokens:
           color: '00FF00'
@@ -59,51 +59,57 @@ shots:
   room_1a_left_outlane_shot:
     switch: s_left_outlane
     profile: room_1a_lanes
+    reset_events: room_1a_collect_shot_group_lit_complete
     show_tokens:
       led: led_left_outlane
   room_1a_left_inlane_shot:
     switch: s_left_inlane
     profile: room_1a_lanes
+    reset_events: room_1a_collect_shot_group_lit_complete
     show_tokens:
       led: led_left_inlane
   room_1a_right_outlane_shot:
     switch: s_right_outlane
     profile: room_1a_lanes
+    reset_events: room_1a_collect_shot_group_lit_complete
     show_tokens:
       led: led_right_outlane
   room_1a_right_inlane_shot:
     switch: s_right_inlane
     profile: room_1a_lanes
+    reset_events: room_1a_collect_shot_group_lit_complete
     show_tokens:
       led: led_right_inlane
   room_1a_collect_1_shot:
     switch: s_left_passage
     profile: room_1a_collect
+    reset_events: room_1a_collect_shot_group_lit_complete
     show_tokens:
       led: led_enter_secret_passage
   room_1a_collect_2_shot:
     hit_events: left_orbit_hit
     profile: room_1a_collect
+    reset_events: room_1a_collect_shot_group_lit_complete
     show_tokens:
       led: led_enter_left_orbit
   room_1a_collect_3_shot:
     switch: s_side_ramp_made
     profile: room_1a_collect
+    reset_events: room_1a_collect_shot_group_lit_complete
     show_tokens:
       led: led_enter_side_ramp
   room_1a_collect_4_shot:
     hit_events: right_orbit_hit
     profile: room_1a_collect
+    reset_events: room_1a_collect_shot_group_lit_complete
     show_tokens:
       led: led_enter_right_orbit
 
 shot_groups:
   room_1a_lanes_shot_group:
     shots: room_1a_left_outlane_shot, room_1a_left_inlane_shot, room_1a_right_inlane_shot, room_1a_right_outlane_shot
-    reset_events: room_1a_collect_shot_group_lit_complete
   room_1a_collect_shot_group:
     shots: room_1a_collect_1_shot, room_1a_collect_2_shot, room_1a_collect_3_shot, room_1a_collect_4_shot
-    reset_events: room_1a_collect_shot_group_lit_complete
 
 
 slides:
