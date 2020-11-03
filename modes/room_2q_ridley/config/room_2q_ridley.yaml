@@ -450,9 +450,9 @@ variable_player:
       action: set
   ridley_hit_weak:
     boss_ridley_hp: -2
-    score: (25000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
+    score: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
     room_special_score:
-      int: (25000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
+      int: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
       action: set
   ridley_hit_missile:
     boss_ridley_hp: -20
