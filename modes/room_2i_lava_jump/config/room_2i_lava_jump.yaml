@@ -128,6 +128,9 @@ show_player:
   lava_jump_jackpot_shot_hit:
     special_score_red:
       loops: 0
+    room_2i_jackpot:
+      loops: 0
+      speed: 30
 
 animations:
   room_2i_backglass_scroll_up:
