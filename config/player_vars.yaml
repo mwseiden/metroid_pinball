@@ -131,6 +131,8 @@ player_vars:
     initial_value: 0
   ramps:
     initial_value: 0
+  room_1a_multiplier:
+    initial_value: 1
   room_1b_step_1a:
     initial_value: 0
   room_1b_step_1b:
