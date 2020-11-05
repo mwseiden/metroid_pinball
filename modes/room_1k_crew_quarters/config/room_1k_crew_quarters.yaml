@@ -15,8 +15,10 @@ timers:
     tick_interval: 5.0s
     restart_on_complete: True
     control_events:
-      - event: mode_room_1k_crew_quarters_started
+      - event: mode_room_1k_crew_quarters_started_no_charge
         action: restart
+      - event: mode_room_1k_crew_quarters_started
+        action: stop
 
 shot_profiles:
   room_1k_covern:
@@ -83,6 +85,34 @@ shots:
     disable_events: mode_room_1k_crew_quarters_started, room_1k_covern_4_shot_hit, mode_room_1k_crew_quarters_deactivate_4
     show_tokens:
       led: led_rollover
+  room_1k_covern_powered_1_shot:
+    switch: s_left_passage
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_started_charge
+    disable_events: mode_room_1k_crew_quarters_started
+    show_tokens:
+      led: led_enter_secret_passage
+  room_1k_covern_powered_2_shot:
+    hit_events: left_orbit_hit
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_started_charge
+    disable_events: mode_room_1k_crew_quarters_started
+    show_tokens:
+      led: led_enter_left_orbit
+  room_1k_covern_powered_3_shot:
+    switch: s_side_ramp_made
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_started_charge
+    disable_events: mode_room_1k_crew_quarters_started
+    show_tokens:
+      led: led_enter_side_ramp
+  room_1k_covern_powered_4_shot:
+    switch: s_rollover_button
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_started_charge
+    disable_events: mode_room_1k_crew_quarters_started
+    show_tokens:
+      led: led_rollover
 
 slides:
   room_1k_crew_quarters_backglass_slide:
@@ -131,7 +161,6 @@ show_player:
 event_player:
   mode_room_1k_crew_quarters_started:
     drop_targets_continue:
-    mode_room_1k_crew_quarters_activate_1:
     cmd_map_position:
       room: '1k'
       visit: True
