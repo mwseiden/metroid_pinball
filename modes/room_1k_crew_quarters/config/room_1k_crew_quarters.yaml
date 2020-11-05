@@ -77,7 +77,7 @@ shots:
     enable_events: mode_room_1k_crew_quarters_activate_3
     disable_events: mode_room_1k_crew_quarters_started, room_1k_covern_3_shot_hit, mode_room_1k_crew_quarters_deactivate_3
     show_tokens:
-      led: led_rollover
+      led: led_enter_ramp
   room_1k_covern_4_shot:
     switch: s_side_ramp_made
     profile: room_1k_covern
