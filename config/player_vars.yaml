@@ -149,7 +149,7 @@ player_vars:
     initial_value: 0
   room_1m_captured:
     initial_value: 0
-  room_1m_charge:
+  wrecked_ship_charge:
     initial_value: 0
   room_1r_finished:
     initial_value: 0

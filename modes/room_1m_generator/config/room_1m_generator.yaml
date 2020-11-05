@@ -246,6 +246,6 @@ variable_player:
       int: 1
       action: set
   room_1m_add_charge:
-    room_1m_charge: 1
+    wrecked_ship_charge: 1
   room_1m_add_big_charge:
-    room_1m_charge: 5
+    wrecked_ship_charge: 5
