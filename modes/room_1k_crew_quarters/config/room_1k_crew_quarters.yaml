@@ -268,27 +268,27 @@ variable_player:
       int: ((current_player.area_bonus_e + 1) * 120000) * current_player.multiplier
       action: set
   room_1k_covern_powered_1_shot_hit:
-    score: (((current_player.area_bonus_sw + 1) * 50000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    score: (((current_player.area_bonus_sw + 1) * 50000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
     room_special_score:
-      int: (((current_player.area_bonus_sw + 1) * 50000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+      int: (((current_player.area_bonus_sw + 1) * 50000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
       action: set
   room_1k_covern_powered_2_shot_hit:
-    score: (((current_player.area_bonus_nw + 1) * 100000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    score: (((current_player.area_bonus_nw + 1) * 100000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
     room_special_score:
-      int: (((current_player.area_bonus_nw + 1) * 100000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+      int: (((current_player.area_bonus_nw + 1) * 100000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
       action: set
   room_1k_covern_powered_3_shot_hit:
-    score: (((current_player.area_bonus_nw + 1) * 40000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    score: (((current_player.area_bonus_nw + 1) * 40000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
     room_special_score:
-      int: (((current_player.area_bonus_nw + 1) * 40000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+      int: (((current_player.area_bonus_nw + 1) * 40000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
       action: set
   room_1k_covern_powered_4_shot_hit:
-    score: (((current_player.area_bonus_ne + 1) * 80000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    score: (((current_player.area_bonus_ne + 1) * 80000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
     room_special_score:
-      int: (((current_player.area_bonus_ne + 1) * 80000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+      int: (((current_player.area_bonus_ne + 1) * 80000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
       action: set
   room_1k_covern_powered_5_shot_hit:
-    score: (((current_player.area_bonus_e + 1) * 60000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    score: (((current_player.area_bonus_e + 1) * 60000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
     room_special_score:
-      int: (((current_player.area_bonus_e + 1) * 60000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+      int: (((current_player.area_bonus_e + 1) * 60000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
       action: set

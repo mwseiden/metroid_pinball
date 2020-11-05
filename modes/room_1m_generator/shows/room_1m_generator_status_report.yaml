@@ -13,6 +13,6 @@
     room_1m_generator_status_slide_help:
       widgets:
       - type: Text
-        text: CHARGE (player|room_1m_charge)
+        text: CHARGE (player|wrecked_ship_charge)
         color: red
         style: dmd_med
