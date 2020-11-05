@@ -119,7 +119,7 @@ shots:
     enable_events: mode_room_1k_crew_quarters_started_charge
     disable_events: mode_room_1k_crew_quarters_started
     show_tokens:
-      led: led_enter_side_ramp
+      led: led_enter_right_orbit
   room_1k_covern_powered_5_shot:
     switch: s_rollover_button
     profile: room_1k_covern
