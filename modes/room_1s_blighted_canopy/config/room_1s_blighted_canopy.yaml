@@ -15,7 +15,7 @@ shot_profiles:
         loops: -1
         speed: 2
         show_tokens:
-          color: '10FF70'
+          color: '10FFA0'
 
 shots:
   room_1s_exit_east_shot:
@@ -102,6 +102,18 @@ show_player:
   flipper_cradle_release:
     room_1s_blighted_canopy_status_report:
       action: stop
+  room_1s_light_jackpot_1_shot_hit:
+    special_score_green:
+      loops: 0
+  room_1s_light_jackpot_2_shot_hit:
+    special_score_green:
+      loops: 0
+  room_1s_light_jackpot_3_shot_hit:
+    special_score_green:
+      loops: 0
+  room_1s_jackpot_shot_hit:
+    special_score_red:
+      loops: 0
 
 event_player:
   mode_room_1s_blighted_canopy_started:
@@ -139,4 +151,27 @@ variable_player:
       action: set
     continue_room:
       string: 1s
+      action: set
+  room_1s_light_jackpot_1_shot_hit:
+    room_1s_jackpot: 100000
+    score: (50000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+    room_special_score:
+      int: (50000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+      action: set
+  room_1s_light_jackpot_2_shot_hit:
+    room_1s_jackpot: 200000
+    score: (70000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+    room_special_score:
+      int: (70000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+      action: set
+  room_1s_light_jackpot_3_shot_hit:
+    room_1s_jackpot: 300000
+    score: (90000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+    room_special_score:
+      int: (90000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+      action: set
+  room_1s_jackpot_shot_hit:
+    score: (current_player.room_1s_jackpot + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (current_player.room_1s_jackpot + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
       action: set
