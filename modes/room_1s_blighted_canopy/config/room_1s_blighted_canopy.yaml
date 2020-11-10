@@ -15,7 +15,7 @@ shot_profiles:
         loops: -1
         speed: 2
         show_tokens:
-          color: '1070FF'
+          color: '1030FF'
 
 shots:
   room_1s_exit_east_shot:
