@@ -15,7 +15,7 @@ shot_profiles:
         loops: -1
         speed: 2
         show_tokens:
-          color: '1080A0'
+          color: '1070FF'
 
 shots:
   room_1s_exit_east_shot:
@@ -60,6 +60,14 @@ shots:
     reset_events: mode_room_1s_blighted_canopy_started, room_1s_light_jackpot_3_shot_hit, mode_room_1s_disable_light_jackpot_shots
     show_tokens:
       led: led_enter_left_orbit
+  room_1s_jackpot_shot:
+    switch: s_side_ramp_made
+    profile: room_1s_light_jackpot
+    enable_events: mode_room_1s_enable_jackpot_shot
+    disable_events: mode_room_1s_blighted_canopy_started, room_1s_jackpot_shot_hit
+    reset_events: mode_room_1s_blighted_canopy_started, room_1s_jackpot_shot_hit
+    show_tokens:
+      led: led_enter_side_ramp
 
 slides:
   room_1s_blighted_canopy_backglass_slide:
@@ -115,6 +123,10 @@ event_player:
     cmd_map_position:
       room: '1s'
       visit: True
+  room_1s_light_jackpot_1_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot
+  room_1s_light_jackpot_2_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot
+  room_1s_light_jackpot_3_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot
+  room_1s_jackpot_shot_hit: mode_room_1s_enable_light_jackpot_shots
   room_1s_exit_east_shot_hit.1: drop_targets_save
   room_1s_exit_east_shot_hit.2: room_1t_enter
   room_1s_exit_west_shot_hit.1: drop_targets_save
