@@ -176,6 +176,8 @@ variable_player:
     room_2m_jackpot_value: 42000 + (current_player.area_bonus_sw * 20000)
   room_2m_collect_2_shot_hit:
     room_2m_jackpot_value: 42000 + (current_player.area_bonus_se * 20000)
+  room_2m_scoop_shot_hit:
+    room_2m_jackpot_value: 60000 + (current_player.area_bonus_nw * 40000)
   room_2m_jackpot_shot_hit:
     score: (current_player.room_2m_jackpot_value + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
     room_special_score:
