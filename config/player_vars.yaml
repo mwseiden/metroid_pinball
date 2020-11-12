@@ -164,6 +164,8 @@ player_vars:
     initial_value: 'ABCDEFGHIJKLMN'
   room_2k_insects:
     initial_value: 0
+  room_2m_jackpot_value:
+    initial_value: 88000
   rooms_visited:
     initial_value: 0
   rooms_completed:

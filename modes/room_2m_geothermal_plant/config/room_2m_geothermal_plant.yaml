@@ -137,6 +137,10 @@ show_player:
   flipper_cradle_release:
     room_2m_geothermal_plant_status_report:
       action: stop
+  room_2m_jackpot_shot_hit:
+    special_score_purple:
+      loops: 0
+
 
 event_player:
   mode_room_2m_geothermal_plant_started:
@@ -149,7 +153,10 @@ event_player:
   mode_room_2m_geothermal_plant_started{device.sequences.room_2m_progress_sequence.value == 0}: mode_room_2m_enable_collect
   mode_room_2m_geothermal_plant_started{device.sequences.room_2m_progress_sequence.value == 1}: mode_room_2m_disable_collect
   room_2m_scoop_shot_hit: mode_room_2m_disable_collect
-  room_2m_jackpot_shot_hit: mode_room_2m_enable_collect
+  room_2m_jackpot_shot_hit:
+    mode_room_2m_enable_collect:
+    cmd_map_complete:
+      room: '2m'
   room_2m_exit_north_shot_hit.1: drop_targets_save
   room_2m_exit_north_shot_hit.2: room_2i_enter
   room_2m_exit_east_shot_hit.1: drop_targets_save
@@ -164,4 +171,13 @@ variable_player:
       action: set
     continue_room:
       string: 2m
+      action: set
+  room_2m_collect_1_shot_hit:
+    room_2m_jackpot_value: 42000 + (current_player.area_bonus_sw * 20000)
+  room_2m_collect_2_shot_hit:
+    room_2m_jackpot_value: 42000 + (current_player.area_bonus_se * 20000)
+  room_2m_jackpot_shot_hit:
+    score: (current_player.room_2m_jackpot_value + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (current_player.room_2m_jackpot_value + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
       action: set
