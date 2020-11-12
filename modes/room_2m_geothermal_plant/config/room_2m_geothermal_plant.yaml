@@ -11,7 +11,7 @@ shot_profiles:
         show: two_color_blink
         show_tokens:
           color1: 'FF0000'
-          color2: 'FF8000'
+          color2: '808000'
       - name: unlit
         show: off
   room_2m_scoop_shot:
@@ -19,6 +19,19 @@ shot_profiles:
       - name: lit
         show: two_color_blink
         speed: 1.5
+  room_2m_jackpot_shot:
+    states:
+      - name: lit
+        show: small_theater_chase
+        speed: 6
+        show_tokens:
+          color: 'FF0000'
+          led_1: led_drop_1
+          led_2: led_drop_2
+          led_3: led_drop_3
+          led_4: led_drop_1
+          led_5: led_drop_2
+          led_6: led_drop_3
 
 shots:
   room_2m_exit_north_shot:
@@ -67,13 +80,19 @@ shots:
     show_tokens:
       led: led_left_inlane
   room_2m_collect_2_shot:
-    switch: s_right_outlane
+    switch: s_right_inlane
     profile: room_2m_collect_shot
     enable_events: mode_room_2m_enable_collect
     disable_events: mode_room_2m_geothermal_plant_started, room_2m_collect_2_shot_hit, mode_room_2m_disable_collect
     reset_events: mode_room_2m_geothermal_plant_started, room_2m_collect_2_shot_hit, mode_room_2m_disable_collect
     show_tokens:
-      led: led_right_outlane
+      led: led_right_inlane
+  room_2m_jackpot_shot:
+    switch: s_vuk
+    profile: room_2m_jackpot_shot
+    enable_events: mode_room_2m_disable_collect
+    disable_events: mode_room_2m_geothermal_plant_started, room_2m_jackpot_shot_hit, mode_room_2m_enable_collect
+    reset_events: mode_room_2m_geothermal_plant_started, room_2m_jackpot_shot_hit, mode_room_2m_enable_collect
 
 slides:
   room_2m_geothermal_plant_backglass_slide:
@@ -118,6 +137,8 @@ event_player:
     cmd_map_position:
       room: '2m'
       visit: True
+  room_2m_scoop_shot_hit: mode_room_2m_disable_collect
+  room_2m_jackpot_shot_hit: mode_room_2m_enable_collect
   room_2m_exit_north_shot_hit.1: drop_targets_save
   room_2m_exit_north_shot_hit.2: room_2i_enter
   room_2m_exit_east_shot_hit.1: drop_targets_save
