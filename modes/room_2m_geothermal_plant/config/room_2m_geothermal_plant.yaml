@@ -4,6 +4,18 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter, room_2n_enter, room_2l_enter, room_2m_exit
   priority: 300
 
+shot_profiles:
+  room_2m_collect_shot:
+    states:
+      - name: lit
+        show: two_color_blink
+      - name: unlit
+        show: off
+  room_2m_scoop_shot:
+    states:
+      - name: lit
+        show: two_color_blink
+
 shots:
   room_2m_exit_north_shot:
     switch: s_side_ramp_made
@@ -32,6 +44,16 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
+  room_2m_scoop_shot:
+    switch: s_scoop
+    profile: room_2m_scoop_shot
+    enable_events: mode_room_2m_enable_collect
+    disable_events: mode_room_2m_geothermal_plant_started, room_2m_scoop_shot_hit
+    reset_events: mode_room_2m_geothermal_plant_started, room_2m_scoop_shot_hit
+    show_tokens:
+      led: led_enter_scoop
+      color1: 'FF0000'
+      color2: '0000FF'
 
 slides:
   room_2m_geothermal_plant_backglass_slide:
@@ -72,6 +94,7 @@ event_player:
     cmd_backbox_show:
       show_type: fire
     drop_targets_continue:
+    mode_room_2m_enable_collect:
     cmd_map_position:
       room: '2m'
       visit: True
