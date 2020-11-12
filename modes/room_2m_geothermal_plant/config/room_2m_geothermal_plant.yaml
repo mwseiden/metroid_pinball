@@ -4,6 +4,16 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter, room_2n_enter, room_2l_enter, room_2m_exit
   priority: 300
 
+sequences:
+  room_2m_progress_sequence:
+    events:
+      - room_2m_scoop_shot_hit
+      - room_2m_jackpot_shot_hit
+    events_when_complete: room_2m_score_jackpot
+    persist_state: True
+    reset_on_complete: True
+    disable_on_complete: False
+
 shot_profiles:
   room_2m_collect_shot:
     states:
@@ -133,10 +143,11 @@ event_player:
     cmd_backbox_show:
       show_type: fire
     drop_targets_continue:
-    mode_room_2m_enable_collect:
     cmd_map_position:
       room: '2m'
       visit: True
+  mode_room_2m_geothermal_plant_started{device.sequences.room_2m_progress_sequence.value == 0}: mode_room_2m_enable_collect
+  mode_room_2m_geothermal_plant_started{device.sequences.room_2m_progress_sequence.value == 1}: mode_room_2m_disable_collect
   room_2m_scoop_shot_hit: mode_room_2m_disable_collect
   room_2m_jackpot_shot_hit: mode_room_2m_enable_collect
   room_2m_exit_north_shot_hit.1: drop_targets_save
