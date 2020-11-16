@@ -4,8 +4,30 @@
 
 mode:
   start_events: room_1k_continue, room_1k_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1i_enter, room_1l_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1i_enter, room_1l_enter, room_1k_exit
   priority: 300
+
+
+timers:
+  room_1k_move_covern_timer:
+    start_value: 1
+    end_value: 6
+    tick_interval: 5.0s
+    restart_on_complete: True
+    control_events:
+      - event: mode_room_1k_crew_quarters_started_no_charge
+        action: restart
+      - event: mode_room_1k_crew_quarters_started
+        action: stop
+
+shot_profiles:
+  room_1k_covern:
+    states:
+      - name: lit
+        show: fade_one_light
+        speed: 2
+        show_tokens:
+          color: '808020'
 
 shots:
   room_1k_exit_south_shot:
@@ -20,12 +42,91 @@ shots:
   room_1k_exit_north_shot:
     hit_events: right_orbit_hit
     profile: exit_door
-    enable_events: mode_room_1k_crew_quarters_started
-    disable_events: room_1k_exit_north_shot_hit
-    reset_events: room_1k_exit_north_shot_hit
+    enable_events: mode_room_1k_crew_quarters_started_no_charge
+    disable_events: mode_room_1k_crew_quarters_started, room_1k_exit_north_shot_hit
+    reset_events: mode_room_1k_crew_quarters_started, room_1k_exit_north_shot_hit
     show_tokens:
       led: led_enter_right_orbit
       color: door_blue
+  room_1k_exit_north_powered_shot:
+    switches: s_ramp_enter
+    profile: exit_door
+    enable_events: mode_room_1k_crew_quarters_started_charge
+    disable_events: mode_room_1k_crew_quarters_started, room_1l_exit_north_powered_shot_hit
+    reset_events: mode_room_1k_crew_quarters_started, room_1l_exit_north_powered_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
+  room_1k_covern_1_shot:
+    switch: s_left_passage
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_activate_1
+    disable_events: mode_room_1k_crew_quarters_started, room_1k_covern_1_shot_hit, mode_room_1k_crew_quarters_deactivate_1
+    show_tokens:
+      led: led_enter_secret_passage
+  room_1k_covern_2_shot:
+    hit_events: left_orbit_hit
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_activate_2
+    disable_events: mode_room_1k_crew_quarters_started, room_1k_covern_2_shot_hit, mode_room_1k_crew_quarters_deactivate_2
+    show_tokens:
+      led: led_enter_left_orbit
+  room_1k_covern_3_shot:
+    switch: s_ramp_enter
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_activate_3
+    disable_events: mode_room_1k_crew_quarters_started, room_1k_covern_3_shot_hit, mode_room_1k_crew_quarters_deactivate_3
+    show_tokens:
+      led: led_enter_ramp
+  room_1k_covern_4_shot:
+    switch: s_side_ramp_made
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_activate_4
+    disable_events: mode_room_1k_crew_quarters_started, room_1k_covern_4_shot_hit, mode_room_1k_crew_quarters_deactivate_4
+    show_tokens:
+      led: led_enter_side_ramp
+  room_1k_covern_5_shot:
+    switch: s_rollover_button
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_activate_5
+    disable_events: mode_room_1k_crew_quarters_started, room_1k_covern_5_shot_hit, mode_room_1k_crew_quarters_deactivate_5
+    show_tokens:
+      led: led_rollover
+  room_1k_covern_powered_1_shot:
+    switch: s_left_passage
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_started_charge
+    disable_events: mode_room_1k_crew_quarters_started
+    show_tokens:
+      led: led_enter_secret_passage
+  room_1k_covern_powered_2_shot:
+    hit_events: left_orbit_hit
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_started_charge
+    disable_events: mode_room_1k_crew_quarters_started
+    show_tokens:
+      led: led_enter_left_orbit
+  room_1k_covern_powered_3_shot:
+    switch: s_side_ramp_made
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_started_charge
+    disable_events: mode_room_1k_crew_quarters_started
+    show_tokens:
+      led: led_enter_side_ramp
+  room_1k_covern_powered_4_shot:
+    hit_events: right_orbit_hit
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_started_charge
+    disable_events: mode_room_1k_crew_quarters_started
+    show_tokens:
+      led: led_enter_right_orbit
+  room_1k_covern_powered_5_shot:
+    switch: s_rollover_button
+    profile: room_1k_covern
+    enable_events: mode_room_1k_crew_quarters_started_charge
+    disable_events: mode_room_1k_crew_quarters_started
+    show_tokens:
+      led: led_rollover
 
 slides:
   room_1k_crew_quarters_backglass_slide:
@@ -70,6 +171,36 @@ show_player:
   flipper_cradle_release:
     room_1k_crew_quarters_status_report:
       action: stop
+  room_1k_covern_1_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_1k_covern_2_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_1k_covern_3_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_1k_covern_4_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_1k_covern_5_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_1k_covern_powered_1_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_1k_covern_powered_2_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_1k_covern_powered_3_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_1k_covern_powered_4_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_1k_covern_powered_5_shot_hit:
+    special_score_yellow:
+      loops: 0
 
 event_player:
   mode_room_1k_crew_quarters_started:
@@ -89,12 +220,19 @@ event_player:
       twinkle_color: '000010'
       twinkle_count: 50
       steps: 50
+  timer_room_1k_move_covern_timer_tick{ticks == 1}: mode_room_1k_crew_quarters_activate_1, mode_room_1k_crew_quarters_deactivate_5
+  timer_room_1k_move_covern_timer_tick{ticks == 2}: mode_room_1k_crew_quarters_activate_2, mode_room_1k_crew_quarters_deactivate_1
+  timer_room_1k_move_covern_timer_tick{ticks == 3}: mode_room_1k_crew_quarters_activate_3, mode_room_1k_crew_quarters_deactivate_2
+  timer_room_1k_move_covern_timer_tick{ticks == 4}: mode_room_1k_crew_quarters_activate_4, mode_room_1k_crew_quarters_deactivate_3
+  timer_room_1k_move_covern_timer_tick{ticks == 5}: mode_room_1k_crew_quarters_activate_5, mode_room_1k_crew_quarters_deactivate_4
   mode_room_1k_crew_quarters_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1k_crew_quarters_started_no_charge
   mode_room_1k_crew_quarters_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1k_crew_quarters_started_charge
   room_1k_exit_south_shot_hit.1: drop_targets_save
   room_1k_exit_south_shot_hit.2: room_1l_enter
   room_1k_exit_north_shot_hit.1: drop_targets_save
   room_1k_exit_north_shot_hit.2: room_1i_enter
+  room_1k_exit_north_powered_shot_hit.1: drop_targets_save
+  room_1k_exit_north_powered_shot_hit.2: room_1i_enter
 
 variable_player:
   mode_room_1k_crew_quarters_started:
@@ -103,4 +241,54 @@ variable_player:
       action: set
     continue_room:
       string: 1k
+      action: set
+  room_1k_covern_1_shot_hit:
+    score: ((current_player.area_bonus_sw + 1) * 100000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_sw + 1) * 100000) * current_player.multiplier
+      action: set
+  room_1k_covern_2_shot_hit:
+    score: ((current_player.area_bonus_nw + 1) * 200000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_nw + 1) * 200000) * current_player.multiplier
+      action: set
+  room_1k_covern_3_shot_hit:
+    score: ((current_player.area_bonus_nw + 1) * 80000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_nw + 1) * 80000) * current_player.multiplier
+      action: set
+  room_1k_covern_4_shot_hit:
+    score: ((current_player.area_bonus_ne + 1) * 160000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_ne + 1) * 160000) * current_player.multiplier
+      action: set
+  room_1k_covern_5_shot_hit:
+    score: ((current_player.area_bonus_e + 1) * 120000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_e + 1) * 120000) * current_player.multiplier
+      action: set
+  room_1k_covern_powered_1_shot_hit:
+    score: (((current_player.area_bonus_sw + 1) * 50000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_sw + 1) * 50000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1k_covern_powered_2_shot_hit:
+    score: (((current_player.area_bonus_nw + 1) * 100000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 100000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1k_covern_powered_3_shot_hit:
+    score: (((current_player.area_bonus_nw + 1) * 40000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 40000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1k_covern_powered_4_shot_hit:
+    score: (((current_player.area_bonus_ne + 1) * 80000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_ne + 1) * 80000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1k_covern_powered_5_shot_hit:
+    score: (((current_player.area_bonus_e + 1) * 60000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_e + 1) * 60000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
       action: set

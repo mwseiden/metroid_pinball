@@ -1,9 +1,48 @@
 #config_version=5
 
 mode:
+  code: boss.Boss
   start_events: metroid_base_started
   stop_events: metroid_base_ended
   priority: 800
+
+timers:
+  boss_exploder_timer:
+    start_value: 0
+    end_value: 12
+    tick_interval: 0.4s
+    control_events:
+      - event: boss_explode
+        action: restart
+
+widgets:
+  boss_explosion_widget:
+    type: image
+    image: boss_explosion
+
+sounds:
+  boss_hit_power_bomb:
+    file: boss_hit_power_bomb.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  boss_hit_missile:
+    file: boss_hit_missile.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  boss_explode:
+    file: boss_explode.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
+sound_player:
+  timer_boss_exploder_timer_tick: boss_explode
 
 achievements:
   boss_ridley:
@@ -12,7 +51,7 @@ achievements:
       color: 'C00000'
     show_when_selected: blink_light
     show_when_completed: led_color
-    complete_events: xxxx_i_dont_work
+    complete_events: ridley_defeated
     select_events: room_2q_enter
     enable_events: boss_achievement_initialize
     sync_ms: 1000

@@ -13,12 +13,19 @@ event_player:
   drop_targets_start_one: cmd_drop_one_up, drop_targets_enable_shot_1
   drop_targets_start_two: cmd_drop_two_up, drop_targets_enable_shot_2
   drop_targets_start_three: cmd_drop_three_up, drop_targets_enable_shot_3
+  drop_1_shot_hit: drop_targets_1_is_down
+  drop_targets_start_down_show_1: drop_targets_1_is_down
+  drop_2_shot_hit: drop_targets_2_is_down
+  drop_targets_start_down_show_2: drop_targets_2_is_down
+  drop_3_shot_hit: drop_targets_3_is_down
+  drop_targets_start_down_show_3: drop_targets_3_is_down
 
 shot_profiles:
   drop_target_hit_me:
     states:
       - name: lit
         show: fade_one_light
+        sync_ms: 4000
 
 shots:
   drop_1_shot:
@@ -126,6 +133,7 @@ show_player:
       key: drop_targets_1_down_blinking
       loops: 5
       speed: 10
+      priority: 10
       show_tokens:
         led: led_drop_1
         color: "0000FF"
@@ -134,6 +142,7 @@ show_player:
       key: drop_targets_2_down_blinking
       loops: 5
       speed: 10
+      priority: 10
       show_tokens:
         led: led_drop_2
         color: "0000FF"
@@ -142,9 +151,67 @@ show_player:
       key: drop_targets_3_down_blinking
       loops: 5
       speed: 10
+      priority: 10
       show_tokens:
         led: led_drop_3
         color: "0000FF"
+  drop_1_shot_hit:
+    single_fire:
+      speed: 40
+      loops: 0
+      priority: 300
+      show_tokens:
+        led: led_drop_1
+  drop_2_shot_hit:
+    single_fire:
+      speed: 40
+      loops: 0
+      priority: 300
+      show_tokens:
+        led: led_drop_2
+  drop_3_shot_hit:
+    single_fire:
+      speed: 40
+      loops: 0
+      priority: 300
+      show_tokens:
+        led: led_drop_3
+  drop_targets_1_is_down:
+    fade_one_light:
+      key: drop_target_1_down_show
+      loops: -1
+      sync_ms: 4000
+      show_tokens:
+        led: led_drop_1
+        color: drop_target_cannot_hit
+  drop_targets_enable_shot_1:
+    fade_one_light:
+      key: drop_target_1_down_show
+      action: stop
+  drop_targets_2_is_down:
+    fade_one_light:
+      key: drop_target_2_down_show
+      loops: -1
+      sync_ms: 4000
+      show_tokens:
+        led: led_drop_2
+        color: drop_target_cannot_hit
+  drop_targets_enable_shot_2:
+    fade_one_light:
+      key: drop_target_2_down_show
+      action: stop
+  drop_targets_3_is_down:
+    fade_one_light:
+      key: drop_target_3_down_show
+      loops: -1
+      sync_ms: 4000
+      show_tokens:
+        led: led_drop_3
+        color: drop_target_cannot_hit
+  drop_targets_enable_shot_3:
+    fade_one_light:
+      key: drop_target_3_down_show
+      action: stop
 
 variable_player:
   drop_1_shot_hit:

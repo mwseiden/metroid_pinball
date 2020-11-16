@@ -1,0 +1,126 @@
+#config_version=5
+
+mode:
+  code: twitch_subs.TwitchSubs
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
+  priority: 400
+
+ball_saves:
+  twitch_reverse_flippers_ball_save:
+    active_time: 4s
+    # hurry_up_time: 2s
+    grace_period: 2s
+    enable_events: twitch_subs_reverse_flip
+    auto_launch: yes
+    balls_to_save: -1
+    debug: yes
+
+timers:
+  twitch_subs_reverse_flipper:
+    start_value: 20
+    end_value: 0
+    direction: down
+    tick_interval: 1.0s
+    control_events:
+      - event: twitch_subs_reverse_flip
+        action: restart
+      - event: ball_will_end
+        action: stop
+
+slides:
+  twitch_sub_reverse_flipper_slide:
+    widgets:
+    - type: text
+      text: (score)
+      number_grouping: true
+      min_digits: 2
+      style: dmd_med
+      anchor_x: left
+      anchor_y: top
+      x: 1
+      y: 30
+    - type: text
+      text: Reverse Flippers!
+      min_digits: 1
+      style: dmd_small
+      color: 'FF40FF'
+      anchor_x: right
+      anchor_y: top
+      x: 126
+      y: 30
+    - type: text
+      text: (player|twitch_subs_twitch_subs_reverse_flipper_tick)
+      min_digits: 1
+      style: dmd_big
+      color: 'FF0000'
+      anchor_x: right
+      anchor_y: top
+      x: 126
+      y: 22
+    - type: text
+      text: PLAYER (number)
+      y: 0
+      x: 10
+      style: dmd_med
+      anchor_x: left
+      anchor_y: bottom
+    - type: text
+      text: BALL (ball)
+      y: 0
+      x: right-10
+      anchor_x: right
+      anchor_y: bottom
+      style: dmd_med
+  twitch_sub_teleport_slide:
+    widgets:
+    - type: text
+      text: TELEPORTED!
+      style: dmd_big
+
+
+slide_player:
+  twitch_subs_reverse_flip:
+    twitch_sub_reverse_flipper_slide:
+      target: dmd
+  timer_twitch_subs_reverse_flipper_complete:
+    twitch_sub_reverse_flipper_slide:
+      target: dmd
+      action: remove
+  ball_will_end:
+    twitch_sub_reverse_flipper_slide:
+      target: dmd
+      action: remove
+  twitch_subs_teleport:
+    twitch_sub_teleport_slide:
+      target: dmd
+      expire: 2s
+
+show_player:
+  ball_save_twitch_reverse_flippers_ball_save_disabled:
+    ball_save_twitch_reverse_flippers_ball_save_blink:
+      action: stop
+  ball_save_twitch_reverse_flippers_ball_save_enabled:
+    blink_light:
+      key: ball_save_twitch_reverse_flippers_ball_save_blink
+      loops: -1
+      speed: 2
+      show_tokens:
+        led: led_ball_save
+        color: ff8000
+
+
+sounds:
+  twitch_subs_teleport:
+    file: twitch_subs_teleport.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_player:
+  twitch_subs_teleport: twitch_subs_teleport
+
+event_player:
+  twitch_subs_reverse_flip: reverse_flippers_started
+  timer_twitch_subs_reverse_flipper_complete: reverse_flippers_ended

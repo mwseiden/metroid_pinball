@@ -2,7 +2,7 @@
 mode:
   code: room_2f_frozen_lake.Room2fFrozenLake
   start_events: room_2f_continue, room_2f_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2e_enter, room_2b_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2e_enter, room_2b_enter, room_2f_exit
   priority: 300
 
 shot_profiles:
@@ -181,6 +181,12 @@ show_player:
   flipper_cradle_release:
     room_2f_frozen_lakes_status_report:
       action: stop
+  room_2f_choose_next_shot:
+    special_score_blue:
+      loops: 1
+  room_2f_scoop_shot_hit:
+    special_score_blue:
+      loops: 1
 
 event_player:
   mode_room_2f_frozen_lake_started:
@@ -223,7 +229,6 @@ event_player:
       room: '2f'
 
 
-
 variable_player:
   mode_room_2f_frozen_lake_started:
     continue_room:
@@ -235,32 +240,77 @@ variable_player:
       int: 1
       action: set
   room_2f_miniboss_1_shot_hit:
-    score: 10000 * current_player.multiplier
+    score: 20000 * current_player.multiplier
+    room_special_score:
+      int: 20000 * current_player.multiplier
+      action: set
   room_2f_miniboss_2_shot_hit:
-    score: 10000 * current_player.multiplier
+    score: 30000 * current_player.multiplier
+    room_special_score:
+      int: 30000 * current_player.multiplier
+      action: set
   room_2f_miniboss_3_shot_hit:
-    score: 20000 * current_player.multiplier
+    score: 40000 * current_player.multiplier
+    room_special_score:
+      int: 40000 * current_player.multiplier
+      action: set
   room_2f_missile_1_shot_hit:
-    score: 15000 * current_player.multiplier
+    score: (30000 + (current_player.area_bonus_w * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (30000 + (current_player.area_bonus_w * 20000)) * current_player.multiplier
+      action: set
   room_2f_missile_2_shot_hit:
-    score: 15000 * current_player.multiplier
+    score: (30000 + (current_player.area_bonus_w * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (30000 + (current_player.area_bonus_w * 20000)) * current_player.multiplier
+      action: set
   room_2f_missile_3_shot_hit:
-    score: 15000 * current_player.multiplier
+    score: (30000 + (current_player.area_bonus_w * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (30000 + (current_player.area_bonus_w * 20000)) * current_player.multiplier
+      action: set
   room_2f_bomb_1_shot_hit:
-    score: 20000 * current_player.multiplier
+    score: (50000 + (current_player.area_bonus_se * 30000)) * current_player.multiplier
+    room_special_score:
+      int: (50000 + (current_player.area_bonus_se * 30000)) * current_player.multiplier
+      action: set
   room_2f_bomb_2_shot_hit:
-    score: 20000 * current_player.multiplier
+    score: (60000 + (current_player.area_bonus_se * 30000)) * current_player.multiplier
+    room_special_score:
+      int: (60000 + (current_player.area_bonus_se * 30000)) * current_player.multiplier
+      action: set
   room_2f_bomb_3_shot_hit:
-    score: 25000 * current_player.multiplier
+    score: (100000 + (current_player.area_bonus_se * 30000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_se * 30000)) * current_player.multiplier
+      action: set
   room_2f_zero_suit_shot_hit:
-    score: 15000 * current_player.multiplier
+    score: (40000 + (current_player.area_bonus_sw * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (40000 + (current_player.area_bonus_sw * 20000)) * current_player.multiplier
+      action: set
   room_2f_orange_shot_hit:
-    score: 15000 * current_player.multiplier
+    score: (40000 + (current_player.area_bonus_ne * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (40000 + (current_player.area_bonus_ne * 20000)) * current_player.multiplier
+      action: set
   room_2f_side_1_shot_hit:
-    score: 30000 * current_player.multiplier
+    score: (120000 + (current_player.area_bonus_nw * 60000)) * current_player.multiplier
+    room_special_score:
+      int: (120000 + (current_player.area_bonus_nw * 60000)) * current_player.multiplier
+      action: set
   room_2f_side_2_shot_hit:
-    score: 30000 * current_player.multiplier
+    score: (120000 + (current_player.area_bonus_nw * 60000)) * current_player.multiplier
+    room_special_score:
+      int: (120000 + (current_player.area_bonus_nw * 60000)) * current_player.multiplier
+      action: set
   room_2f_side_3_shot_hit:
-    score: 30000 * current_player.multiplier
+    score: (120000 + (current_player.area_bonus_nw * 60000)) * current_player.multiplier
+    room_special_score:
+      int: (120000 + (current_player.area_bonus_nw * 60000)) * current_player.multiplier
+      action: set
   room_2f_scoop_shot_hit:
-    score: 200000 * current_player.multiplier
+    score: (200000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (200000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+      action: set

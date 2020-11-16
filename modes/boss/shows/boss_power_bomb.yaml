@@ -1,0 +1,170 @@
+#show_version=5
+- time: 0
+  lights:
+    led_bomb_bank_1: 'A49200'
+    led_bomb_bank_2: 'A49200'
+    led_bomb_bank_3: 'A49200'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: 'A49200'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_rollover: 'A49200'
+    
+- time: '+1'
+  lights:
+    led_scanner_se: 'A49200'
+    
+- time: '+1'
+  lights:
+    gi_upper_flipper_bottom: 'A49200'
+    led_2x: 'A49200'
+    led_3x: 'A49200'
+    led_scanner_center: 'A49200'
+    led_scanner_e: 'A49200'
+    led_scanner_ne: 'A49200'
+    led_scanner_sw: 'A49200'
+    
+- time: '+1'
+  lights:
+    led_scanner_nw: 'A49200'
+    led_scanner_w: 'A49200'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_enter_side_ramp: 'A49200'
+    led_upgrade_bank_3: 'A49200'
+    
+- time: '+1'
+  lights:
+    led_upgrade_bank_2: 'A49200'
+    
+- time: '+1'
+  lights:
+    gi_upgrade_bank: 'A49200'
+    gi_upper_flipper_top: 'A49200'
+    led_upgrade_bank_1: 'A49200'
+    led_wall_jump: '968600'
+    
+- time: '+1'
+  lights:
+    led_wall_jump: 'A49200'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: 'A49200'
+    led_drop_1: '393300'
+    led_thin_orange: 'A49200'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'A49200'
+    led_enter_right_orbit: 'A49200'
+    
+- time: '+1'
+  lights:
+    led_captive_ball: 'A49200'
+    led_side_1: 'A49200'
+    led_side_2: 'A49200'
+    led_side_3: 'A49200'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'A49200'
+    led_enter_ramp: '998800'
+    led_enter_scoop: 'A49200'
+    led_upper_playfield_1: '5C5200'
+    led_upper_playfield_2: 'A49200'
+    led_upper_playfield_3: 'A49200'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'A49200'
+    led_drop_2: 'A49200'
+    led_enter_ramp: 'A49200'
+    led_pop_2: 'A49200'
+    led_upper_playfield_1: 'A49200'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_drop_3: '363000'
+    led_pop_3: 'A49200'
+    
+- time: '+1'
+  lights:
+    led_drop_3: 'A49200'
+    
+- time: '+1'
+  lights:
+    gi_back_right: '877800'
+    
+- time: '+1'
+  lights:
+    gi_back_center: '8D7D00'
+    gi_back_right: 'A49200'
+    gi_strip_10: '201D00'
+    gi_strip_8: '080700'
+    gi_strip_9: '605500'
+    led_pop_1: 'A49200'
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'A49200'
+    gi_strip_10: 'A49200'
+    gi_strip_6: 'A49200'
+    gi_strip_7: 'A49200'
+    gi_strip_8: 'A49200'
+    gi_strip_9: 'A49200'
+    led_pit: '332D00'
+    
+- time: '+1'
+  lights:
+    gi_strip_5: 'A49200'
+    led_pit: 'A49200'
+    
+- time: '+1'
+  lights:
+    gi_strip_3: '0D0C00'
+    gi_strip_4: 'A49200'
+    
+- time: '+1'
+  lights:
+    gi_strip_2: '877800'
+    gi_strip_3: 'A49200'
+    
+- time: '+1'
+  lights:
+    gi_back_left: 'A49200'
+    gi_strip_1: '554C00'
+    gi_strip_2: 'A49200'
+    
+- time: '+1'
+  lights:
+    gi_strip_1: 'A49200'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    

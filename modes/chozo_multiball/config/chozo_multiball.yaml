@@ -1,7 +1,7 @@
 #config_version=5
 mode:
-  start_events: metroid_base_started, chozo_multiball_enable
-  stop_events: metroid_base_ended, chozo_multiball_disable
+  start_events: metroid_base_started, chozo_multiball_enable, metroid_exclusive_ended
+  stop_events: metroid_base_ended, chozo_multiball_disable, metroid_exclusive_started
   priority: 300
 
 multiballs:
@@ -149,6 +149,13 @@ show_player:
       show_tokens:
         led: led_captive_ball
         color: 'ff0000'
+  chozo_multiball_show_jackpot_slide:
+    chozo_multiball_jackpot:
+      loops: 0
+  chozo_multiball_show_super_jackpot_slide:
+    chozo_multiball_super_jackpot_lights:
+      loops: 0
+      speed: 20
 
 variable_player:
   logicblock_captive_ball_counter_updated:
@@ -163,12 +170,21 @@ variable_player:
   chozo_multiball_jackpot_one_shot_hit:
     chozo_multiball_jackpot_progress: 100000
     score: (50000 * current_player.multiplier) + (current_player.area_bonus_nw * 10000)
+    chozo_multiball_last_jackpot_score:
+      action: set
+      int: (50000 * current_player.multiplier) + (current_player.area_bonus_nw * 10000)
   chozo_multiball_jackpot_two_shot_hit:
     chozo_multiball_jackpot_progress: 175000
     score: (87500 * current_player.multiplier) + (current_player.area_bonus_ne * 10000)
+    chozo_multiball_last_jackpot_score:
+      action: set
+      int: (87500 * current_player.multiplier) + (current_player.area_bonus_ne * 10000)
   chozo_multiball_jackpot_three_shot_hit:
     chozo_multiball_jackpot_progress: 125000
     score: (62500 * current_player.multiplier) + (current_player.area_bonus_ne * 10000)
+    chozo_multiball_last_jackpot_score:
+      action: set
+      int: (62500 * current_player.multiplier) + (current_player.area_bonus_ne * 10000)
   chozo_multiball_jackpot_collect_shot_hit:
     score: (current_player.chozo_multiball_jackpot_progress * current_player.multiplier) + (current_player.area_bonus_ne * 100000)
   chozo_multiball_reset_jackpot:
@@ -195,11 +211,13 @@ event_player:
   mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 1}: chozo_multiball_light_stage_4
   multiball_chozo_ended: chozo_multiball_light_stage_1, drop_target_mode_should_start
   chozo_multiball_bashed: chozo_multiball_light_stage_0
-  chozo_multiball_jackpot_collect_shot_hit: chozo_multiball_reset_jackpot
+  chozo_multiball_jackpot_collect_shot_hit: chozo_multiball_reset_jackpot, chozo_multiball_show_super_jackpot_slide
   logicblock_captive_ball_counter_updated{value > 3 and not completed and enabled}: chozo_multiball_light_stage_1
   logicblock_captive_ball_counter_updated{value == 3}: chozo_multiball_light_stage_2
   logicblock_captive_ball_counter_updated{value == 2}: chozo_multiball_light_stage_3
   logicblock_captive_ball_counter_updated{value == 1}: chozo_multiball_light_stage_4
   chozo_multiball_progress{device.counters.captive_ball_counter.value == 1}: chozo_multiball_sound_captive
   chozo_multiball_progress{device.counters.captive_ball_counter.value > 1 and not device.counters.captive_ball_counter.completed and device.counters.captive_ball_counter.enabled}: chozo_multiball_sound_locked
-
+  chozo_multiball_jackpot_one_shot_hit: chozo_multiball_show_jackpot_slide
+  chozo_multiball_jackpot_two_shot_hit: chozo_multiball_show_jackpot_slide
+  chozo_multiball_jackpot_three_shot_hit: chozo_multiball_show_jackpot_slide

@@ -1,0 +1,22 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    chozo_multiball_jackpot_slide:
+      widgets:
+      - type: text
+        text: --> JACKPOT <--
+        color: red
+        style: dmd_big
+        y: 26
+      - type: text
+        text: (player|chozo_multiball_last_jackpot_score)
+        color: white
+        style: dmd_big
+        y: 15
+      - type: text
+        text: Super Now (player|chozo_multiball_jackpot_progress)
+        color: orange
+        style: dmd_small
+        y: 4
+

@@ -73,6 +73,17 @@ show_player:
     lanes_complete:
       loops: 0
       priority: 300
+    blink_4_lights:
+      loops: 0
+      speed: 2
+      priority: 500
+      show_tokens:
+        led_1: led_left_outlane
+        led_2: led_left_inlane
+        led_3: led_right_inlane
+        led_4: led_right_outlane
+        color_1: 'FF6000'
+        color_2: '000000'
   lanes_ball_was_saved:
     lanes_ball_save:
       loops: 0

@@ -4,8 +4,18 @@
 
 mode:
   start_events: room_1s_continue, room_1s_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1r_enter, room_1t_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1r_enter, room_1t_enter, room_1s_exit
   priority: 300
+
+shot_profiles:
+  room_1s_light_jackpot:
+    states:
+      - name: lit
+        show: blink_light
+        loops: -1
+        speed: 2
+        show_tokens:
+          color: '10FFA0'
 
 shots:
   room_1s_exit_east_shot:
@@ -26,6 +36,38 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
+  room_1s_light_jackpot_1_shot:
+    switches: s_ramp_enter
+    profile: room_1s_light_jackpot
+    enable_events: mode_room_1s_enable_light_jackpot_shots
+    disable_events: mode_room_1s_blighted_canopy_started, room_1s_light_jackpot_1_shot_hit, mode_room_1s_disable_light_jackpot_shots
+    reset_events: mode_room_1s_blighted_canopy_started, room_1s_light_jackpot_1_shot_hit, mode_room_1s_disable_light_jackpot_shots
+    show_tokens:
+      led: led_enter_ramp
+  room_1s_light_jackpot_2_shot:
+    switch: s_scoop
+    profile: room_1s_light_jackpot
+    enable_events: mode_room_1s_enable_light_jackpot_shots
+    disable_events: mode_room_1s_blighted_canopy_started, room_1s_light_jackpot_2_shot_hit, mode_room_1s_disable_light_jackpot_shots
+    reset_events: mode_room_1s_blighted_canopy_started, room_1s_light_jackpot_2_shot_hit, mode_room_1s_disable_light_jackpot_shots
+    show_tokens:
+      led: led_enter_scoop
+  room_1s_light_jackpot_3_shot:
+    hit_events: left_orbit_hit
+    profile: room_1s_light_jackpot
+    enable_events: mode_room_1s_enable_light_jackpot_shots
+    disable_events: mode_room_1s_blighted_canopy_started, room_1s_light_jackpot_3_shot_hit, mode_room_1s_disable_light_jackpot_shots
+    reset_events: mode_room_1s_blighted_canopy_started, room_1s_light_jackpot_3_shot_hit, mode_room_1s_disable_light_jackpot_shots
+    show_tokens:
+      led: led_enter_left_orbit
+  room_1s_jackpot_shot:
+    switch: s_side_ramp_made
+    profile: room_1s_light_jackpot
+    enable_events: mode_room_1s_enable_jackpot_shot
+    disable_events: mode_room_1s_blighted_canopy_started, room_1s_jackpot_shot_hit
+    reset_events: mode_room_1s_blighted_canopy_started, room_1s_jackpot_shot_hit
+    show_tokens:
+      led: led_enter_side_ramp
 
 slides:
   room_1s_blighted_canopy_backglass_slide:
@@ -60,6 +102,18 @@ show_player:
   flipper_cradle_release:
     room_1s_blighted_canopy_status_report:
       action: stop
+  room_1s_light_jackpot_1_shot_hit:
+    special_score_green:
+      loops: 0
+  room_1s_light_jackpot_2_shot_hit:
+    special_score_green:
+      loops: 0
+  room_1s_light_jackpot_3_shot_hit:
+    special_score_green:
+      loops: 0
+  room_1s_jackpot_shot_hit:
+    special_score_red:
+      loops: 0
 
 event_player:
   mode_room_1s_blighted_canopy_started:
@@ -77,9 +131,14 @@ event_player:
       decay_b: 1.7
     drop_targets_continue:
     room_1s_open_doors:
+    mode_room_1s_enable_light_jackpot_shots:
     cmd_map_position:
       room: '1s'
       visit: True
+  room_1s_light_jackpot_1_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot
+  room_1s_light_jackpot_2_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot
+  room_1s_light_jackpot_3_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot
+  room_1s_jackpot_shot_hit: mode_room_1s_enable_light_jackpot_shots
   room_1s_exit_east_shot_hit.1: drop_targets_save
   room_1s_exit_east_shot_hit.2: room_1t_enter
   room_1s_exit_west_shot_hit.1: drop_targets_save
@@ -92,4 +151,27 @@ variable_player:
       action: set
     continue_room:
       string: 1s
+      action: set
+  room_1s_light_jackpot_1_shot_hit:
+    room_1s_jackpot: 100000
+    score: (50000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+    room_special_score:
+      int: (50000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+      action: set
+  room_1s_light_jackpot_2_shot_hit:
+    room_1s_jackpot: 200000
+    score: (70000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+    room_special_score:
+      int: (70000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+      action: set
+  room_1s_light_jackpot_3_shot_hit:
+    room_1s_jackpot: 300000
+    score: (90000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+    room_special_score:
+      int: (90000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+      action: set
+  room_1s_jackpot_shot_hit:
+    score: (current_player.room_1s_jackpot + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (current_player.room_1s_jackpot + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
       action: set

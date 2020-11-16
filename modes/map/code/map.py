@@ -139,6 +139,9 @@ class Map(Mode):
         player_var = 'map_visited_{}'.format(area_code)
         current_visits = list(self.player[player_var])
 
+        if current_visits[self.LAYOUT[room_code][1] - 1] != 'C':
+            self.player['rooms_completed'] = self.player['rooms_completed'] + 1
+
         current_visits[self.LAYOUT[room_code][1] - 1] = 'C'
 
         self.player[player_var] = "".join(current_visits)

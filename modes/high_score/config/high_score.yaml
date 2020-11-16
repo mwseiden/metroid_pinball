@@ -47,15 +47,19 @@ high_score:
       - MISSILE COLLECTOR
   - power_bombs:
       - POWER BOMBER
+  - rooms_visited:
+      - EXPLORER
+  - rooms_completed:
+      - CONQUEROR
 
   # set the defaults
   defaults:
     score:
-      - ARR: 500000
-      - MWS: 400000
-      - EAS: 300000
-      - KRD: 200000
-      - RID: 100000
+      - ARR: 5000000
+      - MWS: 4000000
+      - EAS: 3000000
+      - KRD: 2000000
+      - RID: 1000000
     spinners:
       - SA: 40
     ramps:
@@ -76,5 +80,9 @@ high_score:
       - DAD: 5
     power_bombs:
       - DPF: 5
+    rooms_visited:
+      - TNA: 5
+    rooms_completed:
+      - CNK: 1
 
 

@@ -2,7 +2,7 @@
 
 mode:
   start_events: room_2k_continue, room_2k_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2j_enter, room_2o_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2j_enter, room_2o_enter, room_2k_exit
   priority: 300
 
 timers:

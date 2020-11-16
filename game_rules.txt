@@ -284,6 +284,9 @@ Landing Sites
         Doors:
             Secret Passage (Blue) -> The Lake [D]
             VUK (Blue) -> Generator Room [M]
+            Scoop (Blue) -> The Hull [N]
+            Left Orbit (Blue) [Unpowered] -> Crew Quarters [K]
+            Back Ramp (Blue) [Powered] -> Crew Quarters [K]
 
 Rooms (Modes)
 

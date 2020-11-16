@@ -1,7 +1,7 @@
 #config_version=5
 mode:
     start_events: room_2a_sink_into_sand, room_2e_continue, room_2e_enter
-    stop_events: game_ending, ball_ending, metroid_base_ended, room_2d_enter, room_2f_enter
+    stop_events: game_ending, ball_ending, metroid_base_ended, room_2d_enter, room_2f_enter, room_2e_exit
     priority: 300
 
 shots:
@@ -73,6 +73,12 @@ show_player:
       show_tokens:
         color: '806000'
         color2: 'a78600'
+  room_2e_exit_west_closed_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_2e_exit_east_closed_shot_hit:
+    special_score_yellow:
+      loops: 0
 
 event_player:
   mode_room_2e_sandy_cavern_started:
@@ -123,5 +129,14 @@ variable_player:
     door_2e_2f:
       int: 1
       action: set
-
+  room_2e_exit_west_closed_shot_hit:
+    score: (100000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+      action: set
+  room_2e_exit_east_closed_shot_hit:
+    score: (100000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_nw * 25000)) * current_player.multiplier
+      action: set
 

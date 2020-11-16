@@ -2,8 +2,142 @@
 
 mode:
   start_events: room_2q_continue, room_2q_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2n_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2n_enter, room_2q_exit
   priority: 300
+
+multiballs:
+  room_2q_ridley_boss_multiball:
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 20s
+    start_events: mode_room_2q_ridley_start_multiball
+
+shot_profiles:
+  room_2q_weak_spot:
+    states:
+      - name: lit
+        sync_ms: 4000
+        show: fade_one_light
+  room_2q_strong_spot:
+    states:
+      - name: lit
+        sync_ms: 4000
+        show: fade_one_light
+
+shots:
+  room_2q_exit_north_shot:
+    switch: s_ramp_enter
+    profile: exit_door
+    enable_events: mode_room_2q_ridley_open_door
+    disable_events: mode_room_2q_ridley_started, mode_room_2q_ridley_battle
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
+  room_2q_boss_victory_back_ramp_shot:
+    switch: s_ramp_enter
+    profile: room_2q_weak_spot
+    enable_events: ridley_enable_victory_laps
+    disable_events: mode_room_2q_ridley_started, mode_room_2q_ridley_open_door
+    show_tokens:
+      led: led_enter_ramp
+      color: white
+  room_2q_boss_victory_side_ramp_shot:
+    switch: s_side_ramp_made
+    profile: room_2q_weak_spot
+    enable_events: ridley_enable_victory_laps
+    disable_events: mode_room_2q_ridley_started, mode_room_2q_ridley_open_door
+    show_tokens:
+      led: led_enter_side_ramp
+      color: white
+  room_2q_boss_weak_back_ramp_shot:
+    switch: s_ramp_enter
+    profile: room_2q_weak_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_enter_ramp
+      color: red
+  room_2q_boss_weak_side_ramp_shot:
+    switch: s_side_ramp_made
+    profile: room_2q_weak_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_enter_side_ramp
+      color: red
+  room_2q_boss_strong_rollover_shot:
+    switch: s_rollover_button
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_rollover
+      color: blue
+  room_2q_boss_strong_scoop_shot:
+    switch: s_scoop
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_enter_scoop
+      color: blue
+  room_2q_boss_strong_secret_shot:
+    switch: s_left_passage
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_enter_secret_passage
+      color: blue
+  room_2q_boss_strong_right_orbit_shot:
+    hit_events: right_orbit_hit
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_enter_right_orbit
+      color: blue
+  room_2q_boss_strong_left_orbit_shot:
+    hit_events: left_orbit_hit
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_enter_left_orbit
+      color: blue
+  room_2q_boss_strong_captive_shot:
+    switch: s_captive_ball
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_captive_ball
+      color: blue
+  room_2q_boss_strong_center_1_shot:
+    switch: s_purple_1
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_upgrade_bank_1
+      color: blue
+  room_2q_boss_weak_center_2_shot:
+    switch: s_purple_2
+    profile: room_2q_weak_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_upgrade_bank_2
+      color: red
+  room_2q_boss_strong_center_3_shot:
+    switch: s_purple_3
+    profile: room_2q_strong_spot
+    enable_events: mode_room_2q_ridley_battle
+    disable_events: mode_room_2q_ridley_over
+    show_tokens:
+      led: led_upgrade_bank_3
+      color: blue
+
 
 animations:
   room_2q_ridley_standard:
@@ -44,6 +178,44 @@ animations:
       duration: 1.0s
       timing: with_previous
       repeat: true
+  room_2q_ridley_death:
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+      repeat: true
 
 slides:
   room_2q_ridley_backglass_slide:
@@ -53,21 +225,52 @@ slides:
         x: 280
         y: 690
         animations:
-          show_slide: room_2g_draygon_standard
+          show_slide: room_2q_ridley_standard
+    transition: fade
+    transition_out: fade
+  room_2q_ridley_backglass_defeated_slide:
+    widgets:
+      - type: image
+        image: room_2q_ridley_backglass_defeated
+        x: 280
+        y: 690
     transition: fade
     transition_out: fade
   room_2q_ridley_splash_slide:
     widgets:
       - type: image
         image: room_2q_ridley_splash
+  room_2q_ridley_dying_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2q_ridley_backglass
+        x: 280
+        y: 690
+        animations:
+          show_slide: room_2q_ridley_death
+    transition: fade
+    transition_out: fade
 
 slide_player:
-  mode_room_2q_ridley_started:
+  mode_room_2q_ridley_battle:
     room_2q_ridley_backglass_slide:
       target: backglass
     room_2q_ridley_splash_slide:
       target: dmd
       expire: 1.5s
+  room_2q_show_defeated_backglass:
+    room_2q_ridley_backglass_defeated_slide:
+      target: backglass
+  ridley_defeated:
+    room_2q_ridley_backglass_slide:
+      target: backglass
+      action: remove
+    room_2q_ridley_dying_backglass_slide:
+      target: backglass
+      expire: 9.0s
+  timer_boss_exploder_timer_complete:
+    room_2q_ridley_backglass_defeated_slide:
+      target: backglass
 
 show_player:
   mode_room_2q_ridley_started:
@@ -80,6 +283,89 @@ show_player:
   flipper_cradle_release:
     room_2q_ridley_status_report:
       action: stop
+  ridley_hit_strong:
+    room_2q_ridley_hit_strong_lights:
+      loops: 0
+      speed: 40
+    room_2q_ridley_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  ridley_hit_normal:
+    room_2q_ridley_hit_normal_lights:
+      loops: 0
+      speed: 40
+    room_2q_ridley_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  ridley_hit_weak:
+    room_2q_ridley_hit_weak_lights:
+      loops: 0
+      speed: 40
+    room_2q_ridley_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  ridley_hit_missile:
+    boss_missile:
+      loops: 0
+      speed: 50
+    room_2q_ridley_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  ridley_hit_power_bomb:
+    boss_power_bomb:
+      loops: 0
+      speed: 50
+    room_2q_ridley_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  multiball_room_2q_ridley_boss_multiball_started:
+    single_fire:
+      key: room_2q_ball_save_fire
+      loops: -1
+      speed: 20
+      show_tokens:
+        led: led_ball_save
+  multiball_room_2q_ridley_boss_multiball_shoot_again_ended:
+    room_2q_ball_save_fire:
+      action: stop
+  room_2q_collect_victory_nw:
+    special_score_red:
+      loops: 0
+  room_2q_collect_victory_ne:
+    special_score_red:
+      loops: 0
+  room_2q_ridley_should_die:
+    special_score_red:
+      loops: 0
+
+
+sounds:
+  ridley_hit_strong:
+    file: ridley_hit_strong.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  ridley_hit_weak:
+    file: ridley_hit_weak.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_player:
+  ridley_hit_strong: ridley_hit_strong
+  ridley_hit_normal: ridley_hit_strong
+  ridley_hit_weak: ridley_hit_weak
+  ridley_hit_missile: boss_hit_missile
+  ridley_hit_power_bomb: boss_hit_power_bomb
+  room_2q_collect_victory_nw: jackpot
+  room_2q_collect_victory_ne: jackpot
 
 event_player:
   mode_room_2q_ridley_started:
@@ -90,6 +376,53 @@ event_player:
     cmd_map_position:
       room: '2q'
       visit: True
+  mode_room_2q_ridley_started{current_player.boss_ridley_hp < 1}: mode_room_2q_ridley_over, mode_room_2q_ridley_open_door, room_2q_show_defeated_backglass
+  mode_room_2q_ridley_started{current_player.boss_ridley_hp > 0}: mode_room_2q_ridley_battle, metroid_exclusive_started
+  mode_room_2q_ridley_battle{current_player.boss_ridley_multiball_played == 0}: mode_room_2q_ridley_start_multiball
+  room_2q_boss_weak_back_ramp_shot_hit: ridley_hit_strong
+  room_2q_boss_weak_side_ramp_shot_hit: ridley_hit_strong
+  room_2q_boss_weak_center_2_shot_hit: ridley_hit_normal
+  room_2q_boss_strong_rollover_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_scoop_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_secret_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_right_orbit_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_left_orbit_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_captive_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_center_1_shot_hit: ridley_hit_weak
+  room_2q_boss_strong_center_3_shot_hit: ridley_hit_weak
+  missile_collected{current_player.boss_ridley_hp > 0}: ridley_hit_missile
+  power_bomb_collected{current_player.boss_ridley_hp > 0}: ridley_hit_power_bomb
+  player_boss_ridley_hp{value <= 0}: room_2q_ridley_should_die
+  room_2q_ridley_should_die: ridley_defeated
+  ridley_defeated{device.multiballs.room_2q_ridley_boss_multiball.balls_added_live == 0}: mode_room_2q_ridley_open_door, ridley_defeated_music
+  ridley_defeated{device.multiballs.room_2q_ridley_boss_multiball.balls_added_live > 0}: ridley_enable_victory_laps
+  ridley_defeated: mode_room_2q_ridley_over, metroid_exclusive_ended, boss_explode
+  room_2q_exit_north_shot_hit.1: drop_targets_save
+  room_2q_exit_north_shot_hit.2: room_2n_enter
+  multiball_room_2q_ridley_boss_multiball_ended{current_player.boss_ridley_hp < 1}: mode_room_2q_ridley_open_door, ridley_defeated_music
+  ridley_hit_strong:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: 'FF0000'
+      speed: 1
+      repeat: 2
+      direction: up
+  ridley_hit_normal:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: 'FF8000'
+      speed: 1
+      repeat: 1
+      direction: up
+  ridley_hit_weak:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: '0000FF'
+      speed: 1
+#      repeat: 2
+      direction: up
+  room_2q_boss_victory_back_ramp_shot_hit: room_2q_collect_victory_nw
+  room_2q_boss_victory_side_ramp_shot_hit: room_2q_collect_victory_ne
 
 variable_player:
   mode_room_2q_ridley_started:
@@ -98,4 +431,55 @@ variable_player:
       action: set
     continue_room:
       string: 2q
+      action: set
+  mode_room_2q_ridley_start_multiball:
+    boss_ridley_multiball_played:
+      int: 1
+      action: set
+  ridley_hit_strong:
+    boss_ridley_hp: -8
+    score: (150000 + (current_player.area_bonus_nw * 100000) + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (150000 + (current_player.area_bonus_nw * 100000) + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+      action: set
+  ridley_hit_normal:
+    boss_ridley_hp: -4
+    score: (75000 + (current_player.area_bonus_w * 50000) + (current_player.area_bonus_e * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (75000 + (current_player.area_bonus_w * 50000) + (current_player.area_bonus_e * 50000)) * current_player.multiplier
+      action: set
+  ridley_hit_weak:
+    boss_ridley_hp: -2
+    score: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
+      action: set
+  ridley_hit_missile:
+    boss_ridley_hp: -20
+    missiles: -1
+    score: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+      action: set
+  ridley_hit_power_bomb:
+    boss_ridley_hp: -40
+    power_bombs: -1
+    score: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
+      action: set
+  room_2q_collect_victory_ne:
+    score: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+      action: set
+  room_2q_collect_victory_nw:
+    score: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+      action: set
+  room_2q_ridley_should_die:
+    score: 1000000 * current_player.multiplier
+    room_special_score:
+      int: 1000000 * current_player.multiplier
       action: set

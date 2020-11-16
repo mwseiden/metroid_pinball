@@ -4,7 +4,7 @@
 
 mode:
     start_events: select_landing_site_brinstar_selected, room_1r_continue, room_1r_enter
-    stop_events: game_ending, ball_ending, metroid_base_ended, room_1s_enter, room_1f_enter, room_1u_enter
+    stop_events: game_ending, ball_ending, metroid_base_ended, room_1s_enter, room_1f_enter, room_1u_enter, room_1r_exit
     priority: 300
 
 sequences:
@@ -254,6 +254,12 @@ show_player:
       show_tokens:
         color: '8000C0'
         color2: "8080C0"
+  room_1r_kill_pirate_duck:
+    special_score_purple:
+      loops: 0
+  room_1r_kill_pirates:
+    special_score_purple:
+      loops: 0
 
 widgets:
   room_1r_space_pirate_duck:
@@ -428,7 +434,11 @@ slide_player:
     room_1r_score_slide:
       target: dmd
       action: remove
-
+  logicblock_room_1r_battle_sequence_complete:
+    room_1r_score_slide:
+      target: dmd
+      action: remove
+  
 sounds:
   room_1r_pirate_defeated:
     file: room_1r_pirate_defeated.wav
@@ -520,21 +530,51 @@ variable_player:
       action: set
   room_1r_start_shot_1_hit:
     score: ((current_player.area_bonus_e + 1) * 30000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_e + 1) * 30000) * current_player.multiplier
+      action: set
   room_1r_start_shot_2_hit:
     score: ((current_player.area_bonus_ne + 1) * 50000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_ne + 1) * 50000) * current_player.multiplier
+      action: set
   room_1r_start_shot_3_hit:
     score: ((current_player.area_bonus_nw + 1) * 10000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_nw + 1) * 10000) * current_player.multiplier
+      action: set
   room_1r_start_shot_4_hit:
     score: ((current_player.area_bonus_w + 1) * 15000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_w + 1) * 15000) * current_player.multiplier
+      action: set
   room_1r_start_shot_5_hit:
     score: ((current_player.area_bonus_ne + 1) * 10000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_ne + 1) * 10000) * current_player.multiplier
+      action: set
   room_1r_start_shot_6_hit:
     score: ((current_player.area_bonus_nw + 1) * 20000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_nw + 1) * 20000) * current_player.multiplier
+      action: set
   room_1r_start_shot_7_hit:
     score: ((current_player.area_bonus_nw + 1) * 30000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_nw + 1) * 30000) * current_player.multiplier
+      action: set
   room_1r_start_shot_8_hit:
     score: ((current_player.area_bonus_w + 1) * 20000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_w + 1) * 20000) * current_player.multiplier
+      action: set
   room_1r_start_shot_9_hit:
     score: ((current_player.area_bonus_nw + 1) * 300000) * current_player.multiplier
+    room_special_score:
+      int: ((current_player.area_bonus_nw + 1) * 300000) * current_player.multiplier
+      action: set
   room_1r_kill_pirate_duck:
-    score: (33300 * current_player.ball) * current_player.multiplier
+    score: (66600 * current_player.ball) * current_player.multiplier
+    room_special_score:
+      int: (66600 * current_player.ball) * current_player.multiplier
+      action: set

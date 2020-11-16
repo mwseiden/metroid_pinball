@@ -1,7 +1,7 @@
 #config_version=5
 mode:
   start_events: select_landing_site_norfair_selected, room_2i_continue, room_2i_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2h_enter, room_2j_enter, room_2m_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2h_enter, room_2j_enter, room_2m_enter, room_2i_exit
   priority: 300
 
 timers:
@@ -85,7 +85,9 @@ shot_profiles:
       loops: -1
       speed: 10
     - name: lit
-      show: led_color
+      show: single_fire
+      loops: -1
+      speed: 20
 
 shot_groups:
   lava_jump_initial_shots:
@@ -111,6 +113,24 @@ show_player:
         led_4: gi_back_right
         led_5: led_drop_3
         led_6: gi_back_right
+  lava_jump_collect_1:
+    special_score_red:
+      loops: 0
+  lava_jump_collect_2:
+    special_score_red:
+      loops: 0
+  lava_jump_collect_3:
+    special_score_red:
+      loops: 0
+  lava_jump_collect_4:
+    special_score_red:
+      loops: 0
+  lava_jump_jackpot_shot_hit:
+    special_score_red:
+      loops: 0
+    room_2i_jackpot:
+      loops: 0
+      speed: 30
 
 animations:
   room_2i_backglass_scroll_up:
@@ -192,6 +212,10 @@ event_player:
   lava_jump_jackpot_shot_hit:
     cmd_map_complete:
       room: '2i'
+  lava_jump_first_shot_hit{state == 'unlit'}: lava_jump_collect_1
+  lava_jump_second_shot_hit{state == 'unlit'}: lava_jump_collect_2
+  lava_jump_third_shot_hit{state == 'unlit'}: lava_jump_collect_3
+  lava_jump_fourth_shot_hit{state == 'unlit'}: lava_jump_collect_4
   room_2i_exit_east_shot_hit.1: drop_targets_save
   room_2i_exit_east_shot_hit.2: room_2j_enter
   room_2i_exit_south_shot_hit.1: drop_targets_save
@@ -208,7 +232,30 @@ variable_player:
       string: 2i
       action: set
   lava_jump_jackpot_shot_hit:
-    score: (150000 + (current_player.area_bonus_ne * 25000)) * current_player.multiplier
+    score: (200000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (200000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+      action: set
+  lava_jump_collect_1:
+    score: (50000 + (current_player.area_bonus_sw * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (50000 + (current_player.area_bonus_sw * 50000)) * current_player.multiplier
+      action: set
+  lava_jump_collect_2:
+    score: (120000 + (current_player.area_bonus_sw * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (120000 + (current_player.area_bonus_sw * 50000)) * current_player.multiplier
+      action: set
+  lava_jump_collect_3:
+    score: (75000 + (current_player.area_bonus_sw * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (75000 + (current_player.area_bonus_sw * 50000)) * current_player.multiplier
+      action: set
+  lava_jump_collect_4:
+    score: (100000 + (current_player.area_bonus_sw * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_sw * 50000)) * current_player.multiplier
+      action: set
   lava_jump_initial_shots_lit_hit:
-    score: 80000 * current_player.multiplier
+    score: 10000 * current_player.multiplier
 

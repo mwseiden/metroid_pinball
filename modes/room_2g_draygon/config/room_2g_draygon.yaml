@@ -4,7 +4,7 @@
 
 mode:
   start_events: room_2g_continue, room_2g_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2g_exit
   priority: 300
 
 animations:

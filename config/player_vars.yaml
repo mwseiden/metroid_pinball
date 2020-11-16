@@ -15,6 +15,10 @@ player_vars:
     initial_value: 0
   bao_reactors:
     initial_value: 0
+  boss_ridley_hp:
+    initial_value: 200
+  boss_ridley_multiball_played:
+    initial_value: 0
   bridge_bonus:
     initial_value: 0
   bridges:
@@ -26,6 +30,8 @@ player_vars:
   captives:
     initial_value: 0
   chozo_multiballs:
+    initial_value: 0
+  chozo_multiball_last_jackpot_score:
     initial_value: 0
   continue_room:
     value_type: str
@@ -125,6 +131,8 @@ player_vars:
     initial_value: 0
   ramps:
     initial_value: 0
+  room_1a_multiplier:
+    initial_value: 1
   room_1b_step_1a:
     initial_value: 0
   room_1b_step_1b:
@@ -135,9 +143,15 @@ player_vars:
     initial_value: 0
   room_1b_victory_step_1:
     initial_value: 0
+  room_1d_shots_hit:
+    initial_value: 0
+  room_special_score:
+    initial_value: 0
   room_1m_captured:
     initial_value: 0
-  room_1m_charge:
+  room_1s_jackpot:
+    initial_value: 0
+  wrecked_ship_charge:
     initial_value: 0
   room_1r_finished:
     initial_value: 0
@@ -150,7 +164,11 @@ player_vars:
     initial_value: 'ABCDEFGHIJKLMN'
   room_2k_insects:
     initial_value: 0
+  room_2m_jackpot_value:
+    initial_value: 88000
   rooms_visited:
+    initial_value: 0
+  rooms_completed:
     initial_value: 0
   scoops:
     initial_value: 0

@@ -1,21 +1,13 @@
 #config_version=5
 mode:
   code: bridge.Bridge
-  start_events: metroid_base_started
-  stop_events: metroid_base_ended
+  start_events: metroid_base_started, metroid_exclusive_ended
+  stop_events: metroid_base_ended, metroid_exclusive_started
   priority: 200
 
 shots:
   bridge_rail_shot:
     switch: s_top_lane_2
-
-#ball_holds:
-#  bridge_skillshot:
-#     balls_to_hold: 1
-#     hold_devices: bd_plunger
-#     reset_events: mode_bridge_started, whole_playfield_shot_group_hit, s_shooter_lane_inactive
-#     disable_events: mode_bridge_started, whole_playfield_shot_group_hit, s_shooter_lane_inactive
-#     enable_events: bridge_enable_skillshot
 
 timers:
   bridge_enable_coil_timer:
@@ -181,5 +173,5 @@ event_player:
 variable_player:
   bridge_should_explode:
     power_bombs: -1
-    score: (200000 + (100000 * (current_player.bridges + current_player.bridge_bonus)) + (50000 * current_player.area_bonus_e)) * current_player.multiplier * (2 if current_player.continue_room == '2d' else 1)
+    score: (300000 + (100000 * (current_player.bridges + current_player.bridge_bonus)) + (75000 * current_player.area_bonus_e)) * current_player.multiplier * (2 if current_player.continue_room == '2d' else 1)
     bridges: 1

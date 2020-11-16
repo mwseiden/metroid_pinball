@@ -188,8 +188,17 @@ show_player:
 
 variable_player:
   skillshot_drops_one_hit:
-    score: 20000 * current_player.multiplier
-  skillshot_drops_two_hit:
-    score: 50000 * current_player.multiplier
-  skillshot_drops_three_hit:
     score: 100000 * current_player.multiplier
+    room_special_score:
+      int: 100000 * current_player.multiplier
+      action: set
+  skillshot_drops_two_hit:
+    score: 150000 * current_player.multiplier
+    room_special_score:
+      int: 150000 * current_player.multiplier
+      action: set
+  skillshot_drops_three_hit:
+    score: 200000 * current_player.multiplier
+    room_special_score:
+      int: 200000 * current_player.multiplier
+      action: set

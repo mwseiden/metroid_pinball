@@ -1,0 +1,125 @@
+#show_version=5
+- time: 0
+  lights:
+    (led): 'F34802'
+    
+- time: '+1'
+  lights:
+    (led): 'F67502'
+    
+- time: '+1'
+  lights:
+    (led): 'E53700'
+    
+- time: '+1'
+  lights:
+    (led): 'E93B02'
+    
+- time: '+1'
+  lights:
+    (led): 'FD8C02'
+    
+- time: '+1'
+  lights:
+    (led): 'D23903'
+    
+- time: '+1'
+  lights:
+    (led): 'E94902'
+    
+- time: '+1'
+  lights:
+    (led): 'FD7502'
+    
+- time: '+1'
+  lights:
+    (led): 'FA5D04'
+    
+- time: '+1'
+  lights:
+    (led): 'FC6601'
+    
+- time: '+1'
+  lights:
+    (led): 'FB6502'
+    
+- time: '+1'
+  lights:
+    (led): 'F86B00'
+    
+- time: '+1'
+  lights:
+    (led): 'FD6B02'
+    
+- time: '+1'
+  lights:
+    (led): 'EC3901'
+    
+- time: '+1'
+  lights:
+    (led): 'D92F02'
+    
+- time: '+1'
+  lights:
+    (led): 'FD7403'
+    
+- time: '+1'
+  lights:
+    (led): 'F66801'
+    
+- time: '+1'
+  lights:
+    (led): 'FB6902'
+    
+- time: '+1'
+  lights:
+    (led): 'F85700'
+    
+- time: '+1'
+  lights:
+    (led): 'FB6F00'
+    
+- time: '+1'
+  lights:
+    (led): 'DF3401'
+    
+- time: '+1'
+  lights:
+    (led): 'D62901'
+    
+- time: '+1'
+  lights:
+    (led): 'EF4406'
+    
+- time: '+1'
+  lights:
+    (led): 'DA3203'
+    
+- time: '+1'
+  lights:
+    (led): 'D43302'
+    
+- time: '+1'
+  lights:
+    (led): 'F25E01'
+    
+- time: '+1'
+  lights:
+    (led): 'E93904'
+    
+- time: '+1'
+  lights:
+    (led): 'E93603'
+    
+- time: '+1'
+  lights:
+    (led): 'ED3B01'
+    
+- time: '+1'
+  lights:
+    (led): 'E63801'
+    
+- time: '+1'
+  lights:
+    (led): 'D52B02'
+    

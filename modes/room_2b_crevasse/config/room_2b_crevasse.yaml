@@ -1,8 +1,34 @@
 #config_version=5
 mode:
   start_events: room_2b_continue, room_2b_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2a_enter, room_2f_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2a_enter, room_2f_enter, room_2b_exit
   priority: 300
+
+timers:
+  room_2b_hurry_up_timer:
+    start_value: 0
+    end_value: 40
+    tick_interval: .25s
+    restart_on_complete: False
+    start_running: False
+    control_events:
+      - event: room_2b_enable_shot_4
+        action: restart
+      - event: room_2b_hurry_up_over
+        action: stop
+
+sequences:
+   room_2b_hurry_up_sequence:
+      events:
+         - room_2b_bank_1_shot_hit
+         - room_2b_bank_2_shot_hit
+         - room_2b_bank_3_shot_hit
+         - room_2b_hurry_up_shot_hit
+      persist_state: True
+      disable_on_complete: True
+      enable_events: room_2b_enable_shot_1, room_2b_enable_shot_2, room_2b_enable_shot_3, room_2b_enable_shot_4
+      disable_events: mode_room_2b_crevasse_started
+      restart_events: room_2b_hurry_up_over
 
 slides:
   room_2b_crevasse_backglass_slide:
@@ -24,6 +50,19 @@ slide_player:
       target: dmd
       expire: 1.5s
 
+shot_profiles:
+  room_2b_strobe:
+    states:
+    - name: lit
+      show: blink_3_lights
+      loops: -1
+  room_2b_hurry_up:
+    states:
+    - name: lit
+      show: blink_light
+      loops: -1
+      speed: 60
+
 shots:
   room_2b_exit_west_shot:
     hit_events: left_orbit_hit
@@ -43,6 +82,55 @@ shots:
     show_tokens:
       led: led_rollover
       color: door_blue
+  room_2b_bank_1_shot:
+    switch: s_missile_bank_1, s_missile_bank_2, s_missile_bank_3
+    profile: room_2b_strobe
+    enable_events: room_2b_enable_shot_1
+    reset_events: room_2b_enable_shot_1
+    disable_events: room_2b_enable_shot_2, mode_room_2b_crevasse_started
+    show_tokens:
+      led_1: led_missile_bank_1
+      led_2: led_missile_bank_2
+      led_3: led_missile_bank_3
+      color_1: '808080'
+      color_2: stop
+  room_2b_bank_2_shot:
+    switch: s_purple_1, s_purple_2, s_purple_3
+    profile: room_2b_strobe
+    enable_events: room_2b_enable_shot_2
+    reset_events: room_2b_enable_shot_2
+    disable_events: room_2b_enable_shot_3, mode_room_2b_crevasse_started
+    show_tokens:
+      led_1: led_upgrade_bank_1
+      led_2: led_upgrade_bank_2
+      led_3: led_upgrade_bank_3
+      color_1: '808080'
+      color_2: stop
+  room_2b_bank_3_shot:
+    switch: s_lower_right_bank_1, s_lower_right_bank_2, s_lower_right_bank_3
+    profile: room_2b_strobe
+    enable_events: room_2b_enable_shot_3
+    reset_events: room_2b_enable_shot_3
+    disable_events: room_2b_enable_shot_4, mode_room_2b_crevasse_started
+    show_tokens:
+      led_1: led_bomb_bank_1
+      led_2: led_bomb_bank_2
+      led_3: led_bomb_bank_3
+      color_1: '808080'
+      color_2: stop
+  room_2b_hurry_up_shot:
+    switch: s_drop_target_1, s_behind_drop_1
+    profile: room_2b_hurry_up
+    enable_events: room_2b_hurry_up_start
+    reset_events: room_2b_hurry_up_start
+    disable_events: room_2b_hurry_up_over, mode_room_2b_crevasse_started
+    show_tokens:
+      led: led_drop_1
+      color: 'FFFFFF'
+
+sound_player:
+  room_2b_hurry_up_start: shoot_the_drop_target
+  room_2b_hurry_up_shot_hit: jackpot
 
 show_player:
   mode_room_2b_crevasse_started:
@@ -51,6 +139,18 @@ show_player:
       show_tokens:
         color: 'C0C0FF'
         color2: '404080'
+  room_2b_bank_1_shot_hit:
+    special_score_red:
+      loops: 0
+  room_2b_bank_2_shot_hit:
+    special_score_red:
+      loops: 0
+  room_2b_bank_3_shot_hit:
+    special_score_red:
+      loops: 0
+  room_2b_hurry_up_shot_hit:
+    special_score_red:
+      loops: 0
 
 event_player:
   mode_room_2b_crevasse_started:
@@ -64,10 +164,29 @@ event_player:
     cmd_map_position:
       room: '2b'
       visit: True
-  room_2b_exit_west_shot_hit.1: drop_targets_save
-  room_2b_exit_west_shot_hit.2: room_2a_enter
-  room_2b_exit_south_shot_hit.1: drop_targets_save
-  room_2b_exit_south_shot_hit.2: room_2f_enter
+  mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 0}: room_2b_enable_shot_1
+  mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 1}: room_2b_enable_shot_2
+  mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 2}: room_2b_enable_shot_3
+  mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 3}: room_2b_hurry_up_over
+  room_2b_hurry_up_over: room_2b_enable_shot_1
+  room_2b_bank_1_shot_hit: room_2b_enable_shot_2
+  room_2b_bank_2_shot_hit: room_2b_enable_shot_3
+  room_2b_bank_3_shot_hit: room_2b_enable_shot_4
+  room_2b_hurry_up_shot_hit:
+    room_2b_hurry_up_over:
+    cmd_map_complete:
+      room: '2b'
+  room_2b_enable_shot_4: drop_target_mode_should_end
+  timer_room_2b_hurry_up_timer_tick{ticks == 1}: cmd_drop_one_up
+  timer_room_2b_hurry_up_timer_tick{ticks == 3}: room_2b_hurry_up_start
+  timer_room_2b_hurry_up_timer_tick{ticks == 35}: cmd_drop_one_down
+  timer_room_2b_hurry_up_timer_tick{ticks == 37}: room_2b_hurry_up_over, drop_target_mode_should_start
+  room_2b_exit_west_shot_hit.1: drop_target_mode_should_start
+  room_2b_exit_west_shot_hit.2: drop_targets_save
+  room_2b_exit_west_shot_hit.3: room_2a_enter
+  room_2b_exit_south_shot_hit.1: drop_target_mode_should_start
+  room_2b_exit_south_shot_hit.2: drop_targets_save
+  room_2b_exit_south_shot_hit.3: room_2f_enter
 
 variable_player:
   mode_room_2b_crevasse_started:
@@ -76,4 +195,24 @@ variable_player:
       action: set
     continue_room:
       string: 2b
+      action: set
+  room_2b_bank_1_shot_hit:
+    score: (100000 + (current_player.area_bonus_w * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_w * 50000)) * current_player.multiplier
+      action: set
+  room_2b_bank_2_shot_hit:
+    score: (150000 + ((current_player.area_bonus_ne + current_player.area_bonus_nw) * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (150000 + ((current_player.area_bonus_ne + current_player.area_bonus_nw) * 50000)) * current_player.multiplier
+      action: set
+  room_2b_bank_3_shot_hit:
+    score: (200000 + (current_player.area_bonus_e * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (200000 + (current_player.area_bonus_e * 50000)) * current_player.multiplier
+      action: set
+  room_2b_hurry_up_shot_hit:
+    score: (300000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (300000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
       action: set

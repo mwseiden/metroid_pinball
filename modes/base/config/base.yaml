@@ -178,11 +178,11 @@ show_player:
       loops: 0
       priority: 9000
       speed: 60
-  twitch_new_chat_message{line_count <= 3}:
+  twitch_chat_message{line_count <= 3}:
     chat_message_3:
       loops: 0
       priority: 20000
-  twitch_new_chat_message{line_count > 3 and line_count <= 1000}:
+  twitch_chat_message{line_count > 3 and line_count <= 1000}:
     chat_message_6:
       loops: 0
       priority: 20000
@@ -377,7 +377,7 @@ event_player:
   twitch_bit_donation{bits < 25}: base_bits_small
   twitch_bit_donation{bits >= 25 and bits < 500}: base_bits_medium
   twitch_bit_donation{bits >= 500}: base_bits_large
-  twitch_new_chat_message:
+  twitch_chat_message:
     cmd_backbox_show_overlay:
       show_type: sweep_horizontal
       color: "802000"
@@ -443,7 +443,7 @@ event_player:
       speed: 1
       repeat: 0
       direction: up
-
+  mode_bonus_will_start: stop_current_music
 
 variable_player:
   left_orbit_hit:

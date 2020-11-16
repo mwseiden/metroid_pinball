@@ -1,8 +1,47 @@
 #config_version=5
 mode:
   start_events: room_2m_continue, room_2m_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter, room_2n_enter, room_2l_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter, room_2n_enter, room_2l_enter, room_2m_exit
   priority: 300
+
+sequences:
+  room_2m_progress_sequence:
+    events:
+      - room_2m_scoop_shot_hit
+      - room_2m_jackpot_shot_hit
+    events_when_complete: room_2m_score_jackpot
+    persist_state: True
+    reset_on_complete: True
+    disable_on_complete: False
+
+shot_profiles:
+  room_2m_collect_shot:
+    states:
+      - name: lit
+        show: two_color_blink
+        show_tokens:
+          color1: 'FF0000'
+          color2: '808000'
+      - name: unlit
+        show: off
+  room_2m_scoop_shot:
+    states:
+      - name: lit
+        show: two_color_blink
+        speed: 1.5
+  room_2m_jackpot_shot:
+    states:
+      - name: lit
+        show: small_theater_chase
+        speed: 6
+        show_tokens:
+          color: 'FF0000'
+          led_1: led_drop_1
+          led_2: led_drop_2
+          led_3: led_drop_3
+          led_4: led_drop_1
+          led_5: led_drop_2
+          led_6: led_drop_3
 
 shots:
   room_2m_exit_north_shot:
@@ -32,6 +71,38 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
+  room_2m_scoop_shot:
+    switch: s_scoop
+    profile: room_2m_scoop_shot
+    enable_events: mode_room_2m_enable_collect
+    disable_events: mode_room_2m_geothermal_plant_started, room_2m_scoop_shot_hit, mode_room_2m_disable_collect
+    reset_events: mode_room_2m_geothermal_plant_started, room_2m_scoop_shot_hit, mode_room_2m_disable_collect
+    show_tokens:
+      led: led_enter_scoop
+      color1: 'FF0000'
+      color2: 'C000FF'
+  room_2m_collect_1_shot:
+    switch: s_left_inlane
+    profile: room_2m_collect_shot
+    enable_events: mode_room_2m_enable_collect
+    disable_events: mode_room_2m_geothermal_plant_started, room_2m_collect_1_shot_hit, mode_room_2m_disable_collect
+    reset_events: mode_room_2m_geothermal_plant_started, room_2m_collect_1_shot_hit, mode_room_2m_disable_collect
+    show_tokens:
+      led: led_left_inlane
+  room_2m_collect_2_shot:
+    switch: s_right_inlane
+    profile: room_2m_collect_shot
+    enable_events: mode_room_2m_enable_collect
+    disable_events: mode_room_2m_geothermal_plant_started, room_2m_collect_2_shot_hit, mode_room_2m_disable_collect
+    reset_events: mode_room_2m_geothermal_plant_started, room_2m_collect_2_shot_hit, mode_room_2m_disable_collect
+    show_tokens:
+      led: led_right_inlane
+  room_2m_jackpot_shot:
+    switch: s_vuk
+    profile: room_2m_jackpot_shot
+    enable_events: mode_room_2m_disable_collect
+    disable_events: mode_room_2m_geothermal_plant_started, room_2m_jackpot_shot_hit, mode_room_2m_enable_collect
+    reset_events: mode_room_2m_geothermal_plant_started, room_2m_jackpot_shot_hit, mode_room_2m_enable_collect
 
 slides:
   room_2m_geothermal_plant_backglass_slide:
@@ -66,6 +137,10 @@ show_player:
   flipper_cradle_release:
     room_2m_geothermal_plant_status_report:
       action: stop
+  room_2m_jackpot_shot_hit:
+    special_score_purple:
+      loops: 0
+
 
 event_player:
   mode_room_2m_geothermal_plant_started:
@@ -75,6 +150,13 @@ event_player:
     cmd_map_position:
       room: '2m'
       visit: True
+  mode_room_2m_geothermal_plant_started{device.sequences.room_2m_progress_sequence.value == 0}: mode_room_2m_enable_collect
+  mode_room_2m_geothermal_plant_started{device.sequences.room_2m_progress_sequence.value == 1}: mode_room_2m_disable_collect
+  room_2m_scoop_shot_hit: mode_room_2m_disable_collect
+  room_2m_jackpot_shot_hit:
+    mode_room_2m_enable_collect:
+    cmd_map_complete:
+      room: '2m'
   room_2m_exit_north_shot_hit.1: drop_targets_save
   room_2m_exit_north_shot_hit.2: room_2i_enter
   room_2m_exit_east_shot_hit.1: drop_targets_save
@@ -89,4 +171,15 @@ variable_player:
       action: set
     continue_room:
       string: 2m
+      action: set
+  room_2m_collect_1_shot_hit:
+    room_2m_jackpot_value: 42000 + (current_player.area_bonus_sw * 20000)
+  room_2m_collect_2_shot_hit:
+    room_2m_jackpot_value: 42000 + (current_player.area_bonus_se * 20000)
+  room_2m_scoop_shot_hit:
+    room_2m_jackpot_value: 60000 + (current_player.area_bonus_nw * 40000)
+  room_2m_jackpot_shot_hit:
+    score: (current_player.room_2m_jackpot_value + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (current_player.room_2m_jackpot_value + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
       action: set

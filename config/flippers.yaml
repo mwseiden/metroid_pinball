@@ -7,12 +7,16 @@ flippers:
     #eos_switch: s_right_flipper_eos
     sw_flip_events: twitch_flip_right
     sw_release_events: twitch_unflip_right
+    disable_events: ball_will_end, service_mode_entered, reverse_flippers_started
+    enable_events: ball_started, reverse_flippers_ended
   left_flipper:
     main_coil: c_flipper_left_main
     activation_switch: s_left_flipper
     #eos_switch: s_left_flipper_eos
     sw_flip_events: twitch_flip_left
     sw_release_events: twitch_unflip_left
+    disable_events: ball_will_end, service_mode_entered, reverse_flippers_started
+    enable_events: ball_started, reverse_flippers_ended
   upper_right_flipper:
     main_coil: c_flipper_upper_right_main
     activation_switch: s_upper_right_flipper
@@ -24,3 +28,13 @@ flippers:
     enable_events: left_sling_flipper_should_enable
     # main_coil_overwrite:
     #  pulse_ms: 20
+  right_flipper_reversed:
+    main_coil: c_flipper_right_main
+    activation_switch: s_left_flipper
+    disable_events: ball_started, ball_will_end, service_mode_entered, reverse_flippers_ended
+    enable_events: reverse_flippers_started
+  left_flipper_reversed:
+    main_coil: c_flipper_left_main
+    activation_switch: s_right_flipper
+    disable_events: ball_started, ball_will_end, service_mode_entered, reverse_flippers_ended
+    enable_events: reverse_flippers_started

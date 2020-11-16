@@ -1,8 +1,32 @@
 #config_version=5
 mode:
   start_events: room_1a_continue, room_1a_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1b_enter, room_1f_enter
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1b_enter, room_1f_enter, room_1a_exit
   priority: 300
+
+shot_profiles:
+  room_1a_lanes:
+    states:
+      - name: lit
+        speed: 5
+        show: blink_light
+        show_tokens:
+          color: 'BFBF00'
+      - name: unlit
+        show: led_color
+        show_tokens:
+          color: stop
+  room_1a_collect:
+    states:
+      - name: lit
+        speed: 2
+        show: blink_light
+        show_tokens:
+          color: '00FF00'
+      - name: unlit
+        show: led_color
+        show_tokens:
+          color: stop
 
 shots:
   room_1a_exit_east_shot:
@@ -32,6 +56,61 @@ shots:
     show_tokens:
       led: led_enter_scoop
       color: door_blue
+  room_1a_left_outlane_shot:
+    switch: s_left_outlane
+    profile: room_1a_lanes
+    reset_events: room_1a_reset_mode_shots
+    show_tokens:
+      led: led_left_outlane
+  room_1a_left_inlane_shot:
+    switch: s_left_inlane
+    profile: room_1a_lanes
+    reset_events: room_1a_reset_mode_shots
+    show_tokens:
+      led: led_left_inlane
+  room_1a_right_outlane_shot:
+    switch: s_right_outlane
+    profile: room_1a_lanes
+    reset_events: room_1a_reset_mode_shots
+    show_tokens:
+      led: led_right_outlane
+  room_1a_right_inlane_shot:
+    switch: s_right_inlane
+    profile: room_1a_lanes
+    reset_events: room_1a_reset_mode_shots
+    show_tokens:
+      led: led_right_inlane
+  room_1a_collect_1_shot:
+    switch: s_left_passage
+    profile: room_1a_collect
+    reset_events: room_1a_reset_mode_shots
+    show_tokens:
+      led: led_enter_secret_passage
+  room_1a_collect_2_shot:
+    hit_events: left_orbit_hit
+    profile: room_1a_collect
+    reset_events: room_1a_reset_mode_shots
+    show_tokens:
+      led: led_enter_left_orbit
+  room_1a_collect_3_shot:
+    switch: s_side_ramp_made
+    profile: room_1a_collect
+    reset_events: room_1a_reset_mode_shots
+    show_tokens:
+      led: led_enter_side_ramp
+  room_1a_collect_4_shot:
+    hit_events: right_orbit_hit
+    profile: room_1a_collect
+    reset_events: room_1a_reset_mode_shots
+    show_tokens:
+      led: led_enter_right_orbit
+
+shot_groups:
+  room_1a_lanes_shot_group:
+    shots: room_1a_left_outlane_shot, room_1a_left_inlane_shot, room_1a_right_inlane_shot, room_1a_right_outlane_shot
+  room_1a_collect_shot_group:
+    shots: room_1a_collect_1_shot, room_1a_collect_2_shot, room_1a_collect_3_shot, room_1a_collect_4_shot
+
 
 slides:
   room_1a_lush_cavern_backglass_slide:
@@ -66,6 +145,18 @@ show_player:
   flipper_cradle_release:
     room_1a_lush_cavern_status_report:
       action: stop
+  room_1a_collect_1_shot_lit_hit:
+    special_score_green:
+      loops: 0
+  room_1a_collect_2_shot_lit_hit:
+    special_score_green:
+      loops: 0
+  room_1a_collect_3_shot_lit_hit:
+    special_score_green:
+      loops: 0
+  room_1a_collect_4_shot_lit_hit:
+    special_score_green:
+      loops: 0
 
 event_player:
   mode_room_1a_lush_cavern_started:
@@ -88,7 +179,10 @@ event_player:
   room_1a_exit_south_shot_hit.2: room_1f_enter
   room_1a_exit_east_shot_hit.1: drop_targets_save
   room_1a_exit_east_shot_hit.2: room_1b_enter
-
+  room_1a_collect_shot_group_unlit_complete:
+    cmd_map_complete:
+      room: '1a'
+    room_1a_reset_mode_shots:
 
 variable_player:
   mode_room_1a_lush_cavern_started:
@@ -102,4 +196,30 @@ variable_player:
     missiles: -1
     door_1a_1f:
       int: 1
+      action: set
+  room_1a_lanes_shot_group_lit_hit:
+    room_1a_multiplier: 1
+  room_1a_collect_shot_group_unlit_complete:
+    room_1a_multiplier:
+      action: set
+      int: 1
+  room_1a_collect_1_shot_lit_hit:
+    score: ((50000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (25000 * current_player.area_bonus_sw)) * current_player.multiplier
+    room_special_score:
+      int: ((50000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (25000 * current_player.area_bonus_sw)) * current_player.multiplier
+      action: set
+  room_1a_collect_2_shot_lit_hit:
+    score: ((120000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw)) * current_player.multiplier
+    room_special_score:
+      int: ((120000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw)) * current_player.multiplier
+      action: set
+  room_1a_collect_3_shot_lit_hit:
+    score: ((90000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (40000 * current_player.area_bonus_ne)) * current_player.multiplier
+    room_special_score:
+      int: ((90000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (40000 * current_player.area_bonus_ne)) * current_player.multiplier
+      action: set
+  room_1a_collect_4_shot_lit_hit:
+    score: ((90000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (35000 * current_player.area_bonus_ne)) * current_player.multiplier
+    room_special_score:
+      int: ((90000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (35000 * current_player.area_bonus_ne)) * current_player.multiplier
       action: set
