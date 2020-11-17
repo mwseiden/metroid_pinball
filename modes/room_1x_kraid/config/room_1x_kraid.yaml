@@ -277,9 +277,9 @@ show_player:
     room_1x_kraid_status_report:
       action: stop
   kraid_hit_strong:
-    # room_1x_kraid_hit_strong_lights:
-      # loops: 0
-      # speed: 40
+    room_1x_kraid_hit_strong_lights:
+      loops: 0
+      speed: 40
     room_1x_kraid_hit:
       loops: 0
     special_score_red:
