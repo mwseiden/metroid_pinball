@@ -419,7 +419,6 @@ event_player:
       show_type: sweep_vertical
       color: '0000FF'
       speed: 1
-#      repeat: 2
       direction: up
   room_2q_boss_victory_back_ramp_shot_hit: room_2q_collect_victory_nw
   room_2q_boss_victory_side_ramp_shot_hit: room_2q_collect_victory_ne

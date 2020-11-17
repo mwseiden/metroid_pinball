@@ -15,6 +15,10 @@ player_vars:
     initial_value: 0
   bao_reactors:
     initial_value: 0
+  boss_kraid_hp:
+    initial_value: 200
+  boss_kraid_multiball_played:
+    initial_value: 0
   boss_ridley_hp:
     initial_value: 200
   boss_ridley_multiball_played:

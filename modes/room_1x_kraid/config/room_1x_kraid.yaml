@@ -5,6 +5,141 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1x_exit
   priority: 300
 
+multiballs:
+  room_1x_kraid_boss_multiball:
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 20s
+    start_events: mode_room_1x_kraid_start_multiball
+
+shot_profiles:
+  room_1x_weak_spot:
+    states:
+      - name: lit
+        sync_ms: 4000
+        show: fade_one_light
+  room_1x_strong_spot:
+    states:
+      - name: lit
+        sync_ms: 4000
+        show: fade_one_light
+
+
+shots:
+  # room_1x_exit_east_shot:
+    # switch: s_ramp_enter
+    # profile: exit_door
+    # enable_events: mode_room_1x_kraid_open_door
+    # disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_battle
+    # show_tokens:
+      # led: led_enter_ramp
+      # color: door_blue
+  # room_1x_boss_victory_back_ramp_shot:
+    # switch: s_ramp_enter
+    # profile: room_1x_weak_spot
+    # enable_events: kraid_enable_victory_laps
+    # disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_open_door
+    # show_tokens:
+      # led: led_enter_ramp
+      # color: white
+  # room_1x_boss_victory_side_ramp_shot:
+    # switch: s_side_ramp_made
+    # profile: room_1x_weak_spot
+    # enable_events: kraid_enable_victory_laps
+    # disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_open_door
+    # show_tokens:
+      # led: led_enter_side_ramp
+      # color: white
+  room_1x_boss_weak_back_ramp_shot:
+    switch: s_ramp_enter
+    profile: room_1x_weak_spot
+    enable_events: mode_room_1x_kraid_battle
+    disable_events: mode_room_1x_kraid_over
+    show_tokens:
+      led: led_enter_ramp
+      color: green
+  room_1x_boss_weak_side_ramp_shot:
+    switch: s_side_ramp_made
+    profile: room_1x_weak_spot
+    enable_events: mode_room_1x_kraid_battle
+    disable_events: mode_room_1x_kraid_over
+    show_tokens:
+      led: led_enter_side_ramp
+      color: green
+  room_1x_boss_strong_secret_shot:
+    switch: s_left_passage
+    profile: room_1x_strong_spot
+    enable_events: mode_room_1x_kraid_battle, mode_room_1x_kraid_recovered
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_vulnerable
+    show_tokens:
+      led: led_enter_secret_passage
+      color: blue
+  room_1x_boss_strong_rollover_shot:
+    switch: s_rollover_button
+    profile: room_1x_strong_spot
+    enable_events: mode_room_1x_kraid_battle, mode_room_1x_kraid_recovered
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_vulnerable
+    show_tokens:
+      led: led_rollover
+      color: blue
+  room_1x_boss_strong_scoop_shot:
+    switch: s_scoop
+    profile: room_1x_strong_spot
+    enable_events: mode_room_1x_kraid_battle, mode_room_1x_kraid_recovered
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_vulnerable
+    show_tokens:
+      led: led_enter_scoop
+      color: blue
+  room_1x_boss_strong_right_orbit_shot:
+    hit_events: right_orbit_hit
+    profile: room_1x_strong_spot
+    enable_events: mode_room_1x_kraid_battle, mode_room_1x_kraid_recovered
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_vulnerable
+    show_tokens:
+      led: led_enter_right_orbit
+      color: blue
+  room_1x_boss_strong_left_orbit_shot:
+    hit_events: left_orbit_hit
+    profile: room_1x_strong_spot
+    enable_events: mode_room_1x_kraid_battle, mode_room_1x_kraid_recovered
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_vulnerable
+    show_tokens:
+      led: led_enter_left_orbit
+      color: blue
+  room_1x_boss_strong_captive_shot:
+    switch: s_captive_ball
+    profile: room_1x_strong_spot
+    enable_events: mode_room_1x_kraid_battle, mode_room_1x_kraid_recovered
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_vulnerable
+    show_tokens:
+      led: led_captive_ball
+      color: blue
+  room_1x_boss_strong_center_1_shot:
+    switch: s_purple_1
+    profile: room_1x_strong_spot
+    enable_events: mode_room_1x_kraid_battle, mode_room_1x_kraid_recovered
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_vulnerable
+    show_tokens:
+      led: led_upgrade_bank_1
+      color: blue
+  room_1x_boss_strong_center_2_shot:
+    switch: s_purple_2
+    profile: room_1x_strong_spot
+    enable_events: mode_room_1x_kraid_battle, mode_room_1x_kraid_recovered
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_vulnerable
+    show_tokens:
+      led: led_upgrade_bank_2
+      color: red
+  room_1x_boss_strong_center_3_shot:
+    switch: s_purple_3
+    profile: room_1x_strong_spot
+    enable_events: mode_room_1x_kraid_battle, mode_room_1x_kraid_recovered
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_vulnerable
+    show_tokens:
+      led: led_upgrade_bank_3
+      color: blue
+
+
 animations:
   room_1x_kraid_standard:
     - property: x
@@ -64,6 +199,52 @@ event_player:
     cmd_map_position:
       room: '1x'
       visit: True
+  mode_room_1x_kraid_started{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_over, mode_room_1x_kraid_open_door, room_1x_show_defeated_backglass
+  mode_room_1x_kraid_started{current_player.boss_kraid_hp > 0}: mode_room_1x_kraid_battle, metroid_exclusive_started
+  mode_room_1x_kraid_battle{current_player.boss_kraid_multiball_played == 0}: mode_room_1x_kraid_start_multiball
+  room_1x_boss_weak_back_ramp_shot_hit: kraid_hit_strong
+  room_1x_boss_weak_side_ramp_shot_hit: kraid_hit_strong
+  room_1x_boss_strong_secret_shot_hit: kraid_hit_weak
+  room_1x_boss_strong_center_2_shot_hit: kraid_hit_weak
+  room_1x_boss_strong_rollover_shot_hit: kraid_hit_weak
+  room_1x_boss_strong_scoop_shot_hit: kraid_hit_weak
+  room_1x_boss_strong_right_orbit_shot_hit: kraid_hit_weak
+  room_1x_boss_strong_left_orbit_shot_hit: kraid_hit_weak
+  room_1x_boss_strong_captive_shot_hit: kraid_hit_weak
+  room_1x_boss_strong_center_1_shot_hit: kraid_hit_weak
+  room_1x_boss_strong_center_3_shot_hit: kraid_hit_weak
+  missile_collected{current_player.boss_kraid_hp > 0}: kraid_hit_missile
+  power_bomb_collected{current_player.boss_kraid_hp > 0}: kraid_hit_power_bomb
+  player_boss_kraid_hp{value <= 0}: room_1x_kraid_should_die
+  room_1x_kraid_should_die: kraid_defeated
+  kraid_defeated{device.multiballs.room_1x_kraid_boss_multiball.balls_added_live == 0}: mode_room_1x_kraid_open_door, kraid_defeated_music
+  kraid_defeated{device.multiballs.room_1x_kraid_boss_multiball.balls_added_live > 0}: kraid_enable_victory_laps
+  kraid_defeated: mode_room_1x_kraid_over, metroid_exclusive_ended, boss_explode
+  # room_1x_exit_north_shot_hit.1: drop_targets_save
+  # room_1x_exit_north_shot_hit.2: room_2n_enter
+  multiball_room_1x_kraid_boss_multiball_ended{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_open_door, kraid_defeated_music
+  kraid_hit_strong:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: 'FF0000'
+      speed: 1
+      repeat: 2
+      direction: up
+  kraid_hit_normal:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: 'FF8000'
+      speed: 1
+      repeat: 1
+      direction: up
+  kraid_hit_weak:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: '0000FF'
+      speed: 1
+      direction: up
+  # room_1x_boss_victory_back_ramp_shot_hit: room_1x_collect_victory_nw
+  # room_1x_boss_victory_side_ramp_shot_hit: room_1x_collect_victory_ne
 
 variable_player:
   mode_room_1x_kraid_started:
@@ -72,4 +253,49 @@ variable_player:
       action: set
     continue_room:
       string: 1x
+      action: set
+  mode_room_1x_kraid_start_multiball:
+    boss_kraid_multiball_played:
+      int: 1
+      action: set
+  kraid_hit_strong:
+    boss_kraid_hp: -8
+    score: (150000 + (current_player.area_bonus_nw * 100000) + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (150000 + (current_player.area_bonus_nw * 100000) + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+      action: set
+  kraid_hit_weak:
+    boss_kraid_hp: -2
+    score: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
+      action: set
+  kraid_hit_missile:
+    boss_kraid_hp: -20
+    missiles: -1
+    score: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+      action: set
+  kraid_hit_power_bomb:
+    boss_kraid_hp: -40
+    power_bombs: -1
+    score: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
+      action: set
+  # room_1x_collect_victory_ne:
+    # score: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    # room_special_score:
+      # int: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+      # action: set
+  # room_1x_collect_victory_nw:
+    # score: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+    # room_special_score:
+      # int: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+      # action: set
+  room_1x_kraid_should_die:
+    score: 1000000 * current_player.multiplier
+    room_special_score:
+      int: 1000000 * current_player.multiplier
       action: set
