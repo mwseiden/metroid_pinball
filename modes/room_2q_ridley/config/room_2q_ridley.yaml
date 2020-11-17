@@ -394,12 +394,12 @@ event_player:
   power_bomb_collected{current_player.boss_ridley_hp > 0}: ridley_hit_power_bomb
   player_boss_ridley_hp{value <= 0}: room_2q_ridley_should_die
   room_2q_ridley_should_die: ridley_defeated
-  ridley_defeated{device.multiballs.room_2q_ridley_boss_multiball.balls_added_live == 0}: mode_room_2q_ridley_open_door, ridley_defeated_music
+  ridley_defeated{device.multiballs.room_2q_ridley_boss_multiball.balls_added_live == 0}: mode_room_2q_ridley_open_door, boss_defeated_music
   ridley_defeated{device.multiballs.room_2q_ridley_boss_multiball.balls_added_live > 0}: ridley_enable_victory_laps
   ridley_defeated: mode_room_2q_ridley_over, metroid_exclusive_ended, boss_explode
   room_2q_exit_north_shot_hit.1: drop_targets_save
   room_2q_exit_north_shot_hit.2: room_2n_enter
-  multiball_room_2q_ridley_boss_multiball_ended{current_player.boss_ridley_hp < 1}: mode_room_2q_ridley_open_door, ridley_defeated_music
+  multiball_room_2q_ridley_boss_multiball_ended{current_player.boss_ridley_hp < 1}: mode_room_2q_ridley_open_door, boss_defeated_music
   ridley_hit_strong:
     cmd_backbox_show_overlay:
       show_type: sweep_vertical

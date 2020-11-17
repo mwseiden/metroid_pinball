@@ -2,7 +2,7 @@
 
 mode:
   start_events: room_1x_continue, room_1x_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_1x_exit
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_1w_enter, room_1y_enter, room_1x_exit
   priority: 300
 
 multiballs:
@@ -187,6 +187,48 @@ show_player:
   flipper_cradle_release:
     room_1x_kraid_status_report:
       action: stop
+  kraid_hit_strong:
+    # room_1x_kraid_hit_strong_lights:
+      # loops: 0
+      # speed: 40
+    room_1x_kraid_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  kraid_hit_weak:
+    # room_1x_kraid_hit_weak_lights:
+      # loops: 0
+      # speed: 40
+    room_1x_kraid_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  kraid_hit_missile:
+    boss_missile:
+      loops: 0
+      speed: 50
+    room_1x_kraid_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  kraid_hit_power_bomb:
+    boss_power_bomb:
+      loops: 0
+      speed: 50
+    room_1x_kraid_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  multiball_room_1x_kraid_boss_multiball_started:
+    single_fire:
+      key: room_1x_ball_save_fire
+      loops: -1
+      speed: 20
+      show_tokens:
+        led: led_ball_save
+  multiball_room_1x_kraid_boss_multiball_shoot_again_ended:
+    room_1x_ball_save_fire:
+      action: stop
 
 event_player:
   mode_room_1x_kraid_started:
@@ -217,12 +259,12 @@ event_player:
   power_bomb_collected{current_player.boss_kraid_hp > 0}: kraid_hit_power_bomb
   player_boss_kraid_hp{value <= 0}: room_1x_kraid_should_die
   room_1x_kraid_should_die: kraid_defeated
-  kraid_defeated{device.multiballs.room_1x_kraid_boss_multiball.balls_added_live == 0}: mode_room_1x_kraid_open_door, kraid_defeated_music
+  kraid_defeated{device.multiballs.room_1x_kraid_boss_multiball.balls_added_live == 0}: mode_room_1x_kraid_open_door, boss_defeated_music
   kraid_defeated{device.multiballs.room_1x_kraid_boss_multiball.balls_added_live > 0}: kraid_enable_victory_laps
   kraid_defeated: mode_room_1x_kraid_over, metroid_exclusive_ended, boss_explode
   # room_1x_exit_north_shot_hit.1: drop_targets_save
   # room_1x_exit_north_shot_hit.2: room_2n_enter
-  multiball_room_1x_kraid_boss_multiball_ended{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_open_door, kraid_defeated_music
+  multiball_room_1x_kraid_boss_multiball_ended{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_open_door, boss_defeated_music
   kraid_hit_strong:
     cmd_backbox_show_overlay:
       show_type: sweep_vertical
