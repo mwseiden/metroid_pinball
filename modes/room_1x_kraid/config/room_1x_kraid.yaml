@@ -240,6 +240,45 @@ animations:
       relative: true
       duration: 3.0s
       repeat: true
+  room_1x_kraid_death:
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+      repeat: true
+
 
 slides:
   room_1x_kraid_backglass_slide:
@@ -254,14 +293,29 @@ slides:
     widgets:
       - type: image
         image: room_1x_kraid_splash
+  room_1x_kraid_dying_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1x_kraid_backglass
+        animations:
+          show_slide: room_1x_kraid_death
+    transition: fade
+    transition_out: fade
 
 slide_player:
-  mode_room_1x_kraid_started:
+  mode_room_1x_kraid_battle:
     room_1x_kraid_backglass_slide:
       target: backglass
     room_1x_kraid_splash_slide:
       target: dmd
       expire: 1.5s
+  kraid_defeated:
+    room_1x_kraid_backglass_slide:
+      target: backglass
+      action: remove
+    room_1x_kraid_dying_backglass_slide:
+      target: backglass
+      expire: 9.0s
 
 show_player:
   mode_room_1x_kraid_started:
