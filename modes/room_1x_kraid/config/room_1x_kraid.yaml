@@ -15,7 +15,7 @@ multiballs:
 timers:
   room_1x_kraid_vulnerable_timer:
     start_value: 0
-    end_value: 5
+    end_value: 10
     tick_interval: 1.0s
     control_events:
       - event: mode_room_1x_kraid_started
@@ -292,6 +292,14 @@ show_player:
       loops: 0
     special_score_red:
       loops: 0
+  kraid_hit_vulnerable:
+    # room_1x_kraid_hit_vulnerable_lights:
+      # loops: 0
+      # speed: 40
+    room_1x_kraid_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
   kraid_hit_missile:
     boss_missile:
       loops: 0
@@ -353,6 +361,14 @@ event_player:
   room_1x_boss_strong_captive_shot_hit: kraid_hit_weak
   room_1x_boss_strong_center_1_shot_hit: kraid_hit_weak
   room_1x_boss_strong_center_3_shot_hit: kraid_hit_weak
+  room_1x_boss_vulnerable_center_2_shot_hit: kraid_hit_vulnerable
+  room_1x_boss_vulnerable_rollover_shot_hit: kraid_hit_vulnerable
+  room_1x_boss_vulnerable_scoop_shot_hit: kraid_hit_vulnerable
+  room_1x_boss_vulnerable_right_orbit_shot_hit: kraid_hit_vulnerable
+  room_1x_boss_vulnerable_left_orbit_shot_hit: kraid_hit_vulnerable
+  room_1x_boss_vulnerable_captive_shot_hit: kraid_hit_vulnerable
+  room_1x_boss_vulnerable_center_1_shot_hit: kraid_hit_vulnerable
+  room_1x_boss_vulnerable_center_3_shot_hit: kraid_hit_vulnerable
   missile_collected{current_player.boss_kraid_hp > 0}: kraid_hit_missile
   power_bomb_collected{current_player.boss_kraid_hp > 0}: kraid_hit_power_bomb
   player_boss_kraid_hp{value <= 0}: room_1x_kraid_should_die
@@ -413,6 +429,12 @@ variable_player:
     score: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
     room_special_score:
       int: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
+      action: set
+  kraid_hit_vulnerable:
+    boss_kraid_hp: -16
+    score: (60000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (60000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
       action: set
   kraid_hit_missile:
     boss_kraid_hp: -20
