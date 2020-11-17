@@ -12,6 +12,17 @@ multiballs:
     shoot_again: 20s
     start_events: mode_room_1x_kraid_start_multiball
 
+timers:
+  room_1x_kraid_vulnerable_timer:
+    start_value: 0
+    end_value: 5
+    tick_interval: 1.0s
+    control_events:
+      - event: mode_room_1x_kraid_started
+        action: stop
+      - event: mode_room_1x_kraid_vulnerable
+        action: restart
+
 shot_profiles:
   room_1x_weak_spot:
     states:
@@ -23,6 +34,12 @@ shot_profiles:
       - name: lit
         sync_ms: 4000
         show: fade_one_light
+        speed: 2
+  room_1x_vulnerable_spot:
+    states:
+    - name: lit
+      show: blink_light
+      loops: -1
 
 
 shots:
@@ -74,14 +91,14 @@ shots:
     show_tokens:
       led: led_enter_side_ramp
       color: green
-  room_1x_boss_strong_secret_shot:
+  room_1x_boss_weak_secret_shot:
     switch: s_left_passage
-    profile: room_1x_strong_spot
-    enable_events: mode_room_1x_kraid_battle, mode_room_1x_kraid_recovered
-    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_vulnerable
+    profile: room_1x_weak_spot
+    enable_events: mode_room_1x_kraid_battle
+    disable_events: mode_room_1x_kraid_over
     show_tokens:
       led: led_enter_secret_passage
-      color: blue
+      color: green
   room_1x_boss_strong_rollover_shot:
     switch: s_rollover_button
     profile: room_1x_strong_spot
@@ -137,7 +154,7 @@ shots:
     disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_vulnerable
     show_tokens:
       led: led_upgrade_bank_2
-      color: red
+      color: blue
   room_1x_boss_strong_center_3_shot:
     switch: s_purple_3
     profile: room_1x_strong_spot
@@ -146,6 +163,70 @@ shots:
     show_tokens:
       led: led_upgrade_bank_3
       color: blue
+  room_1x_boss_vulnerable_rollover_shot:
+    switch: s_rollover_button
+    profile: room_1x_vulnerable_spot
+    enable_events: mode_room_1x_kraid_vulnerable
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_recovered
+    show_tokens:
+      led: led_rollover
+      color: red
+  room_1x_boss_vulnerable_scoop_shot:
+    switch: s_scoop
+    profile: room_1x_vulnerable_spot
+    enable_events: mode_room_1x_kraid_vulnerable
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_recovered
+    show_tokens:
+      led: led_enter_scoop
+      color: red
+  room_1x_boss_vulnerable_right_orbit_shot:
+    hit_events: right_orbit_hit
+    profile: room_1x_vulnerable_spot
+    enable_events: mode_room_1x_kraid_vulnerable
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_recovered
+    show_tokens:
+      led: led_enter_right_orbit
+      color: red
+  room_1x_boss_vulnerable_left_orbit_shot:
+    hit_events: left_orbit_hit
+    profile: room_1x_vulnerable_spot
+    enable_events: mode_room_1x_kraid_vulnerable
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_recovered
+    show_tokens:
+      led: led_enter_left_orbit
+      color: red
+  room_1x_boss_vulnerable_captive_shot:
+    switch: s_captive_ball
+    profile: room_1x_vulnerable_spot
+    enable_events: mode_room_1x_kraid_vulnerable
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_recovered
+    show_tokens:
+      led: led_captive_ball
+      color: red
+  room_1x_boss_vulnerable_center_1_shot:
+    switch: s_purple_1
+    profile: room_1x_vulnerable_spot
+    enable_events: mode_room_1x_kraid_vulnerable
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_recovered
+    show_tokens:
+      led: led_upgrade_bank_1
+      color: red
+  room_1x_boss_vulnerable_center_2_shot:
+    switch: s_purple_2
+    profile: room_1x_vulnerable_spot
+    enable_events: mode_room_1x_kraid_vulnerable
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_recovered
+    show_tokens:
+      led: led_upgrade_bank_2
+      color: red
+  room_1x_boss_vulnerable_center_3_shot:
+    switch: s_purple_3
+    profile: room_1x_vulnerable_spot
+    enable_events: mode_room_1x_kraid_vulnerable
+    disable_events: mode_room_1x_kraid_over, mode_room_1x_kraid_recovered
+    show_tokens:
+      led: led_upgrade_bank_3
+      color: red
 
 
 animations:
@@ -263,7 +344,7 @@ event_player:
   mode_room_1x_kraid_battle{current_player.boss_kraid_multiball_played == 0}: mode_room_1x_kraid_start_multiball
   room_1x_boss_weak_back_ramp_shot_hit: kraid_hit_strong
   room_1x_boss_weak_side_ramp_shot_hit: kraid_hit_strong
-  room_1x_boss_strong_secret_shot_hit: kraid_hit_weak
+  room_1x_boss_weak_secret_shot_hit: kraid_hit_strong
   room_1x_boss_strong_center_2_shot_hit: kraid_hit_weak
   room_1x_boss_strong_rollover_shot_hit: kraid_hit_weak
   room_1x_boss_strong_scoop_shot_hit: kraid_hit_weak
@@ -285,6 +366,7 @@ event_player:
   room_1x_exit_east_shot_hit.2: room_1y_enter
   multiball_room_1x_kraid_boss_multiball_ended{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_open_door, boss_defeated_music
   kraid_hit_strong:
+    mode_room_1x_kraid_vulnerable:
     cmd_backbox_show_overlay:
       show_type: sweep_vertical
       color: 'FF0000'
@@ -306,6 +388,7 @@ event_player:
       direction: up
   room_1x_boss_victory_back_ramp_shot_hit: room_1x_collect_victory_nw
   room_1x_boss_victory_side_ramp_shot_hit: room_1x_collect_victory_ne
+  timer_room_1x_kraid_vulnerable_timer_complete: mode_room_1x_kraid_recovered
 
 variable_player:
   mode_room_1x_kraid_started:
