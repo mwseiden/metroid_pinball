@@ -347,9 +347,9 @@ show_player:
     special_score_red:
       loops: 0
   kraid_hit_weak:
-    # room_1x_kraid_hit_weak_lights:
-      # loops: 0
-      # speed: 40
+    room_1x_kraid_hit_weak_lights:
+      loops: 0
+      speed: 40
     room_1x_kraid_hit:
       loops: 0
     special_score_red:
