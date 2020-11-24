@@ -1,0 +1,10 @@
+#show_version=5
+- duration: 1s
+  lights:
+    led_scanner_nw: '808080'
+    led_scanner_ne: '808080'
+    led_scanner_e: '808080'
+    led_scanner_se: '808080'
+    led_scanner_sw: '808080'
+    led_scanner_w: '808080'
+    led_scanner_center: 'FF0000'
