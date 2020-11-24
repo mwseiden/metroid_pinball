@@ -417,6 +417,7 @@ sounds:
 
 sound_player:
   kraid_hit_strong: kraid_hit_strong
+  kraid_hit_vulnerable: kraid_hit_strong
   kraid_hit_weak: kraid_hit_weak
   kraid_hit_missile: boss_hit_missile
   kraid_hit_power_bomb: boss_hit_power_bomb

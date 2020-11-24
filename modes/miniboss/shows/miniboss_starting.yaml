@@ -1,11 +1,20 @@
 #show_version=5
 
-- duration: 5s
+- duration: 3s
   slides:
     miniboss_starting_battle_slide:
       widgets:
       - type: text
         text: MINIBOSS!
         color: red
+        style: dmd_big
+
+- duration: 3s
+  slides:
+    miniboss_temp_score_slide:
+      widgets:
+      - type: text
+        text: (player|miniboss_special_score)
+        color: orange
         style: dmd_big
 

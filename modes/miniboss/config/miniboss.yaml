@@ -291,7 +291,10 @@ variable_player:
   miniboss_level_4_3_shot_hit:
     score: 10000 * current_player.multiplier 
   miniboss_final_shot_hit:
-    score: 50000 * current_player.multiplier
+    score: (100000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+    miniboss_special_score:
+      int: (100000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+      action: set
   miniboss_targets_completed:
     score:
       int: 1000 * current_player.multiplier

@@ -16,7 +16,7 @@ player_vars:
   bao_reactors:
     initial_value: 0
   boss_kraid_hp:
-    initial_value: 200
+    initial_value: 240
   boss_kraid_multiball_played:
     initial_value: 0
   boss_ridley_hp:
@@ -123,6 +123,8 @@ player_vars:
   map_visited_w:
     value_type: str
     initial_value: 'NNNNNNNNNN'
+  miniboss_special_score:
+    initial_value: 0
   missiles:
     initial_value: 0
   multiplier:
@@ -149,11 +151,11 @@ player_vars:
     initial_value: 0
   room_1d_shots_hit:
     initial_value: 0
-  room_special_score:
-    initial_value: 0
   room_1m_captured:
     initial_value: 0
   room_1s_jackpot:
+    initial_value: 0
+  room_special_score:
     initial_value: 0
   wrecked_ship_charge:
     initial_value: 0
