@@ -328,7 +328,7 @@ slide_player:
     room_1x_kraid_splash_slide:
       target: dmd
       expire: 1.5s
-  mode_room_1x_kraid_open_door:
+  room_1x_show_defeated_backglass:
     room_1x_kraid_backglass_defeated_slide:
       target: backglass
   kraid_defeated:
@@ -338,6 +338,10 @@ slide_player:
     room_1x_kraid_dying_backglass_slide:
       target: backglass
       expire: 9.0s
+  timer_boss_exploder_timer_complete:
+    room_1x_kraid_backglass_defeated_slide:
+      target: backglass
+
 
 show_player:
   mode_room_1x_kraid_started:
@@ -450,7 +454,7 @@ event_player:
     cmd_map_position:
       room: '1x'
       visit: True
-  mode_room_1x_kraid_started{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_over, mode_room_1x_kraid_open_door # , room_1x_show_defeated_backglass
+  mode_room_1x_kraid_started{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_over, mode_room_1x_kraid_open_door, room_1x_show_defeated_backglass
   mode_room_1x_kraid_started{current_player.boss_kraid_hp > 0}: mode_room_1x_kraid_battle, metroid_exclusive_started
   mode_room_1x_kraid_battle{current_player.boss_kraid_multiball_played == 0}: mode_room_1x_kraid_start_multiball
   room_1x_boss_weak_back_ramp_shot_hit: kraid_hit_strong
