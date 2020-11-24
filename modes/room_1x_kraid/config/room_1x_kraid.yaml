@@ -75,6 +75,14 @@ shots:
     show_tokens:
       led: led_enter_side_ramp
       color: white
+  room_1x_boss_victory_secret_shot:
+    switch: s_left_passage
+    profile: room_1x_weak_spot
+    enable_events: kraid_enable_victory_laps
+    disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_open_door
+    show_tokens:
+      led: led_enter_secret_passage
+      color: white
   room_1x_boss_weak_back_ramp_shot:
     switch: s_ramp_enter
     profile: room_1x_weak_spot
@@ -386,9 +394,35 @@ show_player:
   room_1x_collect_victory_ne:
     special_score_red:
       loops: 0
+  room_1x_collect_victory_sw:
+    special_score_red:
+      loops: 0
   room_1x_kraid_should_die:
     special_score_red:
       loops: 0
+
+sounds:
+  kraid_hit_strong:
+    file: kraid_hit_strong.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  kraid_hit_weak:
+    file: kraid_hit_weak.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_player:
+  kraid_hit_strong: kraid_hit_strong
+  kraid_hit_weak: kraid_hit_weak
+  kraid_hit_missile: boss_hit_missile
+  kraid_hit_power_bomb: boss_hit_power_bomb
+  room_1x_collect_victory_nw: jackpot
+  room_1x_collect_victory_ne: jackpot
+  room_1x_collect_victory_sw: jackpot
 
 event_player:
   mode_room_1x_kraid_started:
@@ -458,6 +492,7 @@ event_player:
       direction: up
   room_1x_boss_victory_back_ramp_shot_hit: room_1x_collect_victory_nw
   room_1x_boss_victory_side_ramp_shot_hit: room_1x_collect_victory_ne
+  room_1x_boss_victory_secret_shot_hit: room_1x_collect_victory_sw
   timer_room_1x_kraid_vulnerable_timer_complete: mode_room_1x_kraid_recovered
 
 variable_player:
@@ -513,6 +548,11 @@ variable_player:
     score: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
     room_special_score:
       int: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+      action: set
+  room_1x_collect_victory_sw:
+    score: (50000 + (current_player.area_bonus_sw * 75000)) * current_player.multiplier
+    room_special_score:
+      int: (50000 + (current_player.area_bonus_sw * 75000)) * current_player.multiplier
       action: set
   room_1x_kraid_should_die:
     score: 1000000 * current_player.multiplier
