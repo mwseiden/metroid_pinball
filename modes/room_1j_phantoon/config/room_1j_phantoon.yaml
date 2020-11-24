@@ -146,6 +146,43 @@ show_player:
       action: stop
   room_1j_play_eye_open:
     room_1j_phantoon_eye_open:
+      key: phantoon_eye_show
+      loops: -1
+  room_1j_play_eye_0:
+    room_1j_phantoon_eye_0:
+      key: phantoon_eye_show
+      loops: -1
+  room_1j_play_eye_1:
+    room_1j_phantoon_eye_1:
+      key: phantoon_eye_show
+      loops: -1
+  room_1j_play_eye_2:
+    room_1j_phantoon_eye_2:
+      key: phantoon_eye_show
+      loops: -1
+  room_1j_play_eye_3:
+    room_1j_phantoon_eye_3:
+      key: phantoon_eye_show
+      loops: -1
+  room_1j_play_eye_4:
+    room_1j_phantoon_eye_4:
+      key: phantoon_eye_show
+      loops: -1
+  room_1j_play_eye_5:
+    room_1j_phantoon_eye_5:
+      key: phantoon_eye_show
+      loops: -1
+  room_1j_play_eye_6:
+    room_1j_phantoon_eye_6:
+      key: phantoon_eye_show
+      loops: -1
+  room_1j_play_eye_7:
+    room_1j_phantoon_eye_7:
+      key: phantoon_eye_show
+      loops: -1
+  room_1j_play_eye_8:
+    room_1j_phantoon_eye_8:
+      key: phantoon_eye_show
       loops: -1
 
 event_player:
@@ -170,7 +207,24 @@ event_player:
   mode_room_1j_phantoon_started{current_player.boss_phantoon_hp < 1}: mode_room_1j_phantoon_over, mode_room_1j_phantoon_open_door, room_1j_show_defeated_backglass
   mode_room_1j_phantoon_started{current_player.boss_phantoon_hp > 0}: mode_room_1j_phantoon_battle, metroid_exclusive_started, spin_jumps_disable
   mode_room_1j_phantoon_battle{current_player.boss_phantoon_multiball_played == 0}: mode_room_1j_phantoon_start_multiball
-  mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value >= 8}: room_1j_play_eye_open
+  mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 0}: room_1j_play_eye_0
+  mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 1}: room_1j_play_eye_1
+  mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 2}: room_1j_play_eye_2
+  mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 3}: room_1j_play_eye_3
+  mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 4}: room_1j_play_eye_4
+  mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 5}: room_1j_play_eye_5
+  mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 6}: room_1j_play_eye_6
+  mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 7}: room_1j_play_eye_7
+  mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 8}: room_1j_play_eye_8
+  mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value >= 9}: room_1j_play_eye_open
+  logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 1}: room_1j_play_eye_1
+  logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 2}: room_1j_play_eye_2
+  logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 3}: room_1j_play_eye_3
+  logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 4}: room_1j_play_eye_4
+  logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 5}: room_1j_play_eye_5
+  logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 6}: room_1j_play_eye_6
+  logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 7}: room_1j_play_eye_7
+  logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 8}: room_1j_play_eye_8
   room_1j_open_eye: room_1j_play_eye_open
 
 variable_player:
@@ -180,4 +234,8 @@ variable_player:
       action: set
     continue_room:
       string: 1j
+      action: set
+  mode_room_1j_phantoon_start_multiball:
+    boss_phantoon_multiball_played:
+      int: 1
       action: set
