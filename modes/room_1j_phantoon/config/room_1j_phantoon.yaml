@@ -378,7 +378,6 @@ event_player:
   mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 7}: room_1j_play_eye_7
   mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 8}: room_1j_play_eye_8
   mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value >= 9}: room_1j_play_eye_open
-  logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 0}: room_1j_play_eye_0
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 1}: room_1j_play_eye_1
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 2}: room_1j_play_eye_2
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 3}: room_1j_play_eye_3
@@ -401,7 +400,7 @@ event_player:
   room_1j_boss_vulnerable_right_orbit_shot_hit: kraid_hit_vulnerable
   room_1j_boss_vulnerable_rollover_shot_hit: kraid_hit_vulnerable
   room_1j_open_eye: room_1j_play_eye_open, mode_room_1j_phantoon_vulnerable
-  timer_room_1j_phantoon_vulnerable_timer_complete: mode_room_1j_phantoon_recovered
+  timer_room_1j_phantoon_vulnerable_timer_complete: mode_room_1j_phantoon_recovered, room_1j_play_eye_0
 
 
 variable_player:
