@@ -201,8 +201,8 @@ show_player:
       key: room_1j_ball_save
       show_tokens:
         led: led_ball_save
-        color_1: '00FF00'
-        color_2: '0000FF'
+        color1: '00FF00'
+        color2: '0000FF'
   multiball_room_1j_phantoon_boss_multiball_shoot_again_ended:
     room_1j_ball_save:
       action: stop
