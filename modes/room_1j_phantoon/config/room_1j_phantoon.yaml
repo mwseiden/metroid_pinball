@@ -43,7 +43,6 @@ shot_profiles:
   room_1j_vulnerable_spot:
     states:
       - name: lit
-        speed: 20
         show: two_color_blink
 
 shots:
