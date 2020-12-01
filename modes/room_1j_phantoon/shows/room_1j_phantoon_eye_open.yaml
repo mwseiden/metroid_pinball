@@ -8,3 +8,40 @@
     led_scanner_sw: '808080'
     led_scanner_w: '808080'
     led_scanner_center: 'FF0000'
+
+- duration: 0.2s
+  lights:
+    led_scanner_nw: 'FFFFFF'
+    led_scanner_w: '808080'
+    led_scanner_center: 'E00000'
+
+- duration: 0.2s
+  lights:
+    led_scanner_nw: '808080'
+    led_scanner_ne: 'FFFFFF'
+    led_scanner_center: 'C00000'
+
+- duration: 0.2s
+  lights:
+    led_scanner_ne: '808080'
+    led_scanner_e: 'FFFFFF'
+    led_scanner_center: 'A00000'
+
+- duration: 0.2s
+  lights:
+    led_scanner_e: '808080'
+    led_scanner_se: 'FFFFFF'
+    led_scanner_center: '900000'
+
+- duration: 0.2s
+  lights:
+    led_scanner_se: '808080'
+    led_scanner_sw: 'FFFFFF'
+    led_scanner_center: 'C00000'
+
+- duration: 0.2s
+  lights:
+    led_scanner_sw: '808080'
+    led_scanner_w: 'FFFFFF'
+    led_scanner_center: 'E00000'
+

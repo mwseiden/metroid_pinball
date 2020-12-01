@@ -7,4 +7,4 @@
     led_scanner_se: '000000'
     led_scanner_sw: '000000'
     led_scanner_w: '000000'
-    led_scanner_center: '080000'
+    led_scanner_center: '100000'

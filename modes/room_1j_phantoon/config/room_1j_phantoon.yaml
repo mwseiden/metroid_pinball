@@ -185,6 +185,30 @@ show_player:
       key: phantoon_eye_show
       loops: -1
 
+sounds:
+  # kraid_hit_strong:
+    # file: kraid_hit_strong.wav
+    # streaming: False
+    # track: sfx
+    # priority: 50
+    # max_queue_time: None
+  phantoon_hit_weak:
+    file: phantoon_hit_weak.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_player:
+#  kraid_hit_strong: kraid_hit_strong
+#  kraid_hit_vulnerable: kraid_hit_strong
+  phantoon_hit_weak: phantoon_hit_weak
+#  kraid_hit_missile: boss_hit_missile
+#  kraid_hit_power_bomb: boss_hit_power_bomb
+#  room_1x_collect_victory_nw: jackpot
+#  room_1x_collect_victory_ne: jackpot
+#  room_1x_collect_victory_sw: jackpot
+
 event_player:
   mode_room_1j_phantoon_started:
     cmd_backbox_show:
@@ -225,6 +249,7 @@ event_player:
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 6}: room_1j_play_eye_6
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 7}: room_1j_play_eye_7
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 8}: room_1j_play_eye_8
+  logicblock_room_1j_phantoon_open_eye_sequence_updated: phantoon_hit_weak
   room_1j_open_eye: room_1j_play_eye_open
 
 variable_player:
