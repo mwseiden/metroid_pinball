@@ -71,33 +71,24 @@ shots:
     show_tokens:
       led: led_upgrade_bank_3
       color: purple
-  room_1j_boss_vulnerable_rollover_shot:
-    switch: s_rollover_button
+  room_1j_boss_vulnerable_zero_suit_shot:
+    switch: s_shatz
     profile: room_1j_vulnerable_spot
     enable_events: mode_room_1j_phantoon_vulnerable
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
-      led: led_rollover
+      led: led_zero_suit
       color1: 'FF0000'
-      color2: '00FF00'
-  room_1j_boss_vulnerable_scoop_shot:
-    switch: s_scoop
+      color2: '800000'
+  room_1j_boss_vulnerable_secret_shot:
+    switch: s_left_passage
     profile: room_1j_vulnerable_spot
     enable_events: mode_room_1j_phantoon_vulnerable
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
-      led: led_enter_scoop
-      color1: 'FF0000'
-      color2: '00FF00'
-  room_1j_boss_vulnerable_right_orbit_shot:
-    hit_events: right_orbit_hit
-    profile: room_1j_vulnerable_spot
-    enable_events: mode_room_1j_phantoon_vulnerable
-    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
-    show_tokens:
-      led: led_enter_right_orbit
-      color1: 'FF0000'
-      color2: '00FF00'
+      led: led_enter_secret_passage
+      color1: 'FF8000'
+      color2: '800000'
   room_1j_boss_vulnerable_left_orbit_shot:
     hit_events: left_orbit_hit
     profile: room_1j_vulnerable_spot
@@ -105,8 +96,62 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_enter_left_orbit
-      color1: 'FF0000'
-      color2: '00FF00'
+      color1: 'FFFF00'
+      color2: '800000'
+  room_1j_boss_vulnerable_scoop_shot:
+    switch: s_scoop
+    profile: room_1j_vulnerable_spot
+    enable_events: mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
+    show_tokens:
+      led: led_enter_scoop
+      color1: '80FF00'
+      color2: '800000'
+  room_1j_boss_vulnerable_back_ramp_shot:
+    switch: s_ramp_enter
+    profile: room_1j_vulnerable_spot
+    enable_events: mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
+    show_tokens:
+      led: led_enter_ramp
+      color1: '00FF00'
+      color2: '800000'
+  room_1j_boss_vulnerable_center_1_shot:
+    switch: s_purple_1
+    profile: room_1j_vulnerable_spot
+    enable_events: mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
+    show_tokens:
+      led: led_upgrade_bank_1
+      color1: '00FF80'
+      color2: '800000'
+  room_1j_boss_vulnerable_center_2_shot:
+    switch: s_purple_2
+    profile: room_1j_vulnerable_spot
+    enable_events: mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
+    show_tokens:
+      led: led_upgrade_bank_2
+      color1: '00FFFF'
+      color2: '800000'
+  room_1j_boss_vulnerable_center_3_shot:
+    switch: s_purple_3
+    profile: room_1j_vulnerable_spot
+    enable_events: mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
+    show_tokens:
+      led: led_upgrade_bank_3
+      color1: '0080FF'
+      color2: '800000'
+  room_1j_boss_vulnerable_side_ramp_shot:
+    switch: s_side_ramp_made
+    profile: room_1j_vulnerable_spot
+    enable_events: mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
+    show_tokens:
+      led: led_enter_side_ramp
+      color1: '0000FF'
+      color2: '800000'
   room_1j_boss_vulnerable_captive_shot:
     switch: s_captive_ball
     profile: room_1j_vulnerable_spot
@@ -114,8 +159,26 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_captive_ball
-      color1: 'FF0000'
-      color2: '00FF00'
+      color1: '8000FF'
+      color2: '800000'
+  room_1j_boss_vulnerable_right_orbit_shot:
+    hit_events: right_orbit_hit
+    profile: room_1j_vulnerable_spot
+    enable_events: mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
+    show_tokens:
+      led: led_enter_right_orbit
+      color1: 'FF00FF'
+      color2: '800000'
+  room_1j_boss_vulnerable_rollover_shot:
+    switch: s_rollover_button
+    profile: room_1j_vulnerable_spot
+    enable_events: mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
+    show_tokens:
+      led: led_rollover
+      color1: 'FF0080'
+      color2: '800000'
 
 shot_groups:
   room_1j_phantoon_eye_shot_group:
