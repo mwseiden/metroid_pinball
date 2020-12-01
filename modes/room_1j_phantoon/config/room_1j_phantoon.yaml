@@ -44,8 +44,8 @@ shot_profiles:
         speed: 20
         show: two_color_blink
         show_tokens:
-          color_1: 'FF0000'
-          color_2: '00FF00'
+          color1: 'FF0000'
+          color2: '00FF00'
 
 shots:
   room_1j_boss_eye_open_center_1_shot:
