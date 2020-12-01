@@ -439,13 +439,13 @@ variable_player:
       action: set
   phantoon_hit_weak:
     boss_phantoon_hp: -2
-    score: (20000 + (current_player.area_bonus_nw * 20000) + (current_player.area_bonus_ne * 20000)) * current_player.multiplier
+    score: (40000 + (current_player.area_bonus_nw * 40000) + (current_player.area_bonus_ne * 40000)) * current_player.multiplier
     room_special_score:
-      int: (20000 + (current_player.area_bonus_nw * 20000) + (current_player.area_bonus_ne * 20000)) * current_player.multiplier
+      int: (40000 + (current_player.area_bonus_nw * 40000) + (current_player.area_bonus_ne * 40000)) * current_player.multiplier
       action: set
   phantoon_hit_vulnerable:
     boss_phantoon_hp: -20
-    score: (100000 + (current_player.area_bonus_nw * 40000) + (current_player.area_bonus_ne * 40000)) * current_player.multiplier
+    score: (130000 + (current_player.area_bonus_nw * 80000) + (current_player.area_bonus_ne * 80000)) * current_player.multiplier
     room_special_score:
-      int: (100000 + (current_player.area_bonus_nw * 40000) + (current_player.area_bonus_ne * 40000)) * current_player.multiplier
+      int: (130000 + (current_player.area_bonus_nw * 80000) + (current_player.area_bonus_ne * 80000)) * current_player.multiplier
       action: set
