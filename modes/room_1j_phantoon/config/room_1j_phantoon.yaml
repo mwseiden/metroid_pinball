@@ -38,6 +38,14 @@ shot_profiles:
       - name: lit
         sync_ms: 4000
         show: fade_one_light
+  room_1j_vulnerable_spot:
+    states:
+      - name: lit
+        speed: 20
+        show: two_color_blink
+        show_tokens:
+          color_1: 'FF0000'
+          color_2: '00FF00'
 
 shots:
   room_1j_boss_eye_open_center_1_shot:
@@ -64,14 +72,6 @@ shots:
     show_tokens:
       led: led_upgrade_bank_3
       color: purple
-  room_1j_boss_strong_rollover_shot:
-    switch: s_rollover_button
-    profile: room_1j_strong_spot
-    enable_events: mode_room_1j_phantoon_battle, mode_room_1j_phantoon_recovered
-    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_vulnerable
-    show_tokens:
-      led: led_rollover
-      color: blue
   room_1j_boss_vulnerable_rollover_shot:
     switch: s_rollover_button
     profile: room_1j_vulnerable_spot
@@ -79,7 +79,6 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_rollover
-      color: red
   room_1j_boss_vulnerable_scoop_shot:
     switch: s_scoop
     profile: room_1j_vulnerable_spot
@@ -87,7 +86,6 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_enter_scoop
-      color: red
   room_1j_boss_vulnerable_right_orbit_shot:
     hit_events: right_orbit_hit
     profile: room_1j_vulnerable_spot
@@ -95,7 +93,6 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_enter_right_orbit
-      color: red
   room_1j_boss_vulnerable_left_orbit_shot:
     hit_events: left_orbit_hit
     profile: room_1j_vulnerable_spot
@@ -103,7 +100,6 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_enter_left_orbit
-      color: red
   room_1j_boss_vulnerable_captive_shot:
     switch: s_captive_ball
     profile: room_1j_vulnerable_spot
@@ -111,7 +107,6 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_captive_ball
-      color: red
 
 shot_groups:
   room_1j_phantoon_eye_shot_group:
