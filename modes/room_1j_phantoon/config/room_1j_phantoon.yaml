@@ -21,6 +21,7 @@ sequences:
       - room_1j_phantoon_eye_shot_group_hit
       - room_1j_phantoon_eye_shot_group_hit
     events_when_complete: room_1j_open_eye
+    reset_events: mode_room_1j_phantoon_recovered
     persist_state: True
     reset_on_complete: False
     disable_on_complete: True
@@ -49,7 +50,7 @@ shots:
     switch: s_purple_1
     profile: room_1j_weak_spot
     enable_events: mode_room_1j_phantoon_battle, mode_room_1j_phantoon_recovered
-    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_vulnerable, mode_room_1j_phantoon_started
     show_tokens:
       led: led_upgrade_bank_1
       color: purple
@@ -57,7 +58,7 @@ shots:
     switch: s_purple_2
     profile: room_1j_weak_spot
     enable_events: mode_room_1j_phantoon_battle, mode_room_1j_phantoon_recovered
-    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_vulnerable, mode_room_1j_phantoon_started
     show_tokens:
       led: led_upgrade_bank_2
       color: purple
@@ -65,7 +66,7 @@ shots:
     switch: s_purple_3
     profile: room_1j_weak_spot
     enable_events: mode_room_1j_phantoon_battle, mode_room_1j_phantoon_recovered
-    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_vulnerable, mode_room_1j_phantoon_started
     show_tokens:
       led: led_upgrade_bank_3
       color: purple
@@ -291,7 +292,7 @@ event_player:
       room: '1j'
       visit: True
   mode_room_1j_phantoon_started{current_player.boss_phantoon_hp < 1}: mode_room_1j_phantoon_over, mode_room_1j_phantoon_open_door, room_1j_show_defeated_backglass
-  mode_room_1j_phantoon_started{current_player.boss_phantoon_hp > 0}: mode_room_1j_phantoon_battle, metroid_exclusive_started, spin_jumps_disable
+  mode_room_1j_phantoon_started{current_player.boss_phantoon_hp > 0}: mode_room_1j_phantoon_battle, metroid_exclusive_started, spin_jumps_disable, mode_room_1j_phantoon_recovered
   mode_room_1j_phantoon_battle{current_player.boss_phantoon_multiball_played == 0}: mode_room_1j_phantoon_start_multiball
   mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 0}: room_1j_play_eye_0
   mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 1}: room_1j_play_eye_1
@@ -303,6 +304,7 @@ event_player:
   mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 7}: room_1j_play_eye_7
   mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value == 8}: room_1j_play_eye_8
   mode_room_1j_phantoon_battle{device.sequences.room_1j_phantoon_open_eye_sequence.value >= 9}: room_1j_play_eye_open
+  logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 0}: room_1j_play_eye_0
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 1}: room_1j_play_eye_1
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 2}: room_1j_play_eye_2
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 3}: room_1j_play_eye_3
