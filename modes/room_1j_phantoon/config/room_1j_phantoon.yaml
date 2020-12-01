@@ -43,9 +43,6 @@ shot_profiles:
       - name: lit
         speed: 20
         show: two_color_blink
-        show_tokens:
-          color1: 'FF0000'
-          color2: '00FF00'
 
 shots:
   room_1j_boss_eye_open_center_1_shot:
@@ -79,6 +76,8 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_rollover
+      color1: 'FF0000'
+      color2: '00FF00'
   room_1j_boss_vulnerable_scoop_shot:
     switch: s_scoop
     profile: room_1j_vulnerable_spot
@@ -86,6 +85,8 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_enter_scoop
+      color1: 'FF0000'
+      color2: '00FF00'
   room_1j_boss_vulnerable_right_orbit_shot:
     hit_events: right_orbit_hit
     profile: room_1j_vulnerable_spot
@@ -93,6 +94,8 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_enter_right_orbit
+      color1: 'FF0000'
+      color2: '00FF00'
   room_1j_boss_vulnerable_left_orbit_shot:
     hit_events: left_orbit_hit
     profile: room_1j_vulnerable_spot
@@ -100,6 +103,8 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_enter_left_orbit
+      color1: 'FF0000'
+      color2: '00FF00'
   room_1j_boss_vulnerable_captive_shot:
     switch: s_captive_ball
     profile: room_1j_vulnerable_spot
@@ -107,6 +112,8 @@ shots:
     disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_recovered
     show_tokens:
       led: led_captive_ball
+      color1: 'FF0000'
+      color2: '00FF00'
 
 shot_groups:
   room_1j_phantoon_eye_shot_group:
