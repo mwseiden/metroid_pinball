@@ -21,6 +21,7 @@ sequences:
       - room_1j_phantoon_eye_shot_group_hit
       - room_1j_phantoon_eye_shot_group_hit
     events_when_complete: room_1j_open_eye
+    enable_events: mode_room_1j_phantoon_recovered
     reset_events: mode_room_1j_phantoon_recovered
     persist_state: True
     reset_on_complete: False
