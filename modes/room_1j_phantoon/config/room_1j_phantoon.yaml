@@ -8,6 +8,17 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1i_enter, room_1j_exit
   priority: 300
 
+timers:
+  room_1j_phantoon_vulnerable_timer:
+    start_value: 0
+    end_value: 8
+    tick_interval: 2.4s
+    control_events:
+      - event: mode_room_1j_phantoon_started
+        action: stop
+      - event: mode_room_1j_phantoon_vulnerable
+        action: restart
+
 sequences:
   room_1j_phantoon_open_eye_sequence:
     events:
@@ -22,7 +33,7 @@ sequences:
       - room_1j_phantoon_eye_shot_group_hit
     events_when_complete: room_1j_open_eye
     enable_events: mode_room_1j_phantoon_recovered
-    reset_events: mode_room_1j_phantoon_recovered
+    reset_events: mode_room_1j_phantoon_vulnerable
     persist_state: True
     reset_on_complete: False
     disable_on_complete: True
@@ -312,12 +323,12 @@ show_player:
       loops: -1
 
 sounds:
-  # phantoon_hit_strong:
-    # file: phantoon_hit_strong.wav
-    # streaming: False
-    # track: sfx
-    # priority: 50
-    # max_queue_time: None
+  phantoon_hit_strong:
+    file: phantoon_hit_strong.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
   phantoon_hit_weak:
     file: phantoon_hit_weak.wav
     streaming: False
@@ -327,7 +338,7 @@ sounds:
 
 sound_player:
 #  phantoon_hit_strong: phantoon_hit_strong
-#  phantoon_hit_vulnerable: phantoon_hit_strong
+  phantoon_hit_vulnerable: phantoon_hit_strong
   phantoon_hit_weak: phantoon_hit_weak
 #  phantoon_hit_missile: boss_hit_missile
 #  phantoon_hit_power_bomb: boss_hit_power_bomb
@@ -376,8 +387,22 @@ event_player:
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 6}: room_1j_play_eye_6
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 7}: room_1j_play_eye_7
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 8}: room_1j_play_eye_8
-  logicblock_room_1j_phantoon_open_eye_sequence_updated: phantoon_hit_weak
+  room_1j_phantoon_eye_shot_group_hit: phantoon_hit_weak
+  room_1j_boss_vulnerable_zero_suit_shot_hit: kraid_hit_vulnerable
+  room_1j_boss_vulnerable_secret_shot_hit: kraid_hit_vulnerable
+  room_1j_boss_vulnerable_left_orbit_shot_hit: kraid_hit_vulnerable
+  room_1j_boss_vulnerable_scoop_shot_hit: kraid_hit_vulnerable
+  room_1j_boss_vulnerable_back_ramp_shot_hit: kraid_hit_vulnerable
+  room_1j_boss_vulnerable_center_1_shot_hit: kraid_hit_vulnerable
+  room_1j_boss_vulnerable_center_2_shot_hit: kraid_hit_vulnerable
+  room_1j_boss_vulnerable_center_3_shot_hit: kraid_hit_vulnerable
+  room_1j_boss_vulnerable_side_ramp_shot_hit: kraid_hit_vulnerable
+  room_1j_boss_vulnerable_captive_shot_hit: kraid_hit_vulnerable
+  room_1j_boss_vulnerable_right_orbit_shot_hit: kraid_hit_vulnerable
+  room_1j_boss_vulnerable_rollover_shot_hit: kraid_hit_vulnerable
   room_1j_open_eye: room_1j_play_eye_open, mode_room_1j_phantoon_vulnerable
+  timer_room_1j_phantoon_vulnerable_timer_complete: mode_room_1j_phantoon_recovered
+
 
 variable_player:
   mode_room_1j_phantoon_started:
