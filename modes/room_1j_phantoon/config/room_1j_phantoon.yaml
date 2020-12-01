@@ -321,6 +321,22 @@ show_player:
     room_1j_phantoon_eye_8:
       key: phantoon_eye_show
       loops: -1
+  phantoon_hit_weak:
+    # room_1x_kraid_hit_weak_lights:
+      # loops: 0
+      # speed: 50
+    room_1j_phantoon_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  phantoon_hit_vulnerable:
+    # room_1x_kraid_hit_vulnerable_lights:
+      # loops: 0
+      # speed: 50
+    room_1j_phantoon_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
 
 sounds:
   phantoon_hit_strong:
@@ -414,4 +430,16 @@ variable_player:
   mode_room_1j_phantoon_start_multiball:
     boss_phantoon_multiball_played:
       int: 1
+      action: set
+  phantoon_hit_weak:
+    boss_phantoon_hp: -2
+    score: (20000 + (current_player.area_bonus_nw * 20000) + (current_player.area_bonus_ne * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (20000 + (current_player.area_bonus_nw * 20000) + (current_player.area_bonus_ne * 20000)) * current_player.multiplier
+      action: set
+  phantoon_hit_vulnerable:
+    boss_phantoon_hp: -20
+    score: (100000 + (current_player.area_bonus_nw * 40000) + (current_player.area_bonus_ne * 40000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_nw * 40000) + (current_player.area_bonus_ne * 40000)) * current_player.multiplier
       action: set

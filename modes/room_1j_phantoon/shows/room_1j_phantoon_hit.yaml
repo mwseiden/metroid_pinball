@@ -1,0 +1,10 @@
+#show_version=5
+
+- duration: 3s
+  slides:
+    room_1x_kraid_status_slide_hp:
+      widgets:
+      - type: Text
+        text: Phantoon HP - (player|boss_phantoon_hp)
+        color: cyan
+        style: dmd_med
