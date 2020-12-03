@@ -102,6 +102,10 @@ sound_player:
     music_metal_item_room:
       action: stop
       fade_out: 1s
+  room_1i_enter:
+    music_metal_item_room:
+      action: stop
+      fade_out: 1s
   room_1j_enter:
     music_wrecked_ship:
       action: stop

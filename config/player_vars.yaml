@@ -20,7 +20,7 @@ player_vars:
   boss_kraid_multiball_played:
     initial_value: 0
   boss_phantoon_hp:
-    initial_value: 300
+    initial_value: 260
   boss_phantoon_multiball_played:
     initial_value: 0
   boss_ridley_hp:

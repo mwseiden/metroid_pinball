@@ -356,6 +356,22 @@ show_player:
       loops: 0
     special_score_red:
       loops: 0
+  phantoon_hit_missile:
+    boss_missile:
+      loops: 0
+      speed: 50
+    room_1j_phantoon_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  phantoon_hit_power_bomb:
+    boss_power_bomb:
+      loops: 0
+      speed: 50
+    room_1j_phantoon_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
 
 sounds:
   phantoon_hit_strong:
@@ -375,8 +391,8 @@ sound_player:
 #  phantoon_hit_strong: phantoon_hit_strong
   phantoon_hit_vulnerable: phantoon_hit_strong
   phantoon_hit_weak: phantoon_hit_weak
-#  phantoon_hit_missile: boss_hit_missile
-#  phantoon_hit_power_bomb: boss_hit_power_bomb
+  phantoon_hit_missile: boss_hit_missile
+  phantoon_hit_power_bomb: boss_hit_power_bomb
 #  room_1j_collect_victory_nw: jackpot
 #  room_1j_collect_victory_ne: jackpot
 #  room_1j_collect_victory_sw: jackpot
@@ -434,6 +450,8 @@ event_player:
   room_1j_boss_vulnerable_captive_shot_hit: phantoon_hit_vulnerable
   room_1j_boss_vulnerable_right_orbit_shot_hit: phantoon_hit_vulnerable
   room_1j_boss_vulnerable_rollover_shot_hit: phantoon_hit_vulnerable
+  missile_collected{current_player.boss_phantoon_hp > 0}: phantoon_hit_missile
+  power_bomb_collected{current_player.boss_phantoon_hp > 0}: phantoon_hit_power_bomb
   room_1j_open_eye: room_1j_play_eye_open, mode_room_1j_phantoon_vulnerable
   timer_room_1j_phantoon_vulnerable_timer_complete{current_player.boss_phantoon_hp > 0}: mode_room_1j_phantoon_recovered, room_1j_play_eye_0
   player_boss_phantoon_hp{value <= 0}: room_1j_phantoon_should_die
@@ -469,4 +487,18 @@ variable_player:
     score: (170000) * current_player.multiplier
     room_special_score:
       int: (170000) * current_player.multiplier
+      action: set
+  phantoon_hit_missile:
+    boss_phantoon_hp: -25
+    missiles: -1
+    score: (200000) * current_player.multiplier
+    room_special_score:
+      int: (200000) * current_player.multiplier
+      action: set
+  phantoon_hit_power_bomb:
+    boss_phantoon_hp: -35
+    power_bombs: -1
+    score: (300000) * current_player.multiplier
+    room_special_score:
+      int: (300000) * current_player.multiplier
       action: set
