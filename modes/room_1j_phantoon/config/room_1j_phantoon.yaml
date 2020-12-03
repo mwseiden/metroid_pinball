@@ -16,6 +16,8 @@ timers:
     control_events:
       - event: mode_room_1j_phantoon_started
         action: stop
+      - event: phantoon_defeated
+        action: stop
       - event: mode_room_1j_phantoon_vulnerable
         action: restart
 
@@ -194,7 +196,7 @@ shot_groups:
   room_1j_phantoon_eye_shot_group:
     shots: room_1j_boss_eye_open_center_1_shot, room_1j_boss_eye_open_center_2_shot, room_1j_boss_eye_open_center_3_shot
     enable_events: mode_room_1j_phantoon_battle, mode_room_1j_phantoon_recovered
-    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_vulnerable, phantoon_defeated
 
 animations:
   room_1j_phantoon_standard:
@@ -259,10 +261,16 @@ slide_player:
       expire: 1.5s
 
 show_player:
-  mode_room_1j_phantoon_started:
+  mode_room_1j_phantoon_battle:
     room_1j_phantoon_gi:
       loops: -1
       speed: 70
+  mode_room_1j_phantoon_over:
+    room_1j_phantoon_gi_defeated:
+      loops: -1
+      speed: 40
+    mode_room_1j_phantoon_battle:
+      action: stop
   show_mode_status_report:
     room_1j_phantoon_status_report:
       loops: 0
@@ -322,9 +330,9 @@ show_player:
       key: phantoon_eye_show
       loops: -1
   phantoon_hit_weak:
-    # room_1j_phantoon_hit_weak_lights:
-      # loops: 0
-      # speed: 50
+    room_1j_phantoon_gi_hit_red:
+      loops: 0
+      speed: 50
     room_1j_phantoon_hit:
       loops: 0
     special_score_red:
@@ -416,7 +424,7 @@ event_player:
   room_1j_boss_vulnerable_right_orbit_shot_hit: phantoon_hit_vulnerable
   room_1j_boss_vulnerable_rollover_shot_hit: phantoon_hit_vulnerable
   room_1j_open_eye: room_1j_play_eye_open, mode_room_1j_phantoon_vulnerable
-  timer_room_1j_phantoon_vulnerable_timer_complete: mode_room_1j_phantoon_recovered, room_1j_play_eye_0
+  timer_room_1j_phantoon_vulnerable_timer_complete{current_player.boss_phantoon_hp > 0}: mode_room_1j_phantoon_recovered, room_1j_play_eye_0
   player_boss_phantoon_hp{value <= 0}: room_1j_phantoon_should_die
   room_1j_phantoon_should_die: phantoon_defeated
   phantoon_defeated{device.multiballs.room_1j_phantoon_boss_multiball.balls_added_live == 0}: mode_room_1j_phantoon_open_door, boss_defeated_music
