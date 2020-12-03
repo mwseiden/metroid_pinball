@@ -277,6 +277,9 @@ show_player:
   flipper_cradle_release:
     room_1j_phantoon_status_report:
       action: stop
+  phantoon_defeated:
+    phantoon_eye_show:
+      action: stop
   multiball_room_1j_phantoon_boss_multiball_started:
     two_color_blink:
       loops: -1
