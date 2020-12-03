@@ -597,7 +597,7 @@ variable_player:
     wrecked_ship_powered_up:
       int: 1
       action: set
-    wrecked_ship_charge: 20
+    wrecked_ship_charge: 16
   room_1j_boss_spinner_shot_hit:
     score: 12340 * current_player.multiplier
     wrecked_ship_charge: 1
