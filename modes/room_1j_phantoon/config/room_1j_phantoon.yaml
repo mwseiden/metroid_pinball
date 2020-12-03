@@ -59,6 +59,14 @@ shot_profiles:
         show: two_color_blink
 
 shots:
+  room_1j_exit_west_shot:
+    switch: s_ramp_enter
+    profile: exit_door
+    enable_events: mode_room_1j_phantoon_open_door
+    disable_events: mode_room_1j_phantoon_started, mode_room_1j_phantoon_battle
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
   room_1j_boss_eye_open_center_1_shot:
     switch: s_purple_1
     profile: room_1j_weak_spot
@@ -434,6 +442,8 @@ event_player:
   phantoon_defeated{device.multiballs.room_1j_phantoon_boss_multiball.balls_added_live > 0}: phantoon_enable_victory_laps
   phantoon_defeated: mode_room_1j_phantoon_over, metroid_exclusive_ended, boss_explode
   multiball_room_1j_phantoon_boss_multiball_ended{current_player.boss_phantoon_hp < 1}: mode_room_1j_phantoon_open_door, boss_defeated_music
+  room_1j_exit_west_shot_hit.1: drop_targets_save
+  room_1j_exit_west_shot_hit.2: room_1i_enter
 
 
 variable_player:
