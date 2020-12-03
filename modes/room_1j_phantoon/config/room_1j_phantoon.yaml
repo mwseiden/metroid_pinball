@@ -207,6 +207,23 @@ shots:
       led: led_rollover
       color1: 'FF0080'
       color2: '800000'
+  room_1j_boss_victory_left_orbit_shot:
+    hit_events: left_orbit_hit
+    profile: room_1j_weak_spot
+    enable_events: phantoon_enable_victory_laps
+    disable_events: mode_room_1j_phantoon_started, mode_room_1j_phantoon_open_door
+    show_tokens:
+      led: led_enter_left_orbit
+      color: white
+  room_1j_boss_victory_right_orbit_shot:
+    hit_events: right_orbit_hit
+    profile: room_1j_weak_spot
+    enable_events: phantoon_enable_victory_laps
+    disable_events: mode_room_1j_phantoon_started, mode_room_1j_phantoon_open_door
+    show_tokens:
+      led: led_enter_right_orbit
+      color: white
+
 
 shot_groups:
   room_1j_phantoon_eye_shot_group:
@@ -552,33 +569,36 @@ variable_player:
       action: set
   phantoon_hit_weak:
     boss_phantoon_hp: -2
-    score: (60000) * current_player.multiplier
+    score: (60000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
     room_special_score:
-      int: (60000) * current_player.multiplier
+      int: (60000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
       action: set
   phantoon_hit_vulnerable:
     boss_phantoon_hp: -20
-    score: (170000) * current_player.multiplier
+    score: (170000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
     room_special_score:
-      int: (170000) * current_player.multiplier
+      int: (170000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
       action: set
   phantoon_hit_missile:
     boss_phantoon_hp: -25
     missiles: -1
-    score: (200000) * current_player.multiplier
+    score: (200000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
     room_special_score:
-      int: (200000) * current_player.multiplier
+      int: (200000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
       action: set
   phantoon_hit_power_bomb:
     boss_phantoon_hp: -35
     power_bombs: -1
-    score: (300000) * current_player.multiplier
+    score: (300000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
     room_special_score:
-      int: (300000) * current_player.multiplier
+      int: (300000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
       action: set
   phantoon_defeated:
     wrecked_ship_powered_up:
       int: 1
       action: set
     wrecked_ship_charge: 20
+  room_1j_boss_spinner_shot_hit:
+    score: 12340 * current_player.multiplier
+    wrecked_ship_charge: 1
 
