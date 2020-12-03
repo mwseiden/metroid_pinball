@@ -67,6 +67,14 @@ shots:
     show_tokens:
       led: led_enter_ramp
       color: door_blue
+  room_1j_boss_spinner_shot:
+    switch: s_spinner
+    # profile: room_1j_weak_spot
+    enable_events: mode_room_1j_phantoon_battle, mode_room_1j_phantoon_recovered, mode_room_1j_phantoon_vulnerable
+    disable_events: mode_room_1j_phantoon_over, mode_room_1j_phantoon_started
+    # show_tokens:
+    #  led: led_upgrade_bank_1
+    #  color: purple
   room_1j_boss_eye_open_center_1_shot:
     switch: s_purple_1
     profile: room_1j_weak_spot
@@ -245,6 +253,44 @@ animations:
       duration: 1.0s
       timing: with_previous
       repeat: true
+  room_1j_phantoon_death:
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+      repeat: true
 
 slides:
   room_1j_phantoon_backglass_slide:
@@ -259,14 +305,41 @@ slides:
     widgets:
       - type: image
         image: room_1j_phantoon_splash
+  room_1j_phantoon_backglass_defeated_slide:
+    widgets:
+      - type: image
+        image: room_1j_phantoon_backglass_defeated
+    transition: fade
+    transition_out: fade
+  room_1j_phantoon_dying_backglass_slide:
+    widgets:
+      - type: image
+        image: room_1j_phantoon_backglass
+        animations:
+          show_slide: room_1j_phantoon_death
+    transition: fade
+    transition_out: fade
 
 slide_player:
-  mode_room_1j_phantoon_started:
+  mode_room_1j_phantoon_battle:
     room_1j_phantoon_backglass_slide:
       target: backglass
     room_1j_phantoon_splash_slide:
       target: dmd
       expire: 1.5s
+  room_1j_show_defeated_backglass:
+    room_1j_phantoon_backglass_defeated_slide:
+      target: backglass
+  phantoon_defeated:
+    room_1j_phantoon_backglass_slide:
+      target: backglass
+      action: remove
+    room_1j_phantoon_dying_backglass_slide:
+      target: backglass
+      expire: 9.0s
+  timer_boss_exploder_timer_complete:
+    room_1j_phantoon_backglass_defeated_slide:
+      target: backglass
 
 show_player:
   mode_room_1j_phantoon_battle:
@@ -438,6 +511,7 @@ event_player:
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 7}: room_1j_play_eye_7
   logicblock_room_1j_phantoon_open_eye_sequence_updated{value == 8}: room_1j_play_eye_8
   room_1j_phantoon_eye_shot_group_hit: phantoon_hit_weak
+  room_1j_boss_spinner_shot_hit: phantoon_hit_weak
   room_1j_boss_vulnerable_zero_suit_shot_hit: phantoon_hit_vulnerable
   room_1j_boss_vulnerable_secret_shot_hit: phantoon_hit_vulnerable
   room_1j_boss_vulnerable_left_orbit_shot_hit: phantoon_hit_vulnerable
