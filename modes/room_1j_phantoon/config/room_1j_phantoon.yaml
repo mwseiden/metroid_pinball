@@ -576,3 +576,8 @@ variable_player:
     room_special_score:
       int: (300000) * current_player.multiplier
       action: set
+  phantoon_defeated:
+    wrecked_ship_powered_up:
+      int: 1
+      action: set
+
