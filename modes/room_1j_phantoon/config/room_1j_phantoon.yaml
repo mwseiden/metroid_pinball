@@ -580,4 +580,5 @@ variable_player:
     wrecked_ship_powered_up:
       int: 1
       action: set
+    wrecked_ship_charge: 20
 
