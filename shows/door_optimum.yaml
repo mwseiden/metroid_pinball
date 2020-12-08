@@ -1,0 +1,28 @@
+#show_version=5
+
+- duration: 4s
+  lights:
+    (led): (color)
+
+- duration: .33s
+  lights:
+    (led): 'FFFFFF'
+
+- duration: .34s
+  lights:
+    (led): (color)
+
+- duration: .33s
+  lights:
+    (led): 'FFFFFF'
+
+- duration: .5s
+  lights:
+    (led): (color)
+
+- duration: .5s
+  lights:
+    (led):
+      color: 'FFFFFF'
+      fade: 1s
+

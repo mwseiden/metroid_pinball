@@ -6,3 +6,8 @@ shot_profiles:
     - name: lit
       show: led_color
       loops: -1
+  exit_door_optimum:
+    states:
+    - name: lit
+      show: door_optimum
+      loops: -1

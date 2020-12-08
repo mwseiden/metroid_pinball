@@ -1,7 +1,6 @@
 #config_version=5
 
-# replace 1j with room code
-# replace room_1j_phantoon with mode name
+# https://commons.wikimedia.org/wiki/File:Rub%27_al_Khali_(Arabian_Empty_Quarter)_sand_dunes_imaged_by_Terra_(EOS_AM-1).jpg
 
 mode:
   start_events: room_1j_continue, room_1j_enter
