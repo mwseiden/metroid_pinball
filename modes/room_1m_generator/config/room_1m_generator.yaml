@@ -57,7 +57,7 @@ shots:
       led: led_enter_scoop
   room_1m_exit_west_shot:
     switch: s_ramp_enter
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: room_1m_stage_3
     disable_events: mode_room_1m_generator_started, room_1m_exit_west_shot_hit
     show_tokens:

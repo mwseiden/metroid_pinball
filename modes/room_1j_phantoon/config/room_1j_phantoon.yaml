@@ -60,7 +60,7 @@ shot_profiles:
 shots:
   room_1j_exit_west_shot:
     switch: s_ramp_enter
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_1j_phantoon_open_door
     disable_events: mode_room_1j_phantoon_started, mode_room_1j_phantoon_battle
     show_tokens:

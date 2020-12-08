@@ -10,7 +10,7 @@ mode:
 shots:
   room_1p_exit_north_shot:
     hit_events: left_orbit_hit
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_1p_cargo_bay_started
     disable_events: room_1p_exit_north_shot_hit
     reset_events: room_1p_exit_north_shot_hit

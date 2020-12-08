@@ -41,7 +41,7 @@ shots:
       color: door_blue
   room_1k_exit_north_shot:
     hit_events: right_orbit_hit
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_1k_crew_quarters_started_no_charge
     disable_events: mode_room_1k_crew_quarters_started, room_1k_exit_north_shot_hit
     reset_events: mode_room_1k_crew_quarters_started, room_1k_exit_north_shot_hit
@@ -50,7 +50,7 @@ shots:
       color: door_blue
   room_1k_exit_north_powered_shot:
     switches: s_ramp_enter
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_1k_crew_quarters_started_charge
     disable_events: mode_room_1k_crew_quarters_started, room_1l_exit_north_powered_shot_hit
     reset_events: mode_room_1k_crew_quarters_started, room_1l_exit_north_powered_shot_hit
