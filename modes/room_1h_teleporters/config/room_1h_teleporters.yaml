@@ -13,9 +13,6 @@ sequences:
       - room_1h_light_teleporter_shot_hit
       - room_1h_light_teleporter_shot_hit
     events_when_complete: room_1h_teleporter_lock
-    # persist_state: True
-    # reset_on_complete: False
-    # disable_on_complete: True
     enable_events: room_1h_enable_teleporter_charge
     disable_events: mode_room_1h_teleporters_started, logicblock_room_1h_teleporter_multi_sequence_complete
     restart_events: mode_room_1h_teleporters_started, logicblock_room_1h_teleporter_multi_sequence_complete
@@ -46,12 +43,12 @@ shots:
     show_tokens:
       led: led_captive_ball
   room_1h_load_teleporter_shot:
-    switch: s_drop_target_2
+    switch: s_drop_target_3
     profile: room_1h_target
     enable_events: room_1h_start_teleporter_lock
     disable_events: mode_room_1h_teleporters_started, room_1h_load_teleporter_shot_hit
     show_tokens:
-      led: led_drop_2
+      led: led_drop_3
 
 
 slides:

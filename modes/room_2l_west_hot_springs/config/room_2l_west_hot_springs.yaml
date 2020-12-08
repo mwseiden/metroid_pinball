@@ -10,7 +10,7 @@ mode:
 shots:
   room_2l_exit_east_shot:
     switches: s_ramp_enter
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_2l_west_hot_springs_started
     disable_events: room_2l_exit_east_shot_hit
     reset_events: room_2l_exit_east_shot_hit

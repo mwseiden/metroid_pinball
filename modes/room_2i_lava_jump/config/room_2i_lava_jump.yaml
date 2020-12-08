@@ -59,7 +59,7 @@ shots:
       color: door_blue
   room_2i_exit_south_shot:
     switch: s_scoop
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_2i_lava_jump_started
     disable_events: room_2i_exit_south_shot_hit
     reset_events: room_2i_exit_south_shot_hit

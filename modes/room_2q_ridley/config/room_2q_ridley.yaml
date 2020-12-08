@@ -27,7 +27,7 @@ shot_profiles:
 shots:
   room_2q_exit_north_shot:
     switch: s_ramp_enter
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_2q_ridley_open_door
     disable_events: mode_room_2q_ridley_started, mode_room_2q_ridley_battle
     show_tokens:

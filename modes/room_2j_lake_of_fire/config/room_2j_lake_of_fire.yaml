@@ -16,7 +16,7 @@ shots:
       color: door_blue
   room_2j_exit_east_shot:
     switch: s_ramp_enter
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_2j_lake_of_fire_started
     disable_events: room_2j_exit_east_shot_hit
     reset_events: room_2j_exit_east_shot_hit
