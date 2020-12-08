@@ -13,9 +13,9 @@ sequences:
       - room_1h_light_teleporter_shot_hit
       - room_1h_light_teleporter_shot_hit
     events_when_complete: room_1h_teleporter_lock
-    persist_state: True
-    reset_on_complete: False
-    disable_on_complete: True
+    # persist_state: True
+    # reset_on_complete: False
+    # disable_on_complete: True
     enable_events: room_1h_enable_teleporter_charge
     disable_events: mode_room_1h_teleporters_started, logicblock_room_1h_teleporter_multi_sequence_complete
     restart_events: mode_room_1h_teleporters_started, logicblock_room_1h_teleporter_multi_sequence_complete
@@ -136,7 +136,7 @@ event_player:
   mode_room_1h_teleporters_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1h_teleporters_started_no_charge, room_1h_enable_teleporter_charge
   mode_room_1h_teleporters_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1h_teleporters_started_charge
   room_1h_light_teleporter_shot_hit{current_player.wrecked_ship_powered_up == 1}: room_1h_start_teleporter_lock
-  logicblock_room_1h_teleporter_multi_sequence_complete: room_1h_start_teleporter_lock
+  room_1h_teleporter_lock: room_1h_start_teleporter_lock
   room_1h_exit_east_shot_hit.1: drop_targets_save
   room_1h_exit_east_shot_hit.2: room_1i_enter
 
