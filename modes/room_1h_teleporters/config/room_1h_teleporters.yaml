@@ -52,7 +52,7 @@ shots:
     enable_events: room_1h_start_teleporter_lock
     disable_events: mode_room_1h_teleporters_started, room_1h_load_teleporter_shot_hit
     show_tokens:
-      led: led_captive_ball
+      led: led_drop_2
 
 
 slides:
@@ -102,6 +102,7 @@ show_player:
 event_player:
   mode_room_1h_teleporters_started:
     drop_targets_continue:
+    chozo_multiball_disable:
     cmd_map_position:
       room: '1h'
       visit: True
