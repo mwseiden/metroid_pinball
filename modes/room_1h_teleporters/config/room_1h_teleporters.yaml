@@ -7,6 +7,27 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1i_enter, room_1h_exit
   priority: 300
 
+sequences:
+  room_1h_teleporter_multi_sequence:
+    events:
+      - room_1h_light_teleporter_shot_hit
+      - room_1h_light_teleporter_shot_hit
+    events_when_complete: room_1h_teleporter_lock
+    persist_state: True
+    reset_on_complete: False
+    disable_on_complete: True
+    enable_events: room_1h_enable_teleporter_charge
+    disable_events: mode_room_1h_teleporters_started
+    restart_events: mode_room_1h_teleporters_started
+
+
+shot_profiles:
+  room_1h_target:
+    states:
+      - name: lit
+        show: single_rainbow
+        speed: 45
+
 shots:
   room_1h_exit_east_shot:
     switches: s_ramp_enter
@@ -17,6 +38,15 @@ shots:
     show_tokens:
       led: led_enter_ramp
       color: door_blue
+  room_1h_light_teleporter_shot:
+    switch: s_captive_ball
+    profile: room_1h_target
+    enable_events: mode_room_1h_teleporters_started
+    disable_events: room_1h_start_teleporter_lock
+    reset_events: room_1h_exit_east_shot_hit
+    show_tokens:
+      led: led_captive_ball
+
 
 slides:
   room_1h_teleporters_backglass_slide:
@@ -96,8 +126,9 @@ event_player:
       decay_r: 1.4
       decay_g: 1.8
       decay_b: 1.8
-  mode_room_1h_teleporters_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1h_teleporters_started_no_charge
+  mode_room_1h_teleporters_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1h_teleporters_started_no_charge, room_1h_enable_teleporter_charge
   mode_room_1h_teleporters_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1h_teleporters_started_charge
+  room_1h_light_teleporter_shot_hit{current_player.wrecked_ship_powered_up == 1}: room_1h_start_teleporter_lock
   room_1h_exit_east_shot_hit.1: drop_targets_save
   room_1h_exit_east_shot_hit.2: room_1i_enter
 
