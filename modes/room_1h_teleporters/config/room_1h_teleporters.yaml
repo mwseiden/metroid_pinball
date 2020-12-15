@@ -7,6 +7,17 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1i_enter, room_1h_exit
   priority: 300
 
+
+timers:
+  room_1h_side_ramp_countdown:
+    start_value: 1
+    end_value: 3
+    tick_interval: 1.0s
+    control_events:
+      - event: room_1h_start_countdown
+        action: restart
+
+
 sequences:
   room_1h_teleporter_multi_sequence:
     events:
@@ -49,6 +60,10 @@ shots:
     disable_events: mode_room_1h_teleporters_started, room_1h_load_teleporter_shot_hit
     show_tokens:
       led: led_drop_3
+  room_1h_lock_teleporter_shot:
+    switch: s_behind_drop_2
+    enable_events: room_1h_start_teleporter_lock
+    disable_events: mode_room_1h_teleporters_started, room_1h_load_teleporter_shot_hit
 
 
 slides:
@@ -136,6 +151,9 @@ event_player:
   room_1h_teleporter_lock: room_1h_start_teleporter_lock
   room_1h_exit_east_shot_hit.1: drop_targets_save
   room_1h_exit_east_shot_hit.2: room_1i_enter
+  room_1h_load_teleporter_shot_hit: cmd_drop_three_up, cmd_drop_two_up
+  room_1h_lock_teleporter_shot_hit: cmd_drop_two_up, room_1h_start_countdown
+  timer_room_1h_side_ramp_countdown_complete: cmd_drop_three_up, cmd_drop_two_down
 
 variable_player:
   mode_room_1h_teleporters_started:
