@@ -4,7 +4,7 @@ from mpf.core.mode import Mode
 class Room1hTeleporters(Mode):
 
     def mode_start(self, **kwargs):
-        self.add_mode_event_handler('room_1h_teleport_shot_hit', self.event_teleport)
+        self.add_mode_event_handler('room_1h_should_teleport', self.event_teleport)
 
         super().mode_start(**kwargs)
 

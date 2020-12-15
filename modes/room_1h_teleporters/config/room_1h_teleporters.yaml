@@ -10,16 +10,16 @@ mode:
 
 
 timers:
-  room_1h_side_ramp_countdown:
+  room_1h_begin_teleport_countdown:
     start_value: 1
     end_value: 3
     tick_interval: 1.0s
     control_events:
       - event: room_1h_start_countdown
         action: restart
-  room_1h_hit_side_ramp:
+  room_1h_teleport:
     start_value: 1
-    end_value: 8
+    end_value: 2
     tick_interval: 1.0s
     control_events:
       - event: room_1h_ball_locked_for_final_shot
@@ -74,13 +74,6 @@ shots:
     switch: s_behind_drop_2
     enable_events: room_1h_start_teleporter_lock
     disable_events: mode_room_1h_teleporters_started, room_1h_ball_locked_for_final_shot
-  room_1h_teleport_shot:
-    switch: s_side_ramp_made
-    profile: room_1h_target
-    enable_events: room_1h_ball_locked_for_final_shot
-    disable_events: mode_room_1h_teleporters_started, room_1h_start_teleporter_lock
-    show_tokens:
-      led: led_enter_side_ramp
 
 
 slides:
@@ -172,11 +165,10 @@ event_player:
   room_1h_load_teleporter_shot_hit: cmd_drop_three_up, cmd_drop_two_up
   room_1h_lock_teleporter_shot_hit: cmd_drop_two_up, room_1h_start_countdown
   # -- <O-
-  timer_room_1h_side_ramp_countdown_complete: cmd_drop_three_up, cmd_drop_two_down
-  timer_room_1h_side_ramp_countdown_complete{device.switches.s_behind_drop_2.state}: room_1h_ball_locked_for_final_shot
-  timer_room_1h_side_ramp_countdown_complete{not device.switches.s_behind_drop_2.state}: cmd_drop_three_up, cmd_drop_two_down
-  timer_room_1h_hit_side_ramp_complete: room_1h_teleporter_lock
-  room_1h_teleport_shot_hit: room_1h_should_teleport
+  timer_room_1h_begin_teleport_countdown_complete: cmd_drop_three_up, cmd_drop_two_down
+  timer_room_1h_begin_teleport_countdown_complete{device.switches.s_behind_drop_2.state}: room_1h_ball_locked_for_final_shot
+  timer_room_1h_begin_teleport_countdown_complete{not device.switches.s_behind_drop_2.state}: cmd_drop_three_up, cmd_drop_two_down
+  timer_room_1h_teleport_complete: room_1h_should_teleport
 
 
 variable_player:
