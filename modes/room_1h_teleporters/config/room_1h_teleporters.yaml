@@ -57,7 +57,7 @@ shots:
     switch: s_drop_target_3
     profile: room_1h_target
     enable_events: room_1h_start_teleporter_lock
-    disable_events: mode_room_1h_teleporters_started, room_1h_load_teleporter_shot_hit
+    disable_events: mode_room_1h_teleporters_started, room_1h_ball_locked_for_final_shot
     show_tokens:
       led: led_drop_3
   room_1h_lock_teleporter_shot:
@@ -154,6 +154,7 @@ event_player:
   room_1h_load_teleporter_shot_hit: cmd_drop_three_up, cmd_drop_two_up
   room_1h_lock_teleporter_shot_hit: cmd_drop_two_up, room_1h_start_countdown
   timer_room_1h_side_ramp_countdown_complete: cmd_drop_three_up, cmd_drop_two_down
+  timer_room_1h_side_ramp_countdown_complete{device.switches.s_behind_drop_2.state}: room_1h_ball_locked_for_final_shot
 
 variable_player:
   mode_room_1h_teleporters_started:
