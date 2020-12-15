@@ -9,6 +9,7 @@ class Room1hTeleporters(Mode):
         super().mode_start(**kwargs)
 
     def event_teleport(self, **kwargs):
+        player = self.machine.game.player
         room_index = randint(0, 42)
         room_prefix = int(room_index / 26) + 1
         room_letter = chr((room_index % 26) + ord('a'))
