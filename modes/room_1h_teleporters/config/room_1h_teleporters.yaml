@@ -24,8 +24,6 @@ timers:
     control_events:
       - event: room_1h_ball_locked_for_final_shot
         action: restart
-      - event: room_1h_teleport_shot_hit
-        action: stop
 
 
 sequences:
@@ -119,6 +117,10 @@ show_player:
   flipper_cradle_release:
     room_1h_teleporters_status_report:
       action: stop
+  room_1h_ball_locked_for_final_shot:
+    room_1h_teleporters_teleport:
+      speed: 40
+      loops: 6
 
 event_player:
   mode_room_1h_teleporters_started:
