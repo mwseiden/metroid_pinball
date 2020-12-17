@@ -121,6 +121,10 @@ show_player:
     room_1h_teleporters_teleport:
       speed: 40
       loops: -1
+  room_1h_light_teleporter_shot_hit:
+    room_1h_teleporters_charge:
+      speed: 40
+      loops: 0
 
 sounds:
   room_1h_teleport:
@@ -183,6 +187,14 @@ event_player:
   timer_room_1h_begin_teleport_countdown_complete{device.switches.s_behind_drop_2.state}: room_1h_ball_locked_for_final_shot
   timer_room_1h_begin_teleport_countdown_complete{not device.switches.s_behind_drop_2.state}: cmd_drop_three_up, cmd_drop_two_down
   timer_room_1h_teleport_complete: room_1h_should_teleport
+  room_1h_should_teleport:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: '2080FF'
+      speed: 1
+      repeat: 9
+      direction: up
+
 
 
 variable_player:

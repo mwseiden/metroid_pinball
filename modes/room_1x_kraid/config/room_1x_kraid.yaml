@@ -25,6 +25,8 @@ timers:
     control_events:
       - event: mode_room_1x_kraid_started
         action: stop
+      - event: room_1x_kraid_should_die
+        action: stop
       - event: mode_room_1x_kraid_vulnerable
         action: restart
 
