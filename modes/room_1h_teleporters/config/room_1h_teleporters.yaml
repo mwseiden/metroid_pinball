@@ -120,7 +120,19 @@ show_player:
   room_1h_ball_locked_for_final_shot:
     room_1h_teleporters_teleport:
       speed: 40
-      loops: 6
+      loops: -1
+
+sounds:
+  room_1h_teleport:
+    file: room_1h_teleport.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+
+sound_player:
+  room_1h_should_teleport: room_1h_teleport
 
 event_player:
   mode_room_1h_teleporters_started:
