@@ -38,7 +38,7 @@ shot_profiles:
   room_2g_strong_spot:
     states:
       - name: lit
-        sync_ms: 4000
+        sync_ms: 2000
         show: fade_one_light
         speed: 2
   room_2g_vulnerable_spot:
@@ -91,7 +91,7 @@ shots:
       color: blue
   room_2g_boss_strong_back_ramp_shot:
     switch: s_ramp_enter
-    profile: room_2g_weak_spot
+    profile: room_2g_strong_spot
     enable_events: mode_room_2g_draygon_battle, mode_room_2g_draygon_recovered
     disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_vulnerable
     show_tokens:
@@ -153,6 +153,86 @@ shots:
     show_tokens:
       led: led_upgrade_bank_3
       color: blue
+  room_2g_boss_vulnerable_side_ramp_shot:
+    switch: s_side_ramp_made
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_side_ramp
+      color: rebeccapurple
+  room_2g_boss_vulnerable_secret_shot:
+    switch: s_left_passage
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_secret_passage
+      color: rebeccapurple
+  room_2g_boss_vulnerable_back_ramp_shot:
+    switch: s_ramp_enter
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_ramp
+      color: rebeccapurple
+  room_2g_boss_vulnerable_rollover_shot:
+    switch: s_rollover_button
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_rollover
+      color: rebeccapurple
+  room_2g_boss_vulnerable_scoop_shot:
+    switch: s_scoop
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_scoop
+      color: rebeccapurple
+  room_2g_boss_vulnerable_right_orbit_shot:
+    hit_events: right_orbit_hit
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_right_orbit
+      color: rebeccapurple
+  room_2g_boss_vulnerable_left_orbit_shot:
+    hit_events: left_orbit_hit
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_left_orbit
+      color: rebeccapurple
+  room_2g_boss_vulnerable_center_1_shot:
+    switch: s_purple_1
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_upgrade_bank_1
+      color: rebeccapurple
+  room_2g_boss_vulnerable_center_2_shot:
+    switch: s_purple_2
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_upgrade_bank_2
+      color: rebeccapurple
+  room_2g_boss_vulnerable_center_3_shot:
+    switch: s_purple_3
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_upgrade_bank_3
+      color: rebeccapurple
 
 
 animations:
