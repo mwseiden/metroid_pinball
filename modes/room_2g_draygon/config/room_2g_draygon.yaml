@@ -378,17 +378,17 @@ show_player:
     room_2g_draygon_status_report:
       action: stop
   draygon_hit_weak:
-    # room_2g_draygon_hit_weak_lights:
-      # loops: 0
-      # speed: 50
+    room_2g_draygon_hit_weak_lights:
+      loops: 0
+      speed: 50
     room_2g_draygon_hit:
       loops: 0
     special_score_red:
       loops: 0
   draygon_hit_vulnerable:
-    # room_2g_draygon_hit_vulnerable_lights:
-      # loops: 0
-      # speed: 50
+    room_2g_draygon_hit_vulnerable_lights:
+      loops: 0
+      speed: 50
     room_2g_draygon_hit:
       loops: 0
     special_score_red:
@@ -412,12 +412,12 @@ show_player:
 
 
 sounds:
-  # draygon_hit_strong:
-    # file: draygon_hit_strong.wav
-    # streaming: False
-    # track: sfx
-    # priority: 50
-    # max_queue_time: None
+  draygon_hit_strong:
+    file: draygon_hit_strong.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
   draygon_hit_weak:
     file: draygon_hit_weak.wav
     streaming: False
@@ -432,7 +432,7 @@ sounds:
     max_queue_time: None
 
 sound_player:
-  #draygon_hit_strong: draygon_hit_strong
+  draygon_hit_strong: draygon_hit_strong
   draygon_hit_vulnerable: draygon_hit_vulnerable
   draygon_hit_weak: draygon_hit_weak
   draygon_hit_missile: boss_hit_missile
