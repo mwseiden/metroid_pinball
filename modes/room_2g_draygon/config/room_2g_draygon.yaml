@@ -4,7 +4,7 @@
 
 mode:
   start_events: room_2g_continue, room_2g_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2g_exit
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2g_exit, room_2c_enter, room_2h_enter
   priority: 300
 
 multiballs:
@@ -57,7 +57,7 @@ shots:
     show_tokens:
       led: led_enter_right_orbit
       color: door_blue
-  room_2g_exit_west_shot:
+  room_2g_exit_north_shot:
     switch: s_ramp_enter
     profile: exit_door
     enable_events: mode_room_2g_draygon_open_door
@@ -485,6 +485,10 @@ event_player:
   draygon_defeated{device.multiballs.room_2g_draygon_boss_multiball.balls_added_live == 0}: mode_room_2g_draygon_open_door, boss_defeated_music
   draygon_defeated{device.multiballs.room_2g_draygon_boss_multiball.balls_added_live > 0}: draygon_enable_victory_laps
   draygon_defeated: mode_room_2g_draygon_over, metroid_exclusive_ended, boss_explode
+  room_2g_exit_north_shot_hit.1: drop_targets_save
+  room_2g_exit_north_shot_hit.2: room_2c_enter
+  room_2g_exit_east_shot_hit.1: drop_targets_save
+  room_2g_exit_east_shot_hit.2: room_2h_enter
   multiball_room_2g_draygon_boss_multiball_ended{current_player.boss_draygon_hp < 1}: mode_room_2g_draygon_open_door, boss_defeated_music
   draygon_hit_strong:
     mode_room_2g_draygon_vulnerable:

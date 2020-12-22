@@ -208,6 +208,9 @@ sound_player:
     music_brinstar_side_entrance:
       action: stop
       fade_out: 1s
+    music_metal_item_room:
+      action: stop
+      fade_out: 1s
   room_2d_enter:
     music_maridia_intro:
       action: stop
@@ -230,6 +233,9 @@ sound_player:
       fade_out: 1s
   room_2h_enter:
     music_norfair:
+      action: stop
+      fade_out: 1s
+    music_metal_item_room:
       action: stop
       fade_out: 1s
   room_2i_enter:
