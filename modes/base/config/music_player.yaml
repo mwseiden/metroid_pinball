@@ -58,7 +58,8 @@ sound_player:
     music_maridia_snow:
       action: play
       fade_in: 2s
-  mode_room_2g_draygon_started{machine.next_game_acapella == 0}: music_boss
+  mode_room_2g_draygon_started{machine.next_game_acapella == 0 and current_player.boss_ridley_hp > 0}: music_boss
+  mode_room_2g_draygon_started{machine.next_game_acapella == 0 and current_player.boss_ridley_hp < 1}: music_metal_item_room
   mode_room_2h_crystalline_seabed_started{machine.next_game_acapella == 0}: music_maridia
   mode_room_2i_lava_jump_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2j_lake_of_fire_started{machine.next_game_acapella == 0}: music_norfair

@@ -274,6 +274,44 @@ animations:
       duration: 1.0s
       timing: with_previous
       repeat: true
+  room_2g_draygon_death:
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+      repeat: true
 
 slides:
   room_2g_draygon_backglass_slide:
@@ -290,14 +328,41 @@ slides:
     widgets:
       - type: image
         image: room_2g_draygon_splash
+  # room_2g_draygon_backglass_defeated_slide:
+    # widgets:
+      # - type: image
+        # image: room_2g_draygon_backglass_defeated
+    # transition: fade
+    # transition_out: fade
+  room_2g_draygon_dying_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2g_draygon_backglass
+        animations:
+          show_slide: room_2g_draygon_death
+    transition: fade
+    transition_out: fade
 
 slide_player:
-  mode_room_2g_draygon_started:
+  mode_room_2g_draygon_battle:
     room_2g_draygon_backglass_slide:
       target: backglass
     room_2g_draygon_splash_slide:
       target: dmd
       expire: 1.5s
+  # room_2g_show_defeated_backglass:
+    # room_2g_draygon_backglass_defeated_slide:
+      # target: backglass
+  draygon_defeated:
+    room_2g_draygon_backglass_slide:
+      target: backglass
+      action: remove
+    room_2g_draygon_dying_backglass_slide:
+      target: backglass
+      expire: 9.0s
+  # timer_boss_exploder_timer_complete:
+    # room_2g_draygon_backglass_defeated_slide:
+      # target: backglass
 
 show_player:
   mode_room_2g_draygon_started:
@@ -313,35 +378,35 @@ show_player:
     room_2g_draygon_status_report:
       action: stop
   draygon_hit_weak:
-    # room_1x_draygon_hit_weak_lights:
+    # room_2g_draygon_hit_weak_lights:
       # loops: 0
       # speed: 50
-    # room_1x_draygon_hit:
-      # loops: 0
+    room_2g_draygon_hit:
+      loops: 0
     special_score_red:
       loops: 0
   draygon_hit_vulnerable:
-    # room_1x_draygon_hit_vulnerable_lights:
+    # room_2g_draygon_hit_vulnerable_lights:
       # loops: 0
       # speed: 50
-    # room_1x_draygon_hit:
-      # loops: 0
+    room_2g_draygon_hit:
+      loops: 0
     special_score_red:
       loops: 0
   draygon_hit_missile:
     boss_missile:
       loops: 0
       speed: 50
-    # room_1x_draygon_hit:
-      # loops: 0
+    room_2g_draygon_hit:
+      loops: 0
     special_score_red:
       loops: 0
   draygon_hit_power_bomb:
     boss_power_bomb:
       loops: 0
       speed: 50
-    # room_1x_draygon_hit:
-      # loops: 0
+    room_2g_draygon_hit:
+      loops: 0
     special_score_red:
       loops: 0
 
