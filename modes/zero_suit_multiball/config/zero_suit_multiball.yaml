@@ -81,6 +81,9 @@ achievement_groups:
     enable_events: zero_suit_initialize
     events_when_all_completed: zero_suit_win_all
 
+sound_player:
+  zero_suit_enable_shot: shoot_the_zero_suit
+
 event_player:
   mode_zero_suit_multiball_started{current_player.ball == 1}: zero_suit_initialize
   mode_zero_suit_multiball_started{current_player.zero_suit_ready == 1}: zero_suit_enable_shot
