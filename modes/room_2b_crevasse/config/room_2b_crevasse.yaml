@@ -179,8 +179,8 @@ event_player:
   room_2b_enable_shot_4: drop_target_mode_should_end
   timer_room_2b_hurry_up_timer_tick{ticks == 1}: cmd_drop_one_up
   timer_room_2b_hurry_up_timer_tick{ticks == 3}: room_2b_hurry_up_start
-  timer_room_2b_hurry_up_timer_tick{ticks == 34}: cmd_drop_one_down
-  timer_room_2b_hurry_up_timer_tick{ticks == 38}: room_2b_hurry_up_over, drop_target_mode_should_start
+  timer_room_2b_hurry_up_timer_tick{ticks == 34}: cmd_drop_one_down, room_2b_hurry_up_over
+  timer_room_2b_hurry_up_timer_tick{ticks == 38}: drop_target_mode_should_start
   room_2b_exit_west_shot_hit.1: drop_target_mode_should_start
   room_2b_exit_west_shot_hit.2: drop_targets_save
   room_2b_exit_west_shot_hit.3: room_2a_enter
