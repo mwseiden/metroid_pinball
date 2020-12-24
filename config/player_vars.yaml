@@ -206,4 +206,4 @@ player_vars:
   wrecked_ship_powered_up:
     initial_value: 0
   zero_suit_ready:
-    initial_value: 1
+    initial_value: 0

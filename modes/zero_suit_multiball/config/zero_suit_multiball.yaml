@@ -24,7 +24,7 @@ shots:
     switch: s_shatz
     profile: zero_suit
     enable_events: zero_suit_enable_shot
-    disable_events: mode_zero_suit_multiball_started
+    disable_events: mode_zero_suit_multiball_started, zero_suit_disable_shot, zero_suit_start_shot_hit
     show_tokens:
       led: led_zero_suit
 
@@ -39,6 +39,7 @@ achievements:
     complete_events: bridge_should_explode
     select_events: power_bomb_collected
     enable_events: zero_suit_initialize
+    reset_events: zero_suit_reset
     sync_ms: 1000
   zero_suit_chozo:
     show_tokens:
@@ -49,6 +50,7 @@ achievements:
     complete_events: chozo_multiball_bashed
     select_events: captive_shot_hit
     enable_events: zero_suit_initialize
+    reset_events: zero_suit_reset
     sync_ms: 1000
   zero_suit_miniboss:
     show_tokens:
@@ -59,6 +61,7 @@ achievements:
     complete_events: miniboss_battle_mode_should_start
     select_events: miniboss_enable_level_3
     enable_events: zero_suit_initialize
+    reset_events: zero_suit_reset
     sync_ms: 1000
   zero_suit_room:
     show_tokens:
@@ -69,6 +72,7 @@ achievements:
     complete_events: cmd_map_complete
     select_events: cmd_map_position
     enable_events: zero_suit_initialize
+    reset_events: zero_suit_reset
     sync_ms: 1000
 
 achievement_groups:
@@ -79,4 +83,37 @@ achievement_groups:
 
 event_player:
   mode_zero_suit_multiball_started{current_player.ball == 1}: zero_suit_initialize
+  mode_zero_suit_multiball_started{current_player.zero_suit_ready == 1}: zero_suit_enable_shot
   zero_suit_win_all{device.playfields.playfield.balls == 1}: zero_suit_enable_shot
+  multiball_chozo_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  multiball_room_1j_phantoon_boss_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  multiball_room_1x_kraid_boss_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  multiball_room_2g_draygon_boss_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  multiball_room_2q_ridley_boss_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  multiball_gunship_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  multiball_room_1m_generator_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  multiball_room_1r_battle_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  multiball_twitch_bit_donation_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  multiball_chozo_multiball_started: zero_suit_disable_shot
+  multiball_room_1j_phantoon_boss_multiball_started: zero_suit_disable_shot
+  multiball_room_1x_kraid_boss_multiball_started: zero_suit_disable_shot
+  multiball_room_2g_draygon_boss_multiball_started: zero_suit_disable_shot
+  multiball_room_2q_ridley_boss_multiball_started: zero_suit_disable_shot
+  multiball_gunship_started: zero_suit_disable_shot
+  multiball_room_1m_generator_multiball_started: zero_suit_disable_shot
+  multiball_room_1r_battle_started: zero_suit_disable_shot
+  multiball_twitch_bit_donation_multiball_started: zero_suit_disable_shot
+  zero_suit_start_shot_hit: zero_suit_multiball_should_start, metroid_exclusive_started
+  multiball_zero_suit_multiball_ended: metroid_exclusive_ended, zero_suit_reset
+  
+
+
+variable_player:
+  zero_suit_win_all:
+    zero_suit_ready:
+      action: set
+      int: 1
+  multiball_zero_suit_multiball_ended:
+    zero_suit_ready:
+      action: set
+      int: 0
