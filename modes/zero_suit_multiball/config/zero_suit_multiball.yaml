@@ -5,6 +5,30 @@ mode:
   stop_events: metroid_base_ended
   priority: 800
 
+multiballs:
+  zero_suit_multiball:
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 20s
+    start_events: zero_suit_multiball_should_start
+
+shot_profiles:
+  zero_suit:
+    states:
+      - name: lit
+        show: single_rainbow
+        speed: 45
+
+shots:
+  zero_suit_start_shot:
+    switch: s_shatz
+    profile: zero_suit
+    enable_events: zero_suit_enable_shot
+    disable_events: mode_zero_suit_multiball_started
+    show_tokens:
+      led: led_zero_suit
+
+
 achievements:
   zero_suit_bridge:
     show_tokens:
@@ -55,3 +79,4 @@ achievement_groups:
 
 event_player:
   mode_zero_suit_multiball_started{current_player.ball == 1}: zero_suit_initialize
+  zero_suit_win_all{device.playfields.playfield.balls == 1}: zero_suit_enable_shot
