@@ -13,7 +13,7 @@ timers:
   bridge_enable_coil_timer:
     start_value: 1
     end_value: 2
-    tick_interval: .35s
+    tick_interval: .1s
     restart_on_complete: False
     start_running: False
     control_events:
