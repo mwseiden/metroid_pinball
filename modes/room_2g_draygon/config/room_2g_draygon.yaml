@@ -1,6 +1,7 @@
 #config_version=5
 
 # https://www.metroid-database.com/bestiary/bestiary.php?b=264
+# Victory BG https://commons.wikimedia.org/wiki/File:Dead_coral_Neil_island_SS.jpg
 
 mode:
   start_events: room_2g_continue, room_2g_enter
@@ -328,12 +329,12 @@ slides:
     widgets:
       - type: image
         image: room_2g_draygon_splash
-  # room_2g_draygon_backglass_defeated_slide:
-    # widgets:
-      # - type: image
-        # image: room_2g_draygon_backglass_defeated
-    # transition: fade
-    # transition_out: fade
+  room_2g_draygon_backglass_defeated_slide:
+    widgets:
+      - type: image
+        image: room_2g_draygon_backglass_defeated
+    transition: fade
+    transition_out: fade
   room_2g_draygon_dying_backglass_slide:
     widgets:
       - type: image
@@ -350,9 +351,9 @@ slide_player:
     room_2g_draygon_splash_slide:
       target: dmd
       expire: 1.5s
-  # room_2g_show_defeated_backglass:
-    # room_2g_draygon_backglass_defeated_slide:
-      # target: backglass
+  room_2g_show_defeated_backglass:
+    room_2g_draygon_backglass_defeated_slide:
+      target: backglass
   draygon_defeated:
     room_2g_draygon_backglass_slide:
       target: backglass
@@ -360,9 +361,9 @@ slide_player:
     room_2g_draygon_dying_backglass_slide:
       target: backglass
       expire: 9.0s
-  # timer_boss_exploder_timer_complete:
-    # room_2g_draygon_backglass_defeated_slide:
-      # target: backglass
+  timer_boss_exploder_timer_complete:
+    room_2g_draygon_backglass_defeated_slide:
+      target: backglass
 
 show_player:
   mode_room_2g_draygon_started:
