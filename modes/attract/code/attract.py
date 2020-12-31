@@ -28,15 +28,7 @@ class MyAttract(Attract):
         self.machine.set_machine_var('bao_balls_locked', 0)
 
     def event_play_message_show(self, **kwargs):
-        settings = {
-          'attract_message_{}'.format(randint(1, 4)): {
-            'loops': 0,
-            'action': 'play',
-            'block_queue': False
-          }
-        }
-
-        self.machine.show_player.play(settings, 'attract', None)
+        self.machine.events.post('play_attract_message_{}'.format(randint(1, 4)))
 
     def event_right_flipper_down(self, **kwargs):
         self.right_flipper_down = True
