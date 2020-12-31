@@ -30,6 +30,14 @@ sound_player:
     attract_goren:
       loops: 0
 
+show_pools:
+  attract_message_show_pool:
+    shows:
+      - attract_message_1
+      - attract_message_2
+      - attract_message_3
+      - attract_message_3
+
 show_player:
   mode_attract_started:
     attract_display_loop:
@@ -313,11 +321,11 @@ animations:
       repeat: true
   special_thanks_scroll_up:
     - property: y
-      value: 180
+      value: 200
       relative: true
       duration: 9s
     - property: y
-      value: -180
+      value: -200
       relative: true
       duration: 0s
       repeat: true

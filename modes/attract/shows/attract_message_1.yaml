@@ -1,0 +1,19 @@
+#show_version=5
+
+- duration: 6s
+  slides:
+    thank_you_slide:
+      widgets:
+      - type: Text
+        text: ...and thanks to
+        style: dmd_med
+        color: dmd_orange
+        y: 25
+      - type: Text
+        text: everyone watching!
+        style: dmd_med
+        color: dmd_orange
+        y: 13
+      transition:
+         type: swap
+         duration: 1s
