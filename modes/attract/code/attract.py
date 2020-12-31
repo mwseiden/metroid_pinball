@@ -30,7 +30,8 @@ class MyAttract(Attract):
     def event_play_message_show(self, **kwargs):
         settings = {
           'attract_message_{}'.format(randint(1, 4)): {
-            'loops': 0
+            'loops': 0,
+            'action': 'play'
           }
         }
 
