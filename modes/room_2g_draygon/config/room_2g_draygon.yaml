@@ -410,6 +410,19 @@ show_player:
       loops: 0
     special_score_red:
       loops: 0
+  multiball_room_2g_draygon_boss_multiball_started:
+    three_color_blink:
+      loops: -1
+      speed: 9
+      key: room_2g_ball_save
+      show_tokens:
+        led: led_ball_save
+        color1: 'FF00FF'
+        color2: '00FF00'
+        color3: 'FFFF00'
+  multiball_room_2g_draygon_boss_multiball_shoot_again_ended:
+    room_2g_ball_save:
+      action: stop
 
 
 sounds:
