@@ -36,7 +36,7 @@ show_pools:
       - attract_message_1
       - attract_message_2
       - attract_message_3
-      - attract_message_3
+      - attract_message_4
 
 show_player:
   mode_attract_started:
