@@ -89,10 +89,10 @@ event_player:
   mode_zero_suit_multiball_started{current_player.zero_suit_ready == 1}: zero_suit_enable_shot
   zero_suit_win_all{device.playfields.playfield.balls == 1}: zero_suit_enable_shot
   multiball_chozo_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
-  multiball_room_1j_phantoon_boss_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
-  multiball_room_1x_kraid_boss_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
-  multiball_room_2g_draygon_boss_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
-  multiball_room_2q_ridley_boss_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  mode_room_1j_phantoon_open_door{current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  mode_room_1x_kraid_open_door{current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  mode_room_2g_draygon_open_door{current_player.zero_suit_ready == 1}: zero_suit_enable_shot
+  mode_room_2q_ridley_open_door{current_player.zero_suit_ready == 1}: zero_suit_enable_shot
   multiball_gunship_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
   multiball_room_1m_generator_multiball_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
   multiball_room_1r_battle_ended{device.playfields.playfield.balls == 1 and current_player.zero_suit_ready == 1}: zero_suit_enable_shot
