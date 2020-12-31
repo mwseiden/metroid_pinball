@@ -371,6 +371,12 @@ event_player:
   slide_claire_samus_created:
     cmd_backbox_show:
       show_type: fire
+  slide_stemage_slide_created:
+    cmd_backbox_show:
+      show_type: spectrum
+      color1: '008000'
+      color2: '808000'
+      color3: '008000'
   slide_double_danger_slide_created:
     cmd_backbox_show:
       show_type: drop
