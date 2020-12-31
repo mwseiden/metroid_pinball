@@ -6,6 +6,13 @@ import time
 class MyAttract(Attract):
     DOUBLE_FLIP_MILLIS = 250
 
+    ATTRACT_MESSAGES = [
+      ['...and thanks to', 'everyone watching!'],
+      ['Not Endorsed', 'By Nintendo'],
+      ['Fight All 4 Bosses', 'Then Beat Motherbrain'],
+      ['Covid 19 is Real', 'Protect Yourself']
+    ]
+
     def mode_start(self, **kwargs):
         super().mode_start(**kwargs)
 
@@ -28,7 +35,9 @@ class MyAttract(Attract):
         self.machine.set_machine_var('bao_balls_locked', 0)
 
     def event_play_message_show(self, **kwargs):
-        self.machine.events.post('play_attract_message_{}'.format(randint(1, 4)))
+        message = randint(0, 3)
+        self.machine.set_machine_var('attract_message_line_1', self.ATTRACT_MESSAGES[message][0])
+        self.machine.set_machine_var('attract_message_line_2', self.ATTRACT_MESSAGES[message][1])
 
     def event_right_flipper_down(self, **kwargs):
         self.right_flipper_down = True

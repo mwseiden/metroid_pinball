@@ -115,19 +115,6 @@ show_player:
     bits_small:
       loops: 0
       priority: 20000
-  play_attract_message_1:
-    attract_message_1:
-      loops: 0
-      priority: 1
-  play_attract_message_2:
-    attract_message_2:
-      loops: 0
-  play_attract_message_3:
-    attract_message_3:
-      loops: 0
-  play_attract_message_4:
-    attract_message_4:
-      loops: 0
   slide_last_game_high_scores_created:
     attract_water:
       action: stop
