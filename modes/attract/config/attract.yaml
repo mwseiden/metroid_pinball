@@ -123,6 +123,9 @@ show_player:
     bits_small:
       loops: 0
       priority: 20000
+  attract_play_message:
+    attract_message_show_pool:
+      loops: 0
   slide_last_game_high_scores_created:
     attract_water:
       action: stop

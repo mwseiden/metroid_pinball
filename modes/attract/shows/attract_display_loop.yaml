@@ -897,6 +897,6 @@
           show_slide: special_thanks_scroll_up
 
 - duration: 6s
-  shows:
-    attract_message_show_pool:
-      loops: 0
+  events:
+    attract_play_message:
+      dummy_value: 0
