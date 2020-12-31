@@ -1,3 +1,4 @@
+from random import randint
 from mpf.modes.attract.code.attract import Attract
 from mpf.core.rgb_color import RGBColor
 import time
@@ -17,6 +18,7 @@ class MyAttract(Attract):
         self.add_mode_event_handler('s_right_flipper_inactive', self.event_right_flipper_up)
         self.add_mode_event_handler('s_left_flipper_active', self.event_left_flipper_down)
         self.add_mode_event_handler('s_left_flipper_inactive', self.event_left_flipper_up)
+        self.add_mode_event_handler('attract_play_message', self.event_play_message_show)
 
         self.machine.set_machine_var('metroid_game_booted', 1)
         self.machine.set_machine_var('next_game_acapella', 0)
@@ -24,6 +26,15 @@ class MyAttract(Attract):
         self.machine.set_machine_var('next_game_goren', 0)
         self.machine.set_machine_var('next_game_macho', 0)
         self.machine.set_machine_var('bao_balls_locked', 0)
+
+    def event_play_message_show(self, **kwargs):
+        settings = {
+          'attract_message_{}'.format(randint(1, 4)): {
+            'loops': 0
+          }
+        }
+
+        self.machine.show_player.play(settings, 'attract', None)
 
     def event_right_flipper_down(self, **kwargs):
         self.right_flipper_down = True

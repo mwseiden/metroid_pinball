@@ -30,14 +30,6 @@ sound_player:
     attract_goren:
       loops: 0
 
-show_pools:
-  attract_message_show_pool:
-    shows:
-      - attract_message_1
-      - attract_message_2
-      - attract_message_3
-      - attract_message_4
-
 show_player:
   mode_attract_started:
     attract_display_loop:
@@ -123,9 +115,6 @@ show_player:
     bits_small:
       loops: 0
       priority: 20000
-  attract_play_message:
-    attract_message_show_pool:
-      loops: 0
   slide_last_game_high_scores_created:
     attract_water:
       action: stop
