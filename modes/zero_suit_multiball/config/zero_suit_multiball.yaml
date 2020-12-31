@@ -87,7 +87,7 @@ sound_player:
 event_player:
   mode_zero_suit_multiball_started{current_player.ball == 1}: zero_suit_initialize
   mode_zero_suit_multiball_started{current_player.zero_suit_ready == 1}: zero_suit_check_for_boss
-  zero_suit_check_for_boss{current_player.continue_room not in ['1j', '1x', '2g', '2q']}: zero_suit_enable_shot
+  zero_suit_check_for_boss{not (current_player.continue_room in ['1j', '1x', '2g', '2q'])}: zero_suit_enable_shot
   zero_suit_check_for_boss{current_player.continue_room == '1j' and current_player.boss_phantoon_hp < 1}: zero_suit_enable_shot
   zero_suit_check_for_boss{current_player.continue_room == '1x' and current_player.boss_kraid_hp < 1}: zero_suit_enable_shot
   zero_suit_check_for_boss{current_player.continue_room == '2g' and current_player.boss_draygon_hp < 1}: zero_suit_enable_shot
