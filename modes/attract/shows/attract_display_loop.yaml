@@ -899,4 +899,4 @@
 - duration: 6s
   shows:
     attract_message_show_pool:
-
+      loops: 0
