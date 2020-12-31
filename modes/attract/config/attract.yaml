@@ -375,8 +375,13 @@ event_player:
     cmd_backbox_show:
       show_type: spectrum
       color1: '008000'
-      color2: '808000'
+      color2: 'C0C000'
       color3: '008000'
+  slide_joel_slide_created:
+    cmd_backbox_show:
+      show_type: gradient
+      color_start: 'c1a24d'
+      color_end: '000000'
   slide_double_danger_slide_created:
     cmd_backbox_show:
       show_type: drop
