@@ -31,7 +31,8 @@ class MyAttract(Attract):
         settings = {
           'attract_message_{}'.format(randint(1, 4)): {
             'loops': 0,
-            'action': 'play'
+            'action': 'play',
+            'block_queue': False
           }
         }
 
