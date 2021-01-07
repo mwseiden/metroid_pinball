@@ -102,54 +102,7 @@ show_player:
     room_1b_status_report:
       action: stop
 
-event_player:
-  room_1b_gunship_landing_animated:
-    - room_1b_success
-  mode_room_1b_gunship_started:
-    cmd_map_position:
-      room: '1b'
-      visit: True
-  mode_room_1b_gunship_started{current_player.room_1b_step_2 == 0}:
-    - room_1b_show_backglass
-  mode_room_1b_gunship_started{current_player.room_1b_step_2 != 0}:
-    - room_1b_already_complete
-  mode_room_1b_gunship_started{current_player.crateria_landed > 0}: room_1b_already_complete
-  room_1b_achieved:
-    cmd_map_complete:
-      room: '1b'
-  room_1b_show_backglass:
-    cmd_backbox_show:
-      show_type: drop
-      min_delay: 1
-      max_delay: 2
-      background_color: "000004"
-      drop_color: "101020"
 
-variable_player:
-  mode_room_1b_gunship_started:
-    has_chosen_landing_site:
-      int: 1
-      action: set
-    continue_room:
-      string: 1b
-      action: set
-  room_1b_ship_left:
-    score: (150000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 10000)) * current_player.multiplier
-    room_1b_step_1a:
-      int: 1
-      action: set
-  room_1b_ship_right:
-    score: (100000 + current_player.crateria_shot_bonus + (current_player.area_bonus_ne * 10000)) * current_player.multiplier
-    room_1b_step_1b:
-      int: 1
-      action: set
-  room_1b_achieved:
-    score: (75000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 10000)) * current_player.multiplier
-    room_1b_step_2:
-      int: 1
-      action: set
-  room_1b_increase_value_shot_hit:
-    crateria_shot_bonus: 25000
 
 animations:
   room_1b_backglass_scroll_up_slow:
@@ -244,8 +197,69 @@ sounds:
     priority: 50
     max_queue_time: None
 
+
 sound_player:
   room_1b_ship_navigated: shoot_the_scoop
   room_1b_ship_left: room_1b_sound_ship_left
   room_1b_ship_right: room_1b_sound_ship_right
   room_1b_achieved: room_1b_sound_ship_land
+
+
+event_player:
+  room_1b_gunship_landing_animated:
+    - room_1b_success
+  mode_room_1b_gunship_started:
+    cmd_map_position:
+      room: '1b'
+      visit: True
+  mode_room_1b_gunship_started{current_player.room_1b_step_2 == 0}:
+    - room_1b_show_backglass
+  mode_room_1b_gunship_started{current_player.room_1b_step_2 != 0}:
+    - room_1b_already_complete
+  mode_room_1b_gunship_started{current_player.crateria_landed > 0}: room_1b_already_complete
+  room_1b_achieved:
+    cmd_map_complete:
+      room: '1b'
+  room_1b_show_backglass:
+    cmd_backbox_show:
+      show_type: drop
+      min_delay: 1
+      max_delay: 2
+      background_color: "000004"
+      drop_color: "101020"
+
+
+variable_player:
+  mode_room_1b_gunship_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 1b
+      action: set
+  room_1b_ship_left:
+    score: (200000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (200000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+      action: set
+    room_1b_step_1a:
+      int: 1
+      action: set
+  room_1b_ship_right:
+    score: (150000 + current_player.crateria_shot_bonus + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (150000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+      action: set
+    room_1b_step_1b:
+      int: 1
+      action: set
+  room_1b_achieved:
+    score: (150000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (150000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+      action: set
+    room_1b_step_2:
+      int: 1
+      action: set
+  room_1b_increase_value_shot_hit:
+    crateria_shot_bonus: 25000

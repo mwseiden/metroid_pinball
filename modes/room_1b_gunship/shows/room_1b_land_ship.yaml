@@ -4,6 +4,10 @@
   slides:
     room_1b_gunship_lands:
       widgets:
+      - type: Text
+        text: (player|room_special_score)
+        color: white
+        style: dmd_big
       - type: image
         image: gunship_landing
         anchor_x: left
