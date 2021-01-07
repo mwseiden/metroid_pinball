@@ -6,7 +6,7 @@
       widgets:
       - type: Text
         text: (player|room_special_score)
-        color: '200000'
+        color: '800000'
         style: dmd_big
       - type: image
         image: gunship_landing
