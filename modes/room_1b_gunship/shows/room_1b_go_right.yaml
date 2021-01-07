@@ -8,7 +8,7 @@
         text: Navigate Right
         color: green
         style: dmd_med
-        y: 18
+        y: 19
         anchor_y: bottom
       - type: Text
         text: (player|room_special_score)
