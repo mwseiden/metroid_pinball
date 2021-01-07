@@ -9,7 +9,7 @@
         color: 'FF0000'
         style: dmd_big
         x: 63
-        y: 7
+        y: 15
       - type: Text
         text: (player|room_special_score)
         color: black
@@ -24,12 +24,12 @@
         text: (player|room_special_score)
         color: black
         style: dmd_big
-        y: 8
+        y: 16
       - type: Text
         text: (player|room_special_score)
         color: black
         style: dmd_big
-        y: 6
+        y: 14
       - type: image
         image: gunship_landing
         anchor_x: left
