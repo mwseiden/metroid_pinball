@@ -168,7 +168,7 @@ event_player:
   bridge_rail_shot_hit{current_player.power_bombs > 0}: bridge_should_explode
   bridge_should_explode:
     drop_targets_save:
-    cmd_backbox_show:
+    cmd_backbox_show_overlay:
       show_type: sweep_vertical
       color: 'A00000'
       speed: 1
