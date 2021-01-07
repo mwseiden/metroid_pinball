@@ -101,7 +101,13 @@ show_player:
   flipper_cradle_release:
     room_1b_status_report:
       action: stop
-
+  room_1b_increase_value_shot_hit:
+    single_fire:
+      speed: 30
+      loops: 0
+      priority: 300
+      show_tokens:
+        led: led_zero_suit
 
 
 animations:
@@ -203,6 +209,9 @@ sound_player:
   room_1b_ship_left: room_1b_sound_ship_left
   room_1b_ship_right: room_1b_sound_ship_right
   room_1b_achieved: room_1b_sound_ship_land
+  room_1b_play_shoot_the_orbit: shoot_the_orbit
+  room_1b_play_shoot_the_right_orbit: shoot_the_right_orbit
+  room_1b_play_shoot_the_left_orbit: shoot_the_left_orbit
 
 
 event_player:
@@ -217,6 +226,9 @@ event_player:
   mode_room_1b_gunship_started{current_player.room_1b_step_2 != 0}:
     - room_1b_already_complete
   mode_room_1b_gunship_started{current_player.crateria_landed > 0}: room_1b_already_complete
+  mode_room_1b_gunship_started{current_player.room_1b_step_1a == 0 and current_player.room_1b_step_1b == 0}: room_1b_play_shoot_the_orbit
+  mode_room_1b_gunship_started{current_player.room_1b_step_1a == 1 and current_player.room_1b_step_1b == 0}: room_1b_play_shoot_the_right_orbit
+  mode_room_1b_gunship_started{current_player.room_1b_step_1a == 0 and current_player.room_1b_step_1b == 1}: room_1b_play_shoot_the_left_orbit
   room_1b_achieved:
     cmd_map_complete:
       room: '1b'
