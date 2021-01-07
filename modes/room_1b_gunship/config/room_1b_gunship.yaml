@@ -229,6 +229,8 @@ event_player:
   mode_room_1b_gunship_started{current_player.room_1b_step_1a == 0 and current_player.room_1b_step_1b == 0}: room_1b_play_shoot_the_orbit
   mode_room_1b_gunship_started{current_player.room_1b_step_1a == 1 and current_player.room_1b_step_1b == 0}: room_1b_play_shoot_the_right_orbit
   mode_room_1b_gunship_started{current_player.room_1b_step_1a == 0 and current_player.room_1b_step_1b == 1}: room_1b_play_shoot_the_left_orbit
+  room_1b_ship_left{current_player.room_1b_step_1b == 0}: room_1b_play_shoot_the_right_orbit
+  room_1b_ship_right{current_player.room_1b_step_1a == 0}: room_1b_play_shoot_the_left_orbit
   room_1b_achieved:
     cmd_map_complete:
       room: '1b'
