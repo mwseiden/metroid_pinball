@@ -37,12 +37,13 @@ event_player:
   timer_skillshot_bombs_move_tick{ticks == 1}: skillshot_bombs_center_lit
   timer_skillshot_bombs_move_tick{ticks == 2}: skillshot_bombs_right_lit
   timer_skillshot_bombs_move_tick{ticks == 3}: skillshot_bombs_center_lit
-  power_bomb_1_shot_hit{current_player.skillshot_bombs_lit == 0}: skillshot_bombs_success
+  power_bomb_1_shot_hit{current_player.skillshot_bombs_lit == 0}: skillshot_bombs_success, power_bomb_collected
   power_bomb_1_shot_hit{current_player.skillshot_bombs_lit != 0}: skillshot_bombs_failure
-  power_bomb_2_shot_hit{current_player.skillshot_bombs_lit == 1}: skillshot_bombs_success
+  power_bomb_2_shot_hit{current_player.skillshot_bombs_lit == 1}: skillshot_bombs_success, power_bomb_collected
   power_bomb_2_shot_hit{current_player.skillshot_bombs_lit != 1}: skillshot_bombs_failure
-  power_bomb_3_shot_hit{current_player.skillshot_bombs_lit == 2}: skillshot_bombs_success
+  power_bomb_3_shot_hit{current_player.skillshot_bombs_lit == 2}: skillshot_bombs_success, power_bomb_collected
   power_bomb_3_shot_hit{current_player.skillshot_bombs_lit != 2}: skillshot_bombs_failure
+
 
 variable_player:
   skillshot_bombs_left_lit:
