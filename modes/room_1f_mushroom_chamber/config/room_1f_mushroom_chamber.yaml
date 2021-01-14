@@ -81,6 +81,7 @@ shots:
     profile: room_1f_pops
     enable_events: mode_room_1f_mushroom_chamber_started
     disable_events: mode_room_1f_mushroom_chamber_ending
+    reset_events: mode_room_1f_mushroom_chamber_started
     show_tokens:
       led: led_pop_2
   room_1f_pop_2_shot:
@@ -88,6 +89,7 @@ shots:
     profile: room_1f_pops
     enable_events: mode_room_1f_mushroom_chamber_started
     disable_events: mode_room_1f_mushroom_chamber_ending
+    reset_events: mode_room_1f_mushroom_chamber_started
     show_tokens:
       led: led_pop_3
   room_1f_pop_3_shot:
@@ -95,6 +97,7 @@ shots:
     profile: room_1f_pops
     enable_events: mode_room_1f_mushroom_chamber_started
     disable_events: mode_room_1f_mushroom_chamber_ending
+    reset_events: mode_room_1f_mushroom_chamber_started
     show_tokens:
       led: led_pop_1
 
@@ -131,6 +134,21 @@ show_player:
   flipper_cradle_release:
     room_1f_mushroom_chamber_status_report:
       action: stop
+  room_1f_score_stage_1:
+    special_score_purple:
+      loops: 0
+  room_1f_score_stage_2:
+    special_score_red:
+      loops: 0
+  room_1f_score_stage_3:
+    special_score_green:
+      loops: 0
+  room_1f_score_stage_4:
+    special_score_blue:
+      loops: 0
+  room_1f_score_final_stage:
+    special_score_yellow:
+      loops: 0
 
 event_player:
   mode_room_1f_mushroom_chamber_started:
@@ -157,6 +175,21 @@ event_player:
   room_1f_exit_east_shot_hit.2: room_1g_enter
   room_1f_exit_south_shot_hit.1: drop_targets_save
   room_1f_exit_south_shot_hit.2: room_1r_enter
+  room_1f_pop_1_shot_stage_1_hit: room_1f_score_stage_1
+  room_1f_pop_2_shot_stage_1_hit: room_1f_score_stage_1
+  room_1f_pop_3_shot_stage_1_hit: room_1f_score_stage_1
+  room_1f_pop_1_shot_stage_2_hit: room_1f_score_stage_2
+  room_1f_pop_2_shot_stage_2_hit: room_1f_score_stage_2
+  room_1f_pop_3_shot_stage_2_hit: room_1f_score_stage_2
+  room_1f_pop_1_shot_stage_3_hit: room_1f_score_stage_3
+  room_1f_pop_2_shot_stage_3_hit: room_1f_score_stage_3
+  room_1f_pop_3_shot_stage_3_hit: room_1f_score_stage_3
+  room_1f_pop_1_shot_stage_4_hit: room_1f_score_stage_4
+  room_1f_pop_2_shot_stage_4_hit: room_1f_score_stage_4
+  room_1f_pop_3_shot_stage_4_hit: room_1f_score_stage_4
+  room_1f_pop_1_shot_final_stage_hit: room_1f_score_final_stage
+  room_1f_pop_2_shot_final_stage_hit: room_1f_score_final_stage
+  room_1f_pop_3_shot_final_stage_hit: room_1f_score_final_stage
 
 variable_player:
   mode_room_1f_mushroom_chamber_started:
@@ -173,4 +206,29 @@ variable_player:
     missiles: -1
     door_1a_1f:
       int: 1
+      action: set
+  room_1f_score_stage_1:
+    score: (10000 + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw) + (50000 * current_player.area_bonus_ne)) * current_player.multiplier
+    room_special_score:
+      int: (10000 + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw) + (50000 * current_player.area_bonus_ne)) * current_player.multiplier
+      action: set
+  room_1f_score_stage_2:
+    score: (25000 + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw) + (50000 * current_player.area_bonus_ne)) * current_player.multiplier
+    room_special_score:
+      int: (25000 + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw) + (50000 * current_player.area_bonus_ne)) * current_player.multiplier
+      action: set
+  room_1f_score_stage_3:
+    score: (50000 + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw) + (50000 * current_player.area_bonus_ne)) * current_player.multiplier
+    room_special_score:
+      int: (50000 + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw) + (50000 * current_player.area_bonus_ne)) * current_player.multiplier
+      action: set
+  room_1f_score_stage_4:
+    score: (75000 + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw) + (50000 * current_player.area_bonus_ne)) * current_player.multiplier
+    room_special_score:
+      int: (75000 + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw) + (50000 * current_player.area_bonus_ne)) * current_player.multiplier
+      action: set
+  room_1f_score_final_stage:
+    score: (100000 + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw) + (50000 * current_player.area_bonus_ne)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw) + (50000 * current_player.area_bonus_ne)) * current_player.multiplier
       action: set
