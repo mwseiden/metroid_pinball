@@ -11,7 +11,7 @@ shot_profiles:
       - name: stage_1
         show: fade_one_light
         show_tokens:
-          color: red
+          color: green
       - name: stage_2
         show: blink_light
         show_tokens:
