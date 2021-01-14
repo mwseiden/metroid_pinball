@@ -82,21 +82,21 @@ shots:
     enable_events: mode_room_1f_mushroom_chamber_started
     disable_events: mode_room_1f_mushroom_chamber_ending
     show_tokens:
-      led: led_pop_1
+      led: led_pop_2
   room_1f_pop_2_shot:
     switch: s_pop_2
     profile: room_1f_pops
     enable_events: mode_room_1f_mushroom_chamber_started
     disable_events: mode_room_1f_mushroom_chamber_ending
     show_tokens:
-      led: led_pop_2
+      led: led_pop_3
   room_1f_pop_3_shot:
     switch: s_pop_3
     profile: room_1f_pops
     enable_events: mode_room_1f_mushroom_chamber_started
     disable_events: mode_room_1f_mushroom_chamber_ending
     show_tokens:
-      led: led_pop_3
+      led: led_pop_1
 
 slides:
   room_1f_mushroom_chamber_backglass_slide:
