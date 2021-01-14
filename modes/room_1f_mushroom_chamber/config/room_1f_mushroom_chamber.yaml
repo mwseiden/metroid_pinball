@@ -4,6 +4,33 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1a_enter, room_1e_enter, room_1g_enter, room_1r_enter, room_1f_exit
   priority: 300
 
+
+shot_profiles:
+  room_1f_pops:
+    states:
+      - name: stage_1
+        sync_ms: 4000
+        show: fade_one_light
+        show_tokens:
+          color: red
+      - name: stage_2
+        show: blink_light
+        show_tokens:
+          color: red
+      - name: stage_3
+        show: blink_light
+        show_tokens:
+          color: green
+      - name: stage_4
+        show: blink_light
+        show_tokens:
+          color: blue
+      - name: final_stage
+        show: led_color
+        show_tokens:
+          color: white
+
+
 shots:
   room_1f_exit_north_closed_shot:
     hit_events: left_orbit_hit
@@ -50,6 +77,21 @@ shots:
     show_tokens:
       led: led_enter_scoop
       color: door_blue
+  room_1f_pop_1_shot:
+    switch: s_pop_1
+    profile: room_1f_pops
+    show_tokens:
+      led: led_pop_1
+  room_1f_pop_2_shot:
+    switch: s_pop_2
+    profile: room_1f_pops
+    show_tokens:
+      led: led_pop_2
+  room_1f_pop_3_shot:
+    switch: s_pop_3
+    profile: room_1f_pops
+    show_tokens:
+      led: led_pop_3
 
 slides:
   room_1f_mushroom_chamber_backglass_slide:
