@@ -68,14 +68,14 @@ variable_player:
   pop_1_shot_hit:
     pops: 1
     score:
-      int: (100 + (80 * current_player.pops)) * current_player.multiplier
+      int: (1000 + (800 * current_player.pops)) * current_player.multiplier
   pop_2_shot_hit:
     pops: 1
     score:
-      int: (100 + (80 * current_player.pops)) * current_player.multiplier
+      int: (1000 + (800 * current_player.pops)) * current_player.multiplier
   pop_3_shot_hit:
     pops: 1
     score:
-      int: (100 + (80 * current_player.pops)) * current_player.multiplier
+      int: (1000 + (800 * current_player.pops)) * current_player.multiplier
   subway_sneak_hit:
     score: 50000 * current_player.multiplier

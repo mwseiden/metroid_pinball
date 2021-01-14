@@ -9,7 +9,6 @@ shot_profiles:
   room_1f_pops:
     states:
       - name: stage_1
-        sync_ms: 4000
         show: fade_one_light
         show_tokens:
           color: red
@@ -80,16 +79,22 @@ shots:
   room_1f_pop_1_shot:
     switch: s_pop_1
     profile: room_1f_pops
+    enable_events: mode_room_1f_mushroom_chamber_started
+    disable_events: mode_room_1f_mushroom_chamber_ending
     show_tokens:
       led: led_pop_1
   room_1f_pop_2_shot:
     switch: s_pop_2
     profile: room_1f_pops
+    enable_events: mode_room_1f_mushroom_chamber_started
+    disable_events: mode_room_1f_mushroom_chamber_ending
     show_tokens:
       led: led_pop_2
   room_1f_pop_3_shot:
     switch: s_pop_3
     profile: room_1f_pops
+    enable_events: mode_room_1f_mushroom_chamber_started
+    disable_events: mode_room_1f_mushroom_chamber_ending
     show_tokens:
       led: led_pop_3
 
