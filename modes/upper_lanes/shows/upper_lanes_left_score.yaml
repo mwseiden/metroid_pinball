@@ -6,14 +6,14 @@
       widgets:
       - type: text
         text: SPIDER RAIL
-        color: '9f2e3d'
+        color: 'c6828b'
         style: dmd_big
-        y: 20
+        y: 22
       - type: text
         text: (player|room_special_score)
-        color: '9f2e3d'
+        color: 'c6828b'
         style: dmd_big
-        y: 14
+        y: 12
         animations:
           pre_show_slide:
             - property: opacity
