@@ -49,6 +49,16 @@ show_player:
   upper_lanes_shot_group_lit_complete:
     upper_lanes_complete:
       loops: 0
+      priority: 10
+  upper_lane_left_shot_hit:
+    upper_lanes_left_score:
+      loops: 0
+  upper_lane_middle_shot_hit:
+    upper_lanes_middle_score:
+      loops: 0
+  upper_lane_right_shot_hit:
+    upper_lanes_right_score:
+      loops: 0
 
 variable_player:
   upper_lane_left_shot_hit:
