@@ -1,6 +1,6 @@
 #show_version=5
 
-- duration: 1s
+- duration: 2s
   slides:
     upper_lanes_middle_score_slide:
       widgets:
@@ -8,7 +8,7 @@
         text: BRIDGE
         color: 'bac160'
         style: dmd_big
-        y: 22
+        y: 24
       - type: text
         text: (player|room_special_score)
         color: 'bac160'
