@@ -114,14 +114,6 @@ slide_player:
       target: dmd
       expire: 1.5s
 
-variable_player:
-  mode_room_1l_entryway_started:
-    has_chosen_landing_site:
-      int: 1
-      action: set
-    continue_room:
-      string: 1l
-      action: set
 
 event_player:
   mode_room_1l_entryway_started_no_charge:
@@ -157,6 +149,13 @@ event_player:
 
 
 variable_player:
+  mode_room_1l_entryway_started:
+    has_chosen_landing_site:
+      int: 1
+      action: set
+    continue_room:
+      string: 1l
+      action: set
   room_1l_score_jackpot:
     lanes: 1
     score:
