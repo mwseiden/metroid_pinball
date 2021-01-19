@@ -9,6 +9,11 @@ shot_profiles:
     states:
       - name: unlit
         show: off
+      - name: stage_1
+        show: blink_light
+      - name: stage_2
+        show: blink_light
+        speed: 2
       - name: lit
         show: led_color
 
@@ -18,13 +23,13 @@ shots:
     profile: upper_lanes
     show_tokens:
       led: led_upper_playfield_1
-      color: '2e9f61'
+      color: '9f2e3d'
   upper_lane_middle_shot:
     switch: s_top_lane_2
     profile: upper_lanes
     show_tokens:
       led: led_upper_playfield_2
-      color: '2e9f61'
+      color: '979f2e'
   upper_lane_right_shot:
     switch: s_top_lane_3
     profile: upper_lanes
@@ -35,8 +40,8 @@ shots:
 shot_groups:
   upper_lanes_shot_group:
     shots: upper_lane_left_shot, upper_lane_middle_shot, upper_lane_right_shot
-    rotate_left_events: s_left_flipper_active
-    rotate_right_events: s_right_flipper_active
+    # rotate_left_events: s_left_flipper_active
+    # rotate_right_events: s_right_flipper_active
     reset_events: upper_lanes_shot_group_lit_complete
     enable_events: mode_upper_lanes_started
     disable_events: mode_upper_lanes_ending
@@ -50,15 +55,15 @@ variable_player:
   upper_lane_left_shot_hit:
     lanes: 1
     score:
-      int: (1000 + (100 * current_player.lanes)) * current_player.multiplier
+      int: (10000 + (1000 * current_player.lanes) + (current_player.area_bonus_ne * 10000)) * current_player.multiplier
   upper_lane_middle_shot_hit:
     lanes: 1
     score:
-      int: (1000 + (100 * current_player.lanes)) * current_player.multiplier
+      int: (10000 + (1000 * current_player.lanes) + (current_player.area_bonus_ne * 10000)) * current_player.multiplier
   upper_lane_right_shot_hit:
     lanes: 1
     score:
-      int: (1000 + (100 * current_player.lanes)) * current_player.multiplier
+      int: (10000 + (1000 * current_player.lanes) + (current_player.area_bonus_ne * 10000)) * current_player.multiplier
   upper_lanes_shot_group_lit_complete:
     score:
-      int: (10000 + (100 * current_player.lanes)) * current_player.multiplier
+      int: (100000 + (10000 * current_player.lanes) + (current_player.area_bonus_ne * 42690)) * current_player.multiplier
