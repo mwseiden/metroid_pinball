@@ -2,7 +2,7 @@
 mode:
   start_events: metroid_base_started
   stop_events: metroid_base_ended
-  priority: 100
+  priority: 420
 
 shot_profiles:
   upper_lanes:
