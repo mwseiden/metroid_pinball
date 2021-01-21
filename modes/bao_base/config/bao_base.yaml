@@ -784,7 +784,7 @@ event_player:
   bao_play_reactor{device.sequences.bao_charge_sequence.value == 1}: bao_play_reactor_show_2
   bao_play_reactor{device.sequences.bao_charge_sequence.value == 2}: bao_play_reactor_show_3
   bao_play_reactor{device.sequences.bao_charge_sequence.value >= 3}: bao_play_reactor_show_4
-  logicblock_bao_charge_sequence_updated{enabled and value == 0}: bao_play_reactor_show_1
+  # logicblock_bao_charge_sequence_updated{enabled and value == 0}: bao_play_reactor_show_1
   logicblock_bao_charge_sequence_updated{enabled and value == 1}: bao_play_reactor_show_2
   logicblock_bao_charge_sequence_updated{enabled and value == 2}: bao_play_reactor_show_3
   logicblock_bao_charge_sequence_updated{enabled and value >= 3}: bao_play_reactor_show_4
