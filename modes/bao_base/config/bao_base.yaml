@@ -566,7 +566,7 @@ show_player:
         led_5: led_drop_2
         led_6: led_drop_3
   bao_play_reactor_show_1:
-    bao_reactor_staus:
+    bao_reactor_status:
       key: bao_reactor_status_show
       loops: -1
       speed: 20
@@ -574,7 +574,7 @@ show_player:
         middle_color: '402000'
         color: '707000'
   bao_play_reactor_show_2:
-    bao_reactor_staus:
+    bao_reactor_status:
       key: bao_reactor_status_show
       loops: -1
       speed: 20
@@ -582,7 +582,7 @@ show_player:
         middle_color: '805000'
         color: 'FF8000'
   bao_play_reactor_show_3:
-    bao_reactor_staus:
+    bao_reactor_status:
       key: bao_reactor_status_show
       loops: -1
       speed: 20
@@ -595,7 +595,7 @@ show_player:
       loops: -1
       speed: 20
   bao_enable_stage_4:
-    bao_reactor_critical:
+    bao_reactor_status_show:
       action: stop
 
 
