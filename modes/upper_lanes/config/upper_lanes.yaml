@@ -4,6 +4,18 @@ mode:
   stop_events: metroid_base_ended
   priority: 420
 
+
+sequences:
+   upper_lanes_progress_sequence:
+      events:
+         - upper_lanes_stage_1_complete
+         - upper_lanes_stage_2_complete
+      events_when_complete: upper_lanes_start_multiball
+      persist_state: True
+      reset_on_complete: True
+      disable_on_complete: False
+
+
 shot_profiles:
   upper_lanes:
     states:
@@ -18,6 +30,15 @@ shot_profiles:
         sync_ms: 500
       - name: lit
         show: led_color
+  upper_lanes_select:
+    advance_on_hit: False
+    states:
+      - name: unselected
+        show: led_color
+      - name: selected
+        show: blink_light
+        speed: 4
+
 
 shots:
   upper_lane_left_shot:
@@ -38,15 +59,43 @@ shots:
     show_tokens:
       led: led_upper_playfield_3
       color: '2e9f61'
+  upper_lane_select_left_shot:
+    switch: s_top_lane_1
+    advance_events: upper_lanes_select_1
+    reset_events: mode_upper_lanes_started, upper_lanes_select_2, upper_lanes_select_3
+    profile: upper_lanes_select
+    show_tokens:
+      led: led_upper_playfield_1
+      color: '9f2e3d'
+  upper_lane_select_middle_shot:
+    switch: s_top_lane_2
+    advance_events: upper_lanes_select_2
+    reset_events: mode_upper_lanes_started, upper_lanes_select_1, upper_lanes_select_3
+    show_tokens:
+      led: led_upper_playfield_2
+      color: '979f2e'
+  upper_lane_select_right_shot:
+    switch: s_top_lane_3
+    advance_events: upper_lanes_select_3
+    reset_events: mode_upper_lanes_started, upper_lanes_select_2, upper_lanes_select_1
+    show_tokens:
+      led: led_upper_playfield_3
+      color: '2e9f61'
 
 shot_groups:
   upper_lanes_shot_group:
     shots: upper_lane_left_shot, upper_lane_middle_shot, upper_lane_right_shot
-    enable_events: mode_upper_lanes_started
-    disable_events: mode_upper_lanes_ending
+    enable_events: upper_lanes_stage_1
+    disable_events: mode_upper_lanes_started, mode_upper_lanes_ending, upper_lanes_stage_1_complete
+    reset_events: upper_lanes_stage_1_complete
+  upper_lanes_collect_shot_group:
+    shots: upper_lane_select_left_shot, upper_lane_select_middle_shot, upper_lane_select_right_shot
+    enable_events: upper_lanes_stage_1_complete, upper_lanes_stage_2
+    disable_events: mode_upper_lanes_started, mode_upper_lanes_ending, upper_lanes_stage_2_complete
+    reset_events: upper_lanes_stage_2_complete
 
 show_player:
-  upper_lanes_shot_group_lit_complete:
+  upper_lanes_stage_1_complete:
     upper_lanes_complete:
       loops: 0
       priority: 10
@@ -59,6 +108,16 @@ show_player:
   upper_lane_right_shot_hit:
     upper_lanes_right_score:
       loops: 0
+
+
+event_player:
+  mode_upper_lanes_started{device.sequences.bao_progress_sequence.value == 0}: upper_lanes_stage_1
+  mode_upper_lanes_started{device.sequences.bao_progress_sequence.value == 1}: upper_lanes_stage_2
+  upper_lanes_shot_group_lit_complete: upper_lanes_stage_1_complete
+  upper_lanes_stage_1_complete: upper_lanes_stage_2
+  upper_lane_select_left_shot_hit: upper_lanes_select_1
+  upper_lane_select_middle_shot_hit: upper_lanes_select_2
+  upper_lane_select_middle_shot_hit: upper_lanes_select_3
 
 variable_player:
   upper_lane_left_shot_hit:
@@ -82,7 +141,7 @@ variable_player:
     room_special_score:
       int: (10000 + (1000 * current_player.lanes) + (current_player.area_bonus_ne * 10000)) * current_player.multiplier
       action: set
-  upper_lanes_shot_group_lit_complete:
+  upper_lanes_stage_1_complete:
     score:
       int: (100000 + (10000 * current_player.lanes) + (current_player.area_bonus_ne * 42690)) * current_player.multiplier
     room_special_score:
