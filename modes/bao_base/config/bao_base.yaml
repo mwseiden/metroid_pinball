@@ -597,6 +597,8 @@ show_player:
   bao_enable_stage_4:
     bao_reactor_status_show:
       action: stop
+    bao_reactor_critical:
+      action: stop
 
 
 sounds:
