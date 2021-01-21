@@ -594,7 +594,7 @@ show_player:
       key: bao_reactor_status_show
       loops: -1
       speed: 20
-  bao_enable_stage_4:
+  bao_play_reactor_stop:
     bao_reactor_status_show:
       action: stop
     bao_reactor_critical:
@@ -788,7 +788,8 @@ event_player:
   bao_play_reactor{device.sequences.bao_charge_sequence.value >= 3}: bao_play_reactor_show_4
   logicblock_bao_charge_sequence_updated{enabled and value == 1}: bao_play_reactor_show_2
   logicblock_bao_charge_sequence_updated{enabled and value == 2}: bao_play_reactor_show_3
-  logicblock_bao_charge_sequence_updated{enabled and value >= 3}: bao_play_reactor_show_4
+  logicblock_bao_charge_sequence_updated{enabled and value == 3}: bao_play_reactor_show_4
+  logicblock_bao_charge_sequence_updated{enabled and value > 3}: bao_play_reactor_stop
   bao_enable_stage_1: bao_stage_1_show, bao_play_current_base_music
   bao_enable_stage_2: scoop_autofire_should_disable, bao_stage_2_show, bao_play_current_base_music
   bao_enable_stage_3: bao_stage_3_show, bao_play_reactor
