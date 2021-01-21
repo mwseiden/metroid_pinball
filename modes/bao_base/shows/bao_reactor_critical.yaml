@@ -1,0 +1,308 @@
+#show_version=5
+- time: 0
+  lights:
+    led_scanner_center: 'E73A01'
+    led_scanner_e: 'ED5301'
+    led_scanner_ne: 'E43401'
+    led_scanner_nw: 'EA3D01'
+    led_scanner_se: 'F15D01'
+    led_scanner_sw: 'D62901'
+    led_scanner_w: 'F15300'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'ED4001'
+    led_scanner_e: 'DB3101'
+    led_scanner_ne: 'E63301'
+    led_scanner_nw: 'F04E00'
+    led_scanner_se: 'F66401'
+    led_scanner_sw: 'E03901'
+    led_scanner_w: 'EF5301'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F44801'
+    led_scanner_e: 'BE1701'
+    led_scanner_ne: 'E83501'
+    led_scanner_nw: 'FA8B02'
+    led_scanner_se: 'F55501'
+    led_scanner_sw: 'E43202'
+    led_scanner_w: 'F45A01'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F54501'
+    led_scanner_e: 'C91F02'
+    led_scanner_ne: 'F76D02'
+    led_scanner_nw: 'F66901'
+    led_scanner_se: 'F53F00'
+    led_scanner_sw: 'E53901'
+    led_scanner_w: 'F96000'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F54101'
+    led_scanner_e: 'CC2001'
+    led_scanner_ne: 'F66400'
+    led_scanner_nw: 'FA7001'
+    led_scanner_se: 'E53201'
+    led_scanner_sw: 'F96400'
+    led_scanner_w: 'EA5C01'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F33C01'
+    led_scanner_e: 'DF2F01'
+    led_scanner_ne: 'F44801'
+    led_scanner_nw: 'F64C01'
+    led_scanner_se: 'E83701'
+    led_scanner_sw: 'F55100'
+    led_scanner_w: 'D82601'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F43D00'
+    led_scanner_e: 'E92F01'
+    led_scanner_ne: 'EF3F01'
+    led_scanner_se: 'D01D01'
+    led_scanner_sw: 'F85300'
+    led_scanner_w: 'D92201'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F84200'
+    led_scanner_e: 'DD2100'
+    led_scanner_ne: 'EF3301'
+    led_scanner_nw: 'DC2B01'
+    led_scanner_se: 'DC2C01'
+    led_scanner_sw: 'FA5200'
+    led_scanner_w: 'DD2501'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F94201'
+    led_scanner_e: 'E02401'
+    led_scanner_ne: 'F75901'
+    led_scanner_nw: 'EA4201'
+    led_scanner_se: 'E12C01'
+    led_scanner_sw: 'F94600'
+    led_scanner_w: 'DE2401'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'FA4201'
+    led_scanner_e: 'E72B01'
+    led_scanner_ne: 'FA5801'
+    led_scanner_nw: 'F85700'
+    led_scanner_se: 'DD2701'
+    led_scanner_sw: 'D92201'
+    led_scanner_w: 'FA4800'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'FB4201'
+    led_scanner_e: 'EB2F01'
+    led_scanner_ne: 'F95701'
+    led_scanner_nw: 'E23101'
+    led_scanner_se: 'E72C01'
+    led_scanner_sw: 'D71C01'
+    led_scanner_w: 'F64500'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'FB4001'
+    led_scanner_e: 'CF1A01'
+    led_scanner_ne: 'F94400'
+    led_scanner_nw: 'EE2B00'
+    led_scanner_se: 'E42001'
+    led_scanner_sw: 'C71301'
+    led_scanner_w: 'F94400'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'FA3C00'
+    led_scanner_e: 'E72300'
+    led_scanner_ne: 'F84100'
+    led_scanner_nw: 'DF1C01'
+    led_scanner_se: 'EC2601'
+    led_scanner_sw: 'E72601'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'FA3900'
+    led_scanner_e: 'F93E00'
+    led_scanner_ne: 'F32F00'
+    led_scanner_nw: 'E52201'
+    led_scanner_se: 'E72300'
+    led_scanner_sw: 'DA1B01'
+    led_scanner_w: 'F93C00'
+    
+- time: '+1'
+  lights:
+    led_scanner_e: 'F23001'
+    led_scanner_ne: 'D11901'
+    led_scanner_nw: 'EE2500'
+    led_scanner_se: 'E01D01'
+    led_scanner_sw: 'E21D01'
+    led_scanner_w: 'F73A00'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'FA3A00'
+    led_scanner_e: 'ED3101'
+    led_scanner_ne: 'F73E01'
+    led_scanner_nw: 'FA2F00'
+    led_scanner_se: 'DD1901'
+    led_scanner_sw: 'E92001'
+    led_scanner_w: 'D41300'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'FA3700'
+    led_scanner_e: 'FA3D00'
+    led_scanner_ne: 'F33500'
+    led_scanner_nw: 'F83100'
+    led_scanner_se: 'ED2300'
+    led_scanner_sw: 'DE1600'
+    led_scanner_w: 'C80E01'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'FA3300'
+    led_scanner_e: 'E31F00'
+    led_scanner_ne: 'EB1C00'
+    led_scanner_nw: 'FA3200'
+    led_scanner_se: 'FA3100'
+    led_scanner_sw: 'EF1E00'
+    led_scanner_w: 'DA1301'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'FA3000'
+    led_scanner_e: 'E61E00'
+    led_scanner_ne: 'E41401'
+    led_scanner_nw: 'F93300'
+    led_scanner_se: 'F42400'
+    led_scanner_sw: 'EC1B00'
+    led_scanner_w: 'E71601'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'FA2E00'
+    led_scanner_e: 'E81F00'
+    led_scanner_ne: 'E01100'
+    led_scanner_nw: 'FA2800'
+    led_scanner_se: 'F83401'
+    led_scanner_sw: 'DF1400'
+    led_scanner_w: 'E01200'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F92A00'
+    led_scanner_e: 'E91500'
+    led_scanner_ne: 'E41201'
+    led_scanner_nw: 'EA1B00'
+    led_scanner_se: 'FA2C00'
+    led_scanner_sw: 'D70D00'
+    led_scanner_w: 'EA1400'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F92700'
+    led_scanner_e: 'E31B01'
+    led_scanner_ne: 'F81C00'
+    led_scanner_nw: 'D40C00'
+    led_scanner_se: 'E51C00'
+    led_scanner_sw: 'F42400'
+    led_scanner_w: 'F11500'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F82200'
+    led_scanner_e: 'F41A00'
+    led_scanner_ne: 'F91A00'
+    led_scanner_nw: 'D50B00'
+    led_scanner_se: 'EE1600'
+    led_scanner_sw: 'F61D00'
+    led_scanner_w: 'F11300'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F81E00'
+    led_scanner_e: 'D80B00'
+    led_scanner_ne: 'F81900'
+    led_scanner_nw: 'D70A00'
+    led_scanner_se: 'F81B00'
+    led_scanner_sw: 'E30D00'
+    led_scanner_w: 'F71900'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F61800'
+    led_scanner_e: 'EB0F00'
+    led_scanner_ne: 'FA1800'
+    led_scanner_nw: 'E60B00'
+    led_scanner_se: 'F11100'
+    led_scanner_sw: 'FA1800'
+    led_scanner_w: 'EB0D00'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F31300'
+    led_scanner_e: 'DA0800'
+    led_scanner_ne: 'F91400'
+    led_scanner_nw: 'DC0700'
+    led_scanner_se: 'F01000'
+    led_scanner_sw: 'F51000'
+    led_scanner_w: 'E30A00'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'F00E00'
+    led_scanner_e: 'F10D00'
+    led_scanner_ne: 'FA0E00'
+    led_scanner_nw: 'EB0800'
+    led_scanner_se: 'F60B00'
+    led_scanner_sw: 'F40D00'
+    led_scanner_w: 'F60D00'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'EA0900'
+    led_scanner_e: 'F70C00'
+    led_scanner_ne: 'CF0400'
+    led_scanner_nw: 'F60900'
+    led_scanner_se: 'F10B00'
+    led_scanner_sw: 'F50900'
+    led_scanner_w: 'F80D00'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'E60500'
+    led_scanner_e: 'F70600'
+    led_scanner_ne: 'D30200'
+    led_scanner_nw: 'F60700'
+    led_scanner_se: 'F20600'
+    led_scanner_sw: 'F80700'
+    led_scanner_w: 'F10600'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'E30200'
+    led_scanner_e: 'F50300'
+    led_scanner_ne: 'D40100'
+    led_scanner_nw: 'F40300'
+    led_scanner_se: 'D90100'
+    led_scanner_sw: 'F40300'
+    led_scanner_w: 'F80400'
+    
+- time: '+1'
+  lights:
+    led_scanner_center: 'E40000'
+    led_scanner_e: 'F60000'
+    led_scanner_ne: 'E40000'
+    led_scanner_nw: 'F20000'
+    led_scanner_se: 'F50000'
+    led_scanner_sw: 'EE0000'
+    led_scanner_w: 'F60000'
+    
