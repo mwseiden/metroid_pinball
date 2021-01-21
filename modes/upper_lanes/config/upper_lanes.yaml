@@ -111,8 +111,8 @@ show_player:
 
 
 event_player:
-  mode_upper_lanes_started{device.sequences.bao_progress_sequence.value == 0}: upper_lanes_stage_1
-  mode_upper_lanes_started{device.sequences.bao_progress_sequence.value == 1}: upper_lanes_stage_2
+  mode_upper_lanes_started{device.sequences.upper_lanes_progress_sequence.value == 0}: upper_lanes_stage_1
+  mode_upper_lanes_started{device.sequences.upper_lanes_progress_sequence.value == 1}: upper_lanes_stage_2
   upper_lanes_shot_group_lit_complete: upper_lanes_stage_1_complete
   upper_lanes_stage_1_complete: upper_lanes_stage_2
   upper_lane_select_left_shot_hit: upper_lanes_select_1
