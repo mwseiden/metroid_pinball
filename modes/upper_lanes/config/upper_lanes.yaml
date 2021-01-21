@@ -71,6 +71,7 @@ shots:
     switch: s_top_lane_2
     advance_events: upper_lanes_select_2
     reset_events: mode_upper_lanes_started, upper_lanes_select_1, upper_lanes_select_3
+    profile: upper_lanes_select
     show_tokens:
       led: led_upper_playfield_2
       color: '979f2e'
@@ -78,6 +79,7 @@ shots:
     switch: s_top_lane_3
     advance_events: upper_lanes_select_3
     reset_events: mode_upper_lanes_started, upper_lanes_select_2, upper_lanes_select_1
+    profile: upper_lanes_select
     show_tokens:
       led: led_upper_playfield_3
       color: '2e9f61'
