@@ -117,7 +117,7 @@ event_player:
   upper_lanes_stage_1_complete: upper_lanes_stage_2
   upper_lane_select_left_shot_hit: upper_lanes_select_1
   upper_lane_select_middle_shot_hit: upper_lanes_select_2
-  upper_lane_select_middle_shot_hit: upper_lanes_select_3
+  upper_lane_select_right_shot_hit: upper_lanes_select_3
 
 variable_player:
   upper_lane_left_shot_hit:
