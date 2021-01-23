@@ -1,5 +1,6 @@
 #config_version=5
 mode:
+  code: base.Base
   start_events: ball_starting
   priority: 100
 
@@ -443,7 +444,8 @@ event_player:
       speed: 1
       repeat: 0
       direction: up
-  mode_bonus_will_start: stop_current_music
+  mode_bonus_will_start: stop_current_music, cmd_stop_all_music:
+
 
 variable_player:
   left_orbit_hit:

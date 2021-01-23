@@ -131,6 +131,7 @@ event_player:
     cmd_map_position:
       room: '1l'
       visit: True
+    cmd_stop_map_music:
   mode_room_1l_entryway_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1l_entryway_started_no_charge
   mode_room_1l_entryway_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1l_entryway_started_charge
   room_1l_exit_east_shot_hit.1: drop_targets_save

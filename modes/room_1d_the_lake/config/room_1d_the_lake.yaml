@@ -126,6 +126,8 @@ event_player:
     cmd_map_position:
       room: '1d'
       visit: True
+    cmd_play_map_music:
+      music: music_crateria
   player_room_1d_shots_hit{value == 4}: room_1d_complete
   room_1d_complete:
     cmd_map_complete:

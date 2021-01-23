@@ -143,6 +143,8 @@ event_player:
     cmd_map_position:
       room: '1b'
       visit: True
+    cmd_play_map_music:
+      music: music_crateria
   show_mode_status_report:
     room_1b_victory_status_report:
       loops: 0

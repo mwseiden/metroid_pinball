@@ -93,6 +93,7 @@ event_player:
     cmd_map_position:
       room: '1t'
       visit: True
+    cmd_stop_map_music:
   room_1t_exit_north_shot_hit.1: drop_targets_save
   room_1t_exit_north_shot_hit.2: room_1c_enter
   room_1t_exit_south_shot_hit.1: drop_targets_save
