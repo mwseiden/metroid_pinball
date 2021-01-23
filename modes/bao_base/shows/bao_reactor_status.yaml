@@ -1,0 +1,37 @@
+#show_version=5
+
+- time: 0
+  lights:
+    led_scanner_center: (middle_color)
+    led_scanner_nw: stop
+    led_scanner_ne: stop
+    led_scanner_e: stop
+    led_scanner_se: stop
+    led_scanner_sw: stop
+    led_scanner_w: (color)
+
+- time: '+1'
+  lights:
+    led_scanner_nw: (color)
+    led_scanner_w: stop
+
+- time: '+1'
+  lights:
+    led_scanner_nw: stop
+    led_scanner_ne: (color)
+
+- time: '+1'
+  lights:
+    led_scanner_ne: stop
+    led_scanner_e: (color)
+
+- time: '+1'
+  lights:
+    led_scanner_e: stop
+    led_scanner_se: (color)
+
+- time: '+1'
+  lights:
+    led_scanner_se: stop
+    led_scanner_sw: (color)
+

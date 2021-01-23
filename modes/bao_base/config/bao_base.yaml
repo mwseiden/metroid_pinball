@@ -113,6 +113,17 @@ sequences:
       persist_state: True
       reset_on_complete: True
       disable_on_complete: False
+   bao_charge_sequence:
+      events:
+         - bao_critical_shot_group_hit
+         - bao_critical_shot_group_hit
+         - bao_critical_shot_group_hit
+         - bao_critical_shot_group_hit
+      persist_state: True
+      disable_on_complete: True
+      reset_events: bao_enable_stage_4
+      enable_events: bao_enable_stage_3
+      disable_events: mode_bao_base_started, bao_enable_stage_4
 
 counters:
   bao_critical_counter:
@@ -554,7 +565,40 @@ show_player:
         led_4: led_drop_1
         led_5: led_drop_2
         led_6: led_drop_3
-
+  bao_play_reactor_show_1:
+    bao_reactor_status:
+      key: bao_reactor_status_show
+      loops: -1
+      speed: 20
+      show_tokens:
+        middle_color: '402000'
+        color: '707000'
+  bao_play_reactor_show_2:
+    bao_reactor_status:
+      key: bao_reactor_status_show
+      loops: -1
+      speed: 20
+      show_tokens:
+        middle_color: '805000'
+        color: 'FF8000'
+  bao_play_reactor_show_3:
+    bao_reactor_status:
+      key: bao_reactor_status_show
+      loops: -1
+      speed: 20
+      show_tokens:
+        middle_color: 'FFFFFF'
+        color: '808080'
+  bao_play_reactor_show_4:
+    bao_reactor_critical:
+      key: bao_reactor_status_show
+      loops: -1
+      speed: 20
+  bao_play_reactor_stop:
+    bao_reactor_status_show:
+      action: stop
+    bao_reactor_critical:
+      action: stop
 
 
 sounds:
@@ -738,6 +782,14 @@ event_player:
   mode_bao_base_started{device.sequences.bao_progress_sequence.value >= 3}: bao_enable_stage_4
   mode_bao_base_started{current_player.number == 1 and current_player.ball == 1}: bao_base_initialize, cmd_drop_one_down, cmd_drop_two_down, cmd_drop_three_up
   mode_bao_base_started{current_player.ball == 1}: bao_base_achievement_initialize
+  bao_play_reactor{device.sequences.bao_charge_sequence.value == 0}: bao_play_reactor_show_1
+  bao_play_reactor{device.sequences.bao_charge_sequence.value == 1}: bao_play_reactor_show_2
+  bao_play_reactor{device.sequences.bao_charge_sequence.value == 2}: bao_play_reactor_show_3
+  bao_play_reactor{device.sequences.bao_charge_sequence.value >= 3}: bao_play_reactor_show_4
+  logicblock_bao_charge_sequence_updated{enabled and value == 1}: bao_play_reactor_show_2
+  logicblock_bao_charge_sequence_updated{enabled and value == 2}: bao_play_reactor_show_3
+  logicblock_bao_charge_sequence_updated{enabled and value == 3}: bao_play_reactor_show_4
+  logicblock_bao_charge_sequence_updated{enabled and value > 3}: bao_play_reactor_stop
   bao_enable_stage_1: bao_stage_1_show, bao_play_current_base_music
   bao_enable_stage_2: scoop_autofire_should_disable, bao_stage_2_show, bao_play_current_base_music
   bao_enable_stage_3: bao_stage_3_show, bao_play_reactor

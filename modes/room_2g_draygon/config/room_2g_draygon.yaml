@@ -1,11 +1,240 @@
 #config_version=5
 
 # https://www.metroid-database.com/bestiary/bestiary.php?b=264
+# Victory BG https://commons.wikimedia.org/wiki/File:Dead_coral_Neil_island_SS.jpg
 
 mode:
   start_events: room_2g_continue, room_2g_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2g_exit
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2g_exit, room_2c_enter, room_2h_enter
   priority: 300
+
+multiballs:
+  room_2g_draygon_boss_multiball:
+    ball_count: 4
+    ball_count_type: total
+    shoot_again: 20s
+    start_events: mode_room_2g_draygon_start_multiball
+
+
+timers:
+  room_2g_draygon_vulnerable_timer:
+    start_value: 0
+    end_value: 10
+    tick_interval: 1.0s
+    control_events:
+      - event: mode_room_2g_draygon_started
+        action: stop
+      - event: room_2g_draygon_should_die
+        action: stop
+      - event: mode_room_2g_draygon_vulnerable
+        action: restart
+
+
+shot_profiles:
+  room_2g_weak_spot:
+    states:
+      - name: lit
+        sync_ms: 4000
+        show: fade_one_light
+  room_2g_strong_spot:
+    states:
+      - name: lit
+        sync_ms: 2000
+        show: fade_one_light
+        speed: 2
+  room_2g_vulnerable_spot:
+    states:
+    - name: lit
+      show: blink_light
+      loops: -1
+
+
+shots:
+  room_2g_exit_east_shot:
+    hit_events: right_orbit_hit
+    profile: exit_door
+    enable_events: mode_room_2g_draygon_open_door
+    disable_events: mode_room_2g_draygon_started, mode_room_2g_draygon_battle
+    show_tokens:
+      led: led_enter_right_orbit
+      color: door_blue
+  room_2g_exit_north_shot:
+    switch: s_ramp_enter
+    profile: exit_door
+    enable_events: mode_room_2g_draygon_open_door
+    disable_events: mode_room_2g_draygon_started, mode_room_2g_draygon_battle
+    show_tokens:
+      led: led_enter_ramp
+      color: door_blue
+  room_2g_boss_weak_captive_shot:
+    switch: s_captive_ball
+    profile: room_2g_weak_spot
+    enable_events: mode_room_2g_draygon_battle
+    disable_events: mode_room_2g_draygon_over
+    show_tokens:
+      led: led_captive_ball
+      color: yellow
+  room_2g_boss_strong_side_ramp_shot:
+    switch: s_side_ramp_made
+    profile: room_2g_strong_spot
+    enable_events: mode_room_2g_draygon_battle, mode_room_2g_draygon_recovered
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_vulnerable
+    show_tokens:
+      led: led_enter_side_ramp
+      color: blue
+  room_2g_boss_strong_secret_shot:
+    switch: s_left_passage
+    profile: room_2g_strong_spot
+    enable_events: mode_room_2g_draygon_battle, mode_room_2g_draygon_recovered
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_vulnerable
+    show_tokens:
+      led: led_enter_secret_passage
+      color: blue
+  room_2g_boss_strong_back_ramp_shot:
+    switch: s_ramp_enter
+    profile: room_2g_strong_spot
+    enable_events: mode_room_2g_draygon_battle, mode_room_2g_draygon_recovered
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_vulnerable
+    show_tokens:
+      led: led_enter_ramp
+      color: blue
+  room_2g_boss_strong_rollover_shot:
+    switch: s_rollover_button
+    profile: room_2g_strong_spot
+    enable_events: mode_room_2g_draygon_battle, mode_room_2g_draygon_recovered
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_vulnerable
+    show_tokens:
+      led: led_rollover
+      color: blue
+  room_2g_boss_strong_scoop_shot:
+    switch: s_scoop
+    profile: room_2g_strong_spot
+    enable_events: mode_room_2g_draygon_battle, mode_room_2g_draygon_recovered
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_vulnerable
+    show_tokens:
+      led: led_enter_scoop
+      color: blue
+  room_2g_boss_strong_right_orbit_shot:
+    hit_events: right_orbit_hit
+    profile: room_2g_strong_spot
+    enable_events: mode_room_2g_draygon_battle, mode_room_2g_draygon_recovered
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_vulnerable
+    show_tokens:
+      led: led_enter_right_orbit
+      color: blue
+  room_2g_boss_strong_left_orbit_shot:
+    hit_events: left_orbit_hit
+    profile: room_2g_strong_spot
+    enable_events: mode_room_2g_draygon_battle, mode_room_2g_draygon_recovered
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_vulnerable
+    show_tokens:
+      led: led_enter_left_orbit
+      color: blue
+  room_2g_boss_strong_center_1_shot:
+    switch: s_purple_1
+    profile: room_2g_strong_spot
+    enable_events: mode_room_2g_draygon_battle, mode_room_2g_draygon_recovered
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_vulnerable
+    show_tokens:
+      led: led_upgrade_bank_1
+      color: blue
+  room_2g_boss_strong_center_2_shot:
+    switch: s_purple_2
+    profile: room_2g_strong_spot
+    enable_events: mode_room_2g_draygon_battle, mode_room_2g_draygon_recovered
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_vulnerable
+    show_tokens:
+      led: led_upgrade_bank_2
+      color: blue
+  room_2g_boss_strong_center_3_shot:
+    switch: s_purple_3
+    profile: room_2g_strong_spot
+    enable_events: mode_room_2g_draygon_battle, mode_room_2g_draygon_recovered
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_vulnerable
+    show_tokens:
+      led: led_upgrade_bank_3
+      color: blue
+  room_2g_boss_vulnerable_side_ramp_shot:
+    switch: s_side_ramp_made
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_side_ramp
+      color: 'FF0030'
+  room_2g_boss_vulnerable_secret_shot:
+    switch: s_left_passage
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_secret_passage
+      color: 'FF0030'
+  room_2g_boss_vulnerable_back_ramp_shot:
+    switch: s_ramp_enter
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_ramp
+      color: 'FF0030'
+  room_2g_boss_vulnerable_rollover_shot:
+    switch: s_rollover_button
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_rollover
+      color: 'FF0030'
+  room_2g_boss_vulnerable_scoop_shot:
+    switch: s_scoop
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_scoop
+      color: 'FF0030'
+  room_2g_boss_vulnerable_right_orbit_shot:
+    hit_events: right_orbit_hit
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_right_orbit
+      color: 'FF0030'
+  room_2g_boss_vulnerable_left_orbit_shot:
+    hit_events: left_orbit_hit
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_enter_left_orbit
+      color: 'FF0030'
+  room_2g_boss_vulnerable_center_1_shot:
+    switch: s_purple_1
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_upgrade_bank_1
+      color: 'FF0030'
+  room_2g_boss_vulnerable_center_2_shot:
+    switch: s_purple_2
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_upgrade_bank_2
+      color: 'FF0030'
+  room_2g_boss_vulnerable_center_3_shot:
+    switch: s_purple_3
+    profile: room_2g_vulnerable_spot
+    enable_events: mode_room_2g_draygon_vulnerable
+    disable_events: mode_room_2g_draygon_over, mode_room_2g_draygon_recovered
+    show_tokens:
+      led: led_upgrade_bank_3
+      color: 'FF0030'
+
 
 animations:
   room_2g_draygon_standard:
@@ -46,6 +275,44 @@ animations:
       duration: 1.0s
       timing: with_previous
       repeat: true
+  room_2g_draygon_death:
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: -80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+    - property: x
+      value: 80
+      relative: true
+      duration: 0.1s
+    - property: y
+      value: -40
+      relative: true
+      duration: 0.1s
+      timing: with_previous
+      repeat: true
 
 slides:
   room_2g_draygon_backglass_slide:
@@ -62,14 +329,41 @@ slides:
     widgets:
       - type: image
         image: room_2g_draygon_splash
+  room_2g_draygon_backglass_defeated_slide:
+    widgets:
+      - type: image
+        image: room_2g_draygon_backglass_defeated
+    transition: fade
+    transition_out: fade
+  room_2g_draygon_dying_backglass_slide:
+    widgets:
+      - type: image
+        image: room_2g_draygon_backglass
+        animations:
+          show_slide: room_2g_draygon_death
+    transition: fade
+    transition_out: fade
 
 slide_player:
-  mode_room_2g_draygon_started:
+  mode_room_2g_draygon_battle:
     room_2g_draygon_backglass_slide:
       target: backglass
     room_2g_draygon_splash_slide:
       target: dmd
       expire: 1.5s
+  room_2g_show_defeated_backglass:
+    room_2g_draygon_backglass_defeated_slide:
+      target: backglass
+  draygon_defeated:
+    room_2g_draygon_backglass_slide:
+      target: backglass
+      action: remove
+    room_2g_draygon_dying_backglass_slide:
+      target: backglass
+      expire: 9.0s
+  timer_boss_exploder_timer_complete:
+    room_2g_draygon_backglass_defeated_slide:
+      target: backglass
 
 show_player:
   mode_room_2g_draygon_started:
@@ -84,6 +378,83 @@ show_player:
   flipper_cradle_release:
     room_2g_draygon_status_report:
       action: stop
+  draygon_hit_weak:
+    room_2g_draygon_hit_weak_lights:
+      loops: 0
+      speed: 50
+    room_2g_draygon_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  draygon_hit_vulnerable:
+    room_2g_draygon_hit_vulnerable_lights:
+      loops: 0
+      speed: 50
+    room_2g_draygon_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  draygon_hit_missile:
+    boss_missile:
+      loops: 0
+      speed: 50
+    room_2g_draygon_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  draygon_hit_power_bomb:
+    boss_power_bomb:
+      loops: 0
+      speed: 50
+    room_2g_draygon_hit:
+      loops: 0
+    special_score_red:
+      loops: 0
+  multiball_room_2g_draygon_boss_multiball_started:
+    three_color_blink:
+      loops: -1
+      speed: 9
+      key: room_2g_ball_save
+      show_tokens:
+        led: led_ball_save
+        color1: 'FF00FF'
+        color2: '00FF00'
+        color3: 'FFFF00'
+  multiball_room_2g_draygon_boss_multiball_shoot_again_ended:
+    room_2g_ball_save:
+      action: stop
+
+
+sounds:
+  draygon_hit_strong:
+    file: draygon_hit_strong.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  draygon_hit_weak:
+    file: draygon_hit_weak.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  draygon_hit_vulnerable:
+    file: draygon_hit_vulnerable.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_player:
+  draygon_hit_strong: draygon_hit_strong
+  draygon_hit_vulnerable: draygon_hit_vulnerable
+  draygon_hit_weak: draygon_hit_weak
+  draygon_hit_missile: boss_hit_missile
+  draygon_hit_power_bomb: boss_hit_power_bomb
+  room_2g_collect_victory_nw: jackpot
+  room_2g_collect_victory_ne: jackpot
+  room_2g_collect_victory_sw: jackpot
+
 
 event_player:
   mode_room_2g_draygon_started:
@@ -97,6 +468,53 @@ event_player:
     cmd_map_position:
       room: '2g'
       visit: True
+  mode_room_2g_draygon_started{current_player.boss_draygon_hp < 1}: mode_room_2g_draygon_over, mode_room_2g_draygon_open_door, room_2g_show_defeated_backglass
+  mode_room_2g_draygon_started{current_player.boss_draygon_hp > 0}: mode_room_2g_draygon_battle, metroid_exclusive_started
+  mode_room_2g_draygon_battle{current_player.boss_draygon_multiball_played == 0}: mode_room_2g_draygon_start_multiball
+  room_2g_boss_weak_captive_shot_hit: draygon_hit_strong
+  room_2g_boss_vulnerable_side_ramp_shot_hit: draygon_hit_vulnerable
+  room_2g_boss_vulnerable_secret_shot_hit: draygon_hit_vulnerable
+  room_2g_boss_vulnerable_back_ramp_shot_hit: draygon_hit_vulnerable
+  room_2g_boss_vulnerable_rollover_shot_hit: draygon_hit_vulnerable
+  room_2g_boss_vulnerable_scoop_shot_hit: draygon_hit_vulnerable
+  room_2g_boss_vulnerable_right_orbit_shot_hit: draygon_hit_vulnerable
+  room_2g_boss_vulnerable_left_orbit_shot_hit: draygon_hit_vulnerable
+  room_2g_boss_vulnerable_center_1_shot_hit: draygon_hit_vulnerable
+  room_2g_boss_vulnerable_center_2_shot_hit: draygon_hit_vulnerable
+  room_2g_boss_vulnerable_center_3_shot_hit: draygon_hit_vulnerable
+  room_2g_boss_strong_side_ramp_shot_hit: draygon_hit_weak
+  room_2g_boss_strong_secret_shot_hit: draygon_hit_weak
+  room_2g_boss_strong_back_ramp_shot_hit: draygon_hit_weak
+  room_2g_boss_strong_rollover_shot_hit: draygon_hit_weak
+  room_2g_boss_strong_scoop_shot_hit: draygon_hit_weak
+  room_2g_boss_strong_right_orbit_shot_hit: draygon_hit_weak
+  room_2g_boss_strong_left_orbit_shot_hit: draygon_hit_weak
+  room_2g_boss_strong_center_1_shot_hit: draygon_hit_weak
+  room_2g_boss_strong_center_2_shot_hit: draygon_hit_weak
+  room_2g_boss_strong_center_3_shot_hit: draygon_hit_weak
+  missile_collected{current_player.boss_draygon_hp > 0}: draygon_hit_missile
+  power_bomb_collected{current_player.boss_draygon_hp > 0}: draygon_hit_power_bomb
+  player_boss_draygon_hp{value <= 0}: room_2g_draygon_should_die
+  room_2g_draygon_should_die: draygon_defeated
+  draygon_defeated{device.multiballs.room_2g_draygon_boss_multiball.balls_added_live == 0}: mode_room_2g_draygon_open_door, boss_defeated_music
+  draygon_defeated{device.multiballs.room_2g_draygon_boss_multiball.balls_added_live > 0}: draygon_enable_victory_laps
+  draygon_defeated: mode_room_2g_draygon_over, metroid_exclusive_ended, boss_explode
+  room_2g_exit_north_shot_hit.1: drop_targets_save
+  room_2g_exit_north_shot_hit.2: room_2c_enter
+  room_2g_exit_east_shot_hit.1: drop_targets_save
+  room_2g_exit_east_shot_hit.2: room_2h_enter
+  multiball_room_2g_draygon_boss_multiball_ended{current_player.boss_draygon_hp < 1}: mode_room_2g_draygon_open_door, boss_defeated_music
+  draygon_hit_strong:
+    mode_room_2g_draygon_vulnerable:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: 'FF0000'
+      speed: 1
+      repeat: 2
+      direction: up
+  timer_room_2g_draygon_vulnerable_timer_complete: mode_room_2g_draygon_recovered
+
+
 
 variable_player:
   mode_room_2g_draygon_started:
@@ -105,4 +523,34 @@ variable_player:
       action: set
     continue_room:
       string: 2g
+      action: set
+  mode_room_2g_draygon_start_multiball:
+    boss_draygon_multiball_played:
+      int: 1
+      action: set
+  draygon_hit_weak:
+    boss_draygon_hp: -2
+    score: (40000 + (current_player.area_bonus_nw * 50000) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (40000 + (current_player.area_bonus_nw * 50000) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+      action: set
+  draygon_hit_vulnerable:
+    boss_draygon_hp: -16
+    score: (60000 + (current_player.area_bonus_nw * 50000) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (60000 + (current_player.area_bonus_nw * 50000) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+      action: set
+  draygon_hit_missile:
+    boss_draygon_hp: -20
+    missiles: -1
+    score: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+      action: set
+  draygon_hit_power_bomb:
+    boss_draygon_hp: -40
+    power_bombs: -1
+    score: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
+    room_special_score:
+      int: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
       action: set

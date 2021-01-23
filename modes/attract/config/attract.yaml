@@ -313,11 +313,11 @@ animations:
       repeat: true
   special_thanks_scroll_up:
     - property: y
-      value: 180
+      value: 200
       relative: true
       duration: 9s
     - property: y
-      value: -180
+      value: -200
       relative: true
       duration: 0s
       repeat: true
@@ -371,6 +371,17 @@ event_player:
   slide_claire_samus_created:
     cmd_backbox_show:
       show_type: fire
+  slide_stemage_slide_created:
+    cmd_backbox_show:
+      show_type: spectrum
+      color1: '008000'
+      color2: 'C0C000'
+      color3: '008000'
+  slide_joel_slide_created:
+    cmd_backbox_show:
+      show_type: gradient
+      color_start: 'c1a24d'
+      color_end: '000000'
   slide_double_danger_slide_created:
     cmd_backbox_show:
       show_type: drop

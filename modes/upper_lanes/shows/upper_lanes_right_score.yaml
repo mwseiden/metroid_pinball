@@ -1,0 +1,25 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    upper_lanes_right_score_slide:
+      widgets:
+      - type: text
+        text: SECRET
+        color: '5ec18b'
+        style: dmd_big
+        y: 24
+      - type: text
+        text: (player|room_special_score)
+        color: '5ec18b'
+        style: dmd_big
+        y: 12
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0
+              duration: .1s
+            - property: opacity
+              value: 1
+              duration: .1s
+              repeat: -1

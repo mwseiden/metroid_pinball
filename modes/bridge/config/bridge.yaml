@@ -13,7 +13,7 @@ timers:
   bridge_enable_coil_timer:
     start_value: 1
     end_value: 2
-    tick_interval: .5s
+    tick_interval: .1s
     restart_on_complete: False
     start_running: False
     control_events:
@@ -67,6 +67,9 @@ show_player:
   s_shooter_lane_inactive:
     bridge_skillshot_earned:
       action: stop
+  bridge_should_explode: 
+    special_score_orange:
+      loops: 0
 
 sounds:
   bridge_explosion_1:
@@ -163,7 +166,14 @@ event_player:
   mode_bridge_started: bridge_enable_autofire
   s_shooter_lane_inactive: bridge_enable_autofire
   bridge_rail_shot_hit{current_player.power_bombs > 0}: bridge_should_explode
-  bridge_should_explode: drop_targets_save
+  bridge_should_explode:
+    drop_targets_save:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: 'A00000'
+      speed: 1
+      repeat: 4
+      direction: up
   # ball_hold_bridge_skillshot_held_ball.1: cmd_drop_all_drops
   # ball_hold_bridge_skillshot_held_ball.2: skillshot_should_start
   bridge_enable_skillshot.1: cmd_drop_all_drops, bridge_disable_autofire
@@ -173,5 +183,8 @@ event_player:
 variable_player:
   bridge_should_explode:
     power_bombs: -1
-    score: (300000 + (100000 * (current_player.bridges + current_player.bridge_bonus)) + (75000 * current_player.area_bonus_e)) * current_player.multiplier * (2 if current_player.continue_room == '2d' else 1)
+    score: (500000 + (100000 * (current_player.bridges + current_player.bridge_bonus)) + (75000 * current_player.area_bonus_e)) * current_player.multiplier * (2 if current_player.continue_room == '2d' else 1)
+    room_special_score:
+      int: (500000 + (100000 * (current_player.bridges + current_player.bridge_bonus)) + (75000 * current_player.area_bonus_e)) * current_player.multiplier * (2 if current_player.continue_room == '2d' else 1)
+      action: set
     bridges: 1

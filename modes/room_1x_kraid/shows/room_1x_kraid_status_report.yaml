@@ -10,9 +10,9 @@
 
 - duration: 5s
   slides:
-    room_1x_kraid_status_slide_help:
+    room_1x_phantoon_status_slide_help:
       widgets:
       - type: Text
-        text: NO MODE RULES
+        text: Kraid HP - (player|boss_kraid_hp)
         color: red
         style: dmd_med

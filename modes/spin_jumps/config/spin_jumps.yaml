@@ -1,7 +1,7 @@
 #config_version=5
 mode:
-  start_events: metroid_base_started
-  stop_events: metroid_base_ended
+  start_events: metroid_base_started, spin_jumps_enable
+  stop_events: metroid_base_ended, spin_jumps_disable
   priority: 100
 
 sequences:

@@ -4,6 +4,60 @@
   slides:
     room_1b_gunship_lands:
       widgets:
+      - type: Text
+        text: (player|room_special_score)
+        color: 'FF0000'
+        style: dmd_big
+        x: 63
+        y: 15
+      - type: Text
+        text: (player|room_special_score)
+        color: black
+        style: dmd_big
+        x: 64
+        y: 15
+      - type: Text
+        text: (player|room_special_score)
+        color: black
+        style: dmd_big
+        x: 62
+        y: 15
+      - type: Text
+        text: (player|room_special_score)
+        color: black
+        style: dmd_big
+        x: 63
+        y: 16
+      - type: Text
+        text: (player|room_special_score)
+        color: black
+        style: dmd_big
+        x: 63
+        y: 14
+      - type: Text
+        text: (player|room_special_score)
+        color: black
+        style: dmd_big
+        x: 64
+        y: 16
+      - type: Text
+        text: (player|room_special_score)
+        color: black
+        style: dmd_big
+        x: 62
+        y: 16
+      - type: Text
+        text: (player|room_special_score)
+        color: black
+        style: dmd_big
+        x: 64
+        y: 16
+      - type: Text
+        text: (player|room_special_score)
+        color: black
+        style: dmd_big
+        x: 62
+        y: 14
       - type: image
         image: gunship_landing
         anchor_x: left

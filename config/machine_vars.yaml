@@ -1,6 +1,12 @@
 #config_version=5
 
 machine_vars:
+  attract_message_line_1:
+    initial_value: ''
+    value_type: str
+  attract_message_line_2:
+    initial_value: ''
+    value_type: str
   bao_balls_locked:
     initial_value: 0
     value_type: int

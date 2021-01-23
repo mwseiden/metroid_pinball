@@ -15,6 +15,18 @@ player_vars:
     initial_value: 0
   bao_reactors:
     initial_value: 0
+  boss_draygon_hp:
+    initial_value: 280
+  boss_draygon_multiball_played:
+    initial_value: 0
+  boss_kraid_hp:
+    initial_value: 240
+  boss_kraid_multiball_played:
+    initial_value: 0
+  boss_phantoon_hp:
+    initial_value: 260
+  boss_phantoon_multiball_played:
+    initial_value: 0
   boss_ridley_hp:
     initial_value: 200
   boss_ridley_multiball_played:
@@ -48,12 +60,18 @@ player_vars:
     initial_value: 0
   drops:
     initial_value: 0
+  drops_1b:
+    value_type: str
+    initial_value: 'UDD'
   drops_1d:
     value_type: str
     initial_value: 'DDD'
   drops_1g:
     value_type: str
     initial_value: 'DDD'
+  drops_1h:
+    value_type: str
+    initial_value: 'DDU'
   drops_1m:
     value_type: str
     initial_value: 'DDD'
@@ -119,6 +137,8 @@ player_vars:
   map_visited_w:
     value_type: str
     initial_value: 'NNNNNNNNNN'
+  miniboss_special_score:
+    initial_value: 0
   missiles:
     initial_value: 0
   multiplier:
@@ -145,11 +165,11 @@ player_vars:
     initial_value: 0
   room_1d_shots_hit:
     initial_value: 0
-  room_special_score:
-    initial_value: 0
   room_1m_captured:
     initial_value: 0
   room_1s_jackpot:
+    initial_value: 0
+  room_special_score:
     initial_value: 0
   wrecked_ship_charge:
     initial_value: 0
@@ -187,4 +207,6 @@ player_vars:
   switches:
     initial_value: 0
   wrecked_ship_powered_up:
+    initial_value: 0
+  zero_suit_ready:
     initial_value: 0

@@ -13,7 +13,11 @@
     room_1a_lush_cavern_status_slide_help:
       widgets:
       - type: Text
-        text: NO MODE RULES
+        text: Build Shot Values
+        color: red
+        style: dmd_med
+      - type: Text
+        text: By Hitting Lanes
         color: red
         style: dmd_med
 

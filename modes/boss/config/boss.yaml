@@ -61,7 +61,7 @@ achievements:
       color: '008080'
     show_when_selected: blink_light
     show_when_completed: led_color
-    complete_events: xxxx_i_dont_work
+    complete_events: draygon_defeated
     select_events: room_2g_enter
     enable_events: boss_achievement_initialize
     sync_ms: 1000
@@ -71,7 +71,7 @@ achievements:
       color: '808000'
     show_when_selected: blink_light
     show_when_completed: led_color
-    complete_events: xxxx_i_dont_work
+    complete_events: phantoon_defeated
     select_events: room_1j_enter
     enable_events: boss_achievement_initialize
     sync_ms: 1000
@@ -81,7 +81,7 @@ achievements:
       color: '008000'
     show_when_selected: blink_light
     show_when_completed: led_color
-    complete_events: xxxx_i_dont_work
+    complete_events: kraid_defeated
     select_events: room_1x_enter
     enable_events: boss_achievement_initialize
     sync_ms: 1000

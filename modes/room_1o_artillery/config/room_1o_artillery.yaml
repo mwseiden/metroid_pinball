@@ -8,7 +8,7 @@ mode:
 shots:
   room_1o_exit_east_shot:
     hit_events: right_orbit_hit
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_1o_artillery_started
     disable_events: room_1o_exit_east_shot_hit
     reset_events: room_1o_exit_east_shot_hit

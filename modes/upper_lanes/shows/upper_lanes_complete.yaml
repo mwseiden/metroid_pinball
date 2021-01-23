@@ -6,5 +6,13 @@
       widgets:
       - type: text
         text: UPPER LANES!
+        color: '2e9f61'
+        style: dmd_med
+        y: 19
+        anchor_y: bottom
+      - type: Text
+        text: (player|room_special_score)
+        color: white
         style: dmd_big
-        color: green
+        y: 8
+        anchor_y: bottom

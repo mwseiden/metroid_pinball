@@ -57,7 +57,7 @@ shots:
       led: led_enter_scoop
   room_1m_exit_west_shot:
     switch: s_ramp_enter
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: room_1m_stage_3
     disable_events: mode_room_1m_generator_started, room_1m_exit_west_shot_hit
     show_tokens:
@@ -206,7 +206,7 @@ event_player:
   s_behind_drop_2_active{current_player.room_1m_captured > 0}: room_1m_add_charge, room_1m_keep_ball_captured
   s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_charge, room_1m_keep_ball_captured
   room_1m_generator_captive_shot_hit: room_1m_add_charge
-  room_1m_start_generator_shot_hit: room_1m_generator_bootup
+  room_1m_start_generator_shot_hit: room_1m_generator_bootup, room_1m_add_huge_charge
   room_1m_generator_started:
     room_1m_stage_3:
     chozo_multiball_enable:
@@ -247,5 +247,10 @@ variable_player:
       action: set
   room_1m_add_charge:
     wrecked_ship_charge: 1
+    score: (12340 + (50000 * current_player.area_bonus_ne) + (1230 * current_player.wrecked_ship_charge)) * current_player.multiplier
   room_1m_add_big_charge:
     wrecked_ship_charge: 5
+    score: (56780 + (60000 * current_player.area_bonus_ne) + (4560 * current_player.wrecked_ship_charge)) * current_player.multiplier
+  room_1m_add_huge_charge:
+    wrecked_ship_charge: 10
+    score: (91230 + (70000 * current_player.area_bonus_ne) + (7890 * current_player.wrecked_ship_charge)) * current_player.multiplier

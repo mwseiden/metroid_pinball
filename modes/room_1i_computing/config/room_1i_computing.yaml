@@ -29,7 +29,7 @@ shots:
       color: door_blue
   room_1i_exit_east_shot:
     switches: s_ramp_enter
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_1i_computing_started
     disable_events: room_1i_exit_east_shot_hit
     reset_events: room_1i_exit_east_shot_hit

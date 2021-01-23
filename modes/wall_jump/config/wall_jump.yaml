@@ -7,7 +7,7 @@ mode:
 counters:
   wall_jump_counter:
     count_events: s_upper_sling_active
-    starting_count: 5
+    starting_count: 10
     count_complete_value: 0
     direction: down
     events_when_complete: wall_jump_should_activate

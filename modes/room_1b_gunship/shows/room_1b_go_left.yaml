@@ -8,7 +8,13 @@
         text: Navigate Left
         color: green
         style: dmd_med
-        y: 14
+        y: 19
+        anchor_y: bottom
+      - type: Text
+        text: (player|room_special_score)
+        color: white
+        style: dmd_big
+        y: 8
         anchor_y: bottom
       transition:
          type: move_in

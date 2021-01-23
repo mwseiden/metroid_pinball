@@ -34,7 +34,7 @@ shots:
       color: door_blue
   room_2k_exit_south_shot:
     switch: s_scoop
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_2k_larvae_nest_started
     disable_events: room_2k_exit_south_shot_hit
     reset_events: room_2k_exit_south_shot_hit

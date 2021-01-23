@@ -204,22 +204,22 @@ variable_player:
       action: set
       int: 1
   room_1a_collect_1_shot_lit_hit:
-    score: ((50000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (25000 * current_player.area_bonus_sw)) * current_player.multiplier
+    score: ((75000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (25000 * current_player.area_bonus_sw)) * current_player.multiplier
     room_special_score:
-      int: ((50000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (25000 * current_player.area_bonus_sw)) * current_player.multiplier
+      int: ((75000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (25000 * current_player.area_bonus_sw)) * current_player.multiplier
       action: set
   room_1a_collect_2_shot_lit_hit:
-    score: ((120000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw)) * current_player.multiplier
+    score: ((150000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw)) * current_player.multiplier
     room_special_score:
-      int: ((120000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw)) * current_player.multiplier
+      int: ((150000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (50000 * current_player.area_bonus_nw)) * current_player.multiplier
       action: set
   room_1a_collect_3_shot_lit_hit:
-    score: ((90000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (40000 * current_player.area_bonus_ne)) * current_player.multiplier
+    score: ((100000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (40000 * current_player.area_bonus_ne)) * current_player.multiplier
     room_special_score:
-      int: ((90000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (40000 * current_player.area_bonus_ne)) * current_player.multiplier
+      int: ((100000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (40000 * current_player.area_bonus_ne)) * current_player.multiplier
       action: set
   room_1a_collect_4_shot_lit_hit:
-    score: ((90000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (35000 * current_player.area_bonus_ne)) * current_player.multiplier
+    score: ((100000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (35000 * current_player.area_bonus_ne)) * current_player.multiplier
     room_special_score:
-      int: ((90000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (35000 * current_player.area_bonus_ne)) * current_player.multiplier
+      int: ((100000 * current_player.room_1a_multiplier) + current_player.crateria_shot_bonus + (35000 * current_player.area_bonus_ne)) * current_player.multiplier
       action: set

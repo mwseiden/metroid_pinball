@@ -19,7 +19,7 @@ shots:
       color: door_blue
   room_2o_exit_west_shot:
     switch: s_ramp_enter
-    profile: exit_door
+    profile: exit_door_optimum
     enable_events: mode_room_2o_strange_ruins_started
     disable_events: room_2o_exit_west_shot_hit
     reset_events: room_2o_exit_west_shot_hit
