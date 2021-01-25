@@ -9,7 +9,6 @@ class Base(Mode):
 
         self.add_mode_event_handler('cmd_play_map_music', self.event_play_map_music)
         self.add_mode_event_handler('cmd_play_overlay_music', self.event_play_overlay_music)
-        self.add_mode_event_handler('cmd_stop_all_music', self.event_stop_all_music)
         self.add_mode_event_handler('cmd_stop_map_music', self.event_stop_map_music)
         self.add_mode_event_handler('cmd_stop_overlay_music', self.event_stop_overlay_music)
 
@@ -25,13 +24,6 @@ class Base(Mode):
     def event_play_overlay_music(self, **kwargs):
         self.stop_overlay_music()
         self.play_overlay_music(kwargs.get('music', None))
-
-    def event_stop_all_music(self, **kwargs):
-        self.stop_map_music()
-
-        if self.current_overlay_music is not None:
-            self._stop_music(self.current_overlay_music)
-            self.current_overlay_music = None
 
     # should be temporary
     def event_stop_map_music(self, **kwargs):

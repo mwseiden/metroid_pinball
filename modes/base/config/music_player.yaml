@@ -335,7 +335,8 @@ sound_player:
       action: stop
     music_bao_critical:
       action: stop
-  stop_current_music:
+
+  stop_all_music:
     music_crateria:
       action: stop
       fade_out: 3s

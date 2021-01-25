@@ -15,6 +15,6 @@ class Room1hTeleporters(Mode):
         room_letter = chr((room_index % 26) + ord('a'))
         self.info_log('Teleporting player to room number {}'.format(room_index))
 
-        self.machine.events.post('stop_current_music')
+        self.machine.events.post('stop_all_music')
         self.machine.events.post('room_{}_exit'.format(player['continue_room']))
         self.machine.events.post('room_{}{}_enter'.format(room_prefix, room_letter))
