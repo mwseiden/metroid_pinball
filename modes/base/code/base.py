@@ -67,7 +67,7 @@ class Base(Mode):
             self._play_music(self.current_overlay_music)
 
 
-    def _stop_music(self, music)
+    def _stop_music(self, music):
         if self._music_enabled():
             settings = {
                 music: {
@@ -78,7 +78,7 @@ class Base(Mode):
 
             self.machine.sound_player.play(settings, 'base', None)
 
-    def _play_music(self, music)
+    def _play_music(self, music):
         if self._music_enabled():
             settings = {
                 music: {
