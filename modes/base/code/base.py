@@ -69,25 +69,11 @@ class Base(Mode):
 
     def _stop_music(self, music):
         if self._music_enabled():
-            settings = {
-                music: {
-                    'action': 'stop',
-                    'fade_out': '1s',
-                }
-            }
-
-            self.machine.sound_player.play(settings, 'base', None)
+            self.machine.events.post('music_player_stop_{}'.format(music))
 
     def _play_music(self, music):
         if self._music_enabled():
-            settings = {
-                music: {
-                    'action': 'play',
-                    'fade_in': '1s',
-                }
-            }
-
-            self.machine.sound_player.play(settings, 'base', None)
+            self.machine.events.post('music_player_play_{}'.format(music))
 
     def _music_enabled(self):
         return self.machine.get_machine_var('next_game_acapella') == 0

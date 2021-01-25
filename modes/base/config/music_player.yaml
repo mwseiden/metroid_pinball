@@ -1,6 +1,18 @@
 #config_version=5
 
 sound_player:
+  music_player_play_music_crateria: music_crateria
+  music_player_play_music_metal_item_room: music_metal_item_room
+
+  music_player_stop_music_crateria:
+    music_crateria:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_metal_item_room:
+    music_metal_item_room:
+      action: stop
+      fade_out: 1s
+
   # mode_room_1a_lush_cavern_started{machine.next_game_acapella == 0}: music_crateria
   # mode_room_1b_gunship_started{machine.next_game_acapella == 0}: music_crateria
   # mode_room_1b_gunship_victory_started{machine.next_game_acapella == 0}: music_crateria
