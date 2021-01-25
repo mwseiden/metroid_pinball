@@ -7,6 +7,14 @@ mode:
 config:
   - music_player.yaml
 
+shot_profiles:
+  pop_bumper:
+    states:
+      - name: unlit
+        show: led_color
+        show_tokens:
+          color: '808080'
+
 shots:
   scoop_shot:
     switch: s_scoop
@@ -24,10 +32,19 @@ shots:
     switch: s_right_sling
   pop_1_shot:
     switch: s_pop_1
+    profile: pop_bumper
+    show_tokens:
+      led: led_pop_2
   pop_2_shot:
     switch: s_pop_2
+    profile: pop_bumper
+    show_tokens:
+      led: led_pop_3
   pop_3_shot:
     switch: s_pop_3
+    profile: pop_bumper
+    show_tokens:
+      led: led_pop_1
   spinner_shot:
     switch: s_spinner
   pop_subway_shot:
