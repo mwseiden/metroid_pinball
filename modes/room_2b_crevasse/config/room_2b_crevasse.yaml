@@ -164,6 +164,8 @@ event_player:
     cmd_map_position:
       room: '2b'
       visit: True
+    cmd_play_map_music:
+      music: music_maridia_snow
   mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 0}: room_2b_enable_shot_1
   mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 1}: room_2b_enable_shot_2
   mode_room_2b_crevasse_started{device.sequences.room_2b_hurry_up_sequence.value == 2}: room_2b_enable_shot_3
@@ -196,8 +198,6 @@ variable_player:
     continue_room:
       string: 2b
       action: set
-    cmd_play_map_music:
-      music: music_maridia_snow
   room_2b_bank_1_shot_hit:
     score: (100000 + (current_player.area_bonus_w * 50000)) * current_player.multiplier
     room_special_score:
