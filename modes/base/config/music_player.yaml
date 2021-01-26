@@ -12,7 +12,6 @@ sound_player:
   music_player_play_music_metal_item_room: music_metal_item_room
   music_player_play_music_wrecked_ship: music_wrecked_ship
   music_player_play_music_wrecked_ship_generator: music_wrecked_ship_generator
-
   music_player_stop_music_boss:
     music_boss:
       action: stop
@@ -57,31 +56,6 @@ sound_player:
     music_wrecked_ship_generator:
       action: stop
       fade_out: 1s
-
-
-  # mode_room_1z_underground_desert_started{machine.next_game_acapella == 0}: music_maridia_intro
-  # mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia_intro
-  # mode_room_2b_crevasse_started{machine.next_game_acapella == 0}:
-    # music_maridia_snow:
-      # action: play
-      # fade_in: 2s
-  # mode_room_2d_abyss_started{machine.next_game_acapella == 0}:
-    # music_maridia:
-      # action: play
-      # fade_in: 2s
-  # mode_room_2c_central_pumping_started{machine.next_game_acapella == 0}: music_maridia
-  # mode_room_2e_sandy_cavern_started{machine.next_game_acapella == 0}:
-    # music_maridia:
-      # action: play
-      # fade_in: 2s
-  # mode_room_2f_frozen_lake_started{machine.next_game_acapella == 0}:
-    # music_maridia_snow:
-      # action: play
-      # fade_in: 2s
-  # mode_room_2g_draygon_started{machine.next_game_acapella == 0 and current_player.boss_draygon_hp > 0}: music_boss
-  # mode_room_2g_draygon_started{machine.next_game_acapella == 0 and current_player.boss_draygon_hp < 1}: music_metal_item_room
-  # mode_room_2h_crystalline_seabed_started{machine.next_game_acapella == 0}: music_maridia
-
   mode_room_2i_lava_jump_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2j_lake_of_fire_started{machine.next_game_acapella == 0}: music_norfair
   mode_room_2k_larvae_nest_started{machine.next_game_acapella == 0}: music_norfair_calm
@@ -92,7 +66,6 @@ sound_player:
   mode_room_2p_east_hot_springs_started{machine.next_game_acapella == 0}: music_norfair_deep
   mode_room_2q_ridley_started{machine.next_game_acapella == 0 and current_player.boss_ridley_hp > 0}: music_boss
   mode_room_2q_ridley_started{machine.next_game_acapella == 0 and current_player.boss_ridley_hp < 1}: music_metal_item_room
-
   boss_defeated_music:
     music_boss:
       action: stop
@@ -100,67 +73,10 @@ sound_player:
     music_metal_item_room:
       action: play
       fade_in: 2s
-
-  # room_1y_enter:
-    # music_maridia:
-      # action: stop
-      # fade_out: 1s
-  # room_1z_enter:
-    # music_maridia:
-      # action: stop
-      # fade_out: 1s
-  # room_2a_sink_into_sand:
-    # music_maridia_intro:
-      # action: stop
-      # fade_out: 1s
-  # room_2a_enter:
-    # music_maridia_snow:
-      # action: stop
-      # fade_out: 1s
-    # music_wrecked_ship:
-      # action: stop
-      # fade_out: 1s
-    # music_wrecked_ship_generator:
-      # action: stop
-      # fade_out: 1s
-  # room_2b_enter:
-    # music_maridia_intro:
-      # action: stop
-      # fade_out: 1s
-  # room_2c_enter:
-    # music_brinstar_side_entrance:
-      # action: stop
-      # fade_out: 1s
-    # music_metal_item_room:
-      # action: stop
-      # fade_out: 1s
-  # room_2d_enter:
-    # music_maridia_intro:
-      # action: stop
-      # fade_out: 1s
-  # room_2f_enter:
-    # music_maridia:
-      # action: stop
-      # fade_out: 1s
-  # room_2e_enter:
-    # music_maridia_snow:
-      # action: stop
-      # fade_out: 1s
-  # room_2g_enter:
-    # music_maridia:
-      # action: stop
-      # fade_out: 1s
-  # room_2j_enter:
-    # music_norfair_calm:
-      # action: stop
-      # fade_out: 1s
   room_2h_enter:
     music_norfair:
       action: stop
       fade_out: 1s
-    # music_metal_item_room:
-      # action: stop
-      # fade_out: 1s
   room_2i_enter:
     music_norfair_deep_intro:
       action: stop
