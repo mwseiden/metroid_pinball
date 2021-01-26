@@ -457,6 +457,10 @@ event_player:
   room_1r_start_timer:
     cmd_play_map_music:
       music: music_brinstar
+    room_1r_remove_pirate_1:
+    room_1r_remove_pirate_2:
+    room_1r_remove_pirate_3:
+    room_1r_remove_pirate_4:
   room_1r_open_exits:
     cmd_play_map_music:
       music: music_metal_item_room
@@ -479,7 +483,6 @@ event_player:
       twinkle_count: 10
       steps: 10
     cmd_stop_map_music:
-  room_1r_start_timer: room_1r_remove_pirate_1, room_1r_remove_pirate_2, room_1r_remove_pirate_3, room_1r_remove_pirate_4
   timer_room_1r_shoot_space_pirates_timer_complete{current_player.room_1r_finished == 0}: room_1r_start_timer
   timer_room_1r_light_shot_timer_tick{ticks == 1}: room_1r_shot_1_activate
   timer_room_1r_light_shot_timer_tick{ticks == 2}: room_1r_shot_2_activate
