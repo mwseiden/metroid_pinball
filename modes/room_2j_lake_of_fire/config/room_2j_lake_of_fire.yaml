@@ -67,6 +67,8 @@ event_player:
     cmd_map_position:
       room: '2j'
       visit: True
+    cmd_play_map_music:
+      music: music_norfair
   room_2j_exit_west_shot_hit.1: drop_targets_save
   room_2j_exit_west_shot_hit.2: room_2i_enter
   room_2j_exit_east_shot_hit.1: drop_targets_save

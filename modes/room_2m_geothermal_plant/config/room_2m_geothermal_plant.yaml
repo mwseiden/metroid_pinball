@@ -150,6 +150,8 @@ event_player:
     cmd_map_position:
       room: '2m'
       visit: True
+    cmd_play_map_music:
+      music: music_norfair_deep_intro
   mode_room_2m_geothermal_plant_started{device.sequences.room_2m_progress_sequence.value == 0}: mode_room_2m_enable_collect
   mode_room_2m_geothermal_plant_started{device.sequences.room_2m_progress_sequence.value == 1}: mode_room_2m_disable_collect
   room_2m_scoop_shot_hit: mode_room_2m_disable_collect

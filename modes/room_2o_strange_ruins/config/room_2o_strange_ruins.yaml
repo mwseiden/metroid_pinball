@@ -76,6 +76,8 @@ event_player:
     cmd_map_position:
       room: '2o'
       visit: True
+    cmd_play_map_music:
+      music: music_norfair_deep_intro
   room_2o_exit_north_shot_hit.1: drop_targets_save
   room_2o_exit_north_shot_hit.2: room_2k_enter
   room_2o_exit_west_shot_hit.1: drop_targets_save

@@ -10,6 +10,10 @@ sound_player:
   music_player_play_music_maridia_intro: music_maridia_intro
   music_player_play_music_maridia_snow: music_maridia_snow
   music_player_play_music_metal_item_room: music_metal_item_room
+  music_player_play_music_norfair: music_norfair
+  music_player_play_music_norfair_calm: music_norfair_calm
+  music_player_play_music_norfair_deep: music_norfair_deep
+  music_player_play_music_norfair_deep_intro: music_norfair_deep_intro
   music_player_play_music_wrecked_ship: music_wrecked_ship
   music_player_play_music_wrecked_ship_generator: music_wrecked_ship_generator
   music_player_stop_music_boss:
@@ -48,6 +52,22 @@ sound_player:
     music_metal_item_room:
       action: stop
       fade_out: 1s
+  music_player_stop_music_norfair:
+    music_norfair:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_norfair_calm:
+    music_norfair_calm:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_norfair_deep:
+    music_norfair_deep:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_norfair_deep_intro:
+    music_norfair_deep_intro:
+      action: stop
+      fade_out: 1s
   music_player_stop_music_wrecked_ship:
     music_wrecked_ship:
       action: stop
@@ -56,74 +76,7 @@ sound_player:
     music_wrecked_ship_generator:
       action: stop
       fade_out: 1s
-  mode_room_2i_lava_jump_started{machine.next_game_acapella == 0}: music_norfair
-  mode_room_2j_lake_of_fire_started{machine.next_game_acapella == 0}: music_norfair
-  mode_room_2k_larvae_nest_started{machine.next_game_acapella == 0}: music_norfair_calm
-  mode_room_2l_west_hot_springs_started{machine.next_game_acapella == 0}: music_norfair_deep
-  mode_room_2m_geothermal_plant_started{machine.next_game_acapella == 0}: music_norfair_deep_intro
-  mode_room_2n_magma_chamber_started{machine.next_game_acapella == 0}: music_norfair_deep
-  mode_room_2o_strange_ruins_started{machine.next_game_acapella == 0}: music_norfair_deep_intro
-  mode_room_2p_east_hot_springs_started{machine.next_game_acapella == 0}: music_norfair_deep
-  mode_room_2q_ridley_started{machine.next_game_acapella == 0 and current_player.boss_ridley_hp > 0}: music_boss
-  mode_room_2q_ridley_started{machine.next_game_acapella == 0 and current_player.boss_ridley_hp < 1}: music_metal_item_room
-  boss_defeated_music:
-    music_boss:
-      action: stop
-      fade_out: 1s
-    music_metal_item_room:
-      action: play
-      fade_in: 2s
-  room_2h_enter:
-    music_norfair:
-      action: stop
-      fade_out: 1s
-  room_2i_enter:
-    music_norfair_deep_intro:
-      action: stop
-      fade_out: 1s
-    music_maridia:
-      action: stop
-      fade_out: 1s
-  room_2k_enter:
-    music_norfair:
-      action: stop
-      fade_out: 1s
-    music_norfair_deep_intro:
-      action: stop
-      fade_out: 1s
-  room_2l_enter:
-    music_norfair_deep_intro:
-      action: stop
-      fade_out: 1s
-  room_2m_enter:
-    music_norfair:
-      action: stop
-      fade_out: 1s
-    music_norfair_deep:
-      action: stop
-      fade_out: 1s
-  room_2n_enter:
-    music_norfair_deep_intro:
-      action: stop
-      fade_out: 1s
-    music_metal_item_room:
-      action: stop
-      fade_out: 1s
-  room_2o_enter:
-    music_norfair_calm:
-      action: stop
-      fade_out: 1s
-    music_norfair_deep:
-      action: stop
-      fade_out: 1s
-  room_2p_enter:
-    music_norfair_deep_intro:
-      action: stop
-      fade_out: 1s
-  room_2q_enter:
-    music_norfair_deep:
-      action: stop
-      fade_out: 1s
+
   bao_play_main:
     music_bao_main:
       action: play
