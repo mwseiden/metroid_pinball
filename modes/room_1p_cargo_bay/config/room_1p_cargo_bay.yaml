@@ -91,6 +91,8 @@ event_player:
       show_type: gradient
       color_start: '808000'
       color_end: '808080'
+    cmd_play_map_music:
+      music: music_wrecked_ship_generator
   mode_room_1p_cargo_bay_started_no_charge:
     cmd_backbox_show:
       show_type: two_tone
@@ -98,6 +100,8 @@ event_player:
       max_cutoff: 12
       color1: '000004'
       color2: '200800'
+    cmd_play_map_music:
+      music: music_wrecked_ship
   mode_room_1p_cargo_bay_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1p_cargo_bay_started_no_charge
   mode_room_1p_cargo_bay_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1p_cargo_bay_started_charge
   room_1p_exit_north_shot_hit.1: drop_targets_save

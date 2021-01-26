@@ -81,6 +81,12 @@ event_player:
     cmd_map_position:
       room: '1q'
       visit: True
+  mode_room_1q_impact_zone_started_no_charge:
+    cmd_play_map_music:
+      music: music_wrecked_ship
+  mode_room_1q_impact_zone_started_charge:
+    cmd_play_map_music:
+      music: music_wrecked_ship_generator
   mode_room_1q_impact_zone_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1q_impact_zone_started_no_charge
   mode_room_1q_impact_zone_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1q_impact_zone_started_charge
   room_1q_exit_south_shot_hit.1: drop_targets_save

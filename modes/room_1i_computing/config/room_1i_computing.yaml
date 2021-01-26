@@ -94,12 +94,16 @@ event_player:
       twinkle_color: '100808'
       twinkle_count: 10
       steps: 30
+    cmd_play_map_music:
+      music: music_wrecked_ship
   mode_room_1i_computing_started_charge:
     cmd_backbox_show:
       show_type: spectrum
       color1: '400000'
       color2: '101010'
       color3: '004000'
+    cmd_play_map_music:
+      music: music_wrecked_ship_generator
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1i_computing_started_no_charge
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1i_computing_started_charge
   room_1i_exit_south_shot_hit.1: drop_targets_save

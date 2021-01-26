@@ -505,6 +505,12 @@ event_player:
     cmd_map_position:
       room: '1j'
       visit: True
+  mode_room_1j_phantoon_open_door:
+    cmd_play_map_music:
+      music: music_metal_item_room
+  mode_room_1j_phantoon_battle:
+    cmd_play_map_music:
+      music: music_boss
   mode_room_1j_phantoon_started{current_player.boss_phantoon_hp < 1}: mode_room_1j_phantoon_over, mode_room_1j_phantoon_open_door, room_1j_show_defeated_backglass
   mode_room_1j_phantoon_started{current_player.boss_phantoon_hp > 0}: mode_room_1j_phantoon_battle, metroid_exclusive_started, spin_jumps_disable, mode_room_1j_phantoon_recovered
   mode_room_1j_phantoon_battle{current_player.boss_phantoon_multiball_played == 0}: mode_room_1j_phantoon_start_multiball
@@ -546,10 +552,10 @@ event_player:
   timer_room_1j_phantoon_vulnerable_timer_complete{current_player.boss_phantoon_hp > 0}: mode_room_1j_phantoon_recovered, room_1j_play_eye_0
   player_boss_phantoon_hp{value <= 0}: room_1j_phantoon_should_die
   room_1j_phantoon_should_die: phantoon_defeated
-  phantoon_defeated{device.multiballs.room_1j_phantoon_boss_multiball.balls_added_live == 0}: mode_room_1j_phantoon_open_door, boss_defeated_music
+  phantoon_defeated{device.multiballs.room_1j_phantoon_boss_multiball.balls_added_live == 0}: mode_room_1j_phantoon_open_door
   phantoon_defeated{device.multiballs.room_1j_phantoon_boss_multiball.balls_added_live > 0}: phantoon_enable_victory_laps
   phantoon_defeated: mode_room_1j_phantoon_over, metroid_exclusive_ended, boss_explode
-  multiball_room_1j_phantoon_boss_multiball_ended{current_player.boss_phantoon_hp < 1}: mode_room_1j_phantoon_open_door, boss_defeated_music
+  multiball_room_1j_phantoon_boss_multiball_ended{current_player.boss_phantoon_hp < 1}: mode_room_1j_phantoon_open_door
   room_1j_exit_west_shot_hit.1: drop_targets_save
   room_1j_exit_west_shot_hit.2: room_1i_enter
 

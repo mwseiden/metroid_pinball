@@ -121,17 +121,20 @@ event_player:
       show_type: gradient
       color_start: "080606"
       color_end: "000000"
+    cmd_play_map_music:
+      music: music_wrecked_ship
   mode_room_1l_entryway_started_charge:
     cmd_backbox_show:
       show_type: gradient
       color_start: "FF0000"
       color_end: "E0C020"
+    cmd_play_map_music:
+      music: music_wrecked_ship_generator
   mode_room_1l_entryway_started:
     drop_targets_continue:
     cmd_map_position:
       room: '1l'
       visit: True
-    cmd_stop_map_music:
   mode_room_1l_entryway_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1l_entryway_started_no_charge
   mode_room_1l_entryway_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1l_entryway_started_charge
   room_1l_exit_east_shot_hit.1: drop_targets_save

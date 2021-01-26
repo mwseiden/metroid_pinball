@@ -159,6 +159,8 @@ event_player:
       decay_r: 2.1
       decay_g: 2.1
       decay_b: 1.4
+    cmd_play_map_music:
+      music: music_wrecked_ship
   mode_room_1h_teleporters_started_charge:
     cmd_backbox_show:
       show_type: plasma
@@ -173,6 +175,8 @@ event_player:
       decay_r: 1.4
       decay_g: 1.8
       decay_b: 1.8
+    cmd_play_map_music:
+      music: music_wrecked_ship_generator
   mode_room_1h_teleporters_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1h_teleporters_started_no_charge, room_1h_enable_teleporter_charge
   mode_room_1h_teleporters_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1h_teleporters_started_charge
   room_1h_light_teleporter_shot_hit{current_player.wrecked_ship_powered_up == 1}: room_1h_start_teleporter_lock
