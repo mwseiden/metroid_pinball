@@ -488,14 +488,14 @@ event_player:
   power_bomb_collected{current_player.boss_kraid_hp > 0}: kraid_hit_power_bomb
   player_boss_kraid_hp{value <= 0}: room_1x_kraid_should_die
   room_1x_kraid_should_die: kraid_defeated
-  kraid_defeated{device.multiballs.room_1x_kraid_boss_multiball.balls_added_live == 0}: mode_room_1x_kraid_open_door, boss_defeated_music
+  kraid_defeated{device.multiballs.room_1x_kraid_boss_multiball.balls_added_live == 0}: mode_room_1x_kraid_open_door
   kraid_defeated{device.multiballs.room_1x_kraid_boss_multiball.balls_added_live > 0}: kraid_enable_victory_laps
   kraid_defeated: mode_room_1x_kraid_over, metroid_exclusive_ended, boss_explode
   room_1x_exit_west_shot_hit.1: drop_targets_save
   room_1x_exit_west_shot_hit.2: room_1w_enter
   room_1x_exit_east_shot_hit.1: drop_targets_save
   room_1x_exit_east_shot_hit.2: room_1y_enter
-  multiball_room_1x_kraid_boss_multiball_ended{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_open_door, boss_defeated_music
+  multiball_room_1x_kraid_boss_multiball_ended{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_open_door
   kraid_hit_strong:
     mode_room_1x_kraid_vulnerable:
     cmd_backbox_show_overlay:

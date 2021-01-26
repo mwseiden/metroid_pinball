@@ -209,6 +209,7 @@ event_player:
     cmd_map_position:
       room: '2i'
       visit: True
+    cmd_stop_map_music:
   lava_jump_jackpot_shot_hit:
     cmd_map_complete:
       room: '2i'

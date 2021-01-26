@@ -200,6 +200,8 @@ event_player:
     cmd_map_position:
       room: '2f'
       visit: True
+    cmd_play_map_music:
+      music: music_maridia_snow
   mode_room_2f_frozen_lake_started{current_player.door_2e_2f == 0}: room_2f_enable_west_missile_door, room_2f_disable_west_door
   mode_room_2f_frozen_lake_started{current_player.door_2e_2f == 1}: room_2f_enable_west_door, room_2f_disable_west_missile_door
   room_2f_exit_west_closed_shot_hit{current_player.missiles > 0}: room_2f_open_west_door

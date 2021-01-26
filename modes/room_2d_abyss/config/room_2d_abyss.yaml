@@ -95,6 +95,8 @@ event_player:
     cmd_map_position:
       room: '2d'
       visit: True
+    cmd_play_map_music:
+      music: music_maridia
   bridge_should_explode:
     cmd_map_complete:
       room: '2d'

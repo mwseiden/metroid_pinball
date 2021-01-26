@@ -196,6 +196,8 @@ variable_player:
     continue_room:
       string: 2b
       action: set
+    cmd_play_map_music:
+      music: music_maridia_snow
   room_2b_bank_1_shot_hit:
     score: (100000 + (current_player.area_bonus_w * 50000)) * current_player.multiplier
     room_special_score:

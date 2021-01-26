@@ -311,7 +311,8 @@ event_player:
     cmd_map_position:
       room: '2a'
       visit: True
-    cmd_stop_map_music:
+    cmd_play_map_music:
+      music: music_maridia_intro
   timer_room_2a_do_not_sink_complete:
     - room_2a_sink_into_sand
   room_2a_exit_west_shot_hit.1: drop_targets_save
