@@ -454,7 +454,7 @@ sound_player:
   room_1r_kill_pirates: shoot_the_flashing_targets
 
 event_player:
-  room_1r_multiball_should_start:
+  room_1r_start_timer:
     cmd_play_map_music:
       music: music_brinstar
   room_1r_open_exits:
@@ -511,8 +511,6 @@ event_player:
     room_1r_open_exits:
     cmd_map_complete:
       room: '1r'
-    cmd_play_map_music:
-      music: music_metal_item_room
   room_1r_exit_east_shot_hit.1: drop_targets_save
   room_1r_exit_east_shot_hit.2: room_1s_enter
   room_1r_exit_north_shot_hit.1: drop_targets_save
