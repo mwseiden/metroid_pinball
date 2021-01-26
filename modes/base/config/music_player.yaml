@@ -1,6 +1,17 @@
 #config_version=5
 
 sound_player:
+  # play music
+  music_player_play_music_bao_critical: music_bao_critical
+  music_player_play_music_bao_main:
+    music_bao_main:
+      action: play
+      fade_in: 2s
+  music_player_play_music_bao_multiball: music_bao_multiball
+  music_player_play_music_bao_reactor:
+    music_bao_reactor:
+      action: play
+      fade_in: 2s
   music_player_play_music_boss: music_boss
   music_player_play_music_brinstar: music_brinstar
   music_player_play_music_brinstar_calm: music_brinstar_calm
@@ -16,6 +27,24 @@ sound_player:
   music_player_play_music_norfair_deep_intro: music_norfair_deep_intro
   music_player_play_music_wrecked_ship: music_wrecked_ship
   music_player_play_music_wrecked_ship_generator: music_wrecked_ship_generator
+
+  # stop music
+  music_player_stop_music_bao_critical:
+    music_bao_critical:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_bao_main:
+    music_bao_main:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_bao_multiball:
+    music_bao_multiball:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_bao_reactor:
+    music_bao_reactor:
+      action: stop
+      fade_out: 1s
   music_player_stop_music_boss:
     music_boss:
       action: stop
@@ -77,45 +106,7 @@ sound_player:
       action: stop
       fade_out: 1s
 
-  bao_play_main:
-    music_bao_main:
-      action: play
-      fade_in: 2s
-    music_bao_multiball:
-      action: stop
-    music_bao_reactor:
-      action: stop
-    music_bao_critical:
-      action: stop
-  bao_play_reactor:
-    music_bao_reactor:
-      action: play
-      fade_in: 2s
-    music_bao_multiball:
-      action: stop
-    music_bao_main:
-      action: stop
-    music_bao_critical:
-      action: stop
-  bao_play_critical:
-    music_bao_critical:
-      action: play
-    music_bao_main:
-      action: stop
-    music_bao_reactor:
-      action: stop
-    music_bao_multiball:
-      action: stop
-  bao_play_multiball:
-    music_bao_multiball:
-      action: play
-    music_bao_main:
-      action: stop
-    music_bao_reactor:
-      action: stop
-    music_bao_critical:
-      action: stop
-
+  # stop all with long fade out
   stop_all_music:
     music_crateria:
       action: stop
