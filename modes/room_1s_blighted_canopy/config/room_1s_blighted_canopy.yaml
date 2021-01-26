@@ -135,6 +135,8 @@ event_player:
     cmd_map_position:
       room: '1s'
       visit: True
+    cmd_play_map_music:
+      music: music_brinstar_side_entrance
   room_1s_light_jackpot_1_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot
   room_1s_light_jackpot_2_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot
   room_1s_light_jackpot_3_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot

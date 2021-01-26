@@ -2,11 +2,30 @@
 
 sound_player:
   music_player_play_music_boss: music_boss
+  music_player_play_music_brinstar: music_brinstar
+  music_player_play_music_brinstar_calm: music_brinstar_calm
+  music_player_play_music_brinstar_side_entrance: music_brinstar_side_entrance
   music_player_play_music_crateria: music_crateria
   music_player_play_music_metal_item_room: music_metal_item_room
   music_player_play_music_wrecked_ship: music_wrecked_ship
   music_player_play_music_wrecked_ship_generator: music_wrecked_ship_generator
 
+  music_player_stop_music_boss:
+    music_boss:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_brinstar:
+    music_brinstar:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_brinstar_calm:
+    music_brinstar_calm:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_brinstar_side_entrance:
+    music_brinstar_side_entrance:
+      action: stop
+      fade_out: 1s
   music_player_stop_music_crateria:
     music_crateria:
       action: stop
@@ -23,23 +42,20 @@ sound_player:
     music_wrecked_ship_generator:
       action: stop
       fade_out: 1s
-  music_player_stop_music_boss:
-    music_boss:
-      action: stop
-      fade_out: 1s
 
 
-  mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 0}: music_brinstar
-  mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 1}: music_metal_item_room
-  room_1r_switch_music{machine.next_game_acapella == 0}: music_metal_item_room
-  mode_room_1s_blighted_canopy_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
-  mode_room_1t_spiny_corridor_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
-  mode_room_1u_the_armory_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
-  mode_room_1v_fireflea_started{machine.next_game_acapella == 0}: music_brinstar_calm
-  mode_room_1w_biosphere_started{machine.next_game_acapella == 0}: music_brinstar_calm
-  mode_room_1x_kraid_started{machine.next_game_acapella == 0 and current_player.boss_kraid_hp > 0}: music_boss
-  mode_room_1x_kraid_started{machine.next_game_acapella == 0 and current_player.boss_kraid_hp < 1}: music_metal_item_room
-  mode_room_1y_subterranean_isle_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
+  # mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 0}: music_brinstar
+  # mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 1}: music_metal_item_room
+  # room_1r_switch_music{machine.next_game_acapella == 0}: music_metal_item_room
+  # mode_room_1s_blighted_canopy_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
+  # mode_room_1t_spiny_corridor_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
+  # mode_room_1u_the_armory_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
+  # mode_room_1v_fireflea_started{machine.next_game_acapella == 0}: music_brinstar_calm
+  # mode_room_1w_biosphere_started{machine.next_game_acapella == 0}: music_brinstar_calm
+  # mode_room_1x_kraid_started{machine.next_game_acapella == 0 and current_player.boss_kraid_hp > 0}: music_boss
+  # mode_room_1x_kraid_started{machine.next_game_acapella == 0 and current_player.boss_kraid_hp < 1}: music_metal_item_room
+  # mode_room_1y_subterranean_isle_started{machine.next_game_acapella == 0}: music_brinstar_side_entrance
+
   mode_room_1z_underground_desert_started{machine.next_game_acapella == 0}: music_maridia_intro
   mode_room_2a_shifting_sands_started{machine.next_game_acapella == 0}: music_maridia_intro
   mode_room_2b_crevasse_started{machine.next_game_acapella == 0}:
@@ -81,74 +97,74 @@ sound_player:
       action: play
       fade_in: 2s
 
-  room_2a_sink_into_sand:
-    music_maridia_intro:
-      action: stop
-      fade_out: 1s
-  room_1c_enter:
-    music_brinstar_side_entrance:
-      action: stop
-      fade_out: 1s
-  room_1q_enter:
-    music_maridia_intro:
-      action: stop
-      fade_out: 1s
-  room_1r_switch_music:
-    music_brinstar:
-      action: stop
-      fade_out: 1s
-  room_1r_enter:
-    music_brinstar_side_entrance:
-      action: stop
-      fade_out: 1s
-  room_1s_enter:
-    music_brinstar:
-      action: stop
-      fade_out: 1s
-    music_metal_item_room:
-      action: stop
-      fade_out: 1s
-  room_1t_enter:
-    music_brinstar_calm:
-      action: stop
-      fade_out: 1s
-  room_1u_enter:
-    music_metal_item_room:
-      action: stop
-      fade_out: 1s
-    music_brinstar_calm:
-      action: stop
-      fade_out: 1s
-  room_1v_enter:
-    music_brinstar_side_entrance:
-      action: stop
-      fade_out: 1s
-  room_1w_enter:
-    music_brinstar_side_entrance:
-      action: stop
-      fade_out: 1s
-    music_metal_item_room:
-      action: stop
-      fade_out: 1s
-  room_1x_enter:
-    music_brinstar_side_entrance:
-      action: stop
-      fade_out: 1s
-    music_brinstar_calm:
-      action: stop
-      fade_out: 1s
+  # room_1c_enter:
+    # music_brinstar_side_entrance:
+      # action: stop
+      # fade_out: 1s
+  # room_1q_enter:
+    # music_maridia_intro:
+      # action: stop
+      # fade_out: 1s
+  # room_1r_switch_music:
+    # music_brinstar:
+      # action: stop
+      # fade_out: 1s
+  # room_1r_enter:
+    # music_brinstar_side_entrance:
+      # action: stop
+      # fade_out: 1s
+  # room_1s_enter:
+    # music_brinstar:
+      # action: stop
+      # fade_out: 1s
+    # music_metal_item_room:
+      # action: stop
+      # fade_out: 1s
+  # room_1t_enter:
+    # music_brinstar_calm:
+      # action: stop
+      # fade_out: 1s
+  # room_1u_enter:
+    # music_metal_item_room:
+      # action: stop
+      # fade_out: 1s
+    # music_brinstar_calm:
+      # action: stop
+      # fade_out: 1s
+  # room_1v_enter:
+    # music_brinstar_side_entrance:
+      # action: stop
+      # fade_out: 1s
+  # room_1w_enter:
+    # music_brinstar_side_entrance:
+      # action: stop
+      # fade_out: 1s
+    # music_metal_item_room:
+      # action: stop
+      # fade_out: 1s
+  # room_1x_enter:
+    # music_brinstar_side_entrance:
+      # action: stop
+      # fade_out: 1s
+    # music_brinstar_calm:
+      # action: stop
+      # fade_out: 1s
   room_1y_enter:
     music_maridia:
       action: stop
       fade_out: 1s
-    music_brinstar_calm:
-      action: stop
-      fade_out: 1s
-    music_metal_item_room:
-      action: stop
-      fade_out: 1s
+    # music_brinstar_calm:
+      # action: stop
+      # fade_out: 1s
+    # music_metal_item_room:
+      # action: stop
+      # fade_out: 1s
   room_1z_enter:
     music_maridia:
+      action: stop
+      fade_out: 1s
+  room_2a_sink_into_sand:
+    music_maridia_intro:
       action: stop
       fade_out: 1s
   room_2a_enter:

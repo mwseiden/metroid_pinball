@@ -456,6 +456,12 @@ event_player:
     cmd_map_position:
       room: '1x'
       visit: True
+  mode_room_1x_kraid_open_door:
+    cmd_play_map_music:
+      music: music_metal_item_room
+  mode_room_1x_kraid_battle:
+    cmd_play_map_music:
+      music: music_boss
   mode_room_1x_kraid_started{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_over, mode_room_1x_kraid_open_door, room_1x_show_defeated_backglass
   mode_room_1x_kraid_started{current_player.boss_kraid_hp > 0}: mode_room_1x_kraid_battle, metroid_exclusive_started
   mode_room_1x_kraid_battle{current_player.boss_kraid_multiball_played == 0}: mode_room_1x_kraid_start_multiball

@@ -454,6 +454,12 @@ sound_player:
   room_1r_kill_pirates: shoot_the_flashing_targets
 
 event_player:
+  room_1r_multiball_should_start:
+    cmd_play_map_music:
+      music: music_brinstar
+  room_1r_open_exits:
+    cmd_play_map_music:
+      music: music_metal_item_room
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 0}: room_1r_start_timer
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 1}: room_1r_open_exits
@@ -502,10 +508,11 @@ event_player:
     room_1r_remove_pirate_2:
     room_1r_remove_pirate_3:
     room_1r_remove_pirate_4:
-    room_1r_switch_music:
     room_1r_open_exits:
     cmd_map_complete:
       room: '1r'
+    cmd_play_map_music:
+      music: music_metal_item_room
   room_1r_exit_east_shot_hit.1: drop_targets_save
   room_1r_exit_east_shot_hit.2: room_1s_enter
   room_1r_exit_north_shot_hit.1: drop_targets_save

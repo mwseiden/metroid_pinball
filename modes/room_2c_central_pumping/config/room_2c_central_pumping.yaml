@@ -77,6 +77,7 @@ event_player:
     cmd_map_position:
       room: '2c'
       visit: True
+    cmd_stop_map_music:
   room_2c_exit_east_shot_hit.1: drop_targets_save
   room_2c_exit_east_shot_hit.2: room_2d_enter
   room_2c_exit_south_shot_hit.1: drop_targets_save
