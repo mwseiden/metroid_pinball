@@ -28,33 +28,7 @@ sound_player:
       action: stop
       fade_out: 1s
 
-  # mode_room_1a_lush_cavern_started{machine.next_game_acapella == 0}: music_crateria
-  # mode_room_1b_gunship_started{machine.next_game_acapella == 0}: music_crateria
-  # mode_room_1b_gunship_victory_started{machine.next_game_acapella == 0}: music_crateria
-  # mode_room_1c_plains_started{machine.next_game_acapella == 0}: music_crateria
-  # mode_room_1d_the_lake_started{machine.next_game_acapella == 0}: music_crateria
-  # mode_room_1e_statue_room_started{machine.next_game_acapella == 0}: music_metal_item_room
-  # mode_room_1f_mushroom_chamber_started{machine.next_game_acapella == 0}: music_crateria
-  # mode_room_1g_the_pit_started{machine.next_game_acapella == 0}: music_crateria
-  # mode_room_1h_teleporters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
-  # mode_room_1h_teleporters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
-  # mode_room_1i_computing_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
-  # mode_room_1i_computing_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
-  # mode_room_1j_phantoon_started{machine.next_game_acapella == 0 and current_player.boss_phantoon_hp > 0}: music_boss
-  # mode_room_1j_phantoon_started{machine.next_game_acapella == 0 and current_player.boss_phantoon_hp < 1}: music_metal_item_room
-  # mode_room_1k_crew_quarters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
-  # mode_room_1k_crew_quarters_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
-  # mode_room_1l_entryway_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
-  # mode_room_1l_entryway_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
-  # mode_room_1m_generator_started{machine.next_game_acapella == 0}: music_wrecked_ship_generator
-  # mode_room_1n_the_hull_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
-  # mode_room_1n_the_hull_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
-  # mode_room_1o_artillery_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
-  # mode_room_1o_artillery_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
-  # mode_room_1p_cargo_bay_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
-  # mode_room_1p_cargo_bay_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
-  # mode_room_1q_impact_zone_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 0}: music_wrecked_ship
-  # mode_room_1q_impact_zone_started{machine.next_game_acapella == 0 and current_player.wrecked_ship_powered_up == 1}: music_wrecked_ship_generator
+
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 0}: music_brinstar
   mode_room_1r_space_pirate_battle_started{machine.next_game_acapella == 0 and current_player.room_1r_finished == 1}: music_metal_item_room
   room_1r_switch_music{machine.next_game_acapella == 0}: music_metal_item_room
@@ -115,40 +89,6 @@ sound_player:
     music_brinstar_side_entrance:
       action: stop
       fade_out: 1s
-  # room_1d_enter:
-    # music_wrecked_ship:
-      # action: stop
-      # fade_out: 1s
-    # music_wrecked_ship_generator:
-      # action: stop
-      # fade_out: 1s
-  # room_1e_enter:
-    # music_crateria:
-      # action: stop
-      # fade_out: 1s
-  # room_1f_enter:
-    # music_metal_item_room:
-      # action: stop
-      # fade_out: 1s
-  # room_1i_enter:
-    # music_metal_item_room:
-      # action: stop
-      # fade_out: 1s
-  # room_1j_enter:
-    # music_wrecked_ship:
-      # action: stop
-      # fade_out: 1s
-    # music_wrecked_ship_generator:
-      # action: stop
-      # fade_out: 1s
-  # room_1l_enter:
-    # music_crateria:
-      # action: stop
-      # fade_out: 1s
-  # room_1m_enter:
-    # music_wrecked_ship:
-      # action: stop
-      # fade_out: 1s
   room_1q_enter:
     music_maridia_intro:
       action: stop
@@ -161,9 +101,6 @@ sound_player:
     music_brinstar_side_entrance:
       action: stop
       fade_out: 1s
-    # music_crateria:
-      # action: stop
-      # fade_out: 1s
   room_1s_enter:
     music_brinstar:
       action: stop
@@ -172,9 +109,6 @@ sound_player:
       action: stop
       fade_out: 1s
   room_1t_enter:
-    # music_crateria:
-      # action: stop
-      # fade_out: 1s
     music_brinstar_calm:
       action: stop
       fade_out: 1s
