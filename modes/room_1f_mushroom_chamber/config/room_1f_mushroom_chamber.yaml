@@ -70,7 +70,7 @@ shots:
   room_1f_exit_south_shot:
     switch: s_scoop
     profile: exit_door
-    enable_events: room_1f_enable_door
+    enable_events: metroid_open_doors
     disable_events: mode_room_1f_mushroom_chamber_started, room_1f_exit_south_shot_hit, metroid_close_doors
     reset_events: mode_room_1f_mushroom_chamber_started, room_1f_exit_south_shot_hit
     show_tokens:
@@ -162,7 +162,6 @@ event_player:
     cmd_map_position:
       room: '1f'
       visit: True
-    room_1f_enable_door:
     metroid_open_doors:
     cmd_play_map_music:
       music: music_crateria
