@@ -45,6 +45,7 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+  metroid_open_doors:
     small_theater_chase:
       key: room_1g_drop_show
       loops: -1
@@ -58,6 +59,9 @@ show_player:
         led_4: gi_back_right
         led_5: led_drop_3
         led_6: gi_back_right
+  metroid_close_doors:
+    room_1g_drop_show:
+      action: stop
   show_mode_status_report:
     room_1g_the_pit_status_report:
       loops: 0
