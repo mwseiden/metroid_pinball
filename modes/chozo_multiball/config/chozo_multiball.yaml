@@ -202,7 +202,7 @@ sound_player:
   chozo_multiball_sound_captive: shoot_the_captive_ball
 
 event_player:
-  multiball_chozo_started.1: drop_targets_save
+  multiball_chozo_started.1: drop_targets_save, metroid_close_doors
   multiball_chozo_started.2: drop_target_mode_should_end
   multiball_chozo_started.3: cmd_drop_all_drops, chozo_multiball_reset_jackpot
   multiball_chozo_started.4:
@@ -212,7 +212,7 @@ event_player:
   mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 3}: chozo_multiball_light_stage_2
   mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 2}: chozo_multiball_light_stage_3
   mode_chozo_multiball_started{device.counters.captive_ball_counter.value == 1}: chozo_multiball_light_stage_4
-  multiball_chozo_ended: chozo_multiball_light_stage_1, drop_target_mode_should_start, cmd_stop_overlay_music
+  multiball_chozo_ended: chozo_multiball_light_stage_1, drop_target_mode_should_start, cmd_stop_overlay_music, metroid_open_doors
   chozo_multiball_bashed: chozo_multiball_light_stage_0
   chozo_multiball_jackpot_collect_shot_hit: chozo_multiball_reset_jackpot, chozo_multiball_show_super_jackpot_slide
   logicblock_captive_ball_counter_updated{value > 3 and not completed and enabled}: chozo_multiball_light_stage_1
