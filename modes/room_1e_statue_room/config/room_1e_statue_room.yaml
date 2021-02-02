@@ -11,8 +11,8 @@ shots:
   room_1e_exit_east_shot:
     switch: s_ramp_enter
     profile: exit_door
-    enable_events: mode_room_1e_statue_room_started
-    disable_events: room_1e_exit_east_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1e_exit_east_shot_hit, metroid_close_doors
     show_tokens:
       led: led_enter_ramp
       color: door_blue
@@ -62,6 +62,7 @@ event_player:
       visit: True
     cmd_play_map_music:
       music: music_metal_item_room
+    metroid_open_doors:
   room_1e_exit_east_shot_hit.1: drop_targets_save
   room_1e_exit_east_shot_hit.2: room_1f_enter
 
