@@ -21,6 +21,7 @@ sound_player:
   music_player_play_music_maridia_intro: music_maridia_intro
   music_player_play_music_maridia_snow: music_maridia_snow
   music_player_play_music_metal_item_room: music_metal_item_room
+  music_player_play_music_multiball: music_multiball
   music_player_play_music_norfair: music_norfair
   music_player_play_music_norfair_calm: music_norfair_calm
   music_player_play_music_norfair_deep: music_norfair_deep
@@ -81,6 +82,10 @@ sound_player:
     music_metal_item_room:
       action: stop
       fade_out: 1s
+  music_player_stop_music_multiball:
+    music_multiball:
+      action: stop
+      fade_out: 1s
   music_player_stop_music_norfair:
     music_norfair:
       action: stop
@@ -136,6 +141,9 @@ sound_player:
       action: stop
       fade_out: 3s
     music_maridia:
+      action: stop
+      fade_out: 3s
+    music_multiball:
       action: stop
       fade_out: 3s
     music_wrecked_ship:
