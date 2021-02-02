@@ -32,8 +32,8 @@ shots:
   room_1a_exit_east_shot:
     switch: s_ramp_enter
     profile: exit_door
-    enable_events: mode_room_1a_lush_cavern_started
-    disable_events: room_1a_exit_east_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1a_exit_east_shot_hit, metroid_close_doors
     reset_events: room_1a_exit_east_shot_hit
     show_tokens:
       led: led_enter_ramp
@@ -42,7 +42,7 @@ shots:
     switch: s_scoop
     profile: exit_door
     enable_events: room_1a_enable_south_missile_door
-    disable_events: room_1a_disable_south_missile_door, room_1a_open_south_door
+    disable_events: room_1a_disable_south_missile_door, room_1a_open_south_door, metroid_close_doors
     reset_events: room_1a_disable_south_missile_door, room_1a_open_south_door
     show_tokens:
       led: led_enter_scoop
@@ -51,7 +51,7 @@ shots:
     switch: s_scoop
     profile: exit_door
     enable_events: room_1a_enable_south_door
-    disable_events: room_1a_disable_south_door
+    disable_events: room_1a_disable_south_door, metroid_close_doors
     reset_events: room_1a_disable_south_door
     show_tokens:
       led: led_enter_scoop
@@ -172,9 +172,10 @@ event_player:
       visit: True
     cmd_play_map_music:
       music: music_crateria
+    metroid_open_doors:
   mode_room_1a_lush_cavern_ending: drop_targets_save
-  mode_room_1a_lush_cavern_started{current_player.door_1a_1f == 0}: room_1a_enable_south_missile_door, room_1a_disable_south_door
-  mode_room_1a_lush_cavern_started{current_player.door_1a_1f == 1}: room_1a_enable_south_door, room_1a_disable_south_missile_door
+  metroid_open_doors{current_player.door_1a_1f == 0}: room_1a_enable_south_missile_door, room_1a_disable_south_door
+  metroid_open_doors{current_player.door_1a_1f == 1}: room_1a_enable_south_door, room_1a_disable_south_missile_door
   room_1a_exit_south_closed_shot_hit{current_player.missiles > 0}: room_1a_open_south_door
   room_1a_open_south_door: room_1a_exit_south_shot_hit
   room_1a_exit_south_shot_hit.1: drop_targets_save
