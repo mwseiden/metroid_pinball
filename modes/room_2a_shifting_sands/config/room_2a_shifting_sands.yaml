@@ -90,8 +90,8 @@ shots:
   room_2a_exit_west_shot:
     switch: s_left_passage
     profile: exit_door
-    enable_events: mode_room_2a_shifting_sands_started
-    disable_events: room_2a_exit_west_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_2a_exit_west_shot_hit, metroid_close_doors
     reset_events: room_2a_exit_west_shot_hit
     show_tokens:
       led: led_enter_secret_passage
@@ -99,8 +99,8 @@ shots:
   room_2a_exit_east_shot:
     hit_events: right_orbit_hit
     profile: exit_door
-    enable_events: mode_room_2a_shifting_sands_started
-    disable_events: room_2a_exit_east_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_2a_exit_east_shot_hit, metroid_close_doors
     reset_events: room_2a_exit_east_shot_hit
     show_tokens:
       led: led_enter_right_orbit
@@ -108,8 +108,8 @@ shots:
   room_2a_exit_north_shot:
     switches: s_ramp_enter
     profile: exit_door
-    enable_events: mode_room_2a_shifting_sands_started
-    disable_events: room_2a_exit_north_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_2a_exit_north_shot_hit, metroid_close_doors
     reset_events: room_2a_exit_north_shot_hit
     show_tokens:
       led: led_enter_ramp
@@ -313,6 +313,7 @@ event_player:
       visit: True
     cmd_play_map_music:
       music: music_maridia_intro
+    metroid_open_doors:
   timer_room_2a_do_not_sink_complete:
     - room_2a_sink_into_sand
   room_2a_exit_west_shot_hit.1: drop_targets_save

@@ -12,7 +12,7 @@ shots:
     hit_events: rollover_shot_hit
     profile: exit_door
     enable_events: room_2c_open_doors
-    disable_events: room_2c_exit_east_shot_hit, mode_room_2c_central_pumping_started
+    disable_events: room_2c_exit_east_shot_hit, mode_room_2c_central_pumping_started, metroid_close_doors
     reset_events: room_2c_exit_east_shot_hit, mode_room_2c_central_pumping_started
     show_tokens:
       led: led_rollover
@@ -21,7 +21,7 @@ shots:
     switch: s_scoop
     profile: exit_door
     enable_events: room_2c_open_doors
-    disable_events: room_2c_exit_south_shot_hit, mode_room_2c_central_pumping_started
+    disable_events: room_2c_exit_south_shot_hit, mode_room_2c_central_pumping_started, metroid_close_doors
     reset_events: room_2c_exit_south_shot_hit, mode_room_2c_central_pumping_started
     show_tokens:
       led: led_enter_scoop
@@ -30,7 +30,7 @@ shots:
     hit_events: left_orbit_hit
     profile: exit_door
     enable_events: room_2c_open_doors
-    disable_events: room_2c_exit_west_shot_hit, mode_room_2c_central_pumping_started
+    disable_events: room_2c_exit_west_shot_hit, mode_room_2c_central_pumping_started, metroid_close_doors
     reset_events: room_2c_exit_west_shot_hit, mode_room_2c_central_pumping_started
     show_tokens:
       led: led_enter_left_orbit
