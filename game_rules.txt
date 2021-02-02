@@ -121,8 +121,14 @@ Base Game Mechanics
         count towards the Lane Champ score.
 
     Upper Lanes:
-        Completing the upper lane lights will score points. These lanes also
-        count towards Lane Champ.
+        Complete each lane 3 times to light upper lane modes.
+
+        Once the modes are lit, shooting the upper playfield via the VUK
+        will select a new mode.
+        
+        You start a mode by shooting the side ramp.
+        
+        These lanes also count towards Lane Champ.
 
     Secret Passage:
         Scores points.
@@ -230,6 +236,9 @@ Landing Sites
         multiball. First you must hit the roving purple shot. Then most of the
         playfield will light up. Hit 4 lit shots to complete the mode.
 
+        Completion:
+            Defeat all 4 space pirates
+
         Doors (After Defeating the Space Pirates):
             Left Orbit (Blue) -> Mushroom Chamber [F]
             Right Orbit (Blue) -> Blighted Canopy [S]
@@ -246,6 +255,9 @@ Landing Sites
         After landing, you can scan the site by hitting switches. It takes 200
         switches to scan to 100%
 
+        Completion:
+            Land the ship
+
         Doors (After Landing):
             Secret Passage (Blue) -> Lush Cavern [A]
             Right Orbit (Blue) -> Plains [C]
@@ -260,6 +272,9 @@ Landing Sites
         the longer you last.
 
         Sinking puts you in the Sandy Cavern [e].
+
+        Completion:
+            Stay above the quicksand for a total of 30 seconds
 
         Doors:
             Back Ramp (Blue) -> Impact Zone [Q]
@@ -308,6 +323,8 @@ Rooms (Modes)
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
                 Right Orbit (Blue) -> Spiny Corridor [T]
                 Secret Passage (Blue) -> Space Pirate Battle /
@@ -317,13 +334,23 @@ Rooms (Modes)
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                VUK (Blue) -> Plains [C]
+                Secret Passage (Blue) -> Fireflea [V]
+                Left Orbit (Blue) -> Blighted Canopy [S]
 
         The Armory [U]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Secret Passage (Blue) -> Biosphere [W]
+                Back Ramp (Blue) -> Space Pirate Battle /
+                                          Communication Center [R]
 
         Fireflea [V]:
 
@@ -336,25 +363,43 @@ Rooms (Modes)
 
             When all firefleas are defeated you will be playing in the dark.
 
+            Completion:
+
             Doors:
+                Secret Passage (Blue) -> Subterranean Isle [Y]
+                VUK (Blue) -> Spiny Corridor [T]
 
         Biosphere [W]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Left Orbit (Blue) -> The Armory [U]
+                Right Orbit (Blue) -> Kraid [X]
 
         Kraid [X]:
 
             Boss. Rules unimplemented
 
+            Completion:
+                Defeat the boss
+
             Doors:
+                Secret Passage (Blue) [Defeated] -> Biosphere [W]
+                Back Ramp (Blue) [Defeated] -> Subterranean Isle [Y]
 
         Subterranean Isle [Y]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Secret Passage (Blue) -> Kraid [X]
+                Star Rollover (Blue) -> Central Pumping [c]
+                Back Ramp (Blue) -> Fireflea [V]
 
 
     Crateria:
@@ -369,6 +414,8 @@ Rooms (Modes)
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
                 Back Ramp (Blue) -> Landing Site [B]
                 Scoop (Red) -> Mushroom Chamber [F]
@@ -382,6 +429,8 @@ Rooms (Modes)
             Hit the standup targets for points. Side targets are worth more
             than the center targets.
 
+            Completion:
+
             Doors:
                 Secret Passage (Blue) -> Landing Site [B]
                 Left Orbit (Blue) -> The Lake [D]
@@ -394,6 +443,8 @@ Rooms (Modes)
             Entering Crateria from the Wrecked Ship cancels Land the Gunship
             and room [B] will then skip to its Landing Site phase.
 
+            Completion:
+
             Doors:
                 Back Ramp (Blue) -> Plains [C]
                 Right Orbit (Blue) -> Entryway [L] (Wrecked Ship)
@@ -402,6 +453,8 @@ Rooms (Modes)
 
             The entrance to Tourian. Defeat all the bosses to enter.
             
+            Completion:
+
             Doors:
                 Back Ramp (Blue) -> Mushroom Chamber [F]
 
@@ -412,6 +465,8 @@ Rooms (Modes)
             Entering Crateria from Brinstar cancels Land the Gunship and room
             [B] will then skip to its Landing Site phase.
 
+            Completion:
+
             Doors:
                 Left Orbit (Red) -> Lush Cavern [A]
                 Secret Passage (Blue) -> Statue Room [E]
@@ -421,6 +476,8 @@ Rooms (Modes)
         The Pit [G]:
 
             Rules unimplemented
+
+            Completion:
 
             Doors:
                 VUK (Blue) -> Mushroom Chamber [F]
@@ -439,6 +496,8 @@ Rooms (Modes)
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
                 Secret Passage (Blue) -> The Abyss [d]
                 Right Orbit (Blue) -> Shifting Sands [a]
@@ -451,6 +510,8 @@ Rooms (Modes)
 
             Rules Unimplemented
 
+            Completion:
+
             Doors:
                 Left Orbit (Blue) -> Shifting Sands [a]
                 Star Rollover (Blue) -> Frozen Lake [f]
@@ -459,6 +520,8 @@ Rooms (Modes)
 
             Rules Unimplemented
 
+            Completion:
+
             Doors:
                 Left Orbit (Blue) -> Shifting Sands [a]
                 Star Rollover (Blue) -> Frozen Lake [f]
@@ -466,6 +529,8 @@ Rooms (Modes)
         The Abyss [d]:
 
             2x Bridge Scoring
+
+            Completion:
 
             Doors:
                 Left Orbit (Blue) -> Shifting Sands [a]
@@ -488,6 +553,8 @@ Rooms (Modes)
             shot. Once all standups are lit, shoot the scoop to crack the
             ice.
 
+            Completion:
+
             Doors:
                 Secret Passage (Red) -> Sandy Cavern [e]
                 Side Ramp (Blue) -> Crevasse [b]
@@ -496,11 +563,15 @@ Rooms (Modes)
 
             Boss. Rules unimplemented.
 
+            Completion:
+
             Doors:
 
         Crystalline Seabed [h]:
 
             Rules Unimplemented
+
+            Completion:
 
             Doors:
 
