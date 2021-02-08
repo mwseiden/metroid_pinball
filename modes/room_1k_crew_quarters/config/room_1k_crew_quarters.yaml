@@ -33,8 +33,8 @@ shots:
   room_1k_exit_south_shot:
     switch: s_scoop
     profile: exit_door
-    enable_events: mode_room_1k_crew_quarters_started
-    disable_events: room_1k_exit_south_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1k_exit_south_shot_hit, metroid_close_doors
     reset_events: room_1k_exit_south_shot_hit
     show_tokens:
       led: led_enter_scoop
@@ -42,8 +42,8 @@ shots:
   room_1k_exit_north_shot:
     hit_events: right_orbit_hit
     profile: exit_door_optimum
-    enable_events: mode_room_1k_crew_quarters_started_no_charge
-    disable_events: mode_room_1k_crew_quarters_started, room_1k_exit_north_shot_hit
+    enable_events: mode_room_1k_crew_quarters_started_no_charge, room_1k_open_no_charge_doors
+    disable_events: mode_room_1k_crew_quarters_started, room_1k_exit_north_shot_hit, metroid_close_doors
     reset_events: mode_room_1k_crew_quarters_started, room_1k_exit_north_shot_hit
     show_tokens:
       led: led_enter_right_orbit
@@ -51,8 +51,8 @@ shots:
   room_1k_exit_north_powered_shot:
     switches: s_ramp_enter
     profile: exit_door_optimum
-    enable_events: mode_room_1k_crew_quarters_started_charge
-    disable_events: mode_room_1k_crew_quarters_started, room_1l_exit_north_powered_shot_hit
+    enable_events: mode_room_1k_crew_quarters_started_charge, room_1k_open_charge_doors
+    disable_events: mode_room_1k_crew_quarters_started, room_1l_exit_north_powered_shot_hit, metroid_close_doors
     reset_events: mode_room_1k_crew_quarters_started, room_1l_exit_north_powered_shot_hit
     show_tokens:
       led: led_enter_ramp
@@ -208,6 +208,7 @@ event_player:
     cmd_map_position:
       room: '1k'
       visit: True
+    metroid_open_doors:
   mode_room_1k_crew_quarters_started_charge:
     cmd_backbox_show:
       show_type: gradient
@@ -231,6 +232,8 @@ event_player:
   timer_room_1k_move_covern_timer_tick{ticks == 5}: mode_room_1k_crew_quarters_activate_5, mode_room_1k_crew_quarters_deactivate_4
   mode_room_1k_crew_quarters_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1k_crew_quarters_started_no_charge
   mode_room_1k_crew_quarters_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1k_crew_quarters_started_charge
+  metroid_open_doors{current_player.wrecked_ship_powered_up == 0}: room_1k_open_no_charge_doors
+  metroid_open_doors{current_player.wrecked_ship_powered_up == 1}: room_1k_open_charge_doors
   room_1k_exit_south_shot_hit.1: drop_targets_save
   room_1k_exit_south_shot_hit.2: room_1l_enter
   room_1k_exit_north_shot_hit.1: drop_targets_save

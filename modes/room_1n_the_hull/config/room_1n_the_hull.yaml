@@ -11,8 +11,8 @@ shots:
   room_1n_exit_north_shot:
     switches: s_ramp_enter
     profile: exit_door_optimum
-    enable_events: mode_room_1n_the_hull_started
-    disable_events: room_1n_exit_north_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1n_exit_north_shot_hit, metroid_close_doors
     reset_events: room_1n_exit_north_shot_hit
     show_tokens:
       led: led_enter_ramp
@@ -20,8 +20,8 @@ shots:
   room_1n_exit_south_shot:
     switch: s_scoop
     profile: exit_door
-    enable_events: mode_room_1n_the_hull_started
-    disable_events: room_1n_exit_south_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1n_exit_south_shot_hit, metroid_close_doors
     reset_events: room_1n_exit_south_shot_hit
     show_tokens:
       led: led_enter_scoop
@@ -82,6 +82,7 @@ event_player:
     cmd_map_position:
       room: '1n'
       visit: True
+    metroid_open_doors:
   mode_room_1n_the_hull_started_no_charge:
     cmd_play_map_music:
       music: music_wrecked_ship

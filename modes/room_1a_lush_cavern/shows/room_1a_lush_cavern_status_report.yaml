@@ -16,10 +16,12 @@
         text: Build Shot Values
         color: red
         style: dmd_med
+        y: 21
       - type: Text
         text: By Hitting Lanes
         color: red
         style: dmd_med
+        y: 11
 
 - duration: 5s
   slides:
