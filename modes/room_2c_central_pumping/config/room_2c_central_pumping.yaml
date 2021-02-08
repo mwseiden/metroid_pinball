@@ -11,8 +11,8 @@ shots:
   room_2c_exit_east_shot:
     hit_events: rollover_shot_hit
     profile: exit_door
-    enable_events: room_2c_open_doors
-    disable_events: room_2c_exit_east_shot_hit, mode_room_2c_central_pumping_started
+    enable_events: metroid_open_doors
+    disable_events: room_2c_exit_east_shot_hit, mode_room_2c_central_pumping_started, metroid_close_doors
     reset_events: room_2c_exit_east_shot_hit, mode_room_2c_central_pumping_started
     show_tokens:
       led: led_rollover
@@ -20,8 +20,8 @@ shots:
   room_2c_exit_south_shot:
     switch: s_scoop
     profile: exit_door
-    enable_events: room_2c_open_doors
-    disable_events: room_2c_exit_south_shot_hit, mode_room_2c_central_pumping_started
+    enable_events: metroid_open_doors
+    disable_events: room_2c_exit_south_shot_hit, mode_room_2c_central_pumping_started, metroid_close_doors
     reset_events: room_2c_exit_south_shot_hit, mode_room_2c_central_pumping_started
     show_tokens:
       led: led_enter_scoop
@@ -29,8 +29,8 @@ shots:
   room_2c_exit_west_shot:
     hit_events: left_orbit_hit
     profile: exit_door
-    enable_events: room_2c_open_doors
-    disable_events: room_2c_exit_west_shot_hit, mode_room_2c_central_pumping_started
+    enable_events: metroid_open_doors
+    disable_events: room_2c_exit_west_shot_hit, mode_room_2c_central_pumping_started, metroid_close_doors
     reset_events: room_2c_exit_west_shot_hit, mode_room_2c_central_pumping_started
     show_tokens:
       led: led_enter_left_orbit
@@ -73,10 +73,12 @@ event_player:
     cmd_backbox_show:
       show_type: fire
     drop_targets_continue:
-    room_2c_open_doors:
     cmd_map_position:
       room: '2c'
       visit: True
+    cmd_play_map_music:
+      music: music_maridia
+    metroid_open_doors:
   room_2c_exit_east_shot_hit.1: drop_targets_save
   room_2c_exit_east_shot_hit.2: room_2d_enter
   room_2c_exit_south_shot_hit.1: drop_targets_save

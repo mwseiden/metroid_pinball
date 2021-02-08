@@ -54,7 +54,7 @@ shots:
     hit_events: right_orbit_hit
     profile: exit_door
     enable_events: mode_room_2g_draygon_open_door
-    disable_events: mode_room_2g_draygon_started, mode_room_2g_draygon_battle
+    disable_events: mode_room_2g_draygon_started, mode_room_2g_draygon_battle, metroid_close_doors
     show_tokens:
       led: led_enter_right_orbit
       color: door_blue
@@ -62,7 +62,7 @@ shots:
     switch: s_ramp_enter
     profile: exit_door
     enable_events: mode_room_2g_draygon_open_door
-    disable_events: mode_room_2g_draygon_started, mode_room_2g_draygon_battle
+    disable_events: mode_room_2g_draygon_started, mode_room_2g_draygon_battle, metroid_close_doors
     show_tokens:
       led: led_enter_ramp
       color: door_blue
@@ -468,8 +468,15 @@ event_player:
     cmd_map_position:
       room: '2g'
       visit: True
-  mode_room_2g_draygon_started{current_player.boss_draygon_hp < 1}: mode_room_2g_draygon_over, mode_room_2g_draygon_open_door, room_2g_show_defeated_backglass
-  mode_room_2g_draygon_started{current_player.boss_draygon_hp > 0}: mode_room_2g_draygon_battle, metroid_exclusive_started
+    metroid_open_doors:
+  mode_room_2g_draygon_open_door:
+    cmd_play_map_music:
+      music: music_metal_item_room
+  mode_room_2g_draygon_battle:
+    cmd_play_map_music:
+      music: music_boss
+  metroid_open_doors{current_player.boss_draygon_hp < 1}: mode_room_2g_draygon_over, mode_room_2g_draygon_open_door, room_2g_show_defeated_backglass
+  metroid_open_doors{current_player.boss_draygon_hp > 0}: mode_room_2g_draygon_battle, metroid_exclusive_started
   mode_room_2g_draygon_battle{current_player.boss_draygon_multiball_played == 0}: mode_room_2g_draygon_start_multiball
   room_2g_boss_weak_captive_shot_hit: draygon_hit_strong
   room_2g_boss_vulnerable_side_ramp_shot_hit: draygon_hit_vulnerable
@@ -496,14 +503,14 @@ event_player:
   power_bomb_collected{current_player.boss_draygon_hp > 0}: draygon_hit_power_bomb
   player_boss_draygon_hp{value <= 0}: room_2g_draygon_should_die
   room_2g_draygon_should_die: draygon_defeated
-  draygon_defeated{device.multiballs.room_2g_draygon_boss_multiball.balls_added_live == 0}: mode_room_2g_draygon_open_door, boss_defeated_music
+  draygon_defeated{device.multiballs.room_2g_draygon_boss_multiball.balls_added_live == 0}: mode_room_2g_draygon_open_door
   draygon_defeated{device.multiballs.room_2g_draygon_boss_multiball.balls_added_live > 0}: draygon_enable_victory_laps
   draygon_defeated: mode_room_2g_draygon_over, metroid_exclusive_ended, boss_explode
   room_2g_exit_north_shot_hit.1: drop_targets_save
   room_2g_exit_north_shot_hit.2: room_2c_enter
   room_2g_exit_east_shot_hit.1: drop_targets_save
   room_2g_exit_east_shot_hit.2: room_2h_enter
-  multiball_room_2g_draygon_boss_multiball_ended{current_player.boss_draygon_hp < 1}: mode_room_2g_draygon_open_door, boss_defeated_music
+  multiball_room_2g_draygon_boss_multiball_ended{current_player.boss_draygon_hp < 1}: mode_room_2g_draygon_open_door
   draygon_hit_strong:
     mode_room_2g_draygon_vulnerable:
     cmd_backbox_show_overlay:

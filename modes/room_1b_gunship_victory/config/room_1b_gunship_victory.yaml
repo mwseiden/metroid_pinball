@@ -28,8 +28,8 @@ shots:
   room_1b_exit_east_shot:
     hit_events: right_orbit_hit
     profile: exit_door
-    enable_events: mode_room_1b_gunship_victory_started
-    disable_events: room_1b_exit_east_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1b_exit_east_shot_hit, metroid_close_doors
     reset_events: room_1b_exit_east_shot_hit
     show_tokens:
       led: led_enter_right_orbit
@@ -37,8 +37,8 @@ shots:
   room_1b_exit_west_shot:
     switch: s_left_passage
     profile: exit_door
-    enable_events: mode_room_1b_gunship_victory_started
-    disable_events: room_1b_exit_west_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1b_exit_west_shot_hit, metroid_close_doors
     reset_events: room_1b_exit_west_shot_hit
     show_tokens:
       led: led_enter_secret_passage
@@ -143,6 +143,9 @@ event_player:
     cmd_map_position:
       room: '1b'
       visit: True
+    cmd_play_map_music:
+      music: music_crateria
+  mode_room_1b_gunship_victory_started{game.balls_in_play == 1}: metroid_open_doors
   show_mode_status_report:
     room_1b_victory_status_report:
       loops: 0

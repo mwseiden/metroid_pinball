@@ -12,8 +12,8 @@ shots:
   room_1z_exit_east_shot:
     hit_events: right_orbit_hit
     profile: exit_door
-    enable_events: mode_room_1z_underground_desert_started
-    disable_events: room_1z_exit_east_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1z_exit_east_shot_hit, metroid_close_doors
     reset_events: room_1z_exit_east_shot_hit
     show_tokens:
       led: led_enter_right_orbit
@@ -21,8 +21,8 @@ shots:
   room_1z_exit_south_shot:
     switch: s_left_passage
     profile: exit_door
-    enable_events: mode_room_1z_underground_desert_started
-    disable_events: room_1z_exit_south_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1z_exit_south_shot_hit, metroid_close_doors
     reset_events: room_1z_exit_south_shot_hit
     show_tokens:
       led: led_enter_secret_passage
@@ -74,6 +74,9 @@ event_player:
     cmd_map_position:
       room: '1z'
       visit: True
+    cmd_play_map_music:
+      music: music_maridia_intro
+    metroid_open_doors:
   room_1z_exit_east_shot_hit.1: drop_targets_save
   room_1z_exit_east_shot_hit.2: room_2a_enter
   room_1z_exit_south_shot_hit.1: drop_targets_save

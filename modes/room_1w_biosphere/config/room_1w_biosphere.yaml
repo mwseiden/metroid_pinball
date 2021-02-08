@@ -81,6 +81,8 @@ event_player:
     cmd_map_position:
       room: '1w'
       visit: True
+    cmd_play_map_music:
+      music: music_brinstar_calm
   room_1w_exit_north_shot_hit.1: drop_targets_save
   room_1w_exit_north_shot_hit.2: room_1u_enter
   room_1w_exit_east_shot_hit.1: drop_targets_save

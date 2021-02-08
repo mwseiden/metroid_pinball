@@ -1,10 +1,19 @@
 #config_version=5
 mode:
+  code: base.Base
   start_events: ball_starting
   priority: 100
 
 config:
   - music_player.yaml
+
+shot_profiles:
+  pop_bumper:
+    states:
+      - name: unlit
+        show: led_color
+        show_tokens:
+          color: '808080'
 
 shots:
   scoop_shot:
@@ -23,10 +32,19 @@ shots:
     switch: s_right_sling
   pop_1_shot:
     switch: s_pop_1
+    profile: pop_bumper
+    show_tokens:
+      led: led_pop_2
   pop_2_shot:
     switch: s_pop_2
+    profile: pop_bumper
+    show_tokens:
+      led: led_pop_3
   pop_3_shot:
     switch: s_pop_3
+    profile: pop_bumper
+    show_tokens:
+      led: led_pop_1
   spinner_shot:
     switch: s_spinner
   pop_subway_shot:
@@ -443,7 +461,8 @@ event_player:
       speed: 1
       repeat: 0
       direction: up
-  mode_bonus_will_start: stop_current_music
+  mode_bonus_will_start: stop_all_music
+
 
 variable_player:
   left_orbit_hit:

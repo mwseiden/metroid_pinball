@@ -51,8 +51,8 @@ shots:
   room_2i_exit_east_shot:
     hit_events: rollover_shot_hit
     profile: exit_door
-    enable_events: mode_room_2i_lava_jump_started
-    disable_events: room_2i_exit_east_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_2i_exit_east_shot_hit, metroid_close_doors
     reset_events: room_2i_exit_east_shot_hit
     show_tokens:
       led: led_rollover
@@ -60,8 +60,8 @@ shots:
   room_2i_exit_south_shot:
     switch: s_scoop
     profile: exit_door_optimum
-    enable_events: mode_room_2i_lava_jump_started
-    disable_events: room_2i_exit_south_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_2i_exit_south_shot_hit, metroid_close_doors
     reset_events: room_2i_exit_south_shot_hit
     show_tokens:
       led: led_enter_scoop
@@ -69,8 +69,8 @@ shots:
   room_2i_exit_north_shot:
     switches: s_vuk
     profile: exit_door
-    enable_events: mode_room_2i_lava_jump_started
-    disable_events: room_2i_exit_north_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_2i_exit_north_shot_hit, metroid_close_doors
     reset_events: room_2i_exit_north_shot_hit
     show_tokens:
       led: gi_strip_9
@@ -209,6 +209,9 @@ event_player:
     cmd_map_position:
       room: '2i'
       visit: True
+    cmd_play_map_music:
+      music: music_norfair
+    metroid_open_doors:
   lava_jump_jackpot_shot_hit:
     cmd_map_complete:
       room: '2i'

@@ -9,8 +9,8 @@ shots:
   room_2p_exit_west_shot:
     switch: s_ramp_enter
     profile: exit_door_optimum
-    enable_events: mode_room_2p_east_hot_springs_started
-    disable_events: room_2p_exit_west_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_2p_exit_west_shot_hit, metroid_close_doors
     reset_events: room_2p_exit_west_shot_hit
     show_tokens:
       led: led_enter_ramp
@@ -58,6 +58,9 @@ event_player:
     cmd_map_position:
       room: '2p'
       visit: True
+    cmd_play_map_music:
+      music: music_norfair_deep
+    metroid_open_doors:
   room_2p_exit_west_shot_hit.1: drop_targets_save
   room_2p_exit_west_shot_hit.2: room_2o_enter
 

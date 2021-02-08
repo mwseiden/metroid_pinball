@@ -65,6 +65,8 @@ Base Game Mechanics
         ball multiball. The rest of the game will continue to play as normal
         during Chozo multiball (with a couple of exceptions)
 
+        All doors will be closed and you will be locked into your room mode.
+
         Jackpot shots will be strobing red. Hitting a jackpot shot will award
         points and build up your super jackpot value.
 
@@ -121,8 +123,14 @@ Base Game Mechanics
         count towards the Lane Champ score.
 
     Upper Lanes:
-        Completing the upper lane lights will score points. These lanes also
-        count towards Lane Champ.
+        Complete each lane 3 times to light upper lane modes.
+
+        Once the modes are lit, shooting the upper playfield via the VUK
+        will select a new mode.
+        
+        You start a mode by shooting the side ramp.
+        
+        These lanes also count towards Lane Champ.
 
     Secret Passage:
         Scores points.
@@ -186,12 +194,15 @@ Exclusive Modes
         Temporary ruleset is hit the back ramp for points. Hit an inlane to
         increase ramp value. Lasts 30 seconds.
 
+        [DISABLED UNTIL RULES ARE MORE COMPLETE]
+
     Miniboss:
         Complete the miniboss targets 3 times and hit the scoop. The rest is
         currently unimplemented.
 
     Boss:
-        Unimplemented.
+        When you reach a boss room you must defeat the boss before you can
+        continue.
 
     Shinespark:
         Unimplemented. Orbits.
@@ -228,7 +239,11 @@ Landing Sites
     Brinstar [R]:
         Fight the space pirates. The first time here will be a 2 ball
         multiball. First you must hit the roving purple shot. Then most of the
-        playfield will light up. Hit 4 lit shots to complete the mode.
+        playfield will light up. Hit 4 lit shots to defeat the space pirates
+        and complete the mode.
+
+        Completion:
+            Defeat all 4 space pirates
 
         Doors (After Defeating the Space Pirates):
             Left Orbit (Blue) -> Mushroom Chamber [F]
@@ -246,6 +261,9 @@ Landing Sites
         After landing, you can scan the site by hitting switches. It takes 200
         switches to scan to 100%
 
+        Completion:
+            Land the ship
+
         Doors (After Landing):
             Secret Passage (Blue) -> Lush Cavern [A]
             Right Orbit (Blue) -> Plains [C]
@@ -260,6 +278,9 @@ Landing Sites
         the longer you last.
 
         Sinking puts you in the Sandy Cavern [e].
+
+        Completion:
+            Stay above the quicksand for a total of 30 seconds
 
         Doors:
             Back Ramp (Blue) -> Impact Zone [Q]
@@ -306,7 +327,11 @@ Rooms (Modes)
 
         Blighted Canopy [S]:
 
-            Rules unimplemented
+            Build up the jackpot value by collecting in/out lane shots.
+
+            Collect the jackpot on the side ramp.
+
+            Completion:
 
             Doors:
                 Right Orbit (Blue) -> Spiny Corridor [T]
@@ -317,13 +342,23 @@ Rooms (Modes)
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                VUK (Blue) -> Plains [C]
+                Secret Passage (Blue) -> Fireflea [V]
+                Left Orbit (Blue) -> Blighted Canopy [S]
 
         The Armory [U]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Secret Passage (Blue) -> Biosphere [W]
+                Back Ramp (Blue) -> Space Pirate Battle /
+                                          Communication Center [R]
 
         Fireflea [V]:
 
@@ -336,25 +371,67 @@ Rooms (Modes)
 
             When all firefleas are defeated you will be playing in the dark.
 
+            Completion:
+
             Doors:
+                Secret Passage (Blue) -> Subterranean Isle [Y]
+                VUK (Blue) -> Spiny Corridor [T]
 
         Biosphere [W]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Left Orbit (Blue) -> The Armory [U]
+                Right Orbit (Blue) -> Kraid [X]
 
         Kraid [X]:
 
-            Boss. Rules unimplemented
+            Boss with 4 ball multiball. Doors are closed for the duration of
+            the battle.
+
+            Weak shots will be lit blue and remove a small amount of HP when
+            hit. These are spread around the playfield.
+
+            Strong shots will be lit green and remove a large amount of HP when
+            hit. These are on the ramps and secret passage.
+
+            Hit a strong shot to switch all weak shots to strong shots for
+            10 seconds.
+
+            Completing the missile or power bomb banks will remove a large
+            amount of HP.
+
+            The boss is defeated when its HP reaches 0.
+
+            If the boss is defeated and there is more than 1 ball in play
+            then victory jackpot shots will be lit worth a bunch of points.
+
+            Once the boss is defeated and only one ball is left in play then
+            the doors will be opened and you may leave the room.
+
+            You may continue the fight on a subsequent ball but you will not
+            get another multiball.
+
+            Completion:
+                Defeat the boss
 
             Doors:
+                Secret Passage (Blue) [Defeated] -> Biosphere [W]
+                Back Ramp (Blue) [Defeated] -> Subterranean Isle [Y]
 
         Subterranean Isle [Y]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Secret Passage (Blue) -> Kraid [X]
+                Star Rollover (Blue) -> Central Pumping [c]
+                Back Ramp (Blue) -> Fireflea [V]
 
 
     Crateria:
@@ -369,6 +446,8 @@ Rooms (Modes)
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
                 Back Ramp (Blue) -> Landing Site [B]
                 Scoop (Red) -> Mushroom Chamber [F]
@@ -382,6 +461,8 @@ Rooms (Modes)
             Hit the standup targets for points. Side targets are worth more
             than the center targets.
 
+            Completion:
+
             Doors:
                 Secret Passage (Blue) -> Landing Site [B]
                 Left Orbit (Blue) -> The Lake [D]
@@ -394,6 +475,8 @@ Rooms (Modes)
             Entering Crateria from the Wrecked Ship cancels Land the Gunship
             and room [B] will then skip to its Landing Site phase.
 
+            Completion:
+
             Doors:
                 Back Ramp (Blue) -> Plains [C]
                 Right Orbit (Blue) -> Entryway [L] (Wrecked Ship)
@@ -402,6 +485,8 @@ Rooms (Modes)
 
             The entrance to Tourian. Defeat all the bosses to enter.
             
+            Completion:
+
             Doors:
                 Back Ramp (Blue) -> Mushroom Chamber [F]
 
@@ -412,6 +497,8 @@ Rooms (Modes)
             Entering Crateria from Brinstar cancels Land the Gunship and room
             [B] will then skip to its Landing Site phase.
 
+            Completion:
+
             Doors:
                 Left Orbit (Red) -> Lush Cavern [A]
                 Secret Passage (Blue) -> Statue Room [E]
@@ -421,6 +508,8 @@ Rooms (Modes)
         The Pit [G]:
 
             Rules unimplemented
+
+            Completion:
 
             Doors:
                 VUK (Blue) -> Mushroom Chamber [F]
@@ -434,10 +523,13 @@ Rooms (Modes)
         =[c]-[d]-[e]-[f]
           |   |
          [g]-[h]
+              =
 
         Underground Desert [Z]:
 
             Rules unimplemented
+
+            Completion:
 
             Doors:
                 Secret Passage (Blue) -> The Abyss [d]
@@ -449,7 +541,11 @@ Rooms (Modes)
 
         Crevasse [b]:
 
-            Rules Unimplemented
+            Shoot the missile, miniboss, then power bomb standup banks to
+            start a hurry up at the drop target.
+
+            Completion:
+                Hit the hurry up.
 
             Doors:
                 Left Orbit (Blue) -> Shifting Sands [a]
@@ -459,6 +555,8 @@ Rooms (Modes)
 
             Rules Unimplemented
 
+            Completion:
+
             Doors:
                 Left Orbit (Blue) -> Shifting Sands [a]
                 Star Rollover (Blue) -> Frozen Lake [f]
@@ -466,6 +564,9 @@ Rooms (Modes)
         The Abyss [d]:
 
             2x Bridge Scoring
+
+            Completion:
+                Blow up a bridge.
 
             Doors:
                 Left Orbit (Blue) -> Shifting Sands [a]
@@ -488,21 +589,58 @@ Rooms (Modes)
             shot. Once all standups are lit, shoot the scoop to crack the
             ice.
 
+            Completion:
+                Break the ice by shooting the lit scoop.
+
             Doors:
                 Secret Passage (Red) -> Sandy Cavern [e]
                 Side Ramp (Blue) -> Crevasse [b]
 
         Draygon [g]:
 
-            Boss. Rules unimplemented.
+            Boss with 4 ball multiball. Doors are closed for the duration of
+            the battle.
+
+            Weak shots will be lit blue and remove a small amount of HP when
+            hit.
+
+            Hit the captive ball to switch all weak shots to strong shots for
+            10 seconds.
+
+            Strong shots will be lit red and remove a large amount of HP when
+            hit.
+
+            Completing the missile or power bomb banks will remove a large
+            amount of HP.
+
+            The boss is defeated when its HP reaches 0.
+
+            If the boss is defeated and there is more than 1 ball in play
+            then victory jackpot shots will be lit worth a bunch of points.
+
+            Once the boss is defeated and only one ball is left in play then
+            the doors will be opened and you may leave the room.
+
+            You may continue the fight on a subsequent ball but you will not
+            get another multiball.
+
+            Completion:
+                Defeat the boss.
 
             Doors:
+                Right Orbit (Blue) [Defeated] -> Crystalline Seabed [h]
+                Back Ramp (Blue) [Defeated] -> Central Pumping [c]
 
         Crystalline Seabed [h]:
 
             Rules Unimplemented
 
+            Completion:
+
             Doors:
+                Right Orbit (Blue) -> The Abyss [d]
+                Secret Passage (Blue) -> Draygon [g]
+                Scoop (Blue) -> Lava Jump [i]
 
     Norfair:
 
@@ -521,6 +659,8 @@ Rooms (Modes)
         Lake of Fire [j]:
 
             Rules Unimplemented
+
+            Completion:
 
             Doors:
                 Left Orbit (Blue) -> Lava Jump [i]
@@ -548,36 +688,85 @@ Rooms (Modes)
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Back Ramp (Blue) -> Geothermal Plant [m]
 
         Geothermal Plant [m]:
 
-            Rules Unimplemented
+            Build up the jackpot value by hitting the inlanes.
+
+            Collect a jackpot on the scoop.
+
+            Completion:
 
             Doors:
                 Side Ramp (Blue) -> Lava Jump [i]
+                Right Orbit (Blue) -> Magma Chamber [n]
+                Secret Passage (Blue) -> West Hot Springs [l]
 
         Magma Chamber [n]:
 
             Rules Unimplemented
 
+            Completion:
+
+            Doors:
+                Secret Passage (Blue) -> Geothermal Plant [m]
+                Right Orbit (Blue) -> Strange Ruins [o]
+                Scoop (Blue) -> Ridley [q]
+
         Strange Ruins [o]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Right Orbit (Blue) -> Larvae Nest [k]
+                Back Ramp (Blue) -> Magma Chamber [n]
+                Mini Loop (Blue) -> East Hot Springs [p]
 
         East Hot Springs [p]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Back Ramp (Blue) -> Strange Ruins [o]
 
         Ridley [q]:
 
-            Boss. Rules unimplemented.
+            Boss with 4 ball multiball. Doors are closed for the duration of
+            the battle.
+
+            Weak shots will be lit blue and remove a small amount of HP when
+            hit. These are spread out throughout the playfield.
+
+            Strong shots will be lit red and remove a large amount of HP when
+            hit. These are on the two ramps.
+
+            Completing the missile or power bomb banks will remove a large
+            amount of HP.
+
+            The boss is defeated when its HP reaches 0.
+
+            If the boss is defeated and there is more than 1 ball in play
+            then victory jackpot shots will be lit worth a bunch of points.
+
+            Once the boss is defeated and only one ball is left in play then
+            the doors will be opened and you may leave the room.
+
+            You may continue the fight on a subsequent ball but you will not
+            get another multiball.
+
+            Completion:
+                Defeat the boss.
 
             Doors:
+                Back Ramp (Blue) [Defeated] -> Magma Chamber [n]
 
 
     Tourian:
@@ -602,27 +791,79 @@ Rooms (Modes)
 
         Teleporters [H]:
 
-            Rules unimplemented
+            Hit the captive ball once if the ship has power or twice if it
+            does not. This will activate the teleporter.
+
+            Lock the ball behind the drop target. You will be teleported to a
+            random room.
+
+            Progress resets if the ball drains.
+
+            Completion:
 
             Doors:
+                Back Ramp (Blue) -> Computing [I]
+                Teleporter -> Random Room
 
         Computing [I]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Left Orbit (Blue) -> Teleporters [H]
+                Back Ramp (Blue) -> Phantoon [J]
+                Scoop (Blue) -> Crew Quarters [K]
 
         Phantoon [J]:
 
-            Boss. Rules unimplemented
+            Boss with 4 ball multiball. Doors are closed for the duration of
+            the battle.
+
+            Hit the center target bank to open Phantoon's eye. The eye is
+            represented by the center insert.
+
+            Opening the eye will light red strong shots. Strong shots remove
+            a large amount of HP when hit. These will be spread out all over
+            the playfield.
+
+            Completing the missile or power bomb banks will remove a large
+            amount of HP.
+
+            The boss is defeated when its HP reaches 0.
+
+            If the boss is defeated and there is more than 1 ball in play
+            then victory jackpot shots will be lit worth a bunch of points.
+
+            Once the boss is defeated and only one ball is left in play then
+            the doors will be opened and you may leave the room.
+
+            You may continue the fight on a subsequent ball but you will not
+            get another multiball.
+
+            Completion:
+                Defeat the boss.
 
             Doors:
+                Back Ramp (Blue) [Defeated] -> Computing [I]
 
         Crew Quarters [K]:
 
-            Rules unimplemented
+            Fight the Coverns.
+
+            If the power is out then you will only be able to see one covern
+            shot at a time.
+
+            If the ship has been powered up then all five Coverns shots will
+            be lit.
+
+            Completion:
 
             Doors:
+                Right Orbit (Blue) [Unpowered] -> Computing [I]
+                Back Ramp (Blue) [Powered] -> Computing [I]
+                Scoop (Blue) -> Entryway [L]
 
         Entryway [L]:
 
@@ -642,6 +883,9 @@ Rooms (Modes)
             When one ball drains (and is not saved) then hit the scoop to
             power up the generator and open the door.
 
+            Completion:
+                Hit the scoop and power the generator.
+
             Doors:
                 Back Ramp (Blue) -> Entryway [L]
 
@@ -649,24 +893,40 @@ Rooms (Modes)
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Back Ramp (Blue) -> Entryway [L]
+                Scoop (Blue) -> Cargo Bay [P]
 
         Artillery [O]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Right Orbit (Blue) -> Cargo Bay [P]
 
         Cargo Bay [P]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Left Orbit (Blue) -> The Hull [N]
+                Right Orbit (Blue) -> Impact Zone [Q]
+                Back Ramp (Blue) -> Artillery [O]
 
         Impact Zone [Q]:
 
             Rules unimplemented
 
+            Completion:
+
             Doors:
+                Back Ramp (Blue) -> Cargo Bay [P]
+                Scoop (Blue) -> Shifting Sands [a]
 
 

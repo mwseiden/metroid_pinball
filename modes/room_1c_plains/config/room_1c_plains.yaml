@@ -8,8 +8,8 @@ shots:
   room_1c_exit_west_shot:
     switch: s_left_passage
     profile: exit_door
-    enable_events: mode_room_1c_plains_started
-    disable_events: room_1c_exit_west_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1c_exit_west_shot_hit, metroid_close_doors
     reset_events: room_1c_exit_west_shot_hit
     show_tokens:
       led: led_enter_secret_passage
@@ -17,8 +17,8 @@ shots:
   room_1c_exit_east_shot:
     hit_events: left_orbit_hit
     profile: exit_door
-    enable_events: mode_room_1c_plains_started
-    disable_events: room_1c_exit_east_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1c_exit_east_shot_hit, metroid_close_doors
     reset_events: room_1c_exit_east_shot_hit
     show_tokens:
       led: led_enter_left_orbit
@@ -26,8 +26,8 @@ shots:
   room_1c_exit_south_shot:
     switch: s_scoop
     profile: exit_door
-    enable_events: mode_room_1c_plains_started
-    disable_events: room_1c_exit_south_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1c_exit_south_shot_hit, metroid_close_doors
     reset_events: room_1c_exit_south_shot_hit
     show_tokens:
       led: led_enter_scoop
@@ -143,6 +143,9 @@ event_player:
     cmd_map_position:
       room: '1c'
       visit: True
+    cmd_play_map_music:
+      music: music_crateria
+    metroid_open_doors:
   room_1c_exit_west_shot_hit.1: drop_targets_save
   room_1c_exit_west_shot_hit.2: room_1b_enter
   room_1c_exit_east_shot_hit.1: drop_targets_save

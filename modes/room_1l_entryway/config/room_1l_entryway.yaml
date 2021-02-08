@@ -121,11 +121,15 @@ event_player:
       show_type: gradient
       color_start: "080606"
       color_end: "000000"
+    cmd_play_map_music:
+      music: music_wrecked_ship
   mode_room_1l_entryway_started_charge:
     cmd_backbox_show:
       show_type: gradient
       color_start: "FF0000"
       color_end: "E0C020"
+    cmd_play_map_music:
+      music: music_wrecked_ship_generator
   mode_room_1l_entryway_started:
     drop_targets_continue:
     cmd_map_position:

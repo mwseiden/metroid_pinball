@@ -9,7 +9,7 @@ shots:
     hit_events: left_orbit_hit
     profile: exit_door
     enable_events: room_2e_enable_west_missile_door
-    disable_events: room_2e_disable_west_missile_door, room_2e_open_west_door
+    disable_events: room_2e_disable_west_missile_door, room_2e_open_west_door, metroid_close_doors
     reset_events: room_2e_disable_west_missile_door, room_2e_open_west_door
     show_tokens:
       led: led_enter_left_orbit
@@ -18,7 +18,7 @@ shots:
     hit_events: rollover_shot_hit
     profile: exit_door
     enable_events: room_2e_enable_east_missile_door
-    disable_events: room_2e_disable_east_missile_door, room_2e_open_east_door
+    disable_events: room_2e_disable_east_missile_door, room_2e_open_east_door, metroid_close_doors
     reset_events: room_2e_disable_east_missile_door, room_2e_open_east_door
     show_tokens:
       led: led_rollover
@@ -27,7 +27,7 @@ shots:
     hit_events: left_orbit_hit
     profile: exit_door
     enable_events: room_2e_enable_west_door
-    disable_events: room_2e_disable_west_door
+    disable_events: room_2e_disable_west_door, metroid_close_doors
     reset_events: room_2e_disable_west_door
     show_tokens:
       led: led_enter_left_orbit
@@ -36,7 +36,7 @@ shots:
     hit_events: rollover_shot_hit
     profile: exit_door
     enable_events: room_2e_enable_east_door
-    disable_events: room_2e_disable_east_door
+    disable_events: room_2e_disable_east_door, metroid_close_doors
     reset_events: room_2e_disable_east_door
     show_tokens:
       led: led_rollover
@@ -92,10 +92,13 @@ event_player:
     cmd_map_position:
       room: '2e'
       visit: True
-  mode_room_2e_sandy_cavern_started{current_player.door_2d_2e == 0}: room_2e_enable_west_missile_door, room_2e_disable_west_door
-  mode_room_2e_sandy_cavern_started{current_player.door_2e_2f == 0}: room_2e_enable_east_missile_door, room_2e_disable_east_door
-  mode_room_2e_sandy_cavern_started{current_player.door_2d_2e == 1}: room_2e_enable_west_door, room_2e_disable_west_missile_door
-  mode_room_2e_sandy_cavern_started{current_player.door_2e_2f == 1}: room_2e_enable_east_door, room_2e_disable_east_missile_door
+    cmd_play_map_music:
+      music: music_maridia
+    metroid_open_doors:
+  metroid_open_doors{current_player.door_2d_2e == 0 and game.balls_in_play == 1}: room_2e_enable_west_missile_door, room_2e_disable_west_door
+  metroid_open_doors{current_player.door_2e_2f == 0 and game.balls_in_play == 1}: room_2e_enable_east_missile_door, room_2e_disable_east_door
+  metroid_open_doors{current_player.door_2d_2e == 1 and game.balls_in_play == 1}: room_2e_enable_west_door, room_2e_disable_west_missile_door
+  metroid_open_doors{current_player.door_2e_2f == 1 and game.balls_in_play == 1}: room_2e_enable_east_door, room_2e_disable_east_missile_door
   room_2e_exit_west_closed_shot_hit{current_player.missiles > 0}:
     room_2e_open_west_door:
     cmd_map_complete:
