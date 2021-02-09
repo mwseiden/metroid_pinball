@@ -112,7 +112,7 @@ sounds:
 
 sound_player:
   upper_lane_left_shot_hit: upper_lanes_spider_rail
-  upper_lane_middle_shot_hit: upper_lanes_bridge
+  upper_lanes_play_bridge_sound: upper_lanes_bridge
 
 show_player:
   upper_lanes_stage_1_complete:
@@ -138,6 +138,7 @@ event_player:
   upper_lane_select_left_shot_hit: upper_lanes_select_1
   upper_lane_select_middle_shot_hit: upper_lanes_select_2
   upper_lane_select_right_shot_hit: upper_lanes_select_3
+  upper_lane_middle_shot_hit{current_player.power_bombs < 1}: upper_lanes_play_bridge_sound
 
 variable_player:
   upper_lane_left_shot_hit:
