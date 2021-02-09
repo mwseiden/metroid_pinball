@@ -109,10 +109,17 @@ sounds:
     track: sfx
     priority: 50
     max_queue_time: None
+  upper_lanes_secret:
+    file: upper_lanes_secret.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
 
 sound_player:
   upper_lane_left_shot_hit: upper_lanes_spider_rail
   upper_lanes_play_bridge_sound: upper_lanes_bridge
+  upper_lane_right_shot_hit: upper_lanes_secret
 
 show_player:
   upper_lanes_stage_1_complete:
