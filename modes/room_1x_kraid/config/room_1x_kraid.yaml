@@ -54,7 +54,7 @@ shots:
     switch: s_ramp_enter
     profile: exit_door
     enable_events: mode_room_1x_kraid_open_door
-    disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_battle
+    disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_battle, metroid_close_doors
     show_tokens:
       led: led_enter_ramp
       color: door_blue
@@ -62,7 +62,7 @@ shots:
     switch: s_left_passage
     profile: exit_door
     enable_events: mode_room_1x_kraid_open_door
-    disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_battle
+    disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_battle, metroid_close_doors
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
