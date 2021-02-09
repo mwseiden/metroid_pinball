@@ -166,7 +166,7 @@ sound_player:
   room_1m_stage_1: shoot_the_flashing_target
   room_1m_stage_2: shoot_the_scoop
   room_1m_generator_start_multiball_shot_hit: multiball
-  room_1m_ball_locked: shoot_the_drop_target
+  room_1m_play_shoot_drop: shoot_the_drop_target
   room_1m_add_charge: room_1m_charge
 
 coil_player:
@@ -198,6 +198,7 @@ event_player:
   multiball_room_1m_generator_multiball_started: drop_target_mode_should_end
   mode_drop_targets_stopped: cmd_drop_three_up
   s_behind_drop_1_active{device.multiballs.room_1m_generator_multiball.balls_added_live > 0}: cmd_drop_one_up, room_1m_test_lock
+  timer_room_1m_test_ball_locked_complete{current_player.room_1m_captured == 0}: room_1m_play_shoot_drop
   timer_room_1m_test_ball_locked_complete{device.switches.s_behind_drop_1.state}: room_1m_ball_locked, cmd_drop_three_down
   timer_room_1m_test_ball_locked_complete{not device.switches.s_behind_drop_1.state}: room_1m_ball_released, cmd_drop_three_up, cmd_drop_one_down
   multiball_room_1m_generator_multiball_ended: cmd_drop_one_down, room_1m_stage_2
