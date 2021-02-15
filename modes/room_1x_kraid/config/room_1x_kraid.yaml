@@ -54,7 +54,7 @@ shots:
     switch: s_ramp_enter
     profile: exit_door
     enable_events: mode_room_1x_kraid_open_door
-    disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_battle
+    disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_battle, metroid_close_doors
     show_tokens:
       led: led_enter_ramp
       color: door_blue
@@ -62,7 +62,7 @@ shots:
     switch: s_left_passage
     profile: exit_door
     enable_events: mode_room_1x_kraid_open_door
-    disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_battle
+    disable_events: mode_room_1x_kraid_started, mode_room_1x_kraid_battle, metroid_close_doors
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
@@ -456,14 +456,15 @@ event_player:
     cmd_map_position:
       room: '1x'
       visit: True
+    metroid_open_doors:
   mode_room_1x_kraid_open_door:
     cmd_play_map_music:
       music: music_metal_item_room
   mode_room_1x_kraid_battle:
     cmd_play_map_music:
       music: music_boss
-  mode_room_1x_kraid_started{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_over, mode_room_1x_kraid_open_door, room_1x_show_defeated_backglass
-  mode_room_1x_kraid_started{current_player.boss_kraid_hp > 0}: mode_room_1x_kraid_battle, metroid_exclusive_started
+  metroid_open_doors{current_player.boss_kraid_hp < 1}: mode_room_1x_kraid_over, mode_room_1x_kraid_open_door, room_1x_show_defeated_backglass
+  metroid_open_doors{current_player.boss_kraid_hp > 0}: mode_room_1x_kraid_battle, metroid_exclusive_started
   mode_room_1x_kraid_battle{current_player.boss_kraid_multiball_played == 0}: mode_room_1x_kraid_start_multiball
   room_1x_boss_weak_back_ramp_shot_hit: kraid_hit_strong
   room_1x_boss_weak_side_ramp_shot_hit: kraid_hit_strong

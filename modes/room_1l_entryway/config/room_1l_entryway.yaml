@@ -9,8 +9,8 @@ shots:
   room_1l_exit_east_shot:
     switches: s_vuk
     profile: exit_door
-    enable_events: mode_room_1l_entryway_started
-    disable_events: room_1l_exit_east_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1l_exit_east_shot_hit, metroid_close_doors
     reset_events: room_1l_exit_east_shot_hit
     show_tokens:
       led: gi_strip_9
@@ -18,8 +18,8 @@ shots:
   room_1l_exit_west_shot:
     switches: s_left_passage
     profile: exit_door
-    enable_events: mode_room_1l_entryway_started
-    disable_events: room_1l_exit_west_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1l_exit_west_shot_hit, metroid_close_doors
     reset_events: room_1l_exit_west_shot_hit
     show_tokens:
       led: led_enter_secret_passage
@@ -27,8 +27,8 @@ shots:
   room_1l_exit_south_shot:
     switch: s_scoop
     profile: exit_door
-    enable_events: mode_room_1l_entryway_started
-    disable_events: room_1l_exit_south_shot_hit
+    enable_events: metroid_open_doors
+    disable_events: room_1l_exit_south_shot_hit, metroid_close_doors
     reset_events: room_1l_exit_south_shot_hit
     show_tokens:
       led: led_enter_scoop
@@ -36,8 +36,8 @@ shots:
   room_1l_exit_north_shot:
     hit_events: left_orbit_hit
     profile: exit_door_optimum
-    enable_events: mode_room_1l_entryway_started_no_charge
-    disable_events: mode_room_1l_entryway_started, room_1l_exit_north_shot_hit
+    enable_events: mode_room_1l_entryway_started_no_charge, room_1l_open_no_charge_doors
+    disable_events: mode_room_1l_entryway_started, room_1l_exit_north_shot_hit, metroid_close_doors
     reset_events: mode_room_1l_entryway_started, room_1l_exit_north_shot_hit
     show_tokens:
       led: led_enter_left_orbit
@@ -45,8 +45,8 @@ shots:
   room_1l_exit_north_powered_shot:
     switches: s_ramp_enter
     profile: exit_door_optimum
-    enable_events: mode_room_1l_entryway_started_charge
-    disable_events: mode_room_1l_entryway_started, room_1l_exit_north_powered_shot_hit
+    enable_events: mode_room_1l_entryway_started_charge, room_1l_open_charge_doors
+    disable_events: mode_room_1l_entryway_started, room_1l_exit_north_powered_shot_hit, metroid_close_doors
     reset_events: mode_room_1l_entryway_started, room_1l_exit_north_powered_shot_hit
     show_tokens:
       led: led_enter_ramp
@@ -123,6 +123,7 @@ event_player:
       color_end: "000000"
     cmd_play_map_music:
       music: music_wrecked_ship
+    metroid_open_doors:
   mode_room_1l_entryway_started_charge:
     cmd_backbox_show:
       show_type: gradient
@@ -137,6 +138,8 @@ event_player:
       visit: True
   mode_room_1l_entryway_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1l_entryway_started_no_charge
   mode_room_1l_entryway_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1l_entryway_started_charge
+  metroid_open_doors{current_player.wrecked_ship_powered_up == 0}: room_1l_open_no_charge_doors
+  metroid_open_doors{current_player.wrecked_ship_powered_up == 1}: room_1l_open_charge_doors
   room_1l_exit_east_shot_hit.1: drop_targets_save
   room_1l_exit_east_shot_hit.2: room_1m_enter
   room_1l_exit_west_shot_hit.1: drop_targets_save

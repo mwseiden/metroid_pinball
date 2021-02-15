@@ -58,7 +58,7 @@ shots:
     hit_events: right_orbit_hit
     profile: exit_door
     enable_events: room_1r_open_exits
-    disable_events: mode_room_1r_space_pirate_battle_started, room_1b_exit_east_shot_hit
+    disable_events: mode_room_1r_space_pirate_battle_started, room_1b_exit_east_shot_hit, metroid_close_doors
     reset_events: mode_room_1r_space_pirate_battle_started, room_1b_exit_east_shot_hit
     show_tokens:
       led: led_enter_right_orbit
@@ -67,7 +67,7 @@ shots:
     hit_events: left_orbit_hit
     profile: exit_door
     enable_events: room_1r_open_exits
-    disable_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_north_shot_hit
+    disable_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_north_shot_hit, metroid_close_doors
     reset_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_north_shot_hit
     show_tokens:
       led: led_enter_left_orbit
@@ -76,7 +76,7 @@ shots:
     switch: s_scoop
     profile: exit_door
     enable_events: room_1r_open_exits
-    disable_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_south_shot_hit
+    disable_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_south_shot_hit, metroid_close_doors
     reset_events: mode_room_1r_space_pirate_battle_started, room_1r_exit_south_shot_hit
     show_tokens:
       led: led_enter_scoop
@@ -482,6 +482,10 @@ event_player:
       twinkle_color: "FF00FF"
       twinkle_count: 10
       steps: 10
+  multiball_room_1r_battle_started: chozo_multiball_disable
+  multiball_room_1r_battle_ended: chozo_multiball_enable
+  multiball_room_1r_battle_ended{current_player.room_1r_finished == 1}: room_1r_open_exits
+  metroid_open_doors{current_player.room_1r_finished == 1}: room_1r_open_exits
   timer_room_1r_shoot_space_pirates_timer_complete{current_player.room_1r_finished == 0}: room_1r_start_timer
   timer_room_1r_light_shot_timer_tick{ticks == 1}: room_1r_shot_1_activate
   timer_room_1r_light_shot_timer_tick{ticks == 2}: room_1r_shot_2_activate
@@ -505,12 +509,12 @@ event_player:
   room_1r_start_shot_9_hit: room_1r_super_kill, logicblock_room_1r_battle_sequence_complete
   shoot_space_pirates_shot_group_lit_hit: room_1r_kill_pirate_duck
   logicblock_room_1r_battle_sequence_hit: room_1r_reset_ducks
+  logicblock_room_1r_battle_sequence_complete{game.balls_in_play == 1}: room_1r_open_exits
   logicblock_room_1r_battle_sequence_complete:
     room_1r_remove_pirate_1:
     room_1r_remove_pirate_2:
     room_1r_remove_pirate_3:
     room_1r_remove_pirate_4:
-    room_1r_open_exits:
     cmd_map_complete:
       room: '1r'
   room_1r_exit_east_shot_hit.1: drop_targets_save

@@ -96,6 +96,31 @@ shot_groups:
     disable_events: mode_upper_lanes_started, mode_upper_lanes_ending, upper_lanes_stage_2_complete
     reset_events: upper_lanes_stage_2_complete
 
+sounds:
+  upper_lanes_spider_rail:
+    file: upper_lanes_spider_rail.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  upper_lanes_bridge:
+    file: upper_lanes_bridge.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  upper_lanes_secret:
+    file: upper_lanes_secret.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+sound_player:
+  upper_lane_left_shot_hit: upper_lanes_spider_rail
+  upper_lanes_play_bridge_sound: upper_lanes_bridge
+  upper_lane_right_shot_hit: upper_lanes_secret
+
 show_player:
   upper_lanes_stage_1_complete:
     upper_lanes_complete:
@@ -120,6 +145,7 @@ event_player:
   upper_lane_select_left_shot_hit: upper_lanes_select_1
   upper_lane_select_middle_shot_hit: upper_lanes_select_2
   upper_lane_select_right_shot_hit: upper_lanes_select_3
+  upper_lane_middle_shot_hit{current_player.power_bombs < 1}: upper_lanes_play_bridge_sound
 
 variable_player:
   upper_lane_left_shot_hit:
