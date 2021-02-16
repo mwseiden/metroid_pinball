@@ -246,10 +246,7 @@ event_player:
   room_1b_ship_navigated:
     cmd_scoop_collect:
       index: 0
-  scoop_award_land_the_gunship:
-    room_1b_achieved:
-    cmd_scoop_collect:
-      index: 0
+  scoop_award_land_the_gunship: room_1b_achieved
 
 
 variable_player:
