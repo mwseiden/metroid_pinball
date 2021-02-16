@@ -21,6 +21,7 @@ class Scoop(Mode):
 
     def event_scoop_hold_collect(self, **kwargs):
         self._set_collectable(kwargs.get('index', 0))
+        self.machine.events.post('scoop_collect_enable')
 
     def event_scoop_clear(self, **kwargs):
         self._clear_collectable(kwargs.get('index', 0))
