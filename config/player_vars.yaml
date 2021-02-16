@@ -190,6 +190,9 @@ player_vars:
     initial_value: 0
   rooms_completed:
     initial_value: 0
+  scoop_collectables:
+    value_type: str
+    initial_value: '0'
   scoops:
     initial_value: 0
   skillshot_bombs_lit:
