@@ -26,7 +26,9 @@ class Scoop(Mode):
         self._clear_collectable(kwargs.get('index', 0))
 
     def _set_collectable(self, index):
-        self.machine.game.player['scoop_collectables'] = player[:index] + '1' + string[index+1:]
+        collectables = self.machine.game.player['scoop_collectables']
+        self.machine.game.player['scoop_collectables'] = collectables[:index] + '1' + collectables[index+1:]
 
     def _clear_collectable(self, index):
-        self.machine.game.player['scoop_collectables'] = player[:index] + '0' + string[index+1:]
+        collectables = self.machine.game.player['scoop_collectables']
+        self.machine.game.player['scoop_collectables'] = collectables[:index] + '0' + collectables[index+1:]
