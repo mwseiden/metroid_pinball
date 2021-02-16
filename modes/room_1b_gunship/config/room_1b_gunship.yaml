@@ -37,12 +37,12 @@ accruals:
     events_when_complete: room_1b_ship_navigated
     persist_state: true
     reset_on_complete: false
-  room_1b_land_ship:
-    enable_events: room_1b_ship_navigated
-    events: scoop_shot_hit
-    events_when_complete: room_1b_achieved
-    persist_state: true
-    reset_on_complete: false
+  # room_1b_land_ship:
+    # enable_events: room_1b_ship_navigated
+    # events: scoop_shot_hit
+    # events_when_complete: room_1b_achieved
+    # persist_state: true
+    # reset_on_complete: false
 
 show_player:
   room_1b_ship_left:
@@ -243,6 +243,13 @@ event_player:
       max_delay: 2
       background_color: "000004"
       drop_color: "101020"
+  room_1b_ship_navigated:
+    cmd_scoop_collect:
+      index: 0
+  scoop_award_land_the_gunship:
+    room_1b_achieved:
+    cmd_scoop_collect:
+      index: 0
 
 
 variable_player:
