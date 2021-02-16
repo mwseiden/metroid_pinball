@@ -1,0 +1,23 @@
+#config_version=5
+mode:
+  start_events: metroid_base_started #, metroid_exclusive_ended
+  stop_events: metroid_base_ended #, metroid_exclusive_started
+  priority: 100
+
+
+ball_holds:
+  collect_award_shot:
+    balls_to_hold: 1
+    hold_devices: bd_scoop
+    enable_events: scoop_collect_enable
+    disable_events: mode_scoop_started, scoop_award_collected
+    release_all_events: scoop_total_bypass
+
+
+event_player:
+  scoop_award_available_to_collect.1: scoop_autofire_should_disable
+  scoop_award_available_to_collect.2: scoop_collect_enable
+  scoop_award_available_to_collect.3: scoop_total_bypass
+  scoop_total_bypass: scoop_award_collected
+  scoop_award_collected: scoop_autofire_should_enable
+
