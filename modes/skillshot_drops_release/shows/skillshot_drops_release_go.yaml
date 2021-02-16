@@ -2,7 +2,7 @@
 
 - duration: 3s
   slides:
-    skillshot_drops_release_countdown_1_slide:
+    skillshot_drops_release_countdown_go_slide:
       widgets:
       - type: text
         text: GO!!

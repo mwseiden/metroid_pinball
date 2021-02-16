@@ -10,7 +10,7 @@
 
 - duration: 1s
   slides:
-    skillshot_drops_release_countdown_1_slide:
+    skillshot_drops_release_countdown_3_slide:
       widgets:
       - type: text
         text: 3
@@ -26,7 +26,7 @@
 
 - duration: 1s
   slides:
-    skillshot_drops_release_countdown_3_slide:
+    skillshot_drops_release_countdown_1_slide:
       widgets:
       - type: text
         text: 1
