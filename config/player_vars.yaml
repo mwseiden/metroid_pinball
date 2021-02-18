@@ -193,6 +193,8 @@ player_vars:
   scoop_collectables:
     value_type: str
     initial_value: '00000000'
+  scoop_indicator_index:
+    initial_value: 0
   scoops:
     initial_value: 0
   skillshot_bombs_lit:

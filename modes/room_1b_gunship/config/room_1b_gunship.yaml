@@ -49,16 +49,16 @@ show_player:
       loops: 0
     room_1b_right_orbit_blink:
       action: stop
-  room_1b_ship_navigated:
-    blink_light:
-      key: room_1b_scoop_blink
-      loops: -1
-      show_tokens:
-        led: led_enter_scoop
-        color: ffff00
-  room_1b_achieved:
-    room_1b_scoop_blink:
-      action: stop
+  # room_1b_ship_navigated:
+    # blink_light:
+      # key: room_1b_scoop_blink
+      # loops: -1
+      # show_tokens:
+        # led: led_enter_scoop
+        # color: ffff00
+  # room_1b_achieved:
+    # room_1b_scoop_blink:
+      # action: stop
   mode_room_1b_gunship_started:
     gi_solid_with_overhead:
       loops: -1
