@@ -16,6 +16,9 @@ class Scoop(Mode):
         if player['scoop_collectables'][0] == '1':
             self.machine.events.post('scoop_award_land_the_gunship')
             self._clear_collectable(0)
+        elif player['scoop_collectables'][1] == '1':
+            self.machine.events.post('scoop_award_side_targets')
+            self._clear_collectable(1)
         else:
           self.machine.events.post('scoop_ball_hold_release')
 

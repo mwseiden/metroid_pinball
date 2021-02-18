@@ -40,12 +40,11 @@ shot_groups:
     disable_events: mode_side_targets_ending
 
 event_player:
-  side_targets_shot_group_lit_complete: side_targets_completed, scoop_award_available_to_collect
+  side_targets_shot_group_lit_complete.1:
+    cmd_scoop_collect:
+      index: 1
+  side_targets_shot_group_lit_complete.2: scoop_award_available_to_collect
 
-show_player:
-  side_targets_completed:
-    side_targets_completed:
-      loops: 0
 
 sounds:
   side_targets_unlit_hit:
@@ -69,12 +68,15 @@ sound_player:
 
 variable_player:
   side_1_shot_hit:
-    score: 20000 * current_player.multiplier
+    score: 50000 * current_player.multiplier
   side_2_shot_hit:
-    score: 20000 * current_player.multiplier
+    score: 50000 * current_player.multiplier
   side_3_shot_hit:
-    score: 20000 * current_player.multiplier
-  side_targets_completed:
+    score: 50000 * current_player.multiplier
+  scoop_award_side_targets:
     score:
-      int: 50000 * current_player.multiplier
+      int: 250000 * current_player.multiplier
+    room_special_score:
+      int: 250000 * current_player.multiplier
+      action: set
 

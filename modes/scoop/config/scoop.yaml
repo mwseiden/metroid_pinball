@@ -21,6 +21,10 @@ show_player:
     scoop_land_ship:
       events_when_completed: scoop_ball_hold_release
       loops: 0
+  scoop_award_side_targets:
+    scoop_award_points:
+      events_when_completed: scoop_ball_hold_release
+      loops: 0
 
 
 sounds:
