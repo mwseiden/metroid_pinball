@@ -29,6 +29,7 @@ show_player:
     blink_light:
       key: scoop_collect_blink
       events_when_completed: cmd_advance_scoop_indicator
+      speed: 2
       loops: 4
       show_tokens:
         led: led_enter_scoop
@@ -37,7 +38,7 @@ show_player:
     blink_light:
       key: scoop_collect_blink
       events_when_completed: cmd_advance_scoop_indicator
-      loops: 4
+      loops: 2
       show_tokens:
         led: led_enter_scoop
         color: ff8000
@@ -45,7 +46,7 @@ show_player:
     blink_light:
       key: scoop_collect_blink
       events_when_completed: cmd_advance_scoop_indicator
-      loops: 4
+      loops: 2
       show_tokens:
         led: led_enter_scoop
         color: stop
