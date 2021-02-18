@@ -218,7 +218,7 @@ show_player:
       action: stop
     lights_claire:
       loops: -1
-      speed: 15
+      speed: 30
   slide_stemage_slide_created:
     lights_claire:
       action: stop
