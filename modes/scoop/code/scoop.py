@@ -33,11 +33,15 @@ class Scoop(Mode):
     def event_scoop_advance_indicator(self, **kwargs):
         player = self.machine.game.player
         index = self._find_next_index()
-        show = self._get_show(index)
 
-        self.machine.events.post('scoop_play_lights_{}'.format(show))
+        if index is None:
+          self.machine.events.post('scoop_stop_lights')
+          player['scoop_indicator_index'] = 0
+        else:
+          show = self._get_show(index)
+          self.machine.events.post('scoop_play_lights_{}'.format(show))
+          player['scoop_indicator_index'] = index
 
-        player['scoop_indicator_index'] = index
 
     def _find_next_index(self):
         player = self.machine.game.player

@@ -49,7 +49,9 @@ show_player:
       show_tokens:
         led: led_enter_scoop
         color: stop
-
+  scoop_stop_lights:
+    scoop_collect_blink:
+      action: stop
 
 sounds:
   scoop_ship_land:
