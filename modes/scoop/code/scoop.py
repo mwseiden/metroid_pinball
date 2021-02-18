@@ -32,36 +32,26 @@ class Scoop(Mode):
 
     def event_scoop_advance_indicator(self, **kwargs):
         player = self.machine.game.player
-        index = player['scoop_indicator_index']
-        new_index = 0
-
-        show = None
-
-        for i in range(index + 1, 8):
-          if player['scoop_collectables'][i] == '1':
-            show = self._get_show(i)
-            if show is not None:
-              new_index = i
-            break
-
-        if show is None:
-          for i in range(0, index):
-            show = self._get_show(i)
-            if show is not None:
-              new_index = i
-            break
-
-        if show is None:
-          show = 'none'
-
-        new_index = new_index + 1
-
-        if new_index > 7:
-          new_index = 0
+        index = self._find_next_index()
+        show = self._get_show(index)
 
         self.machine.events.post('scoop_play_lights_{}'.format(show))
 
-        player['scoop_indicator_index'] = new_index
+        player['scoop_indicator_index'] = index
+
+    def _find_next_index(self):
+        player = self.machine.game.player
+        i = player['scoop_indicator_index']
+
+        for i in range(i + 1, 8):
+            if player['scoop_collectables'][i] == '1':
+                return i
+
+        for i in range(0, i):
+            if player['scoop_collectables'][i] == '1':
+                return i
+
+        return None
 
     def _get_show(self, i):
         if i == 0:
@@ -69,7 +59,7 @@ class Scoop(Mode):
         elif i == 1:
           return 'side_targets'
         else:
-          return None
+          return 'none'
 
 
     def _set_collectable(self, index):
