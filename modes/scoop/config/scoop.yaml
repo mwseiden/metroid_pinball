@@ -4,7 +4,7 @@ mode:
   start_events: metroid_base_started #, metroid_exclusive_ended
   stop_events: metroid_base_ended #, metroid_exclusive_started
   code: scoop.Scoop
-  priority: 100
+  priority: 1000
 
 
 ball_holds:
@@ -13,7 +13,7 @@ ball_holds:
     hold_devices: bd_scoop
     enable_events: scoop_collect_enable
     disable_events: mode_scoop_started, scoop_disable_ball_hold
-    release_all_events: scoop_ball_hold_release  # ball_hold_collect_award_shot_held_ball
+    release_all_events: scoop_ball_hold_release
 
 
 show_player:
