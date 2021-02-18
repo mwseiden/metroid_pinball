@@ -28,6 +28,7 @@ class Scoop(Mode):
         self._set_collectable(kwargs.get('index', 0))
         self.machine.events.post('scoop_collect_enable')
         self.machine.events.post('scoop_award_available_to_collect')
+        self.machine.events.post('cmd_advance_scoop_indicator')
 
     def event_scoop_advance_indicator(self, **kwargs):
         player = self.machine.game.player
