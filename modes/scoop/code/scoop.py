@@ -35,7 +35,7 @@ class Scoop(Mode):
     def event_scoop_advance_indicator(self, **kwargs):
         self._advance_indicator()
 
-    def _advance_indicator():
+    def _advance_indicator(self):
         player = self.machine.game.player
         index = self._find_next_index()
 
