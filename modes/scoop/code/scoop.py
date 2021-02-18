@@ -9,6 +9,8 @@ class Scoop(Mode):
 
         super().mode_start(**kwargs)
 
+        self._advance_indicator()
+
 
     def event_ball_collected(self, **kwargs):
         player = self.machine.game.player
@@ -31,6 +33,9 @@ class Scoop(Mode):
         self.machine.events.post('cmd_advance_scoop_indicator')
 
     def event_scoop_advance_indicator(self, **kwargs):
+        self._advance_indicator()
+
+    def _advance_indicator():
         player = self.machine.game.player
         index = self._find_next_index()
 
