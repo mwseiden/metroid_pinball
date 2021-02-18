@@ -37,12 +37,6 @@ accruals:
     events_when_complete: room_1b_ship_navigated
     persist_state: true
     reset_on_complete: false
-  # room_1b_land_ship:
-    # enable_events: room_1b_ship_navigated
-    # events: scoop_shot_hit
-    # events_when_complete: room_1b_achieved
-    # persist_state: true
-    # reset_on_complete: false
 
 show_player:
   room_1b_ship_left:
@@ -63,9 +57,6 @@ show_player:
         led: led_enter_scoop
         color: ffff00
   room_1b_achieved:
-    room_1b_land_ship:
-      events_when_completed: room_1b_gunship_landing_animated
-      loops: 0
     room_1b_scoop_blink:
       action: stop
   mode_room_1b_gunship_started:
@@ -179,10 +170,6 @@ slide_player:
       target: dmd
       expire: 1.5s
 
-images:
-  gunship_landing:
-    load: preload
-
 sounds:
   room_1b_sound_ship_left:
     file: room_1b_sound_ship_left.wav
@@ -196,26 +183,19 @@ sounds:
     track: sfx
     priority: 50
     max_queue_time: None
-  room_1b_sound_ship_land:
-    file: room_1b_sound_ship_land.wav
-    streaming: False
-    track: sfx
-    priority: 50
-    max_queue_time: None
 
 
 sound_player:
   room_1b_ship_navigated: shoot_the_scoop
   room_1b_ship_left: room_1b_sound_ship_left
   room_1b_ship_right: room_1b_sound_ship_right
-  room_1b_achieved: room_1b_sound_ship_land
   room_1b_play_shoot_the_orbit: shoot_the_orbit
   room_1b_play_shoot_the_right_orbit: shoot_the_right_orbit
   room_1b_play_shoot_the_left_orbit: shoot_the_left_orbit
 
 
 event_player:
-  room_1b_gunship_landing_animated:
+  scoop_award_land_the_gunship:
     - room_1b_success
   mode_room_1b_gunship_started:
     cmd_map_position:

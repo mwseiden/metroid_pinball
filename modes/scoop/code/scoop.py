@@ -16,8 +16,8 @@ class Scoop(Mode):
         if player['scoop_collectables'][0] == '1':
             self.machine.events.post('scoop_award_land_the_gunship')
             self._clear_collectable(0)
-
-        self.machine.events.post('scoop_award_collected')
+        else:
+          self.machine.events.post('scoop_ball_hold_release')
 
     def event_scoop_hold_collect(self, **kwargs):
         self._set_collectable(kwargs.get('index', 0))

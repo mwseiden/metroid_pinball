@@ -1,4 +1,5 @@
 #config_version=5
+
 mode:
   start_events: metroid_base_started #, metroid_exclusive_ended
   stop_events: metroid_base_ended #, metroid_exclusive_started
@@ -12,11 +13,32 @@ ball_holds:
     hold_devices: bd_scoop
     enable_events: scoop_collect_enable
     disable_events: mode_scoop_started, scoop_disable_ball_hold
-    release_all_events: ball_hold_collect_award_shot_held_ball
+    release_all_events: scoop_ball_hold_release  # ball_hold_collect_award_shot_held_ball
+
+
+show_player:
+  scoop_award_land_the_gunship:
+    scoop_land_ship:
+      events_when_completed: scoop_ball_hold_release
+      loops: 0
+
+
+sounds:
+  scoop_ship_land:
+    file: scoop_ship_land.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+
+sound_player:
+  scoop_award_land_the_gunship: scoop_ship_land
 
 
 event_player:
   scoop_award_available_to_collect.1: scoop_autofire_should_disable
   scoop_award_available_to_collect.2: scoop_collect_enable
+  scoop_ball_hold_release: scoop_award_collected
   scoop_award_collected: scoop_autofire_should_enable, scoop_disable_ball_hold
 
