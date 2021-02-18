@@ -195,8 +195,7 @@ sound_player:
 
 
 event_player:
-  scoop_award_land_the_gunship:
-    - room_1b_success
+  scoop_award_land_the_gunship: room_1b_achieved
   mode_room_1b_gunship_started:
     cmd_map_position:
       room: '1b'
@@ -216,6 +215,7 @@ event_player:
   room_1b_achieved:
     cmd_map_complete:
       room: '1b'
+    room_1b_success:
   room_1b_show_backglass:
     cmd_backbox_show:
       show_type: drop
@@ -226,7 +226,6 @@ event_player:
   room_1b_ship_navigated:
     cmd_scoop_collect:
       index: 0
-  scoop_award_land_the_gunship: room_1b_achieved
 
 
 variable_player:
