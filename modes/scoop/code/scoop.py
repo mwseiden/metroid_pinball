@@ -49,7 +49,7 @@ class Scoop(Mode):
           self.machine.events.post('scoop_award_available_to_collect')
           self._advance_indicator()
         else:
-          self.machine.events.post('scoop_award_wtf')
+          self.machine.events.post('scoop_award_wtf_{}'.format(self.machine.game.player.ball))
 
     def _advance_indicator(self):
         player = self.machine.game.player
