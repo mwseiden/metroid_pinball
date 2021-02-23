@@ -196,7 +196,7 @@ event_player:
   mode_room_1b_gunship_started{current_player.room_1b_step_1a == 1 and current_player.room_1b_step_1b == 1 and current_player.room_1b_step_2 == 0}:
     cmd_scoop_collect:
       index: 0
-  mode_room_1b_gunship_ending:
+  mode_bonus_will_start:
     cmd_scoop_collect_clear:
       index: 0
   room_1b_ship_left{current_player.room_1b_step_1b == 0}: room_1b_play_shoot_the_right_orbit
