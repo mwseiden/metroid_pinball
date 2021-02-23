@@ -80,7 +80,7 @@ event_player:
       room: '1g'
       visit: True
     cmd_play_map_music:
-      music: music_crateria
+      music: music_crateria_quiet
     metroid_open_doors:
   room_1g_exit_west_shot_hit.1: drop_targets_save
   room_1g_exit_west_shot_hit.2: room_1f_enter
