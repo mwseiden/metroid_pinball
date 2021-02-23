@@ -6,10 +6,11 @@ class Scoop(Mode):
         self.add_mode_event_handler('ball_hold_collect_award_shot_held_ball', self.event_ball_collected)
         self.add_mode_event_handler('cmd_scoop_collect', self.event_scoop_hold_collect)
         self.add_mode_event_handler('cmd_advance_scoop_indicator', self.event_scoop_advance_indicator)
+        self.add_mode_event_handler('scoop_check_award_available', self.event_scoop_check_for_award)
 
         super().mode_start(**kwargs)
 
-        self._advance_indicator()
+        # self._advance_indicator()
 
 
     def event_ball_collected(self, **kwargs):
@@ -34,6 +35,11 @@ class Scoop(Mode):
 
     def event_scoop_advance_indicator(self, **kwargs):
         self._advance_indicator()
+
+    def event_scoop_check_for_award(self, **kwargs):
+        if self._find_next_index() is not None:
+          self.machine.events.post('scoop_award_available_to_collect')
+          self._advance_indicator()
 
     def _advance_indicator(self):
         player = self.machine.game.player

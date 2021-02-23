@@ -79,13 +79,13 @@ show_player:
       show_tokens:
         led: led_enter_right_orbit
         color: 00ffff
-  mode_room_1b_gunship_started{current_player.room_1b_step_1a == 1 and current_player.room_1b_step_1b == 1 and current_player.room_1b_step_2 == 0}:
-    blink_light:
-      key: room_1b_scoop_blink
-      loops: -1
-      show_tokens:
-        led: led_enter_scoop
-        color: ffff00
+  # mode_room_1b_gunship_started{current_player.room_1b_step_1a == 1 and current_player.room_1b_step_1b == 1 and current_player.room_1b_step_2 == 0}:
+    # blink_light:
+      # key: room_1b_scoop_blink
+      # loops: -1
+      # show_tokens:
+        # led: led_enter_scoop
+        # color: ffff00
   show_mode_status_report:
     room_1b_status_report:
       loops: 0
