@@ -17,6 +17,8 @@ sound_player:
   music_player_play_music_brinstar_calm: music_brinstar_calm
   music_player_play_music_brinstar_side_entrance: music_brinstar_side_entrance
   music_player_play_music_crateria: music_crateria
+  music_player_play_music_crateria_central: music_crateria_central
+  music_player_play_music_crateria_quiet: music_crateria_quiet
   music_player_play_music_maridia: music_maridia
   music_player_play_music_maridia_intro: music_maridia_intro
   music_player_play_music_maridia_snow: music_maridia_snow
@@ -64,6 +66,14 @@ sound_player:
       fade_out: 1s
   music_player_stop_music_crateria:
     music_crateria:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_crateria_central:
+    music_crateria_central:
+      action: stop
+      fade_out: 1s
+  music_player_stop_music_crateria_quiet:
+    music_crateria_quiet:
       action: stop
       fade_out: 1s
   music_player_stop_music_maridia:
@@ -114,6 +124,12 @@ sound_player:
   # stop all with long fade out
   stop_all_music:
     music_crateria:
+      action: stop
+      fade_out: 3s
+    music_crateria_central:
+      action: stop
+      fade_out: 3s
+    music_crateria_quiet:
       action: stop
       fade_out: 3s
     music_boss:

@@ -144,7 +144,7 @@ event_player:
       room: '1c'
       visit: True
     cmd_play_map_music:
-      music: music_crateria
+      music: music_crateria_central
     metroid_open_doors:
   room_1c_exit_west_shot_hit.1: drop_targets_save
   room_1c_exit_west_shot_hit.2: room_1b_enter
