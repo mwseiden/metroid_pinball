@@ -4,15 +4,15 @@ class Scoop(Mode):
 
     def mode_start(self, **kwargs):
         self.add_mode_event_handler('ball_hold_collect_award_shot_held_ball', self.event_ball_collected)
-        self.add_mode_event_handler('cmd_scoop_check_for_award', self.event_scoop_check_for_award)
+        # self.add_mode_event_handler('cmd_scoop_check_for_award', self.event_scoop_check_for_award)
         self.add_mode_event_handler('cmd_scoop_collect', self.event_scoop_hold_collect)
         self.add_mode_event_handler('cmd_scoop_collect_clear', self.event_scoop_collect_clear)
         self.add_mode_event_handler('cmd_advance_scoop_indicator', self.event_scoop_advance_indicator)
 
         super().mode_start(**kwargs)
 
-        self.machine.events.post('scoop_delay_check')
-        # self._check_for_award()
+        # self.machine.events.post('scoop_delay_check')
+        self._check_for_award()
 
 
     def event_ball_collected(self, **kwargs):
@@ -41,19 +41,19 @@ class Scoop(Mode):
     def event_scoop_collect_clear(self, **kwargs):
         self._clear_collectable(kwargs.get('index', 0))
 
-    def event_scoop_check_for_award(self, **kwargs):
-        self._check_for_award()
+    #def event_scoop_check_for_award(self, **kwargs):
+    #    self._check_for_award()
         # self._advance_indicator()
 
     def _check_for_award(self):
         if self._find_next_index() is not None:
+          self.machine.events.post('scoop_autofire_should_disable')
           self.machine.events.post('scoop_collect_enable')
           self.machine.events.post('scoop_award_available_to_collect')
           self.machine.events.post('cmd_advance_scoop_indicator')
-          # self.machine.events.post('scoop_award_available_to_collect')
-          # self._advance_indicator()
-        # else:
-        #  self.machine.events.post('scoop_award_collected')
+        else:
+          self.machine.events.post('scoop_autofire_should_enable')
+          self.machine.events.post('scoop_disable_ball_hold')
 
     def _advance_indicator(self):
         player = self.machine.game.player
