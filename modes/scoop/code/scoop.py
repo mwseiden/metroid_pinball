@@ -11,7 +11,7 @@ class Scoop(Mode):
 
         super().mode_start(**kwargs)
 
-        # self._check_for_award()
+        self._check_for_award()
 
 
     def event_ball_collected(self, **kwargs):
@@ -42,11 +42,14 @@ class Scoop(Mode):
 
     def event_scoop_check_for_award(self, **kwargs):
         self._check_for_award()
+        self._advance_indicator()
 
     def _check_for_award(self):
         if self._find_next_index() is not None:
           self.machine.events.post('scoop_award_available_to_collect')
           self._advance_indicator()
+        else:
+          self.machine.events.post('scoop_award_wtf')
 
     def _advance_indicator(self):
         player = self.machine.game.player
