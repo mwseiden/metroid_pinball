@@ -11,7 +11,7 @@ class Scoop(Mode):
 
         super().mode_start(**kwargs)
 
-        self._check_for_award()
+        # self._check_for_award()
 
 
     def event_ball_collected(self, **kwargs):
