@@ -11,6 +11,7 @@ class Scoop(Mode):
 
         super().mode_start(**kwargs)
 
+        self.machine.events.post('scoop_delay_check')
         # self._check_for_award()
 
 
@@ -42,15 +43,17 @@ class Scoop(Mode):
 
     def event_scoop_check_for_award(self, **kwargs):
         self._check_for_award()
-        self._advance_indicator()
+        # self._advance_indicator()
 
     def _check_for_award(self):
         if self._find_next_index() is not None:
-          self.machine.events.post('scoop_award_avail_wtf_{}'.format(self.machine.game.player.ball))
+          self.machine.events.post('scoop_collect_enable')
           self.machine.events.post('scoop_award_available_to_collect')
-          self._advance_indicator()
-        else:
-          self.machine.events.post('scoop_award_wtf_{}'.format(self.machine.game.player.ball))
+          self.machine.events.post('cmd_advance_scoop_indicator')
+          # self.machine.events.post('scoop_award_available_to_collect')
+          # self._advance_indicator()
+        # else:
+        #  self.machine.events.post('scoop_award_collected')
 
     def _advance_indicator(self):
         player = self.machine.game.player
