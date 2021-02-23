@@ -46,6 +46,7 @@ class Scoop(Mode):
 
     def _check_for_award(self):
         if self._find_next_index() is not None:
+          self.machine.events.post('scoop_award_avail_wtf_{}'.format(self.machine.game.player.ball))
           self.machine.events.post('scoop_award_available_to_collect')
           self._advance_indicator()
         else:
