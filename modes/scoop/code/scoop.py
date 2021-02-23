@@ -4,7 +4,7 @@ class Scoop(Mode):
 
     def mode_start(self, **kwargs):
         self.add_mode_event_handler('ball_hold_collect_award_shot_held_ball', self.event_ball_collected)
-        # self.add_mode_event_handler('cmd_scoop_check_for_award', self.event_scoop_check_for_award)
+        self.add_mode_event_handler('cmd_scoop_check_for_award', self.event_scoop_check_for_award)
         self.add_mode_event_handler('cmd_scoop_collect', self.event_scoop_hold_collect)
         self.add_mode_event_handler('cmd_scoop_collect_clear', self.event_scoop_collect_clear)
         self.add_mode_event_handler('cmd_advance_scoop_indicator', self.event_scoop_advance_indicator)
@@ -12,7 +12,7 @@ class Scoop(Mode):
         super().mode_start(**kwargs)
 
         # self.machine.events.post('scoop_delay_check')
-        self._check_for_award()
+        # self._check_for_award()
 
 
     def event_ball_collected(self, **kwargs):
@@ -41,8 +41,8 @@ class Scoop(Mode):
     def event_scoop_collect_clear(self, **kwargs):
         self._clear_collectable(kwargs.get('index', 0))
 
-    #def event_scoop_check_for_award(self, **kwargs):
-    #    self._check_for_award()
+    def event_scoop_check_for_award(self, **kwargs):
+        self._check_for_award()
         # self._advance_indicator()
 
     def _check_for_award(self):
