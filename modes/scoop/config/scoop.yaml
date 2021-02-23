@@ -68,6 +68,7 @@ sound_player:
 
 
 event_player:
+  mode_scoop_started: cmd_scoop_check_for_award
   scoop_award_available_to_collect.1: scoop_autofire_should_disable
   scoop_award_available_to_collect.2: scoop_collect_enable
   scoop_ball_hold_release: scoop_award_collected
