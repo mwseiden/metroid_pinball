@@ -52,8 +52,8 @@ class Scoop(Mode):
           self.machine.events.post('scoop_award_available_to_collect')
           self.machine.events.post('cmd_advance_scoop_indicator')
         else:
-          self.machine.events.post('scoop_autofire_should_enable')
           self.machine.events.post('scoop_disable_ball_hold')
+          self.machine.events.post('scoop_autofire_should_enable')
 
     def _advance_indicator(self):
         player = self.machine.game.player
