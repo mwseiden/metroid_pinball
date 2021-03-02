@@ -34,6 +34,10 @@ show_player:
     scoop_award_points:
       events_when_completed: scoop_ball_hold_release
       loops: 0
+  scoop_award_miniboss:
+    scoop_miniboss:
+      events_when_completed: scoop_ball_hold_release
+      loops: 0
   scoop_play_lights_collect_gunship:
     blink_light:
       key: scoop_collect_blink
@@ -42,7 +46,7 @@ show_player:
       loops: 4
       show_tokens:
         led: led_enter_scoop
-        color: ffff00
+        color: FFFF00
   scoop_play_lights_side_targets:
     blink_light:
       key: scoop_collect_blink
@@ -50,7 +54,15 @@ show_player:
       loops: 2
       show_tokens:
         led: led_enter_scoop
-        color: ff8000
+        color: FF8000
+  scoop_play_lights_miniboss:
+    fade_one_light:
+      key: scoop_collect_blink
+      events_when_completed: cmd_advance_scoop_indicator
+      loops: 1
+      show_tokens:
+        led: led_enter_scoop
+        color: 00FF80
   scoop_play_lights_none:
     blink_light:
       key: scoop_collect_blink

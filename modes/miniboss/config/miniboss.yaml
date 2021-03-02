@@ -10,7 +10,7 @@ sequences:
          - miniboss_targets_level_1_shot_group_lit_complete
          - miniboss_targets_level_2_shot_group_lit_complete
          - miniboss_targets_level_3_shot_group_lit_complete
-         - miniboss_final_shot_hit
+         - scoop_award_miniboss
       persist_state: True
       reset_on_complete: True
       disable_on_complete: False
@@ -124,22 +124,7 @@ shots:
     show_tokens:
       led: led_upgrade_bank_3
       color: 00FF80
-  miniboss_final_shot:
-    switch: s_scoop
-    profile: miniboss_scoop
-    enable_events: miniboss_enable_level_4
-    disable_events: mode_miniboss_starting, miniboss_final_shot_hit
-    show_tokens:
-      led: led_enter_scoop
-      color: 00FF80
 
-ball_holds:
-  miniboss_final_shot:
-    balls_to_hold: 1
-    hold_devices: bd_scoop
-    enable_events: miniboss_enable_level_4
-    disable_events: mode_miniboss_starting, mode_miniboss_ending, miniboss_hold_disable
-    release_all_events: miniboss_battle_mode_should_start
 
 shot_groups:
   miniboss_targets_level_1_shot_group:
@@ -158,23 +143,6 @@ shot_groups:
     enable_events: miniboss_enable_level_3
     disable_events: mode_miniboss_starting, mode_miniboss_ending, miniboss_targets_level_3_shot_group_lit_complete
 
-event_player:
-  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 0}: miniboss_enable_level_1
-  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 1}: miniboss_enable_level_2
-  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 2}: miniboss_enable_level_3
-  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 3}: miniboss_enable_level_4
-  logicblock_miniboss_progress_sequence_updated{value == 0}: miniboss_enable_level_1
-  logicblock_miniboss_progress_sequence_updated{value == 1}: miniboss_enable_level_2
-  logicblock_miniboss_progress_sequence_updated{value == 2}: miniboss_enable_level_3
-  logicblock_miniboss_progress_sequence_updated{value == 3}: miniboss_enable_level_4
-  miniboss_targets_level_1_shot_group_lit_complete: miniboss_targets_completed
-  miniboss_targets_level_2_shot_group_lit_complete: miniboss_targets_completed
-  miniboss_targets_level_3_shot_group_lit_complete: miniboss_targets_completed
-  miniboss_enable_level_4: scoop_autofire_should_disable
-  miniboss_battle_mode_should_start: scoop_autofire_should_enable, miniboss_hold_disable
-  miniboss_targets_level_1_shot_group_lit_hit: miniboss_play_missed_sound
-  miniboss_targets_level_2_shot_group_lit_hit: miniboss_play_missed_sound
-  miniboss_targets_level_3_shot_group_lit_hit: miniboss_play_missed_sound
 
 show_player:
   miniboss_targets_level_1_shot_group_lit_complete:
@@ -213,11 +181,7 @@ show_player:
   miniboss_targets_completed:
     miniboss_targets_completed:
       loops: 0
-  ball_hold_miniboss_final_shot_held_ball:
-    miniboss_starting:
-      loops: 0
-      priority: 9000
-      events_when_stopped: miniboss_battle_mode_should_start
+
 
 sounds:
   miniboss_miss:
@@ -256,6 +220,7 @@ sounds:
     volume: 0.75
     max_queue_time: None
 
+
 sound_player:
   miniboss_targets_level_1_shot_group_unlit_hit: miniboss_level_1_hit
   miniboss_targets_level_2_shot_group_unlit_hit: miniboss_level_2_hit
@@ -264,6 +229,31 @@ sound_player:
   miniboss_level_4_2_shot_hit: miniboss_level_4_hit
   miniboss_level_4_3_shot_hit: miniboss_level_4_hit
   miniboss_play_missed_sound: miniboss_miss
+
+
+event_player:
+  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 0}: miniboss_enable_level_1
+  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 1}: miniboss_enable_level_2
+  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 2}: miniboss_enable_level_3
+  mode_miniboss_started{device.sequences.miniboss_progress_sequence.value == 3}: miniboss_enable_level_4
+  logicblock_miniboss_progress_sequence_updated{value == 0}: miniboss_enable_level_1
+  logicblock_miniboss_progress_sequence_updated{value == 1}: miniboss_enable_level_2
+  logicblock_miniboss_progress_sequence_updated{value == 2}: miniboss_enable_level_3
+  logicblock_miniboss_progress_sequence_updated{value == 3}: miniboss_enable_level_4
+  miniboss_targets_level_1_shot_group_lit_complete: miniboss_targets_completed
+  miniboss_targets_level_2_shot_group_lit_complete: miniboss_targets_completed
+  miniboss_targets_level_3_shot_group_lit_complete: miniboss_targets_completed
+  miniboss_enable_level_4:
+    cmd_scoop_collect:
+      index: 2
+  scoop_award_miniboss: miniboss_battle_mode_should_start
+  miniboss_targets_level_1_shot_group_lit_hit: miniboss_play_missed_sound
+  miniboss_targets_level_2_shot_group_lit_hit: miniboss_play_missed_sound
+  miniboss_targets_level_3_shot_group_lit_hit: miniboss_play_missed_sound
+  mode_bonus_will_start:
+    cmd_scoop_collect_clear:
+      index: 2
+
 
 variable_player:
   miniboss_level_1_1_shot_hit:
@@ -290,7 +280,7 @@ variable_player:
     score: 10000 * current_player.multiplier
   miniboss_level_4_3_shot_hit:
     score: 10000 * current_player.multiplier 
-  miniboss_final_shot_hit:
+  scoop_award_miniboss:
     score: (100000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
     miniboss_special_score:
       int: (100000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier

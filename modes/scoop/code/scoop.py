@@ -21,6 +21,9 @@ class Scoop(Mode):
         elif player['scoop_collectables'][1] == '1':
             self.machine.events.post('scoop_award_side_targets')
             self._clear_collectable(1)
+        elif player['scoop_collectables'][2] == '1':
+            self.machine.events.post('scoop_award_miniboss')
+            self._clear_collectable(2)
         else:
           self.machine.events.post('scoop_ball_hold_release')
 
@@ -83,6 +86,8 @@ class Scoop(Mode):
           return 'collect_gunship'
         elif i == 1:
           return 'side_targets'
+        elif i == 2:
+          return 'miniboss'
         else:
           return 'none'
 
