@@ -181,6 +181,11 @@ show_player:
   miniboss_targets_completed:
     miniboss_targets_completed:
       loops: 0
+  miniboss_battle_mode_should_start:
+    miniboss_collected_lights:
+      loops: 1
+      speed: 60
+      priority: 500
 
 
 sounds:
