@@ -430,6 +430,19 @@ sounds:
       attenuation: 0.15
       release_point: 2.0 sec
       release: 1.0 sec
+  one:
+    file: VO_One.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
   player_1:
     file: VO_Player1.wav
     streaming: False
@@ -768,8 +781,34 @@ sounds:
       attenuation: 0.15
       release_point: 2.0 sec
       release: 1.0 sec
+  three:
+    file: VO_Three.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
   tourian:
     file: VO_Tourian.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
+  two:
+    file: VO_Two.wav
     streaming: False
     track: voice
     priority: 50

@@ -361,6 +361,8 @@ event_player:
       color8: "800000"
       decay_r: 2.0
       repeat: 4
+  bonus_super_missiles:
+    bonus_sound_awarded:
   bonus_drop_targets:
     bonus_sound_awarded:
     cmd_backbox_show_overlay:

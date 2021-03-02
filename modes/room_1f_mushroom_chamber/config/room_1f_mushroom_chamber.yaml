@@ -164,7 +164,7 @@ event_player:
       visit: True
     metroid_open_doors:
     cmd_play_map_music:
-      music: music_crateria
+      music: music_crateria_edge
   metroid_open_doors{current_player.door_1a_1f == 0}: room_1f_enable_north_missile_door, room_1f_disable_north_door
   metroid_open_doors{current_player.door_1a_1f == 1}: room_1f_enable_north_door, room_1f_disable_north_missile_door
   room_1f_exit_north_closed_shot_hit{current_player.missiles > 0}: room_1f_open_north_door

@@ -171,7 +171,7 @@ event_player:
       room: '1a'
       visit: True
     cmd_play_map_music:
-      music: music_crateria
+      music: music_crateria_central
     metroid_open_doors:
   mode_room_1a_lush_cavern_ending: drop_targets_save
   metroid_open_doors{current_player.door_1a_1f == 0}: room_1a_enable_south_missile_door, room_1a_disable_south_door

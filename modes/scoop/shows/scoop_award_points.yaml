@@ -2,19 +2,18 @@
 
 - duration: 3s
   slides:
-    skillshot_drops_release_countdown_go_slide:
+    scoop_award_points_slide:
       widgets:
       - type: text
-        text: GO!!
+        text: (player|room_special_score)
+        color: orange
         style: dmd_big
-        color: red
         animations:
           pre_show_slide:
             - property: opacity
-              value: 0.2
-              duration: .2s
+              value: 0
+              duration: .1s
             - property: opacity
               value: 1
-              duration: .2s
+              duration: .1s
               repeat: -1
-

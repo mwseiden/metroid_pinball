@@ -1,0 +1,87 @@
+#config_version=5
+
+mode:
+  start_events: metroid_base_started #, metroid_exclusive_ended
+  stop_events: metroid_base_ended #, metroid_exclusive_started
+  code: scoop.Scoop
+  priority: 1000
+
+timers:
+  scoop_wtf:
+    start_value: 1
+    end_value: 2
+    tick_interval: 1.0s
+    control_events:
+      - event: mode_scoop_started
+        action: restart
+
+
+ball_holds:
+  collect_award_shot:
+    balls_to_hold: 1
+    hold_devices: bd_scoop
+    enable_events: scoop_collect_enable
+    disable_events: scoop_disable_ball_hold
+    release_all_events: scoop_ball_hold_release
+
+
+show_player:
+  scoop_award_land_the_gunship:
+    scoop_land_ship:
+      events_when_completed: scoop_ball_hold_release
+      loops: 0
+  scoop_award_side_targets:
+    scoop_award_points:
+      events_when_completed: scoop_ball_hold_release
+      loops: 0
+  scoop_play_lights_collect_gunship:
+    blink_light:
+      key: scoop_collect_blink
+      events_when_completed: cmd_advance_scoop_indicator
+      speed: 2
+      loops: 4
+      show_tokens:
+        led: led_enter_scoop
+        color: ffff00
+  scoop_play_lights_side_targets:
+    blink_light:
+      key: scoop_collect_blink
+      events_when_completed: cmd_advance_scoop_indicator
+      loops: 2
+      show_tokens:
+        led: led_enter_scoop
+        color: ff8000
+  scoop_play_lights_none:
+    blink_light:
+      key: scoop_collect_blink
+      events_when_completed: cmd_advance_scoop_indicator
+      loops: 2
+      show_tokens:
+        led: led_enter_scoop
+        color: stop
+  scoop_stop_lights:
+    scoop_collect_blink:
+      action: stop
+
+sounds:
+  scoop_ship_land:
+    file: scoop_ship_land.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+
+sound_player:
+  scoop_award_land_the_gunship: scoop_ship_land
+
+
+event_player:
+  # mode_scoop_started: cmd_scoop_check_for_award
+  # scoop_delay_check: cmd_scoop_check_for_award
+  timer_scoop_wtf_complete: cmd_scoop_check_for_award
+  scoop_award_available_to_collect.1: scoop_autofire_should_disable
+  scoop_award_available_to_collect.2: scoop_collect_enable
+  scoop_ball_hold_release: cmd_scoop_check_for_award
+  # scoop_award_collected: scoop_autofire_should_enable, scoop_disable_ball_hold
+

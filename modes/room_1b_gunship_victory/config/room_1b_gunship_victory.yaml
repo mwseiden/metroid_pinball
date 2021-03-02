@@ -144,7 +144,7 @@ event_player:
       room: '1b'
       visit: True
     cmd_play_map_music:
-      music: music_crateria
+      music: music_crateria_quiet
   mode_room_1b_gunship_victory_started{game.balls_in_play == 1}: metroid_open_doors
   show_mode_status_report:
     room_1b_victory_status_report:

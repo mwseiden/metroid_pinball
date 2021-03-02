@@ -512,7 +512,7 @@
          duration: 1s
          direction: left
 
-- duration: 8s
+- duration: 10s
   slides:
     claire_samus:
       widgets:
@@ -521,7 +521,7 @@
       transition:
          type: wipe
 
-- duration: 8s
+- duration: 10s
   slides:
     metroid_metal_slide:
       target: backglass
@@ -582,7 +582,7 @@
          type: swap
          duration: 1s
 
-- duration: 3s
+- duration: 5s
   slides:
     pbu_slide:
       widgets:
@@ -593,7 +593,7 @@
          duration: 1s
          direction: bottom
 
-- duration: 3s
+- duration: 5s
   slides:
     buffalo_slide:
       widgets:
@@ -615,7 +615,7 @@
          duration: 1s
          direction: top
 
-- duration: 5s
+- duration: 6s
   slides:
     erin_slide:
       widgets:
@@ -693,7 +693,7 @@
          duration: 1s
          direction: down
 
-- duration: 3s
+- duration: 4s
   slides:
     goren_slide:
       widgets:
@@ -704,7 +704,7 @@
          duration: 1s
          direction: right
 
-- duration: 3s
+- duration: 5s
   slides:
     owl_slide:
       widgets:
@@ -738,7 +738,7 @@
          duration: 1s
          direction: down
 
-- duration: 10s
+- duration: 9s
   slides:
     attract_special_thanks_slide:
       widgets:

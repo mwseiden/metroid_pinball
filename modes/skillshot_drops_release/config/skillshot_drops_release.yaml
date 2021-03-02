@@ -61,4 +61,7 @@ variable_player:
 
 sound_player:
   skillshot_drops_release_ball: shoot_the_side_ramp
+  slide_skillshot_drops_release_countdown_3_slide_created: three
+  slide_skillshot_drops_release_countdown_2_slide_created: two
+  slide_skillshot_drops_release_countdown_1_slide_created: one
   side_ramp_shot_hit: super_skillshot
