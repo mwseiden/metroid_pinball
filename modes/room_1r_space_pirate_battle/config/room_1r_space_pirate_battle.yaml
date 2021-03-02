@@ -586,7 +586,7 @@ variable_player:
       int: ((current_player.area_bonus_nw + 1) * 300000) * current_player.multiplier
       action: set
   room_1r_kill_pirate_duck:
-    score: (66600 * current_player.ball) * current_player.multiplier
+    score: ((66600 + (current_player.rooms_completed * 42000) + (current_player.rooms_visited * 6900)) * current_player.ball) * current_player.multiplier
     room_special_score:
-      int: (66600 * current_player.ball) * current_player.multiplier
+      int: ((66600 + (current_player.rooms_completed * 42000) + (current_player.rooms_visited * 6900)) * current_player.ball) * current_player.multiplier
       action: set
