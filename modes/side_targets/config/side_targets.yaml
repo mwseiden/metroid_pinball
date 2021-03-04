@@ -1,8 +1,10 @@
 #config_version=5
+
 mode:
   start_events: metroid_base_started
   stop_events: metroid_base_ended
   priority: 100
+
 
 shot_profiles:
   side_targets:
@@ -11,6 +13,7 @@ shot_profiles:
         show: off
       - name: lit
         show: led_color
+
 
 shots:
   side_1_shot:
@@ -32,18 +35,13 @@ shots:
       led: led_side_3
       color: "0088ff"
 
+
 shot_groups:
   side_targets_shot_group:
     shots: side_1_shot, side_2_shot, side_3_shot
     reset_events: side_targets_shot_group_lit_complete
     enable_events: mode_side_targets_started
     disable_events: mode_side_targets_ending
-
-event_player:
-  side_targets_shot_group_lit_complete.1:
-    cmd_scoop_collect:
-      index: 1
-  side_targets_shot_group_lit_complete.2: scoop_award_available_to_collect
 
 
 sounds:
@@ -62,9 +60,18 @@ sounds:
     volume: 0.75
     max_queue_time: None
 
+
 sound_player:
   side_targets_shot_group_unlit_hit: side_targets_unlit_hit
   side_targets_shot_group_lit_hit: side_targets_lit_hit
+
+
+event_player:
+  side_targets_shot_group_lit_complete.1:
+    cmd_scoop_collect:
+      index: 1
+  side_targets_shot_group_lit_complete.2: scoop_award_available_to_collect
+
 
 variable_player:
   side_1_shot_hit:
