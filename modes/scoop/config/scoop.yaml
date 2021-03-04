@@ -28,15 +28,15 @@ ball_holds:
 show_player:
   scoop_award_land_the_gunship:
     scoop_land_ship:
-      events_when_completed: scoop_ball_hold_release
+      events_when_completed: cmd_scoop_collect_next
       loops: 0
   scoop_award_side_targets:
     scoop_award_points:
-      events_when_completed: scoop_ball_hold_release
+      events_when_completed: cmd_scoop_collect_next
       loops: 0
   scoop_award_miniboss:
     scoop_miniboss:
-      events_when_completed: scoop_ball_hold_release
+      events_when_completed: cmd_scoop_collect_next
       loops: 0
   scoop_play_lights_collect_gunship:
     blink_light:

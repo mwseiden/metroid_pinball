@@ -7,6 +7,7 @@ class Scoop(Mode):
         self.add_mode_event_handler('cmd_scoop_check_for_award', self.event_scoop_check_for_award)
         self.add_mode_event_handler('cmd_scoop_collect', self.event_scoop_hold_collect)
         self.add_mode_event_handler('cmd_scoop_collect_clear', self.event_scoop_collect_clear)
+        self.add_mode_event_handler('cmd_scoop_collect_next', self.event_ball_collected)
         self.add_mode_event_handler('cmd_advance_scoop_indicator', self.event_scoop_advance_indicator)
 
         super().mode_start(**kwargs)
@@ -43,6 +44,7 @@ class Scoop(Mode):
 
     def event_scoop_check_for_award(self, **kwargs):
         self._check_for_award()
+
 
     def _check_for_award(self):
         if self._find_next_index() is not None:
