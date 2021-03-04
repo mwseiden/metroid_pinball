@@ -67,10 +67,10 @@ sound_player:
 
 
 event_player:
-  side_targets_shot_group_lit_complete.1:
+  side_targets_shot_group_lit_complete:
     cmd_scoop_collect:
       index: 1
-  side_targets_shot_group_lit_complete.2: scoop_award_available_to_collect
+  # side_targets_shot_group_lit_complete.2: scoop_award_available_to_collect
 
 
 variable_player:

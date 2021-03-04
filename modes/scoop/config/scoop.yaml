@@ -20,7 +20,7 @@ ball_holds:
   collect_award_shot:
     balls_to_hold: 1
     hold_devices: bd_scoop
-    enable_events: scoop_collect_enable
+    enable_events: mode_scoop_started
     disable_events: mode_scoop_ending
     release_all_events: scoop_ball_hold_release
 
@@ -90,7 +90,7 @@ sound_player:
 
 event_player:
   timer_scoop_wtf_complete: cmd_scoop_check_for_award
-  scoop_award_available_to_collect.1: scoop_autofire_should_disable
-  scoop_award_available_to_collect.2: scoop_collect_enable
+#  scoop_award_available_to_collect.1: scoop_autofire_should_disable
+#  scoop_award_available_to_collect.2: scoop_collect_enable
   scoop_ball_hold_release: cmd_scoop_check_for_award
 
