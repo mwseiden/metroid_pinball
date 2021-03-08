@@ -772,6 +772,7 @@ sound_player:
 
 event_player:
   mode_bao_base_started:
+    scoop_autofire_should_enable:
     cmd_backbox_show:
       show_type: gradient
       color_start: "FF00FF"
