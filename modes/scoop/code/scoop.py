@@ -33,7 +33,6 @@ class Scoop(Mode):
     def event_scoop_hold_collect(self, **kwargs):
         self._set_collectable(kwargs.get('index', 0))
         self.machine.events.post('scoop_collect_enable')
-        # self.machine.events.post('scoop_award_available_to_collect')
         self.machine.events.post('cmd_advance_scoop_indicator')
 
     def event_scoop_advance_indicator(self, **kwargs):
@@ -49,7 +48,6 @@ class Scoop(Mode):
     def _check_for_award(self):
         if self._find_next_index() is not None:
           self.machine.events.post('scoop_collect_enable')
-          # self.machine.events.post('scoop_award_available_to_collect')
           self.machine.events.post('cmd_advance_scoop_indicator')
 
     def _advance_indicator(self):
