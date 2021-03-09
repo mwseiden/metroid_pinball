@@ -309,5 +309,5 @@ class Map(Mode):
 
         return completed_rooms
 
-    def find_room_state(self, room_code, room_number)
+    def find_room_state(self, room_code, room_number):
         return list(self.player['map_visited_{}'.format(self.LAYOUT[room_code][0])])[room_number - 1]
