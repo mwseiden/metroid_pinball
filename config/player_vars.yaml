@@ -131,6 +131,8 @@ player_vars:
   map_visited_n:
     value_type: str
     initial_value: 'NNNNNNNNNN'
+  map_next_landing_site_index:
+    initial_value: 0
   map_visited_t:
     value_type: str
     initial_value: 'NNNNNNNNNN'

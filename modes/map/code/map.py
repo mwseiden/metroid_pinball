@@ -296,6 +296,29 @@ class Map(Mode):
 
         self.machine.widget_player.play(settings, 'map', None)
 
+
+    def pick_next_landing_site(self):
+        completed_rooms = self.build_completed_room_list()
+
+        current_index = self.player['map_next_landing_site_index']
+        current_index += 1
+
+        if current_index >= len(completed_rooms):
+            current_index = 0
+
+        self.player['map_next_landing_site_index'] = current_index
+
+    def pick_previous_landing_site(self):
+        completed_rooms = self.build_completed_room_list()
+
+        current_index = self.player['map_next_landing_site_index']
+        current_index -= 1
+
+        if current_index < 0:
+            current_index = len(completed_rooms) - 1
+
+        self.player['map_next_landing_site_index'] = current_index
+
     def build_completed_room_list(self):
         completed_rooms = []
 
