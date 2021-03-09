@@ -166,12 +166,19 @@ sounds:
     track: sfx
     priority: 50
     max_queue_time: None
+  room_1b_sound_bonus:
+    file: room_1b_sound_bonus.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
 
 
 sound_player:
   room_1b_ship_navigated: shoot_the_scoop
   room_1b_ship_left: room_1b_sound_ship_left
   room_1b_ship_right: room_1b_sound_ship_right
+  room_1b_increase_value_shot_hit: room_1b_sound_bonus
   room_1b_play_shoot_the_orbit: shoot_the_orbit
   room_1b_play_shoot_the_right_orbit: shoot_the_right_orbit
   room_1b_play_shoot_the_left_orbit: shoot_the_left_orbit
