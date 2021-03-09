@@ -306,6 +306,91 @@ slides:
     - type: image
       key: map_landing_slide
       image: room_1z_underground_desert_splash
+  map_land_site_2a:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2a_splash
+  map_land_site_2b:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2b_crevasse_splash
+  map_land_site_2c:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2c_central_pumping_splash
+  map_land_site_2d:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2d_abyss_splash
+  map_land_site_2e:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2d_abyss_splash
+  map_land_site_2f:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2f_frozen_lake_splash
+  map_land_site_2g:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2g_draygon_splash
+  map_land_site_2h:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2h_crystalline_seabed_splash
+  map_land_site_2i:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2i_splash_title
+  map_land_site_2j:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2j_lake_of_fire_splash
+  map_land_site_2k:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2k_larvae_nest_splash
+  map_land_site_2l:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2l_west_hot_springs_splash
+  map_land_site_2m:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2m_geothermal_plant_splash
+  map_land_site_2n:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2n_magma_chamber_splash
+  map_land_site_2o:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2o_strange_ruins_splash
+  map_land_site_2p:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2p_east_hot_springs_splash
+  map_land_site_2q:
+    widgets:
+    - type: image
+      key: map_landing_slide
+      image: room_2q_ridley_splash
 
 slide_player:
   map_show_slide_1a: map_land_site_1a
