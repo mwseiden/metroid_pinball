@@ -17,5 +17,3 @@
               value: 1
               duration: .1s
               repeat: -1
-      - type: image
-        image: room_1b_splash

@@ -95,3 +95,4 @@ class Scoop(Mode):
     def _clear_collectable(self, index):
         collectables = self.machine.game.player['scoop_collectables']
         self.machine.game.player['scoop_collectables'] = collectables[:index] + '0' + collectables[index+1:]
+
