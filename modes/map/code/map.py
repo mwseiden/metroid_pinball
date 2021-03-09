@@ -307,6 +307,10 @@ class Map(Mode):
 
             completed_rooms.append(self.find_room_state(room_code, room_number))
 
+        for default_complete_room in ['1b', '1l', '1r', '2a', '2i']:
+            if default_complete_room not in completed_rooms:
+                completed_rooms.append(default_complete_room)
+
         return completed_rooms
 
     def find_room_state(self, room_code, room_number):
