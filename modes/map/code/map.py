@@ -170,7 +170,8 @@ class Map(Mode):
         x = self.ORIGIN_X - self.AREAS[area_code][0] + self.AREAS[area_code][2] + (x * 32)
         y = self.ORIGIN_Y - self.AREAS[area_code][3] - (y * 32)
 
-        self.draw_room(room_number, x, y, room_type, list(self.player['map_visited_{}'.format(self.LAYOUT[room_code][0])])[room_number - 1])
+        # self.draw_room(room_number, x, y, room_type, list(self.player['map_visited_{}'.format(self.LAYOUT[room_code][0])])[room_number - 1])
+        self.draw_room(room_number, x, y, room_type, self.find_room_state(room_code, room_number))
         self.draw_exit(room_number, 'n', x, y + 14, exit_n_type, exit_n_var)
         self.draw_exit(room_number, 'e', x + 16, y, exit_e_type, exit_e_var)
         self.draw_exit(room_number, 'w', x - 14, y, exit_w_type, exit_w_var)
@@ -294,3 +295,46 @@ class Map(Mode):
         }
 
         self.machine.widget_player.play(settings, 'map', None)
+
+
+    def pick_next_landing_site(self):
+        completed_rooms = self.build_completed_room_list()
+
+        current_index = self.player['map_next_landing_site_index']
+        current_index += 1
+
+        if current_index >= len(completed_rooms):
+            current_index = 0
+
+        self.player['map_next_landing_site_index'] = current_index
+
+    def pick_previous_landing_site(self):
+        completed_rooms = self.build_completed_room_list()
+
+        current_index = self.player['map_next_landing_site_index']
+        current_index -= 1
+
+        if current_index < 0:
+            current_index = len(completed_rooms) - 1
+
+        self.player['map_next_landing_site_index'] = current_index
+
+    def build_completed_room_list(self):
+        completed_rooms = []
+
+        for room_index in range(0, 42):
+            room_prefix = int(room_index / 26) + 1
+            room_letter = chr((room_index % 26) + ord('a'))
+            room_code = '{}{}'.format(room_prefix, room_letter)
+            room_number = self.LAYOUT.get(room_code)[1]
+
+            completed_rooms.append(self.find_room_state(room_code, room_number))
+
+        for default_complete_room in ['1b', '1l', '1r', '2a', '2i']:
+            if default_complete_room not in completed_rooms:
+                completed_rooms.append(default_complete_room)
+
+        return completed_rooms
+
+    def find_room_state(self, room_code, room_number):
+        return list(self.player['map_visited_{}'.format(self.LAYOUT[room_code][0])])[room_number - 1]

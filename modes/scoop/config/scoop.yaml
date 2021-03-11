@@ -1,8 +1,8 @@
 #config_version=5
 
 mode:
-  start_events: metroid_base_started #, metroid_exclusive_ended
-  stop_events: metroid_base_ended #, metroid_exclusive_started
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
   code: scoop.Scoop
   priority: 1000
 
@@ -90,7 +90,5 @@ sound_player:
 
 event_player:
   timer_scoop_wtf_complete: cmd_scoop_check_for_award
-#  scoop_award_available_to_collect.1: scoop_autofire_should_disable
-#  scoop_award_available_to_collect.2: scoop_collect_enable
   scoop_ball_hold_release: cmd_scoop_check_for_award
 
