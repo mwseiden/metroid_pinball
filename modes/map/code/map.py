@@ -315,10 +315,12 @@ class Map(Mode):
 
 
     def show_current_room_slide(self):
+        completed_rooms = self.build_completed_room_list()
         room_index = self.player['map_next_landing_site_index']
-        room_prefix = int(room_index / 26) + 1
-        room_letter = chr((room_index % 26) + ord('a'))
-        room_code = '{}{}'.format(room_prefix, room_letter)
+        room_code = completed_rooms[room_index]
+        # room_prefix = int(room_index / 26) + 1
+        # room_letter = chr((room_index % 26) + ord('a'))
+        # room_code = '{}{}'.format(room_prefix, room_letter)
         self.machine.events.post('map_show_slide_{}'.format(room_code))
 
 
@@ -359,9 +361,9 @@ class Map(Mode):
             room_prefix = int(room_index / 26) + 1
             room_letter = chr((room_index % 26) + ord('a'))
             room_code = '{}{}'.format(room_prefix, room_letter)
-            # room_number = self.LAYOUT.get(room_code)[1]
+            room_number = self.LAYOUT.get(room_code)[1]
 
-            if self.find_room_state(room_code, room_index) == 'C':
+            if self.find_room_state(room_code, room_number) == 'C':
                 completed_rooms.append(room_code)
 
         for default_complete_room in ['1b', '1l', '1r', '2a', '2i']:
