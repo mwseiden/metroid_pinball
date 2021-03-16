@@ -402,9 +402,6 @@ slide_player:
   map_remove_slide_1c:
      map_land_site_1c:
        action: remove
-  map_remove_slide_1c:
-     map_land_site_1c:
-       action: remove
   map_remove_slide_1d:
      map_land_site_1d:
        action: remove
@@ -483,9 +480,6 @@ slide_player:
   map_remove_slide_2c:
      map_land_site_2c:
        action: remove
-  map_remove_slide_2c:
-     map_land_site_2c:
-       action: remove
   map_remove_slide_2d:
      map_land_site_2d:
        action: remove
@@ -528,8 +522,6 @@ slide_player:
   map_remove_slide_2q:
      map_land_site_2q:
        action: remove
-
-
 
 
 event_player:
