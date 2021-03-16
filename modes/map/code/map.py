@@ -361,7 +361,8 @@ class Map(Mode):
             room_code = '{}{}'.format(room_prefix, room_letter)
             room_number = self.LAYOUT.get(room_code)[1]
 
-            completed_rooms.append(self.find_room_state(room_code, room_number))
+            if self.find_room_state(room_code, room_number) == 'C':
+                completed_rooms.append(room_code)
 
         for default_complete_room in ['1b', '1l', '1r', '2a', '2i']:
             if default_complete_room not in completed_rooms:
