@@ -158,9 +158,11 @@ class Map(Mode):
 
     def event_cycle_site_left(self, **kwargs):
         self.pick_previous_landing_site()
+        self.show_current_room_slide()
 
     def event_cycle_site_right(self, **kwargs):
         self.pick_next_landing_site()
+        self.show_current_room_slide()
 
     def event_select_site(self, **kwargs):
         self.select_landing_site()
