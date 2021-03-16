@@ -436,9 +436,144 @@ slide_player:
   map_show_slide_2o: map_land_site_2o
   map_show_slide_2p: map_land_site_2p
   map_show_slide_2q: map_land_site_2q
-  map_clear_land_slide:
-    map_landing_slide:
-      action: remove
+  map_remove_slide_1a:
+     map_land_site_1a:
+       action: remove
+  map_remove_slide_1b:
+     map_land_site_1b:
+       action: remove
+  map_remove_slide_1c:
+     map_land_site_1c:
+       action: remove
+  map_remove_slide_1c:
+     map_land_site_1c:
+       action: remove
+  map_remove_slide_1d:
+     map_land_site_1d:
+       action: remove
+  map_remove_slide_1e:
+     map_land_site_1e:
+       action: remove
+  map_remove_slide_1f:
+     map_land_site_1f:
+       action: remove
+  map_remove_slide_1g:
+     map_land_site_1g:
+       action: remove
+  map_remove_slide_1h:
+     map_land_site_1h:
+       action: remove
+  map_remove_slide_1i:
+     map_land_site_1i:
+       action: remove
+  map_remove_slide_1j:
+     map_land_site_1j:
+       action: remove
+  map_remove_slide_1k:
+     map_land_site_1k:
+       action: remove
+  map_remove_slide_1l:
+     map_land_site_1l:
+       action: remove
+  map_remove_slide_1m:
+     map_land_site_1m:
+       action: remove
+  map_remove_slide_1n:
+     map_land_site_1n:
+       action: remove
+  map_remove_slide_1o:
+     map_land_site_1o:
+       action: remove
+  map_remove_slide_1p:
+     map_land_site_1p:
+       action: remove
+  map_remove_slide_1q:
+     map_land_site_1q:
+       action: remove
+  map_remove_slide_1r:
+     map_land_site_1r:
+       action: remove
+  map_remove_slide_1s:
+     map_land_site_1s:
+       action: remove
+  map_remove_slide_1t:
+     map_land_site_1t:
+       action: remove
+  map_remove_slide_1u:
+     map_land_site_1u:
+       action: remove
+  map_remove_slide_1v:
+     map_land_site_1v:
+       action: remove
+  map_remove_slide_1w:
+     map_land_site_1w:
+       action: remove
+  map_remove_slide_1x:
+     map_land_site_1x:
+       action: remove
+  map_remove_slide_1y:
+     map_land_site_1y:
+       action: remove
+  map_remove_slide_1z:
+     map_land_site_1z:
+       action: remove
+  map_remove_slide_2a:
+     map_land_site_2a:
+       action: remove
+  map_remove_slide_2b:
+     map_land_site_2b:
+       action: remove
+  map_remove_slide_2c:
+     map_land_site_2c:
+       action: remove
+  map_remove_slide_2c:
+     map_land_site_2c:
+       action: remove
+  map_remove_slide_2d:
+     map_land_site_2d:
+       action: remove
+  map_remove_slide_2e:
+     map_land_site_2e:
+       action: remove
+  map_remove_slide_2f:
+     map_land_site_2f:
+       action: remove
+  map_remove_slide_2g:
+     map_land_site_2g:
+       action: remove
+  map_remove_slide_2h:
+     map_land_site_2h:
+       action: remove
+  map_remove_slide_2i:
+     map_land_site_2i:
+       action: remove
+  map_remove_slide_2j:
+     map_land_site_2j:
+       action: remove
+  map_remove_slide_2k:
+     map_land_site_2k:
+       action: remove
+  map_remove_slide_2l:
+     map_land_site_2l:
+       action: remove
+  map_remove_slide_2m:
+     map_land_site_2m:
+       action: remove
+  map_remove_slide_2n:
+     map_land_site_2n:
+       action: remove
+  map_remove_slide_2o:
+     map_land_site_2o:
+       action: remove
+  map_remove_slide_2p:
+     map_land_site_2p:
+       action: remove
+  map_remove_slide_2q:
+     map_land_site_2q:
+       action: remove
+
+
+
 
 event_player:
   s_left_flipper_active{current_player.map_select_site_active == 1}: cmd_map_cycle_site_left
