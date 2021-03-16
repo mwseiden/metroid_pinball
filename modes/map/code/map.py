@@ -156,10 +156,10 @@ class Map(Mode):
         self.player['map_select_site_active'] = 1
         self.show_current_room_slide()
 
-    def cmd_map_cycle_site_left(self, **kwargs):
+    def event_cycle_site_left(self, **kwargs):
         self.pick_previous_landing_site()
 
-    def cmd_map_cycle_site_right(self, **kwargs):
+    def event_cycle_site_right(self, **kwargs):
         self.pick_next_landing_site()
 
     def event_select_site(self, **kwargs):
