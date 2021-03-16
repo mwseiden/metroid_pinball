@@ -179,217 +179,174 @@ slides:
   map_land_site_1a:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1a_lush_cavern_splash
   map_land_site_1b:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1b_splash
   map_land_site_1c:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1c_plains_splash
   map_land_site_1d:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1d_the_lake_splash
   map_land_site_1e:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1e_statue_room_splash
   map_land_site_1f:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1f_mushroom_chamber_splash
   map_land_site_1g:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1g_the_pit_splash
   map_land_site_1h:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1h_teleporters_splash
   map_land_site_1i:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1i_computing_splash
   map_land_site_1j:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1j_phantoon_splash
   map_land_site_1k:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1k_crew_quarters_splash
   map_land_site_1l:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1l_splash
   map_land_site_1m:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1m_generator_splash
   map_land_site_1n:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1n_the_hull_splash
   map_land_site_1o:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1o_artillery_splash
   map_land_site_1p:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1p_cargo_bay_splash
   map_land_site_1q:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1q_impact_zone_splash
   map_land_site_1r:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1r_splash
   map_land_site_1s:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1s_blighted_canopy_splash
   map_land_site_1t:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1t_spiny_corridor_splash
   map_land_site_1u:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1u_the_armory_splash
   map_land_site_1v:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1v_fireflea_splash
   map_land_site_1w:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1w_biosphere_splash
   map_land_site_1x:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1x_kraid_splash
   map_land_site_1y:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1y_subterranean_isle_splash
   map_land_site_1z:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_1z_underground_desert_splash
   map_land_site_2a:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2a_splash
   map_land_site_2b:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2b_crevasse_splash
   map_land_site_2c:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2c_central_pumping_splash
   map_land_site_2d:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2d_abyss_splash
   map_land_site_2e:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2d_abyss_splash
   map_land_site_2f:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2f_frozen_lake_splash
   map_land_site_2g:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2g_draygon_splash
   map_land_site_2h:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2h_crystalline_seabed_splash
   map_land_site_2i:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2i_splash_title
   map_land_site_2j:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2j_lake_of_fire_splash
   map_land_site_2k:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2k_larvae_nest_splash
   map_land_site_2l:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2l_west_hot_springs_splash
   map_land_site_2m:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2m_geothermal_plant_splash
   map_land_site_2n:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2n_magma_chamber_splash
   map_land_site_2o:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2o_strange_ruins_splash
   map_land_site_2p:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2p_east_hot_springs_splash
   map_land_site_2q:
     widgets:
     - type: image
-      key: map_landing_slide
       image: room_2q_ridley_splash
 
 slide_player:
