@@ -20,7 +20,8 @@ class Scoop(Mode):
             self.machine.events.post('scoop_award_land_the_gunship')
             self._clear_collectable(0)
         elif player['scoop_collectables'][1] == '1':
-            self.machine.events.post('scoop_award_side_targets')
+            # self.machine.events.post('scoop_award_side_targets')
+            self.machine.events.post('cmd_map_call_gunship')
             self._clear_collectable(1)
         elif player['scoop_collectables'][2] == '1':
             self.machine.events.post('scoop_award_miniboss')

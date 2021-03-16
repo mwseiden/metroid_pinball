@@ -110,6 +110,10 @@ class Map(Mode):
         self.remove_background()
         self.add_mode_event_handler('cmd_map_position', self.event_set_location)
         self.add_mode_event_handler('cmd_map_complete', self.event_complete_location)
+        self.add_mode_event_handler('cmd_map_call_gunship', self.event_call_gunship)
+        self.add_mode_event_handler('cmd_map_cycle_site_left', self.event_cycle_site_left)
+        self.add_mode_event_handler('cmd_map_cycle_site_right', self.event_cycle_site_right)
+        self.add_mode_event_handler('cmd_map_select_site', self.event_select_site)
         self.machine.events.post('map_is_initialized')
 
     def mode_stop(self, **kwargs):
@@ -147,6 +151,19 @@ class Map(Mode):
         self.player[player_var] = "".join(current_visits)
 
         self.draw_map(area_code)
+
+    def event_call_gunship(self, **kwargs):
+        self.player['map_select_site_active'] = 1
+        self.show_current_room_slide()
+
+    def cmd_map_cycle_site_left(self, **kwargs):
+        self.pick_previous_landing_site()
+
+    def cmd_map_cycle_site_right(self, **kwargs):
+        self.pick_next_landing_site()
+
+    def event_select_site(self, **kwargs):
+        self.select_landing_site()
 
     def draw_map(self, area_code):
         self.remove_background()
@@ -297,6 +314,14 @@ class Map(Mode):
         self.machine.widget_player.play(settings, 'map', None)
 
 
+    def show_current_room_slide(self):
+        room_index = self.player['map_next_landing_site_index']
+        room_prefix = int(room_index / 26) + 1
+        room_letter = chr((room_index % 26) + ord('a'))
+        room_code = '{}{}'.format(room_prefix, room_letter)
+        self.machine.events.post('map_show_slide_{}'.format(room_code))
+
+
     def pick_next_landing_site(self):
         completed_rooms = self.build_completed_room_list()
 
@@ -308,6 +333,7 @@ class Map(Mode):
 
         self.player['map_next_landing_site_index'] = current_index
 
+
     def pick_previous_landing_site(self):
         completed_rooms = self.build_completed_room_list()
 
@@ -318,6 +344,13 @@ class Map(Mode):
             current_index = len(completed_rooms) - 1
 
         self.player['map_next_landing_site_index'] = current_index
+
+
+    def select_landing_site(self):
+        self.player['map_select_site_active'] = 0
+        self.machine.events.post('map_clear_land_slide')
+        self.machine.events.post('cmd_scoop_collect_next')
+
 
     def build_completed_room_list(self):
         completed_rooms = []
@@ -335,6 +368,7 @@ class Map(Mode):
                 completed_rooms.append(default_complete_room)
 
         return completed_rooms
+
 
     def find_room_state(self, room_code, room_number):
         return list(self.player['map_visited_{}'.format(self.LAYOUT[room_code][0])])[room_number - 1]
