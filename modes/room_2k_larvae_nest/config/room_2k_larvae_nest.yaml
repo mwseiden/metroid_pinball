@@ -159,6 +159,12 @@ show_player:
     room_2k_larvae_nest_hit_equip:
       loops: 0
       speed: 51
+  room_2k_exit_south_shot_hit:
+    special_score_purple:
+      loops: 0
+  room_2k_exit_west_shot_hit:
+    special_score_purple:
+      loops: 0
 
 sounds:
   room_2k_insects_1:
@@ -257,3 +263,6 @@ variable_player:
     room_2k_insects: 5
   room_2k_collect_score:
     score: (25000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
+    room_special_score:
+      int: (25000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
+      action: set
