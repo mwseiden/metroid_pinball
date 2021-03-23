@@ -99,8 +99,4 @@ class Scoop(Mode):
         self.machine.game.player['scoop_collectables'] = collectables[:index] + '0' + collectables[index+1:]
 
     def _is_multiball(self):
-        for multiball in self.machine.multiballs.values():
-          if multiball.enabled:
-            return True
-
-        return False
+        return self.machine.game.balls_in_play > 1
