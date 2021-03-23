@@ -115,7 +115,10 @@ class Scoop(Mode):
         self.machine.game.player['scoop_collectables'] = collectables[:index] + '0' + collectables[index+1:]
 
     def _is_multiball(self):
-        return self.machine.game.balls_in_play > 1
+        return self.machine.game.balls_in_play > 1 or self._is_generator_running()
+
+    def _is_generator_running(self):
+        return self.machine.device.sequences['room_1m_generator_sequence'].value < 2 and self.player['continue_room'] == '1m'
 
     def _collect_is_available(self, index):
         return not self._is_multiball() or (self._is_multiball() and index in [0, 1])
