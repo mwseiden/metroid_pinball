@@ -2,6 +2,12 @@ from mpf.core.mode import Mode
 
 class Scoop(Mode):
 
+    COLLECT_EVENTS = [
+      'scoop_award_land_the_gunship',
+      'scoop_award_side_targets',
+      'scoop_award_miniboss'
+    ]
+
     def mode_start(self, **kwargs):
         self.add_mode_event_handler('ball_hold_collect_award_shot_held_ball', self.event_ball_collected)
         self.add_mode_event_handler('cmd_scoop_check_for_award', self.event_scoop_check_for_award)
@@ -15,20 +21,30 @@ class Scoop(Mode):
 
     def event_ball_collected(self, **kwargs):
         player = self.machine.game.player
-        is_multiball = self._is_multiball()
+        something_was_awarded = False
 
-        if player['scoop_collectables'][0] == '1':
-            self.machine.events.post('scoop_award_land_the_gunship')
-            self._clear_collectable(0)
-        elif player['scoop_collectables'][1] == '1':
-            self.machine.events.post('scoop_award_side_targets')
-            # self.machine.events.post('cmd_map_call_gunship')
-            self._clear_collectable(1)
-        elif player['scoop_collectables'][2] == '1' and not is_multiball:
-            self.machine.events.post('scoop_award_miniboss')
-            self._clear_collectable(2)
-        else:
-          self.machine.events.post('scoop_ball_hold_release')
+        for i in range(3):
+            if player['scoop_collectables'][i] == '1' and self._collect_is_available(i):
+                self.machine.events.post(self.COLLECT_EVENTS[i])
+                self._clear_collectable(i)
+                something_was_awarded = True
+                break
+
+        if not something_was_awarded:
+            self.machine.events.post('scoop_ball_hold_release')
+
+        # if player['scoop_collectables'][0] == '1':
+            # self.machine.events.post('scoop_award_land_the_gunship')
+            # self._clear_collectable(0)
+        # elif player['scoop_collectables'][1] == '1':
+            # self.machine.events.post('scoop_award_side_targets')
+            # #self.machine.events.post('cmd_map_call_gunship')
+            # self._clear_collectable(1)
+        # elif player['scoop_collectables'][2] == '1' and self._collect_is_available(2):
+            # self.machine.events.post('scoop_award_miniboss')
+            # self._clear_collectable(2)
+        # else:
+          # self.machine.events.post('scoop_ball_hold_release')
 
         self.machine.events.post('cmd_advance_scoop_indicator')
 
@@ -70,11 +86,11 @@ class Scoop(Mode):
         i = player['scoop_indicator_index']
 
         for i in range(i + 1, 8):
-            if player['scoop_collectables'][i] == '1':
+            if player['scoop_collectables'][i] == '1' and self._collect_is_available(i):
                 return i
 
         for i in range(0, i):
-            if player['scoop_collectables'][i] == '1':
+            if player['scoop_collectables'][i] == '1' and self._collect_is_available(i):
                 return i
 
         return None
@@ -100,3 +116,6 @@ class Scoop(Mode):
 
     def _is_multiball(self):
         return self.machine.game.balls_in_play > 1
+
+    def _collect_is_available(self, index):
+        return not self._is_multiball() or (self._is_multiball() and index in [0, 1])
