@@ -4,7 +4,8 @@ class Scoop(Mode):
 
     COLLECT_EVENTS = [
       'scoop_award_land_the_gunship',
-      'cmd_map_call_gunship', # 'scoop_award_side_targets',
+      'scoop_award_side_targets',
+      # 'cmd_map_call_gunship',
       'scoop_award_miniboss'
     ]
 
@@ -122,4 +123,4 @@ class Scoop(Mode):
         return (generator_state is None or generator_state < 2) and self.player['continue_room'] == '1m'
 
     def _collect_is_available(self, index):
-        return not self._is_multiball() or (self._is_multiball() and index in [0])
+        return not self._is_multiball() or (self._is_multiball() and index in [0, 1])
