@@ -15,6 +15,7 @@ class Scoop(Mode):
 
     def event_ball_collected(self, **kwargs):
         player = self.machine.game.player
+        is_multiball = self._is_multiball()
 
         if player['scoop_collectables'][0] == '1':
             self.machine.events.post('scoop_award_land_the_gunship')
@@ -23,7 +24,7 @@ class Scoop(Mode):
             self.machine.events.post('scoop_award_side_targets')
             # self.machine.events.post('cmd_map_call_gunship')
             self._clear_collectable(1)
-        elif player['scoop_collectables'][2] == '1':
+        elif player['scoop_collectables'][2] == '1' and not is_multiball:
             self.machine.events.post('scoop_award_miniboss')
             self._clear_collectable(2)
         else:
@@ -97,3 +98,9 @@ class Scoop(Mode):
         collectables = self.machine.game.player['scoop_collectables']
         self.machine.game.player['scoop_collectables'] = collectables[:index] + '0' + collectables[index+1:]
 
+    def _is_multiball(self):
+        for multiball in self.machine.device.multiballs:
+          if multiball.enabled:
+            return True
+
+        return False
