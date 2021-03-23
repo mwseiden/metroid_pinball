@@ -145,15 +145,19 @@ show_player:
       action: stop
   room_2k_bank_1_shot_hit:
     room_2k_larvae_nest_hit_missile:
+      loops: 0
       speed: 51
   room_2k_bank_2_shot_hit:
     room_2k_larvae_nest_hit_power_bomb:
+      loops: 0
       speed: 51
   room_2k_bank_3_shot_hit:
     room_2k_larvae_nest_hit_miniboss:
+      loops: 0
       speed: 51
   room_2k_bank_4_shot_hit:
     room_2k_larvae_nest_hit_equip:
+      loops: 0
       speed: 51
 
 sounds:
