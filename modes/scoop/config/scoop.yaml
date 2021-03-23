@@ -91,4 +91,5 @@ sound_player:
 event_player:
   timer_scoop_wtf_complete: cmd_scoop_check_for_award
   scoop_ball_hold_release: cmd_scoop_check_for_award
+  balls_in_play{balls == 1}: cmd_advance_scoop_indicator
 
