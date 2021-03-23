@@ -256,4 +256,4 @@ variable_player:
   room_2k_bank_4_shot_hit:
     room_2k_insects: 5
   room_2k_collect_score:
-    score: (5000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
+    score: (25000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
