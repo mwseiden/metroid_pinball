@@ -3,3 +3,5 @@
 keyboard:
   d:
     event: debug_dump_stats
+  r:
+    event: twitch_subs_reverse_flip

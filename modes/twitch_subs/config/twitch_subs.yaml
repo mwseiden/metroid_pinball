@@ -120,6 +120,7 @@ sounds:
 
 sound_player:
   twitch_subs_teleport: twitch_subs_teleport
+  twitch_subs_reverse_flip: reverse_flippers
 
 event_player:
   twitch_subs_reverse_flip: reverse_flippers_started
