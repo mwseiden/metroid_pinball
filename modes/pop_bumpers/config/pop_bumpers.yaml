@@ -43,6 +43,9 @@ show_player:
       loops: 0
       speed: 30
       priority: 1000
+    pop_bumpers_sneak_score:
+      loops: 0
+      priority: 1000
 
 sounds:
   pop_1:
@@ -78,4 +81,7 @@ variable_player:
     score:
       int: (1000 + (800 * current_player.pops)) * current_player.multiplier
   subway_sneak_hit:
-    score: 50000 * current_player.multiplier
+    score: 200000 * current_player.multiplier
+    room_special_score:
+      int: 200000 * current_player.multiplier
+      action: set
