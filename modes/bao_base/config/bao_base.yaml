@@ -157,7 +157,7 @@ timers:
     direction: down
     tick_interval: 1.0s
     control_events:
-      - event: ball_save_default_enabled
+      - event: ball_save_default_timer_start
         action: restart
       - event: ball_save_default_saving_ball
         action: stop
