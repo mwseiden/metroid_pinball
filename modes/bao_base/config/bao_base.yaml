@@ -670,6 +670,9 @@ show_player:
   ball_ending:
     bao_clock:
       action: stop
+  timer_bao_ball_save_stopped:
+    bao_clock:
+      action: stop
 
 
 sounds:
