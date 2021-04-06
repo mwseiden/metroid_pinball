@@ -615,55 +615,55 @@ show_player:
       priority: 2000
       show_tokens:
         led: led_scanner_se
-        color: '000F00'
+        color: '002000'
   bao_timer_9:
     bao_clock:
       priority: 2000
       show_tokens:
         led: led_scanner_sw
-        color: '001800'
+        color: '002800'
   bao_timer_8:
     bao_clock:
       priority: 2000
       show_tokens:
         led: led_scanner_w
-        color: '001F00'
+        color: '003000'
   bao_timer_7:
     bao_clock:
       priority: 2000
       show_tokens:
         led: led_scanner_nw
-        color: '080F00'
+        color: '183000'
   bao_timer_6:
     bao_clock:
       priority: 2000
       show_tokens:
         led: led_scanner_ne
-        color: '0F0F00'
+        color: '303000'
   bao_timer_5:
     bao_clock:
       priority: 2000
       show_tokens:
         led: led_scanner_e
-        color: '0F0800'
+        color: '301800'
   bao_timer_4:
     bao_clock:
       priority: 2000
       show_tokens:
         led: led_scanner_se
-        color: '0F0000'
+        color: '100000'
   bao_timer_3:
     bao_clock:
       priority: 2000
       show_tokens:
         led: led_scanner_sw
-        color: '180000'
+        color: '200000'
   bao_timer_2:
     bao_clock:
       priority: 2000
       show_tokens:
         led: led_scanner_w
-        color: '1F0000'
+        color: '300000'
   bao_timer_1:
     bao_clock:
       action: stop
