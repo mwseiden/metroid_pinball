@@ -151,7 +151,18 @@ timers:
     control_events:
       - event: bao_test_lock_2
         action: restart
-
+  bao_ball_save:
+    start_value: 10
+    end_value: 0
+    direction: down
+    tick_interval: 1.0s
+    control_events:
+      - event: ball_save_default_enabled
+        action: restart
+      - event: ball_save_default_saving_ball
+        action: stop
+      - event: ball_ending
+        action: stop
 
 shot_profiles:
   bao_charge_targets:
@@ -599,6 +610,57 @@ show_player:
       action: stop
     bao_reactor_critical:
       action: stop
+  bao_timer_10:
+    bao_clock:
+      show_tokens:
+        led: led_scanner_se
+        color: '000F00'
+  bao_timer_9:
+    bao_clock:
+      show_tokens:
+        led: led_scanner_sw
+        color: '000F00'
+  bao_timer_8:
+    bao_clock:
+      show_tokens:
+        led: led_scanner_w
+        color: '000F00'
+  bao_timer_7:
+    bao_clock:
+      show_tokens:
+        led: led_scanner_nw
+        color: '0F0F00'
+  bao_timer_6:
+    bao_clock:
+      show_tokens:
+        led: led_scanner_ne
+        color: '0F0F00'
+  bao_timer_5:
+    bao_clock:
+      show_tokens:
+        led: led_scanner_e
+        color: '080F00'
+  bao_timer_4:
+    bao_clock:
+      show_tokens:
+        led: led_scanner_se
+        color: '080F00'
+  bao_timer_3:
+    bao_clock:
+      show_tokens:
+        led: led_scanner_sw
+        color: '0F0000'
+  bao_timer_2:
+    bao_clock:
+      show_tokens:
+        led: led_scanner_w
+        color: '1F0000'
+  bao_timer_1:
+    bao_clock:
+      action: stop
+  ball_ending:
+    bao_clock:
+      action: stop
 
 
 sounds:
@@ -835,6 +897,19 @@ event_player:
   bao_play_multiball:
     cmd_play_map_music:
       music: music_bao_multiball
+  timer_bao_ball_save_tick{ticks == 10}: bao_timer_10
+  timer_bao_ball_save_tick{ticks == 9}: bao_timer_9
+  timer_bao_ball_save_tick{ticks == 8}: bao_timer_8
+  timer_bao_ball_save_tick{ticks == 7}: bao_timer_7
+  timer_bao_ball_save_tick{ticks == 6}: bao_timer_6
+  timer_bao_ball_save_tick{ticks == 5}: bao_timer_5
+  timer_bao_ball_save_tick{ticks == 4}: bao_timer_4
+  timer_bao_ball_save_tick{ticks == 3}: bao_timer_3
+  timer_bao_ball_save_tick{ticks == 2}: bao_timer_2
+  timer_bao_ball_save_tick{ticks == 1}: bao_timer_1
+  timer_bao_ball_save_tick{ticks == 0}: bao_timer_0
+
+
 
 variable_player:
   bao_final_shot_completed:
