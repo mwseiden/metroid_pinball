@@ -22,13 +22,35 @@ shots:
     switch: s_thin_orange
 
 
+show_player:
+  multiplier_set_1x:
+    multiplier_indicator:
+      action: stop
+  multiplier_set_2x:
+    blink_light:
+      loops: -1
+      speed: 20
+      key: multiplier_indicator
+      show_tokens:
+        led: led_2x
+        color: 'FF8000'
+  multiplier_set_3x:
+    blink_light:
+      loops: -1
+      speed: 20
+      key: multiplier_indicator
+      show_tokens:
+        led: led_3x
+        color: 'FFFF00'
+
+
 event_player:
   mode_multiplier_started: multiplier_timer_restart
   multiplier_increase_value_shot_hit: multiplier_timer_restart
   player_multiplier_charge{value < 3}: multiplier_set_1x
   player_multiplier_charge{value >= 3 and value < 6}: multiplier_set_2x
   player_multiplier_charge{value >= 6}: multiplier_set_3x
-  timer_multiplier_countdown_tick{tick > 0 and current_player.multiplier_charge > 0}: multiplier_subtract_charge
+  timer_multiplier_countdown_tick{current_player.multiplier_charge > 0}: multiplier_subtract_charge
 
 
 variable_player:
