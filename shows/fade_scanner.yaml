@@ -1,6 +1,6 @@
 #show_version=5
 
-- duration: 50ms
+- duration: 1s
   lights:
     led_scanner_nw:
       color: (color)
@@ -21,17 +21,3 @@
       color: (color)
       fade: 950ms
 
-- duration: 950ms
-  lights:
-    led_scanner_nw:
-      color: '000000'
-    led_scanner_ne:
-      color: '000000'
-    led_scanner_e:
-      color: '000000'
-    led_scanner_se:
-      color: '000000'
-    led_scanner_sw:
-      color: '000000'
-    led_scanner_w:
-      color: '000000'
