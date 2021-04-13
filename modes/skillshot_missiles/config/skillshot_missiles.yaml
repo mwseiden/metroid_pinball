@@ -74,10 +74,10 @@ variable_player:
       action: set
       int: 2
   skillshot_missiles_success:
-    score: 10000
+    score: 10000 * current_player.multiplier
     missiles: 1
   skillshot_missiles_success_super:
-    score: 20000
+    score: 20000 * current_player.multiplier
     super_missiles: 1
 
 sound_player:

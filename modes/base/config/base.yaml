@@ -478,7 +478,7 @@ variable_player:
     score:
       int: ((current_player.ramps * 2010) + (current_player.area_bonus_ne * 1000)) * current_player.multiplier
   secret_passage_shot_hit:
-    score: 420 + (current_player.area_bonus_w * 1000)
+    score: (420 + (current_player.area_bonus_w * 1000)) * current_player.multiplier
   upper_right_sling_shot_hit:
     slingshots: 1
     score:

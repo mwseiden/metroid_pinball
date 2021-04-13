@@ -59,7 +59,7 @@ variable_player:
       action: set
       int: 2
   skillshot_bombs_success:
-    score: 10000
+    score: 10000 * current_player.multiplier
     power_bombs: 1
 
 sound_player:
