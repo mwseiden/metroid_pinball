@@ -1,0 +1,43 @@
+#show_version=5
+
+- duration: 50ms
+  lights:
+    led_scanner_nw:
+      color: (color)
+      fade: 50ms
+    led_scanner_ne:
+      color: (color)
+      fade: 50ms
+    led_scanner_e:
+      color: (color)
+      fade: 50ms
+    led_scanner_se:
+      color: (color)
+      fade: 50ms
+    led_scanner_sw:
+      color: (color)
+      fade: 50ms
+    led_scanner_w:
+      color: (color)
+      fade: 50ms
+
+- duration: 950ms
+  lights:
+    led_scanner_nw:
+      color: (color)
+      fade: 950ms
+    led_scanner_ne:
+      color: (color)
+      fade: 950ms
+    led_scanner_e:
+      color: (color)
+      fade: 950ms
+    led_scanner_se:
+      color: (color)
+      fade: 950ms
+    led_scanner_sw:
+      color: (color)
+      fade: 950ms
+    led_scanner_w:
+      color: (color)
+      fade: 950ms

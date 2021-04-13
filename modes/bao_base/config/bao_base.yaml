@@ -611,62 +611,72 @@ show_player:
     bao_reactor_critical:
       action: stop
   bao_timer_10:
-    bao_clock:
+    fade_scanner:
       priority: 2000
+      loops: 0
       show_tokens:
-        led: led_scanner_se
-        color: '002000'
+        color: '004000'
   bao_timer_9:
-    bao_clock:
+    fade_scanner:
       priority: 2000
+      loops: 0
       show_tokens:
-        led: led_scanner_sw
-        color: '002800'
+        color: '003800'
   bao_timer_8:
-    bao_clock:
+    fade_scanner:
       priority: 2000
+      loops: 0
       show_tokens:
-        led: led_scanner_w
         color: '003000'
   bao_timer_7:
-    bao_clock:
+    fade_scanner:
       priority: 2000
+      loops: 0
       show_tokens:
-        led: led_scanner_nw
-        color: '183000'
+        color: '303000'
   bao_timer_6:
     bao_clock:
       priority: 2000
+      loops: 0
       show_tokens:
         led: led_scanner_ne
         color: '303000'
   bao_timer_5:
     bao_clock:
       priority: 2000
+      loops: 0
       show_tokens:
         led: led_scanner_e
         color: '301800'
   bao_timer_4:
     bao_clock:
       priority: 2000
+      loops: 0
       show_tokens:
         led: led_scanner_se
-        color: '100000'
+        color: '200000'
   bao_timer_3:
     bao_clock:
       priority: 2000
+      loops: 0
       show_tokens:
         led: led_scanner_sw
-        color: '200000'
+        color: '400000'
   bao_timer_2:
     bao_clock:
       priority: 2000
+      loops: 0
       show_tokens:
         led: led_scanner_w
-        color: '300000'
+        color: '800000'
   bao_timer_1:
     bao_clock:
       action: stop
+    fade_scanner:
+      priority: 2000
+      loops: 0
+      show_tokens:
+        color: 'FF0000'
   ball_ending:
     bao_clock:
       action: stop
