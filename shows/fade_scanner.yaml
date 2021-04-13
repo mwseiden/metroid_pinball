@@ -4,40 +4,34 @@
   lights:
     led_scanner_nw:
       color: (color)
-      fade: 50ms
+      fade: 950ms
     led_scanner_ne:
       color: (color)
-      fade: 50ms
+      fade: 950ms
     led_scanner_e:
       color: (color)
-      fade: 50ms
+      fade: 950ms
     led_scanner_se:
       color: (color)
-      fade: 50ms
+      fade: 950ms
     led_scanner_sw:
       color: (color)
-      fade: 50ms
+      fade: 950ms
     led_scanner_w:
       color: (color)
-      fade: 50ms
+      fade: 950ms
 
 - duration: 950ms
   lights:
     led_scanner_nw:
-      color: (color)
-      fade: 950ms
+      color: '000000'
     led_scanner_ne:
-      color: (color)
-      fade: 950ms
+      color: '000000'
     led_scanner_e:
-      color: (color)
-      fade: 950ms
+      color: '000000'
     led_scanner_se:
-      color: (color)
-      fade: 950ms
+      color: '000000'
     led_scanner_sw:
-      color: (color)
-      fade: 950ms
+      color: '000000'
     led_scanner_w:
-      color: (color)
-      fade: 950ms
+      color: '000000'
