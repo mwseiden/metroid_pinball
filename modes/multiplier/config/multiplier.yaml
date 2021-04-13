@@ -4,3 +4,37 @@ mode:
   start_events: metroid_base_started
   stop_events: metroid_base_ended
   priority: 200
+
+
+timers:
+  multiplier_countdown:
+    start_value: 1
+    end_value: 10000
+    tick_interval: 15.0s
+    restart_on_complete: True
+    control_events:
+      - event: multiplier_timer_restart
+        action: restart
+
+
+shots:
+  multiplier_increase_value_shot:
+    switch: s_thin_orange
+
+
+event_player:
+  mode_multiplier_started: multiplier_timer_restart
+  multiplier_increase_value_shot_hit: multiplier_timer_restart
+  # timer_multiplier_countdown_tick{ticks == 10}: bao_timer_10
+
+
+variable_player:
+  mode_multiplier_started:
+    multiplier_charge:
+      action: set
+      value: 0
+    multiplier:
+      action: set
+      value: 1
+  multiplier_increase_value_shot_hit:
+    multiplier_charge: 1

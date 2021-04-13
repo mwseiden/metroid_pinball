@@ -147,6 +147,8 @@ player_vars:
     initial_value: 0
   multiplier:
     initial_value: 1
+  multiplier_charge:
+    initial_value: 0
   orbits:
     initial_value: 0
   pops:
