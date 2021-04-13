@@ -27,13 +27,13 @@ event_player:
   multiplier_increase_value_shot_hit: multiplier_timer_restart
 
 
-# variable_player:
-  # mode_multiplier_started:
-    # multiplier_charge:
-      # action: set
-      # value: 0
-    # multiplier:
-      # action: set
-      # value: 1
-  # multiplier_increase_value_shot_hit:
-    # multiplier_charge: 1
+variable_player:
+  mode_multiplier_started:
+    multiplier_charge:
+      action: set
+      int: 0
+    multiplier:
+      action: set
+      int: 1
+  multiplier_increase_value_shot_hit:
+    multiplier_charge: 1
