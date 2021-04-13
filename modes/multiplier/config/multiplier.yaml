@@ -46,7 +46,7 @@ show_player:
 
 event_player:
   mode_multiplier_started: multiplier_timer_restart
-  multiplier_increase_value_shot_hit: multiplier_timer_restart
+  # multiplier_increase_value_shot_hit: multiplier_timer_restart
   player_multiplier_charge{value < 3}: multiplier_set_1x
   player_multiplier_charge{value >= 3 and value < 6}: multiplier_set_2x
   player_multiplier_charge{value >= 6}: multiplier_set_3x
