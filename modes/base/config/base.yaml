@@ -116,12 +116,6 @@ ball_saves:
     debug: yes
 
 timers:
-  base_possible_dirty_pool:
-    end_value: 4
-    tick_interval: 1s
-    control_events:
-      - event: dirty_pool_possible
-        action: restart
   base_twitch_left_flipper_timer:
     end_value: 2
     tick_interval: 1s
@@ -321,9 +315,6 @@ show_player:
       show_tokens:
         led: led_thin_orange
         color: ff9000
-  dirty_pool_locked:
-    base_dirty_pool:
-      loops: 0
   secret_passage_shot_hit:
     blink_3_lights:
       loops: 0
@@ -346,6 +337,10 @@ show_player:
         led_3: led_pop_3
         color_1: 'FF0000'
         color_2: '000000'
+  twitch_raid:
+    base_twitch_raid:
+      loops: 0
+      priority: 500
   flipper_cradle:
     base_status_report:
       loops: 0
@@ -529,8 +524,6 @@ variable_player:
     score: 800 * current_player.multiplier
   vuk_shot_hit:
     score: 10000 * current_player.multiplier
-  dirty_pool_locked:
-    score: 66600 * current_player.multiplier
 
 sounds:
   energy_target:
