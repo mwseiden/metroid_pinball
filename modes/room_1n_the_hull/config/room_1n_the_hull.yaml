@@ -28,7 +28,7 @@ shot_profiles:
         show: blink_light
         speed: 4
         show_tokens:
-          color: 'b56914'
+          color: 'a9e82c'
 
 shots:
   room_1n_exit_north_shot:
