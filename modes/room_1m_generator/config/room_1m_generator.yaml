@@ -211,9 +211,8 @@ event_player:
   drop_target_drop_one_down{device.multiballs.room_1m_generator_multiball.balls_added_live > 0 and current_player.room_1m_captured > 0}: cmd_drop_one_up
   s_vuk_active: room_1m_ball_released, cmd_drop_one_down, cmd_drop_three_up
   s_vuk_active{current_player.room_1m_captured > 0}: room_1m_add_big_charge
-  s_behind_drop_1_active{current_player.room_1m_captured > 0}: room_1m_add_charge, room_1m_keep_ball_captured
-  s_behind_drop_2_active{current_player.room_1m_captured > 0}: room_1m_add_big_charge, room_1m_keep_ball_captured
-  s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_huge_charge, room_1m_keep_ball_captured
+  s_behind_drop_2_active{current_player.room_1m_captured > 0}: room_1m_add_charge, room_1m_keep_ball_captured
+  s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_charge, room_1m_keep_ball_captured
   room_1m_generator_captive_shot_hit: room_1m_add_charge
   room_1m_start_generator_shot_hit: room_1m_generator_bootup, room_1m_add_huge_charge
   room_1m_generator_started:
