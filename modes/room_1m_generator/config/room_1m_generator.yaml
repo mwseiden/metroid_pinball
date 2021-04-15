@@ -152,6 +152,14 @@ show_player:
         led_3: led_drop_3
         color_1: 'FFFF00'
         color_2: '000000'
+    special_score_yellow:
+      loops: 0
+  room_1m_add_big_charge:
+    special_score_orange:
+      loops: 0
+  room_1m_add_huge_charge:
+    special_score_red:
+      loops: 0
 
 sounds:
   room_1m_charge:
@@ -203,8 +211,9 @@ event_player:
   drop_target_drop_one_down{device.multiballs.room_1m_generator_multiball.balls_added_live > 0 and current_player.room_1m_captured > 0}: cmd_drop_one_up
   s_vuk_active: room_1m_ball_released, cmd_drop_one_down, cmd_drop_three_up
   s_vuk_active{current_player.room_1m_captured > 0}: room_1m_add_big_charge
-  s_behind_drop_2_active{current_player.room_1m_captured > 0}: room_1m_add_charge, room_1m_keep_ball_captured
-  s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_charge, room_1m_keep_ball_captured
+  s_behind_drop_1_active{current_player.room_1m_captured > 0}: room_1m_add_charge, room_1m_keep_ball_captured
+  s_behind_drop_2_active{current_player.room_1m_captured > 0}: room_1m_add_big_charge, room_1m_keep_ball_captured
+  s_behind_drop_3_active{current_player.room_1m_captured > 0}: room_1m_add_huge_charge, room_1m_keep_ball_captured
   room_1m_generator_captive_shot_hit: room_1m_add_charge
   room_1m_start_generator_shot_hit: room_1m_generator_bootup, room_1m_add_huge_charge
   room_1m_generator_started:
@@ -257,9 +266,18 @@ variable_player:
   room_1m_add_charge:
     wrecked_ship_charge: 1
     score: (12340 + (50000 * current_player.area_bonus_ne) + (1230 * current_player.wrecked_ship_charge)) * current_player.multiplier
+    room_special_score:
+      int: (12340 + (50000 * current_player.area_bonus_ne) + (1230 * current_player.wrecked_ship_charge)) * current_player.multiplier
+      action: set
   room_1m_add_big_charge:
     wrecked_ship_charge: 5
     score: (56780 + (60000 * current_player.area_bonus_ne) + (4560 * current_player.wrecked_ship_charge)) * current_player.multiplier
+    room_special_score:
+      int: (56780 + (60000 * current_player.area_bonus_ne) + (4560 * current_player.wrecked_ship_charge)) * current_player.multiplier
+      action: set
   room_1m_add_huge_charge:
     wrecked_ship_charge: 10
     score: (91230 + (70000 * current_player.area_bonus_ne) + (7890 * current_player.wrecked_ship_charge)) * current_player.multiplier
+    room_special_score:
+      int: (91230 + (70000 * current_player.area_bonus_ne) + (7890 * current_player.wrecked_ship_charge)) * current_player.multiplier
+      action: set
