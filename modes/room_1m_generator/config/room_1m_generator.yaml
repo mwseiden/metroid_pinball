@@ -190,8 +190,6 @@ event_player:
     cmd_map_position:
       room: '1m'
       visit: True
-    cmd_play_map_music:
-      music: music_wrecked_ship_generator
   mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value == 0}: room_1m_stage_1, chozo_multiball_disable
   mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value == 1}: room_1m_stage_2, chozo_multiball_disable
   mode_room_1m_generator_started{device.sequences.room_1m_generator_sequence.value > 1}: room_1m_stage_3
@@ -221,6 +219,15 @@ event_player:
       color: "FFFF00"
       count: 5
       repeat: 20
+  room_1m_stage_1:
+    cmd_play_map_music:
+      music: music_wrecked_ship_generator
+  room_1m_stage_2:
+    cmd_play_map_music:
+      music: music_wrecked_ship_generator
+  room_1m_stage_3:
+    cmd_play_map_music:
+      music: music_wrecked_ship_calm
   room_1m_exit_west_shot_hit.1: drop_targets_save
   room_1m_exit_west_shot_hit.2: room_1l_enter
 

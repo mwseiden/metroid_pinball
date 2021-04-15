@@ -30,6 +30,7 @@ sound_player:
   music_player_play_music_norfair_deep: music_norfair_deep
   music_player_play_music_norfair_deep_intro: music_norfair_deep_intro
   music_player_play_music_wrecked_ship: music_wrecked_ship
+  music_player_play_music_wrecked_ship_calm: music_wrecked_ship_calm
   music_player_play_music_wrecked_ship_generator: music_wrecked_ship_generator
 
   # stop music
@@ -121,6 +122,10 @@ sound_player:
     music_wrecked_ship:
       action: stop
       fade_out: 1s
+  music_player_stop_music_wrecked_ship_calm:
+    music_wrecked_ship_calm:
+      action: stop
+      fade_out: 1s
   music_player_stop_music_wrecked_ship_generator:
     music_wrecked_ship_generator:
       action: stop
@@ -171,6 +176,9 @@ sound_player:
       action: stop
       fade_out: 3s
     music_wrecked_ship:
+      action: stop
+      fade_out: 3s
+    music_wrecked_ship_calm:
       action: stop
       fade_out: 3s
     music_wrecked_ship_generator:
