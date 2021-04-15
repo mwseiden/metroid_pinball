@@ -173,6 +173,12 @@ player_vars:
     initial_value: 0
   room_1m_captured:
     initial_value: 0
+  room_1n_robots_1:
+    initial_value: 0
+  room_1n_robots_2:
+    initial_value: 0
+  room_1n_robots_3:
+    initial_value: 0
   room_1s_jackpot:
     initial_value: 0
   room_special_score:

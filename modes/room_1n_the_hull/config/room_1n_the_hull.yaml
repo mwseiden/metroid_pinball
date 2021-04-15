@@ -108,6 +108,15 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+  room_1n_work_robot_shot_1_hit:
+    special_score_green:
+      loops: 0
+  room_1n_work_robot_shot_2_hit:
+    special_score_green:
+      loops: 0
+  room_1n_work_robot_shot_3_hit:
+    special_score_green:
+      loops: 0
   show_mode_status_report:
     room_1n_the_hull_status_report:
       loops: 0
@@ -143,6 +152,9 @@ event_player:
   room_1n_exit_north_shot_hit.2: room_1l_enter
   room_1n_exit_south_shot_hit.1: drop_targets_save
   room_1n_exit_south_shot_hit.2: room_1p_enter
+  room_1n_work_robot_shot_1_hit: room_1n_add_robot_1
+  room_1n_work_robot_shot_2_hit: room_1n_add_robot_2
+  room_1n_work_robot_shot_3_hit: room_1n_add_robot_3
 
 variable_player:
   mode_room_1n_the_hull_started:
@@ -152,3 +164,24 @@ variable_player:
     continue_room:
       string: 1n
       action: set
+  room_1n_work_robot_shot_1_hit:
+    score: (((current_player.area_bonus_sw + 1) * 50000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_1 * 10420)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_sw + 1) * 50000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_1 * 10420)) * current_player.multiplier
+      action: set
+  room_1n_work_robot_shot_2_hit:
+    score: (((current_player.area_bonus_nw + 1) * 100000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_2 * 10800)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 100000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_2 * 10800)) * current_player.multiplier
+      action: set
+  room_1n_work_robot_shot_3_hit:
+    score: (((current_player.area_bonus_ne + 1) * 75000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_3 * 10600)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_ne + 1) * 75000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_3 * 10600)) * current_player.multiplier
+      action: set
+  room_1n_add_robot_1:
+    room_1n_robots_1: 1
+  room_1n_add_robot_2:
+    room_1n_robots_2: 1
+  room_1n_add_robot_3:
+    room_1n_robots_3: 1
