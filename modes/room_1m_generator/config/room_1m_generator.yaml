@@ -264,19 +264,19 @@ variable_player:
       action: set
   room_1m_add_charge:
     wrecked_ship_charge: 1
-    score: (12340 + (50000 * current_player.area_bonus_ne) + (1230 * current_player.wrecked_ship_charge)) * current_player.multiplier
+    score: (12340 + (50000 * current_player.area_bonus_ne) + (12300 * current_player.wrecked_ship_charge)) * current_player.multiplier
     room_special_score:
-      int: (12340 + (50000 * current_player.area_bonus_ne) + (1230 * current_player.wrecked_ship_charge)) * current_player.multiplier
+      int: (12340 + (50000 * current_player.area_bonus_ne) + (12300 * current_player.wrecked_ship_charge)) * current_player.multiplier
       action: set
   room_1m_add_big_charge:
     wrecked_ship_charge: 5
-    score: (56780 + (60000 * current_player.area_bonus_ne) + (4560 * current_player.wrecked_ship_charge)) * current_player.multiplier
+    score: (56780 + (60000 * current_player.area_bonus_ne) + (45600 * current_player.wrecked_ship_charge)) * current_player.multiplier
     room_special_score:
-      int: (56780 + (60000 * current_player.area_bonus_ne) + (4560 * current_player.wrecked_ship_charge)) * current_player.multiplier
+      int: (56780 + (60000 * current_player.area_bonus_ne) + (45600 * current_player.wrecked_ship_charge)) * current_player.multiplier
       action: set
   room_1m_add_huge_charge:
     wrecked_ship_charge: 10
-    score: (91230 + (70000 * current_player.area_bonus_ne) + (7890 * current_player.wrecked_ship_charge)) * current_player.multiplier
+    score: (91230 + (70000 * current_player.area_bonus_ne) + (78900 * current_player.wrecked_ship_charge)) * current_player.multiplier
     room_special_score:
-      int: (91230 + (70000 * current_player.area_bonus_ne) + (7890 * current_player.wrecked_ship_charge)) * current_player.multiplier
+      int: (91230 + (70000 * current_player.area_bonus_ne) + (78900 * current_player.wrecked_ship_charge)) * current_player.multiplier
       action: set
