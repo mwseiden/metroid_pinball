@@ -233,25 +233,25 @@ variable_player:
       string: 1b
       action: set
   room_1b_ship_left:
-    score: (200000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+    score: (444000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
     room_special_score:
-      int: (200000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+      int: (444000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
       action: set
     room_1b_step_1a:
       int: 1
       action: set
   room_1b_ship_right:
-    score: (150000 + current_player.crateria_shot_bonus + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    score: (333000 + current_player.crateria_shot_bonus + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
     room_special_score:
-      int: (150000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+      int: (333000 + current_player.crateria_shot_bonus + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
       action: set
     room_1b_step_1b:
       int: 1
       action: set
   room_1b_achieved:
-    score: (150000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+    score: (666000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
     room_special_score:
-      int: (150000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+      int: (666000 + current_player.crateria_shot_bonus + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
       action: set
     room_1b_step_2:
       int: 1
