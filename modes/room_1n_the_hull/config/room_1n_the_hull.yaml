@@ -11,7 +11,7 @@ mode:
 timers:
   room_1n_light_shot_timer:
     start_value: 1
-    end_value: 3
+    end_value: 4
     restart_on_complete: true
     tick_interval: 8s
     control_events:
