@@ -13,6 +13,25 @@
     room_1d_the_lake_status_slide_help:
       widgets:
       - type: Text
-        text: NO MODE RULES
-        color: red
+        text: Dive Under
+        color: '009980'
         style: dmd_med
+      - type: Text
+        text: Playfield
+        color: '144d80'
+        style: dmd_med
+
+- duration: 5s
+  slides:
+    room_1d_the_lake_status_crateria_bonus:
+      widgets:
+      - type: text
+        text: Crateria Shot Bonus
+        color: blue
+        style: dmd_med
+        y: 21
+      - type: text
+        text: +(player|crateria_shot_bonus)
+        color: white
+        style: dmd_med
+        y: 11

@@ -1,4 +1,5 @@
 #config_version=5
+
 mode:
     start_events: select_landing_site_crateria_selected, room_1b_continue, room_1b_enter
     stop_events: game_ending, ball_ending, metroid_base_ended, room_1b_success, room_1b_already_complete, room_1b_exit
