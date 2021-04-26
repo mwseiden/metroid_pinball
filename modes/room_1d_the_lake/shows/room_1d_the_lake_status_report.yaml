@@ -16,10 +16,12 @@
         text: Dive Under
         color: '009980'
         style: dmd_med
+        y: 21
       - type: Text
         text: Playfield
         color: '144d80'
         style: dmd_med
+        y: 11
 
 - duration: 5s
   slides:
