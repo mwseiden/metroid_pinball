@@ -117,7 +117,6 @@ show_player:
       loops: 0
   subway_sneak_hit:
     room_1d_swamp_all_star:
-      priority: 1001
       loops: 0
 
 
