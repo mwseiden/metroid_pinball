@@ -115,6 +115,10 @@ show_player:
       speed: 30
     special_score_green:
       loops: 0
+  subway_sneak_hit:
+    room_1d_swamp_all_star:
+      loops: 0
+
 
 event_player:
   mode_room_1d_the_lake_started:

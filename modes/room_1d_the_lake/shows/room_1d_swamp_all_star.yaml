@@ -1,0 +1,8 @@
+#show_version=5
+
+- duration: 8s
+  slides:
+    room_1d_the_lake_all_star_slide:
+      widgets:
+      - type: image
+        image: room_1d_the_lake_all_star
