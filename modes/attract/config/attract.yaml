@@ -123,7 +123,7 @@ show_player:
     lights_rainbow_blurred:
       loops: -1
       speed: 10
-  slide_rooms_completed_champ_score_created:
+  slide_boss_kraid_score_champ_score_created:
     attract_lights_press_start_gi:
       action: stop
     attract_lights_press_start:

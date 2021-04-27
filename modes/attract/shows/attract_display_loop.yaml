@@ -428,6 +428,95 @@
         number_grouping: true
         anchor_y: bottom
 
+
+- duration: 2s
+  slides:
+    boss_ridley_score_champ_score:
+      widgets:
+      - type: text
+        text: (machine|boss_ridley_score1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|boss_ridley_score1_name)
+        style: dmd_big
+        color: dmd_blue
+      - type: text
+        text: (machine|boss_ridley_score1_value)
+        y: 0
+        style: dmd_big
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: bottom
+
+- duration: 2s
+  slides:
+    boss_draygon_score_champ_score:
+      widgets:
+      - type: text
+        text: (machine|boss_draygon_score1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|boss_draygon_score1_name)
+        style: dmd_big
+        color: dmd_blue
+      - type: text
+        text: (machine|boss_draygon_score1_value)
+        y: 0
+        style: dmd_big
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: bottom
+
+- duration: 2s
+  slides:
+    boss_phantoon_score_champ_score:
+      widgets:
+      - type: text
+        text: (machine|boss_phantoon_score1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|boss_phantoon_score1_name)
+        style: dmd_big
+        color: dmd_blue
+      - type: text
+        text: (machine|boss_phantoon_score1_value)
+        y: 0
+        style: dmd_big
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: bottom
+
+- duration: 2s
+  slides:
+    boss_kraid_score_champ_score:
+      widgets:
+      - type: text
+        text: (machine|boss_kraid_score1_label)
+        y: 32
+        style: dmd_big
+        color: red
+        anchor_y: top
+      - type: text
+        text: (machine|boss_kraid_score1_name)
+        style: dmd_big
+        color: dmd_blue
+      - type: text
+        text: (machine|boss_kraid_score1_value)
+        y: 0
+        style: dmd_big
+        color: dmd_orange
+        number_grouping: true
+        anchor_y: bottom
+
 - duration: 5s
   slides:
     press_start:

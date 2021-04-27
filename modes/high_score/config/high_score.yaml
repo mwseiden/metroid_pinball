@@ -51,6 +51,14 @@ high_score:
       - EXPLORER
   - rooms_completed:
       - CONQUEROR
+  - boss_draygon_score:
+      - DRAYGON CHAMP
+  - boss_kraid_score:
+      - KRAID CHAMP
+  - boss_phantoon_score:
+      - PHANTOON CHAMP
+  - boss_ridley_score:
+      - RIDLEY CHAMP
 
   # set the defaults
   defaults:
@@ -84,5 +92,13 @@ high_score:
       - TNA: 5
     rooms_completed:
       - CNK: 1
+  - boss_draygon_score:
+      - DJ: 2000000
+  - boss_kraid_score:
+      - IAL: 2000000
+  - boss_phantoon_score:
+      - ETC: 2000000
+  - boss_ridley_score:
+      - PPJ: 2000000
 
 
