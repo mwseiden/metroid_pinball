@@ -92,13 +92,13 @@ high_score:
       - TNA: 5
     rooms_completed:
       - CNK: 1
-  - boss_draygon_score:
+    boss_draygon_score:
       - DJ: 2000000
-  - boss_kraid_score:
+    boss_kraid_score:
       - IAL: 2000000
-  - boss_phantoon_score:
+    boss_phantoon_score:
       - ETC: 2000000
-  - boss_ridley_score:
+    boss_ridley_score:
       - PPJ: 2000000
 
 
