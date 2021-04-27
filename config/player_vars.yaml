@@ -19,17 +19,25 @@ player_vars:
     initial_value: 280
   boss_draygon_multiball_played:
     initial_value: 0
+  boss_draygon_score:
+    initial_value: 0
   boss_kraid_hp:
     initial_value: 240
   boss_kraid_multiball_played:
+    initial_value: 0
+  boss_kraid_score:
     initial_value: 0
   boss_phantoon_hp:
     initial_value: 260
   boss_phantoon_multiball_played:
     initial_value: 0
+  boss_phantoon_score:
+    initial_value: 0
   boss_ridley_hp:
     initial_value: 200
   boss_ridley_multiball_played:
+    initial_value: 0
+  boss_ridley_score:
     initial_value: 0
   bridge_bonus:
     initial_value: 0

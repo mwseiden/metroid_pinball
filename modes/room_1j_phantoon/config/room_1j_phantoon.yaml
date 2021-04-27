@@ -575,12 +575,14 @@ variable_player:
   phantoon_hit_weak:
     boss_phantoon_hp: -2
     score: (60000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    boss_phantoon_score: (60000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
     room_special_score:
       int: (60000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
       action: set
   phantoon_hit_vulnerable:
     boss_phantoon_hp: -20
     score: (170000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    boss_phantoon_score: (170000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
     room_special_score:
       int: (170000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
       action: set
@@ -588,6 +590,7 @@ variable_player:
     boss_phantoon_hp: -25
     missiles: -1
     score: (200000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    boss_phantoon_score: (200000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
     room_special_score:
       int: (200000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
       action: set
@@ -595,6 +598,7 @@ variable_player:
     boss_phantoon_hp: -35
     power_bombs: -1
     score: (300000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    boss_phantoon_score: (300000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
     room_special_score:
       int: (300000 + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
       action: set
