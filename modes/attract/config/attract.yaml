@@ -123,16 +123,30 @@ show_player:
     lights_rainbow_blurred:
       loops: -1
       speed: 10
+  slide_boss_ridley_score_champ_score_created:
+    lights_rainbow_blurred:
+      action: stop
+    lights_boss_phantoon:
+      loops: 0
+      speed: 20
+  slide_boss_draygon_score_champ_score_created:
+    lights_boss_phantoon:
+      loops: 0
+      speed: 20
+  slide_boss_phantoon_score_champ_score_created:
+    lights_boss_phantoon:
+      loops: 0
+      speed: 20
   slide_boss_kraid_score_champ_score_created:
     attract_lights_press_start_gi:
       action: stop
     attract_lights_press_start:
       action: stop
-    lights_rainbow_blurred:
-      loops: -1
-      speed: 10
+    lights_boss_phantoon:
+      loops: 0
+      speed: 20
   slide_press_start_created:
-    lights_rainbow_blurred:
+    lights_boss_phantoon:
       action: stop
     attract_lights_fast_logo_gi:
       action: stop

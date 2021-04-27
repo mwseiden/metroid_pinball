@@ -429,7 +429,7 @@
         anchor_y: bottom
 
 
-- duration: 2s
+- duration: 5s
   slides:
     boss_ridley_score_champ_score:
       widgets:
@@ -451,7 +451,7 @@
         number_grouping: true
         anchor_y: bottom
 
-- duration: 2s
+- duration: 5s
   slides:
     boss_draygon_score_champ_score:
       widgets:
@@ -473,7 +473,7 @@
         number_grouping: true
         anchor_y: bottom
 
-- duration: 2s
+- duration: 5s
   slides:
     boss_phantoon_score_champ_score:
       widgets:
@@ -495,7 +495,7 @@
         number_grouping: true
         anchor_y: bottom
 
-- duration: 2s
+- duration: 5s
   slides:
     boss_kraid_score_champ_score:
       widgets:
