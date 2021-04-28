@@ -254,6 +254,12 @@ show_player:
       show_tokens:
         color: '8000C0'
         color2: "8080C0"
+  show_mode_status_report:
+    room_1r_space_pirate_battle_status_report:
+      loops: 0
+  flipper_cradle_release:
+    room_1r_space_pirate_battle_status_report:
+      action: stop
   room_1r_kill_pirate_duck:
     special_score_purple:
       loops: 0

@@ -1,0 +1,62 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_1r_space_pirate_battle_slide_splash:
+      widgets:
+      - type: image
+        image: room_1r_splash
+
+
+- duration: 5s
+  slides:
+    room_1f_mushroom_chamber_status_slide_help:
+      widgets:
+      - type: Text
+        text: Shoot Blinking
+        color: purple
+        style: dmd_med
+        y: 24
+      - type: Text
+        text: Light to Reveal
+        color: purple
+        style: dmd_med
+      - type: Text
+        text: Space Pirates
+        color: purple
+        style: dmd_med
+        y: 8
+
+- duration: 5s
+  slides:
+    room_1f_mushroom_chamber_status_slide_help:
+      widgets:
+      - type: Text
+        text: Shoot Blinking
+        color: purple
+        style: dmd_med
+        y: 24
+      - type: Text
+        text: Light to Reveal
+        color: purple
+        style: dmd_med
+      - type: Text
+        text: Space Pirates
+        color: purple
+        style: dmd_med
+        y: 8
+
+- duration: 5s
+  slides:
+    room_1c_plains_status_crateria_bonus:
+      widgets:
+      - type: text
+        text: Then Hit 4
+        color: purple
+        style: dmd_med
+        y: 21
+      - type: text
+        text: Pirates
+        color: purple
+        style: dmd_med
+        y: 11
