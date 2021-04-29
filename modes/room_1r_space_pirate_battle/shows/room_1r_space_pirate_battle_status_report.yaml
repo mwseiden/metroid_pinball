@@ -8,9 +8,9 @@
         image: room_1r_splash
 
 
-- duration: 5s
+- duration: 2s
   slides:
-    room_1f_mushroom_chamber_status_slide_help:
+    room_1r_space_pirate_battle_status_slide_help_1:
       widgets:
       - type: Text
         text: Shoot Blinking
@@ -27,28 +27,10 @@
         style: dmd_med
         y: 8
 
-- duration: 5s
-  slides:
-    room_1f_mushroom_chamber_status_slide_help:
-      widgets:
-      - type: Text
-        text: Shoot Blinking
-        color: purple
-        style: dmd_med
-        y: 24
-      - type: Text
-        text: Light to Reveal
-        color: purple
-        style: dmd_med
-      - type: Text
-        text: Space Pirates
-        color: purple
-        style: dmd_med
-        y: 8
 
-- duration: 5s
+- duration: 3s
   slides:
-    room_1c_plains_status_crateria_bonus:
+    room_1r_space_pirate_battle_status_slide_help_2:
       widgets:
       - type: text
         text: Then Hit 4

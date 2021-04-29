@@ -254,11 +254,16 @@ show_player:
       show_tokens:
         color: '8000C0'
         color2: "8080C0"
-  show_mode_status_report:
+  room_1r_play_status_unfinished:
     room_1r_space_pirate_battle_status_report:
+      loops: 0
+  room_1r_play_status_finished:
+    room_1r_space_pirate_battle_complete_status_report:
       loops: 0
   flipper_cradle_release:
     room_1r_space_pirate_battle_status_report:
+      action: stop
+    room_1r_space_pirate_battle_complete_status_report:
       action: stop
   room_1r_kill_pirate_duck:
     special_score_purple:
@@ -523,6 +528,8 @@ event_player:
     room_1r_remove_pirate_4:
     cmd_map_complete:
       room: '1r'
+  show_mode_status_report{current_player.room_1r_finished == 0}: room_1r_play_status_unfinished
+  show_mode_status_report{current_player.room_1r_finished == 1}: room_1r_play_status_finished
   room_1r_exit_east_shot_hit.1: drop_targets_save
   room_1r_exit_east_shot_hit.2: room_1s_enter
   room_1r_exit_north_shot_hit.1: drop_targets_save

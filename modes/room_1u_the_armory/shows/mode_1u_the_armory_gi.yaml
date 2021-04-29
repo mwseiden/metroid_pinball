@@ -3,36 +3,67 @@
   lights:
     gi_left_ball_guide: '140000'
     gi_right_ball_guide: '160000'
+    led_left_kickback: '140000'
+    led_right_kickback: '160000'
     
 - time: '+1'
   lights:
     gi_left_ball_guide: '3A0000'
     gi_right_ball_guide: '3C0000'
+    led_left_kickback: '390000'
+    led_right_kickback: '3C0000'
     
 - time: '+1'
   lights:
     gi_left_ball_guide: '660000'
     gi_right_ball_guide: '680000'
+    led_left_kickback: '660000'
+    led_right_kickback: '690000'
     
 - time: '+1'
   lights:
     gi_left_ball_guide: '950000'
     gi_right_ball_guide: '980000'
+    led_goal_1: '0F0000'
+    led_goal_2: '0F0000'
+    led_goal_3: '0F0000'
+    led_goal_4: '0F0000'
+    led_left_kickback: '950000'
+    led_right_kickback: '980000'
     
 - time: '+1'
   lights:
     gi_left_ball_guide: 'C30000'
     gi_right_ball_guide: 'C50000'
+    led_goal_1: '310000'
+    led_goal_2: '330000'
+    led_goal_3: '330000'
+    led_goal_4: '330000'
+    led_left_kickback: 'C20000'
+    led_right_kickback: 'C50000'
     
 - time: '+1'
   lights:
     gi_left_ball_guide: 'EE0000'
     gi_right_ball_guide: 'EF0000'
+    led_boss_4: '050000'
+    led_goal_1: '670000'
+    led_goal_2: '670000'
+    led_goal_3: '670000'
+    led_goal_4: '680000'
+    led_left_kickback: 'EE0000'
+    led_right_kickback: 'F00000'
     
 - time: '+1'
   lights:
     gi_left_sling_bottom: '0F0000'
     gi_right_sling_bottom: '100000'
+    led_boss_1: '1B0000'
+    led_boss_4: '230000'
+    led_goal_1: '960000'
+    led_goal_2: '970000'
+    led_goal_3: '970000'
+    led_goal_4: '970000'
     
 - time: '+1'
   lights:
@@ -40,6 +71,16 @@
     gi_left_sling_bottom: '320000'
     gi_right_ball_guide: 'CD0000'
     gi_right_sling_bottom: '330000'
+    led_boss_1: '430000'
+    led_boss_2: '1C0000'
+    led_boss_4: '4C0000'
+    led_boss_3: '1C0000'
+    led_goal_1: 'C30000'
+    led_goal_2: 'C40000'
+    led_goal_3: 'C40000'
+    led_goal_4: 'C40000'
+    led_left_kickback: 'CB0000'
+    led_right_kickback: 'CD0000'
     
 - time: '+1'
   lights:
@@ -47,6 +88,16 @@
     gi_left_sling_bottom: '5D0000'
     gi_right_ball_guide: 'A10000'
     gi_right_sling_bottom: '5F0000'
+    led_boss_1: '700000'
+    led_boss_2: '430000'
+    led_boss_4: '7B0000'
+    led_boss_3: '430000'
+    led_goal_1: 'E80000'
+    led_goal_2: 'E80000'
+    led_goal_3: 'E80000'
+    led_goal_4: 'E90000'
+    led_left_kickback: '9E0000'
+    led_right_kickback: 'A20000'
     
 - time: '+1'
   lights:
@@ -54,6 +105,16 @@
     gi_left_sling_bottom: '8C0000'
     gi_right_ball_guide: '720000'
     gi_right_sling_bottom: '8E0000'
+    led_boss_1: 'A00000'
+    led_boss_2: '710000'
+    led_boss_4: 'AA0000'
+    led_boss_3: '710000'
+    led_goal_1: 'F40000'
+    led_goal_2: 'F40000'
+    led_goal_3: 'F40000'
+    led_goal_4: 'F40000'
+    led_left_kickback: '6F0000'
+    led_right_kickback: '720000'
     
 - time: '+1'
   lights:
@@ -63,6 +124,16 @@
     gi_right_ball_guide: '3C0000'
     gi_right_sling_bottom: 'C50000'
     gi_right_sling_top: '1C0000'
+    led_boss_1: 'D30000'
+    led_boss_2: 'A90000'
+    led_boss_4: 'DB0000'
+    led_boss_3: 'A90000'
+    led_goal_1: 'CC0000'
+    led_goal_2: 'CC0000'
+    led_goal_3: 'CC0000'
+    led_goal_4: 'CC0000'
+    led_left_kickback: '390000'
+    led_right_kickback: '3C0000'
     
 - time: '+1'
   lights:
@@ -72,15 +143,41 @@
     gi_right_ball_guide: '160000'
     gi_right_sling_bottom: 'E90000'
     gi_right_sling_top: '440000'
+    led_boss_1: 'F40000'
+    led_boss_2: 'D30000'
+    led_boss_4: 'F90000'
+    led_boss_3: 'D40000'
+    led_goal_1: 'A00000'
+    led_goal_2: 'A00000'
+    led_goal_3: 'A00000'
+    led_goal_4: 'A00000'
+    led_left_kickback: '140000'
+    led_motherbrain_1: '1C0000'
+    led_motherbrain_2: '1C0000'
+    led_motherbrain_3: '1C0000'
+    led_right_kickback: '160000'
     
 - time: '+1'
   lights:
-    gi_left_ball_guide: '000000'
+    gi_left_ball_guide: stop
     gi_left_sling_bottom: 'F30000'
     gi_left_sling_top: '660000'
-    gi_right_ball_guide: '000000'
+    gi_right_ball_guide: stop
     gi_right_sling_bottom: 'F50000'
     gi_right_sling_top: '720000'
+    led_boss_1: 'E80000'
+    led_boss_2: 'F40000'
+    led_boss_4: 'E20000'
+    led_boss_3: 'F40000'
+    led_goal_1: '700000'
+    led_goal_2: '710000'
+    led_goal_3: '710000'
+    led_goal_4: '710000'
+    led_left_kickback: stop
+    led_motherbrain_1: '430000'
+    led_motherbrain_2: '430000'
+    led_motherbrain_3: '430000'
+    led_right_kickback: stop
     
 - time: '+1'
   lights:
@@ -88,6 +185,17 @@
     gi_left_sling_top: '960000'
     gi_right_sling_bottom: 'D40000'
     gi_right_sling_top: 'A10000'
+    led_boss_1: 'C30000'
+    led_boss_2: 'E80000'
+    led_boss_4: 'BC0000'
+    led_boss_3: 'E90000'
+    led_goal_1: '430000'
+    led_goal_2: '430000'
+    led_goal_3: '430000'
+    led_goal_4: '430000'
+    led_motherbrain_1: '710000'
+    led_motherbrain_2: '710000'
+    led_motherbrain_3: '710000'
     
 - time: '+1'
   lights:
@@ -95,6 +203,17 @@
     gi_left_sling_top: 'C30000'
     gi_right_sling_bottom: 'AA0000'
     gi_right_sling_top: 'CD0000'
+    led_boss_1: '960000'
+    led_boss_2: 'C40000'
+    led_boss_4: '8E0000'
+    led_boss_3: 'C40000'
+    led_goal_1: '1B0000'
+    led_goal_2: '1C0000'
+    led_goal_3: '1C0000'
+    led_goal_4: '1C0000'
+    led_motherbrain_1: '9F0000'
+    led_motherbrain_2: 'A00000'
+    led_motherbrain_3: 'A00000'
     
 - time: '+1'
   lights:
@@ -102,12 +221,38 @@
     gi_left_sling_top: 'EE0000'
     gi_right_sling_bottom: '720000'
     gi_right_sling_top: 'F50000'
+    led_boss_1: '5E0000'
+    led_boss_2: '8D0000'
+    led_boss_4: '550000'
+    led_boss_3: '8D0000'
+    led_goal_1: stop
+    led_goal_2: stop
+    led_goal_3: stop
+    led_goal_4: stop
+    led_left_inlane: '140000'
+    led_left_outlane: '140000'
+    led_motherbrain_1: 'D30000'
+    led_motherbrain_2: 'D40000'
+    led_motherbrain_3: 'D40000'
+    led_right_inlane: '160000'
+    led_right_outlane: '160000'
     
 - time: '+1'
   lights:
     gi_left_sling_bottom: '420000'
     gi_right_sling_bottom: '440000'
     gi_right_sling_top: 'E90000'
+    led_boss_1: '320000'
+    led_boss_2: '5E0000'
+    led_boss_4: '2B0000'
+    led_boss_3: '5E0000'
+    led_left_inlane: '3A0000'
+    led_left_outlane: '390000'
+    led_motherbrain_1: 'F40000'
+    led_motherbrain_2: 'F40000'
+    led_motherbrain_3: 'F40000'
+    led_right_inlane: '3C0000'
+    led_right_outlane: '3C0000'
     
 - time: '+1'
   lights:
@@ -115,275 +260,679 @@
     gi_left_sling_top: 'CB0000'
     gi_right_sling_bottom: '1C0000'
     gi_right_sling_top: 'C50000'
+    led_boss_1: '0F0000'
+    led_boss_2: '320000'
+    led_boss_4: '0A0000'
+    led_boss_3: '330000'
+    led_left_inlane: '660000'
+    led_left_outlane: '660000'
+    led_motherbrain_1: 'E80000'
+    led_motherbrain_2: 'E80000'
+    led_motherbrain_3: 'E90000'
+    led_right_inlane: '690000'
+    led_right_outlane: '690000'
     
 - time: '+1'
   lights:
-    gi_left_sling_bottom: '000000'
+    gi_left_sling_bottom: stop
     gi_left_sling_top: '9F0000'
-    gi_right_sling_bottom: '000000'
+    gi_right_sling_bottom: stop
     gi_right_sling_top: '980000'
+    led_boss_1: stop
+    led_boss_2: '0F0000'
+    led_boss_4: stop
+    led_boss_3: '0F0000'
+    led_left_inlane: '950000'
+    led_left_outlane: '950000'
+    led_motherbrain_1: 'C40000'
+    led_motherbrain_2: 'C40000'
+    led_motherbrain_3: 'C40000'
+    led_right_inlane: '980000'
+    led_right_outlane: '980000'
     
 - time: '+1'
   lights:
     gi_left_sling_top: '700000'
     gi_right_sling_top: '680000'
+    led_boss_2: stop
+    led_boss_3: stop
+    led_left_inlane: 'C30000'
+    led_left_outlane: 'C20000'
+    led_motherbrain_1: '970000'
+    led_motherbrain_2: '970000'
+    led_motherbrain_3: '970000'
+    led_right_inlane: 'C50000'
+    led_right_outlane: 'C50000'
     
 - time: '+1'
   lights:
     gi_left_sling_top: '3A0000'
     gi_right_sling_top: '340000'
+    led_left_inlane: 'EE0000'
+    led_left_outlane: 'EE0000'
+    led_motherbrain_1: '5E0000'
+    led_motherbrain_2: '5E0000'
+    led_motherbrain_3: '5E0000'
+    led_right_inlane: 'EF0000'
+    led_right_outlane: 'F00000'
     
 - time: '+1'
   lights:
     gi_left_sling_top: '140000'
     gi_right_sling_top: '100000'
+    led_motherbrain_1: '330000'
+    led_motherbrain_2: '330000'
+    led_motherbrain_3: '330000'
     
 - time: '+1'
   lights:
-    gi_left_sling_top: '000000'
-    gi_right_sling_top: '000000'
+    gi_left_sling_top: stop
+    gi_right_sling_top: stop
+    led_left_inlane: 'CB0000'
+    led_left_outlane: 'CB0000'
+    led_motherbrain_1: '0F0000'
+    led_motherbrain_2: '0F0000'
+    led_motherbrain_3: '0F0000'
+    led_right_inlane: 'CD0000'
+    led_right_outlane: 'CD0000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_left_inlane: '9F0000'
+    led_left_outlane: '9E0000'
+    led_motherbrain_1: stop
+    led_motherbrain_2: stop
+    led_motherbrain_3: stop
+    led_right_inlane: 'A10000'
+    led_right_outlane: 'A20000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_left_inlane: '6F0000'
+    led_left_outlane: '6F0000'
+    led_right_inlane: '720000'
+    led_right_outlane: '720000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_bomb_bank_3: '100000'
+    led_left_inlane: '420000'
+    led_left_outlane: '420000'
+    led_right_inlane: '440000'
+    led_right_outlane: '450000'
+    led_zero_suit: '040000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_bomb_bank_3: '3C0000'
+    led_left_inlane: '140000'
+    led_left_outlane: '140000'
+    led_right_inlane: '160000'
+    led_right_outlane: '160000'
+    led_zero_suit: '2A0000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_bomb_bank_3: '690000'
+    led_left_inlane: stop
+    led_left_outlane: stop
+    led_right_inlane: stop
+    led_right_outlane: stop
+    led_zero_suit: '540000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_bomb_bank_2: '050000'
+    led_bomb_bank_3: '980000'
+    led_zero_suit: '820000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_bomb_bank_2: '240000'
+    led_bomb_bank_3: 'C50000'
+    led_enter_secret_passage: '140000'
+    led_zero_suit: 'B10000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_bomb_bank_2: '4D0000'
+    led_bomb_bank_3: 'E90000'
+    led_enter_secret_passage: '3A0000'
+    led_zero_suit: 'D90000'
     
 - time: '+1'
   lights:
     gi_behind_zero_suit: '140000'
+    led_bomb_bank_1: '0B0000'
+    led_bomb_bank_2: '850000'
+    led_bomb_bank_3: 'F00000'
+    led_enter_secret_passage: '700000'
+    led_zero_suit: 'F90000'
     
 - time: '+1'
   lights:
     gi_behind_zero_suit: '390000'
+    led_bomb_bank_1: '2C0000'
+    led_bomb_bank_2: 'B40000'
+    led_bomb_bank_3: 'CD0000'
+    led_enter_secret_passage: '9F0000'
+    led_zero_suit: 'D90000'
     
 - time: '+1'
   lights:
     gi_behind_zero_suit: '660000'
+    led_bomb_bank_1: '560000'
+    led_bomb_bank_2: 'DC0000'
+    led_bomb_bank_3: 'A20000'
+    led_enter_secret_passage: 'CB0000'
+    led_zero_suit: 'B10000'
     
 - time: '+1'
   lights:
     gi_behind_zero_suit: '950000'
+    led_bomb_bank_1: '850000'
+    led_bomb_bank_2: 'F90000'
+    led_bomb_bank_3: '720000'
+    led_enter_secret_passage: 'EE0000'
+    led_missile_bank_1: '050000'
+    led_zero_suit: '820000'
     
 - time: '+1'
   lights:
     gi_behind_zero_suit: 'C20000'
+    led_bomb_bank_1: 'B40000'
+    led_bomb_bank_2: 'E30000'
+    led_bomb_bank_3: '450000'
+    led_missile_bank_1: '220000'
+    led_zero_suit: '540000'
     
 - time: '+1'
   lights:
     gi_behind_zero_suit: 'EE0000'
     gi_bomb_bank: '0B0000'
+    led_bomb_bank_1: 'E30000'
+    led_bomb_bank_2: 'B40000'
+    led_bomb_bank_3: '160000'
+    led_enter_secret_passage: 'C30000'
+    led_missile_bank_1: '540000'
+    led_missile_bank_2: '090000'
+    led_zero_suit: '220000'
     
 - time: '+1'
   lights:
     gi_bomb_bank: '2C0000'
+    led_bomb_bank_1: 'F90000'
+    led_bomb_bank_2: '850000'
+    led_bomb_bank_3: stop
+    led_enter_secret_passage: '960000'
+    led_missile_bank_1: '830000'
+    led_missile_bank_2: '2A0000'
+    led_zero_suit: '040000'
     
 - time: '+1'
   lights:
     gi_behind_zero_suit: 'CB0000'
     gi_bomb_bank: '570000'
+    led_bomb_bank_1: 'DC0000'
+    led_bomb_bank_2: '560000'
+    led_enter_secret_passage: '660000'
+    led_missile_bank_1: 'B20000'
+    led_missile_bank_2: '540000'
+    led_missile_bank_3: '090000'
+    led_zero_suit: stop
     
 - time: '+1'
   lights:
     gi_behind_zero_suit: '9E0000'
     gi_bomb_bank: '860000'
+    led_bomb_bank_1: 'B40000'
+    led_bomb_bank_2: '2C0000'
+    led_enter_secret_passage: '3A0000'
+    led_missile_bank_1: 'DA0000'
+    led_missile_bank_2: '830000'
+    led_missile_bank_3: '2A0000'
+    led_scanner_sw: '050000'
     
 - time: '+1'
   lights:
     gi_behind_zero_suit: '6F0000'
     gi_bomb_bank: 'B40000'
+    led_bomb_bank_1: '850000'
+    led_bomb_bank_2: '0B0000'
+    led_enter_secret_passage: '140000'
+    led_missile_bank_1: 'F90000'
+    led_missile_bank_2: 'B20000'
+    led_missile_bank_3: '540000'
+    led_scanner_se: '1C0000'
+    led_scanner_sw: '230000'
     
 - time: '+1'
   lights:
     gi_behind_zero_suit: '390000'
     gi_bomb_bank: 'E30000'
     gi_missile_bank: '1B0000'
+    led_bomb_bank_1: '4D0000'
+    led_bomb_bank_2: stop
+    led_enter_secret_passage: stop
+    led_missile_bank_1: 'DA0000'
+    led_missile_bank_2: 'E10000'
+    led_missile_bank_3: '8D0000'
+    led_scanner_se: '4C0000'
+    led_scanner_sw: '550000'
+    led_scanner_w: '050000'
     
 - time: '+1'
   lights:
     gi_behind_zero_suit: '140000'
     gi_bomb_bank: 'FA0000'
     gi_missile_bank: '420000'
+    led_bomb_bank_1: '240000'
+    led_missile_bank_1: 'B20000'
+    led_missile_bank_2: 'F90000'
+    led_missile_bank_3: 'BB0000'
+    led_scanner_center: '1C0000'
+    led_scanner_e: '1B0000'
+    led_scanner_se: '7A0000'
+    led_scanner_sw: '840000'
+    led_scanner_w: '230000'
     
 - time: '+1'
   lights:
-    gi_behind_zero_suit: '000000'
+    gi_behind_zero_suit: stop
     gi_bomb_bank: 'DC0000'
     gi_missile_bank: '700000'
+    led_bomb_bank_1: '050000'
+    led_missile_bank_1: '830000'
+    led_missile_bank_2: 'DA0000'
+    led_missile_bank_3: 'E10000'
+    led_scanner_center: '430000'
+    led_scanner_e: '430000'
+    led_scanner_se: 'A90000'
+    led_scanner_sw: 'B20000'
+    led_scanner_w: '4C0000'
     
 - time: '+1'
   lights:
     gi_bomb_bank: 'B40000'
     gi_missile_bank: '9F0000'
+    led_bomb_bank_1: stop
+    led_missile_bank_1: '540000'
+    led_missile_bank_2: 'B20000'
+    led_missile_bank_3: 'F90000'
+    led_scanner_center: '710000'
+    led_scanner_e: '710000'
+    led_scanner_ne: '1C0000'
+    led_scanner_nw: '150000'
+    led_scanner_se: 'D40000'
+    led_scanner_sw: 'DB0000'
+    led_scanner_w: '7A0000'
     
 - time: '+1'
   lights:
     gi_bomb_bank: '860000'
     gi_middle_sling: '1B0000'
     gi_missile_bank: 'CB0000'
+    led_missile_bank_1: '2A0000'
+    led_missile_bank_2: '830000'
+    led_missile_bank_3: 'DA0000'
+    led_scanner_center: 'A00000'
+    led_scanner_e: 'A00000'
+    led_scanner_ne: '430000'
+    led_scanner_nw: '3B0000'
+    led_scanner_se: 'F40000'
+    led_scanner_sw: 'F90000'
+    led_scanner_w: 'A90000'
     
 - time: '+1'
   lights:
     gi_bomb_bank: '4E0000'
     gi_middle_sling: '4B0000'
     gi_missile_bank: 'F30000'
+    led_missile_bank_1: '050000'
+    led_missile_bank_2: '4B0000'
+    led_missile_bank_3: 'A90000'
+    led_scanner_center: 'D40000'
+    led_scanner_e: 'D40000'
+    led_scanner_ne: '7A0000'
+    led_scanner_nw: '710000'
+    led_scanner_se: 'E20000'
+    led_scanner_sw: 'DB0000'
+    led_scanner_w: 'DB0000'
     
 - time: '+1'
   lights:
     gi_bomb_bank: '250000'
     gi_middle_sling: '790000'
     gi_missile_bank: 'E80000'
+    led_missile_bank_1: stop
+    led_missile_bank_2: '220000'
+    led_missile_bank_3: '7A0000'
+    led_rollover: '050000'
+    led_scanner_center: 'F40000'
+    led_scanner_e: 'F40000'
+    led_scanner_ne: 'A90000'
+    led_scanner_nw: 'A00000'
+    led_scanner_se: 'BB0000'
+    led_scanner_sw: 'B20000'
+    led_scanner_w: 'F90000'
     
 - time: '+1'
   lights:
     gi_bomb_bank: '050000'
     gi_middle_sling: 'A80000'
     gi_missile_bank: 'C30000'
+    led_missile_bank_2: '050000'
+    led_missile_bank_3: '4B0000'
+    led_rollover: '250000'
+    led_scanner_center: 'E80000'
+    led_scanner_e: 'E90000'
+    led_scanner_ne: 'D40000'
+    led_scanner_nw: 'CC0000'
+    led_scanner_se: '8D0000'
+    led_scanner_sw: '840000'
+    led_scanner_w: 'E20000'
     
 - time: '+1'
   lights:
-    gi_bomb_bank: '000000'
+    gi_bomb_bank: stop
     gi_middle_sling: 'D20000'
     gi_missile_bank: '960000'
+    led_3x: '100000'
+    led_missile_bank_2: stop
+    led_missile_bank_3: '220000'
+    led_rollover: '4E0000'
+    led_scanner_center: 'C40000'
+    led_scanner_e: 'C40000'
+    led_scanner_ne: 'F40000'
+    led_scanner_nw: 'EF0000'
+    led_scanner_se: '5E0000'
+    led_scanner_sw: '550000'
+    led_scanner_w: 'BB0000'
     
 - time: '+1'
   lights:
     gi_middle_sling: 'F30000'
     gi_missile_bank: '660000'
+    led_3x: '330000'
+    led_missile_bank_3: '050000'
+    led_rollover: '7C0000'
+    led_scanner_center: '970000'
+    led_scanner_e: '970000'
+    led_scanner_ne: 'E90000'
+    led_scanner_se: '330000'
+    led_scanner_sw: '2B0000'
+    led_scanner_w: '8D0000'
     
 - time: '+1'
   lights:
     gi_middle_sling: 'E80000'
     gi_missile_bank: '3A0000'
+    led_2x: '1C0000'
+    led_3x: '5F0000'
+    led_missile_bank_3: stop
+    led_rollover: 'AB0000'
+    led_scanner_center: '670000'
+    led_scanner_e: '670000'
+    led_scanner_ne: 'C40000'
+    led_scanner_nw: 'CC0000'
+    led_scanner_se: '0F0000'
+    led_scanner_sw: '090000'
+    led_scanner_w: '5E0000'
     
 - time: '+1'
   lights:
     gi_middle_sling: 'BA0000'
     gi_missile_bank: '0F0000'
+    led_2x: '4D0000'
+    led_3x: '970000'
+    led_rollover: 'DC0000'
+    led_scanner_center: '330000'
+    led_scanner_e: '330000'
+    led_scanner_ne: '8D0000'
+    led_scanner_nw: '970000'
+    led_scanner_se: stop
+    led_scanner_sw: stop
+    led_scanner_w: '2B0000'
+    led_wall_jump: '090000'
     
 - time: '+1'
   lights:
     gi_middle_sling: '8C0000'
-    gi_missile_bank: '000000'
+    gi_missile_bank: stop
+    led_2x: '7B0000'
+    led_3x: 'C40000'
+    led_rollover: 'FA0000'
+    led_scanner_center: '0F0000'
+    led_scanner_e: '0F0000'
+    led_scanner_ne: '5E0000'
+    led_scanner_nw: '670000'
+    led_scanner_w: '090000'
+    led_wall_jump: '2A0000'
     
 - time: '+1'
   lights:
     gi_middle_sling: '5D0000'
     gi_upper_flipper_bottom: '1D0000'
+    led_2x: 'AA0000'
+    led_3x: 'E90000'
+    led_rollover: 'E30000'
+    led_scanner_center: stop
+    led_scanner_e: stop
+    led_scanner_ne: '330000'
+    led_scanner_nw: '3B0000'
+    led_scanner_w: stop
+    led_wall_jump: '540000'
     
 - time: '+1'
   lights:
     gi_middle_sling: '320000'
     gi_upper_flipper_bottom: '450000'
+    led_2x: 'D40000'
+    led_3x: 'F50000'
+    led_rollover: 'BD0000'
+    led_scanner_ne: '0F0000'
+    led_scanner_nw: '150000'
+    led_side_1: '090000'
+    led_wall_jump: '830000'
     
 - time: '+1'
   lights:
     gi_middle_sling: '0D0000'
     gi_upper_flipper_bottom: '730000'
+    led_2x: 'F50000'
+    led_3x: 'D40000'
+    led_rollover: '8F0000'
+    led_scanner_ne: stop
+    led_scanner_nw: stop
+    led_side_1: '290000'
+    led_wall_jump: 'B20000'
     
 - time: '+1'
   lights:
-    gi_middle_sling: '000000'
+    gi_middle_sling: stop
     gi_upper_flipper_bottom: 'AB0000'
+    led_2x: 'E20000'
+    led_3x: 'A10000'
+    led_rollover: '570000'
+    led_side_1: '5D0000'
+    led_wall_jump: 'E10000'
     
 - time: '+1'
   lights:
     gi_upper_flipper_bottom: 'D50000'
+    led_2x: 'BC0000'
+    led_3x: '720000'
+    led_rollover: '2C0000'
+    led_side_1: '8C0000'
+    led_side_2: '0D0000'
+    led_wall_jump: 'F90000'
     
 - time: '+1'
   lights:
     gi_upper_flipper_bottom: 'F50000'
+    led_2x: '8E0000'
+    led_3x: '440000'
+    led_rollover: '0B0000'
+    led_side_1: 'BA0000'
+    led_side_2: '320000'
+    led_wall_jump: 'DA0000'
     
 - time: '+1'
   lights:
     gi_upper_flipper_bottom: 'EA0000'
+    led_2x: '5F0000'
+    led_3x: '1C0000'
+    led_rollover: stop
+    led_side_1: 'E10000'
+    led_side_2: '5D0000'
+    led_upgrade_bank_3: '0F0000'
+    led_wall_jump: 'B20000'
     
 - time: '+1'
   lights:
     gi_upper_flipper_bottom: 'C60000'
+    led_2x: '330000'
+    led_3x: stop
+    led_side_1: 'F90000'
+    led_side_2: '8C0000'
+    led_side_3: '140000'
+    led_upgrade_bank_2: '050000'
+    led_upgrade_bank_3: '330000'
+    led_wall_jump: '830000'
     
 - time: '+1'
   lights:
     gi_upper_flipper_bottom: '8F0000'
+    led_2x: '090000'
+    led_side_1: 'D20000'
+    led_side_2: 'C30000'
+    led_side_3: '420000'
+    led_upgrade_bank_2: '2B0000'
+    led_upgrade_bank_3: '680000'
+    led_wall_jump: '4B0000'
     
 - time: '+1'
   lights:
     gi_side_bank: '040000'
     gi_upper_flipper_bottom: '600000'
+    led_2x: stop
+    led_side_1: 'A80000'
+    led_side_2: 'E80000'
+    led_side_3: '6F0000'
+    led_upgrade_bank_1: '1C0000'
+    led_upgrade_bank_2: '540000'
+    led_upgrade_bank_3: '970000'
+    led_wall_jump: '220000'
     
 - time: '+1'
   lights:
     gi_side_bank: '220000'
     gi_upper_flipper_bottom: '340000'
+    led_side_1: '790000'
+    led_side_2: 'F30000'
+    led_side_3: '9F0000'
+    led_upgrade_bank_1: '430000'
+    led_upgrade_bank_2: '840000'
+    led_upgrade_bank_3: 'C40000'
+    led_wall_jump: '050000'
     
 - time: '+1'
   lights:
     gi_side_bank: '4A0000'
     gi_upper_flipper_bottom: '100000'
+    led_side_1: '4B0000'
+    led_side_2: 'D20000'
+    led_side_3: 'CB0000'
+    led_upgrade_bank_1: '710000'
+    led_upgrade_bank_2: 'B20000'
+    led_upgrade_bank_3: 'E90000'
+    led_wall_jump: stop
     
 - time: '+1'
   lights:
     gi_side_bank: '790000'
-    gi_upper_flipper_bottom: '000000'
+    gi_upper_flipper_bottom: stop
+    led_enter_side_ramp: '1C0000'
+    led_side_1: '220000'
+    led_side_2: 'A80000'
+    led_side_3: 'EE0000'
+    led_upgrade_bank_1: 'A00000'
+    led_upgrade_bank_2: 'DB0000'
+    led_upgrade_bank_3: 'F40000'
     
 - time: '+1'
   lights:
     gi_side_bank: 'B10000'
     gi_upgrade_bank: '1B0000'
+    led_enter_left_orbit: '090000'
+    led_enter_side_ramp: '4D0000'
+    led_side_1: stop
+    led_side_2: '6F0000'
+    led_side_3: 'E80000'
+    led_upgrade_bank_1: 'D30000'
+    led_upgrade_bank_2: 'F90000'
+    led_upgrade_bank_3: 'CC0000'
     
 - time: '+1'
   lights:
     gi_side_bank: 'D90000'
     gi_upgrade_bank: '430000'
+    led_enter_left_orbit: '2A0000'
+    led_enter_side_ramp: '7B0000'
+    led_side_2: '420000'
+    led_side_3: 'C30000'
+    led_upgrade_bank_1: 'F40000'
+    led_upgrade_bank_2: 'DB0000'
+    led_upgrade_bank_3: 'A00000'
     
 - time: '+1'
   lights:
     gi_side_bank: 'F90000'
     gi_upgrade_bank: '710000'
+    led_enter_left_orbit: '540000'
+    led_enter_side_ramp: 'AA0000'
+    led_side_2: '1B0000'
+    led_side_3: '950000'
+    led_upgrade_bank_1: 'E80000'
+    led_upgrade_bank_2: 'B20000'
+    led_upgrade_bank_3: '710000'
     
 - time: '+1'
   lights:
     gi_side_bank: 'E00000'
     gi_upgrade_bank: 'A00000'
     gi_upper_flipper_top: '100000'
+    led_enter_left_orbit: '830000'
+    led_enter_side_ramp: 'D40000'
+    led_side_2: stop
+    led_side_3: '660000'
+    led_upgrade_bank_1: 'C40000'
+    led_upgrade_bank_2: '840000'
+    led_upgrade_bank_3: '430000'
     
 - time: '+1'
   lights:
     gi_side_bank: 'BA0000'
     gi_upgrade_bank: 'CC0000'
     gi_upper_flipper_top: '330000'
+    led_enter_left_orbit: 'B10000'
+    led_enter_side_ramp: 'F50000'
+    led_side_3: '3A0000'
+    led_upgrade_bank_1: '970000'
+    led_upgrade_bank_2: '540000'
+    led_upgrade_bank_3: '1C0000'
     
 - time: '+1'
   lights:
     gi_side_bank: '8C0000'
     gi_upgrade_bank: 'EF0000'
     gi_upper_flipper_top: '600000'
+    led_enter_left_orbit: 'DA0000'
+    led_enter_side_ramp: 'E90000'
+    led_side_3: '140000'
+    led_upgrade_bank_1: '670000'
+    led_upgrade_bank_2: '2B0000'
+    led_upgrade_bank_3: stop
     
 - time: '+1'
   lights:
@@ -391,6 +940,12 @@
     gi_under_side_ramp: '050000'
     gi_upgrade_bank: 'E90000'
     gi_upper_flipper_top: '990000'
+    led_enter_left_orbit: 'F90000'
+    led_enter_scoop: '0F0000'
+    led_enter_side_ramp: 'BC0000'
+    led_side_3: stop
+    led_upgrade_bank_1: '330000'
+    led_upgrade_bank_2: '050000'
     
 - time: '+1'
   lights:
@@ -398,6 +953,11 @@
     gi_under_side_ramp: '230000'
     gi_upgrade_bank: 'C40000'
     gi_upper_flipper_top: 'C60000'
+    led_enter_left_orbit: 'DA0000'
+    led_enter_scoop: '320000'
+    led_enter_side_ramp: '8E0000'
+    led_upgrade_bank_1: '0F0000'
+    led_upgrade_bank_2: stop
     
 - time: '+1'
   lights:
@@ -405,143 +965,319 @@
     gi_under_side_ramp: '4C0000'
     gi_upgrade_bank: '970000'
     gi_upper_flipper_top: 'EA0000'
+    led_enter_left_orbit: 'B10000'
+    led_enter_scoop: '5D0000'
+    led_enter_side_ramp: '5F0000'
+    led_upgrade_bank_1: stop
     
 - time: '+1'
   lights:
-    gi_side_bank: '000000'
+    gi_side_bank: stop
     gi_under_side_ramp: '7B0000'
     gi_upgrade_bank: '670000'
     gi_upper_flipper_top: 'F50000'
+    led_enter_left_orbit: '830000'
+    led_enter_scoop: '8C0000'
+    led_enter_side_ramp: '340000'
     
 - time: '+1'
   lights:
     gi_under_side_ramp: 'AA0000'
     gi_upgrade_bank: '3B0000'
     gi_upper_flipper_top: 'D50000'
+    led_enter_left_orbit: '540000'
+    led_enter_ramp: '150000'
+    led_enter_scoop: 'BA0000'
+    led_enter_side_ramp: '100000'
     
 - time: '+1'
   lights:
     gi_under_side_ramp: 'DB0000'
     gi_upgrade_bank: '0F0000'
     gi_upper_flipper_top: 'A20000'
+    led_enter_left_orbit: '220000'
+    led_enter_ramp: '430000'
+    led_enter_scoop: 'E80000'
+    led_enter_side_ramp: stop
     
 - time: '+1'
   lights:
     gi_under_side_ramp: 'F90000'
-    gi_upgrade_bank: '000000'
+    gi_upgrade_bank: stop
     gi_upper_flipper_top: '730000'
+    led_drop_1: '100000'
+    led_enter_left_orbit: '050000'
+    led_enter_ramp: '700000'
+    led_enter_scoop: 'F40000'
+    led_thin_orange: '1D0000'
     
 - time: '+1'
   lights:
     gi_under_side_ramp: 'E20000'
     gi_upper_flipper_top: '450000'
+    led_drop_1: '340000'
+    led_enter_left_orbit: stop
+    led_enter_ramp: '9F0000'
+    led_enter_right_orbit: '100000'
+    led_enter_scoop: 'D30000'
+    led_thin_orange: '450000'
     
 - time: '+1'
   lights:
     gi_under_side_ramp: 'BC0000'
     gi_upper_flipper_top: '1D0000'
+    led_drop_1: '600000'
+    led_enter_ramp: 'CB0000'
+    led_enter_right_orbit: '340000'
+    led_enter_scoop: 'A80000'
+    led_thin_orange: '720000'
     
 - time: '+1'
   lights:
     gi_under_side_ramp: '8E0000'
-    gi_upper_flipper_top: '000000'
+    gi_upper_flipper_top: stop
+    led_captive_ball: '060000'
+    led_drop_1: '8F0000'
+    led_enter_ramp: 'EE0000'
+    led_enter_right_orbit: '5F0000'
+    led_enter_scoop: '790000'
+    led_thin_orange: 'A20000'
     
 - time: '+1'
   lights:
     gi_under_side_ramp: '550000'
+    led_captive_ball: '2C0000'
+    led_drop_1: 'C50000'
+    led_enter_ramp: 'E80000'
+    led_enter_right_orbit: '980000'
+    led_enter_scoop: '420000'
+    led_pop_2: '0F0000'
+    led_thin_orange: 'D50000'
     
 - time: '+1'
   lights:
     gi_under_side_ramp: '2B0000'
+    led_captive_ball: '560000'
+    led_drop_1: 'EA0000'
+    led_enter_ramp: 'C30000'
+    led_enter_right_orbit: 'C50000'
+    led_enter_scoop: '1B0000'
+    led_pop_2: '330000'
+    led_thin_orange: 'F50000'
     
 - time: '+1'
   lights:
     gi_under_side_ramp: '0A0000'
+    led_captive_ball: '850000'
+    led_drop_1: 'F50000'
+    led_enter_ramp: '960000'
+    led_enter_right_orbit: 'E90000'
+    led_enter_scoop: stop
+    led_pop_2: '5E0000'
+    led_thin_orange: 'E90000'
     
 - time: '+1'
   lights:
-    gi_under_side_ramp: '000000'
+    gi_under_side_ramp: stop
+    led_captive_ball: 'B30000'
+    led_drop_1: 'D50000'
+    led_enter_ramp: '670000'
+    led_enter_right_orbit: 'F50000'
+    led_pop_2: '8D0000'
+    led_thin_orange: 'C50000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_captive_ball: 'DB0000'
+    led_drop_1: 'AB0000'
+    led_enter_ramp: '3A0000'
+    led_enter_right_orbit: 'D50000'
+    led_pop_2: 'BB0000'
+    led_thin_orange: '980000'
+    led_upper_playfield_1: '100000'
+    led_upper_playfield_2: '100000'
+    led_upper_playfield_3: '160000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_captive_ball: 'F90000'
+    led_drop_1: '730000'
+    led_enter_ramp: '0F0000'
+    led_enter_right_orbit: 'A10000'
+    led_pop_2: 'E80000'
+    led_thin_orange: '5F0000'
+    led_upper_playfield_1: '3C0000'
+    led_upper_playfield_2: '3C0000'
+    led_upper_playfield_3: '450000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_captive_ball: 'DB0000'
+    led_drop_1: '450000'
+    led_drop_2: '100000'
+    led_enter_ramp: stop
+    led_enter_right_orbit: '720000'
+    led_pop_2: 'F40000'
+    led_thin_orange: '340000'
+    led_upper_playfield_1: '680000'
+    led_upper_playfield_2: '690000'
+    led_upper_playfield_3: '720000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_captive_ball: 'B30000'
+    led_drop_1: '1D0000'
+    led_drop_2: '340000'
+    led_enter_right_orbit: '440000'
+    led_pop_2: 'D40000'
+    led_thin_orange: '100000'
+    led_upper_playfield_1: '980000'
+    led_upper_playfield_2: '980000'
+    led_upper_playfield_3: 'A20000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_captive_ball: '850000'
+    led_drop_1: stop
+    led_drop_2: '600000'
+    led_enter_right_orbit: '1D0000'
+    led_pop_2: 'A90000'
+    led_thin_orange: stop
+    led_upper_playfield_1: 'C50000'
+    led_upper_playfield_2: 'C50000'
+    led_upper_playfield_3: 'CD0000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_captive_ball: '560000'
+    led_drop_2: '8F0000'
+    led_enter_right_orbit: stop
+    led_pop_2: '7A0000'
+    led_upper_playfield_1: 'E90000'
+    led_upper_playfield_2: 'E90000'
+    led_upper_playfield_3: 'F00000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_captive_ball: '240000'
+    led_drop_2: 'C50000'
+    led_pop_2: '430000'
+    led_upper_playfield_1: 'EF0000'
+    led_upper_playfield_2: 'EF0000'
+    led_upper_playfield_3: 'EA0000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_captive_ball: '060000'
+    led_drop_2: 'EA0000'
+    led_pop_2: '1C0000'
+    led_pop_3: '1C0000'
+    led_upper_playfield_1: 'CD0000'
+    led_upper_playfield_2: 'CD0000'
+    led_upper_playfield_3: 'C50000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_captive_ball: stop
+    led_drop_2: 'F50000'
+    led_pop_2: stop
+    led_pop_3: '440000'
+    led_upper_playfield_1: 'A10000'
+    led_upper_playfield_2: 'A10000'
+    led_upper_playfield_3: '980000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_drop_2: 'D50000'
+    led_pop_3: '710000'
+    led_upper_playfield_1: '720000'
+    led_upper_playfield_2: '720000'
+    led_upper_playfield_3: '690000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_drop_2: 'AB0000'
+    led_drop_3: '050000'
+    led_pit: '090000'
+    led_pop_1: '0F0000'
+    led_pop_3: 'A00000'
+    led_upper_playfield_1: '440000'
+    led_upper_playfield_2: '440000'
+    led_upper_playfield_3: '3C0000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_drop_2: '7C0000'
+    led_drop_3: '240000'
+    led_pit: '2A0000'
+    led_pop_1: '320000'
+    led_pop_3: 'CC0000'
+    led_upper_playfield_1: '1C0000'
+    led_upper_playfield_2: '1D0000'
+    led_upper_playfield_3: '160000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_drop_2: '450000'
+    led_drop_3: '560000'
+    led_pit: '5D0000'
+    led_pop_1: '670000'
+    led_pop_3: 'F50000'
+    led_upper_playfield_1: stop
+    led_upper_playfield_2: stop
+    led_upper_playfield_3: stop
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_drop_2: '1D0000'
+    led_drop_3: '850000'
+    led_pit: '8C0000'
+    led_pop_1: '960000'
+    led_pop_3: 'E90000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_drop_2: stop
+    led_drop_3: 'B40000'
+    led_pit: 'B90000'
+    led_pop_1: 'C30000'
+    led_pop_3: 'C40000'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_drop_3: 'DC0000'
+    led_pit: 'E10000'
+    led_pop_1: 'E80000'
+    led_pop_3: '970000'
     
 - time: '+1'
   lights:
     gi_back_left: '1A0000'
     gi_back_right: '1D0000'
+    led_drop_3: 'FA0000'
+    led_pit: 'F90000'
+    led_pop_1: 'F40000'
+    led_pop_3: '680000'
     
 - time: '+1'
   lights:
     gi_back_center: '090000'
     gi_back_left: '4A0000'
     gi_back_right: '4E0000'
+    led_drop_3: 'DC0000'
+    led_pit: 'D30000'
+    led_pop_1: 'CC0000'
+    led_pop_3: '330000'
     
 - time: '+1'
   lights:
     gi_back_center: '2B0000'
     gi_back_left: '790000'
     gi_back_right: '7C0000'
+    led_drop_3: 'B40000'
+    led_pit: 'A80000'
+    led_pop_1: 'A00000'
+    led_pop_3: '0F0000'
     
 - time: '+1'
   lights:
@@ -558,6 +1294,10 @@
     gi_strip_7: '100000'
     gi_strip_8: '100000'
     gi_strip_9: '100000'
+    led_drop_3: '850000'
+    led_pit: '790000'
+    led_pop_1: '700000'
+    led_pop_3: stop
     
 - time: '+1'
   lights:
@@ -574,6 +1314,9 @@
     gi_strip_7: '330000'
     gi_strip_8: '340000'
     gi_strip_9: '340000'
+    led_drop_3: '560000'
+    led_pit: '4B0000'
+    led_pop_1: '430000'
     
 - time: '+1'
   lights:
@@ -590,6 +1333,9 @@
     gi_strip_7: '5F0000'
     gi_strip_8: '5F0000'
     gi_strip_9: '5F0000'
+    led_drop_3: '2C0000'
+    led_pit: '220000'
+    led_pop_1: '1B0000'
     
 - time: '+1'
   lights:
@@ -606,6 +1352,9 @@
     gi_strip_7: '970000'
     gi_strip_8: '980000'
     gi_strip_9: '980000'
+    led_drop_3: '050000'
+    led_pit: stop
+    led_pop_1: stop
     
 - time: '+1'
   lights:
@@ -622,6 +1371,7 @@
     gi_strip_7: 'C40000'
     gi_strip_8: 'C50000'
     gi_strip_9: 'C50000'
+    led_drop_3: stop
     
 - time: '+1'
   lights:
@@ -690,8 +1440,8 @@
 - time: '+1'
   lights:
     gi_back_center: '230000'
-    gi_back_left: '000000'
-    gi_back_right: '000000'
+    gi_back_left: stop
+    gi_back_right: stop
     gi_strip_1: '6F0000'
     gi_strip_10: '730000'
     gi_strip_2: '700000'
@@ -719,7 +1469,7 @@
     
 - time: '+1'
   lights:
-    gi_back_center: '000000'
+    gi_back_center: stop
     gi_strip_1: '1B0000'
     gi_strip_10: '1D0000'
     gi_strip_2: '1B0000'
@@ -733,16 +1483,16 @@
     
 - time: '+1'
   lights:
-    gi_strip_1: '000000'
-    gi_strip_10: '000000'
-    gi_strip_2: '000000'
-    gi_strip_3: '000000'
-    gi_strip_4: '000000'
-    gi_strip_5: '000000'
-    gi_strip_6: '000000'
-    gi_strip_7: '000000'
-    gi_strip_8: '000000'
-    gi_strip_9: '000000'
+    gi_strip_1: stop
+    gi_strip_10: stop
+    gi_strip_2: stop
+    gi_strip_3: stop
+    gi_strip_4: stop
+    gi_strip_5: stop
+    gi_strip_6: stop
+    gi_strip_7: stop
+    gi_strip_8: stop
+    gi_strip_9: stop
     
 #No change this frame - take another step
 #  lights:
