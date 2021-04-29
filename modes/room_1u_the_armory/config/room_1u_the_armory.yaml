@@ -53,6 +53,7 @@ show_player:
     mode_1u_the_armory_gi:
       loops: -1
       speed: 20
+      priority: 100
   show_mode_status_report:
     room_1u_the_armory_status_report:
       loops: 0
