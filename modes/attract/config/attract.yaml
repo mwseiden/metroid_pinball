@@ -131,6 +131,12 @@ show_player:
     lights_rainbow_blurred:
       loops: -1
       speed: 10
+  slide_rooms_completed_champ_score_created:
+    lights_boss_ridley:
+      action: stop
+    lights_rainbow_blurred:
+      loops: -1
+      speed: 10
   slide_boss_ridley_score_champ_score_created:
     lights_rainbow_blurred:
       action: stop
