@@ -105,9 +105,9 @@ high_score:
       - ETC: 2000000
     boss_ridley_score:
       - PPJ: 2000000
-  - bao_reactors:
+    bao_reactors:
       - OCT: 1
-  - bao_score:
+    bao_score:
       - SQD: 100000
 
 
