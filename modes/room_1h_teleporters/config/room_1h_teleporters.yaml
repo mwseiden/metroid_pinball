@@ -1,6 +1,7 @@
 #config_version=5
 
 # https://commons.wikimedia.org/wiki/File:2019-07-16_Plasma_ball.jpg
+# https://commons.wikimedia.org/wiki/File:Atom_interferometer.jpg
 
 mode:
   code: room_1h_teleporters.Room1hTeleporters

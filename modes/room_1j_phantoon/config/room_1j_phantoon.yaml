@@ -1,6 +1,7 @@
 #config_version=5
 
 # https://commons.wikimedia.org/wiki/File:Rub%27_al_Khali_(Arabian_Empty_Quarter)_sand_dunes_imaged_by_Terra_(EOS_AM-1).jpg
+# https://commons.wikimedia.org/wiki/File:Squid_komodo.jpg
 
 mode:
   start_events: room_1j_continue, room_1j_enter

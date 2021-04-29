@@ -2,6 +2,7 @@
 
 # https://commons.wikimedia.org/wiki/File:Museum_of_Science,_Boston,_MA_-_IMG_3166.JPG
 # Most likely OK
+# https://commons.wikimedia.org/wiki/File:Computer-photo-Micro_Term_Inc-(Micro_Term-ERGO-201)-motherboard.png
 
 mode:
   start_events: room_1i_continue, room_1i_enter
