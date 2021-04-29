@@ -940,25 +940,36 @@ event_player:
 variable_player:
   bao_final_shot_completed:
     score: (game.balls_in_play * (100000 * (current_player.bao_reactors + 1))) + 1
+    bao_score: score: (game.balls_in_play * (100000 * (current_player.bao_reactors + 1))) + 1
   bao_update_reactor_count:
     bao_reactors: 1
   pop_1_shot_hit:
     score: 500 * game.balls_in_play
+    bao_score: 500 * game.balls_in_play
   pop_2_shot_hit:
     score: 500 * game.balls_in_play
+    bao_score: 500 * game.balls_in_play
   pop_3_shot_hit:
     score: 500 * game.balls_in_play
+    bao_score: 500 * game.balls_in_play
   bao_final_shot_1_hit:
     score: 20000 * game.balls_in_play
+    bao_score: 20000 * game.balls_in_play
   bao_final_shot_2_hit:
     score: 20000 * game.balls_in_play
+    bao_score: 20000 * game.balls_in_play
   bao_final_shot_3_hit:
     score: 20000 * game.balls_in_play
+    bao_score: 20000 * game.balls_in_play
   bao_final_shot_4_hit:
     score: 10000 * game.balls_in_play
+    bao_score: 10000 * game.balls_in_play
   bao_final_shot_5_hit:
     score: 10000 * game.balls_in_play
+    bao_score: 10000 * game.balls_in_play
   bao_final_shot_6_hit:
     score: 10000 * game.balls_in_play
+    bao_score: 10000 * game.balls_in_play
   bao_standard_shot_group_hit:
     score: 230 * game.balls_in_play
+    bao_score: 230 * game.balls_in_play

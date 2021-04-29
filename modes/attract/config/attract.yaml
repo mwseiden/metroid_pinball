@@ -82,6 +82,14 @@ show_player:
       action: stop
     rudy_tas:
       action: stop
+    lights_boss_ridley:
+      action: stop
+    lights_boss_draygon:
+      action: stop
+    lights_boss_phantoon:
+      action: stop
+    lights_boss_kraid:
+      action: stop
     attract_display_loop:
       priority: 100
       manual_advance: false
@@ -150,15 +158,25 @@ show_player:
   slide_boss_kraid_score_champ_score_created:
     attract_lights_press_start_gi:
       action: stop
-    attract_lights_press_start:
-      action: stop
     lights_boss_phantoon:
       action: stop
     lights_boss_kraid:
       loops: 0
       speed: 20
-  slide_press_start_created:
+  slide_bao_reactor_champ_score_created:
     lights_boss_kraid:
+      action: stop
+    lights_rainbow_blurred:
+      loops: -1
+      speed: 10
+  slide_bao_score_champ_score_created:
+    attract_lights_press_start:
+      action: stop
+    lights_rainbow_blurred:
+      loops: -1
+      speed: 10
+  slide_press_start_created:
+    lights_rainbow_blurred:
       action: stop
     attract_lights_fast_logo_gi:
       action: stop

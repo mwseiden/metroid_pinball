@@ -59,6 +59,11 @@ high_score:
       - PHANTOON CHAMP
   - boss_ridley_score:
       - RIDLEY CHAMP
+  - bao_reactors:
+      - REACTOR CHAMP
+  - bao_score:
+      - BAO GOD
+
 
   # set the defaults
   defaults:
@@ -100,5 +105,9 @@ high_score:
       - ETC: 2000000
     boss_ridley_score:
       - PPJ: 2000000
+  - bao_reactors:
+      - OCT: 1
+  - bao_score:
+      - SQD: 100000
 
 
