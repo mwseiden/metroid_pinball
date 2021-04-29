@@ -309,6 +309,9 @@ shots:
   bao_standard_shot_14:
     switch: s_left_target_3
     enable_events: mode_bao_base_started
+  bao_standard_shot_15:
+    switch: s_captive_ball
+    enable_events: mode_bao_base_started
   bao_spinner_shot:
     switch: s_spinner
     enable_events: mode_bao_base_started
@@ -344,6 +347,7 @@ shot_groups:
       - bao_standard_shot_12
       - bao_standard_shot_13
       - bao_standard_shot_14
+      - bao_standard_shot_15
     enable_events: mode_bao_base_started
     disable_events: mode_bao_base_stopping
 
