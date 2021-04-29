@@ -940,7 +940,7 @@ event_player:
 variable_player:
   bao_final_shot_completed:
     score: (game.balls_in_play * (100000 * (current_player.bao_reactors + 1))) + 1
-    bao_score: score: (game.balls_in_play * (100000 * (current_player.bao_reactors + 1))) + 1
+    bao_score: (game.balls_in_play * (100000 * (current_player.bao_reactors + 1))) + 1
   bao_update_reactor_count:
     bao_reactors: 1
   pop_1_shot_hit:
