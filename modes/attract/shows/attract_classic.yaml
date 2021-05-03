@@ -1,0 +1,10 @@
+#show_version=5
+
+- duration: 30s
+  shows:
+    attract_classic_arrows:
+      loops: -1
+      speed: 10
+    attract_classic_targets_chase:
+      loops: -1
+      speed: 4
