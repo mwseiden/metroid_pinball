@@ -3,55 +3,55 @@
   lights:
     led_bomb_bank_1:
       color: 'FFFF00'
-      fade: 125ms
+      fade: 250ms
     led_bomb_bank_3: stop
     led_upgrade_bank_1:
       color: 'FF00FF'
-      fade: 125ms
+      fade: 250ms
     led_upgrade_bank_3: stop
     led_missile_bank_1:
       color: 'FF0000'
-      fade: 125ms
+      fade: 250ms
     led_missile_bank_3: stop
     led_side_1:
       color: '0000FF'
-      fade: 125ms
+      fade: 250ms
     led_side_3: stop
 
 - time: '+1'
   lights:
     led_bomb_bank_2:
       color: 'FFFF00'
-      fade: 125ms
+      fade: 250ms
     led_bomb_bank_1: stop
     led_upgrade_bank_2:
       color: 'FF00FF'
-      fade: 125ms
+      fade: 250ms
     led_upgrade_bank_1: stop
     led_missile_bank_2:
       color: 'FF0000'
-      fade: 125ms
+      fade: 250ms
     led_missile_bank_1: stop
     led_side_2:
       color: '0000FF'
-      fade: 125ms
+      fade: 250ms
     led_side_1: stop
 
 - time: '+1'
   lights:
     led_bomb_bank_3:
       color: 'FFFF00'
-      fade: 125ms
+      fade: 250ms
     led_bomb_bank_2: stop
     led_upgrade_bank_3:
       color: 'FF00FF'
-      fade: 125ms
+      fade: 250ms
     led_upgrade_bank_2: stop
     led_missile_bank_3:
       color: 'FF0000'
-      fade: 125ms
+      fade: 250ms
     led_missile_bank_2: stop
     led_side_3:
       color: '0000FF'
-      fade: 125ms
+      fade: 250ms
     led_side_2: stop
