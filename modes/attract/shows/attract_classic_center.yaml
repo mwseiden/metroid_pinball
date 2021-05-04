@@ -1,0 +1,90 @@
+#show_version=5
+- time: 0
+  lights:
+    led_scanner_ne: 'FF0000'
+    led_scanner_e: 'FF0000'
+    led_scanner_se: 'FF0000'
+    led_scanner_sw: 'FF0000'
+    led_scanner_w: 'FF0000'
+    led_scanner_nw: 'FF0000'
+    led_scanner_center: 'FF0000'
+    
+- time: '+1'
+  lights:
+    led_scanner_ne: 'FF8000'
+    led_scanner_e: 'FF8000'
+    led_scanner_se: 'FF8000'
+    led_scanner_sw: 'FF8000'
+    led_scanner_w: 'FF8000'
+    led_scanner_nw: 'FF8000'
+    led_scanner_center: 'FF8000'
+
+- time: '+1'
+  lights:
+    led_scanner_ne: '80FF00'
+    led_scanner_e: '80FF00'
+    led_scanner_se: '80FF00'
+    led_scanner_sw: '80FF00'
+    led_scanner_w: '80FF00'
+    led_scanner_nw: '80FF00'
+    led_scanner_center: '80FF00'
+
+- time: '+1'
+  lights:
+    led_scanner_ne: '00FF00'
+    led_scanner_e: '00FF00'
+    led_scanner_se: '00FF00'
+    led_scanner_sw: '00FF00'
+    led_scanner_w: '00FF00'
+    led_scanner_nw: '00FF00'
+    led_scanner_center: '00FF00'
+
+- time: '+1'
+  lights:
+    led_scanner_ne: '00FF80'
+    led_scanner_e: '00FF80'
+    led_scanner_se: '00FF80'
+    led_scanner_sw: '00FF80'
+    led_scanner_w: '00FF80'
+    led_scanner_nw: '00FF80'
+    led_scanner_center: '00FF80'
+
+- time: '+1'
+  lights:
+    led_scanner_ne: '0080FF'
+    led_scanner_e: '0080FF'
+    led_scanner_se: '0080FF'
+    led_scanner_sw: '0080FF'
+    led_scanner_w: '0080FF'
+    led_scanner_nw: '0080FF'
+    led_scanner_center: '0080FF'
+
+- time: '+1'
+  lights:
+    led_scanner_ne: '0000FF'
+    led_scanner_e: '0000FF'
+    led_scanner_se: '0000FF'
+    led_scanner_sw: '0000FF'
+    led_scanner_w: '0000FF'
+    led_scanner_nw: '0000FF'
+    led_scanner_center: '0000FF'
+
+- time: '+1'
+  lights:
+    led_scanner_ne: '8000FF'
+    led_scanner_e: '8000FF'
+    led_scanner_se: '8000FF'
+    led_scanner_sw: '8000FF'
+    led_scanner_w: '8000FF'
+    led_scanner_nw: '8000FF'
+    led_scanner_center: '8000FF'
+
+- time: '+1'
+  lights:
+    led_scanner_ne: 'FF0080'
+    led_scanner_e: 'FF0080'
+    led_scanner_se: 'FF0080'
+    led_scanner_sw: 'FF0080'
+    led_scanner_w: 'FF0080'
+    led_scanner_nw: 'FF0080'
+    led_scanner_center: 'FF0080'

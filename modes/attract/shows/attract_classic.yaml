@@ -8,6 +8,9 @@
     attract_classic_targets_chase:
       loops: -1
       speed: 3
+    attract_classic_center:
+      loops: -1
+      speed: 2
     attract_classic_gi:
       loops: -1
       speed: 40
