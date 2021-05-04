@@ -11,6 +11,8 @@
     attract_classic_center:
       loops: -1
       speed: 2
+    attract_classic_lanes:
+      loops: -1
     attract_classic_gi:
       loops: -1
       speed: 40
