@@ -17,6 +17,19 @@
     attract_classic_gi:
       loops: -1
       speed: 40
+    attract_classic_motherbrain:
+      loops: -1
+      show_tokens:
+        led_1: led_motherbrain_1
+        led_2: led_motherbrain_2
+        led_3: led_motherbrain_3
+        led_4: led_motherbrain_3
+        led_5: led_motherbrain_2
+        led_6: led_motherbrain_1
+        color_1: 'FF0000'
+        color_2: 'FF8000'
+        color_3: 'FFFF00'
+        color_4: '0000FF'
     attract_classic_gi_overlay:
       loops: -1
       speed: 27
