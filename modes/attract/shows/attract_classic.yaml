@@ -13,10 +13,11 @@
       speed: 2
     attract_classic_lanes:
       loops: -1
+      speed: 4
     attract_classic_gi:
       loops: -1
       speed: 40
-      priority: 200
-    attract_classic_background_gi:
+    attract_classic_gi_overlay:
       loops: -1
-      speed: 37
+      speed: 27
+      priority: 100
