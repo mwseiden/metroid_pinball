@@ -42,9 +42,9 @@
     gi_left_ball_guide: 'EB4E13'
     gi_left_sling_bottom: 'EB4E13'
     gi_left_sling_top: 'EB4E13'
-    gi_right_ball_guide: '000000'
-    gi_right_sling_bottom: '000000'
-    gi_right_sling_top: '000000'
+    gi_right_ball_guide: stop
+    gi_right_sling_bottom: stop
+    gi_right_sling_top: stop
     
 - time: '+1'
   lights:
@@ -109,8 +109,8 @@
 - time: '+1'
   lights:
     gi_behind_zero_suit: 'CB5C33'
-    gi_left_ball_guide: '000000'
-    gi_left_sling_bottom: '000000'
+    gi_left_ball_guide: stop
+    gi_left_sling_bottom: stop
     gi_left_sling_top: 'CB5C33'
     gi_middle_sling: 'CB5C33'
     gi_missile_bank: 'CB5C33'
@@ -118,7 +118,7 @@
 - time: '+1'
   lights:
     gi_behind_zero_suit: 'C75E37'
-    gi_left_sling_top: '000000'
+    gi_left_sling_top: stop
     gi_middle_sling: 'C75E37'
     gi_missile_bank: 'C75E37'
     gi_side_bank: 'C75E37'
@@ -161,7 +161,7 @@
 - time: '+1'
   lights:
     gi_back_left: 'AF694E'
-    gi_behind_zero_suit: '000000'
+    gi_behind_zero_suit: stop
     gi_middle_sling: 'AF694E'
     gi_missile_bank: 'AF694E'
     gi_side_bank: 'AF694E'
@@ -190,7 +190,7 @@
   lights:
     gi_back_left: 'A36E5A'
     gi_middle_sling: 'A36E5A'
-    gi_missile_bank: '000000'
+    gi_missile_bank: stop
     gi_side_bank: 'A36E5A'
     gi_strip_1: 'A36E5A'
     gi_strip_2: 'A36E5A'
@@ -212,7 +212,7 @@
 - time: '+1'
   lights:
     gi_back_left: '9B7262'
-    gi_middle_sling: '000000'
+    gi_middle_sling: stop
     gi_side_bank: '9B7262'
     gi_strip_1: '9B7262'
     gi_strip_2: '9B7262'
@@ -295,7 +295,7 @@
     gi_back_center: '877A76'
     gi_back_left: '877A76'
     gi_back_right: '877A76'
-    gi_side_bank: '000000'
+    gi_side_bank: stop
     gi_strip_1: '877A76'
     gi_strip_10: '877A76'
     gi_strip_2: '877A76'
@@ -405,9 +405,9 @@
 - time: '+1'
   lights:
     gi_back_center: '6F858E'
-    gi_back_left: '000000'
+    gi_back_left: stop
     gi_back_right: '6F858E'
-    gi_strip_1: '000000'
+    gi_strip_1: stop
     gi_strip_10: '6F858E'
     gi_strip_2: '6F858E'
     gi_strip_3: '6F858E'
@@ -426,7 +426,7 @@
     gi_back_center: '6B8792'
     gi_back_right: '6B8792'
     gi_strip_10: '6B8792'
-    gi_strip_2: '000000'
+    gi_strip_2: stop
     gi_strip_3: '6B8792'
     gi_strip_4: '6B8792'
     gi_strip_5: '6B8792'
@@ -444,7 +444,7 @@
     gi_back_center: '678996'
     gi_back_right: '678996'
     gi_strip_10: '678996'
-    gi_strip_3: '000000'
+    gi_strip_3: stop
     gi_strip_4: '678996'
     gi_strip_5: '678996'
     gi_strip_6: '678996'
@@ -461,7 +461,7 @@
     gi_back_center: '638A9A'
     gi_back_right: '638A9A'
     gi_strip_10: '638A9A'
-    gi_strip_4: '000000'
+    gi_strip_4: stop
     gi_strip_5: '638A9A'
     gi_strip_6: '638A9A'
     gi_strip_7: '638A9A'
@@ -477,7 +477,7 @@
     gi_back_center: '5F8C9E'
     gi_back_right: '5F8C9E'
     gi_strip_10: '5F8C9E'
-    gi_strip_5: '000000'
+    gi_strip_5: stop
     gi_strip_6: '5F8C9E'
     gi_strip_7: '5F8C9E'
     gi_strip_8: '5F8C9E'
@@ -492,24 +492,24 @@
     gi_back_center: '5B8EA2'
     gi_back_right: '5B8EA2'
     gi_strip_10: '5B8EA2'
-    gi_strip_6: '000000'
+    gi_strip_6: stop
     gi_strip_7: '5B8EA2'
     gi_strip_8: '5B8EA2'
     gi_strip_9: '5B8EA2'
     gi_under_side_ramp: '5B8EA2'
-    gi_upgrade_bank: '000000'
+    gi_upgrade_bank: stop
     gi_upper_flipper_bottom: '5B8EA2'
     gi_upper_flipper_top: '5B8EA2'
     
 - time: '+1'
   lights:
-    gi_back_center: '000000'
+    gi_back_center: stop
     gi_back_right: '5790A6'
     gi_strip_10: '5790A6'
-    gi_strip_7: '000000'
+    gi_strip_7: stop
     gi_strip_8: '5790A6'
     gi_strip_9: '5790A6'
-    gi_under_side_ramp: '000000'
+    gi_under_side_ramp: stop
     gi_upper_flipper_bottom: '5790A6'
     gi_upper_flipper_top: '5790A6'
     
@@ -518,7 +518,7 @@
     gi_back_right: '5391AA'
     gi_bomb_bank: '5391AA'
     gi_strip_10: '5391AA'
-    gi_strip_8: '000000'
+    gi_strip_8: stop
     gi_strip_9: '5391AA'
     gi_upper_flipper_bottom: '5391AA'
     gi_upper_flipper_top: '5391AA'
@@ -528,15 +528,15 @@
     gi_back_right: '4F93AE'
     gi_bomb_bank: '4F93AE'
     gi_strip_10: '060B0D'
-    gi_strip_9: '000000'
+    gi_strip_9: stop
     gi_upper_flipper_bottom: '4F93AE'
     gi_upper_flipper_top: '4F93AE'
     
 - time: '+1'
   lights:
-    gi_back_right: '000000'
+    gi_back_right: stop
     gi_bomb_bank: '4B95B2'
-    gi_strip_10: '000000'
+    gi_strip_10: stop
     gi_upper_flipper_bottom: '4B95B2'
     gi_upper_flipper_top: '4B95B2'
     
@@ -562,7 +562,7 @@
   lights:
     gi_bomb_bank: '3B9CC1'
     gi_upper_flipper_bottom: '3B9CC1'
-    gi_upper_flipper_top: '000000'
+    gi_upper_flipper_top: stop
     
 - time: '+1'
   lights:
@@ -586,7 +586,7 @@
     gi_right_ball_guide: '2BA3D1'
     gi_right_sling_bottom: '2BA3D1'
     gi_right_sling_top: '2BA3D1'
-    gi_upper_flipper_bottom: '000000'
+    gi_upper_flipper_bottom: stop
     
 - time: '+1'
   lights:
@@ -625,7 +625,7 @@
     
 - time: '+1'
   lights:
-    gi_bomb_bank: '000000'
+    gi_bomb_bank: stop
     gi_right_ball_guide: '13AEE9'
     gi_right_sling_bottom: '13AEE9'
     gi_right_sling_top: '13AEE9'
@@ -714,9 +714,9 @@
     gi_left_ball_guide: '13B8E9'
     gi_left_sling_bottom: '13B8E9'
     gi_left_sling_top: '13B8E9'
-    gi_right_ball_guide: '000000'
-    gi_right_sling_bottom: '000000'
-    gi_right_sling_top: '000000'
+    gi_right_ball_guide: stop
+    gi_right_sling_bottom: stop
+    gi_right_sling_top: stop
     
 - time: '+1'
   lights:
@@ -781,8 +781,8 @@
 - time: '+1'
   lights:
     gi_behind_zero_suit: '33A8C9'
-    gi_left_ball_guide: '000000'
-    gi_left_sling_bottom: '000000'
+    gi_left_ball_guide: stop
+    gi_left_sling_bottom: stop
     gi_left_sling_top: '33A8C9'
     gi_middle_sling: '33A8C9'
     gi_missile_bank: '33A8C9'
@@ -790,7 +790,7 @@
 - time: '+1'
   lights:
     gi_behind_zero_suit: '37A6C5'
-    gi_left_sling_top: '000000'
+    gi_left_sling_top: stop
     gi_middle_sling: '37A6C5'
     gi_missile_bank: '37A6C5'
     gi_side_bank: '37A6C5'
@@ -833,7 +833,7 @@
 - time: '+1'
   lights:
     gi_back_left: '4F9BAE'
-    gi_behind_zero_suit: '000000'
+    gi_behind_zero_suit: stop
     gi_middle_sling: '4F9BAE'
     gi_missile_bank: '4F9BAE'
     gi_side_bank: '4F9BAE'
@@ -862,7 +862,7 @@
   lights:
     gi_back_left: '5B95A2'
     gi_middle_sling: '5B95A2'
-    gi_missile_bank: '000000'
+    gi_missile_bank: stop
     gi_side_bank: '5B95A2'
     gi_strip_1: '5B95A2'
     gi_strip_2: '5B95A2'
@@ -884,7 +884,7 @@
 - time: '+1'
   lights:
     gi_back_left: '63919A'
-    gi_middle_sling: '000000'
+    gi_middle_sling: stop
     gi_side_bank: '63919A'
     gi_strip_1: '63919A'
     gi_strip_2: '63919A'
@@ -967,7 +967,7 @@
     gi_back_center: '778786'
     gi_back_left: '778786'
     gi_back_right: '778786'
-    gi_side_bank: '000000'
+    gi_side_bank: stop
     gi_strip_1: '778786'
     gi_strip_10: '778786'
     gi_strip_2: '778786'
@@ -1077,9 +1077,9 @@
 - time: '+1'
   lights:
     gi_back_center: '8F7C6E'
-    gi_back_left: '000000'
+    gi_back_left: stop
     gi_back_right: '8F7C6E'
-    gi_strip_1: '000000'
+    gi_strip_1: stop
     gi_strip_10: '8F7C6E'
     gi_strip_2: '8F7C6E'
     gi_strip_3: '8F7C6E'
@@ -1098,7 +1098,7 @@
     gi_back_center: '937A6A'
     gi_back_right: '937A6A'
     gi_strip_10: '937A6A'
-    gi_strip_2: '000000'
+    gi_strip_2: stop
     gi_strip_3: '937A6A'
     gi_strip_4: '937A6A'
     gi_strip_5: '937A6A'
@@ -1116,7 +1116,7 @@
     gi_back_center: '977866'
     gi_back_right: '977866'
     gi_strip_10: '977866'
-    gi_strip_3: '000000'
+    gi_strip_3: stop
     gi_strip_4: '977866'
     gi_strip_5: '977866'
     gi_strip_6: '977866'
@@ -1133,7 +1133,7 @@
     gi_back_center: '9B7662'
     gi_back_right: '9B7662'
     gi_strip_10: '9B7662'
-    gi_strip_4: '000000'
+    gi_strip_4: stop
     gi_strip_5: '9B7662'
     gi_strip_6: '9B7662'
     gi_strip_7: '9B7662'
@@ -1149,7 +1149,7 @@
     gi_back_center: '9F745E'
     gi_back_right: '9F745E'
     gi_strip_10: '9F745E'
-    gi_strip_5: '000000'
+    gi_strip_5: stop
     gi_strip_6: '9F745E'
     gi_strip_7: '9F745E'
     gi_strip_8: '9F745E'
@@ -1164,24 +1164,24 @@
     gi_back_center: 'A3725A'
     gi_back_right: 'A3725A'
     gi_strip_10: 'A3725A'
-    gi_strip_6: '000000'
+    gi_strip_6: stop
     gi_strip_7: 'A3725A'
     gi_strip_8: 'A3725A'
     gi_strip_9: 'A3725A'
     gi_under_side_ramp: 'A3725A'
-    gi_upgrade_bank: '000000'
+    gi_upgrade_bank: stop
     gi_upper_flipper_bottom: 'A3725A'
     gi_upper_flipper_top: 'A3725A'
     
 - time: '+1'
   lights:
-    gi_back_center: '000000'
+    gi_back_center: stop
     gi_back_right: 'A77056'
     gi_strip_10: 'A77056'
-    gi_strip_7: '000000'
+    gi_strip_7: stop
     gi_strip_8: 'A77056'
     gi_strip_9: 'A77056'
-    gi_under_side_ramp: '000000'
+    gi_under_side_ramp: stop
     gi_upper_flipper_bottom: 'A77056'
     gi_upper_flipper_top: 'A77056'
     
@@ -1190,7 +1190,7 @@
     gi_back_right: 'AB6E52'
     gi_bomb_bank: 'AB6E52'
     gi_strip_10: 'AB6E52'
-    gi_strip_8: '000000'
+    gi_strip_8: stop
     gi_strip_9: 'AB6E52'
     gi_upper_flipper_bottom: 'AB6E52'
     gi_upper_flipper_top: 'AB6E52'
@@ -1200,15 +1200,15 @@
     gi_back_right: 'AF6C4E'
     gi_bomb_bank: 'AF6C4E'
     gi_strip_10: '0D0806'
-    gi_strip_9: '000000'
+    gi_strip_9: stop
     gi_upper_flipper_bottom: 'AF6C4E'
     gi_upper_flipper_top: 'AF6C4E'
     
 - time: '+1'
   lights:
-    gi_back_right: '000000'
+    gi_back_right: stop
     gi_bomb_bank: 'B36A4A'
-    gi_strip_10: '000000'
+    gi_strip_10: stop
     gi_upper_flipper_bottom: 'B36A4A'
     gi_upper_flipper_top: 'B36A4A'
     
@@ -1234,7 +1234,7 @@
   lights:
     gi_bomb_bank: 'C3633B'
     gi_upper_flipper_bottom: 'C3633B'
-    gi_upper_flipper_top: '000000'
+    gi_upper_flipper_top: stop
     
 - time: '+1'
   lights:
@@ -1258,7 +1258,7 @@
     gi_right_ball_guide: 'D35B2B'
     gi_right_sling_bottom: 'D35B2B'
     gi_right_sling_top: 'D35B2B'
-    gi_upper_flipper_bottom: '000000'
+    gi_upper_flipper_bottom: stop
     
 - time: '+1'
   lights:
@@ -1297,7 +1297,7 @@
     
 - time: '+1'
   lights:
-    gi_bomb_bank: '000000'
+    gi_bomb_bank: stop
     gi_right_ball_guide: 'EB4F13'
     gi_right_sling_bottom: 'EB4F13'
     gi_right_sling_top: 'EB4F13'
