@@ -11,7 +11,7 @@
     attract_classic_gi:
       loops: -1
       speed: 40
-      priority: 100
+      priority: 200
     attract_classic_background_gi:
       loops: -1
-      speed: 19
+      speed: 37
