@@ -2,8 +2,7 @@
 - time: 0
   lights:
     led_right_outlane: 'FF8000'
-    led_left_outlane: stop
-    
+
 - time: '+1'
   lights:
     led_right_inlane: 'FF8000'
@@ -21,31 +20,28 @@
 
 - time: '+1'
   lights:
-    led_right_outlane: stop
     led_left_outlane: stop
 
 - time: '+1'
   lights:
     led_left_outlane: 'FF8000'
-    led_left_inlane: stop
 
 - time: '+1'
   lights:
     led_left_inlane: 'FF8000'
-    led_right_inlane: stop
+    led_left_outlane: stop
 
 - time: '+1'
   lights:
     led_right_inlane: 'FF8000'
-    led_right_outlane: stop
+    led_left_inlane: stop
 
 - time: '+1'
   lights:
     led_right_outlane: 'FF8000'
-    led_left_outlane: stop
+    led_right_inlane: stop
 
 - time: '+1'
   lights:
     led_right_outlane: stop
-    led_left_outlane: stop
 
