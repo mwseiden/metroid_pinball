@@ -28,6 +28,9 @@
       show_tokens:
         led: led_wall_jump
         color: 'FFA619'
+    attract_classic_flame:
+      speed: 26
+      loops: -1
     attract_classic_motherbrain:
       loops: -1
       show_tokens:
