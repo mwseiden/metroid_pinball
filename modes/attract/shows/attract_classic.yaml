@@ -17,6 +17,9 @@
     attract_classic_pops:
       loops: -1
       speed: 29
+    attract_classic_lower_3:
+      loops: -1
+      speed: 15
     attract_classic_gi:
       loops: -1
       speed: 40
