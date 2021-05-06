@@ -23,6 +23,11 @@
     attract_classic_gi:
       loops: -1
       speed: 40
+    attract_classic_flicker:
+      loops: -1
+      show_tokens:
+        led: led_wall_jump
+        color: 'FFD8C0'
     attract_classic_motherbrain:
       loops: -1
       show_tokens:
