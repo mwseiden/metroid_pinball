@@ -4,7 +4,7 @@
   shows:
     attract_classic_(boss)_base:
       loops: -1
-      speed: 19
+      speed: 37
     attract_classic_(boss)_blink:
       loops: -1
       priority: 100
