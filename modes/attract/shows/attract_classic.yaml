@@ -19,7 +19,7 @@
       speed: 29
     attract_classic_lower_3:
       loops: -1
-      speed: 15
+      speed: 7
     attract_classic_gi:
       loops: -1
       speed: 40
