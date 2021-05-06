@@ -7,3 +7,4 @@
       speed: 19
     attract_classic_(boss)_blink:
       loops: -1
+      priority: 100
