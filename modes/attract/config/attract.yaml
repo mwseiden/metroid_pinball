@@ -134,6 +134,8 @@ show_player:
   slide_rooms_completed_champ_score_created:
     attract_classic:
       action: stop
+    attract_classic_boss:
+      action: stop
     lights_rainbow_blurred:
       loops: -1
       speed: 10
@@ -142,6 +144,28 @@ show_player:
       action: stop
     attract_classic:
       loops: -1
+    attract_classic_boss:
+      loops: -1
+      show_tokens:
+        boss: ridley
+  slide_boss_draygon_score_champ_score_created:
+    attract_classic_boss:
+      loops: -1
+      show_tokens:
+        boss: draygon
+  slide_boss_phantoon_score_champ_score_created:
+    attract_classic_boss:
+      loops: -1
+      show_tokens:
+        boss: phantoon
+  slide_boss_kraid_score_champ_score_created:
+    attract_classic_boss:
+      loops: -1
+      show_tokens:
+        boss: kraid
+  slide_bao_reactor_champ_score_created:
+    attract_classic_boss:
+      action: stop
   slide_bao_score_champ_score_created:
     attract_lights_press_start_gi:
       action: stop

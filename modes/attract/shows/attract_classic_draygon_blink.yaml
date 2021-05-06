@@ -1,0 +1,9 @@
+#show_version=5
+
+- duration: .5s
+  lights:
+    led_boss_2: 'FFFFF'
+
+- duration: .5s
+  lights:
+    led_boss_2: stop

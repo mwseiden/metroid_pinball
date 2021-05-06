@@ -1,0 +1,9 @@
+#show_version=5
+
+- duration: 30s
+  shows:
+    attract_classic_(boss)_base:
+      loops: -1
+      speed: 19
+    attract_classic_(boss)_blink:
+      loops: -1
