@@ -2,7 +2,7 @@
 
 - duration: .5s
   lights:
-    led_boss_2: 'FFFFF'
+    led_boss_2: 'FFFFFF'
 
 - duration: .5s
   lights:

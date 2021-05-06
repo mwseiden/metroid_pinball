@@ -1,0 +1,370 @@
+#show_version=5
+- time: 0
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00FA00'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00F800'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00F300'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00F100'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00EE00'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00EA00'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00E500'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00E100'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00DC00'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00D800'
+    led_boss_3: '00FA00'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00D300'
+    led_boss_3: '00F700'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00CE00'
+    led_boss_3: '00F300'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00C900'
+    led_boss_3: '00F100'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00C400'
+    led_boss_3: '00EE00'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00BF00'
+    led_boss_3: '00E900'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00B900'
+    led_boss_3: '00E500'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00B400'
+    led_boss_3: '00E100'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00AF00'
+    led_boss_3: '00DC00'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '00A900'
+    led_boss_3: '00D700'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '00FA00'
+    led_boss_4: '00A300'
+    led_boss_3: '00D300'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '00F700'
+    led_boss_4: '009D00'
+    led_boss_3: '00CE00'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '00F300'
+    led_boss_4: '009800'
+    led_boss_3: '00C900'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '00F000'
+    led_boss_4: '009100'
+    led_boss_3: '00C300'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '00EC00'
+    led_boss_4: '008B00'
+    led_boss_3: '00BF00'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '00E900'
+    led_boss_4: '008600'
+    led_boss_3: '00B900'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '00E500'
+    led_boss_4: '008000'
+    led_boss_3: '00B400'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '00DF00'
+    led_boss_4: '007900'
+    led_boss_3: '00AD00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00FB00'
+    led_boss_2: '00DB00'
+    led_boss_4: '007400'
+    led_boss_3: '00A800'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00F900'
+    led_boss_2: '00D700'
+    led_boss_4: '006E00'
+    led_boss_3: '00A300'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00F600'
+    led_boss_2: '00D300'
+    led_boss_4: '006800'
+    led_boss_3: '009D00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00EE00'
+    led_boss_2: '00C800'
+    led_boss_4: '006300'
+    led_boss_3: '009500'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00E600'
+    led_boss_2: '00C100'
+    led_boss_4: '005F00'
+    led_boss_3: '008F00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00DF00'
+    led_boss_2: '00BB00'
+    led_boss_4: '005C00'
+    led_boss_3: '008900'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00D800'
+    led_boss_2: '00B200'
+    led_boss_4: '005800'
+    led_boss_3: '008400'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00D000'
+    led_boss_2: '00AD00'
+    led_boss_4: '005500'
+    led_boss_3: '007F00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00CA00'
+    led_boss_2: '00A600'
+    led_boss_4: '005300'
+    led_boss_3: '007A00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00C400'
+    led_boss_2: '00A000'
+    led_boss_4: '005000'
+    led_boss_3: '007600'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00BD00'
+    led_boss_2: '009C00'
+    led_boss_4: '004E00'
+    led_boss_3: '007200'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00B700'
+    led_boss_2: '009700'
+    led_boss_4: '004C00'
+    led_boss_3: '006F00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00B200'
+    led_boss_2: '009100'
+    led_boss_4: '004800'
+    led_boss_3: '006B00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00AD00'
+    led_boss_2: '008D00'
+    led_boss_3: '006700'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00A900'
+    led_boss_2: '008900'
+    led_boss_4: '004700'
+    led_boss_3: '006500'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '00A300'
+    led_boss_2: '008500'
+    led_boss_4: '004400'
+    led_boss_3: '006200'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '009E00'
+    led_boss_2: '008100'
+    led_boss_4: '004300'
+    led_boss_3: '005F00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '009B00'
+    led_boss_2: '007E00'
+    led_boss_4: '004100'
+    led_boss_3: '005E00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '009600'
+    led_boss_2: '007A00'
+    led_boss_4: '003F00'
+    led_boss_3: '005A00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '009200'
+    led_boss_2: '007700'
+    led_boss_3: '005900'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '008F00'
+    led_boss_2: '007500'
+    led_boss_4: '003E00'
+    led_boss_3: '005700'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '008A00'
+    led_boss_2: '007200'
+    led_boss_4: '003B00'
+    led_boss_3: '005500'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '008900'
+    led_boss_2: '006F00'
+    led_boss_3: '005300'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '008500'
+    led_boss_2: '006D00'
+    led_boss_3: '005100'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '008200'
+    led_boss_2: '006900'
+    led_boss_4: '003900'
+    led_boss_3: '005000'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '007F00'
+    led_boss_2: '006800'
+    led_boss_4: '003800'
+    led_boss_3: '004E00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '007C00'
+    led_boss_2: '006600'
+    led_boss_4: '003700'
+    led_boss_3: '004D00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '007900'
+    led_boss_2: '006300'
+    led_boss_3: '004B00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '007700'
+    led_boss_2: '006200'
+    led_boss_4: '003600'
+    led_boss_3: '004A00'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '007600'
+    led_boss_2: '006000'
+    led_boss_3: '004900'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '007300'
+    led_boss_2: '005E00'
+    led_boss_4: '003400'
+    led_boss_3: '004800'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '007100'
+    led_boss_2: '005D00'
+    led_boss_4: '003300'
+    led_boss_3: '004700'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '006F00'
+    led_boss_2: '005B00'
+    led_boss_3: '004600'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '006C00'
+    led_boss_2: '005A00'
+    led_boss_3: '004400'
+    
