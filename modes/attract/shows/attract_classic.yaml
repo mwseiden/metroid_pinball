@@ -27,7 +27,7 @@
       loops: -1
       show_tokens:
         led: led_wall_jump
-        color: 'FFD8C0'
+        color: 'FFA090'
     attract_classic_motherbrain:
       loops: -1
       show_tokens:
