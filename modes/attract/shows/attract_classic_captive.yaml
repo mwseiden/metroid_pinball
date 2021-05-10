@@ -6,7 +6,7 @@
 
 - duration: .25s
   lights:
-    led_boss_3: stop
+    led_captive_ball: stop
 
 - duration: .25s
   lights:
@@ -14,7 +14,7 @@
 
 - duration: .25s
   lights:
-    led_boss_3: stop
+    led_captive_ball: stop
 
 - duration: .25s
   lights:
@@ -22,7 +22,7 @@
 
 - duration: .25s
   lights:
-    led_boss_3: stop
+    led_captive_ball: stop
 
 - duration: .25s
   lights:
@@ -30,7 +30,7 @@
 
 - duration: .25s
   lights:
-    led_boss_3: stop
+    led_captive_ball: stop
 
 - duration: .25s
   lights:
@@ -38,7 +38,7 @@
 
 - duration: .25s
   lights:
-    led_boss_3: stop
+    led_captive_ball: stop
 
 - duration: .25s
   lights:
@@ -46,7 +46,7 @@
 
 - duration: .25s
   lights:
-    led_boss_3: stop
+    led_captive_ball: stop
 
 - duration: .25s
   lights:
@@ -54,7 +54,7 @@
 
 - duration: .25s
   lights:
-    led_boss_3: stop
+    led_captive_ball: stop
 
 - duration: .25s
   lights:
@@ -62,5 +62,5 @@
 
 - duration: .25s
   lights:
-    led_boss_3: stop
+    led_captive_ball: stop
 
