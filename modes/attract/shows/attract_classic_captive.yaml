@@ -1,0 +1,66 @@
+#show_version=5
+
+- duration: .25s
+  lights:
+    led_captive_ball: '00FF00'
+
+- duration: .25s
+  lights:
+    led_boss_3: stop
+
+- duration: .25s
+  lights:
+    led_captive_ball: '00FF00'
+
+- duration: .25s
+  lights:
+    led_boss_3: stop
+
+- duration: .25s
+  lights:
+    led_captive_ball: '00FF00'
+
+- duration: .25s
+  lights:
+    led_boss_3: stop
+
+- duration: .25s
+  lights:
+    led_captive_ball: '00FF00'
+
+- duration: .25s
+  lights:
+    led_boss_3: stop
+
+- duration: .25s
+  lights:
+    led_captive_ball: '00FF00'
+
+- duration: .25s
+  lights:
+    led_boss_3: stop
+
+- duration: .25s
+  lights:
+    led_captive_ball: '00FF00'
+
+- duration: .25s
+  lights:
+    led_boss_3: stop
+
+- duration: .25s
+  lights:
+    led_captive_ball: 'FF0000'
+
+- duration: .25s
+  lights:
+    led_boss_3: stop
+
+- duration: .25s
+  lights:
+    led_captive_ball: '0000FF'
+
+- duration: .25s
+  lights:
+    led_boss_3: stop
+
