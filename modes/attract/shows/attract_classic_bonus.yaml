@@ -1,0 +1,12 @@
+#show_version=5
+
+- duration: .75s
+  lights:
+    led_2x: 'FFFF00'
+    led_3x: stop
+
+- duration: .75s
+  lights:
+    led_3x: 'FFFF00'
+    led_2x: stop
+
