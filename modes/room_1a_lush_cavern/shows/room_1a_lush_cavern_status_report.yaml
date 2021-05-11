@@ -14,12 +14,12 @@
       widgets:
       - type: Text
         text: Build Shot Values
-        color: red
+        color: yellow
         style: dmd_med
         y: 21
       - type: Text
         text: By Hitting Lanes
-        color: red
+        color: lightseagreen
         style: dmd_med
         y: 11
 
