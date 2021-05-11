@@ -57,6 +57,8 @@
       loops: -1
       speed: 27
       priority: 100
+    attract_classic_star:
+      loops: -1
     attract_classic_upper_playfield:
       loops: -1
       speed: 15

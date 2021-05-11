@@ -1,0 +1,49 @@
+#show_version=5
+
+- duration: .87s
+  lights:
+    led_rollover: 'FF0000'
+
+- duration: .87s
+  lights:
+    led_rollover: stop
+
+- duration: .87s
+  lights:
+    led_rollover: 'FF0000'
+
+- duration: .87s
+  lights:
+    led_rollover: stop
+
+- duration: .87s
+  lights:
+    led_rollover: 'FF0000'
+
+- duration: .87s
+  lights:
+    led_rollover: stop
+
+- duration: .87s
+  lights:
+    led_rollover: 'FF0000'
+
+- duration: .87s
+  lights:
+    led_rollover: stop
+
+- duration: .87s
+  lights:
+    led_rollover: '00FF00'
+
+- duration: .87s
+  lights:
+    led_rollover: stop
+
+- duration: .87s
+  lights:
+    led_rollover: '00FF00'
+
+- duration: .87s
+  lights:
+    led_rollover: stop
