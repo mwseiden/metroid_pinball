@@ -99,6 +99,18 @@ show_player:
   flipper_cradle_release:
     room_2l_west_hot_springs_status_report:
       action: stop
+  room_2l_increase_1_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_2l_increase_2_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_2l_increase_3_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_2l_increase_4_shot_hit:
+    special_score_yellow:
+      loops: 0
 
 event_player:
   mode_room_2l_west_hot_springs_started:
@@ -123,3 +135,27 @@ variable_player:
     continue_room:
       string: 2l
       action: set
+  room_2l_increase_1_shot_hit:
+    score: (100000 + (current_player.area_bonus_w * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_w * 50000)) * current_player.multiplier
+      action: set
+    hot_springs_jackpot_value: 25000
+  room_2l_increase_2_shot_hit:
+    score: (100000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+      action: set
+    hot_springs_jackpot_value: 25000
+  room_2l_increase_3_shot_hit:
+    score: (100000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+      action: set
+    hot_springs_jackpot_value: 25000
+  room_2l_increase_4_shot_hit:
+    score: (100000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+      action: set
+    hot_springs_jackpot_value: 25000
