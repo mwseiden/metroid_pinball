@@ -12,7 +12,46 @@
   slides:
     room_2l_west_hot_springs_status_slide_help:
       widgets:
-      - type: Text
-        text: NO MODE RULES
-        color: red
+      - type: text
+        text: Hit Shots To Build
+        color: cyan
         style: dmd_med
+        y: 21
+      - type: text
+        text: Multiball Value
+        color: white
+        style: dmd_med
+        y: 11
+
+- duration: 5s
+  slides:
+    room_2l_west_hot_springs_status_slide_help_2:
+      - type: text
+        text: Hit Scoop In Both
+        y: 24
+        color: 'FFFFFF'
+        style: dmd_med
+      - type: text
+        text: Hot Springs To
+        color: 'D0A0FF'
+        style: dmd_med
+      - type: text
+        text: Start Multiball
+        y: 8
+        color: '8080FF'
+        style: dmd_med
+
+- duration: 5s
+  slides:
+    room_2l_west_hot_springs_status_slide_help_3:
+      widgets:
+      - type: text
+        text: Hot Springs Jackpot
+        color: blue
+        style: dmd_med
+        y: 21
+      - type: text
+        text: +(player|hot_springs_jackpot_value)
+        color: white
+        style: dmd_med
+        y: 11

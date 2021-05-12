@@ -1,0 +1,24 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_1r_space_pirate_battle_slide_splash:
+      widgets:
+      - type: image
+        image: room_1r_splash
+
+
+- duration: 3s
+  slides:
+    room_1r_space_pirate_battle_status_slide_help_1:
+      widgets:
+      - type: text
+        text: Pirates Defeated
+        color: purple
+        style: dmd_med
+        y: 21
+      - type: text
+        text: Room Complete
+        color: green
+        style: dmd_med
+        y: 11

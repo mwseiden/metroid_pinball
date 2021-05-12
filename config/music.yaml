@@ -165,6 +165,15 @@ sounds:
     loops: -1
     simultaneous_limit: 1
     stealing_method: skip
+  music_wrecked_ship_calm:
+    file: music_wrecked_ship_calm.wav
+    #streaming: True
+    track: music
+    priority: 50
+    #max_queue_time: 1s
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip
   music_wrecked_ship_generator:
     file: music_wrecked_ship_generator.wav
     #streaming: True

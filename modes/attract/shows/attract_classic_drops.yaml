@@ -1,0 +1,187 @@
+#show_version=5
+- time: 0
+  lights:
+    led_drop_1: 'F72202'
+    led_drop_2: 'F5110F'
+    led_drop_3: 'EB023E'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'FD4701'
+    led_drop_2: 'D1024B'
+    led_drop_3: 'F00936'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'FC3A02'
+    led_drop_2: 'E5023E'
+    led_drop_3: 'FA0414'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'FA3402'
+    led_drop_2: 'E60B40'
+    led_drop_3: 'FA7E03'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'D90248'
+    led_drop_2: 'E20347'
+    led_drop_3: 'F95402'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'D30348'
+    led_drop_2: 'E90D37'
+    led_drop_3: 'F91002'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'E50144'
+    led_drop_2: 'FB0503'
+    led_drop_3: 'EC063C'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'EE063A'
+    led_drop_2: 'EF0E38'
+    led_drop_3: 'F00A35'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'EB083C'
+    led_drop_2: 'FB3803'
+    led_drop_3: 'FC6002'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'EE0639'
+    led_drop_2: 'F80309'
+    led_drop_3: 'FCA704'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'F90417'
+    led_drop_2: 'E00347'
+    led_drop_3: 'FD5C03'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'F70427'
+    led_drop_2: 'F72707'
+    led_drop_3: 'F72208'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'FC3B02'
+    led_drop_2: 'FDA804'
+    led_drop_3: 'F91705'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'F40420'
+    led_drop_2: 'FD2D03'
+    led_drop_3: 'C40443'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'DE0649'
+    led_drop_2: 'FDA803'
+    led_drop_3: 'FC9D03'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'F00834'
+    led_drop_2: 'FDAD02'
+    led_drop_3: 'F63804'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'F98403'
+    led_drop_2: 'F63007'
+    led_drop_3: 'E30640'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'FC8003'
+    led_drop_2: 'D30540'
+    led_drop_3: 'E30343'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'FDAA03'
+    led_drop_2: 'EB0C38'
+    led_drop_3: 'E50640'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'F6051E'
+    led_drop_2: 'EB0F1E'
+    led_drop_3: 'F01213'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'FC2403'
+    led_drop_2: 'F60611'
+    led_drop_3: 'E7073D'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'DA033A'
+    led_drop_2: 'C00746'
+    led_drop_3: 'FE1402'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'FC4404'
+    led_drop_2: 'CB0D44'
+    led_drop_3: 'FC2A02'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'FD3803'
+    led_drop_2: 'F1092D'
+    led_drop_3: 'FC4902'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'FB4203'
+    led_drop_2: 'EC063C'
+    led_drop_3: 'FDAC01'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'CB0249'
+    led_drop_2: 'FB2003'
+    led_drop_3: 'FC2304'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'D80649'
+    led_drop_2: 'F30825'
+    led_drop_3: 'D60147'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'F7080C'
+    led_drop_2: 'FDA501'
+    led_drop_3: 'D90646'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'F10829'
+    led_drop_2: 'FDA802'
+    led_drop_3: 'EA0C33'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'F90704'
+    led_drop_2: 'FD3E03'
+    led_drop_3: 'EB0637'
+    
+- time: '+1'
+  lights:
+    led_drop_1: 'FC1202'
+    led_drop_2: 'FC4002'
+    led_drop_3: 'ED053D'
+    

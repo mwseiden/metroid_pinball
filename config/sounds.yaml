@@ -508,6 +508,19 @@ sounds:
       attenuation: 0.15
       release_point: 2.0 sec
       release: 1.0 sec
+  reverse_flippers:
+    file: VO_ReverseFlippers.wav
+    streaming: False
+    track: voice
+    priority: 50
+    max_queue_time: None
+    ducking:
+      target: music
+      delay: 0
+      attack: 0.3 sec
+      attenuation: 0.15
+      release_point: 2.0 sec
+      release: 1.0 sec
   shoot_the_back_ramp:
     file: VO_ShootTheBackRamp.wav
     streaming: False

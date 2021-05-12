@@ -31,4 +31,4 @@ show_player:
 
 variable_player:
   whole_playfield_shot_group_hit:
-    score: 500
+    score: 500 * current_player.multiplier

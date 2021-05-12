@@ -1,0 +1,17 @@
+#show_version=5
+
+- duration: .66s
+  lights:
+    led_zero_suit: '00FFFF'
+    led_thin_orange: stop
+
+- duration: .66s
+  lights:
+    led_pit: '00FFFF'
+    led_zero_suit: stop
+
+- duration: .66s
+  lights:
+    led_thin_orange: '00FFFF'
+    led_pit: stop
+

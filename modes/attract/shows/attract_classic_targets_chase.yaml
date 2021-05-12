@@ -1,0 +1,57 @@
+#show_version=5
+- time: 0
+  lights:
+    led_bomb_bank_1:
+      color: 'FFFF00'
+      fade: 500ms
+    led_bomb_bank_3: '000000'
+    led_upgrade_bank_1:
+      color: 'FF00FF'
+      fade: 500ms
+    led_upgrade_bank_3: '000000'
+    led_missile_bank_1:
+      color: 'FF0000'
+      fade: 500ms
+    led_missile_bank_3: '000000'
+    led_side_1:
+      color: '0000FF'
+      fade: 500ms
+    led_side_3: '000000'
+
+- time: '+1'
+  lights:
+    led_bomb_bank_2:
+      color: 'FFFF00'
+      fade: 500ms
+    led_bomb_bank_1: '000000'
+    led_upgrade_bank_2:
+      color: 'FF00FF'
+      fade: 500ms
+    led_upgrade_bank_1: '000000'
+    led_missile_bank_2:
+      color: 'FF0000'
+      fade: 500ms
+    led_missile_bank_1: '000000'
+    led_side_2:
+      color: '0000FF'
+      fade: 500ms
+    led_side_1: '000000'
+
+- time: '+1'
+  lights:
+    led_bomb_bank_3:
+      color: 'FFFF00'
+      fade: 500ms
+    led_bomb_bank_2: '000000'
+    led_upgrade_bank_3:
+      color: 'FF00FF'
+      fade: 500ms
+    led_upgrade_bank_2: '000000'
+    led_missile_bank_3:
+      color: 'FF0000'
+      fade: 500ms
+    led_missile_bank_2: '000000'
+    led_side_3:
+      color: '0000FF'
+      fade: 500ms
+    led_side_2: '000000'

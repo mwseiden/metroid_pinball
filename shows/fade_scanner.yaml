@@ -1,0 +1,38 @@
+#show_version=5
+
+- duration: 50ms
+  lights:
+    led_scanner_nw:
+      color: (color)
+    led_scanner_ne:
+      color: (color)
+    led_scanner_e:
+      color: (color)
+    led_scanner_se:
+      color: (color)
+    led_scanner_sw:
+      color: (color)
+    led_scanner_w:
+      color: (color)
+
+- duration: 950ms
+  lights:
+    led_scanner_nw:
+      color: '000000'
+      fade: 950ms
+    led_scanner_ne:
+      color: '000000'
+      fade: 950ms
+    led_scanner_e:
+      color: '000000'
+      fade: 950ms
+    led_scanner_se:
+      color: '000000'
+      fade: 950ms
+    led_scanner_sw:
+      color: '000000'
+      fade: 950ms
+    led_scanner_w:
+      color: '000000'
+      fade: 950ms
+

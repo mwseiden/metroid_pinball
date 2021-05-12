@@ -7,6 +7,29 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1l_enter, room_1p_enter, room_1n_exit
   priority: 300
 
+
+timers:
+  room_1n_light_shot_timer:
+    start_value: 1
+    end_value: 4
+    restart_on_complete: true
+    tick_interval: 8s
+    control_events:
+      - event: room_1n_start_timer
+        action: restart
+      - event: mode_room_1n_the_hull_started
+        action: stop
+
+
+shot_profiles:
+  room_1n_robot:
+    states:
+      - name: lit
+        show: blink_light
+        speed: 4
+        show_tokens:
+          color: 'a9e82c'
+
 shots:
   room_1n_exit_north_shot:
     switches: s_ramp_enter
@@ -26,6 +49,27 @@ shots:
     show_tokens:
       led: led_enter_scoop
       color: door_blue
+  room_1n_work_robot_shot_1:
+    switch: s_left_passage
+    profile: room_1n_robot
+    enable_events: room_1k_show_robot_1
+    disable_events: mode_room_1n_the_hull_started, room_1k_hide_robot_1
+    show_tokens:
+      led: led_enter_secret_passage
+  room_1n_work_robot_shot_2:
+    hit_events: left_orbit_hit
+    profile: room_1n_robot
+    enable_events: room_1k_show_robot_2
+    disable_events: mode_room_1n_the_hull_started, room_1k_hide_robot_2
+    show_tokens:
+      led: led_enter_left_orbit
+  room_1n_work_robot_shot_3:
+    hit_events: right_orbit_hit
+    profile: room_1n_robot
+    enable_events: room_1k_show_robot_3
+    disable_events: mode_room_1n_the_hull_started, room_1k_hide_robot_3
+    show_tokens:
+      led: led_enter_right_orbit
 
 slides:
   room_1n_the_hull_backglass_slide:
@@ -64,12 +108,38 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+  room_1n_work_robot_shot_1_hit:
+    special_score_green:
+      loops: 0
+  room_1n_work_robot_shot_2_hit:
+    special_score_green:
+      loops: 0
+  room_1n_work_robot_shot_3_hit:
+    special_score_green:
+      loops: 0
   show_mode_status_report:
     room_1n_the_hull_status_report:
       loops: 0
   flipper_cradle_release:
     room_1n_the_hull_status_report:
       action: stop
+
+
+sounds:
+  room_1n_robot_hit:
+    file: room_1n_robot_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 0.7
+    max_queue_time: None
+
+
+sound_player:
+  room_1n_work_robot_shot_1_hit: room_1n_robot_hit
+  room_1n_work_robot_shot_2_hit: room_1n_robot_hit
+  room_1n_work_robot_shot_3_hit: room_1n_robot_hit
+
 
 event_player:
   mode_room_1n_the_hull_started:
@@ -83,6 +153,7 @@ event_player:
       room: '1n'
       visit: True
     metroid_open_doors:
+    room_1n_start_timer:
   mode_room_1n_the_hull_started_no_charge:
     cmd_play_map_music:
       music: music_wrecked_ship
@@ -91,10 +162,16 @@ event_player:
       music: music_wrecked_ship_generator
   mode_room_1n_the_hull_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1n_the_hull_started_no_charge
   mode_room_1n_the_hull_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1n_the_hull_started_charge
+  timer_room_1n_light_shot_timer_tick{ticks == 1}: room_1k_show_robot_1, room_1k_hide_robot_3
+  timer_room_1n_light_shot_timer_tick{ticks == 2}: room_1k_show_robot_2, room_1k_hide_robot_1
+  timer_room_1n_light_shot_timer_tick{ticks == 3}: room_1k_show_robot_3, room_1k_hide_robot_2
   room_1n_exit_north_shot_hit.1: drop_targets_save
   room_1n_exit_north_shot_hit.2: room_1l_enter
   room_1n_exit_south_shot_hit.1: drop_targets_save
   room_1n_exit_south_shot_hit.2: room_1p_enter
+  room_1n_work_robot_shot_1_hit: room_1n_add_robot_1
+  room_1n_work_robot_shot_2_hit: room_1n_add_robot_2
+  room_1n_work_robot_shot_3_hit: room_1n_add_robot_3
 
 variable_player:
   mode_room_1n_the_hull_started:
@@ -104,3 +181,24 @@ variable_player:
     continue_room:
       string: 1n
       action: set
+  room_1n_work_robot_shot_1_hit:
+    score: (((current_player.area_bonus_sw + 1) * 50000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_1 * 10420)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_sw + 1) * 50000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_1 * 10420)) * current_player.multiplier
+      action: set
+  room_1n_work_robot_shot_2_hit:
+    score: (((current_player.area_bonus_nw + 1) * 100000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_2 * 10800)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 100000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_2 * 10800)) * current_player.multiplier
+      action: set
+  room_1n_work_robot_shot_3_hit:
+    score: (((current_player.area_bonus_ne + 1) * 75000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_3 * 10600)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_ne + 1) * 75000) + (current_player.wrecked_ship_charge * 5000) + (current_player.room_1n_robots_3 * 10600)) * current_player.multiplier
+      action: set
+  room_1n_add_robot_1:
+    room_1n_robots_1: 1
+  room_1n_add_robot_2:
+    room_1n_robots_2: 1
+  room_1n_add_robot_3:
+    room_1n_robots_3: 1

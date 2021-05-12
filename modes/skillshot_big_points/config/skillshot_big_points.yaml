@@ -20,7 +20,7 @@ shot_profiles:
 
 variable_player:
   skillshot_big_points_shot_hit:
-    score: 50000
+    score: 50000 * current_player.multiplier
 
 sound_player:
   skillshot_big_points_shot_hit: skillshot

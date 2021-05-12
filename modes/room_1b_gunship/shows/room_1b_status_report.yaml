@@ -29,7 +29,7 @@
 
 - duration: 5s
   slides:
-    room_1c_plains_status_crateria_bonus:
+    room_1b_gunship_status_crateria_bonus:
       widgets:
       - type: text
         text: Crateria Shot Bonus

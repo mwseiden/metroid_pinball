@@ -1,0 +1,415 @@
+#show_version=5
+- time: 0
+  lights:
+    led_goal_1: '070000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '0F0000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '170000'
+    led_goal_2: '010000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '1D0000'
+    led_goal_2: '070000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '250000'
+    led_goal_2: '0F0000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '2E0000'
+    led_goal_2: '170000'
+    led_goal_3: '010000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '350000'
+    led_goal_2: '1F0000'
+    led_goal_3: '090000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '3C0000'
+    led_goal_2: '250000'
+    led_goal_3: '0F0000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '440000'
+    led_goal_2: '2E0000'
+    led_goal_3: '170000'
+    led_goal_4: '010000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '4C0000'
+    led_goal_2: '350000'
+    led_goal_3: '1F0000'
+    led_goal_4: '090000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '530000'
+    led_goal_2: '3D0000'
+    led_goal_3: '270000'
+    led_goal_4: '110000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '5A0000'
+    led_goal_2: '440000'
+    led_goal_3: '2E0000'
+    led_goal_4: '170000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '6F0000'
+    led_goal_2: '4C0000'
+    led_goal_3: '350000'
+    led_goal_4: '1F0000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '890000'
+    led_goal_2: '530000'
+    led_goal_3: '3D0000'
+    led_goal_4: '270000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'A40000'
+    led_goal_2: '5B0000'
+    led_goal_3: '450000'
+    led_goal_4: '2F0000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'BA0100'
+    led_goal_2: '6F0000'
+    led_goal_3: '4C0000'
+    led_goal_4: '350000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'CA210B'
+    led_goal_2: '890000'
+    led_goal_3: '530000'
+    led_goal_4: '3D0000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'DA4117'
+    led_goal_2: 'A40000'
+    led_goal_3: '5B0000'
+    led_goal_4: '450000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'E3541E'
+    led_goal_2: 'BA0100'
+    led_goal_3: '6F0000'
+    led_goal_4: '4C0000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'EE6825'
+    led_goal_2: 'CA210B'
+    led_goal_3: '890000'
+    led_goal_4: '530000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'F87C2C'
+    led_goal_2: 'DA4117'
+    led_goal_3: 'A40000'
+    led_goal_4: '5B0000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'FE982D'
+    led_goal_2: 'E5571F'
+    led_goal_3: 'BC0602'
+    led_goal_4: '730000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'FBBD22'
+    led_goal_2: 'ED6825'
+    led_goal_3: 'CA200B'
+    led_goal_4: '890000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'F8E715'
+    led_goal_2: 'F77C2C'
+    led_goal_3: 'DA4117'
+    led_goal_4: 'A40000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'F8F152'
+    led_goal_2: 'FE982D'
+    led_goal_3: 'E5571F'
+    led_goal_4: 'BC0602'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'F8F59C'
+    led_goal_2: 'FBC41F'
+    led_goal_3: 'EF6B26'
+    led_goal_4: 'CD260D'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'F9F7D4'
+    led_goal_2: 'F8E715'
+    led_goal_3: 'F77C2C'
+    led_goal_4: 'DA4117'
+    
+- time: '+1'
+  lights:
+    led_goal_2: 'F8F152'
+    led_goal_3: 'FE982D'
+    led_goal_4: 'E5571F'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'F8F59C'
+    led_goal_2: 'F8F59C'
+    led_goal_3: 'FBC41F'
+    led_goal_4: 'EF6B26'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'F8F152'
+    led_goal_2: 'F9F7D4'
+    led_goal_3: 'F8ED14'
+    led_goal_4: 'F9802E'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'F8ED14'
+    led_goal_3: 'F8F152'
+    led_goal_4: 'FE982D'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'FBC41F'
+    led_goal_2: 'F8F59C'
+    led_goal_3: 'F8F59C'
+    led_goal_4: 'FBC41F'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'FE982D'
+    led_goal_2: 'F8F152'
+    led_goal_3: 'F9F7D4'
+    led_goal_4: 'F8ED14'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'F9802E'
+    led_goal_2: 'F8ED14'
+    led_goal_4: 'F8F152'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'EF6B26'
+    led_goal_2: 'FBC41F'
+    led_goal_3: 'F8F59C'
+    led_goal_4: 'F8F59C'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'E5571F'
+    led_goal_2: 'FE982D'
+    led_goal_3: 'F8F152'
+    led_goal_4: 'F9F7D4'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'DA4117'
+    led_goal_2: 'F77C2C'
+    led_goal_3: 'F8E715'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'CD260D'
+    led_goal_2: 'EF6B26'
+    led_goal_3: 'FBC41F'
+    led_goal_4: 'F8F59C'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'BC0602'
+    led_goal_2: 'E5571F'
+    led_goal_3: 'FE982D'
+    led_goal_4: 'F8F152'
+    
+- time: '+1'
+  lights:
+    led_goal_1: 'A40000'
+    led_goal_2: 'DA4117'
+    led_goal_3: 'F77C2C'
+    led_goal_4: 'F8E715'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '890000'
+    led_goal_2: 'CA200B'
+    led_goal_3: 'ED6825'
+    led_goal_4: 'FBBD22'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '730000'
+    led_goal_2: 'BC0602'
+    led_goal_3: 'E5571F'
+    led_goal_4: 'FE982D'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '5B0000'
+    led_goal_2: 'A40000'
+    led_goal_3: 'DA4117'
+    led_goal_4: 'F77C2D'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '530000'
+    led_goal_2: '890000'
+    led_goal_3: 'CA200C'
+    led_goal_4: 'ED6825'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '4C0000'
+    led_goal_2: '6F0000'
+    led_goal_3: 'BA0100'
+    led_goal_4: 'E3531E'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '450000'
+    led_goal_2: '5B0000'
+    led_goal_3: 'A40000'
+    led_goal_4: 'DA4117'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '3D0000'
+    led_goal_2: '530000'
+    led_goal_3: '890000'
+    led_goal_4: 'CA200C'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '350000'
+    led_goal_2: '4C0000'
+    led_goal_3: '6F0000'
+    led_goal_4: 'BA0100'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '2F0000'
+    led_goal_2: '450000'
+    led_goal_3: '5B0000'
+    led_goal_4: 'A40000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '270000'
+    led_goal_2: '3D0000'
+    led_goal_3: '530000'
+    led_goal_4: '890000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '1F0000'
+    led_goal_2: '350000'
+    led_goal_3: '4C0000'
+    led_goal_4: '6F0000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '170000'
+    led_goal_2: '2D0000'
+    led_goal_3: '440000'
+    led_goal_4: '5A0000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '100000'
+    led_goal_2: '270000'
+    led_goal_3: '3D0000'
+    led_goal_4: '530000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '090000'
+    led_goal_2: '1F0000'
+    led_goal_3: '350000'
+    led_goal_4: '4C0000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '010000'
+    led_goal_2: '170000'
+    led_goal_3: '2D0000'
+    led_goal_4: '440000'
+    
+- time: '+1'
+  lights:
+    led_goal_1: '000000'
+    led_goal_2: '100000'
+    led_goal_3: '260000'
+    led_goal_4: '3C0000'
+    
+- time: '+1'
+  lights:
+    led_goal_2: '090000'
+    led_goal_3: '1F0000'
+    led_goal_4: '350000'
+    
+- time: '+1'
+  lights:
+    led_goal_2: '010000'
+    led_goal_3: '170000'
+    led_goal_4: '2D0000'
+    
+- time: '+1'
+  lights:
+    led_goal_2: '000000'
+    led_goal_3: '100000'
+    led_goal_4: '260000'
+    
+- time: '+1'
+  lights:
+    led_goal_3: '070000'
+    led_goal_4: '1E0000'
+    
+- time: '+1'
+  lights:
+    led_goal_3: '010000'
+    led_goal_4: '170000'
+    
+- time: '+1'
+  lights:
+    led_goal_3: '000000'
+    led_goal_4: '100000'
+    
+- time: '+1'
+  lights:
+    led_goal_4: '070000'
+    
+- time: '+1'
+  lights:
+    led_goal_4: '000000'
+    

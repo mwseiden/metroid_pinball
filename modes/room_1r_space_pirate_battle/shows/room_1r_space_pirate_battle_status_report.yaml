@@ -1,0 +1,44 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_1r_space_pirate_battle_slide_splash:
+      widgets:
+      - type: image
+        image: room_1r_splash
+
+
+- duration: 2s
+  slides:
+    room_1r_space_pirate_battle_status_slide_help_1:
+      widgets:
+      - type: Text
+        text: Shoot Blinking
+        color: purple
+        style: dmd_med
+        y: 24
+      - type: Text
+        text: Light to Reveal
+        color: purple
+        style: dmd_med
+      - type: Text
+        text: Space Pirates
+        color: purple
+        style: dmd_med
+        y: 8
+
+
+- duration: 3s
+  slides:
+    room_1r_space_pirate_battle_status_slide_help_2:
+      widgets:
+      - type: text
+        text: Then Hit 4
+        color: purple
+        style: dmd_med
+        y: 21
+      - type: text
+        text: Pirates
+        color: purple
+        style: dmd_med
+        y: 11

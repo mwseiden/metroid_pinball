@@ -143,6 +143,28 @@ show_player:
   flipper_cradle_release:
     room_2k_larvae_nest_status_report:
       action: stop
+  room_2k_bank_1_shot_hit:
+    room_2k_larvae_nest_hit_missile:
+      loops: 0
+      speed: 51
+  room_2k_bank_2_shot_hit:
+    room_2k_larvae_nest_hit_power_bomb:
+      loops: 0
+      speed: 51
+  room_2k_bank_3_shot_hit:
+    room_2k_larvae_nest_hit_miniboss:
+      loops: 0
+      speed: 51
+  room_2k_bank_4_shot_hit:
+    room_2k_larvae_nest_hit_equip:
+      loops: 0
+      speed: 51
+  room_2k_exit_south_shot_hit:
+    special_score_purple:
+      loops: 0
+  room_2k_exit_west_shot_hit:
+    special_score_purple:
+      loops: 0
 
 sounds:
   room_2k_insects_1:
@@ -218,6 +240,33 @@ event_player:
   timer_room_2k_shot_timer_tick{ticks == 2}: room_2k_enable_2
   timer_room_2k_shot_timer_tick{ticks == 3}: room_2k_enable_3
   timer_room_2k_shot_timer_tick{ticks == 4}: room_2k_enable_4
+  room_2k_bank_1_shot_hit:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "800080"
+      speed: 2
+      repeat: 3
+      direction: right
+  room_2k_bank_2_shot_hit:
+    cmd_backbox_show_overlay:
+      show_type: sweep_horizontal
+      color: "800080"
+      speed: 2
+      repeat: 3
+      direction: left
+  room_2k_bank_3_shot_hit:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: "800080"
+      speed: 2
+      repeat: 3
+      direction: up
+  room_2k_bank_4_shot_hit:
+    cmd_backbox_show_overlay:
+      show_type: heat_up
+      color: "800080"
+      add_percentage: 1
+
 
 variable_player:
   mode_room_2k_larvae_nest_started:
@@ -240,4 +289,7 @@ variable_player:
   room_2k_bank_4_shot_hit:
     room_2k_insects: 5
   room_2k_collect_score:
-    score: (5000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
+    score: (25000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
+    room_special_score:
+      int: (25000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
+      action: set

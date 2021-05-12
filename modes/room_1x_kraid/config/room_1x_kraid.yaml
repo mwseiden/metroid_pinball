@@ -538,18 +538,21 @@ variable_player:
   kraid_hit_strong:
     boss_kraid_hp: -8
     score: (150000 + (current_player.area_bonus_nw * 100000) + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    boss_kraid_score: (150000 + (current_player.area_bonus_nw * 100000) + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
     room_special_score:
       int: (150000 + (current_player.area_bonus_nw * 100000) + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
       action: set
   kraid_hit_weak:
     boss_kraid_hp: -2
     score: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
+    boss_kraid_score: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
     room_special_score:
       int: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
       action: set
   kraid_hit_vulnerable:
     boss_kraid_hp: -16
     score: (60000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
+    boss_kraid_score: (60000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
     room_special_score:
       int: (60000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
       action: set
@@ -557,6 +560,7 @@ variable_player:
     boss_kraid_hp: -20
     missiles: -1
     score: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+    boss_kraid_score: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
     room_special_score:
       int: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
       action: set
@@ -564,26 +568,31 @@ variable_player:
     boss_kraid_hp: -40
     power_bombs: -1
     score: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
+    boss_kraid_score: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
     room_special_score:
       int: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
       action: set
   room_1x_collect_victory_ne:
     score: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    boss_kraid_score: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
     room_special_score:
       int: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
       action: set
   room_1x_collect_victory_nw:
     score: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+    boss_kraid_score: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
     room_special_score:
       int: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
       action: set
   room_1x_collect_victory_sw:
     score: (50000 + (current_player.area_bonus_sw * 75000)) * current_player.multiplier
+    boss_kraid_score: (50000 + (current_player.area_bonus_sw * 75000)) * current_player.multiplier
     room_special_score:
       int: (50000 + (current_player.area_bonus_sw * 75000)) * current_player.multiplier
       action: set
   room_1x_kraid_should_die:
     score: 1000000 * current_player.multiplier
+    boss_kraid_score: 1000000 * current_player.multiplier
     room_special_score:
       int: 1000000 * current_player.multiplier
       action: set

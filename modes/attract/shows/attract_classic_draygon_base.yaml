@@ -1,0 +1,371 @@
+#show_version=5
+- time: 0
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '62AAFA'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '61A8F8'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '5FA5F3'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '5EA3F1'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '5DA1EE'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '5C9FEA'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '5A9BE5'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '5898E1'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '5695DC'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '5593D8'
+    led_boss_3: '62AAFA'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '538FD3'
+    led_boss_3: '61A8F7'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '518CCE'
+    led_boss_3: '5FA5F3'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '4F88C9'
+    led_boss_3: '5EA3F1'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '4D85C4'
+    led_boss_3: '5DA1EE'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '4B81BF'
+    led_boss_3: '5B9EE9'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '487DB9'
+    led_boss_3: '5A9BE5'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '467AB4'
+    led_boss_3: '5898E1'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '4577AF'
+    led_boss_3: '5695DC'
+    
+- time: '+1'
+  lights:
+    led_boss_4: '4272A9'
+    led_boss_3: '5492D7'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '62A9FA'
+    led_boss_4: '406EA3'
+    led_boss_3: '538FD3'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '61A8F7'
+    led_boss_4: '3D6A9D'
+    led_boss_3: '518CCE'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '5FA5F3'
+    led_boss_4: '3C6798'
+    led_boss_3: '4F88C9'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '5EA3F0'
+    led_boss_4: '396291'
+    led_boss_3: '4D85C3'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '5DA0EC'
+    led_boss_4: '365E8B'
+    led_boss_3: '4B81BF'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '5B9EE9'
+    led_boss_4: '345B86'
+    led_boss_3: '487DB9'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '5A9BE5'
+    led_boss_4: '325780'
+    led_boss_3: '467AB4'
+    
+- time: '+1'
+  lights:
+    led_boss_2: '5797DF'
+    led_boss_4: '2F527A'
+    led_boss_3: '4476AD'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '62AAFB'
+    led_boss_2: '5695DB'
+    led_boss_4: '2D4E74'
+    led_boss_3: '4272A8'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '62A9F9'
+    led_boss_2: '5492D7'
+    led_boss_4: '2B4A6E'
+    led_boss_3: '406EA3'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '60A7F6'
+    led_boss_2: '538FD3'
+    led_boss_4: '294768'
+    led_boss_3: '3D6A9D'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '5C9FEE'
+    led_boss_2: '4E86C8'
+    led_boss_4: '264263'
+    led_boss_3: '3A6395'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '5999E6'
+    led_boss_2: '4B81C1'
+    led_boss_4: '253F5F'
+    led_boss_3: '375F8F'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '5795DF'
+    led_boss_2: '487CBB'
+    led_boss_4: '243D5C'
+    led_boss_3: '355B89'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '5490D8'
+    led_boss_2: '4577B2'
+    led_boss_4: '223B58'
+    led_boss_3: '335884'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '518BD0'
+    led_boss_2: '4373AD'
+    led_boss_4: '213955'
+    led_boss_3: '31547F'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '4F87CA'
+    led_boss_2: '406FA6'
+    led_boss_4: '203753'
+    led_boss_3: '2F527A'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '4C82C4'
+    led_boss_2: '3E6BA0'
+    led_boss_4: '1F3650'
+    led_boss_3: '2E4F76'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '4A7EBD'
+    led_boss_2: '3C689C'
+    led_boss_4: '1E344E'
+    led_boss_3: '2C4C72'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '477AB7'
+    led_boss_2: '3B6597'
+    led_boss_4: '1D334C'
+    led_boss_3: '2B4A6F'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '4577B2'
+    led_boss_2: '386191'
+    led_boss_4: '1C3048'
+    led_boss_3: '29476B'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '4373AD'
+    led_boss_2: '375E8D'
+    led_boss_3: '284568'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '4271A9'
+    led_boss_2: '355B89'
+    led_boss_4: '1B2F47'
+    led_boss_3: '274365'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '3F6CA3'
+    led_boss_2: '335885'
+    led_boss_4: '1A2D44'
+    led_boss_3: '264262'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '3E6A9E'
+    led_boss_2: '325681'
+    led_boss_4: '1A2C43'
+    led_boss_3: '25405F'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '3C689B'
+    led_boss_2: '31547E'
+    led_boss_4: '192B41'
+    led_boss_3: '243E5E'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '3A6496'
+    led_boss_2: '2F517A'
+    led_boss_4: '182A3F'
+    led_boss_3: '233C5A'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '386292'
+    led_boss_2: '2E4F77'
+    led_boss_3: '223C59'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '375F8F'
+    led_boss_2: '2D4E75'
+    led_boss_4: '18293E'
+    led_boss_3: '213A57'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '355C8A'
+    led_boss_2: '2C4C72'
+    led_boss_4: '17283B'
+    led_boss_3: '213955'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '355B89'
+    led_boss_2: '2B4A6F'
+    led_boss_4: '17273B'
+    led_boss_3: '203753'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '335985'
+    led_boss_2: '2A486D'
+    led_boss_3: '1F3651'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '325682'
+    led_boss_2: '294669'
+    led_boss_4: '162639'
+    led_boss_3: '1F3650'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '31557F'
+    led_boss_2: '284568'
+    led_boss_4: '152538'
+    led_boss_3: '1E344E'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '30537C'
+    led_boss_2: '274466'
+    led_boss_4: '152537'
+    led_boss_3: '1E334D'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '2F517A'
+    led_boss_2: '264263'
+    led_boss_3: '1D324B'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '2E4F77'
+    led_boss_2: '264262'
+    led_boss_4: '152436'
+    led_boss_3: '1C314A'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '2D4F76'
+    led_boss_2: '254060'
+    led_boss_3: '1C3049'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '2C4C73'
+    led_boss_2: '243F5E'
+    led_boss_4: '142334'
+    led_boss_3: '1C3048'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '2B4B71'
+    led_boss_2: '243E5D'
+    led_boss_4: '142233'
+    led_boss_3: '1B2F47'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '2B4A6F'
+    led_boss_2: '233C5B'
+    led_boss_3: '1B2F46'
+    
+- time: '+1'
+  lights:
+    led_boss_1: '2A486C'
+    led_boss_2: '233C5A'
+    led_boss_3: '1A2D44'
+    

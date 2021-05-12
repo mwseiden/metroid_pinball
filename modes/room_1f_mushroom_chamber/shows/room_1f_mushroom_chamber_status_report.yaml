@@ -12,9 +12,19 @@
   slides:
     room_1f_mushroom_chamber_status_slide_help:
       widgets:
-      - type: Text
-        text: NO MODE RULES
-        color: red
+      - type: text
+        text: Pops Increase
+        y: 24
+        color: 'FFFFFF'
+        style: dmd_med
+      - type: text
+        text: In Value With
+        color: 'D0A0FF'
+        style: dmd_med
+      - type: text
+        text: Each Hit
+        y: 8
+        color: '8080FF'
         style: dmd_med
 
 - duration: 5s

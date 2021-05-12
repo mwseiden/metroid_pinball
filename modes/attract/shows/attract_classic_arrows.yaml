@@ -1,0 +1,511 @@
+#show_version=5
+- time: 0
+  lights:
+    led_enter_left_orbit: 'CA2CDB'
+    led_enter_ramp: 'F40BCC'
+    led_enter_right_orbit: 'FD0109'
+    led_enter_scoop: 'E615D0'
+    led_enter_secret_passage: '0000FF'
+    led_enter_side_ramp: 'FE0102'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'BB38E0'
+    led_enter_ramp: 'EC11CF'
+    led_enter_right_orbit: 'FB032B'
+    led_enter_scoop: 'D721D6'
+    led_enter_side_ramp: 'FC0221'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'AC44E5'
+    led_enter_ramp: 'DD1DD4'
+    led_enter_right_orbit: 'FA044D'
+    led_enter_scoop: 'C92DDB'
+    led_enter_secret_passage: '0014FC'
+    led_enter_side_ramp: 'FA0443'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '9E50EA'
+    led_enter_ramp: 'CE29D9'
+    led_enter_right_orbit: 'F8066F'
+    led_enter_scoop: 'B939E1'
+    led_enter_secret_passage: '002FF8'
+    led_enter_side_ramp: 'F90564'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '9B53EC'
+    led_enter_ramp: 'BF35DE'
+    led_enter_right_orbit: 'F60891'
+    led_enter_scoop: 'AB45E6'
+    led_enter_secret_passage: '004AF4'
+    led_enter_side_ramp: 'F70786'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: 'B041E4'
+    led_enter_right_orbit: 'F509B3'
+    led_enter_scoop: '9C51EB'
+    led_enter_secret_passage: '0065F0'
+    led_enter_side_ramp: 'F509A8'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '8D4BED'
+    led_enter_ramp: 'A14DE9'
+    led_enter_right_orbit: 'F40BCC'
+    led_enter_scoop: '9B53EC'
+    led_enter_secret_passage: '0080EC'
+    led_enter_side_ramp: 'F40ACA'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '733EF0'
+    led_enter_ramp: '9B53EC'
+    led_enter_secret_passage: '009BE9'
+    led_enter_side_ramp: 'F40BCC'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '5A30F3'
+    led_enter_right_orbit: 'F20CCC'
+    led_enter_scoop: '8A4AED'
+    led_enter_secret_passage: '00A2E8'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '3F22F7'
+    led_enter_ramp: '944FEC'
+    led_enter_right_orbit: 'E318D2'
+    led_enter_scoop: '703CF1'
+    led_enter_side_ramp: 'E516D0'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '2614FA'
+    led_enter_ramp: '7A41F0'
+    led_enter_right_orbit: 'D424D7'
+    led_enter_scoop: '562EF4'
+    led_enter_secret_passage: '00A2E4'
+    led_enter_side_ramp: 'D722D6'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '0B06FD'
+    led_enter_ramp: '6033F3'
+    led_enter_right_orbit: 'C530DC'
+    led_enter_scoop: '3D20F7'
+    led_enter_secret_passage: '06A4CB'
+    led_enter_side_ramp: 'C82EDB'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '0000FF'
+    led_enter_ramp: '4626F6'
+    led_enter_right_orbit: 'B63CE1'
+    led_enter_scoop: '2312FA'
+    led_enter_secret_passage: '0CA7B0'
+    led_enter_side_ramp: 'B93AE1'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: '2D17F9'
+    led_enter_right_orbit: 'A848E7'
+    led_enter_scoop: '0905FD'
+    led_enter_secret_passage: '11A997'
+    led_enter_side_ramp: 'AA46E6'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '0001FF'
+    led_enter_ramp: '130AFC'
+    led_enter_right_orbit: '9B53EC'
+    led_enter_scoop: '0000FF'
+    led_enter_secret_passage: '17AC7D'
+    led_enter_side_ramp: '9C52EB'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '001CFA'
+    led_enter_ramp: '0000FF'
+    led_enter_secret_passage: '1CAE63'
+    led_enter_side_ramp: '9B53EC'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '0037F7'
+    led_enter_scoop: '0003FE'
+    led_enter_secret_passage: '22B14C'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '0052F3'
+    led_enter_right_orbit: '8647EE'
+    led_enter_scoop: '001FFA'
+    led_enter_side_ramp: '8849EE'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '006DEF'
+    led_enter_ramp: '0015FB'
+    led_enter_right_orbit: '6C3AF1'
+    led_enter_scoop: '0039F6'
+    led_enter_side_ramp: '6F3BF1'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '0087EB'
+    led_enter_ramp: '0030F8'
+    led_enter_right_orbit: '522CF5'
+    led_enter_scoop: '0055F2'
+    led_enter_secret_passage: '26B24A'
+    led_enter_side_ramp: '552DF4'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '00A1E8'
+    led_enter_ramp: '004BF4'
+    led_enter_right_orbit: '381EF8'
+    led_enter_scoop: '0070EF'
+    led_enter_secret_passage: '4ABC3E'
+    led_enter_side_ramp: '3B1FF7'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '00A2E8'
+    led_enter_ramp: '0065F0'
+    led_enter_right_orbit: '1E10FB'
+    led_enter_scoop: '008BEB'
+    led_enter_secret_passage: '6EC731'
+    led_enter_side_ramp: '2111FA'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: '0081EC'
+    led_enter_right_orbit: '0402FE'
+    led_enter_scoop: '00A2E8'
+    led_enter_secret_passage: '93D224'
+    led_enter_side_ramp: '0703FE'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '02A3DB'
+    led_enter_ramp: '009CE8'
+    led_enter_right_orbit: '0000FF'
+    led_enter_secret_passage: 'B8DD18'
+    led_enter_side_ramp: '0000FF'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '08A5C1'
+    led_enter_ramp: '00A2E8'
+    led_enter_secret_passage: 'DDE80B'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '0EA8A7'
+    led_enter_right_orbit: '0009FD'
+    led_enter_scoop: '03A3D8'
+    led_enter_secret_passage: 'FEF200'
+    led_enter_side_ramp: '0005FE'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '13AA8D'
+    led_enter_ramp: '01A2E1'
+    led_enter_right_orbit: '0024F9'
+    led_enter_scoop: '09A5BE'
+    led_enter_secret_passage: 'FFF200'
+    led_enter_side_ramp: '0020FA'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '19AD73'
+    led_enter_ramp: '06A4C8'
+    led_enter_right_orbit: '003FF5'
+    led_enter_scoop: '0EA8A4'
+    led_enter_side_ramp: '003BF6'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '1FAF59'
+    led_enter_ramp: '0CA7AD'
+    led_enter_right_orbit: '005AF1'
+    led_enter_scoop: '14AB8A'
+    led_enter_secret_passage: 'FFEA02'
+    led_enter_side_ramp: '0056F2'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '22B14C'
+    led_enter_ramp: '12AA94'
+    led_enter_right_orbit: '0075EE'
+    led_enter_scoop: '19AD70'
+    led_enter_secret_passage: 'FFD709'
+    led_enter_side_ramp: '0071EF'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: '17AC79'
+    led_enter_right_orbit: '0090EA'
+    led_enter_scoop: '20B056'
+    led_enter_secret_passage: 'FFC40F'
+    led_enter_side_ramp: '008DEB'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: '1DAF5F'
+    led_enter_right_orbit: '00A2E8'
+    led_enter_scoop: '22B14C'
+    led_enter_secret_passage: 'FFB116'
+    led_enter_side_ramp: '00A2E8'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '3CB842'
+    led_enter_ramp: '22B14C'
+    led_enter_secret_passage: 'FF9D1C'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '60C336'
+    led_enter_secret_passage: 'FF8A23'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: '85CE29'
+    led_enter_right_orbit: '04A4D3'
+    led_enter_scoop: '41BA40'
+    led_enter_secret_passage: 'FF7F27'
+    led_enter_side_ramp: '03A3D7'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'AAD91D'
+    led_enter_ramp: '33B645'
+    led_enter_right_orbit: '0AA6B9'
+    led_enter_scoop: '66C534'
+    led_enter_side_ramp: '08A5BD'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'CFE310'
+    led_enter_ramp: '58C139'
+    led_enter_right_orbit: '10A99F'
+    led_enter_scoop: '8ACF28'
+    led_enter_secret_passage: 'FE7E26'
+    led_enter_side_ramp: '0EA8A3'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'F4EE03'
+    led_enter_ramp: '7DCB2C'
+    led_enter_right_orbit: '15AB85'
+    led_enter_scoop: 'AFDA1B'
+    led_enter_secret_passage: 'FE6920'
+    led_enter_side_ramp: '14AB89'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FFF200'
+    led_enter_ramp: 'A2D61F'
+    led_enter_right_orbit: '1BAE6B'
+    led_enter_scoop: 'D4E50E'
+    led_enter_secret_passage: 'FE541A'
+    led_enter_side_ramp: '1AAD6F'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: 'C6E113'
+    led_enter_right_orbit: '21B051'
+    led_enter_scoop: 'F8F002'
+    led_enter_secret_passage: 'FE3F14'
+    led_enter_side_ramp: '20B055'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FFEF01'
+    led_enter_ramp: 'ECEC06'
+    led_enter_right_orbit: '22B14C'
+    led_enter_scoop: 'FFF200'
+    led_enter_secret_passage: 'FE2A0D'
+    led_enter_side_ramp: '22B14C'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FFDC07'
+    led_enter_ramp: 'FFF200'
+    led_enter_secret_passage: 'FE1507'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FFC90E'
+    led_enter_right_orbit: '23B14B'
+    led_enter_scoop: 'FFED01'
+    led_enter_secret_passage: 'FE0101'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FFB614'
+    led_enter_right_orbit: '49BC3E'
+    led_enter_scoop: 'FFD908'
+    led_enter_side_ramp: '3EB942'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FFA31A'
+    led_enter_ramp: 'FFE005'
+    led_enter_right_orbit: '6EC731'
+    led_enter_scoop: 'FFC60E'
+    led_enter_side_ramp: '62C336'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FF9021'
+    led_enter_ramp: 'FFCD0C'
+    led_enter_right_orbit: '93D225'
+    led_enter_scoop: 'FFB315'
+    led_enter_secret_passage: 'FC021C'
+    led_enter_side_ramp: '87CE28'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FF7F27'
+    led_enter_ramp: 'FFBA12'
+    led_enter_right_orbit: 'B7DC18'
+    led_enter_scoop: 'FFA01B'
+    led_enter_secret_passage: 'FA043D'
+    led_enter_side_ramp: 'ABD91C'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: 'FFA719'
+    led_enter_right_orbit: 'DCE70B'
+    led_enter_scoop: 'FF8D21'
+    led_enter_secret_passage: 'F9055F'
+    led_enter_side_ramp: 'D0E40F'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: 'FF9320'
+    led_enter_right_orbit: 'FEF100'
+    led_enter_scoop: 'FF7F27'
+    led_enter_secret_passage: 'F70781'
+    led_enter_side_ramp: 'F5EF03'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FE7022'
+    led_enter_ramp: 'FF8126'
+    led_enter_right_orbit: 'FFF200'
+    led_enter_secret_passage: 'F608A3'
+    led_enter_side_ramp: 'FFF200'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FE5A1C'
+    led_enter_ramp: 'FF7F27'
+    led_enter_secret_passage: 'F40AC5'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FE4615'
+    led_enter_right_orbit: 'FFE802'
+    led_enter_scoop: 'FE6D21'
+    led_enter_secret_passage: 'F40BCC'
+    led_enter_side_ramp: 'FFEF00'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FE300F'
+    led_enter_ramp: 'FE7423'
+    led_enter_right_orbit: 'FFD509'
+    led_enter_scoop: 'FE581B'
+    led_enter_secret_passage: 'F30BCC'
+    led_enter_side_ramp: 'FFDC07'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FE1C09'
+    led_enter_ramp: 'FE5F1D'
+    led_enter_right_orbit: 'FFC20F'
+    led_enter_scoop: 'FE4315'
+    led_enter_secret_passage: 'E616D1'
+    led_enter_side_ramp: 'FFC90D'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FE0603'
+    led_enter_ramp: 'FE4A16'
+    led_enter_right_orbit: 'FFAF16'
+    led_enter_scoop: 'FE2E0E'
+    led_enter_secret_passage: 'D722D6'
+    led_enter_side_ramp: 'FFB614'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FE0101'
+    led_enter_ramp: 'FE3510'
+    led_enter_right_orbit: 'FF9B1D'
+    led_enter_scoop: 'FE1908'
+    led_enter_secret_passage: 'C72EDB'
+    led_enter_side_ramp: 'FFA31A'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: 'FE200A'
+    led_enter_right_orbit: 'FF8823'
+    led_enter_scoop: 'FE0301'
+    led_enter_secret_passage: 'B939E0'
+    led_enter_side_ramp: 'FF8F21'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FD010E'
+    led_enter_ramp: 'FE0B04'
+    led_enter_right_orbit: 'FF7F27'
+    led_enter_scoop: 'FE0101'
+    led_enter_secret_passage: 'AA46E6'
+    led_enter_side_ramp: 'FF7F27'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FB0330'
+    led_enter_ramp: 'FE0101'
+    led_enter_secret_passage: '9C51EB'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'FA0452'
+    led_enter_right_orbit: 'FE7D26'
+    led_enter_scoop: 'FD0112'
+    led_enter_secret_passage: '9B53EC'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'F80674'
+    led_enter_ramp: 'FD0107'
+    led_enter_right_orbit: 'FE6820'
+    led_enter_scoop: 'FB0334'
+    led_enter_side_ramp: 'FE6F22'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'F60896'
+    led_enter_ramp: 'FC0229'
+    led_enter_right_orbit: 'FE5319'
+    led_enter_scoop: 'F90556'
+    led_enter_secret_passage: '8748EE'
+    led_enter_side_ramp: 'FE5A1B'
+    
+- time: '+1'
+  lights:
+    led_enter_left_orbit: 'F409B7'
+    led_enter_ramp: 'FA044B'
+    led_enter_right_orbit: 'FE3E13'
+    led_enter_scoop: 'F80678'
+    led_enter_secret_passage: '6D3AF1'
+    led_enter_side_ramp: 'FE4515'
+    

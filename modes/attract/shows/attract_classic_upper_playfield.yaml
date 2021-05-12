@@ -1,0 +1,339 @@
+#show_version=5
+- time: 0
+  lights:
+    led_upper_playfield_3: '003300'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_2: '043300'
+    led_upper_playfield_3: '004400'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_2: '003300'
+    led_upper_playfield_3: '005500'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_3: '0D5500'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_2: '004400'
+    led_upper_playfield_3: '116600'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '003300'
+    led_upper_playfield_2: '005500'
+    led_upper_playfield_3: '157111'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_2: '0D5500'
+    led_upper_playfield_3: '227711'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '004400'
+    led_upper_playfield_2: '116600'
+    led_upper_playfield_3: '228811'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '004900'
+    led_upper_playfield_2: '157111'
+    led_upper_playfield_3: '338A11'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '005500'
+    led_upper_playfield_2: '227711'
+    led_upper_playfield_3: '46991A'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '116600'
+    led_upper_playfield_2: '228811'
+    led_upper_playfield_3: '77AA22'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '11660F'
+    led_upper_playfield_2: '338A11'
+    led_upper_playfield_3: '99AA22'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '227711'
+    led_upper_playfield_2: '46991A'
+    led_upper_playfield_3: 'BEBB2D'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '228811'
+    led_upper_playfield_2: '77AA22'
+    led_upper_playfield_3: 'E9BB33'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '338811'
+    led_upper_playfield_2: '99AA22'
+    led_upper_playfield_3: 'EEAA33'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '449911'
+    led_upper_playfield_2: 'C2BB32'
+    led_upper_playfield_3: 'EE9933'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '669B22'
+    led_upper_playfield_2: 'E9BB33'
+    led_upper_playfield_3: 'EE8823'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '91AA22'
+    led_upper_playfield_2: 'EEAA33'
+    led_upper_playfield_3: 'EE7622'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'BBB424'
+    led_upper_playfield_2: 'EE9933'
+    led_upper_playfield_3: 'EE5A22'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'DDBB33'
+    led_upper_playfield_2: 'EE8823'
+    led_upper_playfield_3: 'EE4522'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'EEB333'
+    led_upper_playfield_2: 'EE7322'
+    led_upper_playfield_3: 'EE4422'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'EE9D33'
+    led_upper_playfield_2: 'EE5A22'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'EE8833'
+    led_upper_playfield_2: 'EE4522'
+    led_upper_playfield_3: 'DD4422'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'EE7722'
+    led_upper_playfield_2: 'EE4422'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'EE6622'
+    led_upper_playfield_3: 'CC4422'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'EE5322'
+    led_upper_playfield_2: 'DD4422'
+    led_upper_playfield_3: 'CC4433'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'EE4422'
+    led_upper_playfield_3: 'BF4433'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_2: 'CC4422'
+    led_upper_playfield_3: 'BB4433'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'DD4422'
+    led_upper_playfield_2: 'CC4433'
+    led_upper_playfield_3: 'A44533'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_2: 'BF4433'
+    led_upper_playfield_3: '8B5533'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'D34422'
+    led_upper_playfield_2: 'BB4433'
+    led_upper_playfield_3: '885555'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'CC4433'
+    led_upper_playfield_2: 'A44533'
+    led_upper_playfield_3: '885571'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_2: '8B5533'
+    led_upper_playfield_3: '885588'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'BB4433'
+    led_upper_playfield_2: '885555'
+    led_upper_playfield_3: '7755AA'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'AA4433'
+    led_upper_playfield_2: '885571'
+    led_upper_playfield_3: '7755CC'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '995533'
+    led_upper_playfield_2: '885588'
+    led_upper_playfield_3: '7748E6'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '885546'
+    led_upper_playfield_2: '7755AA'
+    led_upper_playfield_3: '7755FF'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '885566'
+    led_upper_playfield_2: '7755CC'
+    led_upper_playfield_3: '775BFF'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '885582'
+    led_upper_playfield_2: '7748E1'
+    led_upper_playfield_3: '8466FF'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '84559F'
+    led_upper_playfield_2: '7751FF'
+    led_upper_playfield_3: '8877FF'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '7755BB'
+    led_upper_playfield_2: '7757FF'
+    led_upper_playfield_3: '8888FF'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '774ADD'
+    led_upper_playfield_2: '8866FF'
+    led_upper_playfield_3: '8899FF'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '7744FF'
+    led_upper_playfield_2: '8877FF'
+    led_upper_playfield_3: '88AAFF'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '7755FF'
+    led_upper_playfield_2: '8888FF'
+    led_upper_playfield_3: '99C0FF'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '7766FF'
+    led_upper_playfield_2: '8899FF'
+    led_upper_playfield_3: '99DDF5'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '8877FF'
+    led_upper_playfield_2: '88AAFF'
+    led_upper_playfield_3: 'AAFFEE'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '8888FF'
+    led_upper_playfield_2: '99C5FF'
+    led_upper_playfield_3: '99FFD0'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '8898FF'
+    led_upper_playfield_2: '99DDF5'
+    led_upper_playfield_3: '88EEAA'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '889DFF'
+    led_upper_playfield_2: 'AAFFEE'
+    led_upper_playfield_3: '77E972'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '99BBFF'
+    led_upper_playfield_2: '99FFD0'
+    led_upper_playfield_3: '66DD44'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '99D5F6'
+    led_upper_playfield_2: '88EEAA'
+    led_upper_playfield_3: '66CC44'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: 'A1EEEE'
+    led_upper_playfield_2: '77E972'
+    led_upper_playfield_3: '66CC33'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '99FFDD'
+    led_upper_playfield_2: '66DD44'
+    led_upper_playfield_3: '66BB23'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '8DEEBB'
+    led_upper_playfield_2: '66CC44'
+    led_upper_playfield_3: '66AA22'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '7BEE80'
+    led_upper_playfield_2: '66C633'
+    led_upper_playfield_3: '000000'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '66DD44'
+    led_upper_playfield_2: '66BB23'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '66D444'
+    led_upper_playfield_2: '66AA22'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '66CC33'
+    led_upper_playfield_2: '000000'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '66BB31'
+    
+- time: '+1'
+  lights:
+    led_upper_playfield_1: '66AA22'
+    

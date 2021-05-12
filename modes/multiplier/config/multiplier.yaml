@@ -1,0 +1,84 @@
+#config_version=5
+
+mode:
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
+  priority: 200
+
+
+timers:
+  multiplier_countdown:
+    start_value: 0
+    end_value: 15
+    tick_interval: 1.0s
+    restart_on_complete: True
+    control_events:
+      - event: multiplier_timer_restart
+        action: restart
+
+
+shots:
+  multiplier_increase_value_shot:
+    switch: s_thin_orange
+
+
+show_player:
+  multiplier_set_1x:
+    multiplier_indicator:
+      action: stop
+  multiplier_set_2x:
+    blink_light:
+      loops: -1
+      speed: 20
+      key: multiplier_indicator
+      show_tokens:
+        led: led_2x
+        color: 'FF8000'
+  multiplier_set_3x:
+    blink_light:
+      loops: -1
+      speed: 20
+      key: multiplier_indicator
+      show_tokens:
+        led: led_3x
+        color: 'FFFF00'
+
+
+event_player:
+  mode_multiplier_started: multiplier_timer_restart
+  multiplier_increase_value_shot_hit: multiplier_timer_restart
+  player_multiplier_charge{value < 3}: multiplier_set_1x
+  player_multiplier_charge{value >= 3 and value < 6}: multiplier_set_2x
+  player_multiplier_charge{value >= 6}: multiplier_set_3x
+  timer_multiplier_countdown_complete{current_player.multiplier_charge > 0}: multiplier_subtract_charge
+
+
+variable_player:
+  mode_multiplier_started:
+    multiplier_charge:
+      action: set
+      int: 0
+    multiplier:
+      action: set
+      int: 1
+  multiplier_increase_value_shot_hit:
+    multiplier_charge: 1
+  multiplier_set_normal:
+    multiplier:
+      action: set
+      int: 1
+  multiplier_set_1x:
+    multiplier:
+      action: set
+      int: 1
+  multiplier_set_2x:
+    multiplier:
+      action: set
+      int: 2
+  multiplier_set_3x:
+    multiplier:
+      action: set
+      int: 3
+  multiplier_subtract_charge:
+    multiplier_charge: -1
+  

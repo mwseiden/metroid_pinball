@@ -110,6 +110,10 @@ class Map(Mode):
         self.remove_background()
         self.add_mode_event_handler('cmd_map_position', self.event_set_location)
         self.add_mode_event_handler('cmd_map_complete', self.event_complete_location)
+        self.add_mode_event_handler('cmd_map_call_gunship', self.event_call_gunship)
+        self.add_mode_event_handler('cmd_map_cycle_site_left', self.event_cycle_site_left)
+        self.add_mode_event_handler('cmd_map_cycle_site_right', self.event_cycle_site_right)
+        self.add_mode_event_handler('cmd_map_select_site', self.event_select_site)
         self.machine.events.post('map_is_initialized')
 
     def mode_stop(self, **kwargs):
@@ -147,6 +151,24 @@ class Map(Mode):
         self.player[player_var] = "".join(current_visits)
 
         self.draw_map(area_code)
+
+    def event_call_gunship(self, **kwargs):
+        self.player['map_select_site_active'] = 1
+        self.show_current_room_slide()
+
+    def event_cycle_site_left(self, **kwargs):
+        self.remove_current_room_slide()
+        self.pick_previous_landing_site()
+        self.show_current_room_slide()
+
+    def event_cycle_site_right(self, **kwargs):
+        self.remove_current_room_slide()
+        self.pick_next_landing_site()
+        self.show_current_room_slide()
+
+    def event_select_site(self, **kwargs):
+        self.remove_current_room_slide()
+        self.select_landing_site()
 
     def draw_map(self, area_code):
         self.remove_background()
@@ -297,6 +319,20 @@ class Map(Mode):
         self.machine.widget_player.play(settings, 'map', None)
 
 
+    def show_current_room_slide(self):
+        completed_rooms = self.build_completed_room_list()
+        room_index = self.player['map_next_landing_site_index']
+        room_code = completed_rooms[room_index]
+        self.machine.events.post('map_show_slide_{}'.format(room_code))
+
+
+    def remove_current_room_slide(self):
+        completed_rooms = self.build_completed_room_list()
+        room_index = self.player['map_next_landing_site_index']
+        room_code = completed_rooms[room_index]
+        self.machine.events.post('map_remove_slide_{}'.format(room_code))
+
+
     def pick_next_landing_site(self):
         completed_rooms = self.build_completed_room_list()
 
@@ -307,6 +343,7 @@ class Map(Mode):
             current_index = 0
 
         self.player['map_next_landing_site_index'] = current_index
+
 
     def pick_previous_landing_site(self):
         completed_rooms = self.build_completed_room_list()
@@ -319,6 +356,12 @@ class Map(Mode):
 
         self.player['map_next_landing_site_index'] = current_index
 
+
+    def select_landing_site(self):
+        self.player['map_select_site_active'] = 0
+        self.machine.events.post('cmd_scoop_collect_next')
+
+
     def build_completed_room_list(self):
         completed_rooms = []
 
@@ -328,13 +371,15 @@ class Map(Mode):
             room_code = '{}{}'.format(room_prefix, room_letter)
             room_number = self.LAYOUT.get(room_code)[1]
 
-            completed_rooms.append(self.find_room_state(room_code, room_number))
+            if self.find_room_state(room_code, room_number) == 'C':
+                completed_rooms.append(room_code)
 
         for default_complete_room in ['1b', '1l', '1r', '2a', '2i']:
             if default_complete_room not in completed_rooms:
                 completed_rooms.append(default_complete_room)
 
         return completed_rooms
+
 
     def find_room_state(self, room_code, room_number):
         return list(self.player['map_visited_{}'.format(self.LAYOUT[room_code][0])])[room_number - 1]

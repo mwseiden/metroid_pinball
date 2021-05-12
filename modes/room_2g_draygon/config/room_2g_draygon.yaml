@@ -538,12 +538,14 @@ variable_player:
   draygon_hit_weak:
     boss_draygon_hp: -2
     score: (40000 + (current_player.area_bonus_nw * 50000) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    boss_draygon_score: (40000 + (current_player.area_bonus_nw * 50000) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
     room_special_score:
       int: (40000 + (current_player.area_bonus_nw * 50000) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
       action: set
   draygon_hit_vulnerable:
     boss_draygon_hp: -16
     score: (60000 + (current_player.area_bonus_nw * 50000) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    boss_draygon_score: (60000 + (current_player.area_bonus_nw * 50000) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
     room_special_score:
       int: (60000 + (current_player.area_bonus_nw * 50000) + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
       action: set
@@ -551,6 +553,7 @@ variable_player:
     boss_draygon_hp: -20
     missiles: -1
     score: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+    boss_draygon_score: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
     room_special_score:
       int: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
       action: set
@@ -558,6 +561,7 @@ variable_player:
     boss_draygon_hp: -40
     power_bombs: -1
     score: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
+    boss_draygon_score: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
     room_special_score:
       int: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
       action: set

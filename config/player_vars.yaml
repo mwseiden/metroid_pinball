@@ -15,21 +15,31 @@ player_vars:
     initial_value: 0
   bao_reactors:
     initial_value: 0
+  bao_score:
+    initial_value: 0
   boss_draygon_hp:
     initial_value: 280
   boss_draygon_multiball_played:
+    initial_value: 0
+  boss_draygon_score:
     initial_value: 0
   boss_kraid_hp:
     initial_value: 240
   boss_kraid_multiball_played:
     initial_value: 0
+  boss_kraid_score:
+    initial_value: 0
   boss_phantoon_hp:
     initial_value: 260
   boss_phantoon_multiball_played:
     initial_value: 0
+  boss_phantoon_score:
+    initial_value: 0
   boss_ridley_hp:
     initial_value: 200
   boss_ridley_multiball_played:
+    initial_value: 0
+  boss_ridley_score:
     initial_value: 0
   bridge_bonus:
     initial_value: 0
@@ -105,6 +115,8 @@ player_vars:
     initial_value: 0
   high_jump_bonus:
     initial_value: 0
+  hot_springs_jackpot_value:
+    initial_value: 100000
   kickbacks:
     initial_value: 0
   kickback_active:
@@ -119,6 +131,10 @@ player_vars:
   map_location:
     value_type: str
     initial_value: '1b'
+  map_next_landing_site_index:
+    initial_value: 0
+  map_select_site_active:
+    initial_value: 0
   map_visited_b:
     value_type: str
     initial_value: 'NNNNNNNNNN'
@@ -131,8 +147,6 @@ player_vars:
   map_visited_n:
     value_type: str
     initial_value: 'NNNNNNNNNN'
-  map_next_landing_site_index:
-    initial_value: 0
   map_visited_t:
     value_type: str
     initial_value: 'NNNNNNNNNN'
@@ -145,6 +159,8 @@ player_vars:
     initial_value: 0
   multiplier:
     initial_value: 1
+  multiplier_charge:
+    initial_value: 0
   orbits:
     initial_value: 0
   pops:
@@ -168,6 +184,12 @@ player_vars:
   room_1d_shots_hit:
     initial_value: 0
   room_1m_captured:
+    initial_value: 0
+  room_1n_robots_1:
+    initial_value: 0
+  room_1n_robots_2:
+    initial_value: 0
+  room_1n_robots_3:
     initial_value: 0
   room_1s_jackpot:
     initial_value: 0

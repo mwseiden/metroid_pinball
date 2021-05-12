@@ -1,0 +1,9 @@
+#show_version=5
+
+- duration: 3s
+  slides:
+    base_twitch_raid_skull_slide:
+      target: backglass
+      widgets:
+      - type: image
+        image: arrrrrcade_logo_big

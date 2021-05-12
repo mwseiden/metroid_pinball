@@ -82,6 +82,14 @@ show_player:
       action: stop
     rudy_tas:
       action: stop
+    lights_boss_ridley:
+      action: stop
+    lights_boss_draygon:
+      action: stop
+    lights_boss_phantoon:
+      action: stop
+    lights_boss_kraid:
+      action: stop
     attract_display_loop:
       priority: 100
       manual_advance: false
@@ -124,15 +132,49 @@ show_player:
       loops: -1
       speed: 10
   slide_rooms_completed_champ_score_created:
-    attract_lights_press_start_gi:
+    attract_classic:
       action: stop
-    attract_lights_press_start:
+    attract_classic_boss:
       action: stop
     lights_rainbow_blurred:
       loops: -1
       speed: 10
-  slide_press_start_created:
+  slide_boss_ridley_score_champ_score_created:
     lights_rainbow_blurred:
+      action: stop
+    attract_classic:
+      loops: -1
+    attract_classic_boss:
+      loops: -1
+      show_tokens:
+        boss: ridley
+  slide_boss_draygon_score_champ_score_created:
+    attract_classic_boss:
+      loops: -1
+      show_tokens:
+        boss: draygon
+  slide_boss_phantoon_score_champ_score_created:
+    attract_classic_boss:
+      loops: -1
+      show_tokens:
+        boss: phantoon
+  slide_boss_kraid_score_champ_score_created:
+    attract_classic_boss:
+      loops: -1
+      show_tokens:
+        boss: kraid
+  slide_bao_reactor_champ_score_created:
+    attract_classic_boss:
+      action: stop
+  slide_bao_score_champ_score_created:
+    attract_lights_press_start_gi:
+      action: stop
+    attract_lights_press_start:
+      action: stop
+    attract_classic:
+      loops: -1
+  slide_press_start_created:
+    attract_classic:
       action: stop
     attract_lights_fast_logo_gi:
       action: stop

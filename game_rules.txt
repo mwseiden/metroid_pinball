@@ -303,7 +303,7 @@ Landing Sites
         Break down the drop targets to reach the generator.
 
         Doors:
-            Secret Passage (Blue) -> The Lake [D]
+            Secret Passage (Blue) -> The Swamp [D]
             VUK (Blue) -> Generator Room [M]
             Scoop (Blue) -> The Hull [N]
             Left Orbit (Blue) [Unpowered] -> Crew Quarters [K]
@@ -444,9 +444,12 @@ Rooms (Modes)
 
         Lush Cavern [A]:
 
-            Rules unimplemented
+            Build main shot values by hitting blinking lane shots. Hit
+            secret passage, left orbit, side ramp, and right orbit shots
+            for points.
 
             Completion:
+                Hit all 4 score shots.
 
             Doors:
                 Back Ramp (Blue) -> Landing Site [B]
@@ -465,10 +468,10 @@ Rooms (Modes)
 
             Doors:
                 Secret Passage (Blue) -> Landing Site [B]
-                Left Orbit (Blue) -> The Lake [D]
+                Left Orbit (Blue) -> The Swamp [D]
                 Scoop (Blue) -> Spiny Corridor [T] (Brinstar)
 
-        The Lake [D]:
+        The Swamp [D]:
 
             Hit the scoop, pit, pop bumper subway, or upkicker for points.
 

@@ -52,7 +52,8 @@ show_player:
   mode_room_1u_the_armory_started:
     mode_1u_the_armory_gi:
       loops: -1
-      speed: 47
+      speed: 20
+      priority: 100
   show_mode_status_report:
     room_1u_the_armory_status_report:
       loops: 0
@@ -71,9 +72,11 @@ event_player:
     cmd_map_position:
       room: '1u'
       visit: True
+    metroid_open_doors:
+    room_1u_play_music:
+  room_1u_play_music:
     cmd_play_map_music:
       music: music_brinstar_side_entrance
-    metroid_open_doors:
   room_1u_exit_north_shot_hit.1: drop_targets_save
   room_1u_exit_north_shot_hit.2: room_1r_enter
   room_1u_exit_south_shot_hit.1: drop_targets_save

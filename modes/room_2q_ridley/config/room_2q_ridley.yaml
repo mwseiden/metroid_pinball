@@ -444,18 +444,21 @@ variable_player:
   ridley_hit_strong:
     boss_ridley_hp: -8
     score: (150000 + (current_player.area_bonus_nw * 100000) + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    boss_ridley_score: (150000 + (current_player.area_bonus_nw * 100000) + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
     room_special_score:
       int: (150000 + (current_player.area_bonus_nw * 100000) + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
       action: set
   ridley_hit_normal:
     boss_ridley_hp: -4
     score: (75000 + (current_player.area_bonus_w * 50000) + (current_player.area_bonus_e * 50000)) * current_player.multiplier
+    boss_ridley_score: (75000 + (current_player.area_bonus_w * 50000) + (current_player.area_bonus_e * 50000)) * current_player.multiplier
     room_special_score:
       int: (75000 + (current_player.area_bonus_w * 50000) + (current_player.area_bonus_e * 50000)) * current_player.multiplier
       action: set
   ridley_hit_weak:
     boss_ridley_hp: -2
     score: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
+    boss_ridley_score: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
     room_special_score:
       int: (40000 + (current_player.area_bonus_sw * 50000) + (current_player.area_bonus_se * 50000)) * current_player.multiplier
       action: set
@@ -463,6 +466,7 @@ variable_player:
     boss_ridley_hp: -20
     missiles: -1
     score: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
+    boss_ridley_score: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
     room_special_score:
       int: (200000 + (current_player.area_bonus_sw * 100000)) * current_player.multiplier
       action: set
@@ -470,21 +474,25 @@ variable_player:
     boss_ridley_hp: -40
     power_bombs: -1
     score: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
+    boss_ridley_score: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
     room_special_score:
       int: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
       action: set
   room_2q_collect_victory_ne:
     score: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
+    boss_ridley_score: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
     room_special_score:
       int: (100000 + (current_player.area_bonus_ne * 100000)) * current_player.multiplier
       action: set
   room_2q_collect_victory_nw:
     score: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
+    boss_ridley_score: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
     room_special_score:
       int: (100000 + (current_player.area_bonus_nw * 100000)) * current_player.multiplier
       action: set
   room_2q_ridley_should_die:
     score: 1000000 * current_player.multiplier
+    boss_ridley_score: 1000000 * current_player.multiplier
     room_special_score:
       int: 1000000 * current_player.multiplier
       action: set

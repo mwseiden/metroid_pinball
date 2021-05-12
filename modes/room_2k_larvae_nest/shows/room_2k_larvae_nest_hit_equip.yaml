@@ -1,0 +1,310 @@
+#show_version=5
+- time: 0
+  lights:
+    gi_side_bank: 'F700F5'
+    led_side_1: 'FF00FD'
+    led_side_2: 'FF00FD'
+    led_side_3: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'FF00FD'
+    led_enter_left_orbit: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    led_wall_jump: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    gi_missile_bank: 'FF00FD'
+    led_enter_scoop: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    led_upgrade_bank_1: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: 'FF00FD'
+    led_missile_bank_2: '0D000C'
+    led_missile_bank_3: 'FF00FD'
+    led_upgrade_bank_2: 'FE00FC'
+    
+- time: '+1'
+  lights:
+    gi_upgrade_bank: '160016'
+    led_missile_bank_1: 'FF00FD'
+    led_missile_bank_2: 'FF00FD'
+    led_scanner_nw: 'FF00FD'
+    led_scanner_w: 'FF00FD'
+    led_upgrade_bank_2: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: 'FF00FD'
+    gi_upgrade_bank: 'FF00FD'
+    led_enter_secret_passage: '170017'
+    led_scanner_center: 'FF00FD'
+    led_scanner_ne: 'FF00FD'
+    led_scanner_sw: 'FF00FD'
+    led_upgrade_bank_3: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    led_enter_secret_passage: 'FF00FD'
+    led_scanner_e: 'FF00FD'
+    led_scanner_se: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: 'FF00FD'
+    led_2x: 'FF00FD'
+    led_pop_2: 'FF00FD'
+    led_zero_suit: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    led_3x: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    led_enter_side_ramp: 'FF00FD'
+    led_pit: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    led_left_inlane: 'FF00FD'
+    led_left_outlane: 'FF00FD'
+    led_pop_1: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    gi_back_left: 'FF00FD'
+    led_captive_ball: 'FF00FD'
+    led_pop_3: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_top: 'FF00FD'
+    gi_strip_1: 'FF00FD'
+    gi_strip_2: 'FF00FD'
+    gi_strip_3: 'FF00FD'
+    led_enter_right_orbit: 'FF00FD'
+    led_upper_playfield_1: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_bottom: 'FB00F9'
+    gi_strip_4: 'FF00FD'
+    gi_strip_5: 'FF00FD'
+    led_bomb_bank_1: 'FF00FD'
+    led_motherbrain_1: 'FF00FD'
+    led_motherbrain_2: 'FF00FD'
+    led_thin_orange: 'FF00FD'
+    led_upper_playfield_2: '670066'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_bottom: 'FF00FD'
+    gi_strip_6: 'FF00FD'
+    led_bomb_bank_2: 'FF00FD'
+    led_boss_1: 'FF00FD'
+    led_boss_2: 'FF00FD'
+    led_drop_1: '5B005A'
+    led_motherbrain_3: 'FF00FD'
+    led_upper_playfield_2: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    gi_back_center: 'FF00FD'
+    gi_left_ball_guide: 'FF00FD'
+    gi_strip_7: 'FF00FD'
+    gi_upper_flipper_bottom: 'FF00FD'
+    gi_upper_flipper_top: 'FF00FD'
+    led_bomb_bank_3: 'FF00FD'
+    led_boss_3: 'FF00FD'
+    led_drop_1: 'FF00FD'
+    led_goal_1: 'FF00FD'
+    led_left_kickback: 'FF00FD'
+    led_rollover: 'FF00FD'
+    led_upper_playfield_3: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: 'FF00FD'
+    gi_strip_8: '310030'
+    led_boss_4: 'F000EE'
+    led_drop_2: 'FF00FD'
+    led_goal_2: 'FF00FD'
+    led_goal_3: 'FF00FD'
+    led_goal_4: '1A001A'
+    led_right_inlane: 'C600C4'
+    
+- time: '+1'
+  lights:
+    gi_right_sling_bottom: '120012'
+    gi_right_sling_top: 'FF00FD'
+    gi_strip_8: 'FF00FD'
+    led_boss_4: 'FF00FD'
+    led_drop_3: 'FF00FD'
+    led_goal_4: 'FF00FD'
+    led_right_inlane: 'FF00FD'
+    
+- time: '+1'
+  lights:
+    gi_right_sling_bottom: '000000'
+    gi_right_sling_top: '000000'
+    gi_strip_8: '310030'
+    led_boss_4: 'F000EE'
+    led_drop_3: '000000'
+    led_goal_4: '1A001A'
+    led_right_inlane: 'C600C4'
+    
+- time: '+1'
+  lights:
+    gi_bomb_bank: '000000'
+    gi_strip_8: '000000'
+    led_boss_4: '000000'
+    led_drop_2: '000000'
+    led_goal_2: '000000'
+    led_goal_3: '000000'
+    led_goal_4: '000000'
+    led_right_inlane: '000000'
+    
+- time: '+1'
+  lights:
+    gi_back_center: '000000'
+    gi_left_ball_guide: '000000'
+    gi_strip_7: '000000'
+    gi_upper_flipper_bottom: '000000'
+    gi_upper_flipper_top: '000000'
+    led_bomb_bank_3: '000000'
+    led_boss_3: '000000'
+    led_drop_1: '5B005A'
+    led_goal_1: '000000'
+    led_left_kickback: '000000'
+    led_rollover: '000000'
+    led_upper_playfield_3: '000000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_bottom: 'FB00F9'
+    gi_strip_6: '000000'
+    led_bomb_bank_2: '000000'
+    led_boss_1: '000000'
+    led_boss_2: '000000'
+    led_drop_1: '000000'
+    led_motherbrain_3: '000000'
+    led_upper_playfield_2: '670066'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_bottom: '000000'
+    gi_strip_4: '000000'
+    gi_strip_5: '000000'
+    led_bomb_bank_1: '000000'
+    led_motherbrain_1: '000000'
+    led_motherbrain_2: '000000'
+    led_thin_orange: '000000'
+    led_upper_playfield_2: '000000'
+    
+- time: '+1'
+  lights:
+    gi_left_sling_top: '000000'
+    gi_strip_1: '000000'
+    gi_strip_2: '000000'
+    gi_strip_3: '000000'
+    led_enter_right_orbit: '000000'
+    led_upper_playfield_1: '000000'
+    
+- time: '+1'
+  lights:
+    gi_back_left: '000000'
+    led_captive_ball: '000000'
+    led_pop_3: '000000'
+    
+- time: '+1'
+  lights:
+    led_left_inlane: '000000'
+    led_left_outlane: '000000'
+    led_pop_1: '000000'
+    
+- time: '+1'
+  lights:
+    led_enter_side_ramp: '000000'
+    led_pit: '000000'
+    
+- time: '+1'
+  lights:
+    led_3x: '000000'
+    
+- time: '+1'
+  lights:
+    gi_under_side_ramp: '000000'
+    led_2x: '000000'
+    led_pop_2: '000000'
+    led_zero_suit: '000000'
+    
+- time: '+1'
+  lights:
+    led_enter_secret_passage: '170017'
+    led_scanner_e: '000000'
+    led_scanner_se: '000000'
+    
+- time: '+1'
+  lights:
+    gi_behind_zero_suit: '000000'
+    gi_upgrade_bank: '160016'
+    led_enter_secret_passage: '000000'
+    led_scanner_center: '000000'
+    led_scanner_ne: '000000'
+    led_scanner_sw: '000000'
+    led_upgrade_bank_3: '000000'
+    
+- time: '+1'
+  lights:
+    gi_upgrade_bank: '000000'
+    led_missile_bank_1: '000000'
+    led_missile_bank_2: 'FC00FA'
+    led_scanner_nw: '000000'
+    led_scanner_w: '000000'
+    led_upgrade_bank_2: 'FE00FC'
+    
+- time: '+1'
+  lights:
+    led_enter_ramp: '000000'
+    led_missile_bank_2: '000000'
+    led_missile_bank_3: '000000'
+    led_upgrade_bank_2: '000000'
+    
+- time: '+1'
+  lights:
+    led_upgrade_bank_1: '000000'
+    
+- time: '+1'
+  lights:
+    gi_missile_bank: '000000'
+    led_enter_scoop: '000000'
+    
+- time: '+1'
+  lights:
+    gi_middle_sling: '000000'
+    
+- time: '+1'
+  lights:
+    led_wall_jump: '000000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: 'F700F5'
+    led_enter_left_orbit: '000000'
+    
+- time: '+1'
+  lights:
+    gi_side_bank: '000000'
+    
