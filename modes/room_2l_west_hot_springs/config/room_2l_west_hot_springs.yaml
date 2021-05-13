@@ -4,7 +4,7 @@
 
 mode:
   start_events: room_2l_continue, room_2l_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2m_enter, room_2l_exit
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2m_enter, room_2p_enter, room_2l_exit
   priority: 300
 
 shot_profiles:
@@ -35,7 +35,7 @@ shots:
   room_2l_scoop_shot:
     switch: s_scoop
     profile: room_2l_scoop
-    enable_events: room_2l_enable_shots
+    enable_events: room_2l_enable_scoop
     disable_events: mode_room_2l_west_hot_springs_started
     show_tokens:
       led: led_enter_scoop
@@ -129,6 +129,11 @@ event_player:
       music: music_norfair_deep
     metroid_open_doors:
     room_2l_enable_shots:
+  room_2l_increase_1_shot_hit: room_2l_enable_scoop
+  room_2l_increase_2_shot_hit: room_2l_enable_scoop
+  room_2l_increase_3_shot_hit: room_2l_enable_scoop
+  room_2l_increase_4_shot_hit: room_2l_enable_scoop
+  room_2l_scoop_shot_hit: room_2p_enter
   room_2l_exit_east_shot_hit.1: drop_targets_save
   room_2l_exit_east_shot_hit.2: room_2m_enter
 
