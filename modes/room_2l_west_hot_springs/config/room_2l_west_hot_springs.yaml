@@ -4,7 +4,7 @@
 
 mode:
   start_events: room_2l_continue, room_2l_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2m_enter, room_2p_enter, room_2l_exit, hot_spring_multiball_should_start
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2m_enter, room_2p_enter, room_2l_exit, hot_spring_room_exit
   priority: 300
 
 shot_profiles:

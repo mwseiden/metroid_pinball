@@ -6,6 +6,15 @@ mode:
   priority: 600
 
 
+timers:
+  hot_spring_countdown:
+    start_value: 0
+    end_value: 1
+    tick_interval: 0.5s
+    control_events:
+      - event: hot_spring_multiball_should_start
+        action: restart
+
 accruals:
   hot_spring_multiball_accrual:
     events:
@@ -24,4 +33,5 @@ multiballs:
 
 
 event_player:
+  timer_hot_spring_countdown_complete: hot_spring_room_exit
   multiball_hot_spring_multiball_ended: room_2l_enter
