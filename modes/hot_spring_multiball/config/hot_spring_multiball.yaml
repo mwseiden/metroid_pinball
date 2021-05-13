@@ -1,0 +1,27 @@
+#config_version=5
+
+mode:
+  start_events: metroid_base_started, metroid_open_doors
+  stop_events: metroid_base_ended, metroid_close_doors
+  priority: 600
+
+
+accruals:
+  hot_spring_multiball_accrual:
+    events:
+      - room_2p_scoop_shot_hit
+      - room_2l_scoop_shot_hit
+    events_when_complete: hot_spring_multiball_should_start
+    disable_events: logicblock_hot_spring_multiball_accrual_complete
+
+
+multiballs:
+  hot_spring_multiball:
+    ball_count: 2
+    ball_count_type: total
+    shoot_again: 30s
+    start_events: hot_spring_multiball_should_start
+
+
+event_player:
+  multiball_hot_spring_multiball_ended: room_2l_enter
