@@ -44,7 +44,7 @@ shots:
     switch: s_left_passage
     profile: room_2l_increase
     reset_events: room_2l_enable_shots
-    disable_events: mode_room_2p_west_hot_springs_started
+    disable_events: mode_room_2l_west_hot_springs_started
     show_tokens:
       led: led_enter_secret_passage
       color: 'A040FF'
@@ -52,7 +52,7 @@ shots:
     hit_events: left_orbit_hit
     profile: room_2l_increase
     reset_events: room_2l_enable_shots
-    disable_events: mode_room_2p_west_hot_springs_started
+    disable_events: mode_room_2l_west_hot_springs_started
     show_tokens:
       led: led_enter_left_orbit
       color: 'C000FF'
@@ -60,7 +60,7 @@ shots:
     switch: s_side_ramp_made
     profile: room_2l_increase
     reset_events: room_2l_enable_shots
-    disable_events: mode_room_2p_west_hot_springs_started
+    disable_events: mode_room_2l_west_hot_springs_started
     show_tokens:
       led: led_enter_side_ramp
       color: 'FF8ADD'
@@ -68,7 +68,7 @@ shots:
     hit_events: right_orbit_hit
     profile: room_2l_increase
     reset_events: room_2l_enable_shots
-    disable_events: mode_room_2p_west_hot_springs_started
+    disable_events: mode_room_2l_west_hot_springs_started
     show_tokens:
       led: led_enter_right_orbit
       color: '6900FF'
