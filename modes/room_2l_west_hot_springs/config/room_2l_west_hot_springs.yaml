@@ -12,6 +12,7 @@ shot_profiles:
     states:
       - name: lit
         show: blink_light
+        speed: 2
         loops: -1
         sync_ms: 1000
   room_2l_increase:
