@@ -25,8 +25,8 @@ shots:
     switch: s_ramp_enter
     profile: exit_door_optimum
     enable_events: metroid_open_doors
-    disable_events: room_2p_exit_west_shot_hit, metroid_close_doors
-    reset_events: room_2p_exit_west_shot_hit
+    disable_events: room_2p_exit_east_shot_hit, metroid_close_doors
+    reset_events: room_2p_exit_east_shot_hit
     show_tokens:
       led: led_enter_ramp
       color: door_blue
@@ -34,7 +34,7 @@ shots:
     switch: s_scoop
     profile: room_2p_scoop
     enable_events: room_2p_enable_scoop
-    disable_events: mode_room_2p_west_hot_springs_started
+    disable_events: mode_room_2p_east_hot_springs_started
     show_tokens:
       led: led_enter_scoop
       color: 'FFFF00'
@@ -42,31 +42,31 @@ shots:
     switch: s_left_passage
     profile: room_2p_increase
     reset_events: room_2p_enable_shots
-    disable_events: mode_room_2p_west_hot_springs_started
+    enable_events: mode_room_2p_east_hot_springs_started
     show_tokens:
       led: led_enter_secret_passage
       color: 'A040FF'
   room_2p_increase_2_shot:
     hit_events: left_orbit_hit
     profile: room_2p_increase
-    reset_events: room_2p_enable_shots
-    disable_events: mode_room_2p_west_hot_springs_started
+    enable_events: room_2p_enable_shots
+    disable_events: mode_room_2p_east_hot_springs_started
     show_tokens:
       led: led_enter_left_orbit
       color: 'C000FF'
   room_2p_increase_3_shot:
     switch: s_side_ramp_made
     profile: room_2p_increase
-    reset_events: room_2p_enable_shots
-    disable_events: mode_room_2p_west_hot_springs_started
+    enable_events: room_2p_enable_shots
+    disable_events: mode_room_2p_east_hot_springs_started
     show_tokens:
       led: led_enter_side_ramp
       color: 'FF8ADD'
   room_2p_increase_4_shot:
     hit_events: right_orbit_hit
     profile: room_2p_increase
-    reset_events: room_2p_enable_shots
-    disable_events: mode_room_2p_west_hot_springs_started
+    enable_events: room_2p_enable_shots
+    disable_events: mode_room_2p_east_hot_springs_started
     show_tokens:
       led: led_enter_right_orbit
       color: '6900FF'
