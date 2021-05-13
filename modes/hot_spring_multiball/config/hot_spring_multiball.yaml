@@ -37,4 +37,5 @@ event_player:
   hot_spring_multiball_should_start:
     cmd_play_overlay_music:
       music: music_multiball
-  multiball_hot_spring_multiball_ended: room_2l_enter, cmd_stop_overlay_music
+    chozo_multiball_disable:
+  multiball_hot_spring_multiball_ended: room_2l_enter, cmd_stop_overlay_music, chozo_multiball_enable
