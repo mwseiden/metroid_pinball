@@ -14,6 +14,7 @@ from .lights.backbox.heat_up import HeatUp
 from .lights.backbox.gradient import Gradient
 from .lights.backbox.plasma import Plasma
 from .lights.backbox.spectrum import Spectrum
+from .lights.backbox.theater_chase_rainbow import TheaterChaseRainbow
 
 class BackBoxLights(Scriptlet):
 
@@ -35,6 +36,7 @@ class BackBoxLights(Scriptlet):
             'gradient': self.show_gradient,
             'plasma': self.show_plasma,
             'spectrum': self.show_spectrum,
+            'theater_chase_rainbow': self.show_theater_chase_rainbow,
         }
 
         self.set_effects_to_default()
@@ -127,9 +129,6 @@ class BackBoxLights(Scriptlet):
             int(kwargs.get('speed', 4))
         )
 
-    #def show_sunny_days_that_i_thought_would_never_end(self, **kwargs):
-    #    return Sunshine(self.machine)
-
     def show_solid(self, **kwargs):
         return Solid(self.machine, RGBColor(kwargs.get('color', [0, 0, 0])))
 
@@ -183,6 +182,9 @@ class BackBoxLights(Scriptlet):
             RGBColor(kwargs.get('color_start', '000000')),
             RGBColor(kwargs.get('color_end', '0000FF'))
         )
+
+    def show_theater_chase_rainbow(self, **kwargs):
+        return TheaterChaseRainbow(self.machine)
 
     # private ----------------------------------------------------------------
 
