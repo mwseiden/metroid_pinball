@@ -384,6 +384,15 @@ event_player:
   slide_last_game_high_scores_created:
     cmd_backbox_show:
       show_type: rainbow
+  slide_rooms_completed_champ_score_created:
+    cmd_backbox_show:
+      show_type: rainbow
+  slide_boss_ridley_score_champ_score_created:
+    cmd_backbox_show:
+      show_type: theater_chase_rainbow
+  slide_bao_score_champ_score_created:
+    cmd_backbox_show:
+      show_type: theater_chase_rainbow
   slide_fast_logo_created:
     cmd_backbox_show:
       show_type: two_tone
