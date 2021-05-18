@@ -23,6 +23,18 @@ accruals:
     events_when_complete: hot_spring_multiball_should_start
     disable_events: logicblock_hot_spring_multiball_accrual_complete
 
+counters:
+  hot_springs_add_ball_counter:
+    count_events: hot_spring_add_a_ball_hit
+    events_when_hit: hot_spring_should_add_a_ball
+    events_when_complete: hot_spring_balls_exhausted
+    starting_count: 2
+    count_complete_value: 0
+    direction: down
+    enable_events: hot_spring_multiball_should_start
+    disable_events: mode_hot_spring_multiball_started, multiball_hot_spring_multiball_ended
+    persist_state: true
+    disable_on_complete: true
 
 multiballs:
   hot_spring_multiball:
@@ -30,6 +42,7 @@ multiballs:
     ball_count_type: total
     shoot_again: 30s
     start_events: hot_spring_multiball_should_start
+    add_a_ball_events: hot_spring_should_add_a_ball
 
 
 shot_profiles:
@@ -43,6 +56,14 @@ shot_profiles:
 
 
 shots:
+  hot_spring_add_a_ball:
+    switch: s_captive_ball
+    profile: hot_spring_shot
+    enable_events: hot_spring_multiball_should_start
+    disable_events: hot_spring_balls_exhausted, mode_hot_spring_multiball_started, multiball_hot_spring_multiball_ended
+    show_tokens:
+      led: led_captive_ball
+      color: 'FF0000'
   hot_spring_jackpot_shot_1:
     switch: s_left_passage
     profile: hot_spring_shot
