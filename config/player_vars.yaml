@@ -116,7 +116,7 @@ player_vars:
   high_jump_bonus:
     initial_value: 0
   hot_springs_jackpot_value:
-    initial_value: 100000
+    initial_value: 123400
   kickbacks:
     initial_value: 0
   kickback_active:
