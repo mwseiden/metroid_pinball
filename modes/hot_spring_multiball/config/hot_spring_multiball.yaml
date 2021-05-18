@@ -98,6 +98,21 @@ shots:
       color: '6900FF'
 
 
+show_player:
+  hot_spring_jackpot_shot_1_hit:
+    special_score_blue:
+      loops: 0
+  hot_spring_jackpot_shot_2_hit:
+    special_score_blue:
+      loops: 0
+  hot_spring_jackpot_shot_3_hit:
+    special_score_blue:
+      loops: 0
+  hot_spring_jackpot_shot_4_hit:
+    special_score_blue:
+      loops: 0
+
+
 event_player:
   timer_hot_spring_countdown_complete: hot_spring_room_exit
   hot_spring_multiball_should_start:
@@ -105,3 +120,26 @@ event_player:
       music: music_multiball
     chozo_multiball_disable:
   multiball_hot_spring_multiball_ended: room_2l_enter, cmd_stop_overlay_music, chozo_multiball_enable
+
+
+variable_player:
+  hot_spring_jackpot_shot_1_hit:
+    score: (current_player.hot_springs_jackpot_value * current_player.multiplier) + (current_player.area_bonus_sw * 100000)
+    room_special_score:
+      action: set
+      int: (current_player.hot_springs_jackpot_value * current_player.multiplier) + (current_player.area_bonus_sw * 100000)
+  hot_spring_jackpot_shot_2_hit:
+    score: (current_player.hot_springs_jackpot_value * current_player.multiplier) + (current_player.area_bonus_nw * 150000)
+    room_special_score:
+      action: set
+      int: (current_player.hot_springs_jackpot_value * current_player.multiplier) + (current_player.area_bonus_nw * 150000)
+  hot_spring_jackpot_shot_3_hit:
+    score: (current_player.hot_springs_jackpot_value * current_player.multiplier) + (current_player.area_bonus_ne * 100000)
+    room_special_score:
+      action: set
+      int: (current_player.hot_springs_jackpot_value * current_player.multiplier) + (current_player.area_bonus_ne * 100000)
+  hot_spring_jackpot_shot_4_hit:
+    score: (current_player.hot_springs_jackpot_value * current_player.multiplier) + (current_player.area_bonus_ne * 150000)
+    room_special_score:
+      action: set
+      int: (current_player.hot_springs_jackpot_value * current_player.multiplier) + (current_player.area_bonus_ne * 150000)

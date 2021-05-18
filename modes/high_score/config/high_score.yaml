@@ -78,13 +78,13 @@ high_score:
     ramps:
       - MB: 5
     pops:
-      - RDY: 15
+      - RDY: 17
     slingshots:
-      - WHT: 20
+      - WHT: 40
     orbits:
       - BLZ: 5
     lanes:
-      - GRN: 10
+      - GRN: 12
     bridges:
       - GNZ: 1
     drops:
