@@ -13,7 +13,7 @@ class TheaterChaseRainbow(DynamicBackBoxShow):
     def animate(self):
         super().animate()
 
-        for strip_number in range(0, 11):
+        for strip_number in range(0, 10):
             i = 0
             while i < 10:
                 self.strips[strip_number].set_color(i + self.q, self.wheel((i + self.j + strip_number) % 255))
