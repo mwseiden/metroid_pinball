@@ -32,6 +32,51 @@ multiballs:
     start_events: hot_spring_multiball_should_start
 
 
+shot_profiles:
+  hot_spring_shot:
+    states:
+      - name: lit
+        show: blink_light
+        speed: 2
+        loops: -1
+        sync_ms: 1000
+
+
+shots:
+  hot_spring_jackpot_shot_1:
+    switch: s_left_passage
+    profile: hot_spring_shot
+    enable_events: hot_spring_multiball_should_start
+    disable_events: mode_hot_spring_multiball_started, multiball_hot_spring_multiball_ended
+    show_tokens:
+      led: led_enter_secret_passage
+      color: 'A040FF'
+  hot_spring_jackpot_shot_2:
+    hit_events: left_orbit_hit
+    profile: hot_spring_shot
+    enable_events: hot_spring_multiball_should_start
+    disable_events: mode_hot_spring_multiball_started, multiball_hot_spring_multiball_ended
+    show_tokens:
+      led: led_enter_left_orbit
+      color: 'C000FF'
+  hot_spring_jackpot_shot_3:
+    switch: s_side_ramp_made
+    profile: hot_spring_shot
+    enable_events: hot_spring_multiball_should_start
+    disable_events: mode_hot_spring_multiball_started, multiball_hot_spring_multiball_ended
+    show_tokens:
+      led: led_enter_side_ramp
+      color: 'FF8ADD'
+  hot_spring_jackpot_shot_4:
+    hit_events: right_orbit_hit
+    profile: hot_spring_shot
+    enable_events: hot_spring_multiball_should_start
+    disable_events: mode_hot_spring_multiball_started, multiball_hot_spring_multiball_ended
+    show_tokens:
+      led: led_enter_right_orbit
+      color: '6900FF'
+
+
 event_player:
   timer_hot_spring_countdown_complete: hot_spring_room_exit
   hot_spring_multiball_should_start:
