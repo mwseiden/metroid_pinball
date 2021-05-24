@@ -10,8 +10,8 @@ class TheaterChaseRainbow(DynamicBackBoxShow):
         self.q = 0
         self.j = 0
         self.speed = 1
-        self.spacing = 5
-        self.cycle_increment = 9
+        self.spacing = 8
+        self.cycle_increment = 10
 
     def animate(self):
         super().animate()
