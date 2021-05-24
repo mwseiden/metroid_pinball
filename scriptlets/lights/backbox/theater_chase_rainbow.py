@@ -9,21 +9,31 @@ class TheaterChaseRainbow(DynamicBackBoxShow):
         self.offset = 0
         self.q = 0
         self.j = 0
+        self.speed = 1
+        self.spacing = 5
 
     def animate(self):
         super().animate()
 
+        if self.frame % self.speed == 0:
+            self._update_lights()
+            self._update_animation()
+
+
+    def _update_lights(self):
         for strip_number in range(0, 10):
             i = 0
             while i < 10:
-                if i % 3 == self.q:
+                if i % self.spacing == self.q:
                     self.strips[strip_number].set_color(i, self.wheel((i + self.j + strip_number) % 255))
                 else:
                     self.strips[strip_number].set_color(i, RGBColor([0, 0, 0]))
                 i += 1
 
+
+    def _update_animation(self):
         self.q += 1
-        if self.q > 2:
+        if self.q >= self.spacing:
             self.q = 0
             self.j += 1
             if self.j > 255:
