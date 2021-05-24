@@ -11,6 +11,7 @@ class TheaterChaseRainbow(DynamicBackBoxShow):
         self.j = 0
         self.speed = 1
         self.spacing = 5
+        self.cycle_increment = 9
 
     def animate(self):
         super().animate()
@@ -35,9 +36,9 @@ class TheaterChaseRainbow(DynamicBackBoxShow):
         self.q += 1
         if self.q >= self.spacing:
             self.q = 0
-            self.j += 1
+            self.j += self.cycle_increment
             if self.j > 255:
-                self.j = 0
+                self.j = self.j % 255
 
 
     def wheel(self, wheel_pos):
