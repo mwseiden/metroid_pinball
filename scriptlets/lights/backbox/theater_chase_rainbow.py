@@ -3,15 +3,15 @@ from .dynamic_backbox_show import DynamicBackBoxShow
 
 class TheaterChaseRainbow(DynamicBackBoxShow):
 
-    def __init__(self, machine):
+    def __init__(self, machine, speed, spacing, increment):
         super().__init__(machine)
 
         self.offset = 0
         self.q = 0
         self.j = 0
-        self.speed = 1
-        self.spacing = 8
-        self.cycle_increment = 10
+        self.speed = speed
+        self.spacing = spacing
+        self.cycle_increment = increment
 
     def animate(self):
         super().animate()

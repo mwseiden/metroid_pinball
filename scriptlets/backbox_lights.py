@@ -184,7 +184,12 @@ class BackBoxLights(Scriptlet):
         )
 
     def show_theater_chase_rainbow(self, **kwargs):
-        return TheaterChaseRainbow(self.machine)
+        return TheaterChaseRainbow(
+            self.machine,
+            int(kwargs.get('speed', 1)),
+            int(kwargs.get('spacing', 8)),
+            int(kwargs.get('increment', 10))
+        )
 
     # private ----------------------------------------------------------------
 
