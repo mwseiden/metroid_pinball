@@ -1,0 +1,14 @@
+from mpf.core.rgb_color import RGBColor
+
+class Wheel:
+
+    def at(self, wheel_pos):
+
+        if wheel_pos < 85:
+            return RGBColor([(wheel_pos * 3) % 255, 255 - (wheel_pos % 255), 0])
+        elif wheel_pos < 170:
+            wheel_pos -= 85;
+            return RGBColor([255 - ((wheel_pos * 3) % 255), 0, (wheel_pos * 3) % 255])
+        else:
+            wheel_pos -= 170;
+            return RGBColor([0, (wheel_pos * 3) % 255, 255 - ((wheel_pos * 3) % 255)])

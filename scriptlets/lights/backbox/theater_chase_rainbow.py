@@ -1,5 +1,6 @@
 from mpf.core.rgb_color import RGBColor
 from .dynamic_backbox_show import DynamicBackBoxShow
+from .wheel import Wheel
 
 class TheaterChaseRainbow(DynamicBackBoxShow):
 
@@ -12,6 +13,7 @@ class TheaterChaseRainbow(DynamicBackBoxShow):
         self.speed = speed
         self.spacing = spacing
         self.cycle_increment = increment
+        self.wheel = Wheel()
 
     def animate(self):
         super().animate()
@@ -26,7 +28,7 @@ class TheaterChaseRainbow(DynamicBackBoxShow):
             i = 0
             while i < 10:
                 if i % self.spacing == self.q:
-                    self.strips[strip_number].set_color(i, self.wheel((i + self.j) % 255))
+                    self.strips[strip_number].set_color(i, self.wheel.at((i + self.j) % 255))
                 else:
                     self.strips[strip_number].set_color(i, RGBColor([0, 0, 0]))
                 i += 1
@@ -41,13 +43,13 @@ class TheaterChaseRainbow(DynamicBackBoxShow):
                 self.j = self.j % 255
 
 
-    def wheel(self, wheel_pos):
+    # def wheel(self, wheel_pos):
 
-        if wheel_pos < 85:
-            return RGBColor([(wheel_pos * 3) % 255, 255 - (wheel_pos % 255), 0])
-        elif wheel_pos < 170:
-            wheel_pos -= 85;
-            return RGBColor([255 - ((wheel_pos * 3) % 255), 0, (wheel_pos * 3) % 255])
-        else:
-            wheel_pos -= 170;
-            return RGBColor([0, (wheel_pos * 3) % 255, 255 - ((wheel_pos * 3) % 255)])
+        # if wheel_pos < 85:
+            # return RGBColor([(wheel_pos * 3) % 255, 255 - (wheel_pos % 255), 0])
+        # elif wheel_pos < 170:
+            # wheel_pos -= 85;
+            # return RGBColor([255 - ((wheel_pos * 3) % 255), 0, (wheel_pos * 3) % 255])
+        # else:
+            # wheel_pos -= 170;
+            # return RGBColor([0, (wheel_pos * 3) % 255, 255 - ((wheel_pos * 3) % 255)])
