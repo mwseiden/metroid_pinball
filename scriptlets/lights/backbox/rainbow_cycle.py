@@ -14,9 +14,9 @@ class RainbowCycle(DynamicBackBoxShow):
     def animate(self):
         super().animate()
 
-        for strip in self.strips:
-            for i in range(0, strip.size):
-                strip.set_color(i, self.wheel.at((self.j + i) % 256))
+        for strip_number in range(0, 10):
+            for i in range(0, self.strips[strip_number].size):
+                self.strips[strip_number].set_color(i, self.wheel.at(self.j + (strip_number * self.increment)))
 
         self.j += self.increment
         if self.j > 255:
