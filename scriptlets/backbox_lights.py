@@ -15,6 +15,7 @@ from .lights.backbox.gradient import Gradient
 from .lights.backbox.plasma import Plasma
 from .lights.backbox.spectrum import Spectrum
 from .lights.backbox.theater_chase_rainbow import TheaterChaseRainbow
+from .lights.backbox.rainbow_cycle import RainbowCycle
 
 class BackBoxLights(Scriptlet):
 
@@ -37,6 +38,7 @@ class BackBoxLights(Scriptlet):
             'plasma': self.show_plasma,
             'spectrum': self.show_spectrum,
             'theater_chase_rainbow': self.show_theater_chase_rainbow,
+            'rainbow_cycle': self.show_rainbow_cycle
         }
 
         self.set_effects_to_default()
@@ -188,6 +190,12 @@ class BackBoxLights(Scriptlet):
             self.machine,
             int(kwargs.get('speed', 1)),
             int(kwargs.get('spacing', 8)),
+            int(kwargs.get('increment', 10))
+        )
+
+    def show_rainbow_cycle(self, **kwargs):
+        return RainbowCycle(
+            self.machine,
             int(kwargs.get('increment', 10))
         )
 

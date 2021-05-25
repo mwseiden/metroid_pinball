@@ -384,9 +384,17 @@ event_player:
   slide_last_game_high_scores_created:
     cmd_backbox_show:
       show_type: rainbow
-  slide_rooms_completed_champ_score_created:
+  slide_attract_high_scores_created:
     cmd_backbox_show:
       show_type: rainbow
+  slide_spin_champ_score_created:
+    cmd_backbox_show:
+      show_type: rainbow_cycle
+      increment: 1
+  slide_rooms_completed_champ_score_created:
+    cmd_backbox_show:
+      show_type: rainbow_cycle
+      increment: 1
   slide_boss_ridley_score_champ_score_created:
     cmd_backbox_show:
       show_type: theater_chase_rainbow
@@ -396,9 +404,6 @@ event_player:
   slide_bao_score_champ_score_created:
     cmd_backbox_show:
       show_type: theater_chase_rainbow
-      speed: 3
-      spacing: 4
-      increment: 13
   slide_fast_logo_created:
     cmd_backbox_show:
       show_type: two_tone
