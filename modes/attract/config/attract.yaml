@@ -390,15 +390,15 @@ event_player:
   slide_boss_ridley_score_champ_score_created:
     cmd_backbox_show:
       show_type: theater_chase_rainbow
-      speed: 2
-      spacing: 5
-      increment: 7
+      speed: 3
+      spacing: 4
+      increment: 13
   slide_bao_score_champ_score_created:
     cmd_backbox_show:
       show_type: theater_chase_rainbow
-      speed: 2
-      spacing: 5
-      increment: 7
+      speed: 3
+      spacing: 4
+      increment: 13
   slide_fast_logo_created:
     cmd_backbox_show:
       show_type: two_tone
