@@ -7,6 +7,15 @@
     \__\/ \__\/ \_____\/   \__\/    \_\/ \_\/ \_____\/\________\/ \____/_/ 
                                                                            
 
+
+Apron Card
+
+    Solid Shots Change Modes
+    Flashing Shots Score Points
+    Modes Are Rooms, Get To The Boss
+    
+
+
 Starting The Game
 
     When you first start a ball you will be asked to choose your landing site.
