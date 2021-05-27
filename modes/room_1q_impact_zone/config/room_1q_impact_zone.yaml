@@ -162,6 +162,12 @@ show_player:
     room_1q_impact_zone_status_report:
       action: stop
 
+
+sound_player:
+  room_1q_jackpot_collected: jackpot
+  room_1q_super_jackpot_collected: super_jackpot
+
+
 event_player:
   mode_room_1q_impact_zone_started:
     cmd_backbox_show:
@@ -185,6 +191,7 @@ event_player:
   mode_room_1q_impact_zone_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1q_impact_zone_started_charge
   room_1q_collect_shot_group_collected_complete: room_1q_disable_rubble_shots, room_1q_enable_jackpot_shot
   room_1q_collect_jackpot_shot_hit: room_1q_jackpot_collected
+  room_1q_collect_super_jackpot_shot_hit: room_1q_super_jackpot_collected
   room_1q_jackpot_collected: room_1q_enable_super_jackpot_shot
   room_1q_exit_south_shot_hit.1: drop_targets_save
   room_1q_exit_south_shot_hit.2: room_2a_enter
