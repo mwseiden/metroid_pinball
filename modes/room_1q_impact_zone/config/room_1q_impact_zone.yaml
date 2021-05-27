@@ -11,17 +11,28 @@ mode:
 shot_profiles:
   room_1q_collect:
     states:
-      - name: lit
+      - name: collectable
         show: blink_light
         speed: 2
         loops: -1
         sync_ms: 1000
         show_tokens:
           color: 'FF5840'
-      - name: unlit
+      - name: collected
         show: led_color
         show_tokens:
           color: 'FF5840'
+  room_1q_jackpot:
+    states:
+      - name: lit
+        show: blink_3_colors
+        speed: 2
+        loops: -1
+        sync_ms: 1000
+        show_tokens:
+          color1: 'FF0000'
+          color2: '00FF00'
+          color3: '0000FF'
 
 
 shots:
@@ -44,33 +55,40 @@ shots:
       led: led_enter_secret_passage
       color: door_blue
   room_1q_collect_1_shot:
-    switch: s_left_passage
+    switch: s_ramp_enter
     profile: room_1q_collect
     enable_events: room_1q_enable_rubble_shots
-    disable_events: mode_room_1q_impact_zone_started
+    disable_events: mode_room_1q_impact_zone_started, room_1q_disable_rubble_shots
     show_tokens:
-      led: led_enter_secret_passage
+      led: led_enter_ramp
   room_1q_collect_2_shot:
     hit_events: left_orbit_hit
     profile: room_1q_collect
     enable_events: room_1q_enable_rubble_shots
-    disable_events: mode_room_1q_impact_zone_started
+    disable_events: mode_room_1q_impact_zone_started, room_1q_disable_rubble_shots
     show_tokens:
       led: led_enter_left_orbit
   room_1q_collect_3_shot:
     switch: s_side_ramp_made
     profile: room_1q_collect
     enable_events: room_1q_enable_rubble_shots
-    disable_events: mode_room_1q_impact_zone_started
+    disable_events: mode_room_1q_impact_zone_started, room_1q_disable_rubble_shots
     show_tokens:
       led: led_enter_side_ramp
   room_1q_collect_4_shot:
     hit_events: right_orbit_hit
     profile: room_1q_collect
     enable_events: room_1q_enable_rubble_shots
-    disable_events: mode_room_1q_impact_zone_started
+    disable_events: mode_room_1q_impact_zone_started, room_1q_disable_rubble_shots
     show_tokens:
       led: led_enter_right_orbit
+  room_1q_collect_jackpot_shot:
+    switch: s_ramp_enter
+    profile: room_1q_jackpot
+    enable_events: room_1q_enable_jackpot_shot
+    disable_events: mode_room_1q_impact_zone_started, room_1q_enable_rubble_shots
+    show_tokens:
+      led: led_enter_ramp
 
 
 shot_groups:
@@ -80,7 +98,7 @@ shot_groups:
     rotate_right_events: s_right_flipper_active
     # reset_events: room_1q_collect_shot_group_lit_complete
     enable_events: room_1q_enable_rubble_shots
-    disable_events: mode_room_1q_impact_zone_ending
+    disable_events: mode_room_1q_impact_zone_ending, room_1q_disable_rubble_shots
 
 
 slides:
@@ -147,6 +165,7 @@ event_player:
       music: music_wrecked_ship_generator
   mode_room_1q_impact_zone_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1q_impact_zone_started_no_charge
   mode_room_1q_impact_zone_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1q_impact_zone_started_charge
+  room_1q_collect_shot_group_collected_complete: room_1q_disable_rubble_shots, room_1q_enable_jackpot_shot
   room_1q_exit_south_shot_hit.1: drop_targets_save
   room_1q_exit_south_shot_hit.2: room_2a_enter
   room_1q_exit_west_shot_hit.1: drop_targets_save
