@@ -7,6 +7,23 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1p_enter, room_2a_enter, room_1q_exit
   priority: 300
 
+
+shot_profiles:
+  room_1q_collect:
+    states:
+      - name: lit
+        show: blink_light
+        speed: 2
+        loops: -1
+        sync_ms: 1000
+        show_tokens:
+          color: 'FF5840'
+      - name: unlit
+        show: led_color
+        show_tokens:
+          color: 'FF5840'
+
+
 shots:
   room_1q_exit_south_shot:
     switch: s_scoop
@@ -26,6 +43,45 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
+  room_1q_collect_1_shot:
+    switch: s_left_passage
+    profile: room_1q_collect
+    enable_events: room_1q_enable_rubble_shots
+    disable_events: mode_room_1q_impact_zone_started
+    show_tokens:
+      led: led_enter_secret_passage
+  room_1q_collect_2_shot:
+    hit_events: left_orbit_hit
+    profile: room_1q_collect
+    enable_events: room_1q_enable_rubble_shots
+    disable_events: mode_room_1q_impact_zone_started
+    show_tokens:
+      led: led_enter_left_orbit
+  room_1q_collect_3_shot:
+    switch: s_side_ramp_made
+    profile: room_1q_collect
+    enable_events: room_1q_enable_rubble_shots
+    disable_events: mode_room_1q_impact_zone_started
+    show_tokens:
+      led: led_enter_side_ramp
+  room_1q_collect_4_shot:
+    hit_events: right_orbit_hit
+    profile: room_1q_collect
+    enable_events: room_1q_enable_rubble_shots
+    disable_events: mode_room_1q_impact_zone_started
+    show_tokens:
+      led: led_enter_right_orbit
+
+
+shot_groups:
+  room_1q_collect_shot_group:
+    shots: room_1q_collect_1_shot, room_1q_collect_2_shot, room_1q_collect_3_shot, room_1q_collect_4_shot
+    rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+    # reset_events: room_1q_collect_shot_group_lit_complete
+    enable_events: room_1q_enable_rubble_shots
+    disable_events: mode_room_1q_impact_zone_ending
+
 
 slides:
   room_1q_impact_zone_backglass_slide:
@@ -82,6 +138,7 @@ event_player:
       room: '1q'
       visit: True
     metroid_open_doors:
+    room_1q_enable_rubble_shots:
   mode_room_1q_impact_zone_started_no_charge:
     cmd_play_map_music:
       music: music_wrecked_ship
