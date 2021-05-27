@@ -33,6 +33,17 @@ shot_profiles:
           color1: 'FF0000'
           color2: '00FF00'
           color3: '0000FF'
+  room_1q_super_jackpot:
+    states:
+      - name: lit
+        show: blink_3_colors
+        speed: 2
+        loops: -1
+        sync_ms: 1000
+        show_tokens:
+          color1: 'FFFF00'
+          color2: '00FFFF'
+          color3: 'FF00FF'
 
 
 shots:
@@ -86,7 +97,14 @@ shots:
     switch: s_ramp_enter
     profile: room_1q_jackpot
     enable_events: room_1q_enable_jackpot_shot
-    disable_events: mode_room_1q_impact_zone_started, room_1q_enable_rubble_shots
+    disable_events: mode_room_1q_impact_zone_started, room_1q_enable_rubble_shots, room_1q_enable_super_jackpot_shot, room_1q_collect_jackpot_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+  room_1q_collect_super_jackpot_shot:
+    switch: s_ramp_enter
+    profile: room_1q_super_jackpot
+    enable_events: room_1q_enable_super_jackpot_shot
+    disable_events: mode_room_1q_impact_zone_started, room_1q_enable_rubble_shots, room_1q_enable_jackpot_shot, room_1q_collect_super_jackpot_shot_hit
     show_tokens:
       led: led_enter_ramp
 
@@ -96,8 +114,8 @@ shot_groups:
     shots: room_1q_collect_1_shot, room_1q_collect_2_shot, room_1q_collect_3_shot, room_1q_collect_4_shot
     rotate_left_events: s_left_flipper_active
     rotate_right_events: s_right_flipper_active
-    # reset_events: room_1q_collect_shot_group_lit_complete
-    enable_events: room_1q_enable_rubble_shots
+    reset_events: room_1q_jackpot_collected
+    enable_events: room_1q_enable_rubble_shots, room_1q_super_jackpot_collected
     disable_events: mode_room_1q_impact_zone_ending, room_1q_disable_rubble_shots
 
 
@@ -166,6 +184,8 @@ event_player:
   mode_room_1q_impact_zone_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1q_impact_zone_started_no_charge
   mode_room_1q_impact_zone_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1q_impact_zone_started_charge
   room_1q_collect_shot_group_collected_complete: room_1q_disable_rubble_shots, room_1q_enable_jackpot_shot
+  room_1q_collect_jackpot_shot_hit: room_1q_jackpot_collected
+  room_1q_jackpot_collected: room_1q_enable_super_jackpot_shot
   room_1q_exit_south_shot_hit.1: drop_targets_save
   room_1q_exit_south_shot_hit.2: room_2a_enter
   room_1q_exit_west_shot_hit.1: drop_targets_save
