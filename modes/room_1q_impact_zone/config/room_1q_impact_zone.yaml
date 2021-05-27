@@ -171,6 +171,18 @@ show_player:
   flipper_cradle_release:
     room_1q_impact_zone_status_report:
       action: stop
+  room_1q_collect_1_shot_collectable_hit:
+    special_score_yellow:
+      loops: 0
+  room_1q_collect_2_shot_collectable_hit:
+    special_score_yellow:
+      loops: 0
+  room_1q_collect_3_shot_collectable_hit:
+    special_score_yellow:
+      loops: 0
+  room_1q_collect_4_shot_collectable_hit:
+    special_score_yellow:
+      loops: 0
 
 
 sound_player:
@@ -210,6 +222,7 @@ event_player:
   room_1q_exit_west_shot_hit.1: drop_targets_save
   room_1q_exit_west_shot_hit.2: room_1p_enter
 
+
 variable_player:
   mode_room_1q_impact_zone_started:
     has_chosen_landing_site:
@@ -217,4 +230,24 @@ variable_player:
       action: set
     continue_room:
       string: 1q
+      action: set
+  room_1q_collect_1_shot_collectable_hit:
+    score: (((current_player.area_bonus_nw + 1) * 50000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 50000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1q_collect_2_shot_collectable_hit:
+    score: (((current_player.area_bonus_nw + 1) * 250000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 250000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1q_collect_3_shot_collectable_hit:
+    score: (((current_player.area_bonus_ne + 1) * 200000) + (current_player.wrecked_ship_charge * 21000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_ne + 1) * 200000) + (current_player.wrecked_ship_charge * 21000)) * current_player.multiplier
+      action: set
+  room_1q_collect_4_shot_collectable_hit:
+    score: (((current_player.area_bonus_ne + 1) * 150000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_ne + 1) * 150000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
       action: set
