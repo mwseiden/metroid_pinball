@@ -186,8 +186,11 @@ show_player:
 
 
 sound_player:
+  room_1q_enable_jackpot_shot: shoot_the_back_ramp
+  room_1q_enable_super_jackpot_shot: shoot_the_back_ramp
   room_1q_jackpot_collected: jackpot
   room_1q_super_jackpot_collected: super_jackpot
+  room_1q_enable_rubble_shots: shoot_the_flashing_targets
 
 
 event_player:
