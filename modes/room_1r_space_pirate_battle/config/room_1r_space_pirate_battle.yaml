@@ -275,6 +275,7 @@ show_player:
     room_1r_space_pirate_battle_win_lights:
       loops: 2
       speed: 60
+      priority: 500
 
 widgets:
   room_1r_space_pirate_duck:
