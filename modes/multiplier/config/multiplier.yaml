@@ -76,7 +76,7 @@ show_player:
       key: multiplier_status
       show_tokens:
         led: led_thin_orange
-        color: '80FF00'
+        color: '40FFFF'
   multiplier_charge_level_5:
     blink_light:
       loops: -1
@@ -84,7 +84,7 @@ show_player:
       key: multiplier_status
       show_tokens:
         led: led_thin_orange
-        color: 'FF0000'
+        color: '2080FF'
   multiplier_charge_level_6:
     led_color:
       loops: -1
