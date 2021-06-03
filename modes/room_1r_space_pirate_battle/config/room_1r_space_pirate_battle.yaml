@@ -271,6 +271,10 @@ show_player:
   room_1r_kill_pirates:
     special_score_purple:
       loops: 0
+  logicblock_room_1r_battle_sequence_complete:
+    room_1r_space_pirate_battle_win_lights:
+      loops: 2
+      speed: 60
 
 widgets:
   room_1r_space_pirate_duck:
