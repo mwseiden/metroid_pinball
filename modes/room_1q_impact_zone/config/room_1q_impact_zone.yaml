@@ -183,6 +183,18 @@ show_player:
   room_1q_collect_4_shot_collectable_hit:
     special_score_yellow:
       loops: 0
+  room_1q_jackpot_collected:
+    special_score_red:
+      loops: 0
+    room_1q_jackpot_lights:
+      loops: 0
+      speed: 30
+  room_1q_super_jackpot_collected:
+    special_score_purple:
+      loops: 0
+    room_1q_jackpot_lights:
+      loops: 0
+      speed: 30
 
 
 sounds:
@@ -257,6 +269,19 @@ variable_player:
       action: set
     continue_room:
       string: 1q
+      action: set
+  room_1q_jackpot_collected:
+    room_1q_finished:
+      int: 1
+      action: set
+    score: (((current_player.area_bonus_nw + 1) * 350000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 350000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1q_super_jackpot_collected:
+    score: (((current_player.area_bonus_nw + 1) * 600000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 600000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
       action: set
   room_1q_collect_1_shot_collectable_hit:
     score: (((current_player.area_bonus_nw + 1) * 50000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
