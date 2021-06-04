@@ -181,6 +181,8 @@ player_vars:
     initial_value: 0
   room_1b_victory_step_1:
     initial_value: 0
+  room_1c_shots_hit:
+    initial_value: 0
   room_1d_shots_hit:
     initial_value: 0
   room_1m_captured:
