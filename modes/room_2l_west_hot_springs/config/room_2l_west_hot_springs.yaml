@@ -133,7 +133,10 @@ event_player:
   room_2l_increase_2_shot_hit: room_2l_enable_scoop
   room_2l_increase_3_shot_hit: room_2l_enable_scoop
   room_2l_increase_4_shot_hit: room_2l_enable_scoop
-  room_2l_scoop_shot_hit: room_2p_enter
+  room_2l_scoop_shot_hit:
+    room_2p_enter:
+    cmd_map_complete:
+      room: '2l'
   room_2l_exit_east_shot_hit.1: drop_targets_save
   room_2l_exit_east_shot_hit.2: room_2m_enter
 
