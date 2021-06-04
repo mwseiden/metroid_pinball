@@ -140,8 +140,11 @@ event_player:
   mode_room_1l_entryway_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1l_entryway_started_charge
   metroid_open_doors{current_player.wrecked_ship_powered_up == 0}: room_1l_open_no_charge_doors
   metroid_open_doors{current_player.wrecked_ship_powered_up == 1}: room_1l_open_charge_doors
-  room_1l_exit_east_shot_hit.1: drop_targets_save
-  room_1l_exit_east_shot_hit.2: room_1m_enter
+  room_1l_exit_east_shot_hit.1:
+    cmd_map_complete:
+      room: '1l'
+  room_1l_exit_east_shot_hit.2: drop_targets_save
+  room_1l_exit_east_shot_hit.3: room_1m_enter
   room_1l_exit_west_shot_hit.1: drop_targets_save
   room_1l_exit_west_shot_hit.2: room_1d_enter
   room_1l_exit_south_shot_hit.1: drop_targets_save
