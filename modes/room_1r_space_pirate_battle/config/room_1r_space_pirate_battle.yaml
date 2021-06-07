@@ -471,18 +471,18 @@ sound_player:
 
 event_player:
   room_1r_start_timer:
+    cmd_play_map_music:
+      music: music_brinstar
     room_1r_remove_pirate_1:
     room_1r_remove_pirate_2:
     room_1r_remove_pirate_3:
     room_1r_remove_pirate_4:
-  room_1r_open_exits:
+  room_1r_open_exits: room_1r_once_removed
+  room_1r_once_removed:
     cmd_play_map_music:
       music: music_metal_item_room
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start
-  mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 0}:
-    room_1r_start_timer:
-    cmd_play_map_music:
-      music: music_brinstar
+  mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 0}: room_1r_start_timer
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_finished == 1}: room_1r_open_exits
   room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 0}: room_1r_show_pirate_1, room_1r_show_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
   room_1r_reset_ducks{device.sequences.room_1r_battle_sequence.value == 1}: room_1r_remove_pirate_1, room_1r_show_pirate_2, room_1r_show_pirate_3, room_1r_show_pirate_4
