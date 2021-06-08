@@ -125,6 +125,10 @@ show_player:
     bits_small:
       loops: 0
       priority: 20000
+  twitch_raid:
+    twitch_raid:
+      loops: 0
+      priority: 500
   slide_last_game_high_scores_created:
     attract_water:
       action: stop
