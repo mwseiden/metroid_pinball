@@ -462,6 +462,10 @@ show_player:
       loops: 0
     special_score_red:
       loops: 0
+  room_1j_phantoon_should_die:
+    special_score_red:
+      loops: 0
+
 
 sounds:
   phantoon_hit_strong:
@@ -552,7 +556,10 @@ event_player:
   room_1j_open_eye: room_1j_play_eye_open, mode_room_1j_phantoon_vulnerable
   timer_room_1j_phantoon_vulnerable_timer_complete{current_player.boss_phantoon_hp > 0}: mode_room_1j_phantoon_recovered, room_1j_play_eye_0
   player_boss_phantoon_hp{value <= 0}: room_1j_phantoon_should_die
-  room_1j_phantoon_should_die: phantoon_defeated
+  room_1j_phantoon_should_die:
+    phantoon_defeated:
+    cmd_map_complete:
+      room: '1j'
   phantoon_defeated{device.multiballs.room_1j_phantoon_boss_multiball.balls_added_live == 0}: mode_room_1j_phantoon_open_door
   phantoon_defeated{device.multiballs.room_1j_phantoon_boss_multiball.balls_added_live > 0}: phantoon_enable_victory_laps
   phantoon_defeated: mode_room_1j_phantoon_over, metroid_exclusive_ended, boss_explode
@@ -611,4 +618,10 @@ variable_player:
   room_1j_boss_spinner_shot_hit:
     score: 12340 * current_player.multiplier
     wrecked_ship_charge: 1
-
+  room_1j_phantoon_should_die:
+    score: 1000000 * current_player.multiplier
+    boss_draygon_score: 1000000 * current_player.multiplier
+    room_special_score:
+      int: 1000000 * current_player.multiplier
+      action: set
+    bosses: 1

@@ -41,6 +41,8 @@ player_vars:
     initial_value: 0
   boss_ridley_score:
     initial_value: 0
+  bosses:
+    initial_value: 0
   bridge_bonus:
     initial_value: 0
   bridges:

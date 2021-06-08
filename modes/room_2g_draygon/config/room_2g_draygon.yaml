@@ -423,6 +423,9 @@ show_player:
   multiball_room_2g_draygon_boss_multiball_shoot_again_ended:
     room_2g_ball_save:
       action: stop
+  room_2g_draygon_should_die:
+    special_score_red:
+      loops: 0
 
 
 sounds:
@@ -502,7 +505,10 @@ event_player:
   missile_collected{current_player.boss_draygon_hp > 0}: draygon_hit_missile
   power_bomb_collected{current_player.boss_draygon_hp > 0}: draygon_hit_power_bomb
   player_boss_draygon_hp{value <= 0}: room_2g_draygon_should_die
-  room_2g_draygon_should_die: draygon_defeated
+  room_2g_draygon_should_die:
+    draygon_defeated:
+    cmd_map_complete:
+      room: '2g'
   draygon_defeated{device.multiballs.room_2g_draygon_boss_multiball.balls_added_live == 0}: mode_room_2g_draygon_open_door
   draygon_defeated{device.multiballs.room_2g_draygon_boss_multiball.balls_added_live > 0}: draygon_enable_victory_laps
   draygon_defeated: mode_room_2g_draygon_over, metroid_exclusive_ended, boss_explode
@@ -565,3 +571,11 @@ variable_player:
     room_special_score:
       int: (300000 + (current_player.area_bonus_se * 100000)) * current_player.multiplier
       action: set
+  room_2g_draygon_should_die:
+    score: 1000000 * current_player.multiplier
+    boss_draygon_score: 1000000 * current_player.multiplier
+    room_special_score:
+      int: 1000000 * current_player.multiplier
+      action: set
+    bosses: 1
+
