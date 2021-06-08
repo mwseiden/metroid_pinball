@@ -112,8 +112,13 @@ event_player:
   multiball_room_1r_battle_started: zero_suit_disable_shot
   multiball_twitch_bit_donation_multiball_started: zero_suit_disable_shot
   zero_suit_start_shot_hit: zero_suit_multiball_should_start, metroid_exclusive_started
-  multiball_zero_suit_multiball_ended: metroid_exclusive_ended, zero_suit_reset
-  
+  multiball_zero_suit_multiball_ended: metroid_exclusive_ended, zero_suit_reset, metroid_open_doors, cmd_stop_overlay_music, chozo_multiball_enable
+  zero_suit_multiball_should_start:
+    metroid_close_doors:
+    cmd_play_overlay_music:
+      music: music_zero_suit
+    chozo_multiball_disable:
+
 
 
 variable_player:

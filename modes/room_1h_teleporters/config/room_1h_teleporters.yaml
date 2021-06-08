@@ -192,6 +192,9 @@ event_player:
   timer_room_1h_begin_teleport_countdown_complete: cmd_drop_three_up, cmd_drop_two_down
   timer_room_1h_begin_teleport_countdown_complete{device.switches.s_behind_drop_2.state}: room_1h_ball_locked_for_final_shot
   timer_room_1h_begin_teleport_countdown_complete{not device.switches.s_behind_drop_2.state}: cmd_drop_three_up, cmd_drop_two_down
+  room_1h_start_countdown:
+    cmd_map_complete:
+      room: '1h'
   timer_room_1h_teleport_complete: room_1h_should_teleport
   room_1h_should_teleport:
     cmd_backbox_show_overlay:

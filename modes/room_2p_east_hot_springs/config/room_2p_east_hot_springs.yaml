@@ -2,19 +2,74 @@
 
 mode:
   start_events: room_2p_continue, room_2p_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2o_enter, room_2p_exit
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2o_enter, room_2l_enter, room_2p_exit, hot_spring_room_exit
   priority: 300
+
+shot_profiles:
+  room_2p_scoop:
+    states:
+      - name: lit
+        show: blink_light
+        speed: 2
+        loops: -1
+        sync_ms: 1000
+  room_2p_increase:
+    states:
+      - name: lit
+        show: blink_light
+        loops: -1
+        sync_ms: 1000
 
 shots:
   room_2p_exit_west_shot:
     switch: s_ramp_enter
     profile: exit_door_optimum
     enable_events: metroid_open_doors
-    disable_events: room_2p_exit_west_shot_hit, metroid_close_doors
-    reset_events: room_2p_exit_west_shot_hit
+    disable_events: room_2p_exit_east_shot_hit, metroid_close_doors
+    reset_events: room_2p_exit_east_shot_hit
     show_tokens:
       led: led_enter_ramp
       color: door_blue
+  room_2p_scoop_shot:
+    switch: s_scoop
+    profile: room_2p_scoop
+    enable_events: room_2p_enable_scoop
+    disable_events: mode_room_2p_east_hot_springs_started
+    show_tokens:
+      led: led_enter_scoop
+      color: 'FFFF00'
+  room_2p_increase_1_shot:
+    switch: s_left_passage
+    profile: room_2p_increase
+    reset_events: room_2p_enable_shots
+    enable_events: mode_room_2p_east_hot_springs_started
+    show_tokens:
+      led: led_enter_secret_passage
+      color: 'A040FF'
+  room_2p_increase_2_shot:
+    hit_events: left_orbit_hit
+    profile: room_2p_increase
+    enable_events: room_2p_enable_shots
+    disable_events: mode_room_2p_east_hot_springs_started
+    show_tokens:
+      led: led_enter_left_orbit
+      color: 'C000FF'
+  room_2p_increase_3_shot:
+    switch: s_side_ramp_made
+    profile: room_2p_increase
+    enable_events: room_2p_enable_shots
+    disable_events: mode_room_2p_east_hot_springs_started
+    show_tokens:
+      led: led_enter_side_ramp
+      color: 'FF8ADD'
+  room_2p_increase_4_shot:
+    hit_events: right_orbit_hit
+    profile: room_2p_increase
+    enable_events: room_2p_enable_shots
+    disable_events: mode_room_2p_east_hot_springs_started
+    show_tokens:
+      led: led_enter_right_orbit
+      color: '6900FF'
 
 slides:
   room_2p_east_hot_springs_backglass_slide:
@@ -49,6 +104,19 @@ show_player:
   flipper_cradle_release:
     room_2p_east_hot_springs_status_report:
       action: stop
+  room_2p_increase_1_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_2p_increase_2_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_2p_increase_3_shot_hit:
+    special_score_yellow:
+      loops: 0
+  room_2p_increase_4_shot_hit:
+    special_score_yellow:
+      loops: 0
+
 
 event_player:
   mode_room_2p_east_hot_springs_started:
@@ -61,6 +129,15 @@ event_player:
     cmd_play_map_music:
       music: music_norfair_deep
     metroid_open_doors:
+    room_2p_enable_shots:
+  room_2p_increase_1_shot_hit: room_2p_enable_scoop
+  room_2p_increase_2_shot_hit: room_2p_enable_scoop
+  room_2p_increase_3_shot_hit: room_2p_enable_scoop
+  room_2p_increase_4_shot_hit: room_2p_enable_scoop
+  room_2p_scoop_shot_hit:
+    room_2l_enter:
+    cmd_map_complete:
+      room: '2p'
   room_2p_exit_west_shot_hit.1: drop_targets_save
   room_2p_exit_west_shot_hit.2: room_2o_enter
 
@@ -72,3 +149,27 @@ variable_player:
     continue_room:
       string: 2p
       action: set
+  room_2p_increase_1_shot_hit:
+    score: (100000 + (current_player.area_bonus_w * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_w * 50000)) * current_player.multiplier
+      action: set
+    hot_springs_jackpot_value: 25000
+  room_2p_increase_2_shot_hit:
+    score: (100000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+      action: set
+    hot_springs_jackpot_value: 25000
+  room_2p_increase_3_shot_hit:
+    score: (100000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+      action: set
+    hot_springs_jackpot_value: 25000
+  room_2p_increase_4_shot_hit:
+    score: (100000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_ne * 50000)) * current_player.multiplier
+      action: set
+    hot_springs_jackpot_value: 25000

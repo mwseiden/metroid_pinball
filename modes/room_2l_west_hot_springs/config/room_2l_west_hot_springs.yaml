@@ -4,7 +4,7 @@
 
 mode:
   start_events: room_2l_continue, room_2l_enter
-  stop_events: game_ending, ball_ending, metroid_base_ended, room_2m_enter, room_2l_exit
+  stop_events: game_ending, ball_ending, metroid_base_ended, room_2m_enter, room_2p_enter, room_2l_exit, hot_spring_room_exit
   priority: 300
 
 shot_profiles:
@@ -12,6 +12,7 @@ shot_profiles:
     states:
       - name: lit
         show: blink_light
+        speed: 2
         loops: -1
         sync_ms: 1000
   room_2l_increase:
@@ -34,7 +35,7 @@ shots:
   room_2l_scoop_shot:
     switch: s_scoop
     profile: room_2l_scoop
-    enable_events: room_2l_enable_shots
+    enable_events: room_2l_enable_scoop
     disable_events: mode_room_2l_west_hot_springs_started
     show_tokens:
       led: led_enter_scoop
@@ -42,31 +43,35 @@ shots:
   room_2l_increase_1_shot:
     switch: s_left_passage
     profile: room_2l_increase
-    reset_events: room_2l_enable_shots
+    enable_events: room_2l_enable_shots
+    disable_events: mode_room_2l_west_hot_springs_started
     show_tokens:
       led: led_enter_secret_passage
       color: 'A040FF'
   room_2l_increase_2_shot:
     hit_events: left_orbit_hit
     profile: room_2l_increase
-    reset_events: room_2l_enable_shots
+    enable_events: room_2l_enable_shots
+    disable_events: mode_room_2l_west_hot_springs_started
     show_tokens:
       led: led_enter_left_orbit
       color: 'C000FF'
   room_2l_increase_3_shot:
     switch: s_side_ramp_made
     profile: room_2l_increase
-    reset_events: room_2l_enable_shots
+    enable_events: room_2l_enable_shots
+    disable_events: mode_room_2l_west_hot_springs_started
     show_tokens:
       led: led_enter_side_ramp
-      color: '8020FF'
+      color: 'FF8ADD'
   room_2l_increase_4_shot:
     hit_events: right_orbit_hit
     profile: room_2l_increase
-    reset_events: room_2l_enable_shots
+    enable_events: room_2l_enable_shots
+    disable_events: mode_room_2l_west_hot_springs_started
     show_tokens:
       led: led_enter_right_orbit
-      color: '4080FF'
+      color: '6900FF'
 
 slides:
   room_2l_west_hot_springs_backglass_slide:
@@ -124,6 +129,14 @@ event_player:
       music: music_norfair_deep
     metroid_open_doors:
     room_2l_enable_shots:
+  room_2l_increase_1_shot_hit: room_2l_enable_scoop
+  room_2l_increase_2_shot_hit: room_2l_enable_scoop
+  room_2l_increase_3_shot_hit: room_2l_enable_scoop
+  room_2l_increase_4_shot_hit: room_2l_enable_scoop
+  room_2l_scoop_shot_hit:
+    room_2p_enter:
+    cmd_map_complete:
+      room: '2l'
   room_2l_exit_east_shot_hit.1: drop_targets_save
   room_2l_exit_east_shot_hit.2: room_2m_enter
 

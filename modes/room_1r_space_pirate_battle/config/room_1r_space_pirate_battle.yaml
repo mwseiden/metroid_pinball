@@ -30,6 +30,15 @@ timers:
         action: stop
       - event: logicblock_room_1r_battle_sequence_complete
         action: stop
+  room_1r_delay_music_timer:
+    start_value: 1
+    end_value: 2
+    tick_interval: 0.5s
+    control_events:
+      - event: room_1r_play_music
+        action: restart
+      - event: mode_room_1r_space_pirate_battle_ending
+        action: stop
   room_1r_shoot_space_pirates_timer:
     direction: down
     start_value: 20
@@ -37,7 +46,7 @@ timers:
     tick_interval: 1s
     control_events:
       - event: room_1r_kill_pirates
-        action: start
+        action: restart
       - event: logicblock_room_1r_battle_sequence_complete
         action: stop
       - event: timer_room_1r_shoot_space_pirates_timer_complete
@@ -271,6 +280,11 @@ show_player:
   room_1r_kill_pirates:
     special_score_purple:
       loops: 0
+  logicblock_room_1r_battle_sequence_complete:
+    room_1r_space_pirate_battle_win_lights:
+      loops: 2
+      speed: 60
+      priority: 500
 
 widgets:
   room_1r_space_pirate_duck:
@@ -472,7 +486,8 @@ event_player:
     room_1r_remove_pirate_2:
     room_1r_remove_pirate_3:
     room_1r_remove_pirate_4:
-  room_1r_open_exits:
+  room_1r_open_exits: room_1r_play_music
+  timer_room_1r_delay_music_timer_complete:
     cmd_play_map_music:
       music: music_metal_item_room
   mode_room_1r_space_pirate_battle_started{current_player.room_1r_multiball_started == 0}: room_1r_multiball_should_start

@@ -32,6 +32,7 @@ sound_player:
   music_player_play_music_wrecked_ship: music_wrecked_ship
   music_player_play_music_wrecked_ship_calm: music_wrecked_ship_calm
   music_player_play_music_wrecked_ship_generator: music_wrecked_ship_generator
+  music_player_play_music_zero_suit: music_zero_suit
 
   # stop music
   music_player_stop_music_bao_critical:
@@ -130,6 +131,10 @@ sound_player:
     music_wrecked_ship_generator:
       action: stop
       fade_out: 1s
+  music_player_stop_music_zero_suit:
+    music_zero_suit:
+      action: stop
+      fade_out: 1s
 
   # stop all with long fade out
   stop_all_music:
@@ -191,6 +196,9 @@ sound_player:
       action: stop
       fade_out: 3s
     music_metal_item_room:
+      action: stop
+      fade_out: 3s
+    music_zero_suit:
       action: stop
       fade_out: 3s
     music_bao_main:

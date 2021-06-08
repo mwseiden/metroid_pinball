@@ -140,7 +140,10 @@ event_player:
   room_1s_light_jackpot_1_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot
   room_1s_light_jackpot_2_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot
   room_1s_light_jackpot_3_shot_hit: mode_room_1s_disable_light_jackpot_shots, mode_room_1s_enable_jackpot_shot
-  room_1s_jackpot_shot_hit: mode_room_1s_enable_light_jackpot_shots
+  room_1s_jackpot_shot_hit:
+    mode_room_1s_enable_light_jackpot_shots:
+    cmd_map_complete:
+      room: '1s'
   room_1s_exit_east_shot_hit.1: drop_targets_save
   room_1s_exit_east_shot_hit.2: room_1t_enter
   room_1s_exit_west_shot_hit.1: drop_targets_save

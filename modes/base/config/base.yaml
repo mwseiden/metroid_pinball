@@ -338,7 +338,7 @@ show_player:
         color_1: 'FF0000'
         color_2: '000000'
   twitch_raid:
-    base_twitch_raid:
+    twitch_raid:
       loops: 0
       priority: 500
   flipper_cradle:

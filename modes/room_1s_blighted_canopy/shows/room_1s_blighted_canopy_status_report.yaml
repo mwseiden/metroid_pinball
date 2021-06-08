@@ -8,11 +8,47 @@
         image: room_1s_blighted_canopy_splash
 
 
-- duration: 5s
+- duration: 3s
   slides:
-    room_1s_blighted_canopy_status_slide_help:
+    room_1s_blighted_canopy_status_slide_help_1:
       widgets:
       - type: Text
-        text: NO MODE RULES
-        color: red
+        text: Left Shots Increase
+        color: cyan
         style: dmd_med
+        y: 21
+      - type: Text
+        text: Jackpot Value
+        color: cyan
+        style: dmd_med
+        y: 11
+
+- duration: 3s
+  slides:
+    room_1s_blighted_canopy_status_slide_help_2:
+      widgets:
+      - type: Text
+        text: Collect On
+        color: cyan
+        style: dmd_med
+        y: 21
+      - type: Text
+        text: Side Ramp When Lit
+        color: cyan
+        style: dmd_med
+        y: 11
+
+- duration: 3s
+  slides:
+    room_1s_blighted_canopy_status_slide_help_3:
+      widgets:
+      - type: Text
+        text: Current Jackpot Value
+        color: '00FF80'
+        style: dmd_med
+        y: 21
+      - type: Text
+        text: (player|room_1s_jackpot)
+        color: white
+        style: dmd_med
+        y: 11

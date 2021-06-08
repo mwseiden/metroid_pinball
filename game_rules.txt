@@ -7,6 +7,19 @@
     \__\/ \__\/ \_____\/   \__\/    \_\/ \_\/ \_____\/\________\/ \____/_/ 
                                                                            
 
+
+Apron Card
+
+    Solid Shots Change Modes (Rooms)
+    Flashing Shots Score Points
+    Navigate The Map To Reach The Boss
+    Collect Power Bombs On Right Bank
+    Collect Missiles On Left Bank
+    Light Miniboss On Center Bank
+    Destroy Bridges With Power Bombs
+    Captive Ball Starts Multiball And Closes Doors
+
+
 Starting The Game
 
     When you first start a ball you will be asked to choose your landing site.
@@ -113,6 +126,14 @@ Base Game Mechanics
     Orbits:
         Scores points. There is an Orbit Champ that you can win for the most
         orbit hits.
+
+    Charge Target:
+        Hitting the charge target will add 1 to your playfield charge value
+        and resets a 15 second timer. When the charge value hits 3 then you
+        start 2X playfield multiplier. When the charge value hits 6 then you
+        start 3X playfield multiplier. If the timer runs out then 1 is
+        subtracted from your playfield charge and the multiplier is reduced
+        if it goes below 3 or 6.
 
     Zero Suit Target:
         Scores points. If you can shatz the target then Samus will give you

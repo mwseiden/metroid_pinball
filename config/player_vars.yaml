@@ -41,6 +41,8 @@ player_vars:
     initial_value: 0
   boss_ridley_score:
     initial_value: 0
+  bosses:
+    initial_value: 0
   bridge_bonus:
     initial_value: 0
   bridges:
@@ -116,7 +118,7 @@ player_vars:
   high_jump_bonus:
     initial_value: 0
   hot_springs_jackpot_value:
-    initial_value: 100000
+    initial_value: 123400
   kickbacks:
     initial_value: 0
   kickback_active:
@@ -181,7 +183,11 @@ player_vars:
     initial_value: 0
   room_1b_victory_step_1:
     initial_value: 0
+  room_1c_shots_hit:
+    initial_value: 0
   room_1d_shots_hit:
+    initial_value: 0
+  room_1k_shots_hit:
     initial_value: 0
   room_1m_captured:
     initial_value: 0
@@ -190,6 +196,8 @@ player_vars:
   room_1n_robots_2:
     initial_value: 0
   room_1n_robots_3:
+    initial_value: 0
+  room_1n_total_robots:
     initial_value: 0
   room_1s_jackpot:
     initial_value: 0

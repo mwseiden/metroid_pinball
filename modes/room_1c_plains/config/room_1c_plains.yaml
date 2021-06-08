@@ -146,6 +146,9 @@ event_player:
     cmd_play_map_music:
       music: music_crateria_central
     metroid_open_doors:
+  player_room_1c_shots_hit{value == 8}:
+    cmd_map_complete:
+      room: '1c'
   room_1c_exit_west_shot_hit.1: drop_targets_save
   room_1c_exit_west_shot_hit.2: room_1b_enter
   room_1c_exit_east_shot_hit.1: drop_targets_save
@@ -162,21 +165,25 @@ variable_player:
       int: 1
       action: set
   room_1c_bank_1_shot_hit:
+    room_1c_shots_hit: 1
     score: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
     room_special_score:
       int: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
       action: set
   room_1c_bank_2_shot_hit:
+    room_1c_shots_hit: 1
     score: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
     room_special_score:
       int: (5000 + current_player.crateria_shot_bonus) * current_player.multiplier
       action: set
   room_1c_bank_3_shot_hit:
+    room_1c_shots_hit: 1
     score: (1000 + current_player.crateria_shot_bonus) * current_player.multiplier
     room_special_score:
       int: (1000 + current_player.crateria_shot_bonus) * current_player.multiplier
       action: set
   room_1c_bank_4_shot_hit:
+    room_1c_shots_hit: 1
     score: (10000 + current_player.crateria_shot_bonus) * current_player.multiplier
     room_special_score:
       int: (10000 + current_player.crateria_shot_bonus) * current_player.multiplier

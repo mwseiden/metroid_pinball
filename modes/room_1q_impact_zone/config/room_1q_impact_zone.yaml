@@ -7,6 +7,55 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1p_enter, room_2a_enter, room_1q_exit
   priority: 300
 
+
+timers:
+  room_1q_super_jackpot_timeout:
+    start_value: 1
+    end_value: 13
+    tick_interval: 1.0s
+    control_events:
+      - event: room_1q_enable_super_jackpot_shot
+        action: restart
+
+
+shot_profiles:
+  room_1q_collect:
+    states:
+      - name: collectable
+        show: blink_light
+        speed: 2
+        loops: -1
+        sync_ms: 1000
+        show_tokens:
+          color: 'FF5840'
+      - name: collected
+        show: led_color
+        show_tokens:
+          color: 'FF5840'
+  room_1q_jackpot:
+    states:
+      - name: lit
+        show: blink_3_colors
+        speed: 2
+        loops: -1
+        sync_ms: 1000
+        show_tokens:
+          color1: 'FF0000'
+          color2: '00FF00'
+          color3: '0000FF'
+  room_1q_super_jackpot:
+    states:
+      - name: lit
+        show: blink_3_colors
+        speed: 4
+        loops: -1
+        sync_ms: 1000
+        show_tokens:
+          color1: 'FFFF00'
+          color2: '00FFFF'
+          color3: 'FF00FF'
+
+
 shots:
   room_1q_exit_south_shot:
     switch: s_scoop
@@ -26,6 +75,59 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
+  room_1q_collect_1_shot:
+    switch: s_ramp_enter
+    profile: room_1q_collect
+    enable_events: room_1q_enable_rubble_shots
+    disable_events: mode_room_1q_impact_zone_started, room_1q_disable_rubble_shots
+    show_tokens:
+      led: led_enter_ramp
+  room_1q_collect_2_shot:
+    hit_events: left_orbit_hit
+    profile: room_1q_collect
+    enable_events: room_1q_enable_rubble_shots
+    disable_events: mode_room_1q_impact_zone_started, room_1q_disable_rubble_shots
+    show_tokens:
+      led: led_enter_left_orbit
+  room_1q_collect_3_shot:
+    switch: s_side_ramp_made
+    profile: room_1q_collect
+    enable_events: room_1q_enable_rubble_shots
+    disable_events: mode_room_1q_impact_zone_started, room_1q_disable_rubble_shots
+    show_tokens:
+      led: led_enter_side_ramp
+  room_1q_collect_4_shot:
+    hit_events: right_orbit_hit
+    profile: room_1q_collect
+    enable_events: room_1q_enable_rubble_shots
+    disable_events: mode_room_1q_impact_zone_started, room_1q_disable_rubble_shots
+    show_tokens:
+      led: led_enter_right_orbit
+  room_1q_collect_jackpot_shot:
+    switch: s_ramp_enter
+    profile: room_1q_jackpot
+    enable_events: room_1q_enable_jackpot_shot
+    disable_events: mode_room_1q_impact_zone_started, room_1q_enable_rubble_shots, room_1q_enable_super_jackpot_shot, room_1q_collect_jackpot_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+  room_1q_collect_super_jackpot_shot:
+    switch: s_ramp_enter
+    profile: room_1q_super_jackpot
+    enable_events: room_1q_enable_super_jackpot_shot
+    disable_events: mode_room_1q_impact_zone_started, room_1q_enable_rubble_shots, room_1q_enable_jackpot_shot, room_1q_collect_super_jackpot_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+
+
+shot_groups:
+  room_1q_collect_shot_group:
+    shots: room_1q_collect_1_shot, room_1q_collect_2_shot, room_1q_collect_3_shot, room_1q_collect_4_shot
+    rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+    reset_events: room_1q_jackpot_collected
+    enable_events: room_1q_enable_rubble_shots, room_1q_super_jackpot_collected
+    disable_events: mode_room_1q_impact_zone_ending, room_1q_disable_rubble_shots
+
 
 slides:
   room_1q_impact_zone_backglass_slide:
@@ -69,6 +171,65 @@ show_player:
   flipper_cradle_release:
     room_1q_impact_zone_status_report:
       action: stop
+  room_1q_collect_1_shot_collectable_hit:
+    special_score_yellow:
+      loops: 0
+  room_1q_collect_2_shot_collectable_hit:
+    special_score_yellow:
+      loops: 0
+  room_1q_collect_3_shot_collectable_hit:
+    special_score_yellow:
+      loops: 0
+  room_1q_collect_4_shot_collectable_hit:
+    special_score_yellow:
+      loops: 0
+  room_1q_jackpot_collected:
+    special_score_red:
+      loops: 0
+    room_1q_jackpot_lights:
+      loops: 0
+      speed: 30
+      priority: 500
+  room_1q_super_jackpot_collected:
+    special_score_purple:
+      loops: 0
+    room_1q_jackpot_lights:
+      loops: 0
+      speed: 30
+      priority: 500
+
+
+sounds:
+  1q_impact_zone_rubble:
+    file: 1q_impact_zone_rubble.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  1q_impact_zone_jackpot:
+    file: 1q_impact_zone_jackpot.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  1q_impact_zone_super_jackpot:
+    file: 1q_impact_zone_super_jackpot.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+
+sound_player:
+  room_1q_enable_jackpot_shot: shoot_the_back_ramp
+  room_1q_enable_super_jackpot_shot: shoot_the_back_ramp
+  room_1q_jackpot_collected: jackpot
+  room_1q_super_jackpot_collected: super_jackpot
+  room_1q_enable_rubble_shots: shoot_the_flashing_targets
+  room_1q_collect_shot_group_collectable_hit: 1q_impact_zone_rubble
+  room_1q_collect_jackpot_shot_hit: 1q_impact_zone_jackpot
+  room_1q_collect_super_jackpot_shot_hit: 1q_impact_zone_super_jackpot
+
 
 event_player:
   mode_room_1q_impact_zone_started:
@@ -82,6 +243,7 @@ event_player:
       room: '1q'
       visit: True
     metroid_open_doors:
+    room_1q_enable_rubble_shots:
   mode_room_1q_impact_zone_started_no_charge:
     cmd_play_map_music:
       music: music_wrecked_ship
@@ -90,10 +252,20 @@ event_player:
       music: music_wrecked_ship_generator
   mode_room_1q_impact_zone_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1q_impact_zone_started_no_charge
   mode_room_1q_impact_zone_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1q_impact_zone_started_charge
+  room_1q_collect_shot_group_collected_complete: room_1q_disable_rubble_shots
+  room_1q_disable_rubble_shots: room_1q_enable_jackpot_shot
+  room_1q_collect_jackpot_shot_hit: room_1q_jackpot_collected
+  room_1q_collect_super_jackpot_shot_hit: room_1q_super_jackpot_collected
+  room_1q_jackpot_collected:
+    room_1q_enable_super_jackpot_shot:
+    cmd_map_complete:
+      room: '1q'
+  timer_room_1q_super_jackpot_timeout_complete: room_1q_enable_rubble_shots
   room_1q_exit_south_shot_hit.1: drop_targets_save
   room_1q_exit_south_shot_hit.2: room_2a_enter
   room_1q_exit_west_shot_hit.1: drop_targets_save
   room_1q_exit_west_shot_hit.2: room_1p_enter
+
 
 variable_player:
   mode_room_1q_impact_zone_started:
@@ -102,4 +274,34 @@ variable_player:
       action: set
     continue_room:
       string: 1q
+      action: set
+  room_1q_jackpot_collected:
+    score: (((current_player.area_bonus_nw + 1) * 350000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 350000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1q_super_jackpot_collected:
+    score: (((current_player.area_bonus_nw + 1) * 600000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 600000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1q_collect_1_shot_collectable_hit:
+    score: (((current_player.area_bonus_nw + 1) * 50000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 50000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1q_collect_2_shot_collectable_hit:
+    score: (((current_player.area_bonus_nw + 1) * 250000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_nw + 1) * 250000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1q_collect_3_shot_collectable_hit:
+    score: (((current_player.area_bonus_ne + 1) * 200000) + (current_player.wrecked_ship_charge * 21000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_ne + 1) * 200000) + (current_player.wrecked_ship_charge * 21000)) * current_player.multiplier
+      action: set
+  room_1q_collect_4_shot_collectable_hit:
+    score: (((current_player.area_bonus_ne + 1) * 150000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (((current_player.area_bonus_ne + 1) * 150000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
       action: set

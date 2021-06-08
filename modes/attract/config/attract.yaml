@@ -90,6 +90,12 @@ show_player:
       action: stop
     lights_boss_kraid:
       action: stop
+    attract_classic:
+      action: stop
+    attract_classic_boss:
+      action: stop
+    attract_classic_bao:
+      action: stop
     attract_display_loop:
       priority: 100
       manual_advance: false
@@ -125,6 +131,10 @@ show_player:
     bits_small:
       loops: 0
       priority: 20000
+  twitch_raid:
+    twitch_raid:
+      loops: 0
+      priority: 500
   slide_last_game_high_scores_created:
     attract_water:
       action: stop
@@ -159,14 +169,22 @@ show_player:
       show_tokens:
         boss: phantoon
   slide_boss_kraid_score_champ_score_created:
+    attract_classic_bao:
+      action: stop
     attract_classic_boss:
       loops: -1
       show_tokens:
         boss: kraid
   slide_bao_reactor_champ_score_created:
+    attract_classic_bao:
+      loops: -1
+      speed: 30
     attract_classic_boss:
       action: stop
   slide_bao_score_champ_score_created:
+    attract_classic_bao:
+      loops: -1
+      speed: 30
     attract_lights_press_start_gi:
       action: stop
     attract_lights_press_start:
@@ -175,6 +193,8 @@ show_player:
       loops: -1
   slide_press_start_created:
     attract_classic:
+      action: stop
+    attract_classic_bao:
       action: stop
     attract_lights_fast_logo_gi:
       action: stop
@@ -384,6 +404,29 @@ event_player:
   slide_last_game_high_scores_created:
     cmd_backbox_show:
       show_type: rainbow
+  slide_attract_high_scores_created:
+    cmd_backbox_show:
+      show_type: rainbow
+  slide_spin_champ_score_created:
+    cmd_backbox_show:
+      show_type: rainbow_cycle
+      increment: 1
+  slide_rooms_completed_champ_score_created:
+    cmd_backbox_show:
+      show_type: rainbow_cycle
+      increment: 1
+  slide_boss_ridley_score_champ_score_created:
+    cmd_backbox_show:
+      show_type: theater_chase_rainbow
+      speed: 3
+      spacing: 4
+      increment: 13
+  slide_bao_score_champ_score_created:
+    cmd_backbox_show:
+      show_type: theater_chase_rainbow
+      speed: 3
+      spacing: 4
+      increment: 13
   slide_fast_logo_created:
     cmd_backbox_show:
       show_type: two_tone

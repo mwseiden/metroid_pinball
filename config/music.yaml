@@ -201,6 +201,15 @@ sounds:
     loops: -1
     simultaneous_limit: 1
     stealing_method: skip
+  music_zero_suit:
+    file: music_zero_suit.wav
+    #streaming: True
+    track: music
+    priority: 50
+    #max_queue_time: 1s
+    loops: -1
+    simultaneous_limit: 1
+    stealing_method: skip
   music_bao_main:
     file: music_bao_main.wav
     #streaming: True

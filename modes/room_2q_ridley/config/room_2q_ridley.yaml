@@ -399,7 +399,10 @@ event_player:
   missile_collected{current_player.boss_ridley_hp > 0}: ridley_hit_missile
   power_bomb_collected{current_player.boss_ridley_hp > 0}: ridley_hit_power_bomb
   player_boss_ridley_hp{value <= 0}: room_2q_ridley_should_die
-  room_2q_ridley_should_die: ridley_defeated
+  room_2q_ridley_should_die:
+    ridley_defeated:
+    cmd_map_complete:
+      room: '2q'
   ridley_defeated{device.multiballs.room_2q_ridley_boss_multiball.balls_added_live == 0}: mode_room_2q_ridley_open_door
   ridley_defeated{device.multiballs.room_2q_ridley_boss_multiball.balls_added_live > 0}: ridley_enable_victory_laps
   ridley_defeated: mode_room_2q_ridley_over, metroid_exclusive_ended, boss_explode
@@ -496,3 +499,4 @@ variable_player:
     room_special_score:
       int: 1000000 * current_player.multiplier
       action: set
+    bosses: 1

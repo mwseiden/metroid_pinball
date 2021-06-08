@@ -101,6 +101,13 @@ shots:
     show_tokens:
       led: led_pop_1
 
+shot_groups:
+  room_1f_pop_shot_group:
+    shots: room_1f_pop_1_shot, room_1f_pop_2_shot, room_1f_pop_3_shot
+    enable_events: mode_room_1f_mushroom_chamber_started
+    disable_events: mode_room_1f_mushroom_chamber_ending
+    reset_events: mode_room_1f_mushroom_chamber_started
+
 slides:
   room_1f_mushroom_chamber_backglass_slide:
     widgets:
@@ -192,6 +199,9 @@ event_player:
   room_1f_pop_1_shot_final_stage_hit: room_1f_score_final_stage
   room_1f_pop_2_shot_final_stage_hit: room_1f_score_final_stage
   room_1f_pop_3_shot_final_stage_hit: room_1f_score_final_stage
+  room_1f_pop_shot_group_final_stage_completed:
+    cmd_map_complete:
+      room: '1f'
 
 variable_player:
   mode_room_1f_mushroom_chamber_started:

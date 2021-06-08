@@ -488,7 +488,10 @@ event_player:
   missile_collected{current_player.boss_kraid_hp > 0}: kraid_hit_missile
   power_bomb_collected{current_player.boss_kraid_hp > 0}: kraid_hit_power_bomb
   player_boss_kraid_hp{value <= 0}: room_1x_kraid_should_die
-  room_1x_kraid_should_die: kraid_defeated
+  room_1x_kraid_should_die:
+    kraid_defeated:
+    cmd_map_complete:
+      room: '1x'
   kraid_defeated{device.multiballs.room_1x_kraid_boss_multiball.balls_added_live == 0}: mode_room_1x_kraid_open_door
   kraid_defeated{device.multiballs.room_1x_kraid_boss_multiball.balls_added_live > 0}: kraid_enable_victory_laps
   kraid_defeated: mode_room_1x_kraid_over, metroid_exclusive_ended, boss_explode
@@ -596,3 +599,4 @@ variable_player:
     room_special_score:
       int: 1000000 * current_player.multiplier
       action: set
+    bosses: 1
