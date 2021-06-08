@@ -22,7 +22,7 @@ mode_settings:
       score: 10000 * current_player.rooms_visited
     - event: bonus_rooms_completed
       score: 25000 * current_player.rooms_completed
-    - event: bosses
+    - event: bonus_bosses
       score: 100000 * current_player.bosses
     - event: bonus_drop_targets
       score: 1000 * current_player.drops
