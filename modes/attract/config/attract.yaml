@@ -90,6 +90,10 @@ show_player:
       action: stop
     lights_boss_kraid:
       action: stop
+    attract_classic:
+      action: stop
+    attract_classic_boss:
+      action: stop
     attract_display_loop:
       priority: 100
       manual_advance: false
