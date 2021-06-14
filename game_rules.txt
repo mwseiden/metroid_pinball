@@ -42,7 +42,8 @@ Starting The Game
 Skillshots
 
     Side Targets:
-        Shooting the flashing orange side bank awards points.
+        Shooting the flashing orange side bank awards points and increases
+        the value of destroying bridges.
 
     Missile Targets:
         Shooting the left missile bank roving light will award points and one
@@ -945,9 +946,18 @@ Rooms (Modes)
 
         Impact Zone [Q]:
 
-            Rules unimplemented
+            Sift through the rubble. Four shots flashing. Hitting one will
+            light it solid. You can use the flipper buttons to rotate the
+            available shots.
+
+            A jackpot shot will become available on the back ramp once all
+            four shot lights are lit solid.
+
+            A super jackpot shot will be lit for a limited time on the back
+            ramp after the jackpot is collected.
 
             Completion:
+                Collect a jackpot.
 
             Doors:
                 Back Ramp (Blue) -> Cargo Bay [P]
