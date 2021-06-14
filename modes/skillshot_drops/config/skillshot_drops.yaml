@@ -155,7 +155,7 @@ event_player:
   timer_skillshot_drops_test_middle_locked_complete{not device.switches.s_behind_drop_1.state}: skillshot_drops_failed
 
 show_player:
-  skillshot_drops_enable_1:
+  timer_skillshot_drops_first_up_started:
     blink_light:
       key: skillshot_drops_blink_1
       loops: -1
@@ -166,7 +166,7 @@ show_player:
   timer_skillshot_drops_first_up_stopped:
     skillshot_drops_blink_1:
       action: stop
-  skillshot_drops_enable_2:
+  timer_skillshot_drops_second_up_started:
     blink_light:
       key: skillshot_drops_blink_2
       loops: -1
@@ -177,7 +177,7 @@ show_player:
   timer_skillshot_drops_second_up_stopped:
     skillshot_drops_blink_2:
       action: stop
-  skillshot_drops_enable_3:
+  timer_skillshot_drops_third_up_started:
     blink_light:
       key: skillshot_drops_blink_3
       loops: -1
