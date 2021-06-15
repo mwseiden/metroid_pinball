@@ -39,6 +39,15 @@ shot_profiles:
     - name: lit
       show: blink_3_lights
       loops: -1
+  room_1z_increase:
+    states:
+      - name: lit
+        show: two_color_blink
+        loops: -1
+        speed: 5
+        show_tokens:
+          color1: '2080FF'
+          color2: 'FF2020'
 
 
 shots:
@@ -66,6 +75,14 @@ shots:
     enable_events: room_1z_enable_skree
     disable_events: mode_room_1z_underground_desert_started, room_1z_drop_skree_shot_hit
     reset_events: mode_room_1z_underground_desert_started, room_1z_drop_skree_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+  room_1z_increase_value_shot:
+    switches: s_ramp_enter
+    profile: room_1z_increase
+    enable_events: room_1z_start_timer
+    disable_events: mode_room_1z_underground_desert_started, room_1z_stop_timer, room_1z_enable_skree
+    reset_events: mode_room_1z_underground_desert_started, room_1z_stop_timer, room_1z_enable_skree
     show_tokens:
       led: led_enter_ramp
   room_1z_upper_skree_shot:
