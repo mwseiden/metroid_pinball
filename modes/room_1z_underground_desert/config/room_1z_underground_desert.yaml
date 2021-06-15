@@ -155,6 +155,15 @@ show_player:
   flipper_cradle_release:
     room_1z_underground_desert_status_report:
       action: stop
+  room_1z_upper_skree_shot_hit:
+    special_score_green:
+      loops: 0
+  room_1z_lower_skree_1_shot_hit:
+    special_score_purple:
+      loops: 0
+  room_1z_lower_skree_2_shot_hit:
+    special_score_purple:
+      loops: 0
 
 event_player:
   mode_room_1z_underground_desert_started:
@@ -188,4 +197,23 @@ variable_player:
   mode_room_1z_underground_desert_started:
     continue_room:
       string: 1z
+      action: set
+  room_1z_drop_skree_shot_hit:
+    room_1z_jackpot: (100000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+  room_1z_increase_value_shot_hit:
+    room_1z_jackpot: (50000 * current_player.multiplier) + (current_player.area_bonus_nw * 50000)
+  room_1z_upper_skree_shot_hit:
+    score: current_player.room_1z_jackpot * current_player.multiplier
+    room_special_score:
+      int: current_player.room_1z_jackpot * current_player.multiplier
+      action: set
+  room_1z_lower_skree_1_shot_hit:
+    score: (current_player.room_1z_jackpot * current_player.multiplier) / 2
+    room_special_score:
+      int: (current_player.room_1z_jackpot * current_player.multiplier) / 2
+      action: set
+  room_1z_lower_skree_2_shot_hit:
+    score: (current_player.room_1z_jackpot * current_player.multiplier) / 2
+    room_special_score:
+      int: (current_player.room_1z_jackpot * current_player.multiplier) / 2
       action: set
