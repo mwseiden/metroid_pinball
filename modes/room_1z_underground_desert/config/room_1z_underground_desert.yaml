@@ -8,6 +8,19 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2a_enter, room_2d_enter, room_1z_exit
   priority: 300
 
+
+shot_profiles:
+  room_1z_drop_skree:
+    states:
+      - name: lit
+        show: two_color_blink
+        loops: -1
+        speed: 5
+        show_tokens:
+          color1: '10FF40'
+          color2: 'FF7000'
+
+
 shots:
   room_1z_exit_east_shot:
     hit_events: right_orbit_hit
@@ -27,6 +40,14 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
+  room_1z_drop_skree_shot:
+    switches: s_ramp_enter
+    profile: room_1z_drop_skree
+    enable_events: room_1z_enable_skree
+    disable_events: mode_room_1z_underground_desert_started, room_1z_drop_skree_shot_hit
+    reset_events: mode_room_1z_underground_desert_started, room_1z_drop_skree_shot_hit
+    show_tokens:
+      led: led_enter_ramp
 
 slides:
   room_underground_desert_backglass_slide:
@@ -77,6 +98,7 @@ event_player:
     cmd_play_map_music:
       music: music_maridia_intro
     metroid_open_doors:
+    room_1z_enable_skree:
   room_1z_exit_east_shot_hit.1: drop_targets_save
   room_1z_exit_east_shot_hit.2: room_2a_enter
   room_1z_exit_south_shot_hit.1: drop_targets_save
