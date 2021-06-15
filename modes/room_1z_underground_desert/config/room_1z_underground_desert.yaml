@@ -21,6 +21,8 @@ timers:
         action: stop
       - event: mode_room_1z_underground_desert_ending
         action: stop
+      - event: room_1z_stop_timer
+        action: stop
 
 shot_profiles:
   room_1z_drop_skree:
@@ -76,7 +78,7 @@ shots:
       led_1: led_upgrade_bank_1
       led_2: led_upgrade_bank_2
       led_3: led_upgrade_bank_3
-      color_1: '808010'
+      color_1: '00FF00'
       color_2: stop
   room_1z_lower_skree_1_shot:
     switch: s_missile_bank_1, s_missile_bank_2, s_missile_bank_3
@@ -88,7 +90,7 @@ shots:
       led_1: led_missile_bank_1
       led_2: led_missile_bank_2
       led_3: led_missile_bank_3
-      color_1: '808010'
+      color_1: 'AF70A0'
       color_2: stop
   room_1z_lower_skree_2_shot:
     switch: s_lower_right_bank_1, s_lower_right_bank_2, s_lower_right_bank_3
@@ -100,7 +102,7 @@ shots:
       led_1: led_bomb_bank_1
       led_2: led_bomb_bank_2
       led_3: led_bomb_bank_3
-      color_1: '808010'
+      color_1: 'AF70A0'
       color_2: stop
 
 slides:
@@ -156,6 +158,10 @@ event_player:
   room_1z_drop_skree_shot_hit: room_1z_start_timer, room_1z_enable_upper_skree
   timer_room_1z_skree_timer_tick{ticks == 8}: room_1z_enable_lower_skree
   timer_room_1z_skree_timer_complete: room_1z_enable_skree
+  room_1z_upper_skree_shot_hit: room_1z_stop_timer
+  room_1z_lower_skree_shot_1_hit: room_1z_stop_timer
+  room_1z_lower_skree_shot_2_hit: room_1z_stop_timer
+  room_1z_stop_timer: room_1z_enable_skree
   room_1z_exit_east_shot_hit.1: drop_targets_save
   room_1z_exit_east_shot_hit.2: room_2a_enter
   room_1z_exit_south_shot_hit.1: drop_targets_save
