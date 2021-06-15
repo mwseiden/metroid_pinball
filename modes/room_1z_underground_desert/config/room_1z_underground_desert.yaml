@@ -156,7 +156,10 @@ show_player:
     room_1z_underground_desert_status_report:
       action: stop
   room_1z_upper_skree_shot_hit:
-    special_score_green:
+    room_1z_jackpot_increase:
+      loops: 0
+  room_1z_increase_value_shot_hit:
+    room_1z_jackpot_increase:
       loops: 0
   room_1z_lower_skree_1_shot_hit:
     special_score_purple:
