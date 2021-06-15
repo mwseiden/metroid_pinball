@@ -1,6 +1,6 @@
 #show_version=5
 
-- duration: 1.5s
+- duration: 1.75s
   slides:
     special_score_purple_highlight_slide:
       widgets:
@@ -8,12 +8,12 @@
         text: JACKPOT NOW
         color: 'FFFFFF'
         style: dmd_big
-        y: 18
+        y: 20
       - type: text
         text: (player|room_1z_jackpot)
         color: '2080FF'
         style: dmd_big
-        y: 10
+        y: 8
         animations:
           pre_show_slide:
             - property: opacity
