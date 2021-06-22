@@ -161,6 +161,11 @@ show_player:
   flipper_cradle_release:
     room_2j_lake_of_fire_status_report:
       action: stop
+  room_2j_collect_shots_good_hit:
+    room_2j_correct_hit:
+      speed: 30
+      loops: 0
+
 
 event_player:
   mode_room_2j_lake_of_fire_started:
