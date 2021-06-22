@@ -7,6 +7,7 @@ mode:
 
 shot_profiles:
   room_2j_mode_shot:
+    advance_on_hit: False
     states:
       - name: bad
         show: two_color_blink
@@ -22,6 +23,14 @@ shot_profiles:
         show_tokens:
           color1: 'FFFF00'
           color2: 'FFA000'
+  room_2j_advance_shot:
+    states:
+      - name: lit
+        show: small_theater_chase
+        loops: -1
+        speed: 2
+        show_tokens:
+          color: 'FFFFFF'
 
 
 shots:
@@ -64,6 +73,23 @@ shots:
     profile: room_2j_mode_shot
     show_tokens:
       led: led_enter_side_ramp
+  room_2j_advance_shot_1:
+    hit_events: left_sling_shot_hit
+    profile: room_2j_advance_shot
+    show_tokens:
+      led1: gi_left_sling_bottom
+      led2: gi_left_sling_top
+      led3: led_null
+      led4: led_null
+  room_2j_advance_shot_2:
+    hit_events: right_sling_shot_hit
+    profile: room_2j_advance_shot
+    show_tokens:
+      led1: gi_right_sling_bottom
+      led2: gi_right_sling_top
+      led3: led_null
+      led4: led_null
+
 
 
 shot_groups:
@@ -72,6 +98,7 @@ shot_groups:
     enable_events: mode_room_2j_lake_of_fire_started
     disable_events: mode_room_2j_lake_of_fire_ending
     reset_events: mode_room_2j_lake_of_fire_started
+    rotate_events: room_2j_rotate
 
 
 slides:
@@ -120,6 +147,8 @@ event_player:
       music: music_norfair
     metroid_open_doors:
     room_2j_light_first_shot:
+  room_2j_advance_shot_1_hit: room_2j_rotate
+  room_2j_advance_shot_2_hit: room_2j_rotate
   room_2j_exit_west_shot_hit.1: drop_targets_save
   room_2j_exit_west_shot_hit.2: room_2i_enter
   room_2j_exit_east_shot_hit.1: drop_targets_save
