@@ -28,7 +28,7 @@ shot_profiles:
       - name: lit
         show: small_theater_chase
         loops: -1
-        speed: 2
+        speed: 40
         priority: 100
         show_tokens:
           color: 'FFFFFF'
@@ -78,18 +78,22 @@ shots:
     hit_events: left_sling_shot_hit
     profile: room_2j_advance_shot
     show_tokens:
-      led1: gi_left_sling_bottom
-      led2: gi_left_sling_top
-      led3: led_null
-      led4: led_null
+      led_1: gi_left_sling_bottom
+      led_2: gi_left_sling_top
+      led_3: led_null
+      led_4: led_null
+      led_5: gi_left_sling_top
+      led_6: gi_left_sling_bottom
   room_2j_advance_shot_2:
     hit_events: right_sling_shot_hit
     profile: room_2j_advance_shot
     show_tokens:
-      led1: gi_right_sling_bottom
-      led2: gi_right_sling_top
-      led3: led_null
-      led4: led_null
+      led_1: gi_right_sling_bottom
+      led_2: gi_right_sling_top
+      led_3: led_null
+      led_4: led_null
+      led_5: gi_left_sling_top
+      led_6: gi_left_sling_bottom
 
 
 
