@@ -29,6 +29,7 @@ shot_profiles:
         show: small_theater_chase
         loops: -1
         speed: 2
+        priority: 100
         show_tokens:
           color: 'FFFFFF'
 
