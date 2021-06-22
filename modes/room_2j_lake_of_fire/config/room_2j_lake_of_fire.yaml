@@ -4,6 +4,26 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter, room_2k_enter, room_2j_exit
   priority: 300
 
+
+shot_profiles:
+  room_2j_mode_shot:
+    states:
+      - name: bad
+        show: two_color_blink
+        loops: -1
+        speed: 2
+        show_tokens:
+          color1: 'FF0000'
+          color2: '804000'
+      - name: good
+        show: two_color_blink
+        loops: -1
+        speed: 1
+        show_tokens:
+          color1: 'FFFF00'
+          color2: 'FFA000'
+
+
 shots:
   room_2j_exit_west_shot:
     hit_events: left_orbit_hit
@@ -23,6 +43,35 @@ shots:
     show_tokens:
       led: led_enter_ramp
       color: door_blue
+  room_2j_shot_1:
+    switch: s_scoop
+    profile: room_2j_mode_shot
+    advance_events: room_2j_light_first_shot
+    show_tokens:
+      led: led_enter_scoop
+  room_2j_shot_2:
+    switch: s_left_passage
+    profile: room_2j_mode_shot
+    show_tokens:
+      led: led_enter_secret_passage
+  room_2j_shot_3:
+    switch: right_orbit_hit
+    profile: room_2j_mode_shot
+    show_tokens:
+      led: led_enter_right_orbit
+  room_2j_shot_4:
+    switch: s_side_ramp_made
+    profile: room_2j_mode_shot
+    show_tokens:
+      led: led_enter_side_ramp
+
+
+shot_groups:
+  room_2j_collect_shots:
+    shots: room_2j_shot_1, room_2j_shot_2, room_2j_shot_3, room_2j_shot_4
+    enable_events: mode_room_2j_lake_of_fire_started
+    disable_events: mode_room_2j_lake_of_fire_ending
+    reset_events: mode_room_2j_lake_of_fire_started
 
 
 slides:
@@ -70,6 +119,7 @@ event_player:
     cmd_play_map_music:
       music: music_norfair
     metroid_open_doors:
+    room_2j_light_first_shot:
   room_2j_exit_west_shot_hit.1: drop_targets_save
   room_2j_exit_west_shot_hit.2: room_2i_enter
   room_2j_exit_east_shot_hit.1: drop_targets_save
