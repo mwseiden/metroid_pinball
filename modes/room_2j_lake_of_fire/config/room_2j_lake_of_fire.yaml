@@ -55,7 +55,7 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
   room_2j_shot_3:
-    switch: right_orbit_hit
+    hit_events: right_orbit_hit
     profile: room_2j_mode_shot
     show_tokens:
       led: led_enter_right_orbit
