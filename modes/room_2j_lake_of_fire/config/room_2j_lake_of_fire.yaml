@@ -14,8 +14,8 @@ shot_profiles:
         loops: -1
         speed: 2
         show_tokens:
-          color1: 'FFFF00'
-          color2: 'FFA000'
+          color1: '808000'
+          color2: '805000'
       - name: good
         show: two_color_blink
         loops: -1
