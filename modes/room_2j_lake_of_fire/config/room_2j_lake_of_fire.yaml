@@ -94,6 +94,26 @@ shots:
       led_4: led_null
       led_5: gi_left_sling_top
       led_6: gi_left_sling_bottom
+  room_2j_advance_shot_3:
+    hit_events: upper_left_sling_shot_hit
+    profile: room_2j_advance_shot
+    show_tokens:
+      led_1: gi_missile_bank
+      led_2: gi_middle_sling
+      led_3: led_null
+      led_4: led_null
+      led_5: gi_middle_sling
+      led_6: gi_missile_bank
+  room_2j_advance_shot_4:
+    hit_events: upper_right_sling_shot_hit
+    profile: room_2j_advance_shot
+    show_tokens:
+      led_1: gi_under_side_ramp
+      led_2: led_null
+      led_3: gi_under_side_ramp
+      led_4: led_null
+      led_5: gi_under_side_ramp
+      led_6: led_null
 
 
 
@@ -154,6 +174,8 @@ event_player:
     room_2j_light_first_shot:
   room_2j_advance_shot_1_hit: room_2j_rotate
   room_2j_advance_shot_2_hit: room_2j_rotate
+  room_2j_advance_shot_3_hit: room_2j_rotate
+  room_2j_advance_shot_4_hit: room_2j_rotate
   room_2j_exit_west_shot_hit.1: drop_targets_save
   room_2j_exit_west_shot_hit.2: room_2i_enter
   room_2j_exit_east_shot_hit.1: drop_targets_save
