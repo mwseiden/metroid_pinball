@@ -12,19 +12,17 @@ shot_profiles:
       - name: bad
         show: two_color_blink
         loops: -1
-        speed: 0.6
+        speed: 1.5
         show_tokens:
           color1: '808000'
           color2: '805000'
       - name: good
         show: two_color_blink
         loops: -1
-        speed: 2
+        speed: 3
         show_tokens:
           color1: '00FFFF'
           color2: '00FF00'
-
-
   room_2j_advance_shot:
     states:
       - name: lit
@@ -163,8 +161,12 @@ show_player:
       action: stop
   room_2j_collect_shots_good_hit:
     room_2j_correct_hit:
-      speed: 30
+      speed: 50
       loops: 0
+  player_room_2j_super_jackpot:
+    special_score_red:
+      loops: 0
+
 
 
 event_player:
@@ -196,3 +198,10 @@ variable_player:
     continue_room:
       string: 2j
       action: set
+  room_2j_rotate:
+    room_2j_super_jackpot: 20000 * current_player.multiplier
+  player_room_2j_super_jackpot:
+    room_special_score:
+      int: current_player.room_2j_super_jackpot
+      action: set
+

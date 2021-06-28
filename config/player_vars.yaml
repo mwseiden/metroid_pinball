@@ -203,6 +203,8 @@ player_vars:
     initial_value: 0
   room_1z_jackpot:
     initial_value: 0
+  room_2j_super_jackpot:
+    initial_value: 200000
   room_special_score:
     initial_value: 0
   wrecked_ship_charge:
