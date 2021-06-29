@@ -33,6 +33,7 @@ shot_profiles:
         show_tokens:
           color: 'FFFFFF'
   room_2j_super_jackpot:
+    advance_on_hit: False
     states:
       - name: unlit
         show: off
@@ -199,6 +200,9 @@ show_player:
   player_room_2j_super_jackpot:
     room_2j_jackpot_increase:
       loops: 0
+  room_2j_collect_super_jackpot:
+    special_score_red:
+      loops: 0
 
 
 sounds:
@@ -238,6 +242,7 @@ event_player:
   room_2j_advance_shot_3_hit: room_2j_rotate
   room_2j_advance_shot_4_hit: room_2j_rotate
   room_2j_collect_shots_bad_hit{current_player.room_2j_super_jackpot > 100000}: room_2j_subtract_jackpot
+  room_2j_super_jackpot_shots_lit_hit: room_2j_collect_super_jackpot
   room_2j_exit_west_shot_hit.1: drop_targets_save
   room_2j_exit_west_shot_hit.2: room_2i_enter
   room_2j_exit_east_shot_hit.1: drop_targets_save
@@ -250,6 +255,11 @@ variable_player:
       action: set
     continue_room:
       string: 2j
+      action: set
+  room_2j_collect_super_jackpot:
+    score: current_player.room_2j_super_jackpot * current_player.multiplier
+    room_special_score:
+      int: current_player.room_2j_super_jackpot * current_player.multiplier
       action: set
   room_2j_rotate:
     room_2j_super_jackpot: 20000 * current_player.multiplier
