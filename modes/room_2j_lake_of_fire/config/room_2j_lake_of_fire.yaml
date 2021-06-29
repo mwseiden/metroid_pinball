@@ -168,6 +168,25 @@ show_player:
       loops: 0
 
 
+sounds:
+  room_2j_bad_shot:
+    file: room_2j_bad_shot.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  room_2j_good_shot:
+    file: room_2j_good_shot.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+
+sound_player:
+  room_2j_collect_shots_good_hit: room_2j_good_shot
+  room_2j_collect_shots_bad_hit: room_2j_bad_shot
+
 
 event_player:
   mode_room_2j_lake_of_fire_started:
