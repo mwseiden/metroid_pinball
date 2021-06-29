@@ -1,0 +1,25 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_2j_super_jackpot_slide:
+      widgets:
+      - type: text
+        text: Super Jackpot Now
+        color: yellow
+        style: dmd_big
+        y: 21
+      - type: text
+        text: +(player|room_2j_super_jackpot)
+        color: white
+        style: dmd_big
+        y: 11
+        animations:
+          pre_show_slide:
+            - property: opacity
+              value: 0
+              duration: .1s
+            - property: opacity
+              value: 1
+              duration: .1s
+              repeat: -1
