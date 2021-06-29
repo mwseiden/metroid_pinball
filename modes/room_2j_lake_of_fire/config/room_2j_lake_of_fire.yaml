@@ -40,7 +40,7 @@ shot_profiles:
         show: blink_light
         loops: -1
         speed: 6
-        priority: 100
+        priority: 200
         show_tokens:
           color: 'FFFFFF'
 
@@ -127,13 +127,13 @@ shots:
       led_6: led_null
   room_2j_super_jackpot_left_shot:
     switch: s_top_lane_1
-    advance_events: room_2j_light_first_shot
     profile: room_2j_super_jackpot
     show_tokens:
       led: led_upper_playfield_1
   room_2j_super_jackpot_middle_shot:
     switch: s_top_lane_2
     profile: room_2j_super_jackpot
+    advance_events: room_2j_light_first_shot
     show_tokens:
       led: led_upper_playfield_2
   room_2j_super_jackpot_right_shot:
@@ -152,7 +152,7 @@ shot_groups:
     reset_events: mode_room_2j_lake_of_fire_started
     rotate_events: room_2j_rotate
   room_2j_super_jackpot_shots:
-    shots: room_2j_super_jackpot_left_shot, room_2j_super_jackpot_left_shot, room_2j_super_jackpot_left_shot
+    shots: room_2j_super_jackpot_left_shot, room_2j_super_jackpot_middle_shot, room_2j_super_jackpot_right_shot
     enable_events: mode_room_2j_lake_of_fire_started
     disable_events: mode_room_2j_lake_of_fire_ending
     reset_events: mode_room_2j_lake_of_fire_started
