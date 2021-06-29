@@ -8,12 +8,12 @@
         text: Super Jackpot Now
         color: yellow
         style: dmd_big
-        y: 21
+        y: 22
       - type: text
-        text: +(player|room_2j_super_jackpot)
+        text: (player|room_2j_super_jackpot)
         color: white
         style: dmd_big
-        y: 11
+        y: 10
         animations:
           pre_show_slide:
             - property: opacity
