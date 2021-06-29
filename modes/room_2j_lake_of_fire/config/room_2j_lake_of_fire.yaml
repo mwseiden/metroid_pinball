@@ -202,7 +202,8 @@ show_player:
       loops: 0
   room_2j_collect_super_jackpot:
     special_score_red:
-      loops: 0
+      loops: 1
+      priority: 300
 
 
 sounds:
@@ -223,6 +224,7 @@ sounds:
 sound_player:
   room_2j_collect_shots_good_hit: room_2j_good_shot
   room_2j_collect_shots_bad_hit: room_2j_bad_shot
+  room_2j_collect_super_jackpot: super_jackpot
 
 
 event_player:
@@ -243,6 +245,7 @@ event_player:
   room_2j_advance_shot_4_hit: room_2j_rotate
   room_2j_collect_shots_bad_hit{current_player.room_2j_super_jackpot > 100000}: room_2j_subtract_jackpot
   room_2j_super_jackpot_shots_lit_hit: room_2j_collect_super_jackpot
+  room_2j_collect_super_jackpot: room_2j_clear_super_jackpot
   room_2j_exit_west_shot_hit.1: drop_targets_save
   room_2j_exit_west_shot_hit.2: room_2i_enter
   room_2j_exit_east_shot_hit.1: drop_targets_save
@@ -260,6 +263,10 @@ variable_player:
     score: current_player.room_2j_super_jackpot * current_player.multiplier
     room_special_score:
       int: current_player.room_2j_super_jackpot * current_player.multiplier
+      action: set
+  room_2j_clear_super_jackpot:
+    room_2j_super_jackpot:
+      int: 200000
       action: set
   room_2j_rotate:
     room_2j_super_jackpot: 20000 * current_player.multiplier
