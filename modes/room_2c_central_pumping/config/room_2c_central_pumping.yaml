@@ -71,7 +71,18 @@ show_player:
 event_player:
   mode_room_2c_central_pumping_started:
     cmd_backbox_show:
-      show_type: fire
+      show_type: plasma
+      color1: "808080"
+      color2: "708060"
+      color3: "608040"
+      color4: "508020"
+      color5: "408000"
+      color6: "308000"
+      color7: "208000"
+      color8: "108000"
+      decay_r: 2.6
+      decay_g: 1.8
+      decay_b: 3.2
     drop_targets_continue:
     cmd_map_position:
       room: '2c'
