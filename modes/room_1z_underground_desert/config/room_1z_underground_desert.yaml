@@ -184,6 +184,9 @@ event_player:
       music: music_maridia_intro
     metroid_open_doors:
     room_1z_enable_skree:
+  player_room_1z_skrees{value == 2}:
+    cmd_map_complete:
+      room: '1z'
   room_1z_drop_skree_shot_hit: room_1z_start_timer, room_1z_enable_upper_skree
   timer_room_1z_skree_timer_tick{ticks == 8}: room_1z_enable_lower_skree
   timer_room_1z_skree_timer_complete: room_1z_enable_skree
@@ -206,16 +209,19 @@ variable_player:
   room_1z_increase_value_shot_hit:
     room_1z_jackpot: (50000 * current_player.multiplier) + (current_player.area_bonus_nw * 50000)
   room_1z_upper_skree_shot_hit:
+    room_1z_skrees: 1
     score: current_player.room_1z_jackpot * current_player.multiplier
     room_special_score:
       int: current_player.room_1z_jackpot * current_player.multiplier
       action: set
   room_1z_lower_skree_1_shot_hit:
+    room_1z_skrees: 1
     score: (current_player.room_1z_jackpot * current_player.multiplier) / 2
     room_special_score:
       int: (current_player.room_1z_jackpot * current_player.multiplier) / 2
       action: set
   room_1z_lower_skree_2_shot_hit:
+    room_1z_skrees: 1
     score: (current_player.room_1z_jackpot * current_player.multiplier) / 2
     room_special_score:
       int: (current_player.room_1z_jackpot * current_player.multiplier) / 2
