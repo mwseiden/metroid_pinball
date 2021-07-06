@@ -77,7 +77,6 @@ shots:
     profile: room_2h_gem_shot
     enable_events: room_2h_gem_shot_enable
     disable_events: mode_room_2h_crystalline_seabed_started
-    reset_events: mode_room_2h_crystalline_seabed_started
     advance_events: room_2h_gem_shot_enable
     show_tokens:
       led: led_enter_left_orbit
@@ -86,7 +85,6 @@ shots:
     profile: room_2h_gem_shot
     enable_events: room_2h_gem_shot_enable
     disable_events: mode_room_2h_crystalline_seabed_started
-    reset_events: mode_room_2h_crystalline_seabed_started
     show_tokens:
       led: led_enter_ramp
   room_2h_gem_shot_3:
@@ -94,10 +92,17 @@ shots:
     profile: room_2h_gem_shot
     enable_events: room_2h_gem_shot_enable
     disable_events: mode_room_2h_crystalline_seabed_started
-    reset_events: mode_room_2h_crystalline_seabed_started
     show_tokens:
       led: led_enter_side_ramp
 
+
+shot_groups:
+  room_2h_gem_shots:
+    shots: room_2h_gem_shot_1, room_2h_gem_shot_3, room_2h_gem_shot_2
+    enable_events: room_2h_gem_shot_enable
+    disable_events: mode_room_2h_crystalline_seabed_started
+    reset_events: mode_room_2h_crystalline_seabed_started
+    rotate_events: room_2h_add_crystal_shot_hit
 
 
 slides:
