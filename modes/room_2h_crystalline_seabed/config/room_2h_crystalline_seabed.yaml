@@ -37,6 +37,24 @@ shots:
     show_tokens:
       led: led_enter_scoop
       color: door_blue
+  room_2h_add_crystal_shot:
+    switches:
+      - s_thin_orange
+      - s_lower_right_bank_1
+      - s_lower_right_bank_2
+      - s_lower_right_bank_3
+      - s_missile_bank_1
+      - s_missile_bank_2
+      - s_missile_bank_3
+      - s_shatz
+      - s_purple_1
+      - s_purple_2
+      - s_purple_3
+      - s_left_target_1
+      - s_left_target_2
+      - s_left_target_3
+    enable_events: mode_room_2h_crystalline_seabed_started
+    disable_events: mode_room_2h_crystalline_seabed_ending
 
 slides:
   room_2h_crystalline_seabed_backglass_slide:
@@ -72,6 +90,19 @@ show_player:
     room_2h_crystalline_seabed_status_report:
       action: stop
 
+sounds:
+  room_2h_crystal:
+    file: room_2h_crystal.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+
+sound_player:
+  room_2h_add_crystal_shot_hit: room_2h_crystal
+
+
 event_player:
   mode_room_2h_crystalline_seabed_started:
     cmd_backbox_show:
@@ -100,3 +131,5 @@ variable_player:
     continue_room:
       string: 2h
       action: set
+  room_2h_add_crystal_shot_hit:
+    room_2h_crystals: 1
