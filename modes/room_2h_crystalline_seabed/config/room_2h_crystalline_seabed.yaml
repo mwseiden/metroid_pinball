@@ -9,6 +9,23 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2d_enter, room_2g_enter, room_2i_enter, room_2h_exit
   priority: 300
 
+
+shot_profiles:
+  room_2h_gem_shot:
+    states:
+      - name: normal
+        show: fade_one_light
+        speed: 2
+        show_tokens:
+          color: '800080'
+      - name: extra
+        show: fade_one_light
+        speed: 4
+        show_tokens:
+          color: 'E75A56'
+
+
+
 shots:
   room_2h_exit_north_shot:
     hit_events: right_orbit_hit
@@ -55,6 +72,33 @@ shots:
       - s_left_target_3
     enable_events: mode_room_2h_crystalline_seabed_started
     disable_events: mode_room_2h_crystalline_seabed_ending
+  room_2h_gem_shot_1:
+    hit_events: left_orbit_hit
+    profile: room_2h_gem_shot
+    enable_events: room_2h_gem_shot_enable
+    disable_events: mode_room_2h_crystalline_seabed_started
+    reset_events: mode_room_2h_crystalline_seabed_started
+    advance_events: room_2h_gem_shot_enable
+    show_tokens:
+      led: led_enter_left_orbit
+  room_2h_gem_shot_2:
+    switch: s_ramp_enter
+    profile: room_2h_gem_shot
+    enable_events: room_2h_gem_shot_enable
+    disable_events: mode_room_2h_crystalline_seabed_started
+    reset_events: mode_room_2h_crystalline_seabed_started
+    show_tokens:
+      led: led_enter_ramp
+  room_2h_gem_shot_3:
+    switch: s_side_ramp_made
+    profile: room_2h_gem_shot
+    enable_events: room_2h_gem_shot_enable
+    disable_events: mode_room_2h_crystalline_seabed_started
+    reset_events: mode_room_2h_crystalline_seabed_started
+    show_tokens:
+      led: led_enter_side_ramp
+
+
 
 slides:
   room_2h_crystalline_seabed_backglass_slide:
@@ -119,6 +163,8 @@ event_player:
     cmd_play_map_music:
       music: music_maridia
     metroid_open_doors:
+  mode_room_2h_crystalline_seabed_started{current_player.room_2h_crystals > 0}: room_2h_gem_shot_enable
+  player_room_2h_crystals{value == 1}: room_2h_gem_shot_enable
   room_2h_exit_north_shot_hit.1: drop_targets_save
   room_2h_exit_north_shot_hit.2: room_2d_enter
   room_2h_exit_west_shot_hit.1: drop_targets_save
