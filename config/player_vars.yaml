@@ -207,6 +207,8 @@ player_vars:
     initial_value: 0
   room_2h_crystals:
     initial_value: 0
+  room_2h_total_crystals:
+    initial_value: 0
   room_2j_super_jackpot:
     initial_value: 200000
   room_special_score:

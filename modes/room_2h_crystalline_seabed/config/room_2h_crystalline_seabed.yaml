@@ -181,6 +181,9 @@ event_player:
     metroid_open_doors:
   mode_room_2h_crystalline_seabed_started{current_player.room_2h_crystals > 0}: room_2h_gem_shot_enable
   player_room_2h_crystals{value == 1}: room_2h_gem_shot_enable
+  player_room_2h_total_crystals{value == 20}:
+    cmd_map_complete:
+      room: '2h'
   room_2h_gem_shots_normal_hit.1: room_2h_collect_normal
   room_2h_gem_shots_normal_hit.2: room_2h_reset_gems
   room_2h_gem_shots_extra_hit.1: room_2h_collect_extra
@@ -208,11 +211,13 @@ variable_player:
       int: 0
       action: set
   room_2h_gem_shots_extra_hit:
+    room_2h_total_crystals: current_player.room_2h_crystals
     score: (30000 * current_player.room_2h_crystals) * current_player.multiplier
     room_special_score:
       int: (30000 * current_player.room_2h_crystals) * current_player.multiplier
       action: set
   room_2h_gem_shots_normal_hit:
+    room_2h_total_crystals: current_player.room_2h_crystals
     score: (17000 * current_player.room_2h_crystals) * current_player.multiplier
     room_special_score:
       int: (17000 * current_player.room_2h_crystals) * current_player.multiplier
