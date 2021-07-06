@@ -89,6 +89,9 @@ show_player:
   flipper_cradle_release:
     room_2h_crystalline_seabed_status_report:
       action: stop
+  room_2h_add_crystal_shot_hit:
+    room_2h_crystal_add:
+      loops: 0
 
 sounds:
   room_2h_crystal:

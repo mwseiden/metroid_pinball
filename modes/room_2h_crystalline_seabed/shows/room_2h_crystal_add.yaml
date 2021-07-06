@@ -1,0 +1,22 @@
+#show_version=5
+
+- duration: 2s
+  slides:
+    room_2h_crystal_slide:
+      widgets:
+      - type: image
+        image: room_2h_crystal
+        x: 24
+      - type: text
+        text: Crystals Collected
+        style: dmd_small
+        color: 'FFFF00'
+        x: 64
+        y: 24
+      - type: text
+        text: (player|room_2h_crystals)
+        min_digits: 1
+        style: dmd_big
+        color: 'FFFFFF'
+        x: 64
+        y: 12
