@@ -8,6 +8,7 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1r_enter, room_1w_enter, room_1u_exit
   priority: 300
 
+
 shots:
   room_1u_exit_north_shot:
     switches: s_ramp_enter
@@ -27,6 +28,9 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
+  room_1u_speed_shot:
+    switch: s_spinner
+
 
 slides:
   room_1u_the_armory_backglass_slide:
@@ -40,6 +44,7 @@ slides:
       - type: image
         image: room_1u_the_armory_splash
 
+
 slide_player:
   mode_room_1u_the_armory_started:
     room_1u_the_armory_backglass_slide:
@@ -48,11 +53,12 @@ slide_player:
       target: dmd
       expire: 1.5s
 
+
 show_player:
   mode_room_1u_the_armory_started:
     mode_1u_the_armory_gi:
       loops: -1
-      speed: 20
+      speed: 20 + current_player.room_1u_laser_speed
       priority: 100
   show_mode_status_report:
     room_1u_the_armory_status_report:
@@ -60,6 +66,7 @@ show_player:
   flipper_cradle_release:
     room_1u_the_armory_status_report:
       action: stop
+
 
 event_player:
   mode_room_1u_the_armory_started:
@@ -82,6 +89,7 @@ event_player:
   room_1u_exit_south_shot_hit.1: drop_targets_save
   room_1u_exit_south_shot_hit.2: room_1w_enter
 
+
 variable_player:
   mode_room_1u_the_armory_started:
     has_chosen_landing_site:
@@ -90,3 +98,6 @@ variable_player:
     continue_room:
       string: 1u
       action: set
+  room_1u_speed_shot_hit:
+    room_1u_laser_speed: 5
+
