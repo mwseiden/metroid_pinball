@@ -13,11 +13,19 @@ shot_profiles:
   room_1u_orbit:
     states:
       - name: lit
-        show: fade_one_light
+        show: blink_light
         speed: 2
+        sync_ms: 1000
         show_tokens:
-          color: 'FF5E40'
-
+          color: 'CF8E40'
+  room_1u_light:
+    states:
+      - name: lit
+        show: blink_light
+        speed: 2
+        sync_ms: 1000
+        show_tokens:
+          color: '3900C4'
 
 shots:
   room_1u_exit_north_shot:
@@ -54,6 +62,13 @@ shots:
     disable_events: mode_room_1u_the_armory_ending
     show_tokens:
       led: led_enter_right_orbit
+  room_1u_light_jackpot_shot:
+    switch: s_side_ramp_made
+    profile: room_1u_light
+    enable_events: mode_room_1u_the_armory_started
+    disable_events: mode_room_1u_the_armory_ending
+    show_tokens:
+      led: led_enter_side_ramp
 
 
 slides:
