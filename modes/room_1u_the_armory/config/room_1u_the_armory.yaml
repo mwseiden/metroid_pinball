@@ -77,6 +77,26 @@ show_player:
       loops: -1
       speed: 40
       priority: 100
+  room_1u_laser_speed_4:
+    mode_1u_the_armory_gi:
+      loops: -1
+      speed: 50
+      priority: 100
+  room_1u_laser_speed_5:
+    mode_1u_the_armory_gi:
+      loops: -1
+      speed: 60
+      priority: 100
+  room_1u_laser_speed_6:
+    mode_1u_the_armory_gi:
+      loops: -1
+      speed: 70
+      priority: 100
+  room_1u_laser_speed_7:
+    mode_1u_the_armory_gi:
+      loops: -1
+      speed: 80
+      priority: 100
 
 
 
@@ -93,14 +113,22 @@ event_player:
       visit: True
     metroid_open_doors:
     room_1u_play_music:
-  mode_room_1u_the_armory_started{current_player.room_1u_laser_speed < 5}: room_1u_laser_speed_1
-  mode_room_1u_the_armory_started{current_player.room_1u_laser_speed >= 5 and current_player.room_1u_laser_speed < 10}: room_1u_laser_speed_2
-  mode_room_1u_the_armory_started{current_player.room_1u_laser_speed >= 10}: room_1u_laser_speed_3
+  mode_room_1u_the_armory_started{current_player.room_1u_laser_speed < 3}: room_1u_laser_speed_1
+  mode_room_1u_the_armory_started{current_player.room_1u_laser_speed >= 3 and current_player.room_1u_laser_speed < 6}: room_1u_laser_speed_2
+  mode_room_1u_the_armory_started{current_player.room_1u_laser_speed >= 6 and current_player.room_1u_laser_speed < 9}: room_1u_laser_speed_3
+  mode_room_1u_the_armory_started{current_player.room_1u_laser_speed >= 9 and current_player.room_1u_laser_speed < 12}: room_1u_laser_speed_4
+  mode_room_1u_the_armory_started{current_player.room_1u_laser_speed >= 12 and current_player.room_1u_laser_speed < 15}: room_1u_laser_speed_5
+  mode_room_1u_the_armory_started{current_player.room_1u_laser_speed >= 15 and current_player.room_1u_laser_speed < 18}: room_1u_laser_speed_6
+  mode_room_1u_the_armory_started{current_player.room_1u_laser_speed >= 18}: room_1u_laser_speed_7
   room_1u_play_music:
     cmd_play_map_music:
       music: music_brinstar_side_entrance
-  player_room_1u_laser_speed{value == 5}: room_1u_laser_speed_2
-  player_room_1u_laser_speed{value == 10}: room_1u_laser_speed_3
+  player_room_1u_laser_speed{value == 3}: room_1u_laser_speed_2
+  player_room_1u_laser_speed{value == 6}: room_1u_laser_speed_3
+  player_room_1u_laser_speed{value == 9}: room_1u_laser_speed_4
+  player_room_1u_laser_speed{value == 12}: room_1u_laser_speed_5
+  player_room_1u_laser_speed{value == 15}: room_1u_laser_speed_6
+  player_room_1u_laser_speed{value == 18}: room_1u_laser_speed_7
   room_1u_exit_north_shot_hit.1: drop_targets_save
   room_1u_exit_north_shot_hit.2: room_1r_enter
   room_1u_exit_south_shot_hit.1: drop_targets_save
