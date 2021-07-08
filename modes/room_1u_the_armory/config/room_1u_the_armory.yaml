@@ -9,6 +9,16 @@ mode:
   priority: 300
 
 
+shot_profiles:
+  room_1u_orbit:
+    states:
+      - name: lit
+        show: fade_one_light
+        speed: 2
+        show_tokens:
+          color: 'FF5E40'
+
+
 shots:
   room_1u_exit_north_shot:
     switches: s_ramp_enter
@@ -30,6 +40,20 @@ shots:
       color: door_blue
   room_1u_speed_shot:
     switch: s_spinner
+  room_1u_left_orbit_shot:
+    hit_events: left_orbit_hit
+    profile: room_1u_orbit
+    enable_events: mode_room_1u_the_armory_started
+    disable_events: mode_room_1u_the_armory_ending
+    show_tokens:
+      led: led_enter_left_orbit
+  room_1u_right_orbit_shot:
+    hit_events: right_orbit_hit
+    profile: room_1u_orbit
+    enable_events: mode_room_1u_the_armory_started
+    disable_events: mode_room_1u_the_armory_ending
+    show_tokens:
+      led: led_enter_right_orbit
 
 
 slides:
@@ -55,7 +79,7 @@ slide_player:
 
 
 show_player:
-  # mode_room_1u_the_armory_started:
+#  mode_room_1u_the_armory_started:
   show_mode_status_report:
     room_1u_the_armory_status_report:
       loops: 0
@@ -97,7 +121,6 @@ show_player:
       loops: -1
       speed: 80
       priority: 100
-
 
 
 event_player:
