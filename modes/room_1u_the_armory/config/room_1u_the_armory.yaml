@@ -162,6 +162,9 @@ show_player:
   room_1u_collect_jackpot:
     special_score_yellow:
       loops: 1
+  room_1u_speed_shot_hit:
+    room_1u_the_armory_increase:
+      loops: 0
 
 
 event_player:
@@ -215,6 +218,7 @@ variable_player:
       action: set
   room_1u_speed_shot_hit:
     room_1u_laser_speed: 1
+    score: 20000 * current_player.multiplier
   room_1u_collect_jackpot:
     score: (200000 + (current_player.room_1u_laser_speed * 50000)) * current_player.multiplier
     room_special_score:
