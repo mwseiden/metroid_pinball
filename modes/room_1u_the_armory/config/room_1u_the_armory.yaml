@@ -199,7 +199,10 @@ event_player:
   player_room_1u_laser_speed{value == 15}: room_1u_laser_speed_6
   player_room_1u_laser_speed{value == 18}: room_1u_laser_speed_7
   room_1u_light_jackpot_shot_hit: room_1u_start_jackpot
-  room_1u_jackpot_shot_1_hit: room_1u_collect_jackpot
+  room_1u_jackpot_shot_1_hit:
+    room_1u_collect_jackpot:
+    cmd_map_complete:
+      room: '1u'
   room_1u_collect_jackpot: room_1u_reset_jackpot
   room_1u_reset_jackpot: room_1u_enable_qualifiers
   room_1u_exit_north_shot_hit.1: drop_targets_save
