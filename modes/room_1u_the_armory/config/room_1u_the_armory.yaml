@@ -79,7 +79,10 @@ slide_player:
 
 
 show_player:
-#  mode_room_1u_the_armory_started:
+  mode_room_1u_the_armory_started:
+    room_1u_the_armory_base_gi:
+      loops: -1
+      speed: 30
   show_mode_status_report:
     room_1u_the_armory_status_report:
       loops: 0
