@@ -84,7 +84,7 @@ shots:
     switch: s_purple_1, s_purple_2, s_purple_3
     profile: room_1u_strobe
     enable_events: room_1u_start_jackpot
-    disable_events: mode_room_1u_the_armory_started, mode_room_1u_the_armory_ending
+    disable_events: room_1u_collect_jackpot, mode_room_1u_the_armory_started, mode_room_1u_the_armory_ending
     show_tokens:
       led_1: led_upgrade_bank_1
       led_2: led_upgrade_bank_2
@@ -159,6 +159,9 @@ show_player:
       loops: -1
       speed: 80
       priority: 100
+  room_1u_collect_jackpot:
+    special_score_yellow:
+      loops: 1
 
 
 event_player:
@@ -185,6 +188,7 @@ event_player:
   room_1u_play_music:
     cmd_play_map_music:
       music: music_brinstar_side_entrance
+  player_room_1u_laser_speed{value == 1}: room_1u_laser_speed_1
   player_room_1u_laser_speed{value == 3}: room_1u_laser_speed_2
   player_room_1u_laser_speed{value == 6}: room_1u_laser_speed_3
   player_room_1u_laser_speed{value == 9}: room_1u_laser_speed_4
@@ -192,6 +196,9 @@ event_player:
   player_room_1u_laser_speed{value == 15}: room_1u_laser_speed_6
   player_room_1u_laser_speed{value == 18}: room_1u_laser_speed_7
   room_1u_light_jackpot_shot_hit: room_1u_start_jackpot
+  room_1u_jackpot_shot_1_hit: room_1u_collect_jackpot
+  room_1u_collect_jackpot: room_1u_reset_jackpot
+  room_1u_reset_jackpot: room_1u_enable_qualifiers
   room_1u_exit_north_shot_hit.1: drop_targets_save
   room_1u_exit_north_shot_hit.2: room_1r_enter
   room_1u_exit_south_shot_hit.1: drop_targets_save
@@ -208,4 +215,12 @@ variable_player:
       action: set
   room_1u_speed_shot_hit:
     room_1u_laser_speed: 1
-
+  room_1u_collect_jackpot:
+    score: (200000 + (current_player.room_1u_laser_speed * 50000)) * current_player.multiplier
+    room_special_score:
+      int: (200000 + (current_player.room_1u_laser_speed * 50000)) * current_player.multiplier
+      action: set
+  room_1u_reset_jackpot:
+    room_1u_laser_speed:
+      int: 1
+      action: set
