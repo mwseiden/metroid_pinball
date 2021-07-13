@@ -7,6 +7,40 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2k_enter, room_2n_enter, room_2p_enter, room_2o_exit
   priority: 300
 
+
+shot_profiles:
+  room_2o_increase_1:
+    states:
+      - name: lit
+        show: three_color_blink
+        speed: 2
+        sync_ms: 500
+        show_tokens:
+          color1: green
+          color2: blue
+          color3: red
+  room_2o_increase_2:
+    states:
+      - name: lit
+        show: three_color_blink
+        speed: 2
+        sync_ms: 500
+        show_tokens:
+          color1: blue
+          color2: red
+          color3: green
+  room_2o_increase_3:
+    states:
+      - name: lit
+        show: three_color_blink
+        speed: 2
+        sync_ms: 500
+        show_tokens:
+          color1: red
+          color2: green
+          color3: blue
+
+
 shots:
   room_2o_exit_north_shot:
     hit_events: right_orbit_hit
@@ -35,6 +69,29 @@ shots:
     show_tokens:
       led: led_rollover
       color: door_blue
+  room_2o_increase_shot_1:
+    switch: s_side_ramp_made
+    profile: room_2o_increase_1
+    enable_events: mode_room_2o_strange_ruins_started
+    disable_events: mode_room_2o_strange_ruins_ending
+    show_tokens:
+      led: led_enter_side_ramp
+  room_2o_increase_shot_2:
+    hit_events: left_orbit_hit
+    profile: room_2o_increase_2
+    enable_events: mode_room_2o_strange_ruins_started
+    disable_events: mode_room_2o_strange_ruins_ending
+    show_tokens:
+      led: led_enter_left_orbit
+  room_2o_increase_shot_3:
+    switch: s_left_passage
+    profile: room_2o_increase_3
+    enable_events: mode_room_2o_strange_ruins_started
+    disable_events: mode_room_2o_strange_ruins_ending
+    show_tokens:
+      led: led_enter_secret_passage
+
+
 
 slides:
   room_2o_strange_ruins_backglass_slide:
