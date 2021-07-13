@@ -149,12 +149,10 @@ event_player:
     cmd_play_map_music:
       music: music_norfair_deep_intro
     metroid_open_doors:
-  room_2o_exit_north_shot_hit.1: drop_targets_save
-  room_2o_exit_north_shot_hit.2: room_2k_enter
-  room_2o_exit_west_shot_hit.1: drop_targets_save
-  room_2o_exit_west_shot_hit.2: room_2n_enter
-  room_2o_exit_east_shot_hit.1: drop_targets_save
-  room_2o_exit_east_shot_hit.2: room_2p_enter
+    drop_target_mode_should_end:
+  room_2o_exit_north_shot_hit: room_2k_enter, drop_target_mode_should_start
+  room_2o_exit_west_shot_hit: room_2n_enter, drop_target_mode_should_start
+  room_2o_exit_east_shot_hit: room_2p_enter, drop_target_mode_should_start
 
 variable_player:
   mode_room_2o_strange_ruins_started:
