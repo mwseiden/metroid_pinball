@@ -39,6 +39,12 @@ shot_profiles:
           color1: red
           color2: green
           color3: blue
+  room_2o_switch:
+    states:
+      - name: lit
+        show: fade_one_light
+        show_tokens:
+          color: green
 
 
 shots:
@@ -90,6 +96,13 @@ shots:
     disable_events: mode_room_2o_strange_ruins_ending
     show_tokens:
       led: led_enter_secret_passage
+  room_2o_switch_shot:
+    switch: s_scoop
+    profile: room_2o_switch
+    enable_events: mode_room_2o_strange_ruins_started
+    disable_events: mode_room_2o_strange_ruins_ending
+    show_tokens:
+      led: led_enter_scoop
 
 
 
