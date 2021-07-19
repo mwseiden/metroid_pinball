@@ -184,10 +184,10 @@ event_player:
       music: music_wrecked_ship_generator
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1i_computing_started_no_charge
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1i_computing_started_charge
-  timer_room_1i_move_lights_timer{ticks == 0}: mode_room_1i_enable_shot_1
-  timer_room_1i_move_lights_timer{ticks == 1}: mode_room_1i_enable_shot_2
-  timer_room_1i_move_lights_timer{ticks == 2}: mode_room_1i_enable_shot_3
-  timer_room_1i_move_lights_timer{ticks == 3}: mode_room_1i_enable_shot_4
+  timer_room_1i_move_lights_timer_tick{ticks == 0}: mode_room_1i_enable_shot_1
+  timer_room_1i_move_lights_timer_tick{ticks == 1}: mode_room_1i_enable_shot_2
+  timer_room_1i_move_lights_timer_tick{ticks == 2}: mode_room_1i_enable_shot_3
+  timer_room_1i_move_lights_timer_tick{ticks == 3}: mode_room_1i_enable_shot_4
   room_1i_exit_south_shot_hit.1: drop_targets_save
   room_1i_exit_south_shot_hit.2: room_1k_enter
   room_1i_exit_west_shot_hit.1: drop_targets_save
