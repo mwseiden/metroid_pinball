@@ -13,7 +13,7 @@ mode:
 timers:
   room_1i_move_lights_timer:
     start_value: 0
-    end_value: 3
+    end_value: 4
     tick_interval: 4s
     restart_on_complete: true
     control_events:
@@ -31,6 +31,7 @@ shot_profiles:
     - name: lit
       show: small_theater_chase
       loops: -1
+      speed: 4
       show_tokens:
         color: red
 
@@ -131,6 +132,7 @@ slides:
       - type: image
         image: room_1i_computing_splash
 
+
 slide_player:
   mode_room_1i_computing_started_no_charge:
     room_1i_computing_backglass_slide:
@@ -142,6 +144,7 @@ slide_player:
     room_1i_computing_splash_slide:
       target: dmd
       expire: 1.5s
+
 
 show_player:
   mode_room_1i_computing_started:
