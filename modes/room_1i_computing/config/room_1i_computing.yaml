@@ -158,6 +158,31 @@ show_player:
     room_1i_computing_status_report:
       action: stop
 
+
+sounds:
+  room_1i_bleep_1:
+    file: room_1i_bleep_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  room_1i_bleep_2:
+    file: room_1i_bleep_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
+
+sound_player:
+  room_1i_bank_1_shot_hit: room_1i_bleep_1
+  room_1i_bank_2_shot_hit: room_1i_bleep_2
+  room_1i_bank_3_shot_hit: room_1i_bleep_1
+  room_1i_bank_4_shot_hit: room_1i_bleep_2
+
+
 event_player:
   mode_room_1i_computing_started:
     drop_targets_continue:
