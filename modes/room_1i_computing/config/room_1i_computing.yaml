@@ -29,11 +29,9 @@ shot_profiles:
   room_1i_blink:
     states:
     - name: lit
-      show: small_theater_chase
+      show: room_1i_theater_chase
       loops: -1
       speed: 4
-      show_tokens:
-        color: red
 
 
 shots:
