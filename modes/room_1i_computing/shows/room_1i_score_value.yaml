@@ -7,7 +7,7 @@
       - type: text
         text: Cracking (player|room_1i_combination_value)
         color: white
-        style: dmd_big
+        style: dmd_med
         y: 20
       - type: text
         text: (player|room_special_score)
