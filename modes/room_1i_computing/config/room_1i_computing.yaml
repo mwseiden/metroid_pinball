@@ -157,6 +157,18 @@ show_player:
   flipper_cradle_release:
     room_1i_computing_status_report:
       action: stop
+  room_1i_bank_1_shot_hit:
+    special_score_red:
+      loops: 0
+  room_1i_bank_2_shot_hit:
+    special_score_red:
+      loops: 0
+  room_1i_bank_3_shot_hit:
+    special_score_red:
+      loops: 0
+  room_1i_bank_4_shot_hit:
+    special_score_red:
+      loops: 0
 
 
 sounds:
@@ -221,6 +233,7 @@ event_player:
   room_1i_exit_east_shot_hit.1: drop_targets_save
   room_1i_exit_east_shot_hit.2: room_1j_enter
 
+
 variable_player:
   mode_room_1i_computing_started:
     has_chosen_landing_site:
@@ -228,4 +241,24 @@ variable_player:
       action: set
     continue_room:
       string: 1i
+      action: set
+  room_1i_bank_1_shot_hit:
+    score: (25000 + (current_player.area_bonus_sw * 25000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    room_special_score:
+      int: (25000 + (current_player.area_bonus_sw * 25000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+      action: set
+  room_1i_bank_2_shot_hit:
+    score: (30000 + (current_player.area_bonus_se * 30000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    room_special_score:
+      int: (30000 + (current_player.area_bonus_se * 30000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+      action: set
+  room_1i_bank_3_shot_hit:
+    score: (10000 + (current_player.area_bonus_nw * 10000) + (current_player.area_bonus_ne * 10000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    room_special_score:
+      int: (10000 + (current_player.area_bonus_nw * 10000) + (current_player.area_bonus_ne * 10000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+      action: set
+  room_1i_bank_4_shot_hit:
+    score: (100000 + (current_player.area_bonus_nw * 75000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_nw * 75000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
       action: set
