@@ -190,6 +190,8 @@ player_vars:
     initial_value: 0
   room_1d_shots_hit:
     initial_value: 0
+  room_1i_combination_value:
+    initial_value: 0
   room_1k_shots_hit:
     initial_value: 0
   room_1m_captured:

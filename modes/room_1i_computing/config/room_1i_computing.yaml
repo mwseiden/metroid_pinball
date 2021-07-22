@@ -158,16 +158,16 @@ show_player:
     room_1i_computing_status_report:
       action: stop
   room_1i_bank_1_shot_hit:
-    special_score_red:
+    room_1i_score_value:
       loops: 0
   room_1i_bank_2_shot_hit:
-    special_score_red:
+    room_1i_score_value:
       loops: 0
   room_1i_bank_3_shot_hit:
-    special_score_red:
+    room_1i_score_value:
       loops: 0
   room_1i_bank_4_shot_hit:
-    special_score_red:
+    room_1i_score_value:
       loops: 0
 
 
@@ -243,21 +243,25 @@ variable_player:
       string: 1i
       action: set
   room_1i_bank_1_shot_hit:
+    room_1i_combination_value: 1
     score: (25000 + (current_player.area_bonus_sw * 25000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
     room_special_score:
       int: (25000 + (current_player.area_bonus_sw * 25000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
       action: set
   room_1i_bank_2_shot_hit:
+    room_1i_combination_value: 2
     score: (30000 + (current_player.area_bonus_se * 30000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
     room_special_score:
       int: (30000 + (current_player.area_bonus_se * 30000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
       action: set
   room_1i_bank_3_shot_hit:
+    room_1i_combination_value: 3
     score: (10000 + (current_player.area_bonus_nw * 10000) + (current_player.area_bonus_ne * 10000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
     room_special_score:
       int: (10000 + (current_player.area_bonus_nw * 10000) + (current_player.area_bonus_ne * 10000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
       action: set
   room_1i_bank_4_shot_hit:
+    room_1i_combination_value: 4
     score: (100000 + (current_player.area_bonus_nw * 75000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
     room_special_score:
       int: (100000 + (current_player.area_bonus_nw * 75000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
