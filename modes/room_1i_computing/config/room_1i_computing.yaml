@@ -184,6 +184,9 @@ show_player:
   room_1i_bank_4_shot_hit:
     room_1i_score_value:
       loops: 0
+  room_1i_jackpot_shot_hit:
+    special_score_orange:
+      loops: 0
 
 
 sounds:
@@ -239,6 +242,9 @@ event_player:
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1i_computing_started_charge
   mode_room_1i_computing_started{current_player.room_1i_combination_value % 10 == 0 and current_player.room_1i_combination_value > 0}: mode_room_1i_enable_jackpot_shot
   player_room_1i_combination_value{value % 10 == 0}: mode_room_1i_enable_jackpot_shot
+  room_1i_jackpot_shot_hit:
+    cmd_map_complete:
+      room: '1i'
   timer_room_1i_move_lights_timer_tick{ticks == 0}: mode_room_1i_enable_shot_1
   timer_room_1i_move_lights_timer_tick{ticks == 1}: mode_room_1i_enable_shot_2
   timer_room_1i_move_lights_timer_tick{ticks == 2}: mode_room_1i_enable_shot_3
@@ -282,4 +288,9 @@ variable_player:
     score: (100000 + (current_player.area_bonus_nw * 75000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
     room_special_score:
       int: (100000 + (current_player.area_bonus_nw * 75000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1i_jackpot_shot_hit:
+    score: (1000000 + (current_player.area_bonus_ne * 100000) + (current_player.wrecked_ship_charge * 33000)) * current_player.multiplier
+    room_special_score:
+      int: (1000000 + (current_player.area_bonus_ne * 100000) + (current_player.wrecked_ship_charge * 33000)) * current_player.multiplier
       action: set
