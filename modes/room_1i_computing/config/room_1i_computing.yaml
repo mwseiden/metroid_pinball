@@ -32,6 +32,14 @@ shot_profiles:
       show: room_1i_theater_chase
       loops: -1
       speed: 4
+  room_1i_jackpot:
+    states:
+      - name: lit
+        show: blink_light
+        loops: -1
+        speed: 8
+        show_tokens:
+          color: white
 
 
 shots:
@@ -110,6 +118,13 @@ shots:
       led_4: led_side_1
       led_5: led_side_2
       led_6: led_side_3
+  room_1i_jackpot_shot:
+    switch: s_side_ramp_made
+    profile: room_1i_jackpot
+    enable_events: mode_room_1i_enable_jackpot_shot
+    disable_events: mode_room_1i_computing_started, mode_room_1i_computing_ending, room_1i_jackpot_shot_hit
+    show_tokens:
+      led: led_enter_side_ramp
 
 
 slides:
@@ -222,6 +237,8 @@ event_player:
       music: music_wrecked_ship_generator
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1i_computing_started_no_charge
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1i_computing_started_charge
+  mode_room_1i_computing_started{current_player.room_1i_combination_value % 10 == 0 and current_player.room_1i_combination_value > 0}: mode_room_1i_enable_jackpot_shot
+  player_room_1i_combination_value{value % 10 == 0}: mode_room_1i_enable_jackpot_shot
   timer_room_1i_move_lights_timer_tick{ticks == 0}: mode_room_1i_enable_shot_1
   timer_room_1i_move_lights_timer_tick{ticks == 1}: mode_room_1i_enable_shot_2
   timer_room_1i_move_lights_timer_tick{ticks == 2}: mode_room_1i_enable_shot_3
