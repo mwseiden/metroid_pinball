@@ -215,7 +215,8 @@ class BackBoxLights(Scriptlet):
         self._schedule_update()
 
     def _schedule_update(self):
-        self.delay.add_if_doesnt_exist(self.REFRESH_RATE, self._update_backbox, 'bbup')
+        self.delay.reset(self.REFRESH_RATE, self._update_backbox, 'bbup')
+        # self.delay.add_if_doesnt_exist(self.REFRESH_RATE, self._update_backbox, 'bbup')
 
     def _show_base_effect(self, **kwargs):
         self.set_base_effect(self._create_show(**kwargs))
