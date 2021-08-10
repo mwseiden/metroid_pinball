@@ -56,19 +56,13 @@ class ColumnPour():
         self.frame += 1
 
         for light_number in range(0, self.current_length):
-            if invert:
-                self.strip.set_color(9 - light_number, self._randomized_color())
-            else:
-                self.strip.set_color(light_number, self._randomized_color())
+            self.strip.set_color_with_invert(9 - light_number, self._randomized_color(), invert)
 
         if self.dripping:
             if self.current_length > 0 and self.frame % self.drop_frequency == 0:
                 self.current_length -= 1
 
-                if invert:
-                    self.drops += [Drop(self.strip, 9 - self.current_length, self._randomized_color())]
-                else:
-                    self.drops += [Drop(self.strip, self.current_length, self._randomized_color())]
+                self.drops += [Drop(self.strip, self.current_length, self._randomized_color())]
 
                 if self.drop_frequency > 2:
                     self.drop_frequency -= 1
@@ -103,17 +97,11 @@ class Drop():
         self.color = color
 
     def animate(self, invert):
-        if invert:
-            self.strip.set_color(9 - self.position, self.OFF_COLOR)
-        else:
-            self.strip.set_color(self.position, self.OFF_COLOR)
+        self.strip.set_color_with_invert(self.position, self.OFF_COLOR, invert)
 
         self.position += 1
 
-        if invert:
-            self.strip.set_color(9 - self.position, self.color)
-        else:
-            self.strip.set_color(self.position, self.color)
+        self.strip.set_color_with_invert(self.position, self.color, invert)
 
     def is_finished(self):
         return self.position >= self.strip.size
