@@ -71,7 +71,7 @@ class ColumnPour():
             finished_drops = []
 
             for drop in self.drops:
-                drop.animate()
+                drop.animate(invert)
                 if drop.is_finished():
                     finished_drops += [drop]
 
@@ -97,10 +97,18 @@ class Drop():
         self.position = position
         self.color = color
 
-    def animate(self):
-        self.strip.set_color(self.position, self.OFF_COLOR)
+    def animate(self, invert):
+        if invert:
+            self.strip.set_color(9 - self.position, self.OFF_COLOR)
+        else:
+            self.strip.set_color(self.position, self.OFF_COLOR)
+
         self.position += 1
-        self.strip.set_color(self.position, self.color)
+
+        if invert:
+            self.strip.set_color(self.position, self.color)
+        else:
+            self.strip.set_color(self.position, self.color)
 
     def is_finished(self):
         return self.position >= self.strip.size
