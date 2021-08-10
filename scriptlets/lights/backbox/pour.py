@@ -56,7 +56,7 @@ class ColumnPour():
         self.frame += 1
 
         for light_number in range(0, self.current_length):
-            self.strip.set_color_with_invert(9 - light_number, self._randomized_color(), invert)
+            self.strip.set_color_with_invert(light_number, self._randomized_color(), invert)
 
         if self.dripping:
             if self.current_length > 0 and self.frame % self.drop_frequency == 0:
