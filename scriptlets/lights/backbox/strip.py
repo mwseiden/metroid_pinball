@@ -21,7 +21,7 @@ class Strip:
     def set_color_with_invert(self, index, color, invert):
 
         if invert:
-            index = 9 - index
+            index = 10 - index
 
         if self._index_out_of_range(index):
             return None
