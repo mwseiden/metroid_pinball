@@ -113,6 +113,7 @@ class BackBoxLights(Scriptlet):
             int(kwargs.get('count', 1)),
             int(kwargs.get('min_length', 5)),
             int(kwargs.get('max_length', 10)),
+            kwargs.get('invert', False),
             RGBColor(kwargs.get('color', '400000'))
         )
 
