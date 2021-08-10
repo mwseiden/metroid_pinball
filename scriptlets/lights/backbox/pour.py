@@ -106,7 +106,7 @@ class Drop():
         self.position += 1
 
         if invert:
-            self.strip.set_color(self.position, self.color)
+            self.strip.set_color(9 - self.position, self.color)
         else:
             self.strip.set_color(self.position, self.color)
 
