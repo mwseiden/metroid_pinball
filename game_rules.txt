@@ -711,7 +711,7 @@ Rooms (Modes)
 
         West Hot Springs [l]:
 
-            Rules unimplemented
+            Shoot at least one of the lit shots then hit the scoop.
 
             Completion:
 
