@@ -1,0 +1,32 @@
+#show_version=5
+
+- time: 0
+  lights:
+    (led_1): red
+    (led_6): '000000'
+
+- time: '+1'
+  lights:
+    (led_2): red
+    (led_1): '000000'
+
+- time: '+1'
+  lights:
+    (led_3): red
+    (led_2): '000000'
+
+- time: '+1'
+  lights:
+    (led_4): red
+    (led_3): '000000'
+
+- time: '+1'
+  lights:
+    (led_5): red
+    (led_4): '000000'
+
+- time: '+1'
+  lights:
+    (led_6): red
+    (led_5): '000000'
+

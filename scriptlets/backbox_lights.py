@@ -113,6 +113,7 @@ class BackBoxLights(Scriptlet):
             int(kwargs.get('count', 1)),
             int(kwargs.get('min_length', 5)),
             int(kwargs.get('max_length', 10)),
+            kwargs.get('invert', False),
             RGBColor(kwargs.get('color', '400000'))
         )
 
@@ -215,7 +216,8 @@ class BackBoxLights(Scriptlet):
         self._schedule_update()
 
     def _schedule_update(self):
-        self.delay.add_if_doesnt_exist(self.REFRESH_RATE, self._update_backbox, 'bbup')
+        self.delay.reset(self.REFRESH_RATE, self._update_backbox, 'bbup')
+        # self.delay.add_if_doesnt_exist(self.REFRESH_RATE, self._update_backbox, 'bbup')
 
     def _show_base_effect(self, **kwargs):
         self.set_base_effect(self._create_show(**kwargs))

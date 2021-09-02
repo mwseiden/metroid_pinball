@@ -111,6 +111,9 @@ player_vars:
   drops_2m:
     value_type: str
     initial_value: 'DDD'
+  drops_2o:
+    value_type: str
+    initial_value: 'DDD'
   emergency_landings:
     initial_value: 0
   has_chosen_landing_site:
@@ -187,6 +190,8 @@ player_vars:
     initial_value: 0
   room_1d_shots_hit:
     initial_value: 0
+  room_1i_combination_value:
+    initial_value: 0
   room_1k_shots_hit:
     initial_value: 0
   room_1m_captured:
@@ -201,6 +206,18 @@ player_vars:
     initial_value: 0
   room_1s_jackpot:
     initial_value: 0
+  room_1u_laser_speed:
+    initial_value: 1
+  room_1z_jackpot:
+    initial_value: 0
+  room_1z_skrees:
+    initial_value: 0
+  room_2h_crystals:
+    initial_value: 0
+  room_2h_total_crystals:
+    initial_value: 0
+  room_2j_super_jackpot:
+    initial_value: 200000
   room_special_score:
     initial_value: 0
   wrecked_ship_charge:

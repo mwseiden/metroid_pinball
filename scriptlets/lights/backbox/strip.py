@@ -18,6 +18,17 @@ class Strip:
 
         self._set_color(index, color)
 
+    def set_color_with_invert(self, index, color, invert):
+
+        if invert:
+            index = 10 - index
+
+        if self._index_out_of_range(index):
+            return None
+
+        self._set_color(index, color)
+
+
     def get_color(self, index):
         if self._index_out_of_range(index):
             return None

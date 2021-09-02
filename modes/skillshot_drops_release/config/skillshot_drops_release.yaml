@@ -39,6 +39,10 @@ show_player:
     skillshot_drops_release_success:
       loops: 0
       events_when_completed: skillshot_drops_release_should_end
+    skillshot_drops_release_playfield_lights:
+      loops: 0
+      speed: 50
+      priority: 300
 
 timers:
   skillshot_drops_release_super_skill:

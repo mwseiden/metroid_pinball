@@ -282,14 +282,18 @@ variable_player:
       action: set
   room_2k_bank_1_shot_hit:
     room_2k_insects: 1
+    score: 10000 * (current_player.area_bonus_w + 1) * current_player.multiplier
   room_2k_bank_2_shot_hit:
     room_2k_insects: 2
+    score: 20000 * (current_player.area_bonus_e + 1) * current_player.multiplier
   room_2k_bank_3_shot_hit:
     room_2k_insects: 1
+    score: 10000 * current_player.multiplier
   room_2k_bank_4_shot_hit:
     room_2k_insects: 5
+    score: 50000 * (current_player.area_bonus_nw + 1) * current_player.multiplier
   room_2k_collect_score:
-    score: (25000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
+    score: (50000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
     room_special_score:
-      int: (25000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
+      int: (50000 * current_player.room_2k_insects) * (current_player.area_bonus_nw + 1) * current_player.multiplier
       action: set

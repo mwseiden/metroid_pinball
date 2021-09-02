@@ -8,6 +8,48 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2a_enter, room_2d_enter, room_1z_exit
   priority: 300
 
+
+timers:
+  room_1z_skree_timer:
+    start_value: 1
+    end_value: 16
+    tick_interval: 1s
+    control_events:
+      - event: room_1z_start_timer
+        action: restart
+      - event: mode_room_1z_underground_desert_started
+        action: stop
+      - event: mode_room_1z_underground_desert_ending
+        action: stop
+      - event: room_1z_stop_timer
+        action: stop
+
+shot_profiles:
+  room_1z_drop_skree:
+    states:
+      - name: lit
+        show: two_color_blink
+        loops: -1
+        speed: 5
+        show_tokens:
+          color1: '10FF40'
+          color2: 'FF7000'
+  room_1z_strobe:
+    states:
+    - name: lit
+      show: blink_3_lights
+      loops: -1
+  room_1z_increase:
+    states:
+      - name: lit
+        show: two_color_blink
+        loops: -1
+        speed: 5
+        show_tokens:
+          color1: '2080FF'
+          color2: 'FF2020'
+
+
 shots:
   room_1z_exit_east_shot:
     hit_events: right_orbit_hit
@@ -27,6 +69,58 @@ shots:
     show_tokens:
       led: led_enter_secret_passage
       color: door_blue
+  room_1z_drop_skree_shot:
+    switches: s_ramp_enter
+    profile: room_1z_drop_skree
+    enable_events: room_1z_enable_skree
+    disable_events: mode_room_1z_underground_desert_started, room_1z_drop_skree_shot_hit
+    reset_events: mode_room_1z_underground_desert_started, room_1z_drop_skree_shot_hit
+    show_tokens:
+      led: led_enter_ramp
+  room_1z_increase_value_shot:
+    switches: s_ramp_enter
+    profile: room_1z_increase
+    enable_events: room_1z_start_timer
+    disable_events: mode_room_1z_underground_desert_started, room_1z_stop_timer, room_1z_enable_skree
+    reset_events: mode_room_1z_underground_desert_started, room_1z_stop_timer, room_1z_enable_skree
+    show_tokens:
+      led: led_enter_ramp
+  room_1z_upper_skree_shot:
+    switch: s_purple_1, s_purple_2, s_purple_3
+    profile: room_1z_strobe
+    enable_events: room_1z_enable_upper_skree
+    disable_events: mode_room_1z_underground_desert_started, room_1z_upper_skree_shot_hit, room_1z_enable_lower_skree
+    reset_events: mode_room_1z_underground_desert_started, room_1z_upper_skree_shot_hit, room_1z_enable_lower_skree
+    show_tokens:
+      led_1: led_upgrade_bank_1
+      led_2: led_upgrade_bank_2
+      led_3: led_upgrade_bank_3
+      color_1: '00FF00'
+      color_2: stop
+  room_1z_lower_skree_1_shot:
+    switch: s_missile_bank_1, s_missile_bank_2, s_missile_bank_3
+    profile: room_1z_strobe
+    enable_events: room_1z_enable_lower_skree
+    disable_events: mode_room_1z_underground_desert_started, room_1z_lower_skree_1_shot_hit, room_1z_lower_skree_2_shot_hit, room_1z_enable_skree
+    reset_events: mode_room_1z_underground_desert_started, room_1z_lower_skree_1_shot_hit, room_1z_lower_skree_2_shot_hit, room_1z_enable_skree
+    show_tokens:
+      led_1: led_missile_bank_1
+      led_2: led_missile_bank_2
+      led_3: led_missile_bank_3
+      color_1: 'AF70A0'
+      color_2: stop
+  room_1z_lower_skree_2_shot:
+    switch: s_lower_right_bank_1, s_lower_right_bank_2, s_lower_right_bank_3
+    profile: room_1z_strobe
+    enable_events: room_1z_enable_lower_skree
+    disable_events: mode_room_1z_underground_desert_started, room_1z_lower_skree_1_shot_hit, room_1z_lower_skree_2_shot_hit, room_1z_enable_skree
+    reset_events: mode_room_1z_underground_desert_started, room_1z_lower_skree_1_shot_hit, room_1z_lower_skree_2_shot_hit, room_1z_enable_skree
+    show_tokens:
+      led_1: led_bomb_bank_1
+      led_2: led_bomb_bank_2
+      led_3: led_bomb_bank_3
+      color_1: 'AF70A0'
+      color_2: stop
 
 slides:
   room_underground_desert_backglass_slide:
@@ -61,6 +155,21 @@ show_player:
   flipper_cradle_release:
     room_1z_underground_desert_status_report:
       action: stop
+  room_1z_drop_skree_shot_hit:
+    room_1z_jackpot_increase:
+      loops: 0
+  room_1z_increase_value_shot_hit:
+    room_1z_jackpot_increase:
+      loops: 0
+  room_1z_upper_skree_shot_hit:
+    special_score_purple:
+      loops: 0
+  room_1z_lower_skree_1_shot_hit:
+    special_score_purple:
+      loops: 0
+  room_1z_lower_skree_2_shot_hit:
+    special_score_purple:
+      loops: 0
 
 event_player:
   mode_room_1z_underground_desert_started:
@@ -77,6 +186,17 @@ event_player:
     cmd_play_map_music:
       music: music_maridia_intro
     metroid_open_doors:
+    room_1z_enable_skree:
+  player_room_1z_skrees{value == 2}:
+    cmd_map_complete:
+      room: '1z'
+  room_1z_drop_skree_shot_hit: room_1z_start_timer, room_1z_enable_upper_skree
+  timer_room_1z_skree_timer_tick{ticks == 8}: room_1z_enable_lower_skree
+  timer_room_1z_skree_timer_complete: room_1z_enable_skree
+  room_1z_upper_skree_shot_hit: room_1z_stop_timer
+  room_1z_lower_skree_1_shot_hit: room_1z_stop_timer
+  room_1z_lower_skree_2_shot_hit: room_1z_stop_timer
+  room_1z_stop_timer: room_1z_enable_skree
   room_1z_exit_east_shot_hit.1: drop_targets_save
   room_1z_exit_east_shot_hit.2: room_2a_enter
   room_1z_exit_south_shot_hit.1: drop_targets_save
@@ -86,4 +206,26 @@ variable_player:
   mode_room_1z_underground_desert_started:
     continue_room:
       string: 1z
+      action: set
+  room_1z_drop_skree_shot_hit:
+    room_1z_jackpot: (100000 + (current_player.area_bonus_nw * 50000)) * current_player.multiplier
+  room_1z_increase_value_shot_hit:
+    room_1z_jackpot: (50000 * current_player.multiplier) + (current_player.area_bonus_nw * 50000)
+  room_1z_upper_skree_shot_hit:
+    room_1z_skrees: 1
+    score: current_player.room_1z_jackpot * current_player.multiplier
+    room_special_score:
+      int: current_player.room_1z_jackpot * current_player.multiplier
+      action: set
+  room_1z_lower_skree_1_shot_hit:
+    room_1z_skrees: 1
+    score: (current_player.room_1z_jackpot * current_player.multiplier) / 2
+    room_special_score:
+      int: (current_player.room_1z_jackpot * current_player.multiplier) / 2
+      action: set
+  room_1z_lower_skree_2_shot_hit:
+    room_1z_skrees: 1
+    score: (current_player.room_1z_jackpot * current_player.multiplier) / 2
+    room_special_score:
+      int: (current_player.room_1z_jackpot * current_player.multiplier) / 2
       action: set

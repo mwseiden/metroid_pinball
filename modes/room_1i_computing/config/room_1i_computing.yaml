@@ -9,6 +9,39 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_1h_enter, room_1j_enter, room_1k_enter, room_1i_exit
   priority: 300
 
+
+timers:
+  room_1i_move_lights_timer:
+    start_value: 0
+    end_value: 4
+    tick_interval: 4s
+    restart_on_complete: true
+    control_events:
+      - event: mode_room_1i_computing_started
+        action: stop
+      - event: mode_room_1i_computing_ending
+        action: stop
+      - event: mode_room_1i_start_timer
+        action: restart
+
+
+shot_profiles:
+  room_1i_blink:
+    states:
+    - name: lit
+      show: room_1i_theater_chase
+      loops: -1
+      speed: 4
+  room_1i_jackpot:
+    states:
+      - name: lit
+        show: blink_light
+        loops: -1
+        speed: 8
+        show_tokens:
+          color: white
+
+
 shots:
   room_1i_exit_south_shot:
     switch: s_scoop
@@ -37,6 +70,62 @@ shots:
     show_tokens:
       led: led_enter_ramp
       color: door_blue
+  room_1i_bank_1_shot:
+    switch: s_missile_bank_1, s_missile_bank_2, s_missile_bank_3
+    profile: room_1i_blink
+    enable_events: mode_room_1i_enable_shot_1
+    disable_events: mode_room_1i_computing_started, mode_room_1i_enable_shot_2
+    show_tokens:
+      led_1: led_missile_bank_1
+      led_2: led_missile_bank_2
+      led_3: led_missile_bank_3
+      led_4: led_missile_bank_1
+      led_5: led_missile_bank_2
+      led_6: led_missile_bank_3
+  room_1i_bank_2_shot:
+    switch: s_lower_right_bank_1, s_lower_right_bank_2, s_lower_right_bank_3
+    profile: room_1i_blink
+    enable_events: mode_room_1i_enable_shot_2
+    disable_events: mode_room_1i_computing_started, mode_room_1i_enable_shot_3
+    show_tokens:
+      led_1: led_bomb_bank_1
+      led_2: led_bomb_bank_2
+      led_3: led_bomb_bank_3
+      led_4: led_bomb_bank_1
+      led_5: led_bomb_bank_2
+      led_6: led_bomb_bank_3
+  room_1i_bank_3_shot:
+    switch: s_purple_1, s_purple_2, s_purple_3
+    profile: room_1i_blink
+    enable_events: mode_room_1i_enable_shot_3
+    disable_events: mode_room_1i_computing_started, mode_room_1i_enable_shot_4
+    show_tokens:
+      led_1: led_upgrade_bank_1
+      led_2: led_upgrade_bank_2
+      led_3: led_upgrade_bank_3
+      led_4: led_upgrade_bank_1
+      led_5: led_upgrade_bank_2
+      led_6: led_upgrade_bank_3
+  room_1i_bank_4_shot:
+    switch: s_left_target_1, s_left_target_2, s_left_target_3
+    profile: room_1i_blink
+    enable_events: mode_room_1i_enable_shot_4
+    disable_events: mode_room_1i_computing_started, mode_room_1i_enable_shot_1
+    show_tokens:
+      led_1: led_side_1
+      led_2: led_side_2
+      led_3: led_side_3
+      led_4: led_side_1
+      led_5: led_side_2
+      led_6: led_side_3
+  room_1i_jackpot_shot:
+    switch: s_side_ramp_made
+    profile: room_1i_jackpot
+    enable_events: mode_room_1i_enable_jackpot_shot
+    disable_events: mode_room_1i_computing_started, mode_room_1i_computing_ending, room_1i_jackpot_shot_hit
+    show_tokens:
+      led: led_enter_side_ramp
+
 
 slides:
   room_1i_computing_backglass_slide:
@@ -56,6 +145,7 @@ slides:
       - type: image
         image: room_1i_computing_splash
 
+
 slide_player:
   mode_room_1i_computing_started_no_charge:
     room_1i_computing_backglass_slide:
@@ -67,6 +157,7 @@ slide_player:
     room_1i_computing_splash_slide:
       target: dmd
       expire: 1.5s
+
 
 show_player:
   mode_room_1i_computing_started:
@@ -81,6 +172,46 @@ show_player:
   flipper_cradle_release:
     room_1i_computing_status_report:
       action: stop
+  room_1i_bank_1_shot_hit:
+    room_1i_score_value:
+      loops: 0
+  room_1i_bank_2_shot_hit:
+    room_1i_score_value:
+      loops: 0
+  room_1i_bank_3_shot_hit:
+    room_1i_score_value:
+      loops: 0
+  room_1i_bank_4_shot_hit:
+    room_1i_score_value:
+      loops: 0
+  room_1i_jackpot_shot_hit:
+    special_score_orange:
+      loops: 0
+
+
+sounds:
+  room_1i_bleep_1:
+    file: room_1i_bleep_1.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+  room_1i_bleep_2:
+    file: room_1i_bleep_2.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    volume: 1.0
+    max_queue_time: None
+
+
+sound_player:
+  room_1i_bank_1_shot_hit: room_1i_bleep_1
+  room_1i_bank_2_shot_hit: room_1i_bleep_2
+  room_1i_bank_3_shot_hit: room_1i_bleep_1
+  room_1i_bank_4_shot_hit: room_1i_bleep_2
+
 
 event_player:
   mode_room_1i_computing_started:
@@ -89,6 +220,7 @@ event_player:
       room: '1i'
       visit: True
     metroid_open_doors:
+    mode_room_1i_start_timer:
   mode_room_1i_computing_started_no_charge:
     cmd_backbox_show:
       show_type: twinkle
@@ -108,12 +240,22 @@ event_player:
       music: music_wrecked_ship_generator
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 0}: mode_room_1i_computing_started_no_charge
   mode_room_1i_computing_started{current_player.wrecked_ship_powered_up == 1}: mode_room_1i_computing_started_charge
+  mode_room_1i_computing_started{current_player.room_1i_combination_value % 10 == 0 and current_player.room_1i_combination_value > 0}: mode_room_1i_enable_jackpot_shot
+  player_room_1i_combination_value{value % 10 == 0}: mode_room_1i_enable_jackpot_shot
+  room_1i_jackpot_shot_hit:
+    cmd_map_complete:
+      room: '1i'
+  timer_room_1i_move_lights_timer_tick{ticks == 0}: mode_room_1i_enable_shot_1
+  timer_room_1i_move_lights_timer_tick{ticks == 1}: mode_room_1i_enable_shot_2
+  timer_room_1i_move_lights_timer_tick{ticks == 2}: mode_room_1i_enable_shot_3
+  timer_room_1i_move_lights_timer_tick{ticks == 3}: mode_room_1i_enable_shot_4
   room_1i_exit_south_shot_hit.1: drop_targets_save
   room_1i_exit_south_shot_hit.2: room_1k_enter
   room_1i_exit_west_shot_hit.1: drop_targets_save
   room_1i_exit_west_shot_hit.2: room_1h_enter
   room_1i_exit_east_shot_hit.1: drop_targets_save
   room_1i_exit_east_shot_hit.2: room_1j_enter
+
 
 variable_player:
   mode_room_1i_computing_started:
@@ -122,4 +264,33 @@ variable_player:
       action: set
     continue_room:
       string: 1i
+      action: set
+  room_1i_bank_1_shot_hit:
+    room_1i_combination_value: 1
+    score: (25000 + (current_player.area_bonus_sw * 25000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    room_special_score:
+      int: (25000 + (current_player.area_bonus_sw * 25000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+      action: set
+  room_1i_bank_2_shot_hit:
+    room_1i_combination_value: 2
+    score: (30000 + (current_player.area_bonus_se * 30000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    room_special_score:
+      int: (30000 + (current_player.area_bonus_se * 30000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+      action: set
+  room_1i_bank_3_shot_hit:
+    room_1i_combination_value: 3
+    score: (10000 + (current_player.area_bonus_nw * 10000) + (current_player.area_bonus_ne * 10000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+    room_special_score:
+      int: (10000 + (current_player.area_bonus_nw * 10000) + (current_player.area_bonus_ne * 10000) + (current_player.wrecked_ship_charge * 10000)) * current_player.multiplier
+      action: set
+  room_1i_bank_4_shot_hit:
+    room_1i_combination_value: 4
+    score: (100000 + (current_player.area_bonus_nw * 75000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+    room_special_score:
+      int: (100000 + (current_player.area_bonus_nw * 75000) + (current_player.wrecked_ship_charge * 20000)) * current_player.multiplier
+      action: set
+  room_1i_jackpot_shot_hit:
+    score: (1000000 + (current_player.area_bonus_ne * 100000) + (current_player.wrecked_ship_charge * 33000)) * current_player.multiplier
+    room_special_score:
+      int: (1000000 + (current_player.area_bonus_ne * 100000) + (current_player.wrecked_ship_charge * 33000)) * current_player.multiplier
       action: set

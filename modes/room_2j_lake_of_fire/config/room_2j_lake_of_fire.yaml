@@ -4,6 +4,48 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2i_enter, room_2k_enter, room_2j_exit
   priority: 300
 
+
+shot_profiles:
+  room_2j_mode_shot:
+    advance_on_hit: False
+    states:
+      - name: bad
+        show: two_color_blink
+        loops: -1
+        speed: 1.5
+        show_tokens:
+          color1: '808000'
+          color2: '805000'
+      - name: good
+        show: two_color_blink
+        loops: -1
+        speed: 3
+        show_tokens:
+          color1: '00FFFF'
+          color2: '00FF00'
+  room_2j_advance_shot:
+    states:
+      - name: lit
+        show: small_theater_chase
+        loops: -1
+        speed: 40
+        priority: 100
+        show_tokens:
+          color: 'FFFFFF'
+  room_2j_super_jackpot:
+    advance_on_hit: False
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: blink_light
+        loops: -1
+        speed: 6
+        priority: 200
+        show_tokens:
+          color: 'FFFFFF'
+
+
 shots:
   room_2j_exit_west_shot:
     hit_events: left_orbit_hit
@@ -23,6 +65,99 @@ shots:
     show_tokens:
       led: led_enter_ramp
       color: door_blue
+  room_2j_shot_1:
+    switch: s_scoop
+    profile: room_2j_mode_shot
+    advance_events: room_2j_light_first_shot
+    show_tokens:
+      led: led_enter_scoop
+  room_2j_shot_2:
+    switch: s_left_passage
+    profile: room_2j_mode_shot
+    show_tokens:
+      led: led_enter_secret_passage
+  room_2j_shot_3:
+    hit_events: right_orbit_hit
+    profile: room_2j_mode_shot
+    show_tokens:
+      led: led_enter_right_orbit
+  room_2j_shot_4:
+    switch: s_side_ramp_made
+    profile: room_2j_mode_shot
+    show_tokens:
+      led: led_enter_side_ramp
+  room_2j_advance_shot_1:
+    hit_events: left_sling_shot_hit
+    profile: room_2j_advance_shot
+    show_tokens:
+      led_1: gi_left_sling_bottom
+      led_2: gi_left_sling_top
+      led_3: led_null
+      led_4: led_null
+      led_5: gi_left_sling_top
+      led_6: gi_left_sling_bottom
+  room_2j_advance_shot_2:
+    hit_events: right_sling_shot_hit
+    profile: room_2j_advance_shot
+    show_tokens:
+      led_1: gi_right_sling_bottom
+      led_2: gi_right_sling_top
+      led_3: led_null
+      led_4: led_null
+      led_5: gi_left_sling_top
+      led_6: gi_left_sling_bottom
+  room_2j_advance_shot_3:
+    hit_events: upper_left_sling_shot_hit
+    profile: room_2j_advance_shot
+    show_tokens:
+      led_1: gi_missile_bank
+      led_2: gi_middle_sling
+      led_3: led_null
+      led_4: led_null
+      led_5: gi_middle_sling
+      led_6: gi_missile_bank
+  room_2j_advance_shot_4:
+    hit_events: upper_right_sling_shot_hit
+    profile: room_2j_advance_shot
+    show_tokens:
+      led_1: gi_under_side_ramp
+      led_2: led_null
+      led_3: gi_under_side_ramp
+      led_4: led_null
+      led_5: gi_under_side_ramp
+      led_6: led_null
+  room_2j_super_jackpot_left_shot:
+    switch: s_top_lane_1
+    profile: room_2j_super_jackpot
+    show_tokens:
+      led: led_upper_playfield_1
+  room_2j_super_jackpot_middle_shot:
+    switch: s_top_lane_2
+    profile: room_2j_super_jackpot
+    advance_events: room_2j_light_first_shot
+    show_tokens:
+      led: led_upper_playfield_2
+  room_2j_super_jackpot_right_shot:
+    switch: s_top_lane_3
+    profile: room_2j_super_jackpot
+    show_tokens:
+      led: led_upper_playfield_3
+
+
+
+shot_groups:
+  room_2j_collect_shots:
+    shots: room_2j_shot_1, room_2j_shot_2, room_2j_shot_3, room_2j_shot_4
+    enable_events: mode_room_2j_lake_of_fire_started
+    disable_events: mode_room_2j_lake_of_fire_ending
+    reset_events: mode_room_2j_lake_of_fire_started
+    rotate_events: room_2j_rotate
+  room_2j_super_jackpot_shots:
+    shots: room_2j_super_jackpot_left_shot, room_2j_super_jackpot_middle_shot, room_2j_super_jackpot_right_shot
+    enable_events: mode_room_2j_lake_of_fire_started
+    disable_events: mode_room_2j_lake_of_fire_ending
+    reset_events: mode_room_2j_lake_of_fire_started
+    rotate_events: room_2j_rotate
 
 
 slides:
@@ -58,6 +193,39 @@ show_player:
   flipper_cradle_release:
     room_2j_lake_of_fire_status_report:
       action: stop
+  room_2j_collect_shots_good_hit:
+    room_2j_correct_hit:
+      speed: 50
+      loops: 0
+  player_room_2j_super_jackpot:
+    room_2j_jackpot_increase:
+      loops: 0
+  room_2j_collect_super_jackpot:
+    special_score_red:
+      loops: 1
+      priority: 300
+
+
+sounds:
+  room_2j_bad_shot:
+    file: room_2j_bad_shot.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+  room_2j_good_shot:
+    file: room_2j_good_shot.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+
+sound_player:
+  room_2j_collect_shots_good_hit: room_2j_good_shot
+  room_2j_collect_shots_bad_hit: room_2j_bad_shot
+  room_2j_collect_super_jackpot: super_jackpot
+
 
 event_player:
   mode_room_2j_lake_of_fire_started:
@@ -70,6 +238,17 @@ event_player:
     cmd_play_map_music:
       music: music_norfair
     metroid_open_doors:
+    room_2j_light_first_shot:
+  room_2j_advance_shot_1_hit: room_2j_rotate
+  room_2j_advance_shot_2_hit: room_2j_rotate
+  room_2j_advance_shot_3_hit: room_2j_rotate
+  room_2j_advance_shot_4_hit: room_2j_rotate
+  room_2j_collect_shots_bad_hit{current_player.room_2j_super_jackpot > 100000}: room_2j_subtract_jackpot
+  room_2j_super_jackpot_shots_lit_hit: room_2j_collect_super_jackpot
+  room_2j_collect_super_jackpot:
+    room_2j_clear_super_jackpot:
+    cmd_map_complete:
+      room: '2j'
   room_2j_exit_west_shot_hit.1: drop_targets_save
   room_2j_exit_west_shot_hit.2: room_2i_enter
   room_2j_exit_east_shot_hit.1: drop_targets_save
@@ -83,3 +262,19 @@ variable_player:
     continue_room:
       string: 2j
       action: set
+  room_2j_collect_super_jackpot:
+    score: current_player.room_2j_super_jackpot * current_player.multiplier
+    room_special_score:
+      int: current_player.room_2j_super_jackpot * current_player.multiplier
+      action: set
+  room_2j_clear_super_jackpot:
+    room_2j_super_jackpot:
+      int: 200000
+      action: set
+  room_2j_rotate:
+    room_2j_super_jackpot: 20000 * current_player.multiplier
+  room_2j_collect_shots_good_hit:
+    room_2j_super_jackpot: 100000 * current_player.multiplier
+  room_2j_subtract_jackpot:
+    room_2j_super_jackpot: -20000
+

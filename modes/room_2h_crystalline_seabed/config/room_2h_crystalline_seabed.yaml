@@ -9,6 +9,23 @@ mode:
   stop_events: game_ending, ball_ending, metroid_base_ended, room_2d_enter, room_2g_enter, room_2i_enter, room_2h_exit
   priority: 300
 
+
+shot_profiles:
+  room_2h_gem_shot:
+    advance_on_hit: False
+    states:
+      - name: normal
+        show: fade_one_light
+        speed: 2
+        show_tokens:
+          color: '800080'
+      - name: extra
+        show: fade_one_light
+        speed: 4
+        show_tokens:
+          color: 'E75A56'
+
+
 shots:
   room_2h_exit_north_shot:
     hit_events: right_orbit_hit
@@ -37,6 +54,56 @@ shots:
     show_tokens:
       led: led_enter_scoop
       color: door_blue
+  room_2h_add_crystal_shot:
+    switches:
+      - s_thin_orange
+      - s_lower_right_bank_1
+      - s_lower_right_bank_2
+      - s_lower_right_bank_3
+      - s_missile_bank_1
+      - s_missile_bank_2
+      - s_missile_bank_3
+      - s_shatz
+      - s_purple_1
+      - s_purple_2
+      - s_purple_3
+      - s_left_target_1
+      - s_left_target_2
+      - s_left_target_3
+    enable_events: mode_room_2h_crystalline_seabed_started
+    disable_events: mode_room_2h_crystalline_seabed_ending
+  room_2h_gem_shot_1:
+    hit_events: left_orbit_hit
+    profile: room_2h_gem_shot
+    enable_events: room_2h_gem_shot_enable
+    disable_events: mode_room_2h_crystalline_seabed_started
+    advance_events: room_2h_gem_shot_enable
+    show_tokens:
+      led: led_enter_left_orbit
+  room_2h_gem_shot_2:
+    switch: s_ramp_enter
+    profile: room_2h_gem_shot
+    enable_events: room_2h_gem_shot_enable
+    disable_events: mode_room_2h_crystalline_seabed_started
+    show_tokens:
+      led: led_enter_ramp
+  room_2h_gem_shot_3:
+    switch: s_side_ramp_made
+    profile: room_2h_gem_shot
+    enable_events: room_2h_gem_shot_enable
+    disable_events: mode_room_2h_crystalline_seabed_started
+    show_tokens:
+      led: led_enter_side_ramp
+
+
+shot_groups:
+  room_2h_gem_shots:
+    shots: room_2h_gem_shot_1, room_2h_gem_shot_3, room_2h_gem_shot_2
+    enable_events: room_2h_gem_shot_enable
+    disable_events: mode_room_2h_crystalline_seabed_started, room_2h_reset_gems
+    reset_events: mode_room_2h_crystalline_seabed_started
+    rotate_events: room_2h_add_crystal_shot_hit
+
 
 slides:
   room_2h_crystalline_seabed_backglass_slide:
@@ -50,6 +117,7 @@ slides:
       - type: image
         image: room_2h_crystalline_seabed_splash
 
+
 slide_player:
   mode_room_2h_crystalline_seabed_started:
     room_2h_crystalline_seabed_backglass_slide:
@@ -57,6 +125,7 @@ slide_player:
     room_2h_crystalline_seabed_splash_slide:
       target: dmd
       expire: 1.5s
+
 
 show_player:
   mode_room_2h_crystalline_seabed_started:
@@ -71,6 +140,31 @@ show_player:
   flipper_cradle_release:
     room_2h_crystalline_seabed_status_report:
       action: stop
+  room_2h_add_crystal_shot_hit:
+    room_2h_crystal_add:
+      loops: 0
+  room_2h_gem_shots_extra_hit:
+    special_score_blue:
+      loops: 1
+      priority: 300
+  room_2h_gem_shots_normal_hit:
+    special_score_purple:
+      loops: 1
+      priority: 300
+
+
+sounds:
+  room_2h_crystal:
+    file: room_2h_crystal.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+
+sound_player:
+  room_2h_add_crystal_shot_hit: room_2h_crystal
+
 
 event_player:
   mode_room_2h_crystalline_seabed_started:
@@ -85,12 +179,22 @@ event_player:
     cmd_play_map_music:
       music: music_maridia
     metroid_open_doors:
+  mode_room_2h_crystalline_seabed_started{current_player.room_2h_crystals > 0}: room_2h_gem_shot_enable
+  player_room_2h_crystals{value == 1}: room_2h_gem_shot_enable
+  player_room_2h_total_crystals{value == 20}:
+    cmd_map_complete:
+      room: '2h'
+  room_2h_gem_shots_normal_hit.1: room_2h_collect_normal
+  room_2h_gem_shots_normal_hit.2: room_2h_reset_gems
+  room_2h_gem_shots_extra_hit.1: room_2h_collect_extra
+  room_2h_gem_shots_extra_hit.2: room_2h_reset_gems
   room_2h_exit_north_shot_hit.1: drop_targets_save
   room_2h_exit_north_shot_hit.2: room_2d_enter
   room_2h_exit_west_shot_hit.1: drop_targets_save
   room_2h_exit_west_shot_hit.2: room_2g_enter
   room_2h_exit_south_shot_hit.1: drop_targets_save
   room_2h_exit_south_shot_hit.2: room_2i_enter
+
 
 variable_player:
   mode_room_2h_crystalline_seabed_started:
@@ -100,3 +204,22 @@ variable_player:
     continue_room:
       string: 2h
       action: set
+  room_2h_add_crystal_shot_hit:
+    room_2h_crystals: 1
+  room_2h_reset_gems:
+    room_2h_crystals:
+      int: 0
+      action: set
+  room_2h_gem_shots_extra_hit:
+    room_2h_total_crystals: current_player.room_2h_crystals
+    score: (30000 * current_player.room_2h_crystals) * current_player.multiplier
+    room_special_score:
+      int: (30000 * current_player.room_2h_crystals) * current_player.multiplier
+      action: set
+  room_2h_gem_shots_normal_hit:
+    room_2h_total_crystals: current_player.room_2h_crystals
+    score: (17000 * current_player.room_2h_crystals) * current_player.multiplier
+    room_special_score:
+      int: (17000 * current_player.room_2h_crystals) * current_player.multiplier
+      action: set
+
