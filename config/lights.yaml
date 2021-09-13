@@ -17,69 +17,81 @@ lights:
     type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_behind_zero_suit:
+  gi_left_flipper_spot:
     number: 3
-    type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_missile_bank:
+  gi_behind_zero_suit:
     number: 4
     type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_middle_sling:
+  gi_secret_passage_1:
     number: 5
-    type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_side_bank:
+  gi_missile_bank:
     number: 6
     type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_back_left:
+  gi_middle_sling:
     number: 7
     type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_strip_1:
+  gi_secret_passage_2:
     number: 8
     fade_ms: 40ms
     platform: fadecandy
-  gi_strip_2:
+  gi_side_bank:
     number: 9
+    type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_strip_3:
+  gi_back_left:
     number: 10
+    type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_strip_4:
+  gi_strip_1:
     number: 11
     fade_ms: 40ms
     platform: fadecandy
-  gi_strip_5:
+  gi_strip_2:
     number: 12
     fade_ms: 40ms
     platform: fadecandy
-  gi_strip_6:
+  gi_strip_3:
     number: 13
     fade_ms: 40ms
     platform: fadecandy
-  gi_strip_7:
+  gi_strip_4:
     number: 14
     fade_ms: 40ms
     platform: fadecandy
-  gi_strip_8:
+  gi_strip_5:
     number: 15
     fade_ms: 40ms
     platform: fadecandy
-  gi_strip_9:
+  gi_strip_6:
     number: 16
     fade_ms: 40ms
     platform: fadecandy
-  gi_strip_10:
+  gi_strip_7:
     number: 17
+    fade_ms: 40ms
+    platform: fadecandy
+  gi_strip_8:
+    number: 18
+    fade_ms: 40ms
+    platform: fadecandy
+  gi_strip_9:
+    number: 19
+    fade_ms: 40ms
+    platform: fadecandy
+  gi_strip_10:
+    number: 20
     fade_ms: 40ms
     platform: fadecandy
 
@@ -226,6 +238,314 @@ lights:
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
+
+
+#light-bar-left
+  led_left_bar_1:
+    number: 192
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_2:
+    number: 193
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_3:
+    number: 194
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_4:
+    number: 195
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_5:
+    number: 196
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_6:
+    number: 197
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_7:
+    number: 198
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_8:
+    number: 199
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_9:
+    number: 200
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_10:
+    number: 201
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_11:
+    number: 202
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_12:
+    number: 203
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_13:
+    number: 204
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_14:
+    number: 205
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_15:
+    number: 206
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_16:
+    number: 207
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_17:
+    number: 208
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_18:
+    number: 209
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_19:
+    number: 210
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_20:
+    number: 211
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_21:
+    number: 212
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_22:
+    number: 213
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_23:
+    number: 214
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_24:
+    number: 215
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_25:
+    number: 216
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_26:
+    number: 217
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_27:
+    number: 218
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_28:
+    number: 219
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_29:
+    number: 220
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_left_bar_30:
+    number: 221
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+
+
+
+#light-bar-right
+  led_right_bar_1:
+    number: 256
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_2:
+    number: 257
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_3:
+    number: 258
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_4:
+    number: 259
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_5:
+    number: 260
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_6:
+    number: 261
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_7:
+    number: 262
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_8:
+    number: 263
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_9:
+    number: 264
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_10:
+    number: 265
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_11:
+    number: 266
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_12:
+    number: 267
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_13:
+    number: 268
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_14:
+    number: 269
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_15:
+    number: 270
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_16:
+    number: 271
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_17:
+    number: 272
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_18:
+    number: 273
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_19:
+    number: 274
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_20:
+    number: 275
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_21:
+    number: 276
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_22:
+    number: 277
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_23:
+    number: 278
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_24:
+    number: 279
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_25:
+    number: 280
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_26:
+    number: 281
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_27:
+    number: 282
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_28:
+    number: 283
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_29:
+    number: 284
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_right_bar_30:
+    number: 285
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+
 
 #playfield-middle
   led_bomb_bank_3:
@@ -441,12 +761,146 @@ lights:
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
+  led_spinner:
+    number: 404
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_shinespark_1:
+    number: 405
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_shinespark_2:
+    number: 406
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_shinespark_3:
+    number: 407
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
 
 #null
   led_null:
-    number: 404
+    number: 408
     platform: fadecandy
     tags: reflective
+
+#playfield-center
+  led_bomb_count_nw:
+    number: 448
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_bomb_count_ne:
+    number: 449
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_bomb_count_se:
+    number: 450
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_bomb_count_sw:
+    number: 451
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_item_count_nw:
+    number: 452
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_item_count_ne:
+    number: 453
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_item_count_se:
+    number: 454
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_item_count_sw:
+    number: 455
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_missile_count_nw:
+    number: 456
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_missile_count_ne:
+    number: 457
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_missile_count_se:
+    number: 458
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_missile_count_sw:
+    number: 459
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_miniboss_1:
+    number: 460
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_miniboss_2:
+    number: 461
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_miniboss_3:
+    number: 462
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_miniboss_4:
+    number: 463
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_miniboss_5:
+    number: 464
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_upper_arrow_bottom:
+    number: 465
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_upper_arrow_top:
+    number: 466
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_beam_1:
+    number: 467
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_beam_2:
+    number: 468
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+  led_beam_3:
+    number: 469
+    fade_ms: 40ms
+    platform: fadecandy
+    tags: reflective
+
+
 
 #left backbox
   led80:

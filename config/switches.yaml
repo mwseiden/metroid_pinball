@@ -99,7 +99,7 @@ switches:
     platform_settings:
       debounce_open: 2
       debounce_close: 2
-  s_removed_upper_flipper_rubber:
+  s_beam:
     number: 1-7
   s_right_flipper_eos:
     number: 1-8
@@ -162,7 +162,7 @@ switches:
   s_shatz:
     number: 1-20
     tags: playfield_active
-  s_unknown_25:
+  s_shooter_made:
     number: 1-21
   s_unknown_26:
     number: 1-22
