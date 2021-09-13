@@ -100,3 +100,9 @@ coils:
     default_pulse_power: 1.0
     default_pulse_ms: 20
     default_hold_power: 0.2
+  c_post:
+    number: 2-3
+    allow_enable: true
+    default_pulse_power: 0.5
+    default_pulse_ms: 20
+    default_hold_power: 0.1

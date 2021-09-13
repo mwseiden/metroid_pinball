@@ -111,38 +111,42 @@ lights:
     type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_bomb_bank:
+  gi_right_flipper_spot:
     number: 67
-    type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_upper_flipper_bottom:
+  gi_bomb_bank:
     number: 68
     type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_upper_flipper_top:
+  gi_upper_flipper_bottom:
     number: 69
     type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_upgrade_bank:
+  gi_upper_flipper_top:
     number: 70
     type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_under_side_ramp:
+  gi_upgrade_bank:
     number: 71
     type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_back_center:
+  gi_under_side_ramp:
     number: 72
     type: grb
     fade_ms: 40ms
     platform: fadecandy
-  gi_back_right:
+  gi_back_center:
     number: 73
+    type: grb
+    fade_ms: 40ms
+    platform: fadecandy
+  gi_back_right:
+    number: 74
     type: grb
     fade_ms: 40ms
     platform: fadecandy
