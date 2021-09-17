@@ -18,6 +18,9 @@ light:
   gi_left_ball_guide:
     x: 0.14869614512471654
     y: 0.7948442534908701
+  gi_left_flipper_spot:
+    x: 0.648
+    y: 0.794
   gi_left_sling_bottom:
     x: 0.20963718820861676
     y: 0.7497314715359829
@@ -33,12 +36,21 @@ light:
   gi_right_ball_guide:
     x: 0.7507936507936508
     y: 0.7948442534908701
+  gi_right_flipper_spot:
+    x: 0.254
+    y: 0.794
   gi_right_sling_bottom:
     x: 0.6898526077097505
     y: 0.7497314715359829
   gi_right_sling_top:
     x: 0.7117913832199546
     y: 0.7218045112781954
+  gi_secret_passage_1:
+    x: 0.12
+    y: 0.526
+  gi_secret_passage_2:
+    x: 0.053
+    y: 0.46
   gi_side_bank:
     x: 0.04875283446712018
     y: 0.3233082706766917
@@ -93,6 +105,15 @@ light:
   led_ball_save:
     x: 0.45096371882086167
     y: 0.882921589688507
+  led_beam_1:
+    x: 0.87
+    y: 0.42
+  led_beam_2:
+    x: 0.838
+    y: 0.44
+  led_beam_3:
+    x: 0.81
+    y: 0.458
   led_bomb_bank_1:
     x: 0.782482993197279
     y: 0.5617615467239527
@@ -102,6 +123,18 @@ light:
   led_bomb_bank_3:
     x: 0.8263605442176871
     y: 0.6090225563909775
+  led_bomb_count_ne:
+    x: 0.67
+    y: 0.597
+  led_bomb_count_nw:
+    x: 0.60
+    y: 0.597
+  led_bomb_count_se:
+    x: 0.67
+    y: 0.628
+  led_bomb_count_sw:
+    x: 0.60
+    y: 0.628
   led_boss_1:
     x: 0.3266439909297052
     y: 0.7518796992481203
@@ -156,6 +189,108 @@ light:
   led_goal_4:
     x: 0.5265306122448979
     y: 0.7722878625134264
+  led_item_count_ne:
+    x: 0.357
+    y: 0.641
+  led_item_count_nw:
+    x: 0.287
+    y: 0.641
+  led_item_count_se:
+    x: 0.357
+    y: 0.672
+  led_item_count_sw:
+    x: 0.287
+    y: 0.672
+  led_left_bar_1:
+    x: 0.2
+    y: 0.252
+  led_left_bar_2:
+    x: 0.2
+    y: 0.267
+  led_left_bar_3:
+    x: 0.2
+    y: 0.283
+  led_left_bar_4:
+    x: 0.2
+    y: 0.298
+  led_left_bar_5:
+    x: 0.2
+    y: 0.314
+  led_left_bar_6:
+    x: 0.2
+    y: 0.329
+  led_left_bar_7:
+    x: 0.2
+    y: 0.345
+  led_left_bar_8:
+    x: 0.2
+    y: 0.360
+  led_left_bar_9:
+    x: 0.2
+    y: 0.376
+  led_left_bar_10:
+    x: 0.2
+    y: 0.391
+  led_left_bar_11:
+    x: 0.2
+    y: 0.406
+  led_left_bar_12:
+    x: 0.2
+    y: 0.422
+  led_left_bar_13:
+    x: 0.2
+    y: 0.437
+  led_left_bar_14:
+    x: 0.2
+    y: 0.453
+  led_left_bar_15:
+    x: 0.2
+    y: 0.468
+  led_left_bar_16:
+    x: 0.2
+    y: 0.484
+  led_left_bar_17:
+    x: 0.2
+    y: 0.499
+  led_left_bar_18:
+    x: 0.2
+    y: 0.515
+  led_left_bar_19:
+    x: 0.2
+    y: 0.530
+  led_left_bar_20:
+    x: 0.2
+    y: 0.546
+  led_left_bar_21:
+    x: 0.2
+    y: 0.561
+  led_left_bar_22:
+    x: 0.2
+    y: 0.576
+  led_left_bar_23:
+    x: 0.2
+    y: 0.592
+  led_left_bar_24:
+    x: 0.2
+    y: 0.607
+  led_left_bar_25:
+    x: 0.2
+    y: 0.623
+  led_left_bar_26:
+    x: 0.2
+    y: 0.638
+  led_left_bar_27:
+    x: 0.2
+    y: 0.654
+  led_left_bar_28:
+    x: 0.2
+    y: 0.669
+  led_left_bar_29:
+    x: 0.2
+    y: 0.685
+  led_left_bar_30:
+    x: 0.2
+    y: 0.7
   led_left_inlane:
     x: 0.13163265306122449
     y: 0.6842105263157895
@@ -165,6 +300,21 @@ light:
   led_left_outlane:
     x: 0.05362811791383219
     y: 0.6842105263157895
+  led_miniboss_1:
+    x: 0.339
+    y: 0.352
+  led_miniboss_2:
+    x: 0.393
+    y: 0.360
+  led_miniboss_3:
+    x: 0.445
+    y: 0.370
+  led_miniboss_4:
+    x: 0.498
+    y: 0.380
+  led_miniboss_5:
+    x: 0.551
+    y: 0.389
   led_missile_bank_1:
     x: 0.2413265306122449
     y: 0.5392051557465091
@@ -174,6 +324,18 @@ light:
   led_missile_bank_3:
     x: 0.2998299319727891
     y: 0.5112781954887218
+  led_missile_count_ne:
+    x: 0.42
+    y: 0.52
+  led_missile_count_nw:
+    x: 0.35
+    y: 0.52
+  led_missile_count_se:
+    x: 0.42
+    y: 0.551
+  led_missile_count_sw:
+    x: 0.35
+    y: 0.551
   led_motherbrain_1:
     x: 0.41927437641723353
     y: 0.7142857142857143
@@ -195,6 +357,96 @@ light:
   led_pop_3:
     x: 0.558219954648526
     y: 0.09881847475832439
+  led_right_bar_1:
+    x: 0.8
+    y: 0.252
+  led_right_bar_2:
+    x: 0.8
+    y: 0.267
+  led_right_bar_3:
+    x: 0.8
+    y: 0.283
+  led_right_bar_4:
+    x: 0.8
+    y: 0.298
+  led_right_bar_5:
+    x: 0.8
+    y: 0.314
+  led_right_bar_6:
+    x: 0.8
+    y: 0.329
+  led_right_bar_7:
+    x: 0.8
+    y: 0.345
+  led_right_bar_8:
+    x: 0.8
+    y: 0.360
+  led_right_bar_9:
+    x: 0.8
+    y: 0.376
+  led_right_bar_10:
+    x: 0.8
+    y: 0.391
+  led_right_bar_11:
+    x: 0.8
+    y: 0.406
+  led_right_bar_12:
+    x: 0.8
+    y: 0.422
+  led_right_bar_13:
+    x: 0.8
+    y: 0.437
+  led_right_bar_14:
+    x: 0.8
+    y: 0.453
+  led_right_bar_15:
+    x: 0.8
+    y: 0.468
+  led_right_bar_16:
+    x: 0.8
+    y: 0.484
+  led_right_bar_17:
+    x: 0.8
+    y: 0.499
+  led_right_bar_18:
+    x: 0.8
+    y: 0.515
+  led_right_bar_19:
+    x: 0.8
+    y: 0.530
+  led_right_bar_20:
+    x: 0.8
+    y: 0.546
+  led_right_bar_21:
+    x: 0.8
+    y: 0.561
+  led_right_bar_22:
+    x: 0.8
+    y: 0.576
+  led_right_bar_23:
+    x: 0.8
+    y: 0.592
+  led_right_bar_24:
+    x: 0.8
+    y: 0.607
+  led_right_bar_25:
+    x: 0.8
+    y: 0.623
+  led_right_bar_26:
+    x: 0.8
+    y: 0.638
+  led_right_bar_27:
+    x: 0.8
+    y: 0.654
+  led_right_bar_28:
+    x: 0.8
+    y: 0.669
+  led_right_bar_29:
+    x: 0.8
+    y: 0.685
+  led_right_bar_30:
+    x: 0.8
+    y: 0.7
   led_right_inlane:
     x: 0.7678571428571429
     y: 0.6842105263157895
@@ -228,6 +480,15 @@ light:
   led_scanner_w:
     x: 0.4265873015873015
     y: 0.4865735767991407
+  led_shinespark_1:
+    x: 0.08
+    y: 0.184
+  led_shinespark_2:
+    x: 0.07
+    y: 0.159
+  led_shinespark_3:
+    x: 0.07
+    y: 0.135
   led_side_1:
     x: 0.09750566893424036
     y: 0.38453276047261004
@@ -237,6 +498,9 @@ light:
   led_side_3:
     x: 0.14625850340136054
     y: 0.34371643394199786
+  led_spinner:
+    x: 0.0945
+    y: 0.2085
   led_thin_orange:
     x: 0.8263605442176871
     y: 0.21052631578947367
@@ -249,6 +513,12 @@ light:
   led_upgrade_bank_3:
     x: 0.5265306122448979
     y: 0.3490870032223416
+  led_upper_arrow_bottom:
+    x: 0.867
+    y: 0.3
+  led_upper_arrow_top:
+    x: 0.88
+    y: 0.272
   led_upper_playfield_1:
     x: 0.6849773242630385
     y: 0.1493018259935553
