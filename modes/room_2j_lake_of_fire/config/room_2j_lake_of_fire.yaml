@@ -187,6 +187,9 @@ show_player:
       show_tokens:
         color: 'FF0000'
         color2: 'FF0000'
+    light_bar_fire_dim:
+      speed: 24
+      loops: -1
   show_mode_status_report:
     room_2j_lake_of_fire_status_report:
       loops: 0

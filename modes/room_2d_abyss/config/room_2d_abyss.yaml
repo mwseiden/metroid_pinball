@@ -76,6 +76,9 @@ show_player:
     room_2d_underwater:
       loops: -1
       speed: 10
+    light_bar_water:
+      speed: 30
+      loops: -1
   show_mode_status_report:
     room_2d_status_report:
       loops: 0
