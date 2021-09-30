@@ -62,6 +62,29 @@
     led_side_3: stop
     led_side_2: stop
     led_side_1: stop
+    led_bomb_count_nw: (color)
+    led_bomb_count_ne: stop
+    led_bomb_count_se: stop
+    led_bomb_count_sw: stop
+    led_item_count_se: stop
+    led_item_count_sw: stop
+    led_item_count_nw: (color)
+    led_item_count_ne: stop
+    led_missile_count_sw: stop
+    led_missile_count_se: stop
+    led_missile_count_ne: stop
+    led_missile_count_nw: stop
+    led_miniboss_1: (color)
+    led_miniboss_2: stop
+    led_miniboss_3: stop
+    led_miniboss_4: stop
+    led_miniboss_5: stop
+    led_upper_arrow_bottom: stop
+    led_upper_arrow_top: (color)
+    led_beam_1: stop
+    led_beam_2: stop
+    led_beam_3: stop
+
 
 - time: '+1'
   lights:
@@ -85,6 +108,15 @@
     led_captive_ball: (color)
     led_enter_ramp: stop
     led_enter_scoop: (color)
+    led_bomb_count_nw: stop
+    led_bomb_count_ne: (color)
+    led_item_count_nw: stop
+    led_item_count_ne: (color)
+    led_miniboss_1: stop
+    led_miniboss_2: (color)
+    led_upper_arrow_top: stop
+    led_beam_1: (color)
+
 
 - time: '+1'
   lights:
@@ -108,6 +140,15 @@
     led_pop_1: (color)
     led_enter_scoop: stop
     led_enter_left_orbit: (color)
+    led_bomb_count_ne: stop
+    led_bomb_count_se: (color)
+    led_item_count_ne: stop
+    led_missile_count_sw: (color)
+    led_miniboss_2: stop
+    led_miniboss_3: (color)
+    led_beam_1: stop
+    led_beam_2: (color)
+
 
 - time: '+1'
   lights:
@@ -131,6 +172,15 @@
     led_pop_2: (color)
     led_enter_left_orbit: stop
     led_side_3: (color)
+    led_bomb_count_se: stop
+    led_bomb_count_sw: (color)
+    led_missile_count_sw: stop
+    led_missile_count_se: (color)
+    led_miniboss_3: stop
+    led_miniboss_4: (color)
+    led_beam_2: stop
+    led_beam_3: (color)
+
 
 - time: '+1'
   lights:
@@ -154,6 +204,14 @@
     led_pop_3: (color)
     led_side_3: stop
     led_side_2: (color)
+    led_bomb_count_sw: stop
+    led_item_count_se: (color)
+    led_missile_count_se: stop
+    led_missile_count_ne: (color)
+    led_miniboss_4: stop
+    led_miniboss_5: (color)
+    led_beam_3: stop
+
 
 - time: '+1'
   lights:
@@ -177,4 +235,10 @@
     led_pit: (color)
     led_side_2: stop
     led_side_1: (color)
+    led_item_count_se: stop
+    led_item_count_sw: (color)
+    led_missile_count_ne: stop
+    led_missile_count_nw: (color)
+    led_miniboss_5: stop
+    led_upper_arrow_bottom: (color)
 
