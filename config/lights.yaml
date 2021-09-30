@@ -1,5 +1,14 @@
 #config_version=5
 
+# 1: gi-left
+# 2: gi-right
+# 3: playfield-lower
+# 4: light-bar-left
+# 5: light-bar-right
+# 6: playfield-middle
+# 7: playfield-upper
+# 8: playfield-center
+
 lights:
 #gi-left
   gi_left_sling_top:
@@ -18,7 +27,7 @@ lights:
     fade_ms: 40ms
     platform: fadecandy
   gi_left_flipper_spot:
-    number: 3
+    number: 500 #3
     fade_ms: 40ms
     platform: fadecandy
   gi_behind_zero_suit:
@@ -112,7 +121,7 @@ lights:
     fade_ms: 40ms
     platform: fadecandy
   gi_right_flipper_spot:
-    number: 67
+    number: 501 #67
     fade_ms: 40ms
     platform: fadecandy
   gi_bomb_bank:
@@ -813,42 +822,42 @@ lights:
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_item_count_nw:
+  led_item_count_se:
     number: 452
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_item_count_ne:
+  led_item_count_sw:
     number: 453
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_item_count_se:
+  led_item_count_nw:
     number: 454
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_item_count_sw:
+  led_item_count_ne:
     number: 455
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_missile_count_nw:
+  led_missile_count_sw:
     number: 456
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_missile_count_ne:
+  led_missile_count_se:
     number: 457
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_missile_count_se:
+  led_missile_count_ne:
     number: 458
     fade_ms: 40ms
     platform: fadecandy
     tags: reflective
-  led_missile_count_sw:
+  led_missile_count_nw:
     number: 459
     fade_ms: 40ms
     platform: fadecandy
