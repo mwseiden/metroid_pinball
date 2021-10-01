@@ -39,6 +39,16 @@ accruals:
     persist_state: true
     reset_on_complete: false
 
+
+timers:
+  room_1b_lightning_timer:
+    start_value: 1
+    end_value: 16
+    tick_interval: 1.0s
+    start_running: True
+    restart_on_complete: True
+
+
 show_player:
   room_1b_ship_left:
     room_1b_go_left:
@@ -55,7 +65,13 @@ show_player:
       loops: -1
       show_tokens:
         color: '404080'
-        color2: "808080"
+        color2: '808080'
+    room_1b_light_bar_background:
+      loops: -1
+      speed: 27
+  room_1b_play_lightning_1:
+    room_1b_lightning_strike_1:
+      speed: 26
   mode_room_1b_gunship_started{current_player.room_1b_step_1a == 0}:
     blink_light:
       key: room_1b_left_orbit_blink
@@ -223,6 +239,7 @@ event_player:
   room_1b_ship_navigated:
     cmd_scoop_collect:
       index: 0
+  room_1b_lightning_timer_tick{ticks = 7}: room_1b_play_lightning_1
 
 
 variable_player:
