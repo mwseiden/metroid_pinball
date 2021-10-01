@@ -248,7 +248,7 @@ show_player:
       key: attract_lights_fast_logo_light_bar
       loops: -1
       show_tokens:
-        color: '900000'
+        color: 'C00000'
     theater_chase:
       key: attract_lights_fast_logo
       loops: -1
@@ -269,12 +269,12 @@ show_player:
       loops: -1
       speed: 10
       show_tokens:
-        color: '000090'
+        color: '0000C0'
     light_bar_solid:
       key: attract_lights_mission_pinball_light_bar
       loops: -1
       show_tokens:
-        color: '000090'
+        color: '0000C0'
     theater_chase:
       key: attract_lights_mission_pinball
       loops: -1
