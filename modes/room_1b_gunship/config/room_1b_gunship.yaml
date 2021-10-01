@@ -72,6 +72,7 @@ show_player:
   room_1b_play_lightning_1:
     room_1b_lightning_strike_1:
       speed: 26
+      priority: 100
   mode_room_1b_gunship_started{current_player.room_1b_step_1a == 0}:
     blink_light:
       key: room_1b_left_orbit_blink
