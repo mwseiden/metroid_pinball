@@ -290,12 +290,10 @@ show_player:
       action: stop
     lights_samus_logo:
       action: stop
-    drizzle:
+    lights_blood_pool:
       key: attract_lights_arrrrrcade
       loops: -1
-      speed: 10
-      show_tokens:
-        color: '900000'
+      speed: 40
   slide_metroid_logo_created:
     attract_lights_arrrrrcade:
       action: stop
