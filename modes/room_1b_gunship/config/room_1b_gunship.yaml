@@ -239,7 +239,7 @@ event_player:
   room_1b_ship_navigated:
     cmd_scoop_collect:
       index: 0
-  room_1b_lightning_timer_tick{ticks = 7}: room_1b_play_lightning_1
+  room_1b_lightning_timer_tick{ticks == 7}: room_1b_play_lightning_1
 
 
 variable_player:
