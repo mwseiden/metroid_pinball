@@ -224,8 +224,13 @@ sound_pools:
 show_player:
   mode_bonus_started:
     solid_black:
-       loops: -1
-       priority: 1900
+      loops: -1
+      priority: 1900
+    light_bar_solid:
+      loops: -1
+      priority: 1900
+      show_tokens:
+        color: '000000'
     bonus_lights_introduction:
       key: bonus_lights
       speed: 40
