@@ -88,7 +88,7 @@ coils:
     allow_enable: true
   c_vuk:
     number: 2-0
-    default_pulse_ms: 21
+    default_pulse_ms: 20
     default_hold_power: 0.1
     allow_enable: true
   c_pop_sling:
