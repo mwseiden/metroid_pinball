@@ -50,15 +50,21 @@ show_player:
       action: stop
     attract_lights_fast_logo_gi:
       action: stop
+    attract_lights_fast_logo_light_bar:
+      action: stop
     attract_lights_joel_gi:
       action: stop
     attract_lights_mission_pinball_gi:
+      action: stop
+    attract_lights_mission_pinball_light_bar:
       action: stop
     attract_lights_mission_pinball:
       action: stop
     attract_lights_press_start:
       action: stop
     attract_lights_press_start_gi:
+      action: stop
+    attract_lights_press_start_light_bar:
       action: stop
     attract_pinball_monkey:
       action: stop
@@ -187,6 +193,8 @@ show_player:
       speed: 30
     attract_lights_press_start_gi:
       action: stop
+    attract_lights_press_start_light_bar:
+      action: stop
     attract_lights_press_start:
       action: stop
     attract_classic:
@@ -198,12 +206,19 @@ show_player:
       action: stop
     attract_lights_fast_logo_gi:
       action: stop
+    attract_lights_fast_logo_light_bar:
+      action: stop
     attract_lights_fast_logo:
       action: stop
     gi_solid:
       key: attract_lights_press_start_gi
       loops: -1
       speed: 10
+      show_tokens:
+        color: '009000'
+    light_bar_solid:
+      key: attract_lights_press_start_light_bar
+      loops: -1
       show_tokens:
         color: '009000'
     theater_chase:
@@ -217,6 +232,8 @@ show_player:
       action: stop
     attract_lights_press_start_gi:
       action: stop
+    attract_lights_press_start_light_bar:
+      action: stop
     attract_lights_mission_pinball_gi:
       action: stop
     attract_lights_mission_pinball:
@@ -225,6 +242,11 @@ show_player:
       key: attract_lights_fast_logo_gi
       loops: -1
       speed: 10
+      show_tokens:
+        color: '900000'
+    light_bar_solid:
+      key: attract_lights_fast_logo_light_bar
+      loops: -1
       show_tokens:
         color: '900000'
     theater_chase:
@@ -238,12 +260,19 @@ show_player:
       action: stop
     attract_lights_fast_logo_gi:
       action: stop
+    attract_lights_fast_logo_light_bar:
+      action: stop
     attract_lights_arrrrrcade:
       action: stop
     gi_solid:
       key: attract_lights_mission_pinball_gi
       loops: -1
       speed: 10
+      show_tokens:
+        color: '000090'
+    light_bar_solid:
+      key: attract_lights_mission_pinball_light_bar
+      loops: -1
       show_tokens:
         color: '000090'
     theater_chase:
@@ -256,6 +285,8 @@ show_player:
     attract_lights_mission_pinball:
       action: stop
     attract_lights_mission_pinball_gi:
+      action: stop
+    attract_lights_mission_pinball_light_bar:
       action: stop
     lights_samus_logo:
       action: stop
