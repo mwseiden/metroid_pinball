@@ -134,6 +134,9 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+    light_bar_water:
+      speed: 30
+      loops: -1
   show_mode_status_report:
     room_2h_crystalline_seabed_status_report:
       loops: 0
