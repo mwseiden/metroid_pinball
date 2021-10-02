@@ -165,6 +165,16 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+  mode_room_1k_crew_quarters_started_charge:
+    light_bar_solid:
+      loops: -1
+      show_tokens:
+        color: light_bar_basic
+  mode_room_1k_crew_quarters_started_no_charge:
+    light_bar_solid:
+      loops: -1
+      show_tokens:
+        color: '000080'
   show_mode_status_report:
     room_1k_crew_quarters_status_report:
       loops: 0

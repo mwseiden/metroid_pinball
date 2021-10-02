@@ -11,4 +11,5 @@ named_colors:
   drop_target_can_hit: '96ff00'
   drop_target_cannot_hit: 'c70073'
   light_bar_basic: 'A08070'
+  light_bar_dim: '404040'
 

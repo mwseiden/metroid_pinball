@@ -45,6 +45,10 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+    light_bar_solid:
+      loops: -1
+      show_tokens:
+        color: light_bar_basic
   metroid_open_doors:
     small_theater_chase:
       key: room_1g_drop_show
