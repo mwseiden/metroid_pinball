@@ -85,6 +85,9 @@ show_player:
     room_2d_underwater:
       loops: -1
       speed: 10
+    room_1d_swamp_light_bars:
+      loops: -1
+      speed: 20
   show_mode_status_report:
     room_1d_the_lake_status_report:
       loops: 0

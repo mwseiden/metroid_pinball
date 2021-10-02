@@ -139,6 +139,10 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+    light_bar_solid:
+      loops: -1
+      show_tokens:
+        color: light_bar_basic
   show_mode_status_report:
     room_1a_lush_cavern_status_report:
       loops: 0
