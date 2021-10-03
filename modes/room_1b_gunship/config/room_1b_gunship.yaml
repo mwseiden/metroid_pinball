@@ -71,12 +71,12 @@ show_player:
       speed: 27
   room_1b_play_lightning_1:
     room_1b_lightning_strike_1:
-      speed: 40
+      speed: 30
       loops: 0
       priority: 100
   room_1b_play_lightning_2:
     room_1b_lightning_strike_2:
-      speed: 40
+      speed: 30
       loops: 0
       priority: 100
   mode_room_1b_gunship_started{current_player.room_1b_step_1a == 0}:
@@ -256,7 +256,7 @@ random_event_player:
     events:
       room_1b_play_lightning_1: 1
       room_1b_play_lightning_2: 1
-      room_1b_skip_play_lightning: 16
+      room_1b_skip_play_lightning: 12
 
 
 variable_player:
