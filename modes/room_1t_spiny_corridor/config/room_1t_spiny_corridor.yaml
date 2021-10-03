@@ -63,6 +63,10 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+    light_bar_solid:
+      loops: -1
+      show_tokens:
+        color: light_bar_basic
     small_theater_chase:
       key: room_1t_exit_north
       loops: -1
