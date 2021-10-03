@@ -96,6 +96,8 @@ show_player:
       show_tokens:
         color: '00FF00'
         color2: '00FFFF'
+    room_1s_light_bars:
+      loops: -1
   show_mode_status_report:
     room_1s_blighted_canopy_status_report:
       loops: 0
