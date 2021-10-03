@@ -21,6 +21,13 @@ show_player:
   spinner_shot_hit:
     spin_jump_spins:
       loops: 0
+    blink_light:
+      key: spinner_blink
+      loops: 0
+      speed: 5
+      show_tokens:
+        led: led_spinner
+        color: 'FFFFFF'
   logicblock_spin_jump_sequence_updated{value == 0}:
     small_theater_chase:
       key: scanner_show

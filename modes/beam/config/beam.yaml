@@ -1,0 +1,23 @@
+#config_version=5
+mode:
+  start_events: metroid_base_started
+  stop_events: metroid_base_ended
+  priority: 100
+
+
+shots:
+  beam_shot:
+    switch: s_beam
+
+
+sounds:
+  beam_hit:
+    file: beam_hit.wav
+    streaming: False
+    track: sfx
+    priority: 50
+    max_queue_time: None
+
+
+sound_player:
+  beam_shot_hit: beam_hit

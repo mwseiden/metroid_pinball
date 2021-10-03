@@ -5,6 +5,7 @@ modes:
   - bao_base
   - bao_lanes
   - base
+  - beam
   - bonus
   - boss
   - bridge
