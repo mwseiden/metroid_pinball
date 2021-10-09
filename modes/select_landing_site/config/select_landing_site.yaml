@@ -243,11 +243,10 @@ show_player:
       show_tokens:
         color: 'FF4040'
   select_landing_site_maridia_highlighted:
-    light_bar_solid:
+    light_bar_water:
       key: select_landing_site_light_bars
+      speed: 30
       loops: -1
-      show_tokens:
-        color: 'FF8000'
 
 
 sound_player:

@@ -1,0 +1,351 @@
+#show_version=5
+- time: 0
+  lights:
+    led_left_bar_1: (color1)
+    led_left_bar_2: (color1)
+    led_left_bar_3: (color1)
+    led_left_bar_4: (color1)
+    led_left_bar_5: (color2)
+    led_left_bar_6: (color2)
+    led_left_bar_7: (color2)
+    led_left_bar_8: (color2)
+    led_left_bar_9: (color2)
+    led_left_bar_10: (color2)
+    led_left_bar_11: (color2)
+    led_left_bar_12: (color2)
+    led_left_bar_13: (color2)
+    led_left_bar_14: (color2)
+    led_left_bar_15: (color2)
+    led_left_bar_16: (color2)
+    led_left_bar_17: (color2)
+    led_left_bar_18: (color2)
+    led_left_bar_19: (color2)
+    led_left_bar_20: (color2)
+    led_left_bar_21: (color2)
+    led_left_bar_22: (color2)
+    led_left_bar_23: (color2)
+    led_left_bar_24: (color2)
+    led_left_bar_25: (color2)
+    led_left_bar_26: (color2)
+    led_left_bar_27: (color2)
+    led_left_bar_28: (color2)
+    led_left_bar_29: (color1)
+    led_left_bar_30: (color1)
+    led_right_bar_1: (color1)
+    led_right_bar_2: (color1)
+    led_right_bar_3: (color1)
+    led_right_bar_4: (color1)
+    led_right_bar_5: (color1)
+    led_right_bar_6: (color1)
+    led_right_bar_7: (color2)
+    led_right_bar_8: (color2)
+    led_right_bar_9: (color2)
+    led_right_bar_10: (color2)
+    led_right_bar_11: (color2)
+    led_right_bar_12: (color2)
+    led_right_bar_13: (color2)
+    led_right_bar_14: (color2)
+    led_right_bar_15: (color2)
+    led_right_bar_16: (color2)
+    led_right_bar_17: (color2)
+    led_right_bar_18: (color2)
+    led_right_bar_19: (color1)
+    led_right_bar_20: (color1)
+    led_right_bar_21: (color1)
+    led_right_bar_22: (color1)
+    led_right_bar_23: (color1)
+    led_right_bar_24: (color1)
+    led_right_bar_25: (color1)
+    led_right_bar_26: (color1)
+    led_right_bar_27: (color2)
+    led_right_bar_28: (color2)
+    led_right_bar_29: (color2)
+    led_right_bar_30: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_5: (color2)
+    led_left_bar_16: (color2)
+    led_left_bar_17: (color2)
+    led_left_bar_18: (color2)
+    led_left_bar_19: (color2)
+    led_left_bar_29: (color2)
+    led_right_bar_7: (color2)
+    led_right_bar_19: (color2)
+    led_right_bar_27: (color1)
+    
+- time: '+1'
+  lights:
+    led_left_bar_4: (color2)
+    led_left_bar_14: (color2)
+    led_left_bar_15: (color1)
+    led_left_bar_16: (color1)
+    led_left_bar_17: (color1)
+    led_left_bar_18: (color1)
+    led_left_bar_19: (color1)
+    led_left_bar_20: (color1)
+    led_left_bar_29: (color2)
+    led_right_bar_6: (color2)
+    led_right_bar_20: (color2)
+    led_right_bar_28: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_4: (color2)
+    led_left_bar_13: (color1)
+    led_left_bar_14: (color1)
+    led_left_bar_21: (color1)
+    led_left_bar_22: (color2)
+    led_left_bar_30: (color2)
+    led_right_bar_6: (color2)
+    led_right_bar_20: (color2)
+    led_right_bar_28: (color1)
+    
+- time: '+1'
+  lights:
+    led_left_bar_12: (color1)
+    led_left_bar_22: (color1)
+    led_left_bar_23: (color2)
+    led_left_bar_30: (color2)
+    led_right_bar_5: (color2)
+    led_right_bar_21: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_3: (color2)
+    led_left_bar_11: (color1)
+    led_left_bar_23: (color1)
+    led_left_bar_24: (color2)
+    led_right_bar_21: (color2)
+    led_right_bar_29: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_10: (color1)
+    led_left_bar_24: (color1)
+    led_right_bar_4: (color2)
+    led_right_bar_22: (color2)
+    led_right_bar_29: (color1)
+    
+- time: '+1'
+  lights:
+    led_left_bar_2: (color2)
+    led_left_bar_9: (color2)
+    led_left_bar_25: (color1)
+    led_right_bar_4: (color2)
+    led_right_bar_22: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_2: (color2)
+    led_left_bar_8: (color2)
+    led_left_bar_9: (color1)
+    led_left_bar_26: (color2)
+    led_right_bar_3: (color2)
+    led_right_bar_23: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_8: (color1)
+    led_left_bar_26: (color1)
+    led_right_bar_3: (color2)
+    led_right_bar_23: (color2)
+    led_right_bar_30: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_1: (color2)
+    led_left_bar_7: (color2)
+    led_left_bar_27: (color2)
+    led_right_bar_2: (color2)
+    led_right_bar_24: (color2)
+    led_right_bar_30: (color1)
+    
+- time: '+1'
+  lights:
+    led_left_bar_7: (color1)
+    led_left_bar_27: (color1)
+    led_right_bar_2: (color2)
+    led_right_bar_24: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_6: (color1)
+    led_left_bar_28: (color2)
+    led_right_bar_1: (color2)
+    led_right_bar_12: (color2)
+    led_right_bar_13: (color2)
+    led_right_bar_14: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_28: (color2)
+    led_right_bar_1: (color2)
+    led_right_bar_11: (color1)
+    led_right_bar_12: (color1)
+    led_right_bar_13: (color1)
+    led_right_bar_14: (color1)
+    led_right_bar_15: (color2)
+    led_right_bar_25: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_5: (color1)
+    led_left_bar_28: (color1)
+    led_right_bar_9: (color1)
+    led_right_bar_10: (color1)
+    led_right_bar_15: (color1)
+    led_right_bar_16: (color1)
+    led_right_bar_25: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_4: (color2)
+    led_right_bar_8: (color1)
+    led_right_bar_17: (color1)
+    led_right_bar_26: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_4: (color1)
+    led_left_bar_15: (color2)
+    led_left_bar_16: (color2)
+    led_left_bar_17: (color2)
+    led_left_bar_18: (color2)
+    led_left_bar_29: (color2)
+    led_right_bar_7: (color1)
+    led_right_bar_18: (color2)
+    led_right_bar_26: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_14: (color2)
+    led_left_bar_15: (color2)
+    led_left_bar_16: (color2)
+    led_left_bar_17: (color2)
+    led_left_bar_18: (color2)
+    led_left_bar_19: (color2)
+    led_left_bar_20: (color2)
+    led_left_bar_29: (color1)
+    led_right_bar_6: (color1)
+    led_right_bar_18: (color1)
+    led_right_bar_19: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_3: (color1)
+    led_left_bar_13: (color2)
+    led_left_bar_14: (color2)
+    led_left_bar_20: (color2)
+    led_left_bar_21: (color2)
+    led_right_bar_5: (color2)
+    led_right_bar_19: (color1)
+    led_right_bar_27: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_12: (color2)
+    led_left_bar_21: (color2)
+    led_left_bar_30: (color2)
+    led_right_bar_5: (color1)
+    led_right_bar_20: (color1)
+    led_right_bar_27: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_11: (color2)
+    led_left_bar_22: (color2)
+    led_left_bar_30: (color1)
+    led_right_bar_4: (color1)
+    led_right_bar_21: (color2)
+    led_right_bar_28: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_2: (color1)
+    led_left_bar_10: (color2)
+    led_left_bar_11: (color2)
+    led_left_bar_23: (color2)
+    led_right_bar_3: (color2)
+    led_right_bar_21: (color1)
+    led_right_bar_28: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_10: (color2)
+    led_left_bar_23: (color2)
+    led_left_bar_24: (color2)
+    led_right_bar_3: (color1)
+    led_right_bar_22: (color1)
+    
+- time: '+1'
+  lights:
+    led_left_bar_9: (color2)
+    led_left_bar_24: (color2)
+    led_right_bar_2: (color2)
+    led_right_bar_29: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_1: (color2)
+    led_left_bar_9: (color2)
+    led_left_bar_25: (color2)
+    led_right_bar_2: (color1)
+    led_right_bar_23: (color1)
+    led_right_bar_29: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_1: (color1)
+    led_left_bar_8: (color2)
+    led_left_bar_25: (color2)
+    led_right_bar_1: (color2)
+    led_right_bar_24: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_26: (color2)
+    led_right_bar_1: (color1)
+    led_right_bar_24: (color1)
+    led_right_bar_30: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_7: (color2)
+    led_left_bar_26: (color2)
+    led_right_bar_11: (color2)
+    led_right_bar_12: (color2)
+    led_right_bar_13: (color2)
+    led_right_bar_14: (color2)
+    led_right_bar_15: (color2)
+    led_right_bar_25: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_27: (color2)
+    led_right_bar_9: (color2)
+    led_right_bar_10: (color2)
+    led_right_bar_11: (color2)
+    led_right_bar_14: (color2)
+    led_right_bar_15: (color2)
+    led_right_bar_16: (color2)
+    led_right_bar_25: (color1)
+    
+- time: '+1'
+  lights:
+    led_left_bar_6: (color2)
+    led_left_bar_27: (color2)
+    led_right_bar_9: (color2)
+    led_right_bar_16: (color2)
+    led_right_bar_17: (color2)
+    led_right_bar_26: (color2)
+    
+- time: '+1'
+  lights:
+    led_left_bar_6: (color2)
+    led_left_bar_28: (color2)
+    led_right_bar_8: (color2)
+    led_right_bar_17: (color2)
+    led_right_bar_18: (color2)
+    led_right_bar_26: (color1)
+    

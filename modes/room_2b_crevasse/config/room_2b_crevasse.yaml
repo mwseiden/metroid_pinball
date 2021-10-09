@@ -139,6 +139,12 @@ show_player:
       show_tokens:
         color: 'C0C0FF'
         color2: '404080'
+    light_bar_spiral:
+      loops: -1
+      speed: 22
+      show_tokens:
+        color1: '82FFFF'
+        color2: '82BDFF'
   room_2b_bank_1_shot_hit:
     special_score_red:
       loops: 0
