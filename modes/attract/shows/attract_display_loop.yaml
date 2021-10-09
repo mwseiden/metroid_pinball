@@ -691,6 +691,12 @@
       transition:
          type: fade
          duration: 1s
+  shows:
+    light_bar_solid:
+      loops: -1
+      show_tokens:
+        color: 'c1a24d'
+
 
 - duration: 5s
   slides:
