@@ -55,14 +55,63 @@ sounds:
     volume: 1.0
     max_queue_time: None
 
+
 event_player:
   missiles_shot_group_lit_complete: missile_collected
   missiles_shot_group_lit_hit: missile_play_missed_sound
+  mode_missiles_started{missiles == 0}: missiles_play_lights_0
+  mode_missiles_started{missiles == 1}: missiles_play_lights_1
+  mode_missiles_started{missiles == 2}: missiles_play_lights_2
+  mode_missiles_started{missiles == 3}: missiles_play_lights_3
+  mode_missiles_started{missiles > 3}: missiles_play_lights_4
+  player_missiles{value == 0}: missiles_play_lights_0
+  player_missiles{value == 1}: missiles_play_lights_1
+  player_missiles{value == 2}: missiles_play_lights_2
+  player_missiles{value == 3}: missiles_play_lights_3
+  player_missiles{value > 3}: missiles_play_lights_4
+
 
 show_player:
   missile_collected:
     missiles_collected:
       loops: 0
+  missiles_play_lights_0:
+    missiles_indicator:
+      action: stop
+  missiles_play_lights_1:
+    indicator_1:
+      loops: -1
+      key: missiles_indicator
+      show_tokens:
+        color: '100000'
+        led1: led_missile_count_nw
+  missiles_play_lights_2:
+    indicator_1:
+      loops: -1
+      key: missiles_indicator
+      show_tokens:
+        color: '100000'
+        led1: led_missile_count_nw
+        led2: led_missile_count_ne
+  missiles_play_lights_3:
+    indicator_1:
+      loops: -1
+      key: missiles_indicator
+      show_tokens:
+        color: '100000'
+        led1: led_missile_count_nw
+        led2: led_missile_count_ne
+        led3: led_missile_count_se
+  missiles_play_lights_4:
+    indicator_1:
+      loops: -1
+      key: missiles_indicator
+      show_tokens:
+        color: '100000'
+        led1: led_missile_count_nw
+        led2: led_missile_count_ne
+        led3: led_missile_count_se
+        led4: led_missile_count_sw
 
 variable_player:
   missile_bank_1_shot_hit:
