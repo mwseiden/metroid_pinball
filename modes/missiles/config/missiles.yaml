@@ -86,7 +86,7 @@ show_player:
         color: '100000'
         led1: led_missile_count_nw
   missiles_play_lights_2:
-    indicator_1:
+    indicator_2:
       loops: -1
       key: missiles_indicator
       show_tokens:
@@ -94,7 +94,7 @@ show_player:
         led1: led_missile_count_nw
         led2: led_missile_count_ne
   missiles_play_lights_3:
-    indicator_1:
+    indicator_3:
       loops: -1
       key: missiles_indicator
       show_tokens:
@@ -103,7 +103,7 @@ show_player:
         led2: led_missile_count_ne
         led3: led_missile_count_se
   missiles_play_lights_4:
-    indicator_1:
+    indicator_4:
       loops: -1
       key: missiles_indicator
       show_tokens:
