@@ -54,6 +54,8 @@ show_player:
       action: stop
     attract_lights_joel_gi:
       action: stop
+    attract_lights_joel_bars:
+      action: stop
     attract_lights_mission_pinball_gi:
       action: stop
     attract_lights_mission_pinball_light_bar:
@@ -315,6 +317,8 @@ show_player:
       action: stop
     attract_lights_joel_gi:
       action: stop
+    attract_lights_joel_bars:
+      action: stop
     lights_asterix_spin:
       loops: -1
       speed: 14
@@ -328,8 +332,15 @@ show_player:
       loops: -1
       show_tokens:
         color: 'c1a24d'
+    light_bar_solid:
+      key: attract_lights_joel_bars
+      loops: -1
+      show_tokens:
+        color: 'c1a24d'
   slide_double_danger_slide_created:
     attract_lights_joel_gi:
+      action: stop
+    attract_lights_joel_bars:
       action: stop
     lights_purple_fire:
       action: stop
