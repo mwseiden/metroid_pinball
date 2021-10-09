@@ -59,11 +59,11 @@ sounds:
 event_player:
   missiles_shot_group_lit_complete: missile_collected
   missiles_shot_group_lit_hit: missile_play_missed_sound
-  mode_missiles_started{missiles == 0}: missiles_play_lights_0
-  mode_missiles_started{missiles == 1}: missiles_play_lights_1
-  mode_missiles_started{missiles == 2}: missiles_play_lights_2
-  mode_missiles_started{missiles == 3}: missiles_play_lights_3
-  mode_missiles_started{missiles > 3}: missiles_play_lights_4
+  mode_missiles_started{current_player.missiles == 0}: missiles_play_lights_0
+  mode_missiles_started{current_player.missiles == 1}: missiles_play_lights_1
+  mode_missiles_started{current_player.missiles == 2}: missiles_play_lights_2
+  mode_missiles_started{current_player.missiles == 3}: missiles_play_lights_3
+  mode_missiles_started{current_player.missiles > 3}: missiles_play_lights_4
   player_missiles{value == 0}: missiles_play_lights_0
   player_missiles{value == 1}: missiles_play_lights_1
   player_missiles{value == 2}: missiles_play_lights_2
