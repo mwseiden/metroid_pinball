@@ -1,0 +1,45 @@
+#show_version=5
+
+- duration: .65s
+  lights:
+    led_miniboss_1: stop
+    led_miniboss_2: stop
+    led_miniboss_3: stop
+    led_miniboss_4: stop
+    led_miniboss_5: 'FFFF00'
+
+- duration: .65s
+  lights:
+    led_miniboss_4: 'F6BB00'
+
+- duration: .65s
+  lights:
+    led_miniboss_3: 'F67700'
+
+- duration: .65s
+  lights:
+    led_miniboss_2: 'F64100'
+
+- duration: .65s
+  lights:
+    led_miniboss_1: 'FF0000'
+
+- duration: .65s
+  lights:
+    led_miniboss_5: stop
+
+- duration: .65s
+  lights:
+    led_miniboss_4: stop
+
+- duration: .65s
+  lights:
+    led_miniboss_3: stop
+
+- duration: .65s
+  lights:
+    led_miniboss_2: stop
+
+- duration: .65s
+  lights:
+    led_miniboss_1: stop

@@ -62,6 +62,10 @@
     attract_classic_upper_playfield:
       loops: -1
       speed: 15
+    attract_classic_miniboss:
+      loops: -1
+    attract_classic_beam:
+      loops: -1
     light_bar_solid:
       loops: -1
       show_tokens:

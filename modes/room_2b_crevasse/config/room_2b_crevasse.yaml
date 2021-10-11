@@ -144,7 +144,7 @@ show_player:
       speed: 22
       show_tokens:
         color1: '82FFFF'
-        color2: '82BDFF'
+        color2: '5F8BBB' # '82BDFF'
   room_2b_bank_1_shot_hit:
     special_score_red:
       loops: 0
@@ -164,8 +164,8 @@ event_player:
       show_type: two_tone
       min_cutoff: 2
       max_cutoff: 8
-      color1: "000050"
-      color2: "404050"
+      color1: '000050'
+      color2: '404050'
     drop_targets_continue:
     cmd_map_position:
       room: '2b'
