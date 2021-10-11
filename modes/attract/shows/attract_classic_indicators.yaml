@@ -1,0 +1,42 @@
+#show_version=5
+- time: 0
+  lights:
+    led_missile_count_nw: 'FF0000'
+    led_missile_count_ne: stop
+    led_missile_count_se: stop
+    led_missile_count_sw: stop
+    led_bomb_count_nw: '00FF00'
+    led_bomb_count_ne: stop
+    led_bomb_count_se: stop
+    led_bomb_count_sw: stop
+    led_item_count_nw: '0000FF'
+    led_item_count_ne: stop
+    led_item_count_se: stop
+    led_item_count_sw: stop
+
+- time: '+1'
+  lights:
+    led_missile_count_nw: stop
+    led_missile_count_ne: 'FF0000'
+    led_bomb_count_nw: stop
+    led_bomb_count_ne: '00FF00'
+    led_item_count_nw: stop
+    led_item_count_ne: '0000FF'
+
+- time: '+1'
+  lights:
+    led_missile_count_ne: stop
+    led_missile_count_se: 'FF0000'
+    led_bomb_count_ne: stop
+    led_bomb_count_se: '00FF00'
+    led_item_count_ne: stop
+    led_item_count_se: '0000FF'
+
+- time: '+1'
+  lights:
+    led_missile_count_se: stop
+    led_missile_count_sw: 'FF0000'
+    led_bomb_count_se: stop
+    led_bomb_count_sw: '00FF00'
+    led_item_count_se: stop
+    led_item_count_sw: '0000FF'

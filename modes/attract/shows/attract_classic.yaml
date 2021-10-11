@@ -72,6 +72,9 @@
     attract_classic_shine:
       loops: -1
       speed: 23
+    attract_classic_indicators:
+      loops: -1
+      speed: 6
     light_bar_solid:
       loops: -1
       show_tokens:
