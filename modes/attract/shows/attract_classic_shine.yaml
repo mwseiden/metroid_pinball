@@ -1,0 +1,557 @@
+#show_version=5
+- time: 0
+  lights:
+    led_shinespark_1: '020200'
+    led_spinner: '111100'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '050500'
+    led_spinner: '1D1D00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '0A0A00'
+    led_spinner: '2B2B00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '131300'
+    led_shinespark_2: '020200'
+    led_spinner: '3E3E00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '1D1D00'
+    led_shinespark_2: '050500'
+    led_spinner: '515100'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '2A2A00'
+    led_shinespark_2: '0A0A00'
+    led_spinner: '6B6B00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '3D3D00'
+    led_shinespark_2: '121200'
+    led_shinespark_3: '020200'
+    led_spinner: '898900'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '535300'
+    led_shinespark_2: '1E1E00'
+    led_shinespark_3: '060600'
+    led_spinner: 'A5A500'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '696900'
+    led_shinespark_2: '2A2A00'
+    led_shinespark_3: '0B0B00'
+    led_spinner: 'BABA00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '888800'
+    led_shinespark_2: '3D3D00'
+    led_shinespark_3: '131300'
+    led_spinner: 'CFCF00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'A2A200'
+    led_shinespark_2: '525200'
+    led_shinespark_3: '1F1F00'
+    led_spinner: 'DFDF00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'BCBC00'
+    led_shinespark_2: '6E6E00'
+    led_shinespark_3: '2E2E00'
+    led_spinner: 'EAEA00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'CECE00'
+    led_shinespark_2: '878700'
+    led_shinespark_3: '3E3E00'
+    led_spinner: 'F2F200'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'DEDE00'
+    led_shinespark_2: 'A2A200'
+    led_shinespark_3: '545400'
+    led_spinner: 'F7F700'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'EBEB00'
+    led_shinespark_2: 'BCBC00'
+    led_shinespark_3: '707000'
+    led_spinner: 'FCFC00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'F3F300'
+    led_shinespark_2: 'CFCF00'
+    led_shinespark_3: '8B8B00'
+    led_spinner: 'FDFD00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'F7F700'
+    led_shinespark_2: 'DEDE00'
+    led_shinespark_3: 'A3A300'
+    led_spinner: 'FFFF00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'FCFC00'
+    led_shinespark_2: 'E9E900'
+    led_shinespark_3: 'BDBD00'
+    led_spinner: 'FEFE00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'FDFD00'
+    led_shinespark_2: 'F3F300'
+    led_shinespark_3: 'D1D100'
+    led_spinner: 'FCFC00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'FFFF00'
+    led_shinespark_2: 'F8F800'
+    led_shinespark_3: 'E1E100'
+    led_spinner: 'F9F900'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'FEFE00'
+    led_shinespark_2: 'FCFC00'
+    led_shinespark_3: 'EAEA00'
+    led_spinner: 'F5F500'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'FDFD00'
+    led_shinespark_2: 'FDFD00'
+    led_shinespark_3: 'F4F400'
+    led_spinner: 'EDED00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'F9F900'
+    led_shinespark_2: 'FFFF00'
+    led_shinespark_3: 'F8F800'
+    led_spinner: 'E1E100'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'F5F500'
+    led_shinespark_2: 'FEFE00'
+    led_shinespark_3: 'FCFC00'
+    led_spinner: 'D3D300'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'ECEC00'
+    led_shinespark_2: 'FCFC00'
+    led_shinespark_3: 'FEFE00'
+    led_spinner: 'BEBE00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'E3E300'
+    led_shinespark_2: 'F9F900'
+    led_shinespark_3: 'FFFF00'
+    led_spinner: 'AAAA00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'D5D500'
+    led_shinespark_2: 'F5F500'
+    led_shinespark_3: 'FEFE00'
+    led_spinner: '8F8F00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'C0C000'
+    led_shinespark_2: 'ECEC00'
+    led_shinespark_3: 'FCFC00'
+    led_spinner: '727200'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'A9A900'
+    led_shinespark_2: 'E1E100'
+    led_shinespark_3: 'F8F800'
+    led_spinner: '535300'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '909000'
+    led_shinespark_2: 'D5D500'
+    led_shinespark_3: 'F4F400'
+    led_spinner: '424200'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '757500'
+    led_shinespark_2: 'C0C000'
+    led_shinespark_3: 'EBEB00'
+    led_spinner: '303000'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '585800'
+    led_shinespark_2: 'AAAA00'
+    led_shinespark_3: 'E0E000'
+    led_spinner: '1F1F00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '414100'
+    led_shinespark_2: '8C8C00'
+    led_shinespark_3: 'D0D000'
+    led_spinner: '141400'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '323200'
+    led_shinespark_2: '757500'
+    led_shinespark_3: 'BFBF00'
+    led_spinner: '0C0C00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '202000'
+    led_shinespark_2: '585800'
+    led_shinespark_3: 'A8A800'
+    led_spinner: '060600'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '151500'
+    led_shinespark_2: '414100'
+    led_shinespark_3: '8A8A00'
+    led_spinner: '020200'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '0C0C00'
+    led_shinespark_2: '2E2E00'
+    led_shinespark_3: '6F6F00'
+    led_spinner: '000000'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '070700'
+    led_shinespark_2: '212100'
+    led_shinespark_3: '565600'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '030300'
+    led_shinespark_2: '151500'
+    led_shinespark_3: '404000'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '000000'
+    led_shinespark_2: '0C0C00'
+    led_shinespark_3: '2D2D00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_2: '060600'
+    led_shinespark_3: '1E1E00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_2: '030300'
+    led_shinespark_3: '141400'
+    
+- time: '+1'
+  lights:
+    led_shinespark_2: '060600'
+    led_shinespark_3: '1E1E00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_2: '0C0C00'
+    led_shinespark_3: '2D2D00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '030300'
+    led_shinespark_2: '151500'
+    led_shinespark_3: '404000'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '070700'
+    led_shinespark_2: '212100'
+    led_shinespark_3: '565600'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '0C0C00'
+    led_shinespark_2: '2E2E00'
+    led_shinespark_3: '6F6F00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '151500'
+    led_shinespark_2: '414100'
+    led_shinespark_3: '898A00'
+    led_spinner: '020200'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '202000'
+    led_shinespark_2: '585800'
+    led_shinespark_3: 'A7A800'
+    led_spinner: '060600'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '323200'
+    led_shinespark_2: '757500'
+    led_shinespark_3: 'BEBF00'
+    led_spinner: '0C0C00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '414100'
+    led_shinespark_2: '8B8C00'
+    led_shinespark_3: 'CFD000'
+    led_spinner: '141400'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '585800'
+    led_shinespark_2: 'A9AA00'
+    led_shinespark_3: 'DFE000'
+    led_spinner: '1F1F00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '757500'
+    led_shinespark_2: 'BFC000'
+    led_shinespark_3: 'EAEB00'
+    led_spinner: '303000'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '8F9000'
+    led_shinespark_2: 'D4D500'
+    led_shinespark_3: 'F3F400'
+    led_spinner: '424200'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'A8A900'
+    led_shinespark_2: 'E0E100'
+    led_shinespark_3: 'F7F800'
+    led_spinner: '535300'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'BFC000'
+    led_shinespark_2: 'EBEC00'
+    led_shinespark_3: 'FBFC00'
+    led_spinner: '727200'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'D4D500'
+    led_shinespark_2: 'F4F500'
+    led_shinespark_3: 'FDFE00'
+    led_spinner: '8E8F00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'E2E300'
+    led_shinespark_2: 'F8F900'
+    led_shinespark_3: 'FEFF00'
+    led_spinner: 'A9AA00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'EBEC00'
+    led_shinespark_2: 'FBFC00'
+    led_shinespark_3: 'FDFE00'
+    led_spinner: 'BDBE00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'F4F500'
+    led_shinespark_2: 'FDFE00'
+    led_shinespark_3: 'FBFC00'
+    led_spinner: 'D2D300'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'F8F900'
+    led_shinespark_2: 'FEFF00'
+    led_shinespark_3: 'F7F800'
+    led_spinner: 'E0E100'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'FCFD00'
+    led_shinespark_2: 'FCFD00'
+    led_shinespark_3: 'F3F400'
+    led_spinner: 'ECED00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'FCFE00'
+    led_shinespark_2: 'F9FB00'
+    led_shinespark_3: 'EAEC00'
+    led_spinner: 'F2F400'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'FDFF00'
+    led_shinespark_2: 'F6F800'
+    led_shinespark_3: 'DFE100'
+    led_spinner: 'F7F900'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'FBFD00'
+    led_shinespark_2: 'F1F300'
+    led_shinespark_3: 'CFD100'
+    led_spinner: 'FAFC00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'FAFC00'
+    led_shinespark_2: 'E7E900'
+    led_shinespark_3: 'BCBD00'
+    led_spinner: 'FCFE00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'F5F700'
+    led_shinespark_2: 'DCDE00'
+    led_shinespark_3: 'A2A300'
+    led_spinner: 'FDFF00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'F1F300'
+    led_shinespark_2: 'CDCF00'
+    led_shinespark_3: '8A8B00'
+    led_spinner: 'FBFD00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'E9EB00'
+    led_shinespark_2: 'BBBC00'
+    led_shinespark_3: '6F7000'
+    led_spinner: 'FAFC00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'DCDE00'
+    led_shinespark_2: 'A1A200'
+    led_shinespark_3: '535400'
+    led_spinner: 'F5F700'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'CCCE00'
+    led_shinespark_2: '868700'
+    led_shinespark_3: '3E3E00'
+    led_spinner: 'F0F200'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'BBBC00'
+    led_shinespark_2: '6D6E00'
+    led_shinespark_3: '2E2E00'
+    led_spinner: 'E8EA00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: 'A1A200'
+    led_shinespark_2: '515200'
+    led_shinespark_3: '1F1F00'
+    led_spinner: 'DDDF00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '878800'
+    led_shinespark_2: '3D3D00'
+    led_shinespark_3: '131300'
+    led_spinner: 'CDCF00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '686900'
+    led_shinespark_2: '2A2A00'
+    led_shinespark_3: '0B0B00'
+    led_spinner: 'B9BA00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '525300'
+    led_shinespark_2: '1E1E00'
+    led_shinespark_3: '060600'
+    led_spinner: 'A4A500'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '3D3D00'
+    led_shinespark_2: '121200'
+    led_shinespark_3: '020200'
+    led_spinner: '888900'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '2A2A00'
+    led_shinespark_2: '0A0A00'
+    led_shinespark_3: '000000'
+    led_spinner: '6A6B00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '1D1D00'
+    led_shinespark_2: '050500'
+    led_spinner: '505100'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '131300'
+    led_shinespark_2: '020200'
+    led_spinner: '3E3E00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '0A0A00'
+    led_shinespark_2: '000000'
+    led_spinner: '2B2B00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '050500'
+    led_spinner: '1D1D00'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '020200'
+    led_spinner: '111100'
+    
+- time: '+1'
+  lights:
+    led_shinespark_1: '000000'
+    led_spinner: '0B0B00'
+    

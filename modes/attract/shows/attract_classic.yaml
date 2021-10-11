@@ -68,7 +68,10 @@
       loops: -1
     attract_classic_secret:
       loops: -1
-      speed: 13
+      speed: 10
+    attract_classic_shine:
+      loops: -1
+      speed: 23
     light_bar_solid:
       loops: -1
       show_tokens:
