@@ -66,7 +66,7 @@
       loops: -1
     attract_classic_beam:
       loops: -1
-    attract_classic_beam:
+    attract_classic_secret:
       loops: -1
       speed: 13
     light_bar_solid:
