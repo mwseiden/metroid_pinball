@@ -1,0 +1,466 @@
+#show_version=5
+- time: 0
+  lights:
+    led_beam_3: '000002'
+    
+- time: '+1'
+  lights:
+    led_beam_3: '000006'
+    
+- time: '+1'
+  lights:
+    led_beam_2: '000002'
+    led_beam_3: '00000F'
+    
+- time: '+1'
+  lights:
+    led_beam_2: '000005'
+    led_beam_3: '00001A'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000001'
+    led_beam_2: '00000C'
+    led_beam_3: '000028'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000003'
+    led_beam_2: '000015'
+    led_beam_3: '00003C'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000007'
+    led_beam_2: '000023'
+    led_beam_3: '000055'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '00000E'
+    led_beam_2: '000036'
+    led_beam_3: '000073'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '00001B'
+    led_beam_2: '00004E'
+    led_beam_3: '000095'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000027'
+    led_beam_2: '000068'
+    led_beam_3: '0000B0'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '00003C'
+    led_beam_2: '00008B'
+    led_beam_3: '0000CB'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000056'
+    led_beam_2: '0000A8'
+    led_beam_3: '0000DC'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000075'
+    led_beam_2: '0000C5'
+    led_beam_3: '0000EC'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000092'
+    led_beam_2: '0000D5'
+    led_beam_3: '0000F3'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000B2'
+    led_beam_2: '0000E6'
+    led_beam_3: '0000FA'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000C9'
+    led_beam_2: '0000F1'
+    led_beam_3: '0000FD'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000DD'
+    led_beam_2: '0000F8'
+    led_beam_3: '0000FF'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000EB'
+    led_beam_2: '0000FC'
+    led_beam_3: '0000FE'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000F3'
+    led_beam_2: '0000FE'
+    led_beam_3: '0000FC'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000F9'
+    led_beam_2: '0000FF'
+    led_beam_3: '0000F9'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000FD'
+    led_beam_2: '0000FD'
+    led_beam_3: '0000F2'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000FE'
+    led_beam_2: '0000FA'
+    led_beam_3: '0000EA'
+    
+- time: '+1'
+  lights:
+    led_beam_2: '0000F5'
+    led_beam_3: '0000DC'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000FD'
+    led_beam_2: '0000EC'
+    led_beam_3: '0000C9'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000F9'
+    led_beam_2: '0000E1'
+    led_beam_3: '0000B2'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000F2'
+    led_beam_2: '0000D0'
+    led_beam_3: '000092'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000EA'
+    led_beam_2: '0000B8'
+    led_beam_3: '000071'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000DC'
+    led_beam_2: '00009D'
+    led_beam_3: '000054'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000CA'
+    led_beam_2: '00007E'
+    led_beam_3: '00003E'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000AF'
+    led_beam_2: '00005B'
+    led_beam_3: '000026'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000091'
+    led_beam_2: '000043'
+    led_beam_3: '00001A'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '00006F'
+    led_beam_2: '00002B'
+    led_beam_3: '00000D'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000055'
+    led_beam_2: '00001E'
+    led_beam_3: '000007'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '00003A'
+    led_beam_2: '000011'
+    led_beam_3: '000001'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000027'
+    led_beam_2: '000008'
+    led_beam_3: '000000'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000017'
+    led_beam_2: '000003'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '00000E'
+    led_beam_2: '000000'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000006'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000002'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000002'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000007'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '00000D'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000019'
+    led_beam_2: '000004'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000027'
+    led_beam_2: '000009'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '00003C'
+    led_beam_2: '000012'
+    led_beam_3: '000002'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000051'
+    led_beam_2: '00001D'
+    led_beam_3: '000006'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000071'
+    led_beam_2: '00002D'
+    led_beam_3: '00000E'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000090'
+    led_beam_2: '000042'
+    led_beam_3: '000018'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000B1'
+    led_beam_2: '00005E'
+    led_beam_3: '000027'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000C7'
+    led_beam_2: '000078'
+    led_beam_3: '00003A'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000DC'
+    led_beam_2: '00009D'
+    led_beam_3: '000054'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000E9'
+    led_beam_2: '0000B7'
+    led_beam_3: '000070'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000F3'
+    led_beam_2: '0000D1'
+    led_beam_3: '000095'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000F9'
+    led_beam_2: '0000E0'
+    led_beam_3: '0000B0'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000FD'
+    led_beam_2: '0000EC'
+    led_beam_3: '0000C9'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000FE'
+    led_beam_2: '0000F5'
+    led_beam_3: '0000DC'
+    
+- time: '+1'
+  lights:
+    led_beam_2: '0000FA'
+    led_beam_3: '0000EA'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000FD'
+    led_beam_2: '0000FD'
+    led_beam_3: '0000F2'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000F9'
+    led_beam_2: '0000FF'
+    led_beam_3: '0000F9'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000F3'
+    led_beam_2: '0000FE'
+    led_beam_3: '0000FC'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000E9'
+    led_beam_2: '0000FB'
+    led_beam_3: '0000FE'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000DB'
+    led_beam_2: '0000F7'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000C9'
+    led_beam_2: '0000F1'
+    led_beam_3: '0000FD'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '0000B2'
+    led_beam_2: '0000E6'
+    led_beam_3: '0000FA'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000092'
+    led_beam_2: '0000D5'
+    led_beam_3: '0000F3'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000072'
+    led_beam_2: '0000C1'
+    led_beam_3: '0000EB'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000056'
+    led_beam_2: '0000A8'
+    led_beam_3: '0000DC'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '00003C'
+    led_beam_2: '00008B'
+    led_beam_3: '0000CB'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000027'
+    led_beam_2: '000068'
+    led_beam_3: '0000B0'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000019'
+    led_beam_2: '00004C'
+    led_beam_3: '000093'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '00000E'
+    led_beam_2: '000036'
+    led_beam_3: '000073'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000007'
+    led_beam_2: '000023'
+    led_beam_3: '000055'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000003'
+    led_beam_2: '000015'
+    led_beam_3: '00003C'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000001'
+    led_beam_2: '00000C'
+    led_beam_3: '000028'
+    
+- time: '+1'
+  lights:
+    led_beam_1: '000000'
+    led_beam_2: '000005'
+    led_beam_3: '00001A'
+    
+- time: '+1'
+  lights:
+    led_beam_2: '000002'
+    led_beam_3: '00000F'
+    
+- time: '+1'
+  lights:
+    led_beam_2: '000000'
+    led_beam_3: '000006'
+    
+- time: '+1'
+  lights:
+    led_beam_3: '000002'
+    
+- time: '+1'
+  lights:
+    led_beam_3: '000000'
+    

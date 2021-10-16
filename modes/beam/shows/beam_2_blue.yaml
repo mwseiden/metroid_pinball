@@ -1,0 +1,10 @@
+#show_version=5
+- duration: .5s
+  lights:
+    led_beam_1: '0000FF'
+    led_beam_2: '0000FF'
+
+- duration: .5s
+  lights:
+    led_beam_1: stop
+    led_beam_2: stop

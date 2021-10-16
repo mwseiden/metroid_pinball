@@ -5,10 +5,40 @@ mode:
   priority: 100
 
 
+sequences:
+  beam_earn:
+    events:
+      - beam_shot_hit
+      - beam_shot_hit
+      - beam_shot_hit
+      - beam_shot_hit
+    events_when_complete: beam_earned
+    reset_on_complete: True
+    disable_on_complete: False
+
+
 shots:
   beam_shot:
     switch: s_beam
 
+
+show_player:
+  beam_show_first_state:
+    beam_1_blue:
+      loops: -1
+      key: beam_state_show
+  beam_show_second_state:
+    beam_2_blue:
+      loops: -1
+      key: beam_state_show
+  beam_show_third_state:
+    beam_charged_blue:
+      loops: -1
+      speed: 23
+      key: beam_state_show
+  beam_hide_state:
+    beam_state_show:
+      action: stop
 
 sounds:
   beam_hit:
@@ -21,3 +51,17 @@ sounds:
 
 sound_player:
   beam_shot_hit: beam_hit
+
+
+event_player:
+  mode_beam_started{device.sequences.beam_earn.value == 1}: beam_show_first_state
+  mode_beam_started{device.sequences.beam_earn.value == 2}: beam_show_second_state
+  mode_beam_started{device.sequences.beam_earn.value == 3}: beam_show_third_state
+  # mode_beam_started{device.sequences.beam_earn.value == 4}: beam_show_fourth_state
+  logicblock_beam_earn_hit{device.sequences.beam_earn.value == 1}: beam_show_first_state
+  logicblock_beam_earn_hit{device.sequences.beam_earn.value == 2}: beam_show_second_state
+  logicblock_beam_earn_hit{device.sequences.beam_earn.value == 3}: beam_show_third_state
+  # logicblock_beam_earn_hit{device.sequences.beam_earn.value == 4}: beam_show_fourth_state
+  beam_earned: beam_hide_state
+
+
