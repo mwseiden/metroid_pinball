@@ -372,6 +372,9 @@ show_player:
       show_tokens:
         color: '4080FF'
         color2: '4080C0'
+    room_2g_draygon_light_bars:
+      loops: -1
+      speed: 15
   show_mode_status_report:
     room_2g_draygon_status_report:
       loops: 0
