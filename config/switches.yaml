@@ -246,6 +246,9 @@ switches:
   s_orbit_l:
     number: 2-7
     tags: playfield_active
+    platform_settings:
+      debounce_close: 2
+      debounce_open: 2
   s_ramp_enter:
     number: 2-8
     tags: playfield_active
