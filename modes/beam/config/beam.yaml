@@ -15,6 +15,7 @@ sequences:
     events_when_complete: beam_earned
     reset_on_complete: True
     disable_on_complete: False
+    persist_state: True
 
 
 shots:
