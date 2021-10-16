@@ -101,7 +101,7 @@ show_player:
       speed: 16
       loops: -1
     light_bar_fire:
-      speed: 16
+      speed: 18
       loops: -1
     small_theater_chase:
       key: room_2i_north_show

@@ -29,6 +29,8 @@
     gi_upgrade_bank: '000000'
     gi_upper_flipper_bottom: '000000'
     gi_upper_flipper_top: '000000'
+    gi_secret_passage_1: '000000'
+    gi_secret_passage_2: '000000'
     led_2x: '000000'
     led_3x: '000000'
     led_ball_save: '000000'
