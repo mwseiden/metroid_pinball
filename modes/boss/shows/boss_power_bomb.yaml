@@ -4,25 +4,41 @@
     led_bomb_bank_1: 'A49200'
     led_bomb_bank_2: 'A49200'
     led_bomb_bank_3: 'A49200'
+    led_right_bar_19: 'A49200'
+    led_right_bar_20: 'A49200'
+    led_right_bar_21: 'A49200'
+    led_right_bar_22: 'A49200'
+    led_right_bar_23: 'A49200'
+    led_right_bar_24: 'A49200'
     
 - time: '+1'
   lights:
     gi_bomb_bank: 'A49200'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
-    
-#No change this frame - take another step
-#  lights:
-- time: '+1'
+    led_right_bar_17: 'A29000'
+    led_right_bar_18: 'A49200'
     
 - time: '+1'
   lights:
+    led_right_bar_16: 'A49200'
+    led_right_bar_17: 'A49200'
+    
+- time: '+1'
+  lights:
+    led_beam_3: 'A49200'
+    led_right_bar_14: 'A39100'
+    led_right_bar_15: 'A49200'
+    
+- time: '+1'
+  lights:
+    led_beam_2: 'A49200'
+    led_right_bar_13: 'A49200'
+    led_right_bar_14: 'A49200'
     led_rollover: 'A49200'
     
 - time: '+1'
   lights:
+    led_beam_1: 'A49200'
+    led_right_bar_12: 'A49200'
     led_scanner_se: 'A49200'
     
 - time: '+1'
@@ -30,6 +46,8 @@
     gi_upper_flipper_bottom: 'A49200'
     led_2x: 'A49200'
     led_3x: 'A49200'
+    led_right_bar_10: 'A49200'
+    led_right_bar_11: 'A49200'
     led_scanner_center: 'A49200'
     led_scanner_e: 'A49200'
     led_scanner_ne: 'A49200'
@@ -37,51 +55,82 @@
     
 - time: '+1'
   lights:
+    led_right_bar_9: 'A49200'
     led_scanner_nw: 'A49200'
     led_scanner_w: 'A49200'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_miniboss_5: 'A49200'
+    led_right_bar_7: 'A49200'
+    led_right_bar_8: 'A49200'
     
-#No change this frame - take another step
-#  lights:
 - time: '+1'
+  lights:
+    led_miniboss_4: 'A49200'
+    led_right_bar_6: 'A49200'
     
 - time: '+1'
   lights:
     led_enter_side_ramp: 'A49200'
+    led_miniboss_3: 'A49200'
+    led_right_bar_4: '746700'
+    led_right_bar_5: 'A49200'
     led_upgrade_bank_3: 'A49200'
+    led_upper_arrow_bottom: 'A49200'
     
 - time: '+1'
   lights:
+    led_miniboss_2: '998800'
+    led_right_bar_3: 'A49200'
+    led_right_bar_4: 'A49200'
     led_upgrade_bank_2: 'A49200'
+    led_upper_arrow_top: '302B00'
     
 - time: '+1'
   lights:
     gi_upgrade_bank: 'A49200'
     gi_upper_flipper_top: 'A49200'
+    led_left_bar_13: '6D6100'
+    led_miniboss_1: '2F2A00'
+    led_miniboss_2: 'A49200'
+    led_right_bar_1: '3C3500'
+    led_right_bar_2: 'A49200'
     led_upgrade_bank_1: 'A49200'
+    led_upper_arrow_top: 'A49200'
     led_wall_jump: '968600'
     
 - time: '+1'
   lights:
+    led_left_bar_11: 'A49200'
+    led_left_bar_12: 'A49200'
+    led_left_bar_13: 'A49200'
+    led_miniboss_1: 'A49200'
+    led_right_bar_1: 'A49200'
     led_wall_jump: 'A49200'
     
 - time: '+1'
   lights:
     gi_under_side_ramp: 'A49200'
     led_drop_1: '393300'
+    led_left_bar_8: 'A49200'
+    led_left_bar_9: 'A49200'
+    led_left_bar_10: 'A49200'
     led_thin_orange: 'A49200'
     
 - time: '+1'
   lights:
     led_drop_1: 'A49200'
     led_enter_right_orbit: 'A49200'
+    led_left_bar_6: '665A00'
+    led_left_bar_7: 'A49200'
     
 - time: '+1'
   lights:
     led_captive_ball: 'A49200'
+    led_left_bar_4: '847500'
+    led_left_bar_5: 'A49200'
+    led_left_bar_6: 'A49200'
     led_side_1: 'A49200'
     led_side_2: 'A49200'
     led_side_3: 'A49200'
@@ -91,6 +140,9 @@
     led_enter_left_orbit: 'A49200'
     led_enter_ramp: '998800'
     led_enter_scoop: 'A49200'
+    led_left_bar_2: '635800'
+    led_left_bar_3: 'A49200'
+    led_left_bar_4: 'A49200'
     led_upper_playfield_1: '5C5200'
     led_upper_playfield_2: 'A49200'
     led_upper_playfield_3: 'A49200'
@@ -100,6 +152,8 @@
     gi_side_bank: 'A49200'
     led_drop_2: 'A49200'
     led_enter_ramp: 'A49200'
+    led_left_bar_1: 'A49200'
+    led_left_bar_2: 'A49200'
     led_pop_2: 'A49200'
     led_upper_playfield_1: 'A49200'
     
@@ -115,10 +169,12 @@
 - time: '+1'
   lights:
     led_drop_3: 'A49200'
+    led_spinner: 'A49200'
     
 - time: '+1'
   lights:
     gi_back_right: '877800'
+    led_shinespark_1: 'A49200'
     
 - time: '+1'
   lights:
@@ -128,6 +184,7 @@
     gi_strip_8: '080700'
     gi_strip_9: '605500'
     led_pop_1: 'A49200'
+    led_shinespark_2: 'A49200'
     
 - time: '+1'
   lights:
@@ -138,6 +195,7 @@
     gi_strip_8: 'A49200'
     gi_strip_9: 'A49200'
     led_pit: '332D00'
+    led_shinespark_3: 'A49200'
     
 - time: '+1'
   lights:
