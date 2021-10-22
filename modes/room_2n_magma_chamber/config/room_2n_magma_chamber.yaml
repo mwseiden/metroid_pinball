@@ -61,6 +61,9 @@ show_player:
       show_tokens:
         color: '808080'
         color2: '808080'
+    light_bar_fire:
+      speed: 18
+      loops: -1
   show_mode_status_report:
     room_2n_magma_chamber_status_report:
       loops: 0
