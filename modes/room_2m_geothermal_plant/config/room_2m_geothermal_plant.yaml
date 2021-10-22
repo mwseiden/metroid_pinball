@@ -131,6 +131,9 @@ show_player:
       show_tokens:
         color: '800000'
         color2: 'FF8000'
+    room_2m_light_bars:
+      loops: -1
+      speed: 14
   show_mode_status_report:
     room_2m_geothermal_plant_status_report:
       loops: 0
