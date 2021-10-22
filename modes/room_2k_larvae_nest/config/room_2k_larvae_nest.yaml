@@ -137,6 +137,9 @@ show_player:
     room_2k_larvae_nest_gi:
       loops: -1
       speed: 30
+    room_2k_light_bars:
+      loops: -1
+      speed: 20
   show_mode_status_report:
     room_2k_larvae_nest_status_report:
       loops: 0
